@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # X-MalChain
 Our goal is to provide a platform that can explain malware, specifically, to output the malicious behavior chains (MalChain) of malware to explain how malware executes and performs malicious behaviors.
 
@@ -46,3 +47,21 @@ python manage.py migrate
 
 ## Web
 Note that, our project for web is also an open source at [Our Web Project](https://github.com/X-MalChain/projects).
+=======
+### Hi there 👋
+
+<!--
+**ProMal4Android/ProMal4Android** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+Here are some ideas to get you started:
+
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->
+>>>>>>> origin/main
