@@ -1,0 +1,39 @@
+# Landroid/support/v7/app/AppCompatDelegateImplV7;->onTitleChanged(Ljava/lang/CharSequence;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.CharSequence
+#
+# - return:void
+
+onTitleChanged-BB@0x0 : [ onTitleChanged-BB@0x8 onTitleChanged-BB@0x14 ]
+	0       (00000000) iget-object          v0, v1, Landroid/support/v7/app/AppCompatDelegateImplV7;->mDecorContentParent Landroid/support/v7/widget/DecorContentParent;
+	1       (00000004) if-eqz               v0, +8
+
+onTitleChanged-BB@0x8 : [ onTitleChanged-BB@0x12 ]
+	2       (00000008) iget-object          v0, v1, Landroid/support/v7/app/AppCompatDelegateImplV7;->mDecorContentParent Landroid/support/v7/widget/DecorContentParent;
+	3       (0000000c) invoke-interface     v0, v2, Landroid/support/v7/widget/DecorContentParent;->setWindowTitle(Ljava/lang/CharSequence;)V
+
+onTitleChanged-BB@0x12 : 
+	4       (00000012) return-void          
+
+onTitleChanged-BB@0x14 : [ onTitleChanged-BB@0x20 onTitleChanged-BB@0x30 ]
+	5       (00000014) invoke-virtual       v1, Landroid/support/v7/app/AppCompatDelegateImplV7;->peekSupportActionBar()Landroid/support/v7/app/ActionBar;
+	6       (0000001a) move-result-object   v0
+	7       (0000001c) if-eqz               v0, +a
+
+onTitleChanged-BB@0x20 : [ onTitleChanged-BB@0x12 ]
+	8       (00000020) invoke-virtual       v1, Landroid/support/v7/app/AppCompatDelegateImplV7;->peekSupportActionBar()Landroid/support/v7/app/ActionBar;
+	9       (00000026) move-result-object   v0
+	10      (00000028) invoke-virtual       v0, v2, Landroid/support/v7/app/ActionBar;->setWindowTitle(Ljava/lang/CharSequence;)V
+	11      (0000002e) goto                 -e
+
+onTitleChanged-BB@0x30 : [ onTitleChanged-BB@0x38 onTitleChanged-BB@0x12 ]
+	12      (00000030) iget-object          v0, v1, Landroid/support/v7/app/AppCompatDelegateImplV7;->mTitleView Landroid/widget/TextView;
+	13      (00000034) if-eqz               v0, -11
+
+onTitleChanged-BB@0x38 : [ onTitleChanged-BB@0x12 ]
+	14      (00000038) iget-object          v0, v1, Landroid/support/v7/app/AppCompatDelegateImplV7;->mTitleView Landroid/widget/TextView;
+	15      (0000003c) invoke-virtual       v0, v2, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	16      (00000042) goto                 -18
+

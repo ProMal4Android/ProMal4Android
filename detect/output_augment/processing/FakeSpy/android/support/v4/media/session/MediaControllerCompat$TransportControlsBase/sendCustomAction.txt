@@ -1,0 +1,33 @@
+# Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->sendCustomAction(Ljava/lang/String; Landroid/os/Bundle;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.String
+# - v6:android.os.Bundle
+#
+# - return:void
+
+sendCustomAction-BB@0x0 : [ sendCustomAction-BB@0xa ]
+	0       (00000000) iget-object          v1, v4, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder Landroid/support/v4/media/session/IMediaSession;
+	1       (00000004) invoke-interface     v1, v5, v6, Landroid/support/v4/media/session/IMediaSession;->sendCustomAction(Ljava/lang/String; Landroid/os/Bundle;)V
+	0:9
+	(Landroid/os/RemoteException; -> c sendCustomAction-BB@0xc)
+
+sendCustomAction-BB@0xa : 
+	2       (0000000a) return-void          
+
+sendCustomAction-BB@0xc : [ sendCustomAction-BB@0xa ]
+	3       (0000000c) move-exception       v0
+	4       (0000000e) const-string         v1, 'MediaControllerCompat'
+	5       (00000012) new-instance         v2, Ljava/lang/StringBuilder;
+	6       (00000016) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	7       (0000001c) const-string         v3, 'Dead object in sendCustomAction. '
+	8       (00000020) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000026) move-result-object   v2
+	10      (00000028) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	11      (0000002e) move-result-object   v2
+	12      (00000030) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	13      (00000036) move-result-object   v2
+	14      (00000038) invoke-static        v1, v2, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	15      (0000003e) goto                 -1a
+

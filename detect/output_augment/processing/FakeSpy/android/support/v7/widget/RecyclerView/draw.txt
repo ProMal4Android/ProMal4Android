@@ -1,0 +1,280 @@
+# Landroid/support/v7/widget/RecyclerView;->draw(Landroid/graphics/Canvas;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:android.graphics.Canvas
+#
+# - return:void
+
+draw-BB@0x0 : [ draw-BB@0x18 ]
+	0       (00000000) const/4              v8, 1
+	1       (00000002) const/4              v7, 0
+	2       (00000004) invoke-super         v11, v12, Landroid/view/ViewGroup;->draw(Landroid/graphics/Canvas;)V
+	3       (0000000a) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mItemDecorations Ljava/util/ArrayList;
+	4       (0000000e) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	5       (00000014) move-result          v0
+	6       (00000016) const/4              v1, 0
+
+draw-BB@0x18 : [ draw-BB@0x1c draw-BB@0x3c ]
+	7       (00000018) if-ge                v1, v0, +12
+
+draw-BB@0x1c : [ draw-BB@0x18 ]
+	8       (0000001c) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mItemDecorations Ljava/util/ArrayList;
+	9       (00000020) invoke-virtual       v6, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	10      (00000026) move-result-object   v6
+	11      (00000028) check-cast           v6, Landroid/support/v7/widget/RecyclerView$ItemDecoration;
+	12      (0000002c) iget-object          v9, v11, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	13      (00000030) invoke-virtual       v6, v12, v11, v9, Landroid/support/v7/widget/RecyclerView$ItemDecoration;->onDrawOver(Landroid/graphics/Canvas; Landroid/support/v7/widget/RecyclerView; Landroid/support/v7/widget/RecyclerView$State;)V
+	14      (00000036) add-int/lit8         v1, v1, 1
+	15      (0000003a) goto                 -11
+
+draw-BB@0x3c : [ draw-BB@0x46 draw-BB@0xae ]
+	16      (0000003c) const/4              v2, 0
+	17      (0000003e) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mLeftGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	18      (00000042) if-eqz               v6, +36
+
+draw-BB@0x46 : [ draw-BB@0x56 draw-BB@0xae ]
+	19      (00000046) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mLeftGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	20      (0000004a) invoke-virtual       v6, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+	21      (00000050) move-result          v6
+	22      (00000052) if-nez               v6, +2e
+
+draw-BB@0x56 : [ draw-BB@0x66 draw-BB@0x242 ]
+	23      (00000056) invoke-virtual       v12, Landroid/graphics/Canvas;->save()I
+	24      (0000005c) move-result          v4
+	25      (0000005e) iget-boolean         v6, v11, Landroid/support/v7/widget/RecyclerView;->mClipToPadding Z
+	26      (00000062) if-eqz               v6, +f0
+
+draw-BB@0x66 : [ draw-BB@0x6e ]
+	27      (00000066) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getPaddingBottom()I
+	28      (0000006c) move-result          v3
+
+draw-BB@0x6e : [ draw-BB@0x96 draw-BB@0x248 ]
+	29      (0000006e) const/high16         v6, 17287 # [270.0]
+	30      (00000072) invoke-virtual       v12, v6, Landroid/graphics/Canvas;->rotate(F)V
+	31      (00000078) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getHeight()I
+	32      (0000007e) move-result          v6
+	33      (00000080) neg-int              v6, v6
+	34      (00000082) add-int/2addr        v6, v3
+	35      (00000084) int-to-float         v6, v6
+	36      (00000086) const/4              v9, 0
+	37      (00000088) invoke-virtual       v12, v6, v9, Landroid/graphics/Canvas;->translate(F F)V
+	38      (0000008e) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mLeftGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	39      (00000092) if-eqz               v6, +db
+
+draw-BB@0x96 : [ draw-BB@0xa6 draw-BB@0x248 ]
+	40      (00000096) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mLeftGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	41      (0000009a) invoke-virtual       v6, v12, Landroid/support/v4/widget/EdgeEffectCompat;->draw(Landroid/graphics/Canvas;)Z
+	42      (000000a0) move-result          v6
+	43      (000000a2) if-eqz               v6, +d3
+
+draw-BB@0xa6 : [ draw-BB@0xa8 ]
+	44      (000000a6) move                 v2, v8
+
+draw-BB@0xa8 : [ draw-BB@0xae ]
+	45      (000000a8) invoke-virtual       v12, v4, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+draw-BB@0xae : [ draw-BB@0xb6 draw-BB@0x112 ]
+	46      (000000ae) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mTopGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	47      (000000b2) if-eqz               v6, +30
+
+draw-BB@0xb6 : [ draw-BB@0xc6 draw-BB@0x112 ]
+	48      (000000b6) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mTopGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	49      (000000ba) invoke-virtual       v6, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+	50      (000000c0) move-result          v6
+	51      (000000c2) if-nez               v6, +28
+
+draw-BB@0xc6 : [ draw-BB@0xd6 draw-BB@0xf0 ]
+	52      (000000c6) invoke-virtual       v12, Landroid/graphics/Canvas;->save()I
+	53      (000000cc) move-result          v4
+	54      (000000ce) iget-boolean         v6, v11, Landroid/support/v7/widget/RecyclerView;->mClipToPadding Z
+	55      (000000d2) if-eqz               v6, +f
+
+draw-BB@0xd6 : [ draw-BB@0xf0 ]
+	56      (000000d6) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getPaddingLeft()I
+	57      (000000dc) move-result          v6
+	58      (000000de) int-to-float         v6, v6
+	59      (000000e0) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getPaddingTop()I
+	60      (000000e6) move-result          v9
+	61      (000000e8) int-to-float         v9, v9
+	62      (000000ea) invoke-virtual       v12, v6, v9, Landroid/graphics/Canvas;->translate(F F)V
+
+draw-BB@0xf0 : [ draw-BB@0xf8 draw-BB@0x24e ]
+	63      (000000f0) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mTopGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	64      (000000f4) if-eqz               v6, +ad
+
+draw-BB@0xf8 : [ draw-BB@0x108 draw-BB@0x24e ]
+	65      (000000f8) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mTopGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	66      (000000fc) invoke-virtual       v6, v12, Landroid/support/v4/widget/EdgeEffectCompat;->draw(Landroid/graphics/Canvas;)Z
+	67      (00000102) move-result          v6
+	68      (00000104) if-eqz               v6, +a5
+
+draw-BB@0x108 : [ draw-BB@0x10a ]
+	69      (00000108) move                 v6, v8
+
+draw-BB@0x10a : [ draw-BB@0x112 ]
+	70      (0000010a) or-int/2addr         v2, v6
+	71      (0000010c) invoke-virtual       v12, v4, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+draw-BB@0x112 : [ draw-BB@0x11a draw-BB@0x184 ]
+	72      (00000112) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mRightGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	73      (00000116) if-eqz               v6, +37
+
+draw-BB@0x11a : [ draw-BB@0x12a draw-BB@0x184 ]
+	74      (0000011a) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mRightGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	75      (0000011e) invoke-virtual       v6, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+	76      (00000124) move-result          v6
+	77      (00000126) if-nez               v6, +2f
+
+draw-BB@0x12a : [ draw-BB@0x142 draw-BB@0x254 ]
+	78      (0000012a) invoke-virtual       v12, Landroid/graphics/Canvas;->save()I
+	79      (00000130) move-result          v4
+	80      (00000132) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getWidth()I
+	81      (00000138) move-result          v5
+	82      (0000013a) iget-boolean         v6, v11, Landroid/support/v7/widget/RecyclerView;->mClipToPadding Z
+	83      (0000013e) if-eqz               v6, +8b
+
+draw-BB@0x142 : [ draw-BB@0x14a ]
+	84      (00000142) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getPaddingTop()I
+	85      (00000148) move-result          v3
+
+draw-BB@0x14a : [ draw-BB@0x16a draw-BB@0x25a ]
+	86      (0000014a) const/high16         v6, 17076 # [90.0]
+	87      (0000014e) invoke-virtual       v12, v6, Landroid/graphics/Canvas;->rotate(F)V
+	88      (00000154) neg-int              v6, v3
+	89      (00000156) int-to-float         v6, v6
+	90      (00000158) neg-int              v9, v5
+	91      (0000015a) int-to-float         v9, v9
+	92      (0000015c) invoke-virtual       v12, v6, v9, Landroid/graphics/Canvas;->translate(F F)V
+	93      (00000162) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mRightGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	94      (00000166) if-eqz               v6, +7a
+
+draw-BB@0x16a : [ draw-BB@0x17a draw-BB@0x25a ]
+	95      (0000016a) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mRightGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	96      (0000016e) invoke-virtual       v6, v12, Landroid/support/v4/widget/EdgeEffectCompat;->draw(Landroid/graphics/Canvas;)Z
+	97      (00000174) move-result          v6
+	98      (00000176) if-eqz               v6, +72
+
+draw-BB@0x17a : [ draw-BB@0x17c ]
+	99      (0000017a) move                 v6, v8
+
+draw-BB@0x17c : [ draw-BB@0x184 ]
+	100     (0000017c) or-int/2addr         v2, v6
+	101     (0000017e) invoke-virtual       v12, v4, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+draw-BB@0x184 : [ draw-BB@0x18c draw-BB@0x208 ]
+	102     (00000184) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mBottomGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	103     (00000188) if-eqz               v6, +40
+
+draw-BB@0x18c : [ draw-BB@0x19c draw-BB@0x208 ]
+	104     (0000018c) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mBottomGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	105     (00000190) invoke-virtual       v6, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+	106     (00000196) move-result          v6
+	107     (00000198) if-nez               v6, +38
+
+draw-BB@0x19c : [ draw-BB@0x1b6 draw-BB@0x25e ]
+	108     (0000019c) invoke-virtual       v12, Landroid/graphics/Canvas;->save()I
+	109     (000001a2) move-result          v4
+	110     (000001a4) const/high16         v6, 17204 # [180.0]
+	111     (000001a8) invoke-virtual       v12, v6, Landroid/graphics/Canvas;->rotate(F)V
+	112     (000001ae) iget-boolean         v6, v11, Landroid/support/v7/widget/RecyclerView;->mClipToPadding Z
+	113     (000001b2) if-eqz               v6, +56
+
+draw-BB@0x1b6 : [ draw-BB@0x1e8 ]
+	114     (000001b6) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getWidth()I
+	115     (000001bc) move-result          v6
+	116     (000001be) neg-int              v6, v6
+	117     (000001c0) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getPaddingRight()I
+	118     (000001c6) move-result          v9
+	119     (000001c8) add-int/2addr        v6, v9
+	120     (000001ca) int-to-float         v6, v6
+	121     (000001cc) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getHeight()I
+	122     (000001d2) move-result          v9
+	123     (000001d4) neg-int              v9, v9
+	124     (000001d6) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getPaddingBottom()I
+	125     (000001dc) move-result          v10
+	126     (000001de) add-int/2addr        v9, v10
+	127     (000001e0) int-to-float         v9, v9
+	128     (000001e2) invoke-virtual       v12, v6, v9, Landroid/graphics/Canvas;->translate(F F)V
+
+draw-BB@0x1e8 : [ draw-BB@0x1f0 draw-BB@0x27e ]
+	129     (000001e8) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mBottomGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	130     (000001ec) if-eqz               v6, +49
+
+draw-BB@0x1f0 : [ draw-BB@0x200 draw-BB@0x27e ]
+	131     (000001f0) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mBottomGlow Landroid/support/v4/widget/EdgeEffectCompat;
+	132     (000001f4) invoke-virtual       v6, v12, Landroid/support/v4/widget/EdgeEffectCompat;->draw(Landroid/graphics/Canvas;)Z
+	133     (000001fa) move-result          v6
+	134     (000001fc) if-eqz               v6, +41
+
+draw-BB@0x200 : [ draw-BB@0x208 ]
+	135     (00000200) or-int/2addr         v2, v8
+	136     (00000202) invoke-virtual       v12, v4, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+draw-BB@0x208 : [ draw-BB@0x20c draw-BB@0x236 ]
+	137     (00000208) if-nez               v2, +17
+
+draw-BB@0x20c : [ draw-BB@0x214 draw-BB@0x236 ]
+	138     (0000020c) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mItemAnimator Landroid/support/v7/widget/RecyclerView$ItemAnimator;
+	139     (00000210) if-eqz               v6, +13
+
+draw-BB@0x214 : [ draw-BB@0x224 draw-BB@0x236 ]
+	140     (00000214) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mItemDecorations Ljava/util/ArrayList;
+	141     (00000218) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	142     (0000021e) move-result          v6
+	143     (00000220) if-lez               v6, +b
+
+draw-BB@0x224 : [ draw-BB@0x234 draw-BB@0x236 ]
+	144     (00000224) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView;->mItemAnimator Landroid/support/v7/widget/RecyclerView$ItemAnimator;
+	145     (00000228) invoke-virtual       v6, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->isRunning()Z
+	146     (0000022e) move-result          v6
+	147     (00000230) if-eqz               v6, +3
+
+draw-BB@0x234 : [ draw-BB@0x236 ]
+	148     (00000234) const/4              v2, 1
+
+draw-BB@0x236 : [ draw-BB@0x23a draw-BB@0x240 ]
+	149     (00000236) if-eqz               v2, +5
+
+draw-BB@0x23a : [ draw-BB@0x240 ]
+	150     (0000023a) invoke-static        v11, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
+
+draw-BB@0x240 : 
+	151     (00000240) return-void          
+
+draw-BB@0x242 : [ draw-BB@0x6e ]
+	152     (00000242) move                 v3, v7
+	153     (00000244) goto/16              -eb
+
+draw-BB@0x248 : [ draw-BB@0xa8 ]
+	154     (00000248) move                 v2, v7
+	155     (0000024a) goto/16              -d1
+
+draw-BB@0x24e : [ draw-BB@0x10a ]
+	156     (0000024e) move                 v6, v7
+	157     (00000250) goto/16              -a3
+
+draw-BB@0x254 : [ draw-BB@0x14a ]
+	158     (00000254) move                 v3, v7
+	159     (00000256) goto/16              -86
+
+draw-BB@0x25a : [ draw-BB@0x17c ]
+	160     (0000025a) move                 v6, v7
+	161     (0000025c) goto                 -70
+
+draw-BB@0x25e : [ draw-BB@0x1e8 ]
+	162     (0000025e) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getWidth()I
+	163     (00000264) move-result          v6
+	164     (00000266) neg-int              v6, v6
+	165     (00000268) int-to-float         v6, v6
+	166     (0000026a) invoke-virtual       v11, Landroid/support/v7/widget/RecyclerView;->getHeight()I
+	167     (00000270) move-result          v9
+	168     (00000272) neg-int              v9, v9
+	169     (00000274) int-to-float         v9, v9
+	170     (00000276) invoke-virtual       v12, v6, v9, Landroid/graphics/Canvas;->translate(F F)V
+	171     (0000027c) goto                 -4a
+
+draw-BB@0x27e : [ draw-BB@0x200 ]
+	172     (0000027e) move                 v8, v7
+	173     (00000280) goto                 -40
+

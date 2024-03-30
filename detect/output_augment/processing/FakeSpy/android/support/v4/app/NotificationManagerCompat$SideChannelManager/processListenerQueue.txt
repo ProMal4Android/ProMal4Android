@@ -1,0 +1,152 @@
+# Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;->processListenerQueue(Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.support.v4.app.NotificationManagerCompat$SideChannelManager$ListenerRecord
+#
+# - return:void
+
+processListenerQueue-BB@0x0 : [ processListenerQueue-BB@0x12 processListenerQueue-BB@0x72 ]
+	0       (00000000) const/4              v5, 3
+	1       (00000002) const-string         v2, 'NotifManCompat'
+	2       (00000006) invoke-static        v2, v5, Landroid/util/Log;->isLoggable(Ljava/lang/String; I)Z
+	3       (0000000c) move-result          v2
+	4       (0000000e) if-eqz               v2, +32
+
+processListenerQueue-BB@0x12 : [ processListenerQueue-BB@0x72 ]
+	5       (00000012) const-string         v2, 'NotifManCompat'
+	6       (00000016) new-instance         v3, Ljava/lang/StringBuilder;
+	7       (0000001a) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	8       (00000020) const-string         v4, 'Processing component '
+	9       (00000024) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (0000002a) move-result-object   v3
+	11      (0000002c) iget-object          v4, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->componentName Landroid/content/ComponentName;
+	12      (00000030) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	13      (00000036) move-result-object   v3
+	14      (00000038) const-string         v4, ', '
+	15      (0000003c) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (00000042) move-result-object   v3
+	17      (00000044) iget-object          v4, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->taskQueue Ljava/util/LinkedList;
+	18      (00000048) invoke-virtual       v4, Ljava/util/LinkedList;->size()I
+	19      (0000004e) move-result          v4
+	20      (00000050) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	21      (00000056) move-result-object   v3
+	22      (00000058) const-string         v4, ' queued tasks'
+	23      (0000005c) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (00000062) move-result-object   v3
+	25      (00000064) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	26      (0000006a) move-result-object   v3
+	27      (0000006c) invoke-static        v2, v3, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+
+processListenerQueue-BB@0x72 : [ processListenerQueue-BB@0x82 processListenerQueue-BB@0x84 ]
+	28      (00000072) iget-object          v2, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->taskQueue Ljava/util/LinkedList;
+	29      (00000076) invoke-virtual       v2, Ljava/util/LinkedList;->isEmpty()Z
+	30      (0000007c) move-result          v2
+	31      (0000007e) if-eqz               v2, +3
+
+processListenerQueue-BB@0x82 : 
+	32      (00000082) return-void          
+
+processListenerQueue-BB@0x84 : [ processListenerQueue-BB@0x90 processListenerQueue-BB@0x98 ]
+	33      (00000084) invoke-direct        v6, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;->ensureServiceBound(Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;)Z
+	34      (0000008a) move-result          v2
+	35      (0000008c) if-eqz               v2, +6
+
+processListenerQueue-BB@0x90 : [ processListenerQueue-BB@0x98 processListenerQueue-BB@0xf6 ]
+	36      (00000090) iget-object          v2, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service Landroid/support/v4/app/INotificationSideChannel;
+	37      (00000094) if-nez               v2, +31
+
+processListenerQueue-BB@0x98 : [ processListenerQueue-BB@0x82 ]
+	38      (00000098) invoke-direct        v6, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;->scheduleListenerRetry(Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;)V
+	39      (0000009e) goto                 -e
+
+processListenerQueue-BB@0xa0 : [ processListenerQueue-BB@0xb2 processListenerQueue-BB@0xe2 ]
+	40      (000000a0) const-string         v2, 'NotifManCompat'
+	41      (000000a4) const/4              v3, 3
+	42      (000000a6) invoke-static        v2, v3, Landroid/util/Log;->isLoggable(Ljava/lang/String; I)Z
+	43      (000000ac) move-result          v2
+	44      (000000ae) if-eqz               v2, +1a
+	a0:f5
+	(Landroid/os/DeadObjectException; -> 122 processListenerQueue-BB@0x122)
+	(Landroid/os/RemoteException; -> 16a processListenerQueue-BB@0x16a)
+
+processListenerQueue-BB@0xb2 : [ processListenerQueue-BB@0xe2 ]
+	45      (000000b2) const-string         v2, 'NotifManCompat'
+	46      (000000b6) new-instance         v3, Ljava/lang/StringBuilder;
+	47      (000000ba) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	48      (000000c0) const-string         v4, 'Sending task '
+	49      (000000c4) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	50      (000000ca) move-result-object   v3
+	51      (000000cc) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	52      (000000d2) move-result-object   v3
+	53      (000000d4) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	54      (000000da) move-result-object   v3
+	55      (000000dc) invoke-static        v2, v3, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	a0:f5
+	(Landroid/os/DeadObjectException; -> 122 processListenerQueue-BB@0x122)
+	(Landroid/os/RemoteException; -> 16a processListenerQueue-BB@0x16a)
+
+processListenerQueue-BB@0xe2 : [ processListenerQueue-BB@0xf6 ]
+	56      (000000e2) iget-object          v2, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->service Landroid/support/v4/app/INotificationSideChannel;
+	57      (000000e6) invoke-interface     v1, v2, Landroid/support/v4/app/NotificationManagerCompat$Task;->send(Landroid/support/v4/app/INotificationSideChannel;)V
+	58      (000000ec) iget-object          v2, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->taskQueue Ljava/util/LinkedList;
+	59      (000000f0) invoke-virtual       v2, Ljava/util/LinkedList;->remove()Ljava/lang/Object;
+	a0:f5
+	(Landroid/os/DeadObjectException; -> 122 processListenerQueue-BB@0x122)
+	(Landroid/os/RemoteException; -> 16a processListenerQueue-BB@0x16a)
+
+processListenerQueue-BB@0xf6 : [ processListenerQueue-BB@0x10a processListenerQueue-BB@0xa0 ]
+	60      (000000f6) iget-object          v2, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->taskQueue Ljava/util/LinkedList;
+	61      (000000fa) invoke-virtual       v2, Ljava/util/LinkedList;->peek()Ljava/lang/Object;
+	62      (00000100) move-result-object   v1
+	63      (00000102) check-cast           v1, Landroid/support/v4/app/NotificationManagerCompat$Task;
+	64      (00000106) if-nez               v1, -33
+
+processListenerQueue-BB@0x10a : [ processListenerQueue-BB@0x11a processListenerQueue-BB@0x82 ]
+	65      (0000010a) iget-object          v2, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->taskQueue Ljava/util/LinkedList;
+	66      (0000010e) invoke-virtual       v2, Ljava/util/LinkedList;->isEmpty()Z
+	67      (00000114) move-result          v2
+	68      (00000116) if-nez               v2, -4a
+
+processListenerQueue-BB@0x11a : [ processListenerQueue-BB@0x82 ]
+	69      (0000011a) invoke-direct        v6, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;->scheduleListenerRetry(Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;)V
+	70      (00000120) goto                 -4f
+
+processListenerQueue-BB@0x122 : [ processListenerQueue-BB@0x134 processListenerQueue-BB@0x10a ]
+	71      (00000122) move-exception       v0
+	72      (00000124) const-string         v2, 'NotifManCompat'
+	73      (00000128) invoke-static        v2, v5, Landroid/util/Log;->isLoggable(Ljava/lang/String; I)Z
+	74      (0000012e) move-result          v2
+	75      (00000130) if-eqz               v2, -13
+
+processListenerQueue-BB@0x134 : [ processListenerQueue-BB@0x10a ]
+	76      (00000134) const-string         v2, 'NotifManCompat'
+	77      (00000138) new-instance         v3, Ljava/lang/StringBuilder;
+	78      (0000013c) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	79      (00000142) const-string         v4, 'Remote service has died: '
+	80      (00000146) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	81      (0000014c) move-result-object   v3
+	82      (0000014e) iget-object          v4, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->componentName Landroid/content/ComponentName;
+	83      (00000152) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	84      (00000158) move-result-object   v3
+	85      (0000015a) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	86      (00000160) move-result-object   v3
+	87      (00000162) invoke-static        v2, v3, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	88      (00000168) goto                 -2f
+
+processListenerQueue-BB@0x16a : [ processListenerQueue-BB@0x10a ]
+	89      (0000016a) move-exception       v0
+	90      (0000016c) const-string         v2, 'NotifManCompat'
+	91      (00000170) new-instance         v3, Ljava/lang/StringBuilder;
+	92      (00000174) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	93      (0000017a) const-string         v4, 'RemoteException communicating with '
+	94      (0000017e) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	95      (00000184) move-result-object   v3
+	96      (00000186) iget-object          v4, v7, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;->componentName Landroid/content/ComponentName;
+	97      (0000018a) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	98      (00000190) move-result-object   v3
+	99      (00000192) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	100     (00000198) move-result-object   v3
+	101     (0000019a) invoke-static        v2, v3, v0, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	102     (000001a0) goto                 -4b
+

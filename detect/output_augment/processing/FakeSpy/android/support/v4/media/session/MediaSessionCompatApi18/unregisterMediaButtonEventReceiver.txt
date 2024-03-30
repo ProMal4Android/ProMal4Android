@@ -1,0 +1,28 @@
+# Landroid/support/v4/media/session/MediaSessionCompatApi18;->unregisterMediaButtonEventReceiver(Landroid/content/Context; Landroid/app/PendingIntent; Landroid/content/ComponentName;)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.content.Context
+# - v3:android.app.PendingIntent
+# - v4:android.content.ComponentName
+#
+# - return:void
+
+unregisterMediaButtonEventReceiver-BB@0x0 : [ unregisterMediaButtonEventReceiver-BB@0x18 unregisterMediaButtonEventReceiver-BB@0x20 ]
+	0       (00000000) const-string         v1, 'audio'
+	1       (00000004) invoke-virtual       v2, v1, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) check-cast           v0, Landroid/media/AudioManager;
+	4       (00000010) sget-boolean         v1, Landroid/support/v4/media/session/MediaSessionCompatApi18;->sIsMbrPendingIntentSupported Z
+	5       (00000014) if-eqz               v1, +6
+
+unregisterMediaButtonEventReceiver-BB@0x18 : [ unregisterMediaButtonEventReceiver-BB@0x1e ]
+	6       (00000018) invoke-virtual       v0, v3, Landroid/media/AudioManager;->unregisterMediaButtonEventReceiver(Landroid/app/PendingIntent;)V
+
+unregisterMediaButtonEventReceiver-BB@0x1e : 
+	7       (0000001e) return-void          
+
+unregisterMediaButtonEventReceiver-BB@0x20 : [ unregisterMediaButtonEventReceiver-BB@0x1e ]
+	8       (00000020) invoke-virtual       v0, v4, Landroid/media/AudioManager;->unregisterMediaButtonEventReceiver(Landroid/content/ComponentName;)V
+	9       (00000026) goto                 -4
+

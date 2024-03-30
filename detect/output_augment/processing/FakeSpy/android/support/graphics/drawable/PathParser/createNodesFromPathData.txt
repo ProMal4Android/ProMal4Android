@@ -1,0 +1,77 @@
+# Landroid/support/graphics/drawable/PathParser;->createNodesFromPathData(Ljava/lang/String;)[Landroid/support/graphics/drawable/PathParser$PathDataNode; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:java.lang.String
+#
+# - return:android.support.graphics.drawable.PathParser$PathDataNode[]
+
+createNodesFromPathData-BB@0x0 : [ createNodesFromPathData-BB@0x6 createNodesFromPathData-BB@0xa ]
+	0       (00000000) const/4              v7, 0
+	1       (00000002) if-nez               v8, +4
+
+createNodesFromPathData-BB@0x6 : [ createNodesFromPathData-BB@0x8 ]
+	2       (00000006) const/4              v5, 0
+
+createNodesFromPathData-BB@0x8 : 
+	3       (00000008) return-object        v5
+
+createNodesFromPathData-BB@0xa : [ createNodesFromPathData-BB@0x18 ]
+	4       (0000000a) const/4              v3, 0
+	5       (0000000c) const/4              v0, 1
+	6       (0000000e) new-instance         v1, Ljava/util/ArrayList;
+	7       (00000012) invoke-direct        v1, Ljava/util/ArrayList;-><init>()V
+
+createNodesFromPathData-BB@0x18 : [ createNodesFromPathData-BB@0x24 createNodesFromPathData-BB@0x66 ]
+	8       (00000018) invoke-virtual       v8, Ljava/lang/String;->length()I
+	9       (0000001e) move-result          v5
+	10      (00000020) if-ge                v0, v5, +23
+
+createNodesFromPathData-BB@0x24 : [ createNodesFromPathData-BB@0x48 createNodesFromPathData-BB@0x5e ]
+	11      (00000024) invoke-static        v8, v0, Landroid/support/graphics/drawable/PathParser;->nextStart(Ljava/lang/String; I)I
+	12      (0000002a) move-result          v0
+	13      (0000002c) invoke-virtual       v8, v3, v0, Ljava/lang/String;->substring(I I)Ljava/lang/String;
+	14      (00000032) move-result-object   v5
+	15      (00000034) invoke-virtual       v5, Ljava/lang/String;->trim()Ljava/lang/String;
+	16      (0000003a) move-result-object   v2
+	17      (0000003c) invoke-virtual       v2, Ljava/lang/String;->length()I
+	18      (00000042) move-result          v5
+	19      (00000044) if-lez               v5, +d
+
+createNodesFromPathData-BB@0x48 : [ createNodesFromPathData-BB@0x5e ]
+	20      (00000048) invoke-static        v2, Landroid/support/graphics/drawable/PathParser;->getFloats(Ljava/lang/String;)[F
+	21      (0000004e) move-result-object   v4
+	22      (00000050) invoke-virtual       v2, v7, Ljava/lang/String;->charAt(I)C
+	23      (00000056) move-result          v5
+	24      (00000058) invoke-static        v1, v5, v4, Landroid/support/graphics/drawable/PathParser;->addNode(Ljava/util/ArrayList; C [F)V
+
+createNodesFromPathData-BB@0x5e : [ createNodesFromPathData-BB@0x18 ]
+	25      (0000005e) move                 v3, v0
+	26      (00000060) add-int/lit8         v0, v0, 1
+	27      (00000064) goto                 -26
+
+createNodesFromPathData-BB@0x66 : [ createNodesFromPathData-BB@0x70 createNodesFromPathData-BB@0x8e ]
+	28      (00000066) sub-int              v5, v0, v3
+	29      (0000006a) const/4              v6, 1
+	30      (0000006c) if-ne                v5, v6, +11
+
+createNodesFromPathData-BB@0x70 : [ createNodesFromPathData-BB@0x7c createNodesFromPathData-BB@0x8e ]
+	31      (00000070) invoke-virtual       v8, Ljava/lang/String;->length()I
+	32      (00000076) move-result          v5
+	33      (00000078) if-ge                v3, v5, +b
+
+createNodesFromPathData-BB@0x7c : [ createNodesFromPathData-BB@0x8e ]
+	34      (0000007c) invoke-virtual       v8, v3, Ljava/lang/String;->charAt(I)C
+	35      (00000082) move-result          v5
+	36      (00000084) new-array            v6, v7, [F
+	37      (00000088) invoke-static        v1, v5, v6, Landroid/support/graphics/drawable/PathParser;->addNode(Ljava/util/ArrayList; C [F)V
+
+createNodesFromPathData-BB@0x8e : [ createNodesFromPathData-BB@0x8 ]
+	38      (0000008e) invoke-virtual       v1, Ljava/util/ArrayList;->size()I
+	39      (00000094) move-result          v5
+	40      (00000096) new-array            v5, v5, [Landroid/support/graphics/drawable/PathParser$PathDataNode;
+	41      (0000009a) invoke-virtual       v1, v5, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+	42      (000000a0) move-result-object   v5
+	43      (000000a2) check-cast           v5, [Landroid/support/graphics/drawable/PathParser$PathDataNode;
+	44      (000000a6) goto                 -4f
+

@@ -1,0 +1,31 @@
+# Landroid/support/v7/app/ActionBarDrawerToggle;->setActionBarUpIndicator(Landroid/graphics/drawable/Drawable; I)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.graphics.drawable.Drawable
+# - v4:int
+#
+# - return:void
+
+setActionBarUpIndicator-BB@0x0 : [ setActionBarUpIndicator-BB@0x8 setActionBarUpIndicator-BB@0x2c ]
+	0       (00000000) iget-boolean         v0, v2, Landroid/support/v7/app/ActionBarDrawerToggle;->mWarnedForDisplayHomeAsUp Z
+	1       (00000004) if-nez               v0, +14
+
+setActionBarUpIndicator-BB@0x8 : [ setActionBarUpIndicator-BB@0x18 setActionBarUpIndicator-BB@0x2c ]
+	2       (00000008) iget-object          v0, v2, Landroid/support/v7/app/ActionBarDrawerToggle;->mActivityImpl Landroid/support/v7/app/ActionBarDrawerToggle$Delegate;
+	3       (0000000c) invoke-interface     v0, Landroid/support/v7/app/ActionBarDrawerToggle$Delegate;->isNavigationVisible()Z
+	4       (00000012) move-result          v0
+	5       (00000014) if-nez               v0, +c
+
+setActionBarUpIndicator-BB@0x18 : [ setActionBarUpIndicator-BB@0x2c ]
+	6       (00000018) const-string         v0, 'ActionBarDrawerToggle'
+	7       (0000001c) const-string         v1, 'DrawerToggle may not show up because NavigationIcon is not visible. You may need to call actionbar.setDisplayHomeAsUpEnabled(true);'
+	8       (00000020) invoke-static        v0, v1, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	9       (00000026) const/4              v0, 1
+	10      (00000028) iput-boolean         v0, v2, Landroid/support/v7/app/ActionBarDrawerToggle;->mWarnedForDisplayHomeAsUp Z
+
+setActionBarUpIndicator-BB@0x2c : 
+	11      (0000002c) iget-object          v0, v2, Landroid/support/v7/app/ActionBarDrawerToggle;->mActivityImpl Landroid/support/v7/app/ActionBarDrawerToggle$Delegate;
+	12      (00000030) invoke-interface     v0, v3, v4, Landroid/support/v7/app/ActionBarDrawerToggle$Delegate;->setActionBarUpIndicator(Landroid/graphics/drawable/Drawable; I)V
+	13      (00000036) return-void          
+

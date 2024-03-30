@@ -1,0 +1,377 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:java.lang.String
+# - v10:java.io.FileDescriptor
+# - v11:java.io.PrintWriter
+# - v12:java.lang.String[]
+#
+# - return:void
+
+dump-BB@0x0 : [ dump-BB@0x2e dump-BB@0xba ]
+	0       (00000000) new-instance         v6, Ljava/lang/StringBuilder;
+	1       (00000004) invoke-direct        v6, Ljava/lang/StringBuilder;-><init>()V
+	2       (0000000a) invoke-virtual       v6, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	3       (00000010) move-result-object   v6
+	4       (00000012) const-string         v7, '    '
+	5       (00000016) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	6       (0000001c) move-result-object   v6
+	7       (0000001e) invoke-virtual       v6, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	8       (00000024) move-result-object   v4
+	9       (00000026) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	10      (0000002a) if-eqz               v6, +48
+
+dump-BB@0x2e : [ dump-BB@0x3e dump-BB@0xba ]
+	11      (0000002e) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	12      (00000032) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	13      (00000038) move-result          v0
+	14      (0000003a) if-lez               v0, +40
+
+dump-BB@0x3e : [ dump-BB@0x70 ]
+	15      (0000003e) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	16      (00000044) const-string         v6, 'Active Fragments in '
+	17      (00000048) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	18      (0000004e) invoke-static        v8, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+	19      (00000054) move-result          v6
+	20      (00000056) invoke-static        v6, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	21      (0000005c) move-result-object   v6
+	22      (0000005e) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	23      (00000064) const-string         v6, ':'
+	24      (00000068) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	25      (0000006e) const/4              v3, 0
+
+dump-BB@0x70 : [ dump-BB@0x74 dump-BB@0xba ]
+	26      (00000070) if-ge                v3, v0, +25
+
+dump-BB@0x74 : [ dump-BB@0xae dump-BB@0xb4 ]
+	27      (00000074) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	28      (00000078) invoke-virtual       v6, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	29      (0000007e) move-result-object   v2
+	30      (00000080) check-cast           v2, Landroid/support/v4/app/Fragment;
+	31      (00000084) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	32      (0000008a) const-string         v6, '  #'
+	33      (0000008e) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	34      (00000094) invoke-virtual       v11, v3, Ljava/io/PrintWriter;->print(I)V
+	35      (0000009a) const-string         v6, ': '
+	36      (0000009e) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	37      (000000a4) invoke-virtual       v11, v2, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+	38      (000000aa) if-eqz               v2, +5
+
+dump-BB@0xae : [ dump-BB@0xb4 ]
+	39      (000000ae) invoke-virtual       v2, v4, v10, v11, v12, Landroid/support/v4/app/Fragment;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V
+
+dump-BB@0xb4 : [ dump-BB@0x70 ]
+	40      (000000b4) add-int/lit8         v3, v3, 1
+	41      (000000b8) goto                 -24
+
+dump-BB@0xba : [ dump-BB@0xc2 dump-BB@0x12c ]
+	42      (000000ba) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	43      (000000be) if-eqz               v6, +37
+
+dump-BB@0xc2 : [ dump-BB@0xd2 dump-BB@0x12c ]
+	44      (000000c2) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	45      (000000c6) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	46      (000000cc) move-result          v0
+	47      (000000ce) if-lez               v0, +2f
+
+dump-BB@0xd2 : [ dump-BB@0xe4 ]
+	48      (000000d2) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	49      (000000d8) const-string         v6, 'Added Fragments:'
+	50      (000000dc) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	51      (000000e2) const/4              v3, 0
+
+dump-BB@0xe4 : [ dump-BB@0xe8 dump-BB@0x12c ]
+	52      (000000e4) if-ge                v3, v0, +24
+
+dump-BB@0xe8 : [ dump-BB@0xe4 ]
+	53      (000000e8) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	54      (000000ec) invoke-virtual       v6, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	55      (000000f2) move-result-object   v2
+	56      (000000f4) check-cast           v2, Landroid/support/v4/app/Fragment;
+	57      (000000f8) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	58      (000000fe) const-string         v6, '  #'
+	59      (00000102) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	60      (00000108) invoke-virtual       v11, v3, Ljava/io/PrintWriter;->print(I)V
+	61      (0000010e) const-string         v6, ': '
+	62      (00000112) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	63      (00000118) invoke-virtual       v2, Landroid/support/v4/app/Fragment;->toString()Ljava/lang/String;
+	64      (0000011e) move-result-object   v6
+	65      (00000120) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	66      (00000126) add-int/lit8         v3, v3, 1
+	67      (0000012a) goto                 -23
+
+dump-BB@0x12c : [ dump-BB@0x134 dump-BB@0x19e ]
+	68      (0000012c) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mCreatedMenus Ljava/util/ArrayList;
+	69      (00000130) if-eqz               v6, +37
+
+dump-BB@0x134 : [ dump-BB@0x144 dump-BB@0x19e ]
+	70      (00000134) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mCreatedMenus Ljava/util/ArrayList;
+	71      (00000138) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	72      (0000013e) move-result          v0
+	73      (00000140) if-lez               v0, +2f
+
+dump-BB@0x144 : [ dump-BB@0x156 ]
+	74      (00000144) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	75      (0000014a) const-string         v6, 'Fragments Created Menus:'
+	76      (0000014e) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	77      (00000154) const/4              v3, 0
+
+dump-BB@0x156 : [ dump-BB@0x15a dump-BB@0x19e ]
+	78      (00000156) if-ge                v3, v0, +24
+
+dump-BB@0x15a : [ dump-BB@0x156 ]
+	79      (0000015a) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mCreatedMenus Ljava/util/ArrayList;
+	80      (0000015e) invoke-virtual       v6, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	81      (00000164) move-result-object   v2
+	82      (00000166) check-cast           v2, Landroid/support/v4/app/Fragment;
+	83      (0000016a) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	84      (00000170) const-string         v6, '  #'
+	85      (00000174) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	86      (0000017a) invoke-virtual       v11, v3, Ljava/io/PrintWriter;->print(I)V
+	87      (00000180) const-string         v6, ': '
+	88      (00000184) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	89      (0000018a) invoke-virtual       v2, Landroid/support/v4/app/Fragment;->toString()Ljava/lang/String;
+	90      (00000190) move-result-object   v6
+	91      (00000192) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	92      (00000198) add-int/lit8         v3, v3, 1
+	93      (0000019c) goto                 -23
+
+dump-BB@0x19e : [ dump-BB@0x1a6 dump-BB@0x216 ]
+	94      (0000019e) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mBackStack Ljava/util/ArrayList;
+	95      (000001a2) if-eqz               v6, +3a
+
+dump-BB@0x1a6 : [ dump-BB@0x1b6 dump-BB@0x216 ]
+	96      (000001a6) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mBackStack Ljava/util/ArrayList;
+	97      (000001aa) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	98      (000001b0) move-result          v0
+	99      (000001b2) if-lez               v0, +32
+
+dump-BB@0x1b6 : [ dump-BB@0x1c8 ]
+	100     (000001b6) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	101     (000001bc) const-string         v6, 'Back Stack:'
+	102     (000001c0) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	103     (000001c6) const/4              v3, 0
+
+dump-BB@0x1c8 : [ dump-BB@0x1cc dump-BB@0x216 ]
+	104     (000001c8) if-ge                v3, v0, +27
+
+dump-BB@0x1cc : [ dump-BB@0x1c8 ]
+	105     (000001cc) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mBackStack Ljava/util/ArrayList;
+	106     (000001d0) invoke-virtual       v6, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	107     (000001d6) move-result-object   v1
+	108     (000001d8) check-cast           v1, Landroid/support/v4/app/BackStackRecord;
+	109     (000001dc) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	110     (000001e2) const-string         v6, '  #'
+	111     (000001e6) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	112     (000001ec) invoke-virtual       v11, v3, Ljava/io/PrintWriter;->print(I)V
+	113     (000001f2) const-string         v6, ': '
+	114     (000001f6) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	115     (000001fc) invoke-virtual       v1, Landroid/support/v4/app/BackStackRecord;->toString()Ljava/lang/String;
+	116     (00000202) move-result-object   v6
+	117     (00000204) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	118     (0000020a) invoke-virtual       v1, v4, v10, v11, v12, Landroid/support/v4/app/BackStackRecord;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V
+	119     (00000210) add-int/lit8         v3, v3, 1
+	120     (00000214) goto                 -26
+
+dump-BB@0x216 : [ dump-BB@0x218 ]
+	121     (00000216) monitor-enter        v8
+
+dump-BB@0x218 : [ dump-BB@0x220 dump-BB@0x282 ]
+	122     (00000218) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mBackStackIndices Ljava/util/ArrayList;
+	123     (0000021c) if-eqz               v6, +33
+	218:2c5
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x220 : [ dump-BB@0x230 dump-BB@0x282 ]
+	124     (00000220) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mBackStackIndices Ljava/util/ArrayList;
+	125     (00000224) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	126     (0000022a) move-result          v0
+	127     (0000022c) if-lez               v0, +2b
+	218:2c5
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x230 : [ dump-BB@0x242 ]
+	128     (00000230) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	129     (00000236) const-string         v6, 'Back Stack Indices:'
+	130     (0000023a) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	131     (00000240) const/4              v3, 0
+	218:2c5
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x242 : [ dump-BB@0x246 dump-BB@0x282 ]
+	132     (00000242) if-ge                v3, v0, +20
+	218:2c5
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x246 : [ dump-BB@0x242 ]
+	133     (00000246) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mBackStackIndices Ljava/util/ArrayList;
+	134     (0000024a) invoke-virtual       v6, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	135     (00000250) move-result-object   v1
+	136     (00000252) check-cast           v1, Landroid/support/v4/app/BackStackRecord;
+	137     (00000256) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	138     (0000025c) const-string         v6, '  #'
+	139     (00000260) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	140     (00000266) invoke-virtual       v11, v3, Ljava/io/PrintWriter;->print(I)V
+	141     (0000026c) const-string         v6, ': '
+	142     (00000270) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	143     (00000276) invoke-virtual       v11, v1, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+	144     (0000027c) add-int/lit8         v3, v3, 1
+	145     (00000280) goto                 -1f
+	218:2c5
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x282 : [ dump-BB@0x28a dump-BB@0x2c4 ]
+	146     (00000282) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAvailBackStackIndices Ljava/util/ArrayList;
+	147     (00000286) if-eqz               v6, +1f
+	218:2c5
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x28a : [ dump-BB@0x29a dump-BB@0x2c4 ]
+	148     (0000028a) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAvailBackStackIndices Ljava/util/ArrayList;
+	149     (0000028e) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	150     (00000294) move-result          v6
+	151     (00000296) if-lez               v6, +17
+	218:2c5
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x29a : [ dump-BB@0x2c4 ]
+	152     (0000029a) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	153     (000002a0) const-string         v6, 'mAvailBackStackIndices: '
+	154     (000002a4) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	155     (000002aa) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAvailBackStackIndices Ljava/util/ArrayList;
+	156     (000002ae) invoke-virtual       v6, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
+	157     (000002b4) move-result-object   v6
+	158     (000002b6) invoke-static        v6, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+	159     (000002bc) move-result-object   v6
+	160     (000002be) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	218:2c5
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x2c4 : [ dump-BB@0x2ce dump-BB@0x336 ]
+	161     (000002c4) monitor-exit         v8
+	162     (000002c6) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mPendingActions Ljava/util/ArrayList;
+	163     (000002ca) if-eqz               v6, +36
+
+dump-BB@0x2ce : [ dump-BB@0x2de dump-BB@0x336 ]
+	164     (000002ce) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mPendingActions Ljava/util/ArrayList;
+	165     (000002d2) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	166     (000002d8) move-result          v0
+	167     (000002da) if-lez               v0, +2e
+
+dump-BB@0x2de : [ dump-BB@0x2f0 ]
+	168     (000002de) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	169     (000002e4) const-string         v6, 'Pending Actions:'
+	170     (000002e8) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	171     (000002ee) const/4              v3, 0
+
+dump-BB@0x2f0 : [ dump-BB@0x2f4 dump-BB@0x336 ]
+	172     (000002f0) if-ge                v3, v0, +23
+
+dump-BB@0x2f4 : [ dump-BB@0x2f0 ]
+	173     (000002f4) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mPendingActions Ljava/util/ArrayList;
+	174     (000002f8) invoke-virtual       v6, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	175     (000002fe) move-result-object   v5
+	176     (00000300) check-cast           v5, Ljava/lang/Runnable;
+	177     (00000304) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	178     (0000030a) const-string         v6, '  #'
+	179     (0000030e) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	180     (00000314) invoke-virtual       v11, v3, Ljava/io/PrintWriter;->print(I)V
+	181     (0000031a) const-string         v6, ': '
+	182     (0000031e) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	183     (00000324) invoke-virtual       v11, v5, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+	184     (0000032a) add-int/lit8         v3, v3, 1
+	185     (0000032e) goto                 -1f
+
+dump-BB@0x330 : [ dump-BB@0x332 ]
+	186     (00000330) move-exception       v6
+
+dump-BB@0x332 : 
+	187     (00000332) monitor-exit         v8
+	188     (00000334) throw                v6
+	332:333
+	(Ljava/lang/Throwable; -> 330 dump-BB@0x330)
+
+dump-BB@0x336 : [ dump-BB@0x382 dump-BB@0x39c ]
+	189     (00000336) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	190     (0000033c) const-string         v6, 'FragmentManager misc state:'
+	191     (00000340) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	192     (00000346) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	193     (0000034c) const-string         v6, '  mActivity='
+	194     (00000350) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	195     (00000356) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mActivity Landroid/support/v4/app/FragmentActivity;
+	196     (0000035a) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+	197     (00000360) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	198     (00000366) const-string         v6, '  mContainer='
+	199     (0000036a) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	200     (00000370) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mContainer Landroid/support/v4/app/FragmentContainer;
+	201     (00000374) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+	202     (0000037a) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mParent Landroid/support/v4/app/Fragment;
+	203     (0000037e) if-eqz               v6, +f
+
+dump-BB@0x382 : [ dump-BB@0x39c ]
+	204     (00000382) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	205     (00000388) const-string         v6, '  mParent='
+	206     (0000038c) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	207     (00000392) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mParent Landroid/support/v4/app/Fragment;
+	208     (00000396) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+
+dump-BB@0x39c : [ dump-BB@0x3e6 dump-BB@0x400 ]
+	209     (0000039c) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	210     (000003a2) const-string         v6, '  mCurState='
+	211     (000003a6) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	212     (000003ac) iget                 v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mCurState I
+	213     (000003b0) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(I)V
+	214     (000003b6) const-string         v6, ' mStateSaved='
+	215     (000003ba) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	216     (000003c0) iget-boolean         v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mStateSaved Z
+	217     (000003c4) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Z)V
+	218     (000003ca) const-string         v6, ' mDestroyed='
+	219     (000003ce) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	220     (000003d4) iget-boolean         v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mDestroyed Z
+	221     (000003d8) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Z)V
+	222     (000003de) iget-boolean         v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mNeedMenuInvalidate Z
+	223     (000003e2) if-eqz               v6, +f
+
+dump-BB@0x3e6 : [ dump-BB@0x400 ]
+	224     (000003e6) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	225     (000003ec) const-string         v6, '  mNeedMenuInvalidate='
+	226     (000003f0) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	227     (000003f6) iget-boolean         v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mNeedMenuInvalidate Z
+	228     (000003fa) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Z)V
+
+dump-BB@0x400 : [ dump-BB@0x408 dump-BB@0x422 ]
+	229     (00000400) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mNoTransactionsBecause Ljava/lang/String;
+	230     (00000404) if-eqz               v6, +f
+
+dump-BB@0x408 : [ dump-BB@0x422 ]
+	231     (00000408) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	232     (0000040e) const-string         v6, '  mNoTransactionsBecause='
+	233     (00000412) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	234     (00000418) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mNoTransactionsBecause Ljava/lang/String;
+	235     (0000041c) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+dump-BB@0x422 : [ dump-BB@0x42a dump-BB@0x464 ]
+	236     (00000422) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAvailIndices Ljava/util/ArrayList;
+	237     (00000426) if-eqz               v6, +1f
+
+dump-BB@0x42a : [ dump-BB@0x43a dump-BB@0x464 ]
+	238     (0000042a) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAvailIndices Ljava/util/ArrayList;
+	239     (0000042e) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	240     (00000434) move-result          v6
+	241     (00000436) if-lez               v6, +17
+
+dump-BB@0x43a : [ dump-BB@0x464 ]
+	242     (0000043a) invoke-virtual       v11, v9, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	243     (00000440) const-string         v6, '  mAvailIndices: '
+	244     (00000444) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	245     (0000044a) iget-object          v6, v8, Landroid/support/v4/app/FragmentManagerImpl;->mAvailIndices Ljava/util/ArrayList;
+	246     (0000044e) invoke-virtual       v6, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
+	247     (00000454) move-result-object   v6
+	248     (00000456) invoke-static        v6, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+	249     (0000045c) move-result-object   v6
+	250     (0000045e) invoke-virtual       v11, v6, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+dump-BB@0x464 : 
+	251     (00000464) return-void          
+

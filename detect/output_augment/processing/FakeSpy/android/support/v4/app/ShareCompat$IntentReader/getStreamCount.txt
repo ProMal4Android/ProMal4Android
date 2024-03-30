@@ -1,0 +1,50 @@
+# Landroid/support/v4/app/ShareCompat$IntentReader;->getStreamCount()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:int
+
+getStreamCount-BB@0x0 : [ getStreamCount-BB@0x8 getStreamCount-BB@0x28 ]
+	0       (00000000) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams Ljava/util/ArrayList;
+	1       (00000004) if-nez               v0, +12
+
+getStreamCount-BB@0x8 : [ getStreamCount-BB@0x14 getStreamCount-BB@0x28 ]
+	2       (00000008) invoke-virtual       v2, Landroid/support/v4/app/ShareCompat$IntentReader;->isMultipleShare()Z
+	3       (0000000e) move-result          v0
+	4       (00000010) if-eqz               v0, +c
+
+getStreamCount-BB@0x14 : [ getStreamCount-BB@0x28 ]
+	5       (00000014) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent Landroid/content/Intent;
+	6       (00000018) const-string         v1, 'android.intent.extra.STREAM'
+	7       (0000001c) invoke-virtual       v0, v1, Landroid/content/Intent;->getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+	8       (00000022) move-result-object   v0
+	9       (00000024) iput-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams Ljava/util/ArrayList;
+
+getStreamCount-BB@0x28 : [ getStreamCount-BB@0x30 getStreamCount-BB@0x3e ]
+	10      (00000028) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams Ljava/util/ArrayList;
+	11      (0000002c) if-eqz               v0, +9
+
+getStreamCount-BB@0x30 : [ getStreamCount-BB@0x3c ]
+	12      (00000030) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams Ljava/util/ArrayList;
+	13      (00000034) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	14      (0000003a) move-result          v0
+
+getStreamCount-BB@0x3c : 
+	15      (0000003c) return               v0
+
+getStreamCount-BB@0x3e : [ getStreamCount-BB@0x52 getStreamCount-BB@0x56 ]
+	16      (0000003e) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent Landroid/content/Intent;
+	17      (00000042) const-string         v1, 'android.intent.extra.STREAM'
+	18      (00000046) invoke-virtual       v0, v1, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+	19      (0000004c) move-result          v0
+	20      (0000004e) if-eqz               v0, +4
+
+getStreamCount-BB@0x52 : [ getStreamCount-BB@0x3c ]
+	21      (00000052) const/4              v0, 1
+	22      (00000054) goto                 -c
+
+getStreamCount-BB@0x56 : [ getStreamCount-BB@0x3c ]
+	23      (00000056) const/4              v0, 0
+	24      (00000058) goto                 -e
+

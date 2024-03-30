@@ -1,0 +1,13 @@
+# Landroid/support/v4/app/NotificationCompat$Builder;->addPerson(Ljava/lang/String;)Landroid/support/v4/app/NotificationCompat$Builder; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+#
+# - return:android.support.v4.app.NotificationCompat$Builder
+
+addPerson-BB@0x0 : 
+	0       (00000000) iget-object          v0, v1, Landroid/support/v4/app/NotificationCompat$Builder;->mPeople Ljava/util/ArrayList;
+	1       (00000004) invoke-virtual       v0, v2, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	2       (0000000a) return-object        v1
+

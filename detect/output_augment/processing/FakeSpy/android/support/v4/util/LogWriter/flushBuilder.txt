@@ -1,0 +1,29 @@
+# Landroid/support/v4/util/LogWriter;->flushBuilder()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+flushBuilder-BB@0x0 : [ flushBuilder-BB@0x10 flushBuilder-BB@0x3e ]
+	0       (00000000) iget-object          v0, v3, Landroid/support/v4/util/LogWriter;->mBuilder Ljava/lang/StringBuilder;
+	1       (00000004) invoke-virtual       v0, Ljava/lang/StringBuilder;->length()I
+	2       (0000000a) move-result          v0
+	3       (0000000c) if-lez               v0, +19
+
+flushBuilder-BB@0x10 : [ flushBuilder-BB@0x3e ]
+	4       (00000010) iget-object          v0, v3, Landroid/support/v4/util/LogWriter;->mTag Ljava/lang/String;
+	5       (00000014) iget-object          v1, v3, Landroid/support/v4/util/LogWriter;->mBuilder Ljava/lang/StringBuilder;
+	6       (00000018) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	7       (0000001e) move-result-object   v1
+	8       (00000020) invoke-static        v0, v1, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	9       (00000026) iget-object          v0, v3, Landroid/support/v4/util/LogWriter;->mBuilder Ljava/lang/StringBuilder;
+	10      (0000002a) const/4              v1, 0
+	11      (0000002c) iget-object          v2, v3, Landroid/support/v4/util/LogWriter;->mBuilder Ljava/lang/StringBuilder;
+	12      (00000030) invoke-virtual       v2, Ljava/lang/StringBuilder;->length()I
+	13      (00000036) move-result          v2
+	14      (00000038) invoke-virtual       v0, v1, v2, Ljava/lang/StringBuilder;->delete(I I)Ljava/lang/StringBuilder;
+
+flushBuilder-BB@0x3e : 
+	15      (0000003e) return-void          
+

@@ -1,0 +1,49 @@
+# Landroid/support/v7/widget/RecyclerView;->setScrollingTouchSlop(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:int
+#
+# - return:void
+
+setScrollingTouchSlop-BB@0x0 : [ D:setScrollingTouchSlop-BB@0x16 0:setScrollingTouchSlop-BB@0x52 1:setScrollingTouchSlop-BB@0x60 ]
+	0       (00000000) invoke-virtual       v4, Landroid/support/v7/widget/RecyclerView;->getContext()Landroid/content/Context;
+	1       (00000006) move-result-object   v1
+	2       (00000008) invoke-static        v1, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) packed-switch        v5, +30 (0x70)
+
+setScrollingTouchSlop-BB@0x16 : [ setScrollingTouchSlop-BB@0x52 ]
+	5       (00000016) const-string         v1, 'RecyclerView'
+	6       (0000001a) new-instance         v2, Ljava/lang/StringBuilder;
+	7       (0000001e) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	8       (00000024) const-string         v3, 'setScrollingTouchSlop(): bad argument constant '
+	9       (00000028) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (0000002e) move-result-object   v2
+	11      (00000030) invoke-virtual       v2, v5, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	12      (00000036) move-result-object   v2
+	13      (00000038) const-string         v3, '; using default value'
+	14      (0000003c) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (00000042) move-result-object   v2
+	16      (00000044) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	17      (0000004a) move-result-object   v2
+	18      (0000004c) invoke-static        v1, v2, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+
+setScrollingTouchSlop-BB@0x52 : [ setScrollingTouchSlop-BB@0x5e ]
+	19      (00000052) invoke-virtual       v0, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+	20      (00000058) move-result          v1
+	21      (0000005a) iput                 v1, v4, Landroid/support/v7/widget/RecyclerView;->mTouchSlop I
+
+setScrollingTouchSlop-BB@0x5e : 
+	22      (0000005e) return-void          
+
+setScrollingTouchSlop-BB@0x60 : [ setScrollingTouchSlop-BB@0x5e ]
+	23      (00000060) invoke-static        v0, Landroid/support/v4/view/ViewConfigurationCompat;->getScaledPagingTouchSlop(Landroid/view/ViewConfiguration;)I
+	24      (00000066) move-result          v1
+	25      (00000068) iput                 v1, v4, Landroid/support/v7/widget/RecyclerView;->mTouchSlop I
+	26      (0000006c) goto                 -7
+
+setScrollingTouchSlop-BB@0x6e : 
+	27      (0000006e) nop                  
+	28      (00000070) packed-switch-payload 0 1
+

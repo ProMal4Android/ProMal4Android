@@ -1,0 +1,63 @@
+# Landroid/support/v4/app/NotificationCompatJellybean;->getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object; [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.app.Notification
+#
+# - return:java.lang.Object[]
+
+getActionObjectsLocked-BB@0x0 : [ getActionObjectsLocked-BB@0x8 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) sget-object          v3, Landroid/support/v4/app/NotificationCompatJellybean;->sActionsLock Ljava/lang/Object;
+	2       (00000006) monitor-enter        v3
+
+getActionObjectsLocked-BB@0x8 : [ getActionObjectsLocked-BB@0x14 getActionObjectsLocked-BB@0x1a ]
+	3       (00000008) invoke-static        Landroid/support/v4/app/NotificationCompatJellybean;->ensureActionReflectionReadyLocked()Z
+	4       (0000000e) move-result          v1
+	5       (00000010) if-nez               v1, +5
+	8:15
+	(Ljava/lang/Throwable; -> 32 getActionObjectsLocked-BB@0x32)
+
+getActionObjectsLocked-BB@0x14 : [ getActionObjectsLocked-BB@0x18 ]
+	6       (00000014) monitor-exit         v3
+	7       (00000016) move-object          v1, v2
+
+getActionObjectsLocked-BB@0x18 : 
+	8       (00000018) return-object        v1
+
+getActionObjectsLocked-BB@0x1a : [ getActionObjectsLocked-BB@0x2e ]
+	9       (0000001a) sget-object          v1, Landroid/support/v4/app/NotificationCompatJellybean;->sActionsField Ljava/lang/reflect/Field;
+	10      (0000001e) invoke-virtual       v1, v5, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	11      (00000024) move-result-object   v1
+	12      (00000026) check-cast           v1, [Ljava/lang/Object;
+	13      (0000002a) check-cast           v1, [Ljava/lang/Object;
+	1a:2d
+	(Ljava/lang/Throwable; -> 32 getActionObjectsLocked-BB@0x32)
+	(Ljava/lang/IllegalAccessException; -> 38 getActionObjectsLocked-BB@0x38)
+
+getActionObjectsLocked-BB@0x2e : [ getActionObjectsLocked-BB@0x18 ]
+	14      (0000002e) monitor-exit         v3
+	15      (00000030) goto                 -c
+	2e:35
+	(Ljava/lang/Throwable; -> 32 getActionObjectsLocked-BB@0x32)
+
+getActionObjectsLocked-BB@0x32 : 
+	16      (00000032) move-exception       v1
+	17      (00000034) monitor-exit         v3
+	18      (00000036) throw                v1
+
+getActionObjectsLocked-BB@0x38 : [ getActionObjectsLocked-BB@0x3a ]
+	19      (00000038) move-exception       v0
+
+getActionObjectsLocked-BB@0x3a : [ getActionObjectsLocked-BB@0x18 ]
+	20      (0000003a) const-string         v1, 'NotificationCompat'
+	21      (0000003e) const-string         v4, 'Unable to access notification actions'
+	22      (00000042) invoke-static        v1, v4, v0, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	23      (00000048) const/4              v1, 1
+	24      (0000004a) sput-boolean         v1, Landroid/support/v4/app/NotificationCompatJellybean;->sActionsAccessFailed Z
+	25      (0000004e) monitor-exit         v3
+	26      (00000050) move-object          v1, v2
+	27      (00000052) goto                 -1d
+	3a:4f
+	(Ljava/lang/Throwable; -> 32 getActionObjectsLocked-BB@0x32)
+

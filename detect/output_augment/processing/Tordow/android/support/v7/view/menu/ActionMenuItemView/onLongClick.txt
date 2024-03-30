@@ -1,0 +1,80 @@
+# Landroid/support/v7/view/menu/ActionMenuItemView;->onLongClick(Landroid/view/View;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.view.View
+#
+# - return:boolean
+
+onLongClick-BB@0x0 : [ onLongClick-BB@0x10 onLongClick-BB@0x14 ]
+	0       (00000000) const/4              v2, 1
+	1       (00000002) const/4              v1, 0
+	2       (00000004) invoke-virtual       v9, Landroid/support/v7/view/menu/ActionMenuItemView;->a()Z
+	3       (0000000a) move-result          v0
+	4       (0000000c) if-eqz               v0, +4
+
+onLongClick-BB@0x10 : [ onLongClick-BB@0x12 ]
+	5       (00000010) move                 v0, v1
+
+onLongClick-BB@0x12 : 
+	6       (00000012) return               v0
+
+onLongClick-BB@0x14 : [ onLongClick-BB@0x68 onLongClick-BB@0x80 ]
+	7       (00000014) const/4              v0, 2
+	8       (00000016) new-array            v3, v0, [I
+	9       (0000001a) new-instance         v4, Landroid/graphics/Rect;
+	10      (0000001e) invoke-direct        v4, Landroid/graphics/Rect;-><init>()V
+	11      (00000024) invoke-virtual       v9, v3, Landroid/support/v7/view/menu/ActionMenuItemView;->getLocationOnScreen([I)V
+	12      (0000002a) invoke-virtual       v9, v4, Landroid/support/v7/view/menu/ActionMenuItemView;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+	13      (00000030) invoke-virtual       v9, Landroid/support/v7/view/menu/ActionMenuItemView;->getContext()Landroid/content/Context;
+	14      (00000036) move-result-object   v5
+	15      (00000038) invoke-virtual       v9, Landroid/support/v7/view/menu/ActionMenuItemView;->getWidth()I
+	16      (0000003e) move-result          v0
+	17      (00000040) invoke-virtual       v9, Landroid/support/v7/view/menu/ActionMenuItemView;->getHeight()I
+	18      (00000046) move-result          v6
+	19      (00000048) aget                 v7, v3, v2
+	20      (0000004c) div-int/lit8         v8, v6, 2
+	21      (00000050) add-int/2addr        v7, v8
+	22      (00000052) aget                 v8, v3, v1
+	23      (00000056) div-int/lit8         v0, v0, 2
+	24      (0000005a) add-int/2addr        v0, v8
+	25      (0000005c) invoke-static        v10, Landroid/support/v4/view/cf;->h(Landroid/view/View;)I
+	26      (00000062) move-result          v8
+	27      (00000064) if-nez               v8, +e
+
+onLongClick-BB@0x68 : [ onLongClick-BB@0x80 ]
+	28      (00000068) invoke-virtual       v5, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	29      (0000006e) move-result-object   v8
+	30      (00000070) invoke-virtual       v8, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	31      (00000076) move-result-object   v8
+	32      (00000078) iget                 v8, v8, Landroid/util/DisplayMetrics;->widthPixels I
+	33      (0000007c) sub-int              v0, v8, v0
+
+onLongClick-BB@0x80 : [ onLongClick-BB@0xa0 onLongClick-BB@0xc2 ]
+	34      (00000080) iget-object          v8, v9, Landroid/support/v7/view/menu/ActionMenuItemView;->a Landroid/support/v7/view/menu/m;
+	35      (00000084) invoke-virtual       v8, Landroid/support/v7/view/menu/m;->getTitle()Ljava/lang/CharSequence;
+	36      (0000008a) move-result-object   v8
+	37      (0000008c) invoke-static        v5, v8, v1, Landroid/widget/Toast;->makeText(Landroid/content/Context; Ljava/lang/CharSequence; I)Landroid/widget/Toast;
+	38      (00000092) move-result-object   v5
+	39      (00000094) invoke-virtual       v4, Landroid/graphics/Rect;->height()I
+	40      (0000009a) move-result          v8
+	41      (0000009c) if-ge                v7, v8, +13
+
+onLongClick-BB@0xa0 : [ onLongClick-BB@0xb8 ]
+	42      (000000a0) const                v1, 8388661 # [1.1755017777041484e-38]
+	43      (000000a6) aget                 v3, v3, v2
+	44      (000000aa) add-int/2addr        v3, v6
+	45      (000000ac) iget                 v4, v4, Landroid/graphics/Rect;->top I
+	46      (000000b0) sub-int/2addr        v3, v4
+	47      (000000b2) invoke-virtual       v5, v1, v0, v3, Landroid/widget/Toast;->setGravity(I I I)V
+
+onLongClick-BB@0xb8 : [ onLongClick-BB@0x12 ]
+	48      (000000b8) invoke-virtual       v5, Landroid/widget/Toast;->show()V
+	49      (000000be) move                 v0, v2
+	50      (000000c0) goto                 -57
+
+onLongClick-BB@0xc2 : [ onLongClick-BB@0xb8 ]
+	51      (000000c2) const/16             v0, 81
+	52      (000000c6) invoke-virtual       v5, v0, v1, v6, Landroid/widget/Toast;->setGravity(I I I)V
+	53      (000000cc) goto                 -a
+

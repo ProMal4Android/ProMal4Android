@@ -1,0 +1,87 @@
+# Landroid/support/v7/view/menu/ListMenuItemView;->setIcon(Landroid/graphics/drawable/Drawable;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.graphics.drawable.Drawable
+#
+# - return:void
+
+setIcon-BB@0x0 : [ setIcon-BB@0x12 setIcon-BB@0x1a ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) iget-object          v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mItemData Landroid/support/v7/view/menu/MenuItemImpl;
+	2       (00000006) invoke-virtual       v2, Landroid/support/v7/view/menu/MenuItemImpl;->shouldShowIcon()Z
+	3       (0000000c) move-result          v2
+	4       (0000000e) if-nez               v2, +6
+
+setIcon-BB@0x12 : [ setIcon-BB@0x1a setIcon-BB@0x2a ]
+	5       (00000012) iget-boolean         v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mForceShowIcon Z
+	6       (00000016) if-eqz               v2, +a
+
+setIcon-BB@0x1a : [ setIcon-BB@0x1c ]
+	7       (0000001a) const/4              v0, 1
+
+setIcon-BB@0x1c : [ setIcon-BB@0x20 setIcon-BB@0x2e ]
+	8       (0000001c) if-nez               v0, +9
+
+setIcon-BB@0x20 : [ setIcon-BB@0x28 setIcon-BB@0x2e ]
+	9       (00000020) iget-boolean         v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mPreserveIconSpacing Z
+	10      (00000024) if-nez               v2, +5
+
+setIcon-BB@0x28 : 
+	11      (00000028) return-void          
+
+setIcon-BB@0x2a : [ setIcon-BB@0x1c ]
+	12      (0000002a) move                 v0, v1
+	13      (0000002c) goto                 -8
+
+setIcon-BB@0x2e : [ setIcon-BB@0x36 setIcon-BB@0x42 ]
+	14      (0000002e) iget-object          v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mIconView Landroid/widget/ImageView;
+	15      (00000032) if-nez               v2, +8
+
+setIcon-BB@0x36 : [ setIcon-BB@0x3a setIcon-BB@0x42 ]
+	16      (00000036) if-nez               v4, +6
+
+setIcon-BB@0x3a : [ setIcon-BB@0x42 setIcon-BB@0x28 ]
+	17      (0000003a) iget-boolean         v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mPreserveIconSpacing Z
+	18      (0000003e) if-eqz               v2, -b
+
+setIcon-BB@0x42 : [ setIcon-BB@0x4a setIcon-BB@0x50 ]
+	19      (00000042) iget-object          v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mIconView Landroid/widget/ImageView;
+	20      (00000046) if-nez               v2, +5
+
+setIcon-BB@0x4a : [ setIcon-BB@0x50 ]
+	21      (0000004a) invoke-direct        v3, Landroid/support/v7/view/menu/ListMenuItemView;->insertIconView()V
+
+setIcon-BB@0x50 : [ setIcon-BB@0x54 setIcon-BB@0x5c ]
+	22      (00000050) if-nez               v4, +6
+
+setIcon-BB@0x54 : [ setIcon-BB@0x5c setIcon-BB@0x8a ]
+	23      (00000054) iget-boolean         v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mPreserveIconSpacing Z
+	24      (00000058) if-eqz               v2, +19
+
+setIcon-BB@0x5c : [ setIcon-BB@0x64 setIcon-BB@0x86 ]
+	25      (0000005c) iget-object          v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mIconView Landroid/widget/ImageView;
+	26      (00000060) if-eqz               v0, +13
+
+setIcon-BB@0x64 : [ setIcon-BB@0x7a setIcon-BB@0x28 ]
+	27      (00000064) invoke-virtual       v2, v4, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	28      (0000006a) iget-object          v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mIconView Landroid/widget/ImageView;
+	29      (0000006e) invoke-virtual       v2, Landroid/widget/ImageView;->getVisibility()I
+	30      (00000074) move-result          v2
+	31      (00000076) if-eqz               v2, -27
+
+setIcon-BB@0x7a : [ setIcon-BB@0x28 ]
+	32      (0000007a) iget-object          v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mIconView Landroid/widget/ImageView;
+	33      (0000007e) invoke-virtual       v2, v1, Landroid/widget/ImageView;->setVisibility(I)V
+	34      (00000084) goto                 -2e
+
+setIcon-BB@0x86 : [ setIcon-BB@0x64 ]
+	35      (00000086) const/4              v4, 0
+	36      (00000088) goto                 -12
+
+setIcon-BB@0x8a : [ setIcon-BB@0x28 ]
+	37      (0000008a) iget-object          v1, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mIconView Landroid/widget/ImageView;
+	38      (0000008e) const/16             v2, 8
+	39      (00000092) invoke-virtual       v1, v2, Landroid/widget/ImageView;->setVisibility(I)V
+	40      (00000098) goto                 -38
+

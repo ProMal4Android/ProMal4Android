@@ -1,0 +1,105 @@
+# Landroid/support/v7/widget/AdapterHelper$UpdateOp;->equals(Ljava/lang/Object;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:java.lang.Object
+#
+# - return:boolean
+
+equals-BB@0x0 : [ equals-BB@0x8 equals-BB@0xa ]
+	0       (00000000) const/4              v1, 1
+	1       (00000002) const/4              v2, 0
+	2       (00000004) if-ne                v5, v6, +3
+
+equals-BB@0x8 : 
+	3       (00000008) return               v1
+
+equals-BB@0xa : [ equals-BB@0xe equals-BB@0x22 ]
+	4       (0000000a) if-eqz               v6, +c
+
+equals-BB@0xe : [ equals-BB@0x22 equals-BB@0x26 ]
+	5       (0000000e) invoke-virtual       v5, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	6       (00000014) move-result-object   v3
+	7       (00000016) invoke-virtual       v6, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	8       (0000001c) move-result-object   v4
+	9       (0000001e) if-eq                v3, v4, +4
+
+equals-BB@0x22 : [ equals-BB@0x8 ]
+	10      (00000022) move                 v1, v2
+	11      (00000024) goto                 -e
+
+equals-BB@0x26 : [ equals-BB@0x38 equals-BB@0x3c ]
+	12      (00000026) move-object          v0, v6
+	13      (00000028) check-cast           v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+	14      (0000002c) iget                 v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	15      (00000030) iget                 v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	16      (00000034) if-eq                v3, v4, +4
+
+equals-BB@0x38 : [ equals-BB@0x8 ]
+	17      (00000038) move                 v1, v2
+	18      (0000003a) goto                 -19
+
+equals-BB@0x3c : [ equals-BB@0x48 equals-BB@0x76 ]
+	19      (0000003c) iget                 v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	20      (00000040) const/16             v4, 8
+	21      (00000044) if-ne                v3, v4, +19
+
+equals-BB@0x48 : [ equals-BB@0x5e equals-BB@0x76 ]
+	22      (00000048) iget                 v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	23      (0000004c) iget                 v4, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	24      (00000050) sub-int/2addr        v3, v4
+	25      (00000052) invoke-static        v3, Ljava/lang/Math;->abs(I)I
+	26      (00000058) move-result          v3
+	27      (0000005a) if-ne                v3, v1, +e
+
+equals-BB@0x5e : [ equals-BB@0x6a equals-BB@0x76 ]
+	28      (0000005e) iget                 v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	29      (00000062) iget                 v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	30      (00000066) if-ne                v3, v4, +8
+
+equals-BB@0x6a : [ equals-BB@0x76 equals-BB@0x8 ]
+	31      (0000006a) iget                 v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	32      (0000006e) iget                 v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	33      (00000072) if-eq                v3, v4, -35
+
+equals-BB@0x76 : [ equals-BB@0x82 equals-BB@0x86 ]
+	34      (00000076) iget                 v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	35      (0000007a) iget                 v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	36      (0000007e) if-eq                v3, v4, +4
+
+equals-BB@0x82 : [ equals-BB@0x8 ]
+	37      (00000082) move                 v1, v2
+	38      (00000084) goto                 -3e
+
+equals-BB@0x86 : [ equals-BB@0x92 equals-BB@0x96 ]
+	39      (00000086) iget                 v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	40      (0000008a) iget                 v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	41      (0000008e) if-eq                v3, v4, +4
+
+equals-BB@0x92 : [ equals-BB@0x8 ]
+	42      (00000092) move                 v1, v2
+	43      (00000094) goto                 -46
+
+equals-BB@0x96 : [ equals-BB@0x9e equals-BB@0xb6 ]
+	44      (00000096) iget-object          v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	45      (0000009a) if-eqz               v3, +e
+
+equals-BB@0x9e : [ equals-BB@0xb2 equals-BB@0x8 ]
+	46      (0000009e) iget-object          v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	47      (000000a2) iget-object          v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	48      (000000a6) invoke-virtual       v3, v4, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+	49      (000000ac) move-result          v3
+	50      (000000ae) if-nez               v3, -53
+
+equals-BB@0xb2 : [ equals-BB@0x8 ]
+	51      (000000b2) move                 v1, v2
+	52      (000000b4) goto                 -56
+
+equals-BB@0xb6 : [ equals-BB@0xbe equals-BB@0x8 ]
+	53      (000000b6) iget-object          v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	54      (000000ba) if-eqz               v3, -59
+
+equals-BB@0xbe : [ equals-BB@0x8 ]
+	55      (000000be) move                 v1, v2
+	56      (000000c0) goto                 -5c
+

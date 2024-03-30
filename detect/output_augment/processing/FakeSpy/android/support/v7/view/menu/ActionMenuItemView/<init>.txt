@@ -1,0 +1,42 @@
+# Landroid/support/v7/view/menu/ActionMenuItemView;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.Context
+# - v7:android.util.AttributeSet
+# - v8:int
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v4, 0
+	1       (00000002) invoke-direct        v5, v6, v7, v8, Landroid/support/v7/widget/AppCompatTextView;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	2       (00000008) invoke-virtual       v6, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	3       (0000000e) move-result-object   v2
+	4       (00000010) sget                 v3, Landroid/support/v7/appcompat/R$bool;->abc_config_allowActionMenuItemTextWithIcon I
+	5       (00000014) invoke-virtual       v2, v3, Landroid/content/res/Resources;->getBoolean(I)Z
+	6       (0000001a) move-result          v3
+	7       (0000001c) iput-boolean         v3, v5, Landroid/support/v7/view/menu/ActionMenuItemView;->mAllowTextWithIcon Z
+	8       (00000020) sget-object          v3, Landroid/support/v7/appcompat/R$styleable;->ActionMenuItemView [I
+	9       (00000024) invoke-virtual       v6, v7, v3, v8, v4, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I I I)Landroid/content/res/TypedArray;
+	10      (0000002a) move-result-object   v0
+	11      (0000002c) sget                 v3, Landroid/support/v7/appcompat/R$styleable;->ActionMenuItemView_android_minWidth I
+	12      (00000030) invoke-virtual       v0, v3, v4, Landroid/content/res/TypedArray;->getDimensionPixelSize(I I)I
+	13      (00000036) move-result          v3
+	14      (00000038) iput                 v3, v5, Landroid/support/v7/view/menu/ActionMenuItemView;->mMinWidth I
+	15      (0000003c) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+	16      (00000042) invoke-virtual       v2, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	17      (00000048) move-result-object   v3
+	18      (0000004a) iget                 v1, v3, Landroid/util/DisplayMetrics;->density F
+	19      (0000004e) const/high16         v3, 16896 # [32.0]
+	20      (00000052) mul-float/2addr      v3, v1
+	21      (00000054) const/high16         v4, 16128 # [0.5]
+	22      (00000058) add-float/2addr      v3, v4
+	23      (0000005a) float-to-int         v3, v3
+	24      (0000005c) iput                 v3, v5, Landroid/support/v7/view/menu/ActionMenuItemView;->mMaxIconSize I
+	25      (00000060) invoke-virtual       v5, v5, Landroid/support/v7/view/menu/ActionMenuItemView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+	26      (00000066) invoke-virtual       v5, v5, Landroid/support/v7/view/menu/ActionMenuItemView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+	27      (0000006c) const/4              v3, -1
+	28      (0000006e) iput                 v3, v5, Landroid/support/v7/view/menu/ActionMenuItemView;->mSavedPaddingLeft I
+	29      (00000072) return-void          
+

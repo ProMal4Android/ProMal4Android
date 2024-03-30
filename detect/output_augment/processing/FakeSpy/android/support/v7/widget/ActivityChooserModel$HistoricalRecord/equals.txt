@@ -1,0 +1,82 @@
+# Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->equals(Ljava/lang/Object;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:java.lang.Object
+#
+# - return:boolean
+
+equals-BB@0x0 : [ equals-BB@0x8 equals-BB@0xa ]
+	0       (00000000) const/4              v1, 1
+	1       (00000002) const/4              v2, 0
+	2       (00000004) if-ne                v8, v9, +3
+
+equals-BB@0x8 : 
+	3       (00000008) return               v1
+
+equals-BB@0xa : [ equals-BB@0xe equals-BB@0x12 ]
+	4       (0000000a) if-nez               v9, +4
+
+equals-BB@0xe : [ equals-BB@0x8 ]
+	5       (0000000e) move                 v1, v2
+	6       (00000010) goto                 -4
+
+equals-BB@0x12 : [ equals-BB@0x26 equals-BB@0x2a ]
+	7       (00000012) invoke-virtual       v8, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	8       (00000018) move-result-object   v3
+	9       (0000001a) invoke-virtual       v9, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	10      (00000020) move-result-object   v4
+	11      (00000022) if-eq                v3, v4, +4
+
+equals-BB@0x26 : [ equals-BB@0x8 ]
+	12      (00000026) move                 v1, v2
+	13      (00000028) goto                 -10
+
+equals-BB@0x2a : [ equals-BB@0x38 equals-BB@0x44 ]
+	14      (0000002a) move-object          v0, v9
+	15      (0000002c) check-cast           v0, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;
+	16      (00000030) iget-object          v3, v8, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->activity Landroid/content/ComponentName;
+	17      (00000034) if-nez               v3, +8
+
+equals-BB@0x38 : [ equals-BB@0x40 equals-BB@0x5c ]
+	18      (00000038) iget-object          v3, v0, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->activity Landroid/content/ComponentName;
+	19      (0000003c) if-eqz               v3, +10
+
+equals-BB@0x40 : [ equals-BB@0x8 ]
+	20      (00000040) move                 v1, v2
+	21      (00000042) goto                 -1d
+
+equals-BB@0x44 : [ equals-BB@0x58 equals-BB@0x5c ]
+	22      (00000044) iget-object          v3, v8, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->activity Landroid/content/ComponentName;
+	23      (00000048) iget-object          v4, v0, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->activity Landroid/content/ComponentName;
+	24      (0000004c) invoke-virtual       v3, v4, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+	25      (00000052) move-result          v3
+	26      (00000054) if-nez               v3, +4
+
+equals-BB@0x58 : [ equals-BB@0x8 ]
+	27      (00000058) move                 v1, v2
+	28      (0000005a) goto                 -29
+
+equals-BB@0x5c : [ equals-BB@0x6c equals-BB@0x70 ]
+	29      (0000005c) iget-wide            v4, v8, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->time J
+	30      (00000060) iget-wide            v6, v0, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->time J
+	31      (00000064) cmp-long             v3, v4, v6
+	32      (00000068) if-eqz               v3, +4
+
+equals-BB@0x6c : [ equals-BB@0x8 ]
+	33      (0000006c) move                 v1, v2
+	34      (0000006e) goto                 -33
+
+equals-BB@0x70 : [ equals-BB@0x8c equals-BB@0x8 ]
+	35      (00000070) iget                 v3, v8, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->weight F
+	36      (00000074) invoke-static        v3, Ljava/lang/Float;->floatToIntBits(F)I
+	37      (0000007a) move-result          v3
+	38      (0000007c) iget                 v4, v0, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;->weight F
+	39      (00000080) invoke-static        v4, Ljava/lang/Float;->floatToIntBits(F)I
+	40      (00000086) move-result          v4
+	41      (00000088) if-eq                v3, v4, -40
+
+equals-BB@0x8c : [ equals-BB@0x8 ]
+	42      (0000008c) move                 v1, v2
+	43      (0000008e) goto                 -43
+

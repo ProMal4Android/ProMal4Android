@@ -1,0 +1,28 @@
+# Landroid/support/v7/view/menu/ActionMenuItemView;->onConfigurationChanged(Landroid/content/res/Configuration;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.res.Configuration
+#
+# - return:void
+
+onConfigurationChanged-BB@0x0 : [ onConfigurationChanged-BB@0xc onConfigurationChanged-BB@0x12 ]
+	0       (00000000) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) const/16             v1, 8
+	2       (00000008) if-lt                v0, v1, +5
+
+onConfigurationChanged-BB@0xc : [ onConfigurationChanged-BB@0x12 ]
+	3       (0000000c) invoke-super         v2, v3, Landroid/support/v7/widget/AppCompatTextView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+onConfigurationChanged-BB@0x12 : 
+	4       (00000012) invoke-virtual       v2, Landroid/support/v7/view/menu/ActionMenuItemView;->getContext()Landroid/content/Context;
+	5       (00000018) move-result-object   v0
+	6       (0000001a) invoke-virtual       v0, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	7       (00000020) move-result-object   v0
+	8       (00000022) sget                 v1, Landroid/support/v7/a/c;->abc_config_allowActionMenuItemTextWithIcon I
+	9       (00000026) invoke-virtual       v0, v1, Landroid/content/res/Resources;->getBoolean(I)Z
+	10      (0000002c) move-result          v0
+	11      (0000002e) iput-boolean         v0, v2, Landroid/support/v7/view/menu/ActionMenuItemView;->g Z
+	12      (00000032) invoke-direct        v2, Landroid/support/v7/view/menu/ActionMenuItemView;->e()V
+	13      (00000038) return-void          
+

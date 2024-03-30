@@ -1,0 +1,24 @@
+# Landroid/support/design/widget/Snackbar$5;->onViewDetachedFromWindow(Landroid/view/View;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.view.View
+#
+# - return:void
+
+onViewDetachedFromWindow-BB@0x0 : [ onViewDetachedFromWindow-BB@0x10 onViewDetachedFromWindow-BB@0x28 ]
+	0       (00000000) iget-object          v0, v2, Landroid/support/design/widget/Snackbar$5;->this$0 Landroid/support/design/widget/Snackbar;
+	1       (00000004) invoke-virtual       v0, Landroid/support/design/widget/Snackbar;->isShownOrQueued()Z
+	2       (0000000a) move-result          v0
+	3       (0000000c) if-eqz               v0, +e
+
+onViewDetachedFromWindow-BB@0x10 : [ onViewDetachedFromWindow-BB@0x28 ]
+	4       (00000010) invoke-static        Landroid/support/design/widget/Snackbar;->access$100()Landroid/os/Handler;
+	5       (00000016) move-result-object   v0
+	6       (00000018) new-instance         v1, Landroid/support/design/widget/Snackbar$5$1;
+	7       (0000001c) invoke-direct        v1, v2, Landroid/support/design/widget/Snackbar$5$1;-><init>(Landroid/support/design/widget/Snackbar$5;)V
+	8       (00000022) invoke-virtual       v0, v1, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+onViewDetachedFromWindow-BB@0x28 : 
+	9       (00000028) return-void          
+

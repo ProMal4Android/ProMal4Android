@@ -1,0 +1,84 @@
+# Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->runIfNecessary(Landroid/support/v7/widget/RecyclerView;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.support.v7.widget.RecyclerView
+#
+# - return:void
+
+runIfNecessary-BB@0x0 : [ runIfNecessary-BB@0xa runIfNecessary-BB@0x20 ]
+	0       (00000000) const/4              v6, 0
+	1       (00000002) iget                 v1, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mJumpToPosition I
+	2       (00000006) if-ltz               v1, +d
+
+runIfNecessary-BB@0xa : [ runIfNecessary-BB@0x1e ]
+	3       (0000000a) iget                 v0, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mJumpToPosition I
+	4       (0000000e) const/4              v1, -1
+	5       (00000010) iput                 v1, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mJumpToPosition I
+	6       (00000014) invoke-static        v8, v0, Landroid/support/v7/widget/RecyclerView;->access$6200(Landroid/support/v7/widget/RecyclerView; I)V
+	7       (0000001a) iput-boolean         v6, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->changed Z
+
+runIfNecessary-BB@0x1e : 
+	8       (0000001e) return-void          
+
+runIfNecessary-BB@0x20 : [ runIfNecessary-BB@0x28 runIfNecessary-BB@0xc0 ]
+	9       (00000020) iget-boolean         v1, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->changed Z
+	10      (00000024) if-eqz               v1, +4e
+
+runIfNecessary-BB@0x28 : [ runIfNecessary-BB@0x36 runIfNecessary-BB@0xa0 ]
+	11      (00000028) invoke-direct        v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->validate()V
+	12      (0000002e) iget-object          v1, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mInterpolator Landroid/view/animation/Interpolator;
+	13      (00000032) if-nez               v1, +37
+
+runIfNecessary-BB@0x36 : [ runIfNecessary-BB@0x42 runIfNecessary-BB@0x84 ]
+	14      (00000036) iget                 v1, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDuration I
+	15      (0000003a) const/high16         v2, -32768 # [-0.0]
+	16      (0000003e) if-ne                v1, v2, +23
+
+runIfNecessary-BB@0x42 : [ runIfNecessary-BB@0x58 ]
+	17      (00000042) invoke-static        v8, Landroid/support/v7/widget/RecyclerView;->access$5900(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$ViewFlinger;
+	18      (00000048) move-result-object   v1
+	19      (0000004a) iget                 v2, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDx I
+	20      (0000004e) iget                 v3, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDy I
+	21      (00000052) invoke-virtual       v1, v2, v3, Landroid/support/v7/widget/RecyclerView$ViewFlinger;->smoothScrollBy(I I)V
+
+runIfNecessary-BB@0x58 : [ runIfNecessary-BB@0x70 runIfNecessary-BB@0x7e ]
+	22      (00000058) iget                 v1, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->consecutiveUpdates I
+	23      (0000005c) add-int/lit8         v1, v1, 1
+	24      (00000060) iput                 v1, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->consecutiveUpdates I
+	25      (00000064) iget                 v1, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->consecutiveUpdates I
+	26      (00000068) const/16             v2, 10
+	27      (0000006c) if-le                v1, v2, +9
+
+runIfNecessary-BB@0x70 : [ runIfNecessary-BB@0x7e ]
+	28      (00000070) const-string         v1, 'RecyclerView'
+	29      (00000074) const-string         v2, 'Smooth Scroll action is being updated too frequently. Make sure you are not changing it unless necessary'
+	30      (00000078) invoke-static        v1, v2, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+
+runIfNecessary-BB@0x7e : [ runIfNecessary-BB@0x1e ]
+	31      (0000007e) iput-boolean         v6, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->changed Z
+	32      (00000082) goto                 -32
+
+runIfNecessary-BB@0x84 : [ runIfNecessary-BB@0x58 ]
+	33      (00000084) invoke-static        v8, Landroid/support/v7/widget/RecyclerView;->access$5900(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$ViewFlinger;
+	34      (0000008a) move-result-object   v1
+	35      (0000008c) iget                 v2, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDx I
+	36      (00000090) iget                 v3, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDy I
+	37      (00000094) iget                 v4, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDuration I
+	38      (00000098) invoke-virtual       v1, v2, v3, v4, Landroid/support/v7/widget/RecyclerView$ViewFlinger;->smoothScrollBy(I I I)V
+	39      (0000009e) goto                 -23
+
+runIfNecessary-BB@0xa0 : [ runIfNecessary-BB@0x58 ]
+	40      (000000a0) invoke-static        v8, Landroid/support/v7/widget/RecyclerView;->access$5900(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$ViewFlinger;
+	41      (000000a6) move-result-object   v1
+	42      (000000a8) iget                 v2, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDx I
+	43      (000000ac) iget                 v3, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDy I
+	44      (000000b0) iget                 v4, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mDuration I
+	45      (000000b4) iget-object          v5, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->mInterpolator Landroid/view/animation/Interpolator;
+	46      (000000b8) invoke-virtual       v1, v2, v3, v4, v5, Landroid/support/v7/widget/RecyclerView$ViewFlinger;->smoothScrollBy(I I I Landroid/view/animation/Interpolator;)V
+	47      (000000be) goto                 -33
+
+runIfNecessary-BB@0xc0 : [ runIfNecessary-BB@0x1e ]
+	48      (000000c0) iput                 v6, v7, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->consecutiveUpdates I
+	49      (000000c4) goto                 -53
+

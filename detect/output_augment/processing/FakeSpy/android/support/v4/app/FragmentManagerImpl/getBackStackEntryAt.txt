@@ -1,0 +1,15 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->getBackStackEntryAt(I)Landroid/support/v4/app/FragmentManager$BackStackEntry; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:int
+#
+# - return:android.support.v4.app.FragmentManager$BackStackEntry
+
+getBackStackEntryAt-BB@0x0 : 
+	0       (00000000) iget-object          v0, v1, Landroid/support/v4/app/FragmentManagerImpl;->mBackStack Ljava/util/ArrayList;
+	1       (00000004) invoke-virtual       v0, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) check-cast           v0, Landroid/support/v4/app/FragmentManager$BackStackEntry;
+	4       (00000010) return-object        v0
+

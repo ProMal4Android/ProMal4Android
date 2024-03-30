@@ -1,0 +1,72 @@
+# Landroid/support/v4/print/PrintHelperKitkat;->loadBitmap(Landroid/net/Uri; Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap; [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.net.Uri
+# - v7:android.graphics.BitmapFactory$Options
+#
+# - return:android.graphics.Bitmap
+
+loadBitmap-BB@0x0 : [ loadBitmap-BB@0x4 loadBitmap-BB@0xc ]
+	0       (00000000) if-eqz               v6, +6
+
+loadBitmap-BB@0x4 : [ loadBitmap-BB@0xc loadBitmap-BB@0x1c ]
+	1       (00000004) iget-object          v2, v5, Landroid/support/v4/print/PrintHelperKitkat;->mContext Landroid/content/Context;
+	2       (00000008) if-nez               v2, +a
+
+loadBitmap-BB@0xc : 
+	3       (0000000c) new-instance         v2, Ljava/lang/IllegalArgumentException;
+	4       (00000010) const-string         v3, 'bad argument to loadBitmap'
+	5       (00000014) invoke-direct        v2, v3, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	6       (0000001a) throw                v2
+
+loadBitmap-BB@0x1c : [ loadBitmap-BB@0x1e ]
+	7       (0000001c) const/4              v0, 0
+
+loadBitmap-BB@0x1e : [ loadBitmap-BB@0x40 loadBitmap-BB@0x46 ]
+	8       (0000001e) iget-object          v2, v5, Landroid/support/v4/print/PrintHelperKitkat;->mContext Landroid/content/Context;
+	9       (00000022) invoke-virtual       v2, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+	10      (00000028) move-result-object   v2
+	11      (0000002a) invoke-virtual       v2, v6, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+	12      (00000030) move-result-object   v0
+	13      (00000032) const/4              v2, 0
+	14      (00000034) invoke-static        v0, v2, v7, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream; Landroid/graphics/Rect; Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+	15      (0000003a) move-result-object   v2
+	16      (0000003c) if-eqz               v0, +5
+	1e:39
+	(Ljava/lang/Throwable; -> 5a loadBitmap-BB@0x5a)
+
+loadBitmap-BB@0x40 : [ loadBitmap-BB@0x46 ]
+	17      (00000040) invoke-virtual       v0, Ljava/io/InputStream;->close()V
+	40:45
+	(Ljava/io/IOException; -> 48 loadBitmap-BB@0x48)
+
+loadBitmap-BB@0x46 : 
+	18      (00000046) return-object        v2
+
+loadBitmap-BB@0x48 : [ loadBitmap-BB@0x46 ]
+	19      (00000048) move-exception       v1
+	20      (0000004a) const-string         v3, 'PrintHelperKitkat'
+	21      (0000004e) const-string         v4, 'close fail '
+	22      (00000052) invoke-static        v3, v4, v1, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	23      (00000058) goto                 -9
+
+loadBitmap-BB@0x5a : [ loadBitmap-BB@0x60 loadBitmap-BB@0x66 ]
+	24      (0000005a) move-exception       v2
+	25      (0000005c) if-eqz               v0, +5
+
+loadBitmap-BB@0x60 : [ loadBitmap-BB@0x66 ]
+	26      (00000060) invoke-virtual       v0, Ljava/io/InputStream;->close()V
+	60:65
+	(Ljava/io/IOException; -> 68 loadBitmap-BB@0x68)
+
+loadBitmap-BB@0x66 : 
+	27      (00000066) throw                v2
+
+loadBitmap-BB@0x68 : [ loadBitmap-BB@0x66 ]
+	28      (00000068) move-exception       v1
+	29      (0000006a) const-string         v3, 'PrintHelperKitkat'
+	30      (0000006e) const-string         v4, 'close fail '
+	31      (00000072) invoke-static        v3, v4, v1, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	32      (00000078) goto                 -9
+

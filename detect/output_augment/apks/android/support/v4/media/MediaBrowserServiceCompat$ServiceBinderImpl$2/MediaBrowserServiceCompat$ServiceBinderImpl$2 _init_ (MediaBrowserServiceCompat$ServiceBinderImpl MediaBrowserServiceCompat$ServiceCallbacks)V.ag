@@ -1,0 +1,15 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl$2;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl; Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V [access_flags=constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:android.support.v4.media.MediaBrowserServiceCompat$ServiceBinderImpl
+# - v2:android.support.v4.media.MediaBrowserServiceCompat$ServiceCallbacks
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-object          v1, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl$2;->this$1 Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
+	1       (00000004) iput-object          v2, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl$2;->val$callbacks Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
+	2       (00000008) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	3       (0000000e) return-void          
+

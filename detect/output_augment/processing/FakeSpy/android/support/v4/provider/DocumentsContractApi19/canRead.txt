@@ -1,0 +1,30 @@
+# Landroid/support/v4/provider/DocumentsContractApi19;->canRead(Landroid/content/Context; Landroid/net/Uri;)Z [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Context
+# - v4:android.net.Uri
+#
+# - return:boolean
+
+canRead-BB@0x0 : [ canRead-BB@0x10 canRead-BB@0x12 ]
+	0       (00000000) const/4              v1, 1
+	1       (00000002) const/4              v0, 0
+	2       (00000004) invoke-virtual       v3, v4, v1, Landroid/content/Context;->checkCallingOrSelfUriPermission(Landroid/net/Uri; I)I
+	3       (0000000a) move-result          v2
+	4       (0000000c) if-eqz               v2, +3
+
+canRead-BB@0x10 : 
+	5       (00000010) return               v0
+
+canRead-BB@0x12 : [ canRead-BB@0x26 canRead-BB@0x10 ]
+	6       (00000012) invoke-static        v3, v4, Landroid/support/v4/provider/DocumentsContractApi19;->getRawType(Landroid/content/Context; Landroid/net/Uri;)Ljava/lang/String;
+	7       (00000018) move-result-object   v2
+	8       (0000001a) invoke-static        v2, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	9       (00000020) move-result          v2
+	10      (00000022) if-nez               v2, -9
+
+canRead-BB@0x26 : [ canRead-BB@0x10 ]
+	11      (00000026) move                 v0, v1
+	12      (00000028) goto                 -c
+

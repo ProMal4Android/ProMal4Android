@@ -1,0 +1,39 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->checkStateLoss()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+checkStateLoss-BB@0x0 : [ checkStateLoss-BB@0x8 checkStateLoss-BB@0x18 ]
+	0       (00000000) iget-boolean         v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mStateSaved Z
+	1       (00000004) if-eqz               v0, +a
+
+checkStateLoss-BB@0x8 : 
+	2       (00000008) new-instance         v0, Ljava/lang/IllegalStateException;
+	3       (0000000c) const-string         v1, 'Can not perform this action after onSaveInstanceState'
+	4       (00000010) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	5       (00000016) throw                v0
+
+checkStateLoss-BB@0x18 : [ checkStateLoss-BB@0x20 checkStateLoss-BB@0x56 ]
+	6       (00000018) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mNoTransactionsBecause Ljava/lang/String;
+	7       (0000001c) if-eqz               v0, +1d
+
+checkStateLoss-BB@0x20 : 
+	8       (00000020) new-instance         v0, Ljava/lang/IllegalStateException;
+	9       (00000024) new-instance         v1, Ljava/lang/StringBuilder;
+	10      (00000028) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	11      (0000002e) const-string         v2, 'Can not perform this action inside of '
+	12      (00000032) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) iget-object          v2, v3, Landroid/support/v4/app/FragmentManagerImpl;->mNoTransactionsBecause Ljava/lang/String;
+	15      (0000003e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (00000044) move-result-object   v1
+	17      (00000046) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	18      (0000004c) move-result-object   v1
+	19      (0000004e) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	20      (00000054) throw                v0
+
+checkStateLoss-BB@0x56 : 
+	21      (00000056) return-void          
+

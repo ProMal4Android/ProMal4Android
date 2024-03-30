@@ -1,0 +1,77 @@
+# Landroid/support/v4/widget/NestedScrollView;->a(I I)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:int
+# - v7:int
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0xe a-BB@0x10 ]
+	0       (00000000) const/4              v4, 0
+	1       (00000002) invoke-virtual       v5, Landroid/support/v4/widget/NestedScrollView;->getChildCount()I
+	2       (00000008) move-result          v0
+	3       (0000000a) if-nez               v0, +3
+
+a-BB@0xe : 
+	4       (0000000e) return-void          
+
+a-BB@0x10 : [ a-BB@0x2a a-BB@0xa6 ]
+	5       (00000010) invoke-static        Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
+	6       (00000016) move-result-wide     v0
+	7       (00000018) iget-wide            v2, v5, Landroid/support/v4/widget/NestedScrollView;->a J
+	8       (0000001c) sub-long/2addr       v0, v2
+	9       (0000001e) const-wide/16        v2, 250 # [250.0]
+	10      (00000022) cmp-long             v0, v0, v2
+	11      (00000026) if-lez               v0, +40
+
+a-BB@0x2a : [ a-BB@0x98 ]
+	12      (0000002a) invoke-virtual       v5, Landroid/support/v4/widget/NestedScrollView;->getHeight()I
+	13      (00000030) move-result          v0
+	14      (00000032) invoke-virtual       v5, Landroid/support/v4/widget/NestedScrollView;->getPaddingBottom()I
+	15      (00000038) move-result          v1
+	16      (0000003a) sub-int/2addr        v0, v1
+	17      (0000003c) invoke-virtual       v5, Landroid/support/v4/widget/NestedScrollView;->getPaddingTop()I
+	18      (00000042) move-result          v1
+	19      (00000044) sub-int/2addr        v0, v1
+	20      (00000046) invoke-virtual       v5, v4, Landroid/support/v4/widget/NestedScrollView;->getChildAt(I)Landroid/view/View;
+	21      (0000004c) move-result-object   v1
+	22      (0000004e) invoke-virtual       v1, Landroid/view/View;->getHeight()I
+	23      (00000054) move-result          v1
+	24      (00000056) sub-int              v0, v1, v0
+	25      (0000005a) invoke-static        v4, v0, Ljava/lang/Math;->max(I I)I
+	26      (00000060) move-result          v0
+	27      (00000062) invoke-virtual       v5, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	28      (00000068) move-result          v1
+	29      (0000006a) add-int              v2, v1, v7
+	30      (0000006e) invoke-static        v2, v0, Ljava/lang/Math;->min(I I)I
+	31      (00000074) move-result          v0
+	32      (00000076) invoke-static        v4, v0, Ljava/lang/Math;->max(I I)I
+	33      (0000007c) move-result          v0
+	34      (0000007e) sub-int/2addr        v0, v1
+	35      (00000080) iget-object          v2, v5, Landroid/support/v4/widget/NestedScrollView;->c Landroid/widget/OverScroller;
+	36      (00000084) invoke-virtual       v5, Landroid/support/v4/widget/NestedScrollView;->getScrollX()I
+	37      (0000008a) move-result          v3
+	38      (0000008c) invoke-virtual       v2, v3, v1, v4, v0, Landroid/widget/OverScroller;->startScroll(I I I I)V
+	39      (00000092) invoke-static        v5, Lcom/realtalk/cz;->c(Landroid/view/View;)V
+
+a-BB@0x98 : [ a-BB@0xe ]
+	40      (00000098) invoke-static        Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
+	41      (0000009e) move-result-wide     v0
+	42      (000000a0) iput-wide            v0, v5, Landroid/support/v4/widget/NestedScrollView;->a J
+	43      (000000a4) goto                 -4b
+
+a-BB@0xa6 : [ a-BB@0xb6 a-BB@0xc0 ]
+	44      (000000a6) iget-object          v0, v5, Landroid/support/v4/widget/NestedScrollView;->c Landroid/widget/OverScroller;
+	45      (000000aa) invoke-virtual       v0, Landroid/widget/OverScroller;->isFinished()Z
+	46      (000000b0) move-result          v0
+	47      (000000b2) if-nez               v0, +7
+
+a-BB@0xb6 : [ a-BB@0xc0 ]
+	48      (000000b6) iget-object          v0, v5, Landroid/support/v4/widget/NestedScrollView;->c Landroid/widget/OverScroller;
+	49      (000000ba) invoke-virtual       v0, Landroid/widget/OverScroller;->abortAnimation()V
+
+a-BB@0xc0 : [ a-BB@0x98 ]
+	50      (000000c0) invoke-virtual       v5, v6, v7, Landroid/support/v4/widget/NestedScrollView;->scrollBy(I I)V
+	51      (000000c6) goto                 -17
+

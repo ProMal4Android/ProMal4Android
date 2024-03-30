@@ -1,0 +1,156 @@
+# Landroid/support/v4/view/ViewPager;->onDraw(Landroid/graphics/Canvas;)V [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v18
+# - v19:android.graphics.Canvas
+#
+# - return:void
+
+onDraw-BB@0x0 : [ onDraw-BB@0x12 onDraw-BB@0x17e ]
+	0       (00000000) invoke-super/range   v18 ... v19, Landroid/view/ViewGroup;->onDraw(Landroid/graphics/Canvas;)V
+	1       (00000006) move-object/from16   v0, v18
+	2       (0000000a) iget                 v13, v0, Landroid/support/v4/view/ViewPager;->mPageMargin I
+	3       (0000000e) if-lez               v13, +b8
+
+onDraw-BB@0x12 : [ onDraw-BB@0x1e onDraw-BB@0x17e ]
+	4       (00000012) move-object/from16   v0, v18
+	5       (00000016) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mMarginDrawable Landroid/graphics/drawable/Drawable;
+	6       (0000001a) if-eqz               v13, +b2
+
+onDraw-BB@0x1e : [ onDraw-BB@0x32 onDraw-BB@0x17e ]
+	7       (0000001e) move-object/from16   v0, v18
+	8       (00000022) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mItems Ljava/util/ArrayList;
+	9       (00000026) invoke-virtual       v13, Ljava/util/ArrayList;->size()I
+	10      (0000002c) move-result          v13
+	11      (0000002e) if-lez               v13, +a8
+
+onDraw-BB@0x32 : [ onDraw-BB@0x3e onDraw-BB@0x17e ]
+	12      (00000032) move-object/from16   v0, v18
+	13      (00000036) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mAdapter Landroid/support/v4/view/PagerAdapter;
+	14      (0000003a) if-eqz               v13, +a2
+
+onDraw-BB@0x3e : [ onDraw-BB@0xac ]
+	15      (0000003e) invoke-virtual/range v18, Landroid/support/v4/view/ViewPager;->getScrollX()I
+	16      (00000044) move-result          v10
+	17      (00000046) invoke-virtual/range v18, Landroid/support/v4/view/ViewPager;->getWidth()I
+	18      (0000004c) move-result          v11
+	19      (0000004e) move-object/from16   v0, v18
+	20      (00000052) iget                 v13, v0, Landroid/support/v4/view/ViewPager;->mPageMargin I
+	21      (00000056) int-to-float         v13, v13
+	22      (00000058) int-to-float         v14, v11
+	23      (0000005a) div-float            v7, v13, v14
+	24      (0000005e) const/4              v5, 0
+	25      (00000060) move-object/from16   v0, v18
+	26      (00000064) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mItems Ljava/util/ArrayList;
+	27      (00000068) const/4              v14, 0
+	28      (0000006a) invoke-virtual       v13, v14, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	29      (00000070) move-result-object   v3
+	30      (00000072) check-cast           v3, Landroid/support/v4/view/ViewPager$ItemInfo;
+	31      (00000076) iget                 v8, v3, Landroid/support/v4/view/ViewPager$ItemInfo;->offset F
+	32      (0000007a) move-object/from16   v0, v18
+	33      (0000007e) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mItems Ljava/util/ArrayList;
+	34      (00000082) invoke-virtual       v13, Ljava/util/ArrayList;->size()I
+	35      (00000088) move-result          v4
+	36      (0000008a) iget                 v2, v3, Landroid/support/v4/view/ViewPager$ItemInfo;->position I
+	37      (0000008e) move-object/from16   v0, v18
+	38      (00000092) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mItems Ljava/util/ArrayList;
+	39      (00000096) add-int/lit8         v14, v4, -1
+	40      (0000009a) invoke-virtual       v13, v14, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	41      (000000a0) move-result-object   v13
+	42      (000000a2) check-cast           v13, Landroid/support/v4/view/ViewPager$ItemInfo;
+	43      (000000a6) iget                 v6, v13, Landroid/support/v4/view/ViewPager$ItemInfo;->position I
+	44      (000000aa) move                 v9, v2
+
+onDraw-BB@0xac : [ onDraw-BB@0xb0 onDraw-BB@0x17e ]
+	45      (000000ac) if-ge                v9, v6, +69
+
+onDraw-BB@0xb0 : [ onDraw-BB@0xb8 onDraw-BB@0xd6 ]
+	46      (000000b0) iget                 v13, v3, Landroid/support/v4/view/ViewPager$ItemInfo;->position I
+	47      (000000b4) if-le                v9, v13, +11
+
+onDraw-BB@0xb8 : [ onDraw-BB@0xbc onDraw-BB@0xd6 ]
+	48      (000000b8) if-ge                v5, v4, +f
+
+onDraw-BB@0xbc : [ onDraw-BB@0xb0 ]
+	49      (000000bc) move-object/from16   v0, v18
+	50      (000000c0) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mItems Ljava/util/ArrayList;
+	51      (000000c4) add-int/lit8         v5, v5, 1
+	52      (000000c8) invoke-virtual       v13, v5, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	53      (000000ce) move-result-object   v3
+	54      (000000d0) check-cast           v3, Landroid/support/v4/view/ViewPager$ItemInfo;
+	55      (000000d4) goto                 -12
+
+onDraw-BB@0xd6 : [ onDraw-BB@0xde onDraw-BB@0x180 ]
+	56      (000000d6) iget                 v13, v3, Landroid/support/v4/view/ViewPager$ItemInfo;->position I
+	57      (000000da) if-ne                v9, v13, +53
+
+onDraw-BB@0xde : [ onDraw-BB@0xfc ]
+	58      (000000de) iget                 v13, v3, Landroid/support/v4/view/ViewPager$ItemInfo;->offset F
+	59      (000000e2) iget                 v14, v3, Landroid/support/v4/view/ViewPager$ItemInfo;->widthFactor F
+	60      (000000e6) add-float/2addr      v13, v14
+	61      (000000e8) int-to-float         v14, v11
+	62      (000000ea) mul-float            v1, v13, v14
+	63      (000000ee) iget                 v13, v3, Landroid/support/v4/view/ViewPager$ItemInfo;->offset F
+	64      (000000f2) iget                 v14, v3, Landroid/support/v4/view/ViewPager$ItemInfo;->widthFactor F
+	65      (000000f6) add-float/2addr      v13, v14
+	66      (000000f8) add-float            v8, v13, v7
+
+onDraw-BB@0xfc : [ onDraw-BB@0x112 onDraw-BB@0x170 ]
+	67      (000000fc) move-object/from16   v0, v18
+	68      (00000100) iget                 v13, v0, Landroid/support/v4/view/ViewPager;->mPageMargin I
+	69      (00000104) int-to-float         v13, v13
+	70      (00000106) add-float/2addr      v13, v1
+	71      (00000108) int-to-float         v14, v10
+	72      (0000010a) cmpl-float           v13, v13, v14
+	73      (0000010e) if-lez               v13, +31
+
+onDraw-BB@0x112 : [ onDraw-BB@0x170 ]
+	74      (00000112) move-object/from16   v0, v18
+	75      (00000116) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mMarginDrawable Landroid/graphics/drawable/Drawable;
+	76      (0000011a) invoke-static        v1, Ljava/lang/Math;->round(F)I
+	77      (00000120) move-result          v14
+	78      (00000122) move-object/from16   v0, v18
+	79      (00000126) iget                 v15, v0, Landroid/support/v4/view/ViewPager;->mTopPageBounds I
+	80      (0000012a) move-object/from16   v0, v18
+	81      (0000012e) iget                 v0, v0, Landroid/support/v4/view/ViewPager;->mPageMargin I
+	82      (00000132) move/from16          v16, v0
+	83      (00000136) move/from16          v0, v16
+	84      (0000013a) int-to-float         v0, v0
+	85      (0000013c) move/from16          v16, v0
+	86      (00000140) add-float            v16, v16, v1
+	87      (00000144) invoke-static/range  v16, Ljava/lang/Math;->round(F)I
+	88      (0000014a) move-result          v16
+	89      (0000014c) move-object/from16   v0, v18
+	90      (00000150) iget                 v0, v0, Landroid/support/v4/view/ViewPager;->mBottomPageBounds I
+	91      (00000154) move/from16          v17, v0
+	92      (00000158) invoke-virtual/range v13 ... v17, Landroid/graphics/drawable/Drawable;->setBounds(I I I I)V
+	93      (0000015e) move-object/from16   v0, v18
+	94      (00000162) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mMarginDrawable Landroid/graphics/drawable/Drawable;
+	95      (00000166) move-object/from16   v0, v19
+	96      (0000016a) invoke-virtual       v13, v0, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+onDraw-BB@0x170 : [ onDraw-BB@0x17e onDraw-BB@0x1a2 ]
+	97      (00000170) add-int              v13, v10, v11
+	98      (00000174) int-to-float         v13, v13
+	99      (00000176) cmpl-float           v13, v1, v13
+	100     (0000017a) if-lez               v13, +14
+
+onDraw-BB@0x17e : 
+	101     (0000017e) return-void          
+
+onDraw-BB@0x180 : [ onDraw-BB@0xfc ]
+	102     (00000180) move-object/from16   v0, v18
+	103     (00000184) iget-object          v13, v0, Landroid/support/v4/view/ViewPager;->mAdapter Landroid/support/v4/view/PagerAdapter;
+	104     (00000188) invoke-virtual       v13, v9, Landroid/support/v4/view/PagerAdapter;->getPageWidth(I)F
+	105     (0000018e) move-result          v12
+	106     (00000190) add-float            v13, v8, v12
+	107     (00000194) int-to-float         v14, v11
+	108     (00000196) mul-float            v1, v13, v14
+	109     (0000019a) add-float            v13, v12, v7
+	110     (0000019e) add-float/2addr      v8, v13
+	111     (000001a0) goto                 -52
+
+onDraw-BB@0x1a2 : [ onDraw-BB@0xac ]
+	112     (000001a2) add-int/lit8         v9, v9, 1
+	113     (000001a6) goto                 -7d
+

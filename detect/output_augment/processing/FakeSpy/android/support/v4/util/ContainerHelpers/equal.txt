@@ -1,0 +1,30 @@
+# Landroid/support/v4/util/ContainerHelpers;->equal(Ljava/lang/Object; Ljava/lang/Object;)Z [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.Object
+# - v2:java.lang.Object
+#
+# - return:boolean
+
+equal-BB@0x0 : [ equal-BB@0x4 equal-BB@0x14 ]
+	0       (00000000) if-eq                v1, v2, +a
+
+equal-BB@0x4 : [ equal-BB@0x8 equal-BB@0x18 ]
+	1       (00000004) if-eqz               v1, +a
+
+equal-BB@0x8 : [ equal-BB@0x14 equal-BB@0x18 ]
+	2       (00000008) invoke-virtual       v1, v2, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+	3       (0000000e) move-result          v0
+	4       (00000010) if-eqz               v0, +4
+
+equal-BB@0x14 : [ equal-BB@0x16 ]
+	5       (00000014) const/4              v0, 1
+
+equal-BB@0x16 : 
+	6       (00000016) return               v0
+
+equal-BB@0x18 : [ equal-BB@0x16 ]
+	7       (00000018) const/4              v0, 0
+	8       (0000001a) goto                 -2
+

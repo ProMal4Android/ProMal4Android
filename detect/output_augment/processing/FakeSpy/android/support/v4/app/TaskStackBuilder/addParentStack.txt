@@ -1,0 +1,47 @@
+# Landroid/support/v4/app/TaskStackBuilder;->addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.ComponentName
+#
+# - return:android.support.v4.app.TaskStackBuilder
+
+addParentStack-BB@0x0 : [ addParentStack-BB@0xc ]
+	0       (00000000) iget-object          v3, v5, Landroid/support/v4/app/TaskStackBuilder;->mIntents Ljava/util/ArrayList;
+	1       (00000004) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	2       (0000000a) move-result          v1
+
+addParentStack-BB@0xc : [ addParentStack-BB@0x18 ]
+	3       (0000000c) iget-object          v3, v5, Landroid/support/v4/app/TaskStackBuilder;->mSourceContext Landroid/content/Context;
+	4       (00000010) invoke-static        v3, v6, Landroid/support/v4/app/NavUtils;->getParentActivityIntent(Landroid/content/Context; Landroid/content/ComponentName;)Landroid/content/Intent;
+	5       (00000016) move-result-object   v2
+	c:37
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> 3c addParentStack-BB@0x3c)
+
+addParentStack-BB@0x18 : [ addParentStack-BB@0x1c addParentStack-BB@0x58 ]
+	6       (00000018) if-eqz               v2, +20
+	c:37
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> 3c addParentStack-BB@0x3c)
+
+addParentStack-BB@0x1c : [ addParentStack-BB@0x18 ]
+	7       (0000001c) iget-object          v3, v5, Landroid/support/v4/app/TaskStackBuilder;->mIntents Ljava/util/ArrayList;
+	8       (00000020) invoke-virtual       v3, v1, v2, Ljava/util/ArrayList;->add(I Ljava/lang/Object;)V
+	9       (00000026) iget-object          v3, v5, Landroid/support/v4/app/TaskStackBuilder;->mSourceContext Landroid/content/Context;
+	10      (0000002a) invoke-virtual       v2, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+	11      (00000030) move-result-object   v4
+	12      (00000032) invoke-static        v3, v4, Landroid/support/v4/app/NavUtils;->getParentActivityIntent(Landroid/content/Context; Landroid/content/ComponentName;)Landroid/content/Intent;
+	13      (00000038) move-result-object   v2
+	14      (0000003a) goto                 -11
+
+addParentStack-BB@0x3c : 
+	15      (0000003c) move-exception       v0
+	16      (0000003e) const-string         v3, 'TaskStackBuilder'
+	17      (00000042) const-string         v4, 'Bad ComponentName while traversing activity parent metadata'
+	18      (00000046) invoke-static        v3, v4, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	19      (0000004c) new-instance         v3, Ljava/lang/IllegalArgumentException;
+	20      (00000050) invoke-direct        v3, v0, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
+	21      (00000056) throw                v3
+
+addParentStack-BB@0x58 : 
+	22      (00000058) return-object        v5
+

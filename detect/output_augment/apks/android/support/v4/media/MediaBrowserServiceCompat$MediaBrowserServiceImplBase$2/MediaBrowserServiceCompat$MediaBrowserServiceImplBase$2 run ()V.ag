@@ -1,0 +1,85 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v9
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0x1c ]
+	0       (00000000) iget-object          v0, v9, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->this$1 Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
+	1       (00000004) iget-object          v0, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0 Landroid/support/v4/media/MediaBrowserServiceCompat;
+	2       (00000008) iget-object          v0, v0, Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections Landroid/support/v4/util/ArrayMap;
+	3       (0000000c) invoke-virtual       v0, Landroid/support/v4/util/ArrayMap;->keySet()Ljava/util/Set;
+	4       (00000012) move-result-object   v0
+	5       (00000014) invoke-interface     v0, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+	6       (0000001a) move-result-object   v0
+
+run-BB@0x1c : [ run-BB@0x28 run-BB@0xc2 ]
+	7       (0000001c) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	8       (00000022) move-result          v1
+	9       (00000024) if-eqz               v1, +4f
+
+run-BB@0x28 : [ run-BB@0x64 run-BB@0xbe ]
+	10      (00000028) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	11      (0000002e) move-result-object   v1
+	12      (00000030) check-cast           v1, Landroid/os/IBinder;
+	13      (00000034) iget-object          v2, v9, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->this$1 Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
+	14      (00000038) iget-object          v2, v2, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0 Landroid/support/v4/media/MediaBrowserServiceCompat;
+	15      (0000003c) iget-object          v2, v2, Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections Landroid/support/v4/util/ArrayMap;
+	16      (00000040) invoke-virtual       v2, v1, Landroid/support/v4/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	17      (00000046) move-result-object   v2
+	18      (00000048) check-cast           v2, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
+	19      (0000004c) iget-object          v3, v2, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->subscriptions Ljava/util/HashMap;
+	20      (00000050) iget-object          v4, v9, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->val$parentId Ljava/lang/String;
+	21      (00000054) invoke-virtual       v3, v4, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	22      (0000005a) move-result-object   v3
+	23      (0000005c) check-cast           v3, Ljava/util/List;
+	24      (00000060) if-eqz               v3, +2f
+
+run-BB@0x64 : [ run-BB@0x6c ]
+	25      (00000064) invoke-interface     v3, Ljava/util/List;->iterator()Ljava/util/Iterator;
+	26      (0000006a) move-result-object   v4
+
+run-BB@0x6c : [ run-BB@0x78 run-BB@0xbc ]
+	27      (0000006c) invoke-interface     v4, Ljava/util/Iterator;->hasNext()Z
+	28      (00000072) move-result          v5
+	29      (00000074) if-eqz               v5, +24
+
+run-BB@0x78 : [ run-BB@0x9c run-BB@0xb8 ]
+	30      (00000078) invoke-interface     v4, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	31      (0000007e) move-result-object   v5
+	32      (00000080) check-cast           v5, Landroid/support/v4/util/Pair;
+	33      (00000084) iget-object          v6, v9, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->val$options Landroid/os/Bundle;
+	34      (00000088) iget-object          v7, v5, Landroid/support/v4/util/Pair;->second Ljava/lang/Object;
+	35      (0000008c) check-cast           v7, Landroid/os/Bundle;
+	36      (00000090) invoke-static        v6, v7, Landroid/support/v4/media/MediaBrowserCompatUtils;->hasDuplicatedItems(Landroid/os/Bundle; Landroid/os/Bundle;)Z
+	37      (00000096) move-result          v6
+	38      (00000098) if-eqz               v6, +10
+
+run-BB@0x9c : [ run-BB@0xba ]
+	39      (0000009c) iget-object          v6, v9, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->this$1 Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
+	40      (000000a0) iget-object          v6, v6, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0 Landroid/support/v4/media/MediaBrowserServiceCompat;
+	41      (000000a4) iget-object          v7, v9, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->val$parentId Ljava/lang/String;
+	42      (000000a8) iget-object          v8, v5, Landroid/support/v4/util/Pair;->second Ljava/lang/Object;
+	43      (000000ac) check-cast           v8, Landroid/os/Bundle;
+	44      (000000b0) invoke-virtual       v6, v7, v2, v8, Landroid/support/v4/media/MediaBrowserServiceCompat;->performLoadChildren(Ljava/lang/String; Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord; Landroid/os/Bundle;)V
+	45      (000000b6) goto                 +2
+
+run-BB@0xb8 : [ run-BB@0xba ]
+	46      (000000b8) nop                  
+
+run-BB@0xba : [ run-BB@0x6c ]
+	47      (000000ba) goto                 -27
+
+run-BB@0xbc : [ run-BB@0xc0 ]
+	48      (000000bc) goto                 +2
+
+run-BB@0xbe : [ run-BB@0xc0 ]
+	49      (000000be) nop                  
+
+run-BB@0xc0 : [ run-BB@0x1c ]
+	50      (000000c0) goto                 -52
+
+run-BB@0xc2 : 
+	51      (000000c2) return-void          
+

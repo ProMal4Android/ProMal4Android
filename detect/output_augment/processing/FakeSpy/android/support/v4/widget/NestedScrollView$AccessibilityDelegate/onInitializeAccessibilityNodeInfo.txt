@@ -1,0 +1,49 @@
+# Landroid/support/v4/widget/NestedScrollView$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View; Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.view.View
+# - v5:android.support.v4.view.accessibility.AccessibilityNodeInfoCompat
+#
+# - return:void
+
+onInitializeAccessibilityNodeInfo-BB@0x0 : [ onInitializeAccessibilityNodeInfo-BB@0x2a onInitializeAccessibilityNodeInfo-BB@0x6a ]
+	0       (00000000) invoke-super         v3, v4, v5, Landroid/support/v4/view/AccessibilityDelegateCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View; Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
+	1       (00000006) move-object          v0, v4
+	2       (00000008) check-cast           v0, Landroid/support/v4/widget/NestedScrollView;
+	3       (0000000c) const-class          v2, Landroid/widget/ScrollView;
+	4       (00000010) invoke-virtual       v2, Ljava/lang/Class;->getName()Ljava/lang/String;
+	5       (00000016) move-result-object   v2
+	6       (00000018) invoke-virtual       v5, v2, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setClassName(Ljava/lang/CharSequence;)V
+	7       (0000001e) invoke-virtual       v0, Landroid/support/v4/widget/NestedScrollView;->isEnabled()Z
+	8       (00000024) move-result          v2
+	9       (00000026) if-eqz               v2, +22
+
+onInitializeAccessibilityNodeInfo-BB@0x2a : [ onInitializeAccessibilityNodeInfo-BB@0x36 onInitializeAccessibilityNodeInfo-BB@0x6a ]
+	10      (0000002a) invoke-static        v0, Landroid/support/v4/widget/NestedScrollView;->access$000(Landroid/support/v4/widget/NestedScrollView;)I
+	11      (00000030) move-result          v1
+	12      (00000032) if-lez               v1, +1c
+
+onInitializeAccessibilityNodeInfo-BB@0x36 : [ onInitializeAccessibilityNodeInfo-BB@0x4a onInitializeAccessibilityNodeInfo-BB@0x54 ]
+	13      (00000036) const/4              v2, 1
+	14      (00000038) invoke-virtual       v5, v2, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setScrollable(Z)V
+	15      (0000003e) invoke-virtual       v0, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	16      (00000044) move-result          v2
+	17      (00000046) if-lez               v2, +7
+
+onInitializeAccessibilityNodeInfo-BB@0x4a : [ onInitializeAccessibilityNodeInfo-BB@0x54 ]
+	18      (0000004a) const/16             v2, 8192
+	19      (0000004e) invoke-virtual       v5, v2, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
+
+onInitializeAccessibilityNodeInfo-BB@0x54 : [ onInitializeAccessibilityNodeInfo-BB@0x60 onInitializeAccessibilityNodeInfo-BB@0x6a ]
+	20      (00000054) invoke-virtual       v0, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	21      (0000005a) move-result          v2
+	22      (0000005c) if-ge                v2, v1, +7
+
+onInitializeAccessibilityNodeInfo-BB@0x60 : [ onInitializeAccessibilityNodeInfo-BB@0x6a ]
+	23      (00000060) const/16             v2, 4096
+	24      (00000064) invoke-virtual       v5, v2, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
+
+onInitializeAccessibilityNodeInfo-BB@0x6a : 
+	25      (0000006a) return-void          
+

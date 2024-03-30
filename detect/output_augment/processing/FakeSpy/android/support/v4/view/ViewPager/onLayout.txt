@@ -1,0 +1,279 @@
+# Landroid/support/v4/view/ViewPager;->onLayout(Z I I I I)V [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v30
+# - v31:boolean
+# - v32:int
+# - v33:int
+# - v34:int
+# - v35:int
+#
+# - return:void
+
+onLayout-BB@0x0 : [ onLayout-BB@0x3c ]
+	0       (00000000) invoke-virtual/range v30, Landroid/support/v4/view/ViewPager;->getChildCount()I
+	1       (00000006) move-result          v9
+	2       (00000008) sub-int              v24, v34, v32
+	3       (0000000c) sub-int              v11, v35, v33
+	4       (00000010) invoke-virtual/range v30, Landroid/support/v4/view/ViewPager;->getPaddingLeft()I
+	5       (00000016) move-result          v19
+	6       (00000018) invoke-virtual/range v30, Landroid/support/v4/view/ViewPager;->getPaddingTop()I
+	7       (0000001e) move-result          v21
+	8       (00000020) invoke-virtual/range v30, Landroid/support/v4/view/ViewPager;->getPaddingRight()I
+	9       (00000026) move-result          v20
+	10      (00000028) invoke-virtual/range v30, Landroid/support/v4/view/ViewPager;->getPaddingBottom()I
+	11      (0000002e) move-result          v18
+	12      (00000030) invoke-virtual/range v30, Landroid/support/v4/view/ViewPager;->getScrollX()I
+	13      (00000036) move-result          v22
+	14      (00000038) const/4              v10, 0
+	15      (0000003a) const/4              v14, 0
+
+onLayout-BB@0x3c : [ onLayout-BB@0x40 onLayout-BB@0x190 ]
+	16      (0000003c) if-ge                v14, v9, +aa
+
+onLayout-BB@0x40 : [ onLayout-BB@0x64 onLayout-BB@0xe6 ]
+	17      (00000040) move-object/from16   v0, v30
+	18      (00000044) invoke-virtual       v0, v14, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+	19      (0000004a) move-result-object   v5
+	20      (0000004c) invoke-virtual       v5, Landroid/view/View;->getVisibility()I
+	21      (00000052) move-result          v26
+	22      (00000054) const/16             v27, 8
+	23      (00000058) move/from16          v0, v26
+	24      (0000005c) move/from16          v1, v27
+	25      (00000060) if-eq                v0, v1, +43
+
+onLayout-BB@0x64 : [ onLayout-BB@0x84 onLayout-BB@0xe6 ]
+	26      (00000064) invoke-virtual       v5, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	27      (0000006a) move-result-object   v17
+	28      (0000006c) check-cast           v17, Landroid/support/v4/view/ViewPager$LayoutParams;
+	29      (00000070) const/4              v6, 0
+	30      (00000072) const/4              v7, 0
+	31      (00000074) move-object/from16   v0, v17
+	32      (00000078) iget-boolean         v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->isDecor Z
+	33      (0000007c) move/from16          v26, v0
+	34      (00000080) if-eqz               v26, +33
+
+onLayout-BB@0x84 : [ D:onLayout-BB@0xaa 1:onLayout-BB@0xfe 2:onLayout-BB@0xaa 3:onLayout-BB@0xec 4:onLayout-BB@0xaa 5:onLayout-BB@0x120 ]
+	35      (00000084) move-object/from16   v0, v17
+	36      (00000088) iget                 v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->gravity I
+	37      (0000008c) move/from16          v26, v0
+	38      (00000090) and-int/lit8         v13, v26, 7
+	39      (00000094) move-object/from16   v0, v17
+	40      (00000098) iget                 v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->gravity I
+	41      (0000009c) move/from16          v26, v0
+	42      (000000a0) and-int/lit8         v23, v26, 112
+	43      (000000a4) packed-switch        v13, +140 (0x324)
+
+onLayout-BB@0xaa : [ onLayout-BB@0xae ]
+	44      (000000aa) move/from16          v6, v19
+
+onLayout-BB@0xae : [ D:onLayout-BB@0xb4 16:onLayout-BB@0x150 48:onLayout-BB@0x13e 80:onLayout-BB@0x172 ]
+	45      (000000ae) sparse-switch        v23, +149 (0x340)
+
+onLayout-BB@0xb4 : [ onLayout-BB@0xb8 ]
+	46      (000000b4) move/from16          v7, v21
+
+onLayout-BB@0xb8 : [ onLayout-BB@0xe6 ]
+	47      (000000b8) add-int              v6, v6, v22
+	48      (000000bc) invoke-virtual       v5, Landroid/view/View;->getMeasuredWidth()I
+	49      (000000c2) move-result          v26
+	50      (000000c4) add-int              v26, v26, v6
+	51      (000000c8) invoke-virtual       v5, Landroid/view/View;->getMeasuredHeight()I
+	52      (000000ce) move-result          v27
+	53      (000000d0) add-int              v27, v27, v7
+	54      (000000d4) move/from16          v0, v26
+	55      (000000d8) move/from16          v1, v27
+	56      (000000dc) invoke-virtual       v5, v6, v7, v0, v1, Landroid/view/View;->layout(I I I I)V
+	57      (000000e2) add-int/lit8         v10, v10, 1
+
+onLayout-BB@0xe6 : [ onLayout-BB@0x3c ]
+	58      (000000e6) add-int/lit8         v14, v14, 1
+	59      (000000ea) goto                 -57
+
+onLayout-BB@0xec : [ onLayout-BB@0xae ]
+	60      (000000ec) move/from16          v6, v19
+	61      (000000f0) invoke-virtual       v5, Landroid/view/View;->getMeasuredWidth()I
+	62      (000000f6) move-result          v26
+	63      (000000f8) add-int              v19, v19, v26
+	64      (000000fc) goto                 -27
+
+onLayout-BB@0xfe : [ onLayout-BB@0xae ]
+	65      (000000fe) invoke-virtual       v5, Landroid/view/View;->getMeasuredWidth()I
+	66      (00000104) move-result          v26
+	67      (00000106) sub-int              v26, v24, v26
+	68      (0000010a) div-int/lit8         v26, v26, 2
+	69      (0000010e) move/from16          v0, v26
+	70      (00000112) move/from16          v1, v19
+	71      (00000116) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	72      (0000011c) move-result          v6
+	73      (0000011e) goto                 -38
+
+onLayout-BB@0x120 : [ onLayout-BB@0xae ]
+	74      (00000120) sub-int              v26, v24, v20
+	75      (00000124) invoke-virtual       v5, Landroid/view/View;->getMeasuredWidth()I
+	76      (0000012a) move-result          v27
+	77      (0000012c) sub-int              v6, v26, v27
+	78      (00000130) invoke-virtual       v5, Landroid/view/View;->getMeasuredWidth()I
+	79      (00000136) move-result          v26
+	80      (00000138) add-int              v20, v20, v26
+	81      (0000013c) goto                 -47
+
+onLayout-BB@0x13e : [ onLayout-BB@0xb8 ]
+	82      (0000013e) move/from16          v7, v21
+	83      (00000142) invoke-virtual       v5, Landroid/view/View;->getMeasuredHeight()I
+	84      (00000148) move-result          v26
+	85      (0000014a) add-int              v21, v21, v26
+	86      (0000014e) goto                 -4b
+
+onLayout-BB@0x150 : [ onLayout-BB@0xb8 ]
+	87      (00000150) invoke-virtual       v5, Landroid/view/View;->getMeasuredHeight()I
+	88      (00000156) move-result          v26
+	89      (00000158) sub-int              v26, v11, v26
+	90      (0000015c) div-int/lit8         v26, v26, 2
+	91      (00000160) move/from16          v0, v26
+	92      (00000164) move/from16          v1, v21
+	93      (00000168) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	94      (0000016e) move-result          v7
+	95      (00000170) goto                 -5c
+
+onLayout-BB@0x172 : [ onLayout-BB@0xb8 ]
+	96      (00000172) sub-int              v26, v11, v18
+	97      (00000176) invoke-virtual       v5, Landroid/view/View;->getMeasuredHeight()I
+	98      (0000017c) move-result          v27
+	99      (0000017e) sub-int              v7, v26, v27
+	100     (00000182) invoke-virtual       v5, Landroid/view/View;->getMeasuredHeight()I
+	101     (00000188) move-result          v26
+	102     (0000018a) add-int              v18, v18, v26
+	103     (0000018e) goto                 -6b
+
+onLayout-BB@0x190 : [ onLayout-BB@0x19a ]
+	104     (00000190) sub-int              v26, v24, v19
+	105     (00000194) sub-int              v8, v26, v20
+	106     (00000198) const/4              v14, 0
+
+onLayout-BB@0x19a : [ onLayout-BB@0x19e onLayout-BB@0x2aa ]
+	107     (0000019a) if-ge                v14, v9, +88
+
+onLayout-BB@0x19e : [ onLayout-BB@0x1c2 onLayout-BB@0x2a2 ]
+	108     (0000019e) move-object/from16   v0, v30
+	109     (000001a2) invoke-virtual       v0, v14, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
+	110     (000001a8) move-result-object   v5
+	111     (000001aa) invoke-virtual       v5, Landroid/view/View;->getVisibility()I
+	112     (000001b0) move-result          v26
+	113     (000001b2) const/16             v27, 8
+	114     (000001b6) move/from16          v0, v26
+	115     (000001ba) move/from16          v1, v27
+	116     (000001be) if-eq                v0, v1, +72
+
+onLayout-BB@0x1c2 : [ onLayout-BB@0x1de onLayout-BB@0x2a2 ]
+	117     (000001c2) invoke-virtual       v5, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	118     (000001c8) move-result-object   v17
+	119     (000001ca) check-cast           v17, Landroid/support/v4/view/ViewPager$LayoutParams;
+	120     (000001ce) move-object/from16   v0, v17
+	121     (000001d2) iget-boolean         v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->isDecor Z
+	122     (000001d6) move/from16          v26, v0
+	123     (000001da) if-nez               v26, +64
+
+onLayout-BB@0x1de : [ onLayout-BB@0x1ee onLayout-BB@0x2a2 ]
+	124     (000001de) move-object/from16   v0, v30
+	125     (000001e2) invoke-virtual       v0, v5, Landroid/support/v4/view/ViewPager;->infoForChild(Landroid/view/View;)Landroid/support/v4/view/ViewPager$ItemInfo;
+	126     (000001e8) move-result-object   v15
+	127     (000001ea) if-eqz               v15, +5c
+
+onLayout-BB@0x1ee : [ onLayout-BB@0x222 onLayout-BB@0x27c ]
+	128     (000001ee) int-to-float         v0, v8
+	129     (000001f0) move/from16          v26, v0
+	130     (000001f4) iget                 v0, v15, Landroid/support/v4/view/ViewPager$ItemInfo;->offset F
+	131     (000001f8) move/from16          v27, v0
+	132     (000001fc) mul-float            v26, v26, v27
+	133     (00000200) move/from16          v0, v26
+	134     (00000204) float-to-int         v0, v0
+	135     (00000206) move/from16          v16, v0
+	136     (0000020a) add-int              v6, v19, v16
+	137     (0000020e) move/from16          v7, v21
+	138     (00000212) move-object/from16   v0, v17
+	139     (00000216) iget-boolean         v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->needsMeasure Z
+	140     (0000021a) move/from16          v26, v0
+	141     (0000021e) if-eqz               v26, +2f
+
+onLayout-BB@0x222 : [ onLayout-BB@0x27c ]
+	142     (00000222) const/16             v26, 0
+	143     (00000226) move/from16          v0, v26
+	144     (0000022a) move-object/from16   v1, v17
+	145     (0000022e) iput-boolean         v0, v1, Landroid/support/v4/view/ViewPager$LayoutParams;->needsMeasure Z
+	146     (00000232) int-to-float         v0, v8
+	147     (00000234) move/from16          v26, v0
+	148     (00000238) move-object/from16   v0, v17
+	149     (0000023c) iget                 v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->widthFactor F
+	150     (00000240) move/from16          v27, v0
+	151     (00000244) mul-float            v26, v26, v27
+	152     (00000248) move/from16          v0, v26
+	153     (0000024c) float-to-int         v0, v0
+	154     (0000024e) move/from16          v26, v0
+	155     (00000252) const/high16         v27, 16384 # [2.0]
+	156     (00000256) invoke-static/range  v26 ... v27, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	157     (0000025c) move-result          v25
+	158     (0000025e) sub-int              v26, v11, v21
+	159     (00000262) sub-int              v26, v26, v18
+	160     (00000266) const/high16         v27, 16384 # [2.0]
+	161     (0000026a) invoke-static/range  v26 ... v27, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	162     (00000270) move-result          v12
+	163     (00000272) move/from16          v0, v25
+	164     (00000276) invoke-virtual       v5, v0, v12, Landroid/view/View;->measure(I I)V
+
+onLayout-BB@0x27c : [ onLayout-BB@0x2a2 ]
+	165     (0000027c) invoke-virtual       v5, Landroid/view/View;->getMeasuredWidth()I
+	166     (00000282) move-result          v26
+	167     (00000284) add-int              v26, v26, v6
+	168     (00000288) invoke-virtual       v5, Landroid/view/View;->getMeasuredHeight()I
+	169     (0000028e) move-result          v27
+	170     (00000290) add-int              v27, v27, v7
+	171     (00000294) move/from16          v0, v26
+	172     (00000298) move/from16          v1, v27
+	173     (0000029c) invoke-virtual       v5, v6, v7, v0, v1, Landroid/view/View;->layout(I I I I)V
+
+onLayout-BB@0x2a2 : [ onLayout-BB@0x19a ]
+	174     (000002a2) add-int/lit8         v14, v14, 1
+	175     (000002a6) goto/16              -86
+
+onLayout-BB@0x2aa : [ onLayout-BB@0x2de onLayout-BB@0x310 ]
+	176     (000002aa) move/from16          v0, v21
+	177     (000002ae) move-object/from16   v1, v30
+	178     (000002b2) iput                 v0, v1, Landroid/support/v4/view/ViewPager;->mTopPageBounds I
+	179     (000002b6) sub-int              v26, v11, v18
+	180     (000002ba) move/from16          v0, v26
+	181     (000002be) move-object/from16   v1, v30
+	182     (000002c2) iput                 v0, v1, Landroid/support/v4/view/ViewPager;->mBottomPageBounds I
+	183     (000002c6) move-object/from16   v0, v30
+	184     (000002ca) iput                 v10, v0, Landroid/support/v4/view/ViewPager;->mDecorChildCount I
+	185     (000002ce) move-object/from16   v0, v30
+	186     (000002d2) iget-boolean         v0, v0, Landroid/support/v4/view/ViewPager;->mFirstLayout Z
+	187     (000002d6) move/from16          v26, v0
+	188     (000002da) if-eqz               v26, +1b
+
+onLayout-BB@0x2de : [ onLayout-BB@0x310 ]
+	189     (000002de) move-object/from16   v0, v30
+	190     (000002e2) iget                 v0, v0, Landroid/support/v4/view/ViewPager;->mCurItem I
+	191     (000002e6) move/from16          v26, v0
+	192     (000002ea) const/16             v27, 0
+	193     (000002ee) const/16             v28, 0
+	194     (000002f2) const/16             v29, 0
+	195     (000002f6) move-object/from16   v0, v30
+	196     (000002fa) move/from16          v1, v26
+	197     (000002fe) move/from16          v2, v27
+	198     (00000302) move/from16          v3, v28
+	199     (00000306) move/from16          v4, v29
+	200     (0000030a) invoke-direct        v0, v1, v2, v3, v4, Landroid/support/v4/view/ViewPager;->scrollToItem(I Z I Z)V
+
+onLayout-BB@0x310 : 
+	201     (00000310) const/16             v26, 0
+	202     (00000314) move/from16          v0, v26
+	203     (00000318) move-object/from16   v1, v30
+	204     (0000031c) iput-boolean         v0, v1, Landroid/support/v4/view/ViewPager;->mFirstLayout Z
+	205     (00000320) return-void          
+
+onLayout-BB@0x322 : 
+	206     (00000322) nop                  
+	207     (00000324) packed-switch-payload 1 2 3 4 5
+	208     (00000340) sparse-switch-payload 10 30 50
+

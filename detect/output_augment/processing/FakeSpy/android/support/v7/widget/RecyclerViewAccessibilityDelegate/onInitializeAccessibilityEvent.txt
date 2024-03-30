@@ -1,0 +1,38 @@
+# Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;->onInitializeAccessibilityEvent(Landroid/view/View; Landroid/view/accessibility/AccessibilityEvent;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.view.View
+# - v4:android.view.accessibility.AccessibilityEvent
+#
+# - return:void
+
+onInitializeAccessibilityEvent-BB@0x0 : [ onInitializeAccessibilityEvent-BB@0x20 onInitializeAccessibilityEvent-BB@0x4c ]
+	0       (00000000) invoke-super         v2, v3, v4, Landroid/support/v4/view/AccessibilityDelegateCompat;->onInitializeAccessibilityEvent(Landroid/view/View; Landroid/view/accessibility/AccessibilityEvent;)V
+	1       (00000006) const-class          v1, Landroid/support/v7/widget/RecyclerView;
+	2       (0000000a) invoke-virtual       v1, Ljava/lang/Class;->getName()Ljava/lang/String;
+	3       (00000010) move-result-object   v1
+	4       (00000012) invoke-virtual       v4, v1, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+	5       (00000018) instance-of          v1, v3, Landroid/support/v7/widget/RecyclerView;
+	6       (0000001c) if-eqz               v1, +18
+
+onInitializeAccessibilityEvent-BB@0x20 : [ onInitializeAccessibilityEvent-BB@0x2c onInitializeAccessibilityEvent-BB@0x4c ]
+	7       (00000020) invoke-direct        v2, Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;->shouldIgnore()Z
+	8       (00000026) move-result          v1
+	9       (00000028) if-nez               v1, +12
+
+onInitializeAccessibilityEvent-BB@0x2c : [ onInitializeAccessibilityEvent-BB@0x3e onInitializeAccessibilityEvent-BB@0x4c ]
+	10      (0000002c) move-object          v0, v3
+	11      (0000002e) check-cast           v0, Landroid/support/v7/widget/RecyclerView;
+	12      (00000032) invoke-virtual       v0, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) if-eqz               v1, +9
+
+onInitializeAccessibilityEvent-BB@0x3e : [ onInitializeAccessibilityEvent-BB@0x4c ]
+	15      (0000003e) invoke-virtual       v0, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	16      (00000044) move-result-object   v1
+	17      (00000046) invoke-virtual       v1, v4, Landroid/support/v7/widget/RecyclerView$LayoutManager;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+
+onInitializeAccessibilityEvent-BB@0x4c : 
+	18      (0000004c) return-void          
+

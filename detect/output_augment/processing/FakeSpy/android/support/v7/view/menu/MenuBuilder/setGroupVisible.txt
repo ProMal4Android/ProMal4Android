@@ -1,0 +1,50 @@
+# Landroid/support/v7/view/menu/MenuBuilder;->setGroupVisible(I Z)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:int
+# - v7:boolean
+#
+# - return:void
+
+setGroupVisible-BB@0x0 : [ setGroupVisible-BB@0x10 ]
+	0       (00000000) iget-object          v4, v5, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	1       (00000004) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	2       (0000000a) move-result          v0
+	3       (0000000c) const/4              v1, 0
+	4       (0000000e) const/4              v2, 0
+
+setGroupVisible-BB@0x10 : [ setGroupVisible-BB@0x14 setGroupVisible-BB@0x44 ]
+	5       (00000010) if-ge                v2, v0, +1a
+
+setGroupVisible-BB@0x14 : [ setGroupVisible-BB@0x30 setGroupVisible-BB@0x3e ]
+	6       (00000014) iget-object          v4, v5, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	7       (00000018) invoke-virtual       v4, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	8       (0000001e) move-result-object   v3
+	9       (00000020) check-cast           v3, Landroid/support/v7/view/menu/MenuItemImpl;
+	10      (00000024) invoke-virtual       v3, Landroid/support/v7/view/menu/MenuItemImpl;->getGroupId()I
+	11      (0000002a) move-result          v4
+	12      (0000002c) if-ne                v4, v6, +9
+
+setGroupVisible-BB@0x30 : [ setGroupVisible-BB@0x3c setGroupVisible-BB@0x3e ]
+	13      (00000030) invoke-virtual       v3, v7, Landroid/support/v7/view/menu/MenuItemImpl;->setVisibleInt(Z)Z
+	14      (00000036) move-result          v4
+	15      (00000038) if-eqz               v4, +3
+
+setGroupVisible-BB@0x3c : [ setGroupVisible-BB@0x3e ]
+	16      (0000003c) const/4              v1, 1
+
+setGroupVisible-BB@0x3e : [ setGroupVisible-BB@0x10 ]
+	17      (0000003e) add-int/lit8         v2, v2, 1
+	18      (00000042) goto                 -19
+
+setGroupVisible-BB@0x44 : [ setGroupVisible-BB@0x48 setGroupVisible-BB@0x50 ]
+	19      (00000044) if-eqz               v1, +6
+
+setGroupVisible-BB@0x48 : [ setGroupVisible-BB@0x50 ]
+	20      (00000048) const/4              v4, 1
+	21      (0000004a) invoke-virtual       v5, v4, Landroid/support/v7/view/menu/MenuBuilder;->onItemsChanged(Z)V
+
+setGroupVisible-BB@0x50 : 
+	22      (00000050) return-void          
+

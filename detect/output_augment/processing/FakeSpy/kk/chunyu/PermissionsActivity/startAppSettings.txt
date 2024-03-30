@@ -1,0 +1,28 @@
+# Lkk/chunyu/PermissionsActivity;->startAppSettings()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+startAppSettings-BB@0x0 : 
+	0       (00000000) new-instance         v0, Landroid/content/Intent;
+	1       (00000004) const-string         v1, 'android.settings.APPLICATION_DETAILS_SETTINGS'
+	2       (00000008) invoke-direct        v0, v1, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+	3       (0000000e) new-instance         v1, Ljava/lang/StringBuilder;
+	4       (00000012) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	5       (00000018) const-string         v2, 'package:'
+	6       (0000001c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	7       (00000022) move-result-object   v1
+	8       (00000024) invoke-virtual       v3, Lkk/chunyu/PermissionsActivity;->getPackageName()Ljava/lang/String;
+	9       (0000002a) move-result-object   v2
+	10      (0000002c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	11      (00000032) move-result-object   v1
+	12      (00000034) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	13      (0000003a) move-result-object   v1
+	14      (0000003c) invoke-static        v1, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	15      (00000042) move-result-object   v1
+	16      (00000044) invoke-virtual       v0, v1, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+	17      (0000004a) invoke-virtual       v3, v0, Lkk/chunyu/PermissionsActivity;->startActivity(Landroid/content/Intent;)V
+	18      (00000050) return-void          
+

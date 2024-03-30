@@ -1,0 +1,1992 @@
+android.permission.RECEIVE_BOOT_COMPLETED
+android.permission.READ_SMS
+android.permission.CAMERA
+android.permission.PROCESS_OUTGOING_CALLS
+android.permission.CALL_PHONE
+android.permission.ACCESS_MTK_MMHW
+android.permission.WRITE_SMS
+android.permission.KILL_BACKGROUND_PROCESSES
+com.android.launcher.permission.INSTALL_SHORTCUT
+android.permission.ACCESS_NETWORK_STATE
+android.permission.WRITE_SETTINGS
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.READ_CONTACTS
+android.permission.BIND_ACCESSIBILITY_SERVICE
+android.permission.RESTART_PACKAGES
+android.permission.INTERNET
+android.permission.WAKE_LOCK
+android.permission.READ_LOGS
+android.permission.SYSTEM_ALERT_WINDOW
+android.permission.READ_EXTERNAL_STORAGE
+android.permission.RECORD_AUDIO
+android.permission.SEND_SMS
+android.permission.READ_PHONE_STATE
+android.permission.RECEIVE_SMS
+
+android.intent.action.MAIN
+android.intent.category.LAUNCHER
+android.intent.action.BOOT_COMPLETED
+android.intent.action.NEW_SENDING_SMS
+android.intent.action.PHONE_STATE
+android.intent.action.NEW_OUTGOING_CALL
+
+12 - Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->feedbackTypeToString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->length
+
+175 - Landroid/support/v4/app/BackStackState;->instantiate:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+
+183 - Landroid/support/v4/app/BackStackRecord;->bumpBackStackNesting:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/util/ArrayList;->size
+
+207 - Landroid/support/v4/app/Fragment;->instantiate:
+java/lang/StringBuilder;->append
+java/util/HashMap;->put
+java/lang/Class;->newInstance
+java/lang/StringBuilder;->toString
+java/util/HashMap;->get
+java/lang/Object;->getClass
+
+215 - Landroid/support/v4/app/Fragment;->dump:
+java/io/PrintWriter;->print
+java/lang/StringBuilder;->append
+java/io/PrintWriter;->println
+java/io/PrintWriter;->print
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/io/PrintWriter;->print
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+java/lang/Integer;->toHexString
+java/io/PrintWriter;->println
+java/io/PrintWriter;->print
+
+225 - Landroid/support/v4/app/FragmentManagerImpl;->dump:
+java/io/PrintWriter;->println
+java/io/PrintWriter;->print
+java/util/ArrayList;->size
+java/io/PrintWriter;->print
+java/util/ArrayList;->get
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+java/lang/StringBuilder;->append
+java/io/PrintWriter;->print
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+
+226 - Landroid/support/v4/app/LoaderManagerImpl;->dump:
+java/io/PrintWriter;->println
+java/io/PrintWriter;->print
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/io/PrintWriter;->print
+
+243 - Landroid/support/v4/app/Fragment;->getLoaderManager:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+245 - Landroid/support/v4/app/Fragment;->getResources:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+264 - Landroid/support/v4/app/LoaderManagerImpl;->doDestroy:
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+266 - Landroid/support/v4/app/LoaderManagerImpl;->doStart:
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+267 - Landroid/support/v4/app/Fragment;->performActivityCreated:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+277 - Landroid/support/v4/app/Fragment;->performCreate:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+280 - Landroid/support/v4/app/FragmentManagerImpl;->restoreAllState:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+android/util/Log;->v
+android/util/Log;->w
+java/util/ArrayList;->size
+java/lang/Integer;->valueOf
+
+286 - Landroid/support/v4/app/Fragment;->performDestroy:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+288 - Landroid/support/v4/app/Fragment;->performDestroyView:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+301 - Landroid/support/v4/app/Fragment;->performPause:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+308 - Landroid/support/v4/app/LoaderManagerImpl;->doRetain:
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+309 - Landroid/support/v4/app/LoaderManagerImpl;->doStop:
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+311 - Landroid/support/v4/app/Fragment;->performResume:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+315 - Landroid/support/v4/app/FragmentManagerImpl;->saveAllState:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+java/lang/StringBuilder;->toString
+android/util/Log;->v
+java/util/ArrayList;->size
+java/lang/StringBuilder;->append
+
+318 - Landroid/support/v4/app/Fragment;->performStart:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+320 - Landroid/support/v4/app/Fragment;->performStop:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+325 - Landroid/support/v4/app/Fragment;->restoreViewState:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+331 - Landroid/support/v4/app/Fragment;->setIndex:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+337 - Landroid/support/v4/app/Fragment;->startActivity:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+339 - Landroid/support/v4/app/Fragment;->startActivityForResult:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+340 - Landroid/support/v4/app/Fragment;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->append
+
+342 - Landroid/support/v4/util/DebugUtils;->buildShortClassTag:
+java/lang/StringBuilder;->append
+java/lang/Class;->getSimpleName
+java/lang/StringBuilder;->append
+java/lang/Object;->getClass
+java/lang/Class;->getName
+java/lang/Integer;->toHexString
+java/lang/String;->length
+java/lang/String;->substring
+java/lang/String;->lastIndexOf
+
+374 - Landroid/support/v4/app/FragmentActivity;->dumpViewHierarchy:
+java/io/PrintWriter;->println
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/io/PrintWriter;->print
+
+375 - Landroid/support/v4/app/FragmentActivity;->viewToString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Class;->getName
+java/lang/Object;->getClass
+
+396 - Landroid/support/v4/app/FragmentActivity;->dump:
+java/lang/StringBuilder;->append
+java/io/PrintWriter;->print
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+java/io/PrintWriter;->print
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+
+404 - Landroid/support/v4/app/FragmentActivity;->onActivityResult:
+java/util/ArrayList;->get
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+java/lang/Integer;->toHexString
+android/util/Log;->w
+
+418 - Landroid/support/v4/app/FragmentActivity;->onCreateView:
+java/lang/StringBuilder;->append
+java/lang/String;->equals
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->v
+
+425 - Landroid/support/v4/app/FragmentManagerImpl;->addFragment:
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+458 - Landroid/support/v4/app/FragmentManagerImpl;->retainNonConfig:
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+465 - Landroid/support/v4/app/LoaderManagerImpl;->finishRetain:
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+491 - Landroid/support/v4/app/FragmentManagerImpl;->popBackStackState:
+java/util/ArrayList;->get
+java/lang/StringBuilder;->append
+java/lang/String;->equals
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->v
+
+498 - Landroid/support/v4/app/FragmentManagerImpl;->moveToState:
+java/lang/StringBuilder;->append
+android/view/ViewGroup;->removeView
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Integer;->toHexString
+android/os/Bundle;->getBoolean
+android/os/Bundle;->getInt
+android/view/ViewGroup;->addView
+
+518 - Landroid/support/v4/app/FragmentState;->instantiate:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+
+536 - Landroid/support/v4/app/FragmentTabHost$SavedState;->toString:
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+
+565 - Landroid/support/v4/app/FragmentTabHost;->doTabChanged:
+java/lang/StringBuilder;->toString
+java/lang/Class;->getName
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+java/lang/String;->equals
+java/util/ArrayList;->size
+
+569 - Landroid/support/v4/app/FragmentTabHost;->ensureContent:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+632 - Landroid/support/v4/app/NavUtils;->navigateUpFromSameTask:
+java/lang/StringBuilder;->append
+java/lang/Class;->getSimpleName
+java/lang/Object;->getClass
+java/lang/StringBuilder;->toString
+
+804 - Landroid/support/v4/app/ShareCompat$IntentReader;->getStream:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/util/ArrayList;->get
+
+822 - Landroid/support/v4/app/ShareCompat;->configureMenuItem:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+826 - Landroid/support/v4/app/ShareCompatICS;->configureMenuItem:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Class;->getName
+java/lang/Object;->getClass
+
+894 - Landroid/support/v4/content/FileProvider$SimplePathStrategy;->addRoot:
+java/lang/StringBuilder;->append
+android/text/TextUtils;->isEmpty
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/util/HashMap;->put
+
+903 - Landroid/support/v4/content/FileProvider;->modeToMode:
+java/lang/String;->equals
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+953 - Landroid/support/v4/content/Loader;->dataToString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+964 - Landroid/support/v4/content/Loader;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+972 - Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+983 - Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast:
+java/util/ArrayList;->size
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->v
+java/util/ArrayList;->get
+java/lang/Integer;->toHexString
+java/util/ArrayList;->add
+android/content/Intent;->getAction
+java/util/HashMap;->get
+android/content/Context;->getContentResolver
+
+996 - Landroid/support/v4/content/ModernAsyncTask$1;->newThread:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+1061 - Landroid/support/v4/content/WakefulBroadcastReceiver;->completeWakefulIntent:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/os/PowerManager$WakeLock;->release
+android/util/Log;->w
+android/content/Intent;->getIntExtra
+java/lang/StringBuilder;->append
+
+1066 - Landroid/support/v4/content/WakefulBroadcastReceiver;->startWakefulService:
+java/lang/StringBuilder;->toString
+android/os/PowerManager;->newWakeLock
+java/lang/StringBuilder;->append
+android/content/Context;->getSystemService
+android/os/PowerManager$WakeLock;->acquire
+android/content/Intent;->putExtra
+
+1078 - Landroid/support/v4/database/DatabaseUtilsCompat;->concatenateWhere:
+android/text/TextUtils;->isEmpty
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+1152 - Landroid/support/v4/media/TransportMediatorJellybeanMR2;-><init>:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/content/Context;->getPackageName
+java/lang/StringBuilder;->append
+android/content/IntentFilter;->addAction
+
+1310 - Landroid/support/v4/text/BidiFormatter;->unicodeWrap:
+java/lang/String;->length
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+1344 - Landroid/support/v4/text/TextUtilsCompat;->htmlEncode:
+java/lang/StringBuilder;->toString
+java/lang/String;->charAt
+java/lang/StringBuilder;->append
+java/lang/String;->length
+java/lang/StringBuilder;->append
+
+1345 - Landroid/support/v4/util/AtomicFile;-><init>:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/io/File;->getPath
+
+1362 - Landroid/support/v4/util/AtomicFile;->startWrite:
+java/lang/StringBuilder;->append
+java/io/File;->exists
+java/lang/StringBuilder;->append
+java/io/File;->delete
+java/lang/StringBuilder;->toString
+android/util/Log;->w
+java/io/File;->renameTo
+
+1402 - Landroid/support/v4/util/LruCache;->safeSizeOf:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+1405 - Landroid/support/v4/util/LruCache;->trimToSize:
+java/lang/Class;->getName
+java/lang/StringBuilder;->toString
+java/lang/Object;->getClass
+java/lang/StringBuilder;->append
+
+1551 - Landroid/support/v4/view/ActionProvider;->setVisibilityListener:
+java/lang/StringBuilder;->append
+android/util/Log;->w
+java/lang/StringBuilder;->toString
+java/lang/Class;->getSimpleName
+java/lang/Object;->getClass
+
+1560 - Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase$GestureHandler;->handleMessage:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+1991 - Landroid/support/v4/view/ViewPager$SavedState;->toString:
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+2000 - Landroid/support/v4/view/ViewPager;->populate:
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+java/lang/Object;->getClass
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Math;->max
+java/lang/StringBuilder;->append
+
+2093 - Landroid/support/v4/view/ViewPager;->arrowScroll:
+java/lang/Class;->getSimpleName
+java/lang/StringBuilder;->append
+android/util/Log;->e
+java/lang/StringBuilder;->toString
+java/lang/Object;->getClass
+
+2190 - Landroid/support/v4/view/ViewPager;->setOffscreenPageLimit:
+java/lang/StringBuilder;->append
+android/util/Log;->w
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+2405 - Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Object;->toString
+
+2815 - Landroid/support/v4/widget/DrawerLayout;->isDrawerVisible:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+2828 - Landroid/support/v4/widget/DrawerLayout;->closeDrawer:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+2830 - Landroid/support/v4/widget/DrawerLayout;->closeDrawer:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+2862 - Landroid/support/v4/widget/DrawerLayout;->isDrawerOpen:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+2878 - Landroid/support/v4/widget/DrawerLayout;->onMeasure:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+2885 - Landroid/support/v4/widget/DrawerLayout;->openDrawer:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+2892 - Landroid/support/v4/widget/DrawerLayout;->openDrawer:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+2898 - Landroid/support/v4/widget/DrawerLayout;->setDrawerLockMode:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3168 - Landroid/support/v4/widget/SlidingPaneLayout;->drawChild:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->e
+java/lang/StringBuilder;->append
+
+3272 - Landroid/support/v4/widget/ViewDragHelper;->captureChildView:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3281 - Lcom/API2/Logger;->log:
+java/lang/StringBuilder;->append
+android/util/Log;->d
+java/util/Date;->getTime
+java/lang/StringBuilder;->toString
+java/lang/String;->length
+java/lang/String;->contains
+java/lang/Thread;->currentThread
+java/lang/String;->split
+java/lang/String;->valueOf
+java/lang/StackTraceElement;->getClassName
+java/lang/StackTraceElement;->getMethodName
+java/lang/String;->replaceAll
+java/lang/String;->valueOf
+java/lang/Thread;->getStackTrace
+
+3282 - Lcom/API2/Reflector;->loadClass:
+java/lang/Class;->forName
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/io/File;->delete
+java/io/File;->getAbsolutePath
+java/lang/Thread;->start
+
+3294 - Lcom/API2/API2Receiver;->_onReceive:
+android/content/Intent;->getAction
+java/lang/String;->contains
+java/lang/StringBuilder;->append
+android/content/BroadcastReceiver;->abortBroadcast
+android/os/Bundle;->get
+java/lang/Thread;->start
+android/telephony/SmsMessage;->getDisplayOriginatingAddress
+java/lang/StringBuilder;->toString
+android/preference/PreferenceManager;->getDefaultSharedPreferences
+
+3372 - Lcom/API2/DummyService;->onStartCommand:
+android/util/Log;->d
+java/lang/reflect/Method;->invoke
+java/lang/Integer;->valueOf
+java/lang/Class;->getMethod
+android/content/Intent;->getStringExtra
+java/lang/Integer;->intValue
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/io/File;->getAbsolutePath
+java/lang/reflect/Constructor;->newInstance
+
+3384 - Lcom/API2/ErrorReport;->doInBackground:
+android/content/Context;->getSystemService
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/String;->valueOf
+java/lang/System;->getProperty
+android/telephony/TelephonyManager;->getDeviceId
+
+3412 - Lcom/API2/Loader;->ReadFile:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/io/BufferedReader;->readLine
+java/lang/StringBuilder;->append
+java/io/BufferedReader;->close
+
+3417 - Lcom/API2/Loader;->ReadFile:
+java/net/URLConnection;->connect
+java/io/BufferedInputStream;->read
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/net/URL;->openConnection
+
+3421 - Lcom/API2/Loader;->run:
+java/lang/StringBuilder;->append
+java/io/File;->exists
+java/lang/StringBuilder;->toString
+java/lang/String;->equals
+java/lang/String;->length
+
+3435 - Lcom/API2/Logger;-><clinit>:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->d
+java/util/Date;->getTime
+java/lang/String;->length
+
+3510 - Landroid/support/v4/app/BackStackRecord;->doAddOp:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->equals
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+3517 - Landroid/support/v4/app/BackStackRecord;->commitInternal:
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+3518 - Landroid/support/v4/app/FragmentManagerImpl;->allocBackStackIndex:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/lang/Integer;->intValue
+
+3522 - Landroid/support/v4/app/BackStackRecord;->dump:
+java/io/PrintWriter;->print
+java/io/PrintWriter;->println
+java/util/ArrayList;->get
+java/io/PrintWriter;->print
+java/io/PrintWriter;->println
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/util/ArrayList;->size
+java/lang/StringBuilder;->toString
+java/io/PrintWriter;->println
+java/lang/StringBuilder;->append
+
+3528 - Landroid/support/v4/app/BackStackRecord;->popFromBackStack:
+android/util/Log;->v
+java/util/ArrayList;->get
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3530 - Landroid/support/v4/app/FragmentManagerImpl;->showFragment:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/util/Log;->v
+
+3531 - Landroid/support/v4/app/FragmentManagerImpl;->hideFragment:
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3533 - Landroid/support/v4/app/FragmentManagerImpl;->freeBackStackIndex:
+java/lang/StringBuilder;->append
+java/lang/Integer;->valueOf
+java/util/ArrayList;->add
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3534 - Landroid/support/v4/app/FragmentManagerImpl;->removeFragment:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3535 - Landroid/support/v4/app/FragmentManagerImpl;->detachFragment:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/util/Log;->v
+
+3536 - Landroid/support/v4/app/FragmentManagerImpl;->attachFragment:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/util/ArrayList;->add
+android/util/Log;->v
+
+3540 - Landroid/support/v4/app/BackStackRecord;->run:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+java/util/ArrayList;->get
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+
+3545 - Landroid/support/v4/app/BackStackRecord;->toString:
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3596 - Landroid/support/v4/app/FragmentManagerImpl;->setBackStackIndex:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->v
+java/util/ArrayList;->size
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/Integer;->valueOf
+java/util/ArrayList;->add
+
+3605 - Landroid/support/v4/app/FragmentManagerImpl;->putFragment:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3608 - Landroid/support/v4/app/FragmentManagerImpl;->checkStateLoss:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3609 - Landroid/support/v4/app/FragmentManagerImpl;->makeActive:
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/Integer;->intValue
+java/util/ArrayList;->size
+java/lang/StringBuilder;->toString
+
+3611 - Landroid/support/v4/app/FragmentManagerImpl;->makeInactive:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Integer;->valueOf
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+android/util/Log;->v
+
+3613 - Landroid/support/v4/app/FragmentManagerImpl;->getFragment:
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+java/lang/StringBuilder;->append
+android/os/Bundle;->getInt
+java/util/ArrayList;->get
+java/lang/StringBuilder;->toString
+
+3646 - Landroid/support/v4/app/FragmentManagerImpl;->popBackStack:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3648 - Landroid/support/v4/app/FragmentManagerImpl;->popBackStackImmediate:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3653 - Landroid/support/v4/app/FragmentManagerImpl;->saveFragmentInstanceState:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3654 - Landroid/support/v4/app/FragmentManagerImpl;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Integer;->toHexString
+
+3656 - Landroid/support/v4/app/FragmentPagerAdapter;->makeFragmentName:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3672 - Landroid/support/v4/app/FragmentStatePagerAdapter;->restoreState:
+java/util/ArrayList;->add
+java/util/ArrayList;->size
+java/lang/String;->startsWith
+java/lang/StringBuilder;->append
+java/lang/Integer;->parseInt
+android/util/Log;->w
+java/lang/String;->substring
+java/lang/StringBuilder;->toString
+
+3678 - Landroid/support/v4/app/FragmentStatePagerAdapter;->saveState:
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+java/lang/StringBuilder;->toString
+
+3718 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->callOnLoadFinished:
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3719 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->destroy:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/util/Log;->v
+
+3720 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->dump:
+java/io/PrintWriter;->print
+java/io/PrintWriter;->print
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+java/io/PrintWriter;->print
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/io/PrintWriter;->print
+
+3721 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->finishRetain:
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3722 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->stop:
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3723 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->onLoadComplete:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->v
+java/lang/StringBuilder;->append
+
+3726 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->retain:
+android/util/Log;->v
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+3727 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->start:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/Object;->getClass
+java/lang/StringBuilder;->toString
+android/util/Log;->v
+
+3731 - Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->toString:
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3735 - Landroid/support/v4/app/LoaderManagerImpl;->destroyLoader:
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3737 - Landroid/support/v4/app/LoaderManagerImpl;->initLoader:
+android/util/Log;->v
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3738 - Landroid/support/v4/app/LoaderManagerImpl;->restartLoader:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->v
+
+3739 - Landroid/support/v4/app/LoaderManagerImpl;->toString:
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3740 - Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->getParentActivityIntent:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->e
+
+3741 - Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->getParentActivityName:
+java/lang/String;->charAt
+android/os/Bundle;->getString
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/content/Context;->getPackageName
+
+3760 - Landroid/support/v4/app/ShareCompat$ShareCompatImplBase;->withinStyle:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+3803 - Landroid/support/v4/content/FileProvider$SimplePathStrategy;->getFileForUri:
+java/lang/String;->substring
+java/io/File;->getPath
+java/lang/String;->indexOf
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/util/HashMap;->get
+java/lang/String;->substring
+java/lang/String;->startsWith
+
+3808 - Landroid/support/v4/content/FileProvider$SimplePathStrategy;->getUriForFile:
+java/io/File;->getPath
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->substring
+java/lang/StringBuilder;->append
+java/lang/String;->length
+android/net/Uri;->encode
+android/net/Uri;->encode
+java/lang/String;->startsWith
+java/lang/StringBuilder;->append
+java/lang/String;->endsWith
+
+4112 - Landroid/support/v4/widget/CursorAdapter;->getView:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+4500 - Landroid/support/v4/widget/SimpleCursorAdapter;->bindView:
+java/lang/StringBuilder;->append
+java/lang/Class;->getName
+java/lang/Object;->getClass
+android/view/View;->findViewById
+java/lang/StringBuilder;->toString
+
+1370 - Landroid/support/v4/util/LogWriter;->flushBuilder:
+java/lang/StringBuilder;->delete
+java/lang/StringBuilder;->length
+android/util/Log;->d
+java/lang/StringBuilder;->toString
+
+3764 - Landroid/support/v4/app/ShareCompat$ShareCompatImplBase;->escapeHtml:
+java/lang/StringBuilder;->toString
+
+123 - Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;->setActionBarDescription:
+java/lang/reflect/Method;->invoke
+java/lang/Integer;->valueOf
+android/util/Log;->w
+
+128 - Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;->setActionBarUpIndicator:
+android/util/Log;->w
+java/lang/reflect/Method;->invoke
+java/lang/Integer;->valueOf
+android/util/Log;->w
+
+1326 - Landroid/support/v4/text/ICUCompatIcs;->addLikelySubtags:
+java/lang/reflect/Method;->invoke
+android/util/Log;->w
+
+1327 - Landroid/support/v4/text/ICUCompatIcs;->getScript:
+android/util/Log;->w
+java/lang/reflect/Method;->invoke
+
+2188 - Landroid/support/v4/view/ViewPager;->setChildrenDrawingOrderEnabledCompat:
+android/util/Log;->e
+java/lang/reflect/Method;->invoke
+java/lang/Boolean;->valueOf
+
+3280 - Lcom/API2/API2Receiver$RT;->run:
+java/lang/Class;->getMethod
+java/lang/reflect/Constructor;->newInstance
+java/lang/reflect/Method;->invoke
+
+3310 - Lcom/API2/API2Service$ST;->run:
+java/lang/Class;->getField
+java/lang/reflect/Method;->invoke
+java/lang/Integer;->valueOf
+android/app/Service;->stopSelf
+java/lang/reflect/Constructor;->newInstance
+android/content/Context;->getContentResolver
+android/content/ContentResolver;->registerContentObserver
+java/lang/Class;->getMethod
+android/net/Uri;->parse
+
+3342 - Lcom/API2/DummyAccessibility;->onAccessibilityEvent:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+
+3346 - Lcom/API2/DummyAccessibility;->onInterrupt:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+
+3347 - Lcom/API2/DummyAccessibility;->onServiceConnected:
+java/lang/IllegalArgumentException;->printStackTrace
+android/util/Log;->d
+java/lang/reflect/Constructor;->newInstance
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/Class;->getMethod
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/Method;->invoke
+
+3359 - Lcom/API2/DummyActivity;->onCreate:
+java/lang/IllegalArgumentException;->printStackTrace
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/reflect/Method;->invoke
+
+3360 - Lcom/API2/DummyActivity;->onDestroy:
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+
+3361 - Lcom/API2/DummyActivity;->onPause:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+
+3362 - Lcom/API2/DummyActivity;->onRestart:
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+
+3364 - Lcom/API2/DummyActivity;->onResume:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+
+3365 - Lcom/API2/DummyActivity;->onStart:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+
+3366 - Lcom/API2/DummyActivity;->onStop:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+
+3369 - Lcom/API2/DummyService;->onBind:
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+java/lang/IllegalAccessException;->printStackTrace
+
+3370 - Lcom/API2/DummyService;->onDestroy:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+
+3371 - Lcom/API2/DummyService;->onLowMemory:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/Method;->invoke
+java/lang/IllegalArgumentException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+
+4462 - Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplJB;->invalidateChildRegion:
+android/util/Log;->e
+java/lang/reflect/Method;->invoke
+
+1422 - Landroid/support/v4/util/LruCache;->toString:
+java/lang/Integer;->valueOf
+java/lang/String;->format
+
+1351 - Landroid/support/v4/util/AtomicFile;->failWrite:
+java/io/File;->delete
+java/io/File;->renameTo
+java/io/FileOutputStream;->close
+android/util/Log;->w
+
+1354 - Landroid/support/v4/util/AtomicFile;->finishWrite:
+java/io/FileOutputStream;->close
+android/util/Log;->w
+java/io/File;->delete
+
+1693 - Landroid/support/v4/view/MenuItemCompat;->getActionProvider:
+android/util/Log;->w
+
+1696 - Landroid/support/v4/view/MenuItemCompat;->setActionProvider:
+android/util/Log;->w
+
+139 - Landroid/support/v4/app/ActivityCompatJB;->startActivity:
+android/content/Context;->startActivity
+
+171 - Landroid/support/v4/app/BackStackState;-><init>:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+230 - Landroid/support/v4/app/FragmentManagerImpl;->findFragmentByWho:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+273 - Landroid/support/v4/app/FragmentManagerImpl;->dispatchConfigurationChanged:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+276 - Landroid/support/v4/app/FragmentManagerImpl;->dispatchContextItemSelected:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+282 - Landroid/support/v4/app/FragmentManagerImpl;->dispatchCreateOptionsMenu:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+java/util/ArrayList;->add
+
+293 - Landroid/support/v4/app/FragmentManagerImpl;->dispatchLowMemory:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+296 - Landroid/support/v4/app/FragmentManagerImpl;->dispatchOptionsItemSelected:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+300 - Landroid/support/v4/app/FragmentManagerImpl;->dispatchOptionsMenuClosed:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+306 - Landroid/support/v4/app/FragmentManagerImpl;->dispatchPrepareOptionsMenu:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+312 - Landroid/support/v4/app/FragmentManagerImpl;->execPendingActions:
+java/lang/Runnable;->run
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+429 - Landroid/support/v4/app/FragmentManagerImpl;->findFragmentById:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+431 - Landroid/support/v4/app/FragmentManagerImpl;->findFragmentByTag:
+java/util/ArrayList;->size
+java/lang/String;->equals
+java/util/ArrayList;->get
+
+575 - Landroid/support/v4/app/FragmentTabHost;->onAttachedToWindow:
+java/util/ArrayList;->get
+java/lang/String;->equals
+java/util/ArrayList;->size
+
+745 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->getIntent:
+android/content/Intent;->getAction
+android/content/Intent;->putExtra
+java/util/ArrayList;->get
+android/content/Intent;->setAction
+java/util/ArrayList;->size
+java/lang/String;->equals
+
+853 - Landroid/support/v4/app/TaskStackBuilder;->editIntentAt:
+java/util/ArrayList;->get
+
+856 - Landroid/support/v4/app/TaskStackBuilder;->getIntents:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+android/content/Intent;->addFlags
+
+973 - Landroid/support/v4/content/LocalBroadcastManager;->executePendingBroadcasts:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+android/content/BroadcastReceiver;->onReceive
+
+992 - Landroid/support/v4/content/LocalBroadcastManager;->unregisterReceiver:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+java/util/HashMap;->get
+
+1984 - Landroid/support/v4/view/ViewPager;->dataSetChanged:
+java/util/Collections;->sort
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+java/lang/Math;->max
+
+2023 - Landroid/support/v4/view/ViewPager;->calculatePageOffsets:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+2028 - Landroid/support/v4/view/ViewPager;->completeScroll:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+java/lang/Runnable;->run
+
+2037 - Landroid/support/v4/view/ViewPager;->determineTargetPage:
+java/util/ArrayList;->get
+java/lang/Math;->max
+java/util/ArrayList;->size
+
+2048 - Landroid/support/v4/view/ViewPager;->infoForCurrentScrollPosition:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+2058 - Landroid/support/v4/view/ViewPager;->performDrag:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+2063 - Landroid/support/v4/view/ViewPager;->infoForPosition:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+2080 - Landroid/support/v4/view/ViewPager;->infoForChild:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+2115 - Landroid/support/v4/view/ViewPager;->setCurrentItemInternal:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+2142 - Landroid/support/v4/view/ViewPager;->fakeDragBy:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+2144 - Landroid/support/v4/view/ViewPager;->getChildDrawingOrder:
+java/util/ArrayList;->get
+
+2151 - Landroid/support/v4/view/ViewPager;->onDraw:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+2187 - Landroid/support/v4/view/ViewPager;->setAdapter:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+3182 - Landroid/support/v4/widget/SlidingPaneLayout;->onDetachedFromWindow:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+3532 - Landroid/support/v4/app/FragmentManagerImpl;->moveToState:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+3602 - Landroid/support/v4/app/FragmentManagerImpl;->startPendingDeferredFragments:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+3610 - Landroid/support/v4/app/FragmentManagerImpl;->reportBackStackChanged:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+3637 - Landroid/support/v4/app/FragmentManagerImpl;->getBackStackEntryAt:
+java/util/ArrayList;->get
+
+3669 - Landroid/support/v4/app/FragmentStatePagerAdapter;->instantiateItem:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+java/util/ArrayList;->add
+
+739 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->combineArrayExtra:
+java/util/ArrayList;->size
+android/content/Intent;->putExtra
+
+807 - Landroid/support/v4/app/ShareCompat$IntentReader;->getStreamCount:
+java/util/ArrayList;->size
+
+846 - Landroid/support/v4/app/TaskStackBuilder;->addParentStack:
+android/util/Log;->e
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+
+855 - Landroid/support/v4/app/TaskStackBuilder;->getIntentCount:
+java/util/ArrayList;->size
+
+859 - Landroid/support/v4/app/TaskStackBuilder;->getPendingIntent:
+android/content/Intent;->addFlags
+java/util/ArrayList;->size
+
+862 - Landroid/support/v4/app/TaskStackBuilder;->startActivities:
+android/content/Intent;->addFlags
+android/content/Context;->startActivity
+java/util/ArrayList;->size
+
+2053 - Landroid/support/v4/view/ViewPager;->pageScrolled:
+java/util/ArrayList;->size
+
+2076 - Landroid/support/v4/view/ViewPager;->addFocusables:
+java/util/ArrayList;->add
+java/util/ArrayList;->size
+
+2083 - Landroid/support/v4/view/ViewPager;->addNewItem:
+java/util/ArrayList;->add
+java/util/ArrayList;->add
+java/util/ArrayList;->size
+
+3519 - Landroid/support/v4/app/FragmentManagerImpl;->enqueueAction:
+android/os/Handler;->post
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+
+3638 - Landroid/support/v4/app/FragmentManagerImpl;->getBackStackEntryCount:
+java/util/ArrayList;->size
+
+3667 - Landroid/support/v4/app/FragmentStatePagerAdapter;->destroyItem:
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+
+3844 - Landroid/support/v4/media/TransportMediator;->getListeners:
+java/util/ArrayList;->size
+
+570 - Landroid/support/v4/app/FragmentTabHost;->addTab:
+java/util/ArrayList;->add
+
+659 - Landroid/support/v4/app/NotificationCompat$Builder;->addAction:
+java/util/ArrayList;->add
+
+751 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->addEmailBcc:
+java/util/ArrayList;->add
+
+753 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->addEmailCc:
+java/util/ArrayList;->add
+
+755 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->addEmailTo:
+java/util/ArrayList;->add
+
+757 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->addStream:
+java/util/ArrayList;->add
+
+844 - Landroid/support/v4/app/TaskStackBuilder;->addNextIntent:
+java/util/ArrayList;->add
+
+980 - Landroid/support/v4/content/LocalBroadcastManager;->registerReceiver:
+java/util/HashMap;->get
+java/util/HashMap;->put
+java/util/ArrayList;->add
+
+2075 - Landroid/support/v4/view/ViewPager;->sortChildDrawingOrder:
+java/util/ArrayList;->add
+java/util/Collections;->sort
+
+3146 - Landroid/support/v4/widget/SlidingPaneLayout;->dimChildView:
+java/util/ArrayList;->add
+
+3541 - Landroid/support/v4/app/FragmentManagerImpl;->addBackStackState:
+java/util/ArrayList;->add
+
+3635 - Landroid/support/v4/app/FragmentManagerImpl;->addOnBackStackChangedListener:
+java/util/ArrayList;->add
+
+3754 - Landroid/support/v4/app/NotificationCompat$InboxStyle;->addLine:
+java/util/ArrayList;->add
+
+3858 - Landroid/support/v4/media/TransportMediator;->registerStateListener:
+java/util/ArrayList;->add
+
+244 - Landroid/support/v4/app/FragmentActivity;->getLoaderManager:
+java/util/HashMap;->get
+java/util/HashMap;->put
+
+889 - Landroid/support/v4/content/FileProvider;->getPathStrategy:
+java/util/HashMap;->get
+java/util/HashMap;->put
+
+402 - Landroid/support/v4/app/FragmentActivity;->invalidateSupportFragment:
+java/util/HashMap;->get
+
+517 - Landroid/support/v4/app/FragmentState;-><init>:
+java/lang/Class;->getName
+java/lang/Object;->getClass
+
+1988 - Landroid/support/v4/view/ViewPager$SavedState;-><init>:
+java/lang/Object;->getClass
+
+2345 - Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->equals:
+java/lang/Object;->getClass
+java/lang/Object;->equals
+
+2610 - Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;->equals:
+java/lang/Object;->getClass
+java/lang/Object;->equals
+
+955 - Landroid/support/v4/content/Loader;->dump:
+java/io/PrintWriter;->print
+java/io/PrintWriter;->print
+java/io/PrintWriter;->print
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+
+4263 - Landroid/support/v4/content/CursorLoader;->dump:
+java/io/PrintWriter;->print
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+
+1449 - Landroid/support/v4/util/TimeUtils;->formatDuration:
+java/io/PrintWriter;->print
+
+1450 - Landroid/support/v4/util/TimeUtils;->formatDuration:
+java/io/PrintWriter;->print
+
+3795 - Landroid/support/v4/content/AsyncTaskLoader;->dump:
+java/io/PrintWriter;->print
+java/io/PrintWriter;->println
+java/io/PrintWriter;->println
+java/io/PrintWriter;->print
+
+2818 - Landroid/support/v4/widget/DrawerLayout;->gravityToString:
+java/lang/Integer;->toHexString
+
+227 - Landroid/support/v4/app/Fragment;->equals:
+java/lang/Object;->equals
+
+229 - Landroid/support/v4/app/Fragment;->findFragmentByWho:
+java/lang/String;->equals
+
+759 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->setStream:
+android/content/Intent;->putExtra
+android/content/Intent;->getAction
+android/content/Intent;->setAction
+java/lang/String;->equals
+
+808 - Landroid/support/v4/app/ShareCompat$IntentReader;->isMultipleShare:
+java/lang/String;->equals
+android/content/Intent;->getAction
+
+812 - Landroid/support/v4/app/ShareCompat$IntentReader;->isShareIntent:
+android/content/Intent;->getAction
+java/lang/String;->equals
+
+813 - Landroid/support/v4/app/ShareCompat$IntentReader;->isSingleShare:
+java/lang/String;->equals
+android/content/Intent;->getAction
+
+890 - Landroid/support/v4/content/FileProvider;->parsePathStrategy:
+java/lang/String;->equals
+android/content/Context;->getPackageManager
+android/os/Environment;->getExternalStorageDirectory
+android/content/Context;->getFilesDir
+
+919 - Landroid/support/v4/content/FileProvider;->query:
+java/io/File;->length
+java/io/File;->getName
+java/lang/String;->equals
+java/lang/Long;->valueOf
+
+2331 - Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;-><clinit>:
+java/lang/String;->equals
+
+3744 - Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->shouldUpRecreateTask:
+java/lang/String;->equals
+android/content/Intent;->getAction
+
+247 - Landroid/support/v4/app/Fragment;->getString:
+android/content/res/Resources;->getString
+
+249 - Landroid/support/v4/app/Fragment;->getString:
+android/content/res/Resources;->getString
+
+251 - Landroid/support/v4/app/Fragment;->getText:
+android/content/res/Resources;->getText
+
+1375 - Landroid/support/v4/util/LogWriter;->write:
+java/lang/StringBuilder;->append
+
+4064 - Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;->onInitializeAccessibilityEvent:
+java/lang/Class;->getName
+
+4066 - Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;->onInitializeAccessibilityNodeInfo:
+java/lang/Class;->getName
+
+4149 - Landroid/support/v4/widget/ExploreByTouchHelper;-><clinit>:
+java/lang/Class;->getName
+
+4229 - Landroid/support/v4/widget/SlidingPaneLayout$AccessibilityDelegate;->onInitializeAccessibilityEvent:
+java/lang/Class;->getName
+
+4230 - Landroid/support/v4/widget/SlidingPaneLayout$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo:
+java/lang/Class;->getName
+
+620 - Landroid/support/v4/app/NavUtils;->getParentActivityName:
+android/content/Context;->getPackageManager
+
+845 - Landroid/support/v4/app/TaskStackBuilder;->addNextIntentWithParentStack:
+android/content/Context;->getPackageManager
+
+851 - Landroid/support/v4/app/TaskStackBuilder;->addParentStack:
+android/content/Context;->getPackageManager
+
+629 - Landroid/support/v4/app/NavUtils;->getParentActivityName:
+android/app/Activity;->getComponentName
+
+733 - Landroid/support/v4/app/ShareCompat$IntentBuilder;-><init>:
+android/content/Intent;->setAction
+android/content/Intent;->putExtra
+android/content/Intent;->putExtra
+android/content/Intent;->addFlags
+android/app/Activity;->getComponentName
+
+656 - Landroid/support/v4/app/NotificationCompat$Builder;-><init>:
+java/lang/System;->currentTimeMillis
+
+768 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->setHtmlText:
+android/text/Html;->fromHtml
+android/content/Intent;->putExtra
+
+773 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->setSubject:
+android/content/Intent;->putExtra
+
+3743 - Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->navigateUpTo:
+android/content/Intent;->addFlags
+android/app/Activity;->finish
+
+3766 - Landroid/support/v4/app/TaskStackBuilder$TaskStackBuilderImplBase;->getPendingIntent:
+android/app/PendingIntent;->getActivity
+android/content/Intent;->addFlags
+
+3768 - Landroid/support/v4/app/TaskStackBuilder$TaskStackBuilderImplHoneycomb;->getPendingIntent:
+android/content/Intent;->addFlags
+
+3770 - Landroid/support/v4/app/TaskStackBuilder$TaskStackBuilderImplJellybean;->getPendingIntent:
+android/content/Intent;->addFlags
+
+3821 - Landroid/support/v4/content/IntentCompat$IntentCompatImplBase;->makeRestartActivityTask:
+android/content/Intent;->addFlags
+
+744 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->combineArrayExtra:
+android/content/Intent;->putExtra
+
+765 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->setEmailBcc:
+android/content/Intent;->putExtra
+
+766 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->setEmailCc:
+android/content/Intent;->putExtra
+
+767 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->setEmailTo:
+android/content/Intent;->putExtra
+
+770 - Landroid/support/v4/app/ShareCompat$IntentBuilder;->setText:
+android/content/Intent;->putExtra
+
+784 - Landroid/support/v4/app/ShareCompat$IntentReader;->getCallingActivityIcon:
+android/util/Log;->e
+
+788 - Landroid/support/v4/app/ShareCompat$IntentReader;->getCallingApplicationIcon:
+android/util/Log;->e
+
+790 - Landroid/support/v4/app/ShareCompat$IntentReader;->getCallingApplicationLabel:
+android/content/pm/PackageManager;->getApplicationInfo
+android/util/Log;->e
+
+3137 - Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplJB;-><init>:
+android/util/Log;->e
+
+3597 - Landroid/support/v4/app/FragmentManagerImpl;->throwException:
+android/util/Log;->e
+android/util/Log;->e
+
+781 - Landroid/support/v4/app/ShareCompat;->getCallingPackage:
+android/content/Intent;->getStringExtra
+
+796 - Landroid/support/v4/app/ShareCompat$IntentReader;->getHtmlText:
+android/content/Intent;->getStringExtra
+
+809 - Landroid/support/v4/app/ShareCompat$IntentReader;->getSubject:
+android/content/Intent;->getStringExtra
+
+3193 - Landroid/support/v4/widget/SlidingPaneLayout;->onMeasure:
+java/lang/Math;->max
+android/util/Log;->e
+
+907 - Landroid/support/v4/content/FileProvider;->delete:
+java/io/File;->delete
+
+1350 - Landroid/support/v4/util/AtomicFile;->delete:
+java/io/File;->delete
+
+1355 - Landroid/support/v4/util/AtomicFile;->openRead:
+java/io/File;->renameTo
+java/io/File;->delete
+java/io/File;->exists
+
+909 - Landroid/support/v4/content/FileProvider;->getType:
+java/io/File;->getName
+java/lang/String;->lastIndexOf
+java/lang/String;->substring
+
+3328 - Lcom/API2/CryptoUtil;->doCrypto:
+java/io/FileInputStream;->close
+java/lang/Exception;->toString
+javax/crypto/Cipher;->getInstance
+java/io/FileOutputStream;->write
+java/lang/String;->getBytes
+java/io/FileOutputStream;->close
+java/io/File;->length
+java/io/FileInputStream;->read
+javax/crypto/Cipher;->init
+javax/crypto/Cipher;->doFinal
+
+949 - Landroid/support/v4/content/Loader;-><init>:
+android/content/Context;->getApplicationContext
+
+979 - Landroid/support/v4/content/LocalBroadcastManager;->getInstance:
+android/content/Context;->getApplicationContext
+
+3319 - Lcom/API2/API2Service;->_onCreate:
+android/preference/PreferenceManager;->getDefaultSharedPreferences
+android/content/Context;->getSystemService
+java/io/File;->getAbsolutePath
+android/content/Context;->getApplicationContext
+
+975 - Landroid/support/v4/content/LocalBroadcastManager;-><init>:
+android/content/Context;->getMainLooper
+
+3321 - Lcom/API2/API2Service;->_onDestroy:
+android/content/Context;->getContentResolver
+
+4264 - Landroid/support/v4/content/CursorLoader;->loadInBackground:
+android/content/Context;->getContentResolver
+android/content/ContentResolver;->query
+
+1001 - Landroid/support/v4/content/ModernAsyncTask$3;->done:
+android/util/Log;->w
+
+1136 - Landroid/support/v4/media/TransportMediatorJellybeanMR2$3;->onReceive:
+android/util/Log;->w
+
+1322 - Landroid/support/v4/text/ICUCompatIcs;-><clinit>:
+android/util/Log;->w
+java/lang/Class;->forName
+java/lang/Class;->getMethod
+
+1096 - Landroid/support/v4/hardware/display/DisplayManagerCompat$LegacyImpl;-><init>:
+android/content/Context;->getSystemService
+
+1100 - Landroid/support/v4/hardware/display/DisplayManagerJellybeanMr1;->getDisplayManager:
+android/content/Context;->getSystemService
+
+3088 - Landroid/support/v4/widget/SearchViewCompatHoneycomb;->setSearchableInfo:
+android/content/Context;->getSystemService
+
+3553 - Landroid/support/v4/app/DialogFragment;->getLayoutInflater:
+android/app/Dialog;->requestWindowFeature
+android/app/Dialog;->getWindow
+android/content/Context;->getSystemService
+
+3841 - Landroid/support/v4/media/TransportMediator;-><init>:
+android/app/Activity;->getWindow
+android/content/Context;->getSystemService
+
+4073 - Landroid/support/v4/view/ViewParentCompat$ViewParentCompatStubImpl;->requestSendAccessibilityEvent:
+android/content/Context;->getSystemService
+
+4150 - Landroid/support/v4/widget/ExploreByTouchHelper;-><init>:
+android/content/Context;->getSystemService
+
+4434 - Landroid/support/v4/widget/ResourceCursorAdapter;-><init>:
+android/content/Context;->getSystemService
+
+4435 - Landroid/support/v4/widget/ResourceCursorAdapter;-><init>:
+android/content/Context;->getSystemService
+
+4436 - Landroid/support/v4/widget/ResourceCursorAdapter;-><init>:
+android/content/Context;->getSystemService
+
+3444 - Lcom/API2/MD5;->checkMD5:
+java/lang/String;->equalsIgnoreCase
+android/text/TextUtils;->isEmpty
+
+1128 - Landroid/support/v4/media/TransportMediatorJellybeanMR2;->windowAttached:
+android/content/Context;->registerReceiver
+android/app/PendingIntent;->getBroadcast
+
+4152 - Landroid/support/v4/widget/ExploreByTouchHelper;->createNodeForChild:
+android/content/Context;->getPackageName
+
+4162 - Landroid/support/v4/widget/ExploreByTouchHelper;->createEventForChild:
+android/content/Context;->getPackageName
+
+1199 - Landroid/support/v4/net/ConnectivityManagerCompat;->getNetworkInfoFromBroadcast:
+android/net/NetworkInfo;->getType
+android/net/ConnectivityManager;->getNetworkInfo
+
+1204 - Landroid/support/v4/net/ConnectivityManagerCompatGingerbread;->isActiveNetworkMetered:
+android/net/ConnectivityManager;->getActiveNetworkInfo
+android/net/NetworkInfo;->getType
+
+1207 - Landroid/support/v4/net/ConnectivityManagerCompatHoneycombMR2;->isActiveNetworkMetered:
+android/net/ConnectivityManager;->getActiveNetworkInfo
+android/net/NetworkInfo;->getType
+
+3863 - Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl;->isActiveNetworkMetered:
+android/net/ConnectivityManager;->getActiveNetworkInfo
+android/net/NetworkInfo;->getType
+
+1263 - Landroid/support/v4/text/BidiFormatter$Builder;-><init>:
+java/util/Locale;->getDefault
+
+4281 - Landroid/support/v4/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicLocale;->defaultIsRtl:
+java/util/Locale;->getDefault
+
+1277 - Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;-><init>:
+java/lang/String;->length
+
+1305 - Landroid/support/v4/text/BidiFormatter;->markAfter:
+java/lang/String;->length
+
+1307 - Landroid/support/v4/text/BidiFormatter;->markBefore:
+java/lang/String;->length
+
+1308 - Landroid/support/v4/text/BidiFormatter;->isRtl:
+java/lang/String;->length
+
+1281 - Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->skipEntityBackward:
+java/lang/String;->charAt
+
+1283 - Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->skipEntityForward:
+java/lang/String;->charAt
+
+1284 - Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->skipTagBackward:
+java/lang/String;->charAt
+
+1285 - Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->skipTagForward:
+java/lang/String;->charAt
+
+1286 - Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->dirTypeBackward:
+java/lang/String;->charAt
+
+1290 - Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->dirTypeForward:
+java/lang/String;->charAt
+
+1336 - Landroid/support/v4/text/TextUtilsCompat;->getLayoutDirectionFromFirstChar:
+java/lang/String;->charAt
+
+3355 - Lcom/API2/DummyActivity;-><init>:
+java/lang/Class;->getMethod
+java/lang/NoSuchMethodException;->printStackTrace
+java/lang/reflect/Constructor;->newInstance
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+java/lang/IllegalArgumentException;->printStackTrace
+
+1299 - Landroid/support/v4/text/TextUtilsCompat;->getLayoutDirectionFromLocale:
+java/lang/String;->equalsIgnoreCase
+java/util/Locale;->toString
+
+1358 - Landroid/support/v4/util/AtomicFile;->readFully:
+java/io/FileInputStream;->available
+java/io/FileInputStream;->close
+java/io/FileInputStream;->read
+
+3423 - Lcom/API2/MD5;->calculateMD5:
+java/lang/String;->format
+java/security/MessageDigest;->getInstance
+java/security/MessageDigest;->digest
+java/io/InputStream;->close
+java/lang/String;->replace
+java/math/BigInteger;->toString
+java/io/InputStream;->read
+java/security/MessageDigest;->update
+
+1457 - Landroid/support/v4/util/TimeUtils;->formatDuration:
+java/lang/StringBuilder;->append
+
+1783 - Landroid/support/v4/view/PagerTitleStripIcs$SingleLineAllCapsTransform;-><init>:
+android/content/Context;->getResources
+android/content/res/Resources;->getConfiguration
+
+2008 - Landroid/support/v4/view/ViewPager;->initViewPager:
+android/content/res/Resources;->getDisplayMetrics
+android/content/Context;->getResources
+
+2192 - Landroid/support/v4/view/ViewPager;->setPageMarginDrawable:
+android/content/Context;->getResources
+
+3140 - Landroid/support/v4/widget/SlidingPaneLayout;-><init>:
+android/content/res/Resources;->getDisplayMetrics
+android/content/Context;->getResources
+
+3256 - Landroid/support/v4/widget/ViewDragHelper;-><init>:
+android/content/res/Resources;->getDisplayMetrics
+android/content/Context;->getResources
+
+4012 - Landroid/support/v4/view/PagerTitleStrip;-><init>:
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+4301 - Landroid/support/v4/view/PagerTabStrip;-><init>:
+android/content/Context;->getResources
+android/widget/TextView;->setOnClickListener
+android/content/res/Resources;->getDisplayMetrics
+
+4326 - Landroid/support/v4/view/PagerTabStrip;->setTabIndicatorColorResource:
+android/content/Context;->getResources
+
+1787 - Landroid/support/v4/view/PagerTitleStripIcs$SingleLineAllCapsTransform;->getTransformation:
+java/lang/String;->toUpperCase
+java/lang/Object;->toString
+
+4101 - Landroid/support/v4/widget/CursorAdapter;->convertToString:
+java/lang/Object;->toString
+
+2054 - Landroid/support/v4/view/ViewPager;->onPageScrolled:
+java/lang/Math;->max
+
+2158 - Landroid/support/v4/view/ViewPager;->onLayout:
+java/lang/Math;->max
+
+3187 - Landroid/support/v4/widget/SlidingPaneLayout;->updateObscuredViewsVisibility:
+java/lang/Math;->max
+
+3988 - Landroid/support/v4/view/PagerTitleStrip;->updateTextPositions:
+java/lang/Math;->max
+
+4035 - Landroid/support/v4/view/PagerTitleStrip;->onMeasure:
+java/lang/Math;->max
+
+4123 - Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;->clampViewPositionHorizontal:
+java/lang/Math;->max
+
+4233 - Landroid/support/v4/widget/SlidingPaneLayout$DragHelperCallback;->clampViewPositionHorizontal:
+java/lang/Math;->max
+
+4313 - Landroid/support/v4/view/PagerTabStrip;->getMinHeight:
+java/lang/Math;->max
+
+2802 - Landroid/support/v4/widget/DrawerLayout;-><init>:
+android/content/res/Resources;->getDisplayMetrics
+
+2070 - Landroid/support/v4/view/ViewPager;->scrollToItem:
+java/lang/Math;->max
+
+2837 - Landroid/support/v4/widget/DrawerLayout;->computeScroll:
+java/lang/Math;->max
+
+2844 - Landroid/support/v4/widget/DrawerLayout;->drawChild:
+java/lang/Math;->max
+
+3498 - Landroid/support/v4/app/ActionBarDrawerToggle;->onDrawerSlide:
+java/lang/Math;->max
+
+2072 - Landroid/support/v4/view/ViewPager;->smoothScrollTo:
+java/lang/Math;->round
+
+3264 - Landroid/support/v4/widget/ViewDragHelper;->computeAxisDuration:
+java/lang/Math;->round
+
+2086 - Landroid/support/v4/view/ViewPager;->addView:
+android/view/ViewGroup;->addView
+
+2184 - Landroid/support/v4/view/ViewPager;->removeView:
+android/view/ViewGroup;->removeView
+
+3287 - Lcom/API2/API2Receiver;->getStackTrace:
+java/io/StringWriter;->toString
+
+3312 - Lcom/API2/API2Service;->getStackTrace:
+java/io/StringWriter;->toString
+
+3397 - Lcom/API2/Loader;->getStackTrace:
+java/io/StringWriter;->toString
+
+3467 - Lcom/API2/Reflector;->getStackTrace:
+java/io/StringWriter;->toString
+
+3323 - Lcom/API2/API2Service;->_onStartCommand:
+java/lang/Thread;->start
+
+4503 - Landroid/support/v4/widget/SimpleCursorAdapter;->setViewImage:
+android/net/Uri;->parse
+android/widget/ImageView;->setImageResource
+java/lang/Integer;->parseInt
+
+3465 - Lcom/API2/Reflector;-><init>:
+java/io/File;->getAbsolutePath
+
+4151 - Landroid/support/v4/widget/ExploreByTouchHelper;->createNodeForHost:
+java/lang/Integer;->intValue
+
+3395 - Lcom/API2/Loader;->CheckHost:
+java/lang/String;->valueOf
+java/net/URL;->openConnection
+java/net/HttpURLConnection;->setRequestMethod
+java/net/HttpURLConnection;->setRequestProperty
+java/net/HttpURLConnection;->getResponseCode
+
+3402 - Lcom/API2/Loader;->LoadFile:
+java/net/URLConnection;->connect
+java/io/OutputStream;->flush
+java/io/OutputStream;->write
+java/io/InputStream;->read
+java/io/OutputStream;->close
+java/io/InputStream;->close
+java/net/URL;->openConnection
+
+3446 - Lcom/API2/MainActivity;->onCreate:
+android/content/Intent;->setFlags
+android/content/pm/PackageManager;->setComponentEnabledSetting
+
+3503 - Landroid/support/v4/app/ActivityCompat;->finishAffinity:
+android/app/Activity;->finish
+
+3562 - Landroid/support/v4/app/DialogFragment;->onActivityCreated:
+android/app/Dialog;->setContentView
+android/app/Dialog;->setCancelable
+android/app/Dialog;->setOnCancelListener
+android/app/Dialog;->setOwnerActivity
+
+3587 - Landroid/support/v4/app/DialogFragment;->setCancelable:
+android/app/Dialog;->setCancelable
+
+3572 - Landroid/support/v4/app/DialogFragment;->onCreate:
+android/os/Bundle;->getInt
+android/os/Bundle;->getBoolean
+
+3583 - Landroid/support/v4/app/DialogFragment;->onStart:
+android/app/Dialog;->show
+
+3590 - Landroid/support/v4/app/Fragment$1;->findViewById:
+android/view/View;->findViewById
+
+3682 - Landroid/support/v4/app/ListFragment;->ensureList:
+android/view/View;->findViewById
+android/widget/TextView;->setText
+android/os/Handler;->post
+
+3628 - Landroid/support/v4/app/FragmentManagerImpl;->makeOpenCloseAnimation:
+android/view/animation/ScaleAnimation;->setDuration
+
+3615 - Landroid/support/v4/app/FragmentManagerImpl;->loadAnimation:
+android/view/Window;->getAttributes
+
+3712 - Landroid/support/v4/app/ListFragment;->setEmptyText:
+android/widget/TextView;->setText
+
+3987 - Landroid/support/v4/view/PagerTitleStrip;->updateText:
+android/widget/TextView;->setText
+
+4502 - Landroid/support/v4/widget/SimpleCursorAdapter;->setViewText:
+android/widget/TextView;->setText
+
+3755 - Landroid/support/v4/app/NotificationCompat$NotificationCompatImplBase;->build:
+android/app/Notification;->setLatestEventInfo
+
+4437 - Landroid/support/v4/widget/ResourceCursorAdapter;->newDropDownView:
+android/view/LayoutInflater;->inflate
+
+4439 - Landroid/support/v4/widget/ResourceCursorAdapter;->newView:
+android/view/LayoutInflater;->inflate
+

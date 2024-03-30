@@ -1,0 +1,55 @@
+# Landroid/support/v4/content/ContextCompat;->getExternalCacheDirs(Landroid/content/Context;)[Ljava/io/File; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.content.Context
+#
+# - return:java.io.File[]
+
+getExternalCacheDirs-BB@0x0 : [ getExternalCacheDirs-BB@0x10 getExternalCacheDirs-BB@0x1a ]
+	0       (00000000) const/4              v7, 1
+	1       (00000002) const/4              v6, 0
+	2       (00000004) sget                 v1, Landroid/os/Build$VERSION;->SDK_INT I
+	3       (00000008) const/16             v2, 19
+	4       (0000000c) if-lt                v1, v2, +7
+
+getExternalCacheDirs-BB@0x10 : [ getExternalCacheDirs-BB@0x18 ]
+	5       (00000010) invoke-static        v8, Landroid/support/v4/content/ContextCompatKitKat;->getExternalCacheDirs(Landroid/content/Context;)[Ljava/io/File;
+	6       (00000016) move-result-object   v2
+
+getExternalCacheDirs-BB@0x18 : 
+	7       (00000018) return-object        v2
+
+getExternalCacheDirs-BB@0x1a : [ getExternalCacheDirs-BB@0x22 getExternalCacheDirs-BB@0x34 ]
+	8       (0000001a) const/16             v2, 8
+	9       (0000001e) if-lt                v1, v2, +b
+
+getExternalCacheDirs-BB@0x22 : [ getExternalCacheDirs-BB@0x2a ]
+	10      (00000022) invoke-static        v8, Landroid/support/v4/content/ContextCompatFroyo;->getExternalCacheDir(Landroid/content/Context;)Ljava/io/File;
+	11      (00000028) move-result-object   v0
+
+getExternalCacheDirs-BB@0x2a : [ getExternalCacheDirs-BB@0x18 ]
+	12      (0000002a) new-array            v2, v7, [Ljava/io/File;
+	13      (0000002e) aput-object          v0, v2, v6
+	14      (00000032) goto                 -d
+
+getExternalCacheDirs-BB@0x34 : [ getExternalCacheDirs-BB@0x2a ]
+	15      (00000034) invoke-static        Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+	16      (0000003a) move-result-object   v2
+	17      (0000003c) const/4              v3, 4
+	18      (0000003e) new-array            v3, v3, [Ljava/lang/String;
+	19      (00000042) const-string         v4, 'Android'
+	20      (00000046) aput-object          v4, v3, v6
+	21      (0000004a) const-string         v4, 'data'
+	22      (0000004e) aput-object          v4, v3, v7
+	23      (00000052) const/4              v4, 2
+	24      (00000054) invoke-virtual       v8, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	25      (0000005a) move-result-object   v5
+	26      (0000005c) aput-object          v5, v3, v4
+	27      (00000060) const/4              v4, 3
+	28      (00000062) const-string         v5, 'cache'
+	29      (00000066) aput-object          v5, v3, v4
+	30      (0000006a) invoke-static        v2, v3, Landroid/support/v4/content/ContextCompat;->buildPath(Ljava/io/File; [Ljava/lang/String;)Ljava/io/File;
+	31      (00000070) move-result-object   v0
+	32      (00000072) goto                 -24
+

@@ -1,0 +1,27 @@
+# Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->skipEntityForward()B [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:byte
+
+skipEntityForward-BB@0x0 : [ skipEntityForward-BB@0xc skipEntityForward-BB@0x30 ]
+	0       (00000000) iget                 v0, v3, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	1       (00000004) iget                 v1, v3, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->length I
+	2       (00000008) if-ge                v0, v1, +14
+
+skipEntityForward-BB@0xc : [ skipEntityForward-BB@0x30 skipEntityForward-BB@0x0 ]
+	3       (0000000c) iget-object          v0, v3, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->text Ljava/lang/String;
+	4       (00000010) iget                 v1, v3, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	5       (00000014) add-int/lit8         v2, v1, 1
+	6       (00000018) iput                 v2, v3, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	7       (0000001c) invoke-virtual       v0, v1, Ljava/lang/String;->charAt(I)C
+	8       (00000022) move-result          v0
+	9       (00000024) iput-char            v0, v3, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	10      (00000028) const/16             v1, 59
+	11      (0000002c) if-ne                v0, v1, -16
+
+skipEntityForward-BB@0x30 : 
+	12      (00000030) const/16             v0, 12
+	13      (00000034) return               v0
+

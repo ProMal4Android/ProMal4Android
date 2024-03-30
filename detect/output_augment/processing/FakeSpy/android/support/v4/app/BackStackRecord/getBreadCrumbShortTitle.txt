@@ -1,0 +1,27 @@
+# Landroid/support/v4/app/BackStackRecord;->getBreadCrumbShortTitle()Ljava/lang/CharSequence; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:java.lang.CharSequence
+
+getBreadCrumbShortTitle-BB@0x0 : [ getBreadCrumbShortTitle-BB@0x8 getBreadCrumbShortTitle-BB@0x26 ]
+	0       (00000000) iget                 v0, v2, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbShortTitleRes I
+	1       (00000004) if-eqz               v0, +11
+
+getBreadCrumbShortTitle-BB@0x8 : [ getBreadCrumbShortTitle-BB@0x24 ]
+	2       (00000008) iget-object          v0, v2, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	3       (0000000c) iget-object          v0, v0, Landroid/support/v4/app/FragmentManagerImpl;->mHost Landroid/support/v4/app/FragmentHostCallback;
+	4       (00000010) invoke-virtual       v0, Landroid/support/v4/app/FragmentHostCallback;->getContext()Landroid/content/Context;
+	5       (00000016) move-result-object   v0
+	6       (00000018) iget                 v1, v2, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbShortTitleRes I
+	7       (0000001c) invoke-virtual       v0, v1, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+	8       (00000022) move-result-object   v0
+
+getBreadCrumbShortTitle-BB@0x24 : 
+	9       (00000024) return-object        v0
+
+getBreadCrumbShortTitle-BB@0x26 : [ getBreadCrumbShortTitle-BB@0x24 ]
+	10      (00000026) iget-object          v0, v2, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbShortTitleText Ljava/lang/CharSequence;
+	11      (0000002a) goto                 -3
+

@@ -1,0 +1,1117 @@
+# Landroid/support/v7/widget/LinearLayoutCompat;->measureHorizontal(I I)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v47
+# - v48:int
+# - v49:int
+#
+# - return:void
+
+measureHorizontal-BB@0x0 : [ measureHorizontal-BB@0x4a measureHorizontal-BB@0x56 ]
+	0       (00000000) const/4              v3, 0
+	1       (00000002) move-object/from16   v0, v47
+	2       (00000006) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	3       (0000000a) const/16             v35, 0
+	4       (0000000e) const/16             v18, 0
+	5       (00000012) const/4              v11, 0
+	6       (00000014) const/16             v43, 0
+	7       (00000018) const/4              v10, 1
+	8       (0000001a) const/16             v40, 0
+	9       (0000001e) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getVirtualChildCount()I
+	10      (00000024) move-result          v20
+	11      (00000026) invoke-static/range  v48, Landroid/view/View$MeasureSpec;->getMode(I)I
+	12      (0000002c) move-result          v44
+	13      (0000002e) invoke-static/range  v49, Landroid/view/View$MeasureSpec;->getMode(I)I
+	14      (00000034) move-result          v25
+	15      (00000036) const/16             v31, 0
+	16      (0000003a) const/16             v38, 0
+	17      (0000003e) move-object/from16   v0, v47
+	18      (00000042) iget-object          v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mMaxAscent [I
+	19      (00000046) if-eqz               v3, +8
+
+measureHorizontal-BB@0x4a : [ measureHorizontal-BB@0x56 measureHorizontal-BB@0x72 ]
+	20      (0000004a) move-object/from16   v0, v47
+	21      (0000004e) iget-object          v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mMaxDescent [I
+	22      (00000052) if-nez               v3, +10
+
+measureHorizontal-BB@0x56 : [ measureHorizontal-BB@0x72 ]
+	23      (00000056) const/4              v3, 4
+	24      (00000058) new-array            v3, v3, [I
+	25      (0000005c) move-object/from16   v0, v47
+	26      (00000060) iput-object          v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mMaxAscent [I
+	27      (00000064) const/4              v3, 4
+	28      (00000066) new-array            v3, v3, [I
+	29      (0000006a) move-object/from16   v0, v47
+	30      (0000006e) iput-object          v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mMaxDescent [I
+
+measureHorizontal-BB@0x72 : [ measureHorizontal-BB@0xde measureHorizontal-BB@0x124 ]
+	31      (00000072) move-object/from16   v0, v47
+	32      (00000076) iget-object          v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mMaxAscent [I
+	33      (0000007a) move-object/from16   v33, v0
+	34      (0000007e) move-object/from16   v0, v47
+	35      (00000082) iget-object          v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mMaxDescent [I
+	36      (00000086) move-object/from16   v34, v0
+	37      (0000008a) const/4              v3, 0
+	38      (0000008c) const/4              v6, 1
+	39      (0000008e) const/4              v7, 2
+	40      (00000090) const/4              v8, 3
+	41      (00000092) const/4              v9, -1
+	42      (00000094) aput                 v9, v33, v8
+	43      (00000098) aput                 v9, v33, v7
+	44      (0000009c) aput                 v9, v33, v6
+	45      (000000a0) aput                 v9, v33, v3
+	46      (000000a4) const/4              v3, 0
+	47      (000000a6) const/4              v6, 1
+	48      (000000a8) const/4              v7, 2
+	49      (000000aa) const/4              v8, 3
+	50      (000000ac) const/4              v9, -1
+	51      (000000ae) aput                 v9, v34, v8
+	52      (000000b2) aput                 v9, v34, v7
+	53      (000000b6) aput                 v9, v34, v6
+	54      (000000ba) aput                 v9, v34, v3
+	55      (000000be) move-object/from16   v0, v47
+	56      (000000c2) iget-boolean         v13, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mBaselineAligned Z
+	57      (000000c6) move-object/from16   v0, v47
+	58      (000000ca) iget-boolean         v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mUseLargestChild Z
+	59      (000000ce) move/from16          v41, v0
+	60      (000000d2) const/high16         v3, 16384 # [2.0]
+	61      (000000d6) move/from16          v0, v44
+	62      (000000da) if-ne                v0, v3, +25
+
+measureHorizontal-BB@0xde : [ measureHorizontal-BB@0xe2 ]
+	63      (000000de) const/16             v27, 1
+
+measureHorizontal-BB@0xe2 : [ measureHorizontal-BB@0xe8 ]
+	64      (000000e2) const/high16         v28, -32768 # [-0.0]
+	65      (000000e6) const/4              v5, 0
+
+measureHorizontal-BB@0xe8 : [ measureHorizontal-BB@0xf0 measureHorizontal-BB@0x496 ]
+	66      (000000e8) move/from16          v0, v20
+	67      (000000ec) if-ge                v5, v0, +1d5
+
+measureHorizontal-BB@0xf0 : [ measureHorizontal-BB@0x100 measureHorizontal-BB@0x12a ]
+	68      (000000f0) move-object/from16   v0, v47
+	69      (000000f4) invoke-virtual       v0, v5, Landroid/support/v7/widget/LinearLayoutCompat;->getVirtualChildAt(I)Landroid/view/View;
+	70      (000000fa) move-result-object   v4
+	71      (000000fc) if-nez               v4, +17
+
+measureHorizontal-BB@0x100 : [ measureHorizontal-BB@0x11e ]
+	72      (00000100) move-object/from16   v0, v47
+	73      (00000104) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	74      (00000108) move-object/from16   v0, v47
+	75      (0000010c) invoke-virtual       v0, v5, Landroid/support/v7/widget/LinearLayoutCompat;->measureNullChild(I)I
+	76      (00000112) move-result          v6
+	77      (00000114) add-int/2addr        v3, v6
+	78      (00000116) move-object/from16   v0, v47
+	79      (0000011a) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+
+measureHorizontal-BB@0x11e : [ measureHorizontal-BB@0xe8 ]
+	80      (0000011e) add-int/lit8         v5, v5, 1
+	81      (00000122) goto                 -1d
+
+measureHorizontal-BB@0x124 : [ measureHorizontal-BB@0xe2 ]
+	82      (00000124) const/16             v27, 0
+	83      (00000128) goto                 -23
+
+measureHorizontal-BB@0x12a : [ measureHorizontal-BB@0x13a measureHorizontal-BB@0x14a ]
+	84      (0000012a) invoke-virtual       v4, Landroid/view/View;->getVisibility()I
+	85      (00000130) move-result          v3
+	86      (00000132) const/16             v6, 8
+	87      (00000136) if-ne                v3, v6, +a
+
+measureHorizontal-BB@0x13a : [ measureHorizontal-BB@0x11e ]
+	88      (0000013a) move-object/from16   v0, v47
+	89      (0000013e) invoke-virtual       v0, v4, v5, Landroid/support/v7/widget/LinearLayoutCompat;->getChildrenSkipCount(Landroid/view/View; I)I
+	90      (00000144) move-result          v3
+	91      (00000146) add-int/2addr        v5, v3
+	92      (00000148) goto                 -15
+
+measureHorizontal-BB@0x14a : [ measureHorizontal-BB@0x15a measureHorizontal-BB@0x174 ]
+	93      (0000014a) move-object/from16   v0, v47
+	94      (0000014e) invoke-virtual       v0, v5, Landroid/support/v7/widget/LinearLayoutCompat;->hasDividerBeforeChildAt(I)Z
+	95      (00000154) move-result          v3
+	96      (00000156) if-eqz               v3, +f
+
+measureHorizontal-BB@0x15a : [ measureHorizontal-BB@0x174 ]
+	97      (0000015a) move-object/from16   v0, v47
+	98      (0000015e) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	99      (00000162) move-object/from16   v0, v47
+	100     (00000166) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mDividerWidth I
+	101     (0000016a) add-int/2addr        v3, v6
+	102     (0000016c) move-object/from16   v0, v47
+	103     (00000170) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+
+measureHorizontal-BB@0x174 : [ measureHorizontal-BB@0x198 measureHorizontal-BB@0x34e ]
+	104     (00000174) invoke-virtual       v4, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	105     (0000017a) move-result-object   v29
+	106     (0000017c) check-cast           v29, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;
+	107     (00000180) move-object/from16   v0, v29
+	108     (00000184) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->weight F
+	109     (00000188) add-float            v40, v40, v3
+	110     (0000018c) const/high16         v3, 16384 # [2.0]
+	111     (00000190) move/from16          v0, v44
+	112     (00000194) if-ne                v0, v3, +dd
+
+measureHorizontal-BB@0x198 : [ measureHorizontal-BB@0x1a4 measureHorizontal-BB@0x34e ]
+	113     (00000198) move-object/from16   v0, v29
+	114     (0000019c) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->width I
+	115     (000001a0) if-nez               v3, +d7
+
+measureHorizontal-BB@0x1a4 : [ measureHorizontal-BB@0x1b6 measureHorizontal-BB@0x34e ]
+	116     (000001a4) move-object/from16   v0, v29
+	117     (000001a8) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->weight F
+	118     (000001ac) const/4              v6, 0
+	119     (000001ae) cmpl-float           v3, v3, v6
+	120     (000001b2) if-lez               v3, +ce
+
+measureHorizontal-BB@0x1b6 : [ measureHorizontal-BB@0x1ba measureHorizontal-BB@0x30c ]
+	121     (000001b6) if-eqz               v27, +ab
+
+measureHorizontal-BB@0x1ba : [ measureHorizontal-BB@0x1de ]
+	122     (000001ba) move-object/from16   v0, v47
+	123     (000001be) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	124     (000001c2) move-object/from16   v0, v29
+	125     (000001c6) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->leftMargin I
+	126     (000001ca) move-object/from16   v0, v29
+	127     (000001ce) iget                 v7, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->rightMargin I
+	128     (000001d2) add-int/2addr        v6, v7
+	129     (000001d4) add-int/2addr        v3, v6
+	130     (000001d6) move-object/from16   v0, v47
+	131     (000001da) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+
+measureHorizontal-BB@0x1de : [ measureHorizontal-BB@0x1e2 measureHorizontal-BB@0x346 ]
+	132     (000001de) if-eqz               v13, +b4
+
+measureHorizontal-BB@0x1e2 : [ measureHorizontal-BB@0x1fc ]
+	133     (000001e2) const/4              v3, 0
+	134     (000001e4) const/4              v6, 0
+	135     (000001e6) invoke-static        v3, v6, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	136     (000001ec) move-result          v23
+	137     (000001ee) move/from16          v0, v23
+	138     (000001f2) move/from16          v1, v23
+	139     (000001f6) invoke-virtual       v4, v0, v1, Landroid/view/View;->measure(I I)V
+
+measureHorizontal-BB@0x1fc : [ measureHorizontal-BB@0x20c measureHorizontal-BB@0x222 ]
+	140     (000001fc) const/16             v32, 0
+	141     (00000200) const/high16         v3, 16384 # [2.0]
+	142     (00000204) move/from16          v0, v25
+	143     (00000208) if-eq                v0, v3, +d
+
+measureHorizontal-BB@0x20c : [ measureHorizontal-BB@0x21a measureHorizontal-BB@0x222 ]
+	144     (0000020c) move-object/from16   v0, v29
+	145     (00000210) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->height I
+	146     (00000214) const/4              v6, -1
+	147     (00000216) if-ne                v3, v6, +6
+
+measureHorizontal-BB@0x21a : [ measureHorizontal-BB@0x222 ]
+	148     (0000021a) const/16             v31, 1
+	149     (0000021e) const/16             v32, 1
+
+measureHorizontal-BB@0x222 : [ measureHorizontal-BB@0x25a measureHorizontal-BB@0x2b0 ]
+	150     (00000222) move-object/from16   v0, v29
+	151     (00000226) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->topMargin I
+	152     (0000022a) move-object/from16   v0, v29
+	153     (0000022e) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->bottomMargin I
+	154     (00000232) add-int              v30, v3, v6
+	155     (00000236) invoke-virtual       v4, Landroid/view/View;->getMeasuredHeight()I
+	156     (0000023c) move-result          v3
+	157     (0000023e) add-int              v16, v3, v30
+	158     (00000242) invoke-static        v4, Landroid/support/v4/view/ViewCompat;->getMeasuredState(Landroid/view/View;)I
+	159     (00000248) move-result          v3
+	160     (0000024a) move/from16          v0, v18
+	161     (0000024e) invoke-static        v0, v3, Landroid/support/v7/widget/ViewUtils;->combineMeasuredStates(I I)I
+	162     (00000254) move-result          v18
+	163     (00000256) if-eqz               v13, +2d
+
+measureHorizontal-BB@0x25a : [ measureHorizontal-BB@0x268 measureHorizontal-BB@0x2b0 ]
+	164     (0000025a) invoke-virtual       v4, Landroid/view/View;->getBaseline()I
+	165     (00000260) move-result          v14
+	166     (00000262) const/4              v3, -1
+	167     (00000264) if-eq                v14, v3, +26
+
+measureHorizontal-BB@0x268 : [ measureHorizontal-BB@0x274 measureHorizontal-BB@0x462 ]
+	168     (00000268) move-object/from16   v0, v29
+	169     (0000026c) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->gravity I
+	170     (00000270) if-gez               v3, +f9
+
+measureHorizontal-BB@0x274 : [ measureHorizontal-BB@0x27c ]
+	171     (00000274) move-object/from16   v0, v47
+	172     (00000278) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mGravity I
+
+measureHorizontal-BB@0x27c : [ measureHorizontal-BB@0x2b0 ]
+	173     (0000027c) and-int/lit8         v24, v3, 112
+	174     (00000280) shr-int/lit8         v3, v24, 4
+	175     (00000284) and-int/lit8         v3, v3, -2
+	176     (00000288) shr-int/lit8         v26, v3, 1
+	177     (0000028c) aget                 v3, v33, v26
+	178     (00000290) invoke-static        v3, v14, Ljava/lang/Math;->max(I I)I
+	179     (00000296) move-result          v3
+	180     (00000298) aput                 v3, v33, v26
+	181     (0000029c) aget                 v3, v34, v26
+	182     (000002a0) sub-int              v6, v16, v14
+	183     (000002a4) invoke-static        v3, v6, Ljava/lang/Math;->max(I I)I
+	184     (000002aa) move-result          v3
+	185     (000002ac) aput                 v3, v34, v26
+
+measureHorizontal-BB@0x2b0 : [ measureHorizontal-BB@0x2c4 measureHorizontal-BB@0x46e ]
+	186     (000002b0) move/from16          v0, v35
+	187     (000002b4) move/from16          v1, v16
+	188     (000002b8) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	189     (000002be) move-result          v35
+	190     (000002c0) if-eqz               v10, +d7
+
+measureHorizontal-BB@0x2c4 : [ measureHorizontal-BB@0x2d2 measureHorizontal-BB@0x46e ]
+	191     (000002c4) move-object/from16   v0, v29
+	192     (000002c8) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->height I
+	193     (000002cc) const/4              v6, -1
+	194     (000002ce) if-ne                v3, v6, +d0
+
+measureHorizontal-BB@0x2d2 : [ measureHorizontal-BB@0x2d4 ]
+	195     (000002d2) const/4              v10, 1
+
+measureHorizontal-BB@0x2d4 : [ measureHorizontal-BB@0x2e6 measureHorizontal-BB@0x47c ]
+	196     (000002d4) move-object/from16   v0, v29
+	197     (000002d8) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->weight F
+	198     (000002dc) const/4              v6, 0
+	199     (000002de) cmpl-float           v3, v3, v6
+	200     (000002e2) if-lez               v3, +cd
+
+measureHorizontal-BB@0x2e6 : [ measureHorizontal-BB@0x2ea measureHorizontal-BB@0x474 ]
+	201     (000002e6) if-eqz               v32, +c7
+
+measureHorizontal-BB@0x2ea : [ measureHorizontal-BB@0x2fa ]
+	202     (000002ea) move/from16          v0, v43
+	203     (000002ee) move/from16          v1, v30
+	204     (000002f2) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	205     (000002f8) move-result          v43
+
+measureHorizontal-BB@0x2fa : [ measureHorizontal-BB@0x11e ]
+	206     (000002fa) move-object/from16   v0, v47
+	207     (000002fe) invoke-virtual       v0, v4, v5, Landroid/support/v7/widget/LinearLayoutCompat;->getChildrenSkipCount(Landroid/view/View; I)I
+	208     (00000304) move-result          v3
+	209     (00000306) add-int/2addr        v5, v3
+	210     (00000308) goto/16              -f5
+
+measureHorizontal-BB@0x30c : [ measureHorizontal-BB@0x1de ]
+	211     (0000030c) move-object/from16   v0, v47
+	212     (00000310) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	213     (00000314) move/from16          v39, v0
+	214     (00000318) move-object/from16   v0, v29
+	215     (0000031c) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->leftMargin I
+	216     (00000320) add-int              v3, v3, v39
+	217     (00000324) move-object/from16   v0, v29
+	218     (00000328) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->rightMargin I
+	219     (0000032c) add-int/2addr        v3, v6
+	220     (0000032e) move/from16          v0, v39
+	221     (00000332) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	222     (00000338) move-result          v3
+	223     (0000033a) move-object/from16   v0, v47
+	224     (0000033e) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	225     (00000342) goto/16              -b2
+
+measureHorizontal-BB@0x346 : [ measureHorizontal-BB@0x1fc ]
+	226     (00000346) const/16             v38, 1
+	227     (0000034a) goto/16              -a7
+
+measureHorizontal-BB@0x34e : [ measureHorizontal-BB@0x35e measureHorizontal-BB@0x37e ]
+	228     (0000034e) const/high16         v36, -32768 # [-0.0]
+	229     (00000352) move-object/from16   v0, v29
+	230     (00000356) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->width I
+	231     (0000035a) if-nez               v3, +12
+
+measureHorizontal-BB@0x35e : [ measureHorizontal-BB@0x370 measureHorizontal-BB@0x37e ]
+	232     (0000035e) move-object/from16   v0, v29
+	233     (00000362) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->weight F
+	234     (00000366) const/4              v6, 0
+	235     (00000368) cmpl-float           v3, v3, v6
+	236     (0000036c) if-lez               v3, +9
+
+measureHorizontal-BB@0x370 : [ measureHorizontal-BB@0x37e ]
+	237     (00000370) const/16             v36, 0
+	238     (00000374) const/4              v3, -2
+	239     (00000376) move-object/from16   v0, v29
+	240     (0000037a) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->width I
+
+measureHorizontal-BB@0x37e : [ measureHorizontal-BB@0x388 measureHorizontal-BB@0x416 ]
+	241     (0000037e) const/4              v3, 0
+	242     (00000380) cmpl-float           v3, v40, v3
+	243     (00000384) if-nez               v3, +49
+
+measureHorizontal-BB@0x388 : [ measureHorizontal-BB@0x390 ]
+	244     (00000388) move-object/from16   v0, v47
+	245     (0000038c) iget                 v7, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+
+measureHorizontal-BB@0x390 : [ measureHorizontal-BB@0x3b0 measureHorizontal-BB@0x3bc ]
+	246     (00000390) const/4              v9, 0
+	247     (00000392) move-object/from16   v3, v47
+	248     (00000396) move/from16          v6, v48
+	249     (0000039a) move/from16          v8, v49
+	250     (0000039e) invoke-virtual/range v3 ... v9, Landroid/support/v7/widget/LinearLayoutCompat;->measureChildBeforeLayout(Landroid/view/View; I I I I I)V
+	251     (000003a4) const/high16         v3, -32768 # [-0.0]
+	252     (000003a8) move/from16          v0, v36
+	253     (000003ac) if-eq                v0, v3, +8
+
+measureHorizontal-BB@0x3b0 : [ measureHorizontal-BB@0x3bc ]
+	254     (000003b0) move/from16          v0, v36
+	255     (000003b4) move-object/from16   v1, v29
+	256     (000003b8) iput                 v0, v1, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->width I
+
+measureHorizontal-BB@0x3bc : [ measureHorizontal-BB@0x3c8 measureHorizontal-BB@0x41a ]
+	257     (000003bc) invoke-virtual       v4, Landroid/view/View;->getMeasuredWidth()I
+	258     (000003c2) move-result          v19
+	259     (000003c4) if-eqz               v27, +2b
+
+measureHorizontal-BB@0x3c8 : [ measureHorizontal-BB@0x3fe ]
+	260     (000003c8) move-object/from16   v0, v47
+	261     (000003cc) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	262     (000003d0) move-object/from16   v0, v29
+	263     (000003d4) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->leftMargin I
+	264     (000003d8) add-int              v6, v6, v19
+	265     (000003dc) move-object/from16   v0, v29
+	266     (000003e0) iget                 v7, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->rightMargin I
+	267     (000003e4) add-int/2addr        v6, v7
+	268     (000003e6) move-object/from16   v0, v47
+	269     (000003ea) invoke-virtual       v0, v4, Landroid/support/v7/widget/LinearLayoutCompat;->getNextLocationOffset(Landroid/view/View;)I
+	270     (000003f0) move-result          v7
+	271     (000003f2) add-int/2addr        v6, v7
+	272     (000003f4) add-int/2addr        v3, v6
+	273     (000003f6) move-object/from16   v0, v47
+	274     (000003fa) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+
+measureHorizontal-BB@0x3fe : [ measureHorizontal-BB@0x402 measureHorizontal-BB@0x1fc ]
+	275     (000003fe) if-eqz               v41, -101
+
+measureHorizontal-BB@0x402 : [ measureHorizontal-BB@0x1fc ]
+	276     (00000402) move/from16          v0, v19
+	277     (00000406) move/from16          v1, v28
+	278     (0000040a) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	279     (00000410) move-result          v28
+	280     (00000412) goto/16              -10b
+
+measureHorizontal-BB@0x416 : [ measureHorizontal-BB@0x390 ]
+	281     (00000416) const/4              v7, 0
+	282     (00000418) goto                 -44
+
+measureHorizontal-BB@0x41a : [ measureHorizontal-BB@0x3fe ]
+	283     (0000041a) move-object/from16   v0, v47
+	284     (0000041e) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	285     (00000422) move/from16          v39, v0
+	286     (00000426) add-int              v3, v39, v19
+	287     (0000042a) move-object/from16   v0, v29
+	288     (0000042e) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->leftMargin I
+	289     (00000432) add-int/2addr        v3, v6
+	290     (00000434) move-object/from16   v0, v29
+	291     (00000438) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->rightMargin I
+	292     (0000043c) add-int/2addr        v3, v6
+	293     (0000043e) move-object/from16   v0, v47
+	294     (00000442) invoke-virtual       v0, v4, Landroid/support/v7/widget/LinearLayoutCompat;->getNextLocationOffset(Landroid/view/View;)I
+	295     (00000448) move-result          v6
+	296     (0000044a) add-int/2addr        v3, v6
+	297     (0000044c) move/from16          v0, v39
+	298     (00000450) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	299     (00000456) move-result          v3
+	300     (00000458) move-object/from16   v0, v47
+	301     (0000045c) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	302     (00000460) goto                 -31
+
+measureHorizontal-BB@0x462 : [ measureHorizontal-BB@0x27c ]
+	303     (00000462) move-object/from16   v0, v29
+	304     (00000466) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->gravity I
+	305     (0000046a) goto/16              -f7
+
+measureHorizontal-BB@0x46e : [ measureHorizontal-BB@0x2d4 ]
+	306     (0000046e) const/4              v10, 0
+	307     (00000470) goto/16              -ce
+
+measureHorizontal-BB@0x474 : [ measureHorizontal-BB@0x2ea ]
+	308     (00000474) move/from16          v30, v16
+	309     (00000478) goto/16              -c7
+
+measureHorizontal-BB@0x47c : [ measureHorizontal-BB@0x480 measureHorizontal-BB@0x490 ]
+	310     (0000047c) if-eqz               v32, +a
+
+measureHorizontal-BB@0x480 : [ measureHorizontal-BB@0x2fa ]
+	311     (00000480) move/from16          v0, v30
+	312     (00000484) invoke-static        v11, v0, Ljava/lang/Math;->max(I I)I
+	313     (0000048a) move-result          v11
+	314     (0000048c) goto/16              -c9
+
+measureHorizontal-BB@0x490 : [ measureHorizontal-BB@0x480 ]
+	315     (00000490) move/from16          v30, v16
+	316     (00000494) goto                 -a
+
+measureHorizontal-BB@0x496 : [ measureHorizontal-BB@0x4a2 measureHorizontal-BB@0x4d0 ]
+	317     (00000496) move-object/from16   v0, v47
+	318     (0000049a) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	319     (0000049e) if-lez               v3, +19
+
+measureHorizontal-BB@0x4a2 : [ measureHorizontal-BB@0x4b6 measureHorizontal-BB@0x4d0 ]
+	320     (000004a2) move-object/from16   v0, v47
+	321     (000004a6) move/from16          v1, v20
+	322     (000004aa) invoke-virtual       v0, v1, Landroid/support/v7/widget/LinearLayoutCompat;->hasDividerBeforeChildAt(I)Z
+	323     (000004b0) move-result          v3
+	324     (000004b2) if-eqz               v3, +f
+
+measureHorizontal-BB@0x4b6 : [ measureHorizontal-BB@0x4d0 ]
+	325     (000004b6) move-object/from16   v0, v47
+	326     (000004ba) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	327     (000004be) move-object/from16   v0, v47
+	328     (000004c2) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mDividerWidth I
+	329     (000004c6) add-int/2addr        v3, v6
+	330     (000004c8) move-object/from16   v0, v47
+	331     (000004cc) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+
+measureHorizontal-BB@0x4d0 : [ measureHorizontal-BB@0x4dc measureHorizontal-BB@0x500 ]
+	332     (000004d0) const/4              v3, 1
+	333     (000004d2) aget                 v3, v33, v3
+	334     (000004d6) const/4              v6, -1
+	335     (000004d8) if-ne                v3, v6, +14
+
+measureHorizontal-BB@0x4dc : [ measureHorizontal-BB@0x4e8 measureHorizontal-BB@0x500 ]
+	336     (000004dc) const/4              v3, 0
+	337     (000004de) aget                 v3, v33, v3
+	338     (000004e2) const/4              v6, -1
+	339     (000004e4) if-ne                v3, v6, +e
+
+measureHorizontal-BB@0x4e8 : [ measureHorizontal-BB@0x4f4 measureHorizontal-BB@0x500 ]
+	340     (000004e8) const/4              v3, 2
+	341     (000004ea) aget                 v3, v33, v3
+	342     (000004ee) const/4              v6, -1
+	343     (000004f0) if-ne                v3, v6, +8
+
+measureHorizontal-BB@0x4f4 : [ measureHorizontal-BB@0x500 measureHorizontal-BB@0x570 ]
+	344     (000004f4) const/4              v3, 3
+	345     (000004f6) aget                 v3, v33, v3
+	346     (000004fa) const/4              v6, -1
+	347     (000004fc) if-eq                v3, v6, +3a
+
+measureHorizontal-BB@0x500 : [ measureHorizontal-BB@0x570 ]
+	348     (00000500) const/4              v3, 3
+	349     (00000502) aget                 v3, v33, v3
+	350     (00000506) const/4              v6, 0
+	351     (00000508) aget                 v6, v33, v6
+	352     (0000050c) const/4              v7, 1
+	353     (0000050e) aget                 v7, v33, v7
+	354     (00000512) const/4              v8, 2
+	355     (00000514) aget                 v8, v33, v8
+	356     (00000518) invoke-static        v7, v8, Ljava/lang/Math;->max(I I)I
+	357     (0000051e) move-result          v7
+	358     (00000520) invoke-static        v6, v7, Ljava/lang/Math;->max(I I)I
+	359     (00000526) move-result          v6
+	360     (00000528) invoke-static        v3, v6, Ljava/lang/Math;->max(I I)I
+	361     (0000052e) move-result          v12
+	362     (00000530) const/4              v3, 3
+	363     (00000532) aget                 v3, v34, v3
+	364     (00000536) const/4              v6, 0
+	365     (00000538) aget                 v6, v34, v6
+	366     (0000053c) const/4              v7, 1
+	367     (0000053e) aget                 v7, v34, v7
+	368     (00000542) const/4              v8, 2
+	369     (00000544) aget                 v8, v34, v8
+	370     (00000548) invoke-static        v7, v8, Ljava/lang/Math;->max(I I)I
+	371     (0000054e) move-result          v7
+	372     (00000550) invoke-static        v6, v7, Ljava/lang/Math;->max(I I)I
+	373     (00000556) move-result          v6
+	374     (00000558) invoke-static        v3, v6, Ljava/lang/Math;->max(I I)I
+	375     (0000055e) move-result          v22
+	376     (00000560) add-int              v3, v12, v22
+	377     (00000564) move/from16          v0, v35
+	378     (00000568) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	379     (0000056e) move-result          v35
+
+measureHorizontal-BB@0x570 : [ measureHorizontal-BB@0x574 measureHorizontal-BB@0x67c ]
+	380     (00000570) if-eqz               v41, +86
+
+measureHorizontal-BB@0x574 : [ measureHorizontal-BB@0x580 measureHorizontal-BB@0x584 ]
+	381     (00000574) const/high16         v3, -32768 # [-0.0]
+	382     (00000578) move/from16          v0, v44
+	383     (0000057c) if-eq                v0, v3, +4
+
+measureHorizontal-BB@0x580 : [ measureHorizontal-BB@0x584 measureHorizontal-BB@0x67c ]
+	384     (00000580) if-nez               v44, +7e
+
+measureHorizontal-BB@0x584 : [ measureHorizontal-BB@0x590 ]
+	385     (00000584) const/4              v3, 0
+	386     (00000586) move-object/from16   v0, v47
+	387     (0000058a) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	388     (0000058e) const/4              v5, 0
+
+measureHorizontal-BB@0x590 : [ measureHorizontal-BB@0x598 measureHorizontal-BB@0x67c ]
+	389     (00000590) move/from16          v0, v20
+	390     (00000594) if-ge                v5, v0, +74
+
+measureHorizontal-BB@0x598 : [ measureHorizontal-BB@0x5a8 measureHorizontal-BB@0x5cc ]
+	391     (00000598) move-object/from16   v0, v47
+	392     (0000059c) invoke-virtual       v0, v5, Landroid/support/v7/widget/LinearLayoutCompat;->getVirtualChildAt(I)Landroid/view/View;
+	393     (000005a2) move-result-object   v4
+	394     (000005a4) if-nez               v4, +14
+
+measureHorizontal-BB@0x5a8 : [ measureHorizontal-BB@0x5c6 ]
+	395     (000005a8) move-object/from16   v0, v47
+	396     (000005ac) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	397     (000005b0) move-object/from16   v0, v47
+	398     (000005b4) invoke-virtual       v0, v5, Landroid/support/v7/widget/LinearLayoutCompat;->measureNullChild(I)I
+	399     (000005ba) move-result          v6
+	400     (000005bc) add-int/2addr        v3, v6
+	401     (000005be) move-object/from16   v0, v47
+	402     (000005c2) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+
+measureHorizontal-BB@0x5c6 : [ measureHorizontal-BB@0x590 ]
+	403     (000005c6) add-int/lit8         v5, v5, 1
+	404     (000005ca) goto                 -1d
+
+measureHorizontal-BB@0x5cc : [ measureHorizontal-BB@0x5dc measureHorizontal-BB@0x5ec ]
+	405     (000005cc) invoke-virtual       v4, Landroid/view/View;->getVisibility()I
+	406     (000005d2) move-result          v3
+	407     (000005d4) const/16             v6, 8
+	408     (000005d8) if-ne                v3, v6, +a
+
+measureHorizontal-BB@0x5dc : [ measureHorizontal-BB@0x5c6 ]
+	409     (000005dc) move-object/from16   v0, v47
+	410     (000005e0) invoke-virtual       v0, v4, v5, Landroid/support/v7/widget/LinearLayoutCompat;->getChildrenSkipCount(Landroid/view/View; I)I
+	411     (000005e6) move-result          v3
+	412     (000005e8) add-int/2addr        v5, v3
+	413     (000005ea) goto                 -12
+
+measureHorizontal-BB@0x5ec : [ measureHorizontal-BB@0x5fc measureHorizontal-BB@0x634 ]
+	414     (000005ec) invoke-virtual       v4, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	415     (000005f2) move-result-object   v29
+	416     (000005f4) check-cast           v29, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;
+	417     (000005f8) if-eqz               v27, +1e
+
+measureHorizontal-BB@0x5fc : [ measureHorizontal-BB@0x5c6 ]
+	418     (000005fc) move-object/from16   v0, v47
+	419     (00000600) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	420     (00000604) move-object/from16   v0, v29
+	421     (00000608) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->leftMargin I
+	422     (0000060c) add-int              v6, v6, v28
+	423     (00000610) move-object/from16   v0, v29
+	424     (00000614) iget                 v7, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->rightMargin I
+	425     (00000618) add-int/2addr        v6, v7
+	426     (0000061a) move-object/from16   v0, v47
+	427     (0000061e) invoke-virtual       v0, v4, Landroid/support/v7/widget/LinearLayoutCompat;->getNextLocationOffset(Landroid/view/View;)I
+	428     (00000624) move-result          v7
+	429     (00000626) add-int/2addr        v6, v7
+	430     (00000628) add-int/2addr        v3, v6
+	431     (0000062a) move-object/from16   v0, v47
+	432     (0000062e) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	433     (00000632) goto                 -36
+
+measureHorizontal-BB@0x634 : [ measureHorizontal-BB@0x5c6 ]
+	434     (00000634) move-object/from16   v0, v47
+	435     (00000638) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	436     (0000063c) move/from16          v39, v0
+	437     (00000640) add-int              v3, v39, v28
+	438     (00000644) move-object/from16   v0, v29
+	439     (00000648) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->leftMargin I
+	440     (0000064c) add-int/2addr        v3, v6
+	441     (0000064e) move-object/from16   v0, v29
+	442     (00000652) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->rightMargin I
+	443     (00000656) add-int/2addr        v3, v6
+	444     (00000658) move-object/from16   v0, v47
+	445     (0000065c) invoke-virtual       v0, v4, Landroid/support/v7/widget/LinearLayoutCompat;->getNextLocationOffset(Landroid/view/View;)I
+	446     (00000662) move-result          v6
+	447     (00000664) add-int/2addr        v3, v6
+	448     (00000666) move/from16          v0, v39
+	449     (0000066a) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	450     (00000670) move-result          v3
+	451     (00000672) move-object/from16   v0, v47
+	452     (00000676) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	453     (0000067a) goto                 -5a
+
+measureHorizontal-BB@0x67c : [ measureHorizontal-BB@0x6ec measureHorizontal-BB@0x6fa ]
+	454     (0000067c) move-object/from16   v0, v47
+	455     (00000680) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	456     (00000684) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getPaddingLeft()I
+	457     (0000068a) move-result          v6
+	458     (0000068c) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getPaddingRight()I
+	459     (00000692) move-result          v7
+	460     (00000694) add-int/2addr        v6, v7
+	461     (00000696) add-int/2addr        v3, v6
+	462     (00000698) move-object/from16   v0, v47
+	463     (0000069c) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	464     (000006a0) move-object/from16   v0, v47
+	465     (000006a4) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	466     (000006a8) move/from16          v45, v0
+	467     (000006ac) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getSuggestedMinimumWidth()I
+	468     (000006b2) move-result          v3
+	469     (000006b4) move/from16          v0, v45
+	470     (000006b8) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	471     (000006be) move-result          v45
+	472     (000006c0) const/4              v3, 0
+	473     (000006c2) move/from16          v0, v45
+	474     (000006c6) move/from16          v1, v48
+	475     (000006ca) invoke-static        v0, v1, v3, Landroid/support/v4/view/ViewCompat;->resolveSizeAndState(I I I)I
+	476     (000006d0) move-result          v46
+	477     (000006d2) const                v3, 16777215 # [2.3509885615147286e-38]
+	478     (000006d8) and-int              v45, v46, v3
+	479     (000006dc) move-object/from16   v0, v47
+	480     (000006e0) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	481     (000006e4) sub-int              v21, v45, v3
+	482     (000006e8) if-nez               v38, +9
+
+measureHorizontal-BB@0x6ec : [ measureHorizontal-BB@0x6f0 measureHorizontal-BB@0xb4e ]
+	483     (000006ec) if-eqz               v21, +231
+
+measureHorizontal-BB@0x6f0 : [ measureHorizontal-BB@0x6fa measureHorizontal-BB@0xb4e ]
+	484     (000006f0) const/4              v3, 0
+	485     (000006f2) cmpl-float           v3, v40, v3
+	486     (000006f6) if-lez               v3, +22c
+
+measureHorizontal-BB@0x6fa : [ measureHorizontal-BB@0x70c measureHorizontal-BB@0x78a ]
+	487     (000006fa) move-object/from16   v0, v47
+	488     (000006fe) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mWeightSum F
+	489     (00000702) const/4              v6, 0
+	490     (00000704) cmpl-float           v3, v3, v6
+	491     (00000708) if-lez               v3, +41
+
+measureHorizontal-BB@0x70c : [ measureHorizontal-BB@0x718 ]
+	492     (0000070c) move-object/from16   v0, v47
+	493     (00000710) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mWeightSum F
+	494     (00000714) move/from16          v42, v0
+
+measureHorizontal-BB@0x718 : [ measureHorizontal-BB@0x75c ]
+	495     (00000718) const/4              v3, 0
+	496     (0000071a) const/4              v6, 1
+	497     (0000071c) const/4              v7, 2
+	498     (0000071e) const/4              v8, 3
+	499     (00000720) const/4              v9, -1
+	500     (00000722) aput                 v9, v33, v8
+	501     (00000726) aput                 v9, v33, v7
+	502     (0000072a) aput                 v9, v33, v6
+	503     (0000072e) aput                 v9, v33, v3
+	504     (00000732) const/4              v3, 0
+	505     (00000734) const/4              v6, 1
+	506     (00000736) const/4              v7, 2
+	507     (00000738) const/4              v8, 3
+	508     (0000073a) const/4              v9, -1
+	509     (0000073c) aput                 v9, v34, v8
+	510     (00000740) aput                 v9, v34, v7
+	511     (00000744) aput                 v9, v34, v6
+	512     (00000748) aput                 v9, v34, v3
+	513     (0000074c) const/16             v35, -1
+	514     (00000750) const/4              v3, 0
+	515     (00000752) move-object/from16   v0, v47
+	516     (00000756) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	517     (0000075a) const/4              v5, 0
+
+measureHorizontal-BB@0x75c : [ measureHorizontal-BB@0x764 measureHorizontal-BB@0xa0a ]
+	518     (0000075c) move/from16          v0, v20
+	519     (00000760) if-ge                v5, v0, +155
+
+measureHorizontal-BB@0x764 : [ measureHorizontal-BB@0x774 measureHorizontal-BB@0x784 ]
+	520     (00000764) move-object/from16   v0, v47
+	521     (00000768) invoke-virtual       v0, v5, Landroid/support/v7/widget/LinearLayoutCompat;->getVirtualChildAt(I)Landroid/view/View;
+	522     (0000076e) move-result-object   v4
+	523     (00000770) if-eqz               v4, +a
+
+measureHorizontal-BB@0x774 : [ measureHorizontal-BB@0x784 measureHorizontal-BB@0x790 ]
+	524     (00000774) invoke-virtual       v4, Landroid/view/View;->getVisibility()I
+	525     (0000077a) move-result          v3
+	526     (0000077c) const/16             v6, 8
+	527     (00000780) if-ne                v3, v6, +8
+
+measureHorizontal-BB@0x784 : [ measureHorizontal-BB@0x75c ]
+	528     (00000784) add-int/lit8         v5, v5, 1
+	529     (00000788) goto                 -16
+
+measureHorizontal-BB@0x78a : [ measureHorizontal-BB@0x718 ]
+	530     (0000078a) move/from16          v42, v40
+	531     (0000078e) goto                 -3b
+
+measureHorizontal-BB@0x790 : [ measureHorizontal-BB@0x7ae measureHorizontal-BB@0x862 ]
+	532     (00000790) invoke-virtual       v4, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	533     (00000796) move-result-object   v29
+	534     (00000798) check-cast           v29, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;
+	535     (0000079c) move-object/from16   v0, v29
+	536     (000007a0) iget                 v15, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->weight F
+	537     (000007a4) const/4              v3, 0
+	538     (000007a6) cmpl-float           v3, v15, v3
+	539     (000007aa) if-lez               v3, +5c
+
+measureHorizontal-BB@0x7ae : [ measureHorizontal-BB@0x80e measureHorizontal-BB@0x81a ]
+	540     (000007ae) move/from16          v0, v21
+	541     (000007b2) int-to-float         v3, v0
+	542     (000007b4) mul-float/2addr      v3, v15
+	543     (000007b6) div-float            v3, v3, v42
+	544     (000007ba) float-to-int         v0, v3
+	545     (000007bc) move/from16          v37, v0
+	546     (000007c0) sub-float            v42, v42, v15
+	547     (000007c4) sub-int              v21, v21, v37
+	548     (000007c8) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getPaddingTop()I
+	549     (000007ce) move-result          v3
+	550     (000007d0) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getPaddingBottom()I
+	551     (000007d6) move-result          v6
+	552     (000007d8) add-int/2addr        v3, v6
+	553     (000007da) move-object/from16   v0, v29
+	554     (000007de) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->topMargin I
+	555     (000007e2) add-int/2addr        v3, v6
+	556     (000007e4) move-object/from16   v0, v29
+	557     (000007e8) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->bottomMargin I
+	558     (000007ec) add-int/2addr        v3, v6
+	559     (000007ee) move-object/from16   v0, v29
+	560     (000007f2) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->height I
+	561     (000007f6) move/from16          v0, v49
+	562     (000007fa) invoke-static        v0, v3, v6, Landroid/support/v7/widget/LinearLayoutCompat;->getChildMeasureSpec(I I I)I
+	563     (00000800) move-result          v17
+	564     (00000802) move-object/from16   v0, v29
+	565     (00000806) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->width I
+	566     (0000080a) if-nez               v3, +8
+
+measureHorizontal-BB@0x80e : [ measureHorizontal-BB@0x81a measureHorizontal-BB@0x972 ]
+	567     (0000080e) const/high16         v3, 16384 # [2.0]
+	568     (00000812) move/from16          v0, v44
+	569     (00000816) if-eq                v0, v3, +ae
+
+measureHorizontal-BB@0x81a : [ measureHorizontal-BB@0x82a measureHorizontal-BB@0x82e ]
+	570     (0000081a) invoke-virtual       v4, Landroid/view/View;->getMeasuredWidth()I
+	571     (00000820) move-result          v3
+	572     (00000822) add-int              v19, v3, v37
+	573     (00000826) if-gez               v19, +4
+
+measureHorizontal-BB@0x82a : [ measureHorizontal-BB@0x82e ]
+	574     (0000082a) const/16             v19, 0
+
+measureHorizontal-BB@0x82e : [ measureHorizontal-BB@0x848 ]
+	575     (0000082e) const/high16         v3, 16384 # [2.0]
+	576     (00000832) move/from16          v0, v19
+	577     (00000836) invoke-static        v0, v3, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	578     (0000083c) move-result          v3
+	579     (0000083e) move/from16          v0, v17
+	580     (00000842) invoke-virtual       v4, v3, v0, Landroid/view/View;->measure(I I)V
+
+measureHorizontal-BB@0x848 : [ measureHorizontal-BB@0x862 ]
+	581     (00000848) invoke-static        v4, Landroid/support/v4/view/ViewCompat;->getMeasuredState(Landroid/view/View;)I
+	582     (0000084e) move-result          v3
+	583     (00000850) const/high16         v6, -256 # [-1.7014118346046923e+38]
+	584     (00000854) and-int/2addr        v3, v6
+	585     (00000856) move/from16          v0, v18
+	586     (0000085a) invoke-static        v0, v3, Landroid/support/v7/widget/ViewUtils;->combineMeasuredStates(I I)I
+	587     (00000860) move-result          v18
+
+measureHorizontal-BB@0x862 : [ measureHorizontal-BB@0x866 measureHorizontal-BB@0x99a ]
+	588     (00000862) if-eqz               v27, +9c
+
+measureHorizontal-BB@0x866 : [ measureHorizontal-BB@0x8a2 ]
+	589     (00000866) move-object/from16   v0, v47
+	590     (0000086a) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	591     (0000086e) invoke-virtual       v4, Landroid/view/View;->getMeasuredWidth()I
+	592     (00000874) move-result          v6
+	593     (00000876) move-object/from16   v0, v29
+	594     (0000087a) iget                 v7, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->leftMargin I
+	595     (0000087e) add-int/2addr        v6, v7
+	596     (00000880) move-object/from16   v0, v29
+	597     (00000884) iget                 v7, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->rightMargin I
+	598     (00000888) add-int/2addr        v6, v7
+	599     (0000088a) move-object/from16   v0, v47
+	600     (0000088e) invoke-virtual       v0, v4, Landroid/support/v7/widget/LinearLayoutCompat;->getNextLocationOffset(Landroid/view/View;)I
+	601     (00000894) move-result          v7
+	602     (00000896) add-int/2addr        v6, v7
+	603     (00000898) add-int/2addr        v3, v6
+	604     (0000089a) move-object/from16   v0, v47
+	605     (0000089e) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+
+measureHorizontal-BB@0x8a2 : [ measureHorizontal-BB@0x8ae measureHorizontal-BB@0x9ec ]
+	606     (000008a2) const/high16         v3, 16384 # [2.0]
+	607     (000008a6) move/from16          v0, v25
+	608     (000008aa) if-eq                v0, v3, +a1
+
+measureHorizontal-BB@0x8ae : [ measureHorizontal-BB@0x8bc measureHorizontal-BB@0x9ec ]
+	609     (000008ae) move-object/from16   v0, v29
+	610     (000008b2) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->height I
+	611     (000008b6) const/4              v6, -1
+	612     (000008b8) if-ne                v3, v6, +9a
+
+measureHorizontal-BB@0x8bc : [ measureHorizontal-BB@0x8c0 ]
+	613     (000008bc) const/16             v32, 1
+
+measureHorizontal-BB@0x8c0 : [ measureHorizontal-BB@0x8f4 measureHorizontal-BB@0x9f4 ]
+	614     (000008c0) move-object/from16   v0, v29
+	615     (000008c4) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->topMargin I
+	616     (000008c8) move-object/from16   v0, v29
+	617     (000008cc) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->bottomMargin I
+	618     (000008d0) add-int              v30, v3, v6
+	619     (000008d4) invoke-virtual       v4, Landroid/view/View;->getMeasuredHeight()I
+	620     (000008da) move-result          v3
+	621     (000008dc) add-int              v16, v3, v30
+	622     (000008e0) move/from16          v0, v35
+	623     (000008e4) move/from16          v1, v16
+	624     (000008e8) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	625     (000008ee) move-result          v35
+	626     (000008f0) if-eqz               v32, +82
+
+measureHorizontal-BB@0x8f4 : [ measureHorizontal-BB@0x904 measureHorizontal-BB@0x9fc ]
+	627     (000008f4) move/from16          v0, v30
+	628     (000008f8) invoke-static        v11, v0, Ljava/lang/Math;->max(I I)I
+	629     (000008fe) move-result          v11
+	630     (00000900) if-eqz               v10, +7e
+
+measureHorizontal-BB@0x904 : [ measureHorizontal-BB@0x912 measureHorizontal-BB@0x9fc ]
+	631     (00000904) move-object/from16   v0, v29
+	632     (00000908) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->height I
+	633     (0000090c) const/4              v6, -1
+	634     (0000090e) if-ne                v3, v6, +77
+
+measureHorizontal-BB@0x912 : [ measureHorizontal-BB@0x914 ]
+	635     (00000912) const/4              v10, 1
+
+measureHorizontal-BB@0x914 : [ measureHorizontal-BB@0x918 measureHorizontal-BB@0x784 ]
+	636     (00000914) if-eqz               v13, -c8
+
+measureHorizontal-BB@0x918 : [ measureHorizontal-BB@0x926 measureHorizontal-BB@0x784 ]
+	637     (00000918) invoke-virtual       v4, Landroid/view/View;->getBaseline()I
+	638     (0000091e) move-result          v14
+	639     (00000920) const/4              v3, -1
+	640     (00000922) if-eq                v14, v3, -cf
+
+measureHorizontal-BB@0x926 : [ measureHorizontal-BB@0x932 measureHorizontal-BB@0xa00 ]
+	641     (00000926) move-object/from16   v0, v29
+	642     (0000092a) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->gravity I
+	643     (0000092e) if-gez               v3, +69
+
+measureHorizontal-BB@0x932 : [ measureHorizontal-BB@0x93a ]
+	644     (00000932) move-object/from16   v0, v47
+	645     (00000936) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mGravity I
+
+measureHorizontal-BB@0x93a : [ measureHorizontal-BB@0x784 ]
+	646     (0000093a) and-int/lit8         v24, v3, 112
+	647     (0000093e) shr-int/lit8         v3, v24, 4
+	648     (00000942) and-int/lit8         v3, v3, -2
+	649     (00000946) shr-int/lit8         v26, v3, 1
+	650     (0000094a) aget                 v3, v33, v26
+	651     (0000094e) invoke-static        v3, v14, Ljava/lang/Math;->max(I I)I
+	652     (00000954) move-result          v3
+	653     (00000956) aput                 v3, v33, v26
+	654     (0000095a) aget                 v3, v34, v26
+	655     (0000095e) sub-int              v6, v16, v14
+	656     (00000962) invoke-static        v3, v6, Ljava/lang/Math;->max(I I)I
+	657     (00000968) move-result          v3
+	658     (0000096a) aput                 v3, v34, v26
+	659     (0000096e) goto/16              -f5
+
+measureHorizontal-BB@0x972 : [ measureHorizontal-BB@0x976 measureHorizontal-BB@0x994 ]
+	660     (00000972) if-lez               v37, +11
+
+measureHorizontal-BB@0x976 : [ measureHorizontal-BB@0x848 ]
+	661     (00000976) const/high16         v3, 16384 # [2.0]
+	662     (0000097a) move/from16          v0, v37
+	663     (0000097e) invoke-static        v0, v3, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	664     (00000984) move-result          v3
+	665     (00000986) move/from16          v0, v17
+	666     (0000098a) invoke-virtual       v4, v3, v0, Landroid/view/View;->measure(I I)V
+	667     (00000990) goto/16              -a4
+
+measureHorizontal-BB@0x994 : [ measureHorizontal-BB@0x976 ]
+	668     (00000994) const/16             v37, 0
+	669     (00000998) goto                 -11
+
+measureHorizontal-BB@0x99a : [ measureHorizontal-BB@0x8a2 ]
+	670     (0000099a) move-object/from16   v0, v47
+	671     (0000099e) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	672     (000009a2) move/from16          v39, v0
+	673     (000009a6) invoke-virtual       v4, Landroid/view/View;->getMeasuredWidth()I
+	674     (000009ac) move-result          v3
+	675     (000009ae) add-int              v3, v3, v39
+	676     (000009b2) move-object/from16   v0, v29
+	677     (000009b6) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->leftMargin I
+	678     (000009ba) add-int/2addr        v3, v6
+	679     (000009bc) move-object/from16   v0, v29
+	680     (000009c0) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->rightMargin I
+	681     (000009c4) add-int/2addr        v3, v6
+	682     (000009c6) move-object/from16   v0, v47
+	683     (000009ca) invoke-virtual       v0, v4, Landroid/support/v7/widget/LinearLayoutCompat;->getNextLocationOffset(Landroid/view/View;)I
+	684     (000009d0) move-result          v6
+	685     (000009d2) add-int/2addr        v3, v6
+	686     (000009d4) move/from16          v0, v39
+	687     (000009d8) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	688     (000009de) move-result          v3
+	689     (000009e0) move-object/from16   v0, v47
+	690     (000009e4) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	691     (000009e8) goto/16              -a3
+
+measureHorizontal-BB@0x9ec : [ measureHorizontal-BB@0x8c0 ]
+	692     (000009ec) const/16             v32, 0
+	693     (000009f0) goto/16              -98
+
+measureHorizontal-BB@0x9f4 : [ measureHorizontal-BB@0x8f4 ]
+	694     (000009f4) move/from16          v30, v16
+	695     (000009f8) goto/16              -82
+
+measureHorizontal-BB@0x9fc : [ measureHorizontal-BB@0x914 ]
+	696     (000009fc) const/4              v10, 0
+	697     (000009fe) goto                 -75
+
+measureHorizontal-BB@0xa00 : [ measureHorizontal-BB@0x93a ]
+	698     (00000a00) move-object/from16   v0, v29
+	699     (00000a04) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->gravity I
+	700     (00000a08) goto                 -67
+
+measureHorizontal-BB@0xa0a : [ measureHorizontal-BB@0xa3a measureHorizontal-BB@0xa5e ]
+	701     (00000a0a) move-object/from16   v0, v47
+	702     (00000a0e) iget                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	703     (00000a12) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getPaddingLeft()I
+	704     (00000a18) move-result          v6
+	705     (00000a1a) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getPaddingRight()I
+	706     (00000a20) move-result          v7
+	707     (00000a22) add-int/2addr        v6, v7
+	708     (00000a24) add-int/2addr        v3, v6
+	709     (00000a26) move-object/from16   v0, v47
+	710     (00000a2a) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutCompat;->mTotalLength I
+	711     (00000a2e) const/4              v3, 1
+	712     (00000a30) aget                 v3, v33, v3
+	713     (00000a34) const/4              v6, -1
+	714     (00000a36) if-ne                v3, v6, +14
+
+measureHorizontal-BB@0xa3a : [ measureHorizontal-BB@0xa46 measureHorizontal-BB@0xa5e ]
+	715     (00000a3a) const/4              v3, 0
+	716     (00000a3c) aget                 v3, v33, v3
+	717     (00000a40) const/4              v6, -1
+	718     (00000a42) if-ne                v3, v6, +e
+
+measureHorizontal-BB@0xa46 : [ measureHorizontal-BB@0xa52 measureHorizontal-BB@0xa5e ]
+	719     (00000a46) const/4              v3, 2
+	720     (00000a48) aget                 v3, v33, v3
+	721     (00000a4c) const/4              v6, -1
+	722     (00000a4e) if-ne                v3, v6, +8
+
+measureHorizontal-BB@0xa52 : [ measureHorizontal-BB@0xa5e measureHorizontal-BB@0xace ]
+	723     (00000a52) const/4              v3, 3
+	724     (00000a54) aget                 v3, v33, v3
+	725     (00000a58) const/4              v6, -1
+	726     (00000a5a) if-eq                v3, v6, +3a
+
+measureHorizontal-BB@0xa5e : [ measureHorizontal-BB@0xace ]
+	727     (00000a5e) const/4              v3, 3
+	728     (00000a60) aget                 v3, v33, v3
+	729     (00000a64) const/4              v6, 0
+	730     (00000a66) aget                 v6, v33, v6
+	731     (00000a6a) const/4              v7, 1
+	732     (00000a6c) aget                 v7, v33, v7
+	733     (00000a70) const/4              v8, 2
+	734     (00000a72) aget                 v8, v33, v8
+	735     (00000a76) invoke-static        v7, v8, Ljava/lang/Math;->max(I I)I
+	736     (00000a7c) move-result          v7
+	737     (00000a7e) invoke-static        v6, v7, Ljava/lang/Math;->max(I I)I
+	738     (00000a84) move-result          v6
+	739     (00000a86) invoke-static        v3, v6, Ljava/lang/Math;->max(I I)I
+	740     (00000a8c) move-result          v12
+	741     (00000a8e) const/4              v3, 3
+	742     (00000a90) aget                 v3, v34, v3
+	743     (00000a94) const/4              v6, 0
+	744     (00000a96) aget                 v6, v34, v6
+	745     (00000a9a) const/4              v7, 1
+	746     (00000a9c) aget                 v7, v34, v7
+	747     (00000aa0) const/4              v8, 2
+	748     (00000aa2) aget                 v8, v34, v8
+	749     (00000aa6) invoke-static        v7, v8, Ljava/lang/Math;->max(I I)I
+	750     (00000aac) move-result          v7
+	751     (00000aae) invoke-static        v6, v7, Ljava/lang/Math;->max(I I)I
+	752     (00000ab4) move-result          v6
+	753     (00000ab6) invoke-static        v3, v6, Ljava/lang/Math;->max(I I)I
+	754     (00000abc) move-result          v22
+	755     (00000abe) add-int              v3, v12, v22
+	756     (00000ac2) move/from16          v0, v35
+	757     (00000ac6) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	758     (00000acc) move-result          v35
+
+measureHorizontal-BB@0xace : [ measureHorizontal-BB@0xad2 measureHorizontal-BB@0xae2 ]
+	759     (00000ace) if-nez               v10, +a
+
+measureHorizontal-BB@0xad2 : [ measureHorizontal-BB@0xade measureHorizontal-BB@0xae2 ]
+	760     (00000ad2) const/high16         v3, 16384 # [2.0]
+	761     (00000ad6) move/from16          v0, v25
+	762     (00000ada) if-eq                v0, v3, +4
+
+measureHorizontal-BB@0xade : [ measureHorizontal-BB@0xae2 ]
+	763     (00000ade) move/from16          v35, v11
+
+measureHorizontal-BB@0xae2 : [ measureHorizontal-BB@0xb3a measureHorizontal-BB@0xb4c ]
+	764     (00000ae2) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getPaddingTop()I
+	765     (00000ae8) move-result          v3
+	766     (00000aea) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getPaddingBottom()I
+	767     (00000af0) move-result          v6
+	768     (00000af2) add-int/2addr        v3, v6
+	769     (00000af4) add-int              v35, v35, v3
+	770     (00000af8) invoke-virtual/range v47, Landroid/support/v7/widget/LinearLayoutCompat;->getSuggestedMinimumHeight()I
+	771     (00000afe) move-result          v3
+	772     (00000b00) move/from16          v0, v35
+	773     (00000b04) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	774     (00000b0a) move-result          v35
+	775     (00000b0c) const/high16         v3, -256 # [-1.7014118346046923e+38]
+	776     (00000b10) and-int              v3, v3, v18
+	777     (00000b14) or-int               v3, v3, v46
+	778     (00000b18) shl-int/lit8         v6, v18, 16
+	779     (00000b1c) move/from16          v0, v35
+	780     (00000b20) move/from16          v1, v49
+	781     (00000b24) invoke-static        v0, v1, v6, Landroid/support/v4/view/ViewCompat;->resolveSizeAndState(I I I)I
+	782     (00000b2a) move-result          v6
+	783     (00000b2c) move-object/from16   v0, v47
+	784     (00000b30) invoke-virtual       v0, v3, v6, Landroid/support/v7/widget/LinearLayoutCompat;->setMeasuredDimension(I I)V
+	785     (00000b36) if-eqz               v31, +b
+
+measureHorizontal-BB@0xb3a : [ measureHorizontal-BB@0xb4c ]
+	786     (00000b3a) move-object/from16   v0, v47
+	787     (00000b3e) move/from16          v1, v20
+	788     (00000b42) move/from16          v2, v48
+	789     (00000b46) invoke-direct        v0, v1, v2, Landroid/support/v7/widget/LinearLayoutCompat;->forceUniformHeight(I I)V
+
+measureHorizontal-BB@0xb4c : 
+	790     (00000b4c) return-void          
+
+measureHorizontal-BB@0xb4e : [ measureHorizontal-BB@0xb5e measureHorizontal-BB@0xace ]
+	791     (00000b4e) move/from16          v0, v43
+	792     (00000b52) invoke-static        v11, v0, Ljava/lang/Math;->max(I I)I
+	793     (00000b58) move-result          v11
+	794     (00000b5a) if-eqz               v41, -46
+
+measureHorizontal-BB@0xb5e : [ measureHorizontal-BB@0xb6a measureHorizontal-BB@0xace ]
+	795     (00000b5e) const/high16         v3, 16384 # [2.0]
+	796     (00000b62) move/from16          v0, v44
+	797     (00000b66) if-eq                v0, v3, -4c
+
+measureHorizontal-BB@0xb6a : [ measureHorizontal-BB@0xb6c ]
+	798     (00000b6a) const/4              v5, 0
+
+measureHorizontal-BB@0xb6c : [ measureHorizontal-BB@0xb74 measureHorizontal-BB@0xace ]
+	799     (00000b6c) move/from16          v0, v20
+	800     (00000b70) if-ge                v5, v0, -51
+
+measureHorizontal-BB@0xb74 : [ measureHorizontal-BB@0xb84 measureHorizontal-BB@0xb94 ]
+	801     (00000b74) move-object/from16   v0, v47
+	802     (00000b78) invoke-virtual       v0, v5, Landroid/support/v7/widget/LinearLayoutCompat;->getVirtualChildAt(I)Landroid/view/View;
+	803     (00000b7e) move-result-object   v4
+	804     (00000b80) if-eqz               v4, +a
+
+measureHorizontal-BB@0xb84 : [ measureHorizontal-BB@0xb94 measureHorizontal-BB@0xb9a ]
+	805     (00000b84) invoke-virtual       v4, Landroid/view/View;->getVisibility()I
+	806     (00000b8a) move-result          v3
+	807     (00000b8c) const/16             v6, 8
+	808     (00000b90) if-ne                v3, v6, +5
+
+measureHorizontal-BB@0xb94 : [ measureHorizontal-BB@0xb6c ]
+	809     (00000b94) add-int/lit8         v5, v5, 1
+	810     (00000b98) goto                 -16
+
+measureHorizontal-BB@0xb9a : [ measureHorizontal-BB@0xbb8 measureHorizontal-BB@0xb94 ]
+	811     (00000b9a) invoke-virtual       v4, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	812     (00000ba0) move-result-object   v29
+	813     (00000ba2) check-cast           v29, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;
+	814     (00000ba6) move-object/from16   v0, v29
+	815     (00000baa) iget                 v15, v0, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->weight F
+	816     (00000bae) const/4              v3, 0
+	817     (00000bb0) cmpl-float           v3, v15, v3
+	818     (00000bb4) if-lez               v3, -10
+
+measureHorizontal-BB@0xbb8 : [ measureHorizontal-BB@0xb94 ]
+	819     (00000bb8) const/high16         v3, 16384 # [2.0]
+	820     (00000bbc) move/from16          v0, v28
+	821     (00000bc0) invoke-static        v0, v3, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	822     (00000bc6) move-result          v3
+	823     (00000bc8) invoke-virtual       v4, Landroid/view/View;->getMeasuredHeight()I
+	824     (00000bce) move-result          v6
+	825     (00000bd0) const/high16         v7, 16384 # [2.0]
+	826     (00000bd4) invoke-static        v6, v7, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	827     (00000bda) move-result          v6
+	828     (00000bdc) invoke-virtual       v4, v3, v6, Landroid/view/View;->measure(I I)V
+	829     (00000be2) goto                 -27
+

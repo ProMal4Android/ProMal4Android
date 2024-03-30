@@ -1,0 +1,768 @@
+# La/a/a/e/e;->d(I I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v33
+# - v34:int
+# - v35:int
+#
+# - return:void
+
+d-BB@0x0 : [ d-BB@0x56 ]
+	0       (00000000) move-object/from16   v7, v33
+	1       (00000004) move/from16          v8, v34
+	2       (00000008) move/from16          v9, v35
+	3       (0000000c) const/4              v10, 0
+	4       (0000000e) iput                 v10, v7, La/a/a/e/e;->f I
+	5       (00000012) invoke-virtual/range v33, La/a/a/e/e;->getVirtualChildCount()I
+	6       (00000018) move-result          v11
+	7       (0000001a) invoke-static/range  v34, Landroid/view/View$MeasureSpec;->getMode(I)I
+	8       (00000020) move-result          v12
+	9       (00000022) invoke-static/range  v35, Landroid/view/View$MeasureSpec;->getMode(I)I
+	10      (00000028) move-result          v13
+	11      (0000002a) iget                 v14, v7, La/a/a/e/e;->b I
+	12      (0000002e) iget-boolean         v15, v7, La/a/a/e/e;->h Z
+	13      (00000032) const/16             v16, 0
+	14      (00000036) const/16             v17, 1
+	15      (0000003a) const/4              v0, 0
+	16      (0000003c) const/4              v1, 0
+	17      (0000003e) const/high16         v2, -32768 # [-0.0]
+	18      (00000042) const/4              v3, 0
+	19      (00000044) const/4              v5, 0
+	20      (00000046) const/16             v18, 0
+	21      (0000004a) const/16             v19, 1
+	22      (0000004e) const/16             v20, 0
+	23      (00000052) const/16             v21, 0
+
+d-BB@0x56 : [ d-BB@0x5a d-BB@0x348 ]
+	24      (00000056) if-ge                v5, v11, +179
+
+d-BB@0x5a : [ d-BB@0x66 d-BB@0x8e ]
+	25      (0000005a) invoke-virtual       v7, v5, La/a/a/e/e;->a(I)Landroid/view/View;
+	26      (00000060) move-result-object   v4
+	27      (00000062) if-nez               v4, +16
+
+d-BB@0x66 : [ d-BB@0x82 ]
+	28      (00000066) iget                 v4, v7, La/a/a/e/e;->f I
+	29      (0000006a) invoke-virtual       v7, v5, La/a/a/e/e;->c(I)I
+	30      (00000070) move-result          v22
+	31      (00000072) add-int              v4, v22, v4
+	32      (00000076) iput                 v4, v7, La/a/a/e/e;->f I
+	33      (0000007a) move/from16          v22, v11
+	34      (0000007e) move/from16          v28, v21
+
+d-BB@0x82 : [ d-BB@0x32c ]
+	35      (00000082) const/high16         v9, -32768 # [-0.0]
+	36      (00000086) move/from16          v21, v13
+	37      (0000008a) goto/16              +151
+
+d-BB@0x8e : [ d-BB@0xa2 d-BB@0xba ]
+	38      (0000008e) invoke-virtual       v4, Landroid/view/View;->getVisibility()I
+	39      (00000094) move-result          v6
+	40      (00000096) move/from16          v26, v1
+	41      (0000009a) const/16             v1, 8
+	42      (0000009e) if-ne                v6, v1, +e
+
+d-BB@0xa2 : [ d-BB@0x82 ]
+	43      (000000a2) invoke-virtual       v7, v4, v5, La/a/a/e/e;->a(Landroid/view/View; I)I
+	44      (000000a8) move-result          v1
+	45      (000000aa) add-int/2addr        v5, v1
+	46      (000000ac) move/from16          v22, v11
+	47      (000000b0) move/from16          v28, v21
+	48      (000000b4) move/from16          v1, v26
+	49      (000000b8) goto                 -1b
+
+d-BB@0xba : [ d-BB@0xc6 d-BB@0xd4 ]
+	50      (000000ba) invoke-virtual       v7, v5, La/a/a/e/e;->b(I)Z
+	51      (000000c0) move-result          v1
+	52      (000000c2) if-eqz               v1, +9
+
+d-BB@0xc6 : [ d-BB@0xd4 ]
+	53      (000000c6) iget                 v1, v7, La/a/a/e/e;->f I
+	54      (000000ca) iget                 v6, v7, La/a/a/e/e;->m I
+	55      (000000ce) add-int/2addr        v1, v6
+	56      (000000d0) iput                 v1, v7, La/a/a/e/e;->f I
+
+d-BB@0xd4 : [ d-BB@0xf2 d-BB@0x150 ]
+	57      (000000d4) invoke-virtual       v4, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	58      (000000da) move-result-object   v1
+	59      (000000dc) move-object          v6, v1
+	60      (000000de) check-cast           v6, La/a/a/e/e$a;
+	61      (000000e2) iget                 v1, v6, La/a/a/e/e$a;->a F
+	62      (000000e6) add-float            v23, v0, v1
+	63      (000000ea) const/high16         v1, 16384 # [2.0]
+	64      (000000ee) if-ne                v13, v1, +31
+
+d-BB@0xf2 : [ d-BB@0xfa d-BB@0x150 ]
+	65      (000000f2) iget                 v0, v6, Landroid/view/ViewGroup$MarginLayoutParams;->height I
+	66      (000000f6) if-nez               v0, +2d
+
+d-BB@0xfa : [ d-BB@0x106 d-BB@0x150 ]
+	67      (000000fa) iget                 v0, v6, La/a/a/e/e$a;->a F
+	68      (000000fe) cmpl-float           v0, v0, v16
+	69      (00000102) if-lez               v0, +27
+
+d-BB@0x106 : [ d-BB@0x242 ]
+	70      (00000106) iget                 v0, v7, La/a/a/e/e;->f I
+	71      (0000010a) iget                 v1, v6, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	72      (0000010e) add-int/2addr        v1, v0
+	73      (00000110) move/from16          v27, v2
+	74      (00000114) iget                 v2, v6, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin I
+	75      (00000118) add-int/2addr        v1, v2
+	76      (0000011a) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	77      (00000120) move-result          v0
+	78      (00000122) iput                 v0, v7, La/a/a/e/e;->f I
+	79      (00000126) move/from16          v25, v3
+	80      (0000012a) move-object          v3, v4
+	81      (0000012c) move/from16          v22, v11
+	82      (00000130) move/from16          v28, v21
+	83      (00000134) move/from16          v8, v26
+	84      (00000138) move/from16          v2, v27
+	85      (0000013c) const/high16         v9, -32768 # [-0.0]
+	86      (00000140) const/16             v18, 1
+	87      (00000144) move                 v11, v5
+	88      (00000146) move/from16          v21, v13
+	89      (0000014a) move-object          v13, v6
+	90      (0000014c) goto/16              +7b
+
+d-BB@0x150 : [ d-BB@0x15c d-BB@0x172 ]
+	91      (00000150) move/from16          v27, v2
+	92      (00000154) iget                 v0, v6, Landroid/view/ViewGroup$MarginLayoutParams;->height I
+	93      (00000158) if-nez               v0, +d
+
+d-BB@0x15c : [ d-BB@0x168 d-BB@0x172 ]
+	94      (0000015c) iget                 v0, v6, La/a/a/e/e$a;->a F
+	95      (00000160) cmpl-float           v0, v0, v16
+	96      (00000164) if-lez               v0, +7
+
+d-BB@0x168 : [ d-BB@0x176 ]
+	97      (00000168) const/4              v0, -2
+	98      (0000016a) iput                 v0, v6, Landroid/view/ViewGroup$MarginLayoutParams;->height I
+	99      (0000016e) const/4              v2, 0
+	100     (00000170) goto                 +3
+
+d-BB@0x172 : [ d-BB@0x176 ]
+	101     (00000172) const/high16         v2, -32768 # [-0.0]
+
+d-BB@0x176 : [ d-BB@0x182 d-BB@0x18c ]
+	102     (00000176) const/16             v28, 0
+	103     (0000017a) cmpl-float           v0, v23, v16
+	104     (0000017e) if-nez               v0, +7
+
+d-BB@0x182 : [ d-BB@0x190 ]
+	105     (00000182) iget                 v0, v7, La/a/a/e/e;->f I
+	106     (00000186) move/from16          v29, v0
+	107     (0000018a) goto                 +3
+
+d-BB@0x18c : [ d-BB@0x190 ]
+	108     (0000018c) const/16             v29, 0
+
+d-BB@0x190 : [ d-BB@0x1f0 d-BB@0x1f4 ]
+	109     (00000190) move-object/from16   v0, v33
+	110     (00000194) move/from16          v8, v26
+	111     (00000198) const/high16         v24, 16384 # [2.0]
+	112     (0000019c) move-object          v1, v4
+	113     (0000019e) move/from16          v31, v2
+	114     (000001a2) move/from16          v30, v27
+	115     (000001a6) move                 v2, v5
+	116     (000001a8) move                 v9, v3
+	117     (000001aa) move/from16          v3, v34
+	118     (000001ae) move-object/from16   v26, v4
+	119     (000001b2) move/from16          v22, v11
+	120     (000001b6) const/high16         v11, 16384 # [2.0]
+	121     (000001ba) move/from16          v32, v21
+	122     (000001be) move/from16          v21, v13
+	123     (000001c2) move/from16          v13, v32
+	124     (000001c6) move/from16          v4, v28
+	125     (000001ca) move                 v11, v5
+	126     (000001cc) move/from16          v5, v35
+	127     (000001d0) move/from16          v25, v9
+	128     (000001d4) move/from16          v28, v13
+	129     (000001d8) const/high16         v9, -32768 # [-0.0]
+	130     (000001dc) move-object          v13, v6
+	131     (000001de) move/from16          v6, v29
+	132     (000001e2) invoke-virtual/range v0 ... v6, La/a/a/e/e;->a(Landroid/view/View; I I I I I)V
+	133     (000001e8) move/from16          v0, v31
+	134     (000001ec) if-eq                v0, v9, +4
+
+d-BB@0x1f0 : [ d-BB@0x1f4 ]
+	135     (000001f0) iput                 v0, v13, Landroid/view/ViewGroup$MarginLayoutParams;->height I
+
+d-BB@0x1f4 : [ d-BB@0x22e d-BB@0x23c ]
+	136     (000001f4) invoke-virtual/range v26, Landroid/view/View;->getMeasuredHeight()I
+	137     (000001fa) move-result          v0
+	138     (000001fc) iget                 v1, v7, La/a/a/e/e;->f I
+	139     (00000200) add-int              v2, v1, v0
+	140     (00000204) iget                 v3, v13, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	141     (00000208) add-int/2addr        v2, v3
+	142     (0000020a) iget                 v3, v13, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin I
+	143     (0000020e) add-int/2addr        v2, v3
+	144     (00000210) move-object/from16   v3, v26
+	145     (00000214) invoke-virtual       v7, v3, La/a/a/e/e;->b(Landroid/view/View;)I
+	146     (0000021a) move-result          v4
+	147     (0000021c) add-int/2addr        v4, v2
+	148     (0000021e) invoke-static        v1, v4, Ljava/lang/Math;->max(I I)I
+	149     (00000224) move-result          v1
+	150     (00000226) iput                 v1, v7, La/a/a/e/e;->f I
+	151     (0000022a) if-eqz               v15, +9
+
+d-BB@0x22e : [ d-BB@0x242 ]
+	152     (0000022e) move/from16          v6, v30
+	153     (00000232) invoke-static        v0, v6, Ljava/lang/Math;->max(I I)I
+	154     (00000238) move-result          v2
+	155     (0000023a) goto                 +4
+
+d-BB@0x23c : [ d-BB@0x242 ]
+	156     (0000023c) move/from16          v6, v30
+	157     (00000240) move                 v2, v6
+
+d-BB@0x242 : [ d-BB@0x246 d-BB@0x256 ]
+	158     (00000242) if-ltz               v14, +a
+
+d-BB@0x246 : [ d-BB@0x24e d-BB@0x256 ]
+	159     (00000246) add-int/lit8         v5, v11, 1
+	160     (0000024a) if-ne                v14, v5, +6
+
+d-BB@0x24e : [ d-BB@0x256 ]
+	161     (0000024e) iget                 v0, v7, La/a/a/e/e;->f I
+	162     (00000252) iput                 v0, v7, La/a/a/e/e;->c I
+
+d-BB@0x256 : [ d-BB@0x25a d-BB@0x278 ]
+	163     (00000256) if-ge                v11, v14, +11
+
+d-BB@0x25a : [ d-BB@0x266 d-BB@0x268 ]
+	164     (0000025a) iget                 v0, v13, La/a/a/e/e$a;->a F
+	165     (0000025e) cmpl-float           v0, v0, v16
+	166     (00000262) if-gtz               v0, +3
+
+d-BB@0x266 : [ d-BB@0x278 ]
+	167     (00000266) goto                 +9
+
+d-BB@0x268 : 
+	168     (00000268) new-instance         v0, Ljava/lang/RuntimeException;
+	169     (0000026c) const-string         v1, "A child of LinearLayout with index less than mBaselineAlignedChildIndex has weight > 0, which won't work.  Either remove the weight, or don't set mBaselineAlignedChildIndex."
+	170     (00000270) invoke-direct        v0, v1, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	171     (00000276) throw                v0
+
+d-BB@0x278 : [ d-BB@0x280 d-BB@0x292 ]
+	172     (00000278) const/high16         v0, 16384 # [2.0]
+	173     (0000027c) if-eq                v12, v0, +b
+
+d-BB@0x280 : [ d-BB@0x28a d-BB@0x292 ]
+	174     (00000280) iget                 v0, v13, Landroid/view/ViewGroup$MarginLayoutParams;->width I
+	175     (00000284) const/4              v1, -1
+	176     (00000286) if-ne                v0, v1, +6
+
+d-BB@0x28a : [ d-BB@0x294 ]
+	177     (0000028a) const/4              v0, 1
+	178     (0000028c) const/16             v20, 1
+	179     (00000290) goto                 +2
+
+d-BB@0x292 : [ d-BB@0x294 ]
+	180     (00000292) const/4              v0, 0
+
+d-BB@0x294 : [ d-BB@0x2c4 d-BB@0x2d2 ]
+	181     (00000294) iget                 v1, v13, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin I
+	182     (00000298) iget                 v4, v13, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin I
+	183     (0000029c) add-int/2addr        v1, v4
+	184     (0000029e) invoke-virtual       v3, Landroid/view/View;->getMeasuredWidth()I
+	185     (000002a4) move-result          v4
+	186     (000002a6) add-int/2addr        v4, v1
+	187     (000002a8) invoke-static        v8, v4, Ljava/lang/Math;->max(I I)I
+	188     (000002ae) move-result          v5
+	189     (000002b0) invoke-static        v3, Landroid/support/v4/view/ViewCompat;->getMeasuredState(Landroid/view/View;)I
+	190     (000002b6) move-result          v6
+	191     (000002b8) invoke-static        v10, v6, La/a/a/c/d/I;->a(I I)I
+	192     (000002be) move-result          v6
+	193     (000002c0) if-eqz               v19, +9
+
+d-BB@0x2c4 : [ d-BB@0x2ce d-BB@0x2d2 ]
+	194     (000002c4) iget                 v8, v13, Landroid/view/ViewGroup$MarginLayoutParams;->width I
+	195     (000002c8) const/4              v10, -1
+	196     (000002ca) if-ne                v8, v10, +4
+
+d-BB@0x2ce : [ d-BB@0x2d4 ]
+	197     (000002ce) const/4              v8, 1
+	198     (000002d0) goto                 +2
+
+d-BB@0x2d2 : [ d-BB@0x2d4 ]
+	199     (000002d2) const/4              v8, 0
+
+d-BB@0x2d4 : [ d-BB@0x2e0 d-BB@0x2f8 ]
+	200     (000002d4) iget                 v10, v13, La/a/a/e/e$a;->a F
+	201     (000002d8) cmpl-float           v10, v10, v16
+	202     (000002dc) if-lez               v10, +e
+
+d-BB@0x2e0 : [ d-BB@0x2e4 d-BB@0x2e6 ]
+	203     (000002e0) if-eqz               v0, +3
+
+d-BB@0x2e4 : [ d-BB@0x2e8 ]
+	204     (000002e4) goto                 +2
+
+d-BB@0x2e6 : [ d-BB@0x2e8 ]
+	205     (000002e6) move                 v1, v4
+
+d-BB@0x2e8 : [ d-BB@0x312 ]
+	206     (000002e8) move/from16          v13, v25
+	207     (000002ec) invoke-static        v13, v1, Ljava/lang/Math;->max(I I)I
+	208     (000002f2) move-result          v0
+	209     (000002f4) move                 v13, v0
+	210     (000002f6) goto                 +e
+
+d-BB@0x2f8 : [ d-BB@0x300 d-BB@0x302 ]
+	211     (000002f8) move/from16          v13, v25
+	212     (000002fc) if-eqz               v0, +3
+
+d-BB@0x300 : [ d-BB@0x302 ]
+	213     (00000300) move                 v4, v1
+
+d-BB@0x302 : [ d-BB@0x312 ]
+	214     (00000302) move/from16          v1, v28
+	215     (00000306) invoke-static        v1, v4, Ljava/lang/Math;->max(I I)I
+	216     (0000030c) move-result          v0
+	217     (0000030e) move/from16          v28, v0
+
+d-BB@0x312 : [ d-BB@0x32c ]
+	218     (00000312) invoke-virtual       v7, v3, v11, La/a/a/e/e;->a(Landroid/view/View; I)I
+	219     (00000318) move-result          v0
+	220     (0000031a) add-int/2addr        v0, v11
+	221     (0000031c) move                 v1, v5
+	222     (0000031e) move                 v10, v6
+	223     (00000320) move/from16          v19, v8
+	224     (00000324) move                 v3, v13
+	225     (00000326) move                 v5, v0
+	226     (00000328) move/from16          v0, v23
+
+d-BB@0x32c : [ d-BB@0x56 ]
+	227     (0000032c) add-int/lit8         v5, v5, 1
+	228     (00000330) move/from16          v8, v34
+	229     (00000334) move/from16          v9, v35
+	230     (00000338) move/from16          v13, v21
+	231     (0000033c) move/from16          v11, v22
+	232     (00000340) move/from16          v21, v28
+	233     (00000344) goto/16              -177
+
+d-BB@0x348 : [ d-BB@0x366 d-BB@0x386 ]
+	234     (00000348) move                 v8, v1
+	235     (0000034a) move                 v6, v2
+	236     (0000034c) move/from16          v22, v11
+	237     (00000350) move/from16          v1, v21
+	238     (00000354) const/high16         v9, -32768 # [-0.0]
+	239     (00000358) move/from16          v21, v13
+	240     (0000035c) move                 v13, v3
+	241     (0000035e) iget                 v2, v7, La/a/a/e/e;->f I
+	242     (00000362) if-lez               v2, +12
+
+d-BB@0x366 : [ d-BB@0x376 d-BB@0x38a ]
+	243     (00000366) move/from16          v2, v22
+	244     (0000036a) invoke-virtual       v7, v2, La/a/a/e/e;->b(I)Z
+	245     (00000370) move-result          v3
+	246     (00000372) if-eqz               v3, +c
+
+d-BB@0x376 : [ d-BB@0x38a ]
+	247     (00000376) iget                 v3, v7, La/a/a/e/e;->f I
+	248     (0000037a) iget                 v4, v7, La/a/a/e/e;->m I
+	249     (0000037e) add-int/2addr        v3, v4
+	250     (00000380) iput                 v3, v7, La/a/a/e/e;->f I
+	251     (00000384) goto                 +3
+
+d-BB@0x386 : [ d-BB@0x38a ]
+	252     (00000386) move/from16          v2, v22
+
+d-BB@0x38a : [ d-BB@0x38e d-BB@0x42a ]
+	253     (0000038a) if-eqz               v15, +50
+
+d-BB@0x38e : [ d-BB@0x396 d-BB@0x39a ]
+	254     (0000038e) move/from16          v3, v21
+	255     (00000392) if-eq                v3, v9, +4
+
+d-BB@0x396 : [ d-BB@0x39a d-BB@0x42e ]
+	256     (00000396) if-nez               v3, +4c
+
+d-BB@0x39a : [ d-BB@0x3a2 ]
+	257     (0000039a) const/4              v4, 0
+	258     (0000039c) iput                 v4, v7, La/a/a/e/e;->f I
+	259     (000003a0) const/4              v4, 0
+
+d-BB@0x3a2 : [ d-BB@0x3a6 d-BB@0x42e ]
+	260     (000003a2) if-ge                v4, v2, +46
+
+d-BB@0x3a6 : [ d-BB@0x3b2 d-BB@0x3ca ]
+	261     (000003a6) invoke-virtual       v7, v4, La/a/a/e/e;->a(I)Landroid/view/View;
+	262     (000003ac) move-result-object   v5
+	263     (000003ae) if-nez               v5, +e
+
+d-BB@0x3b2 : [ d-BB@0x420 ]
+	264     (000003b2) iget                 v5, v7, La/a/a/e/e;->f I
+	265     (000003b6) invoke-virtual       v7, v4, La/a/a/e/e;->c(I)I
+	266     (000003bc) move-result          v9
+	267     (000003be) add-int/2addr        v9, v5
+	268     (000003c0) iput                 v9, v7, La/a/a/e/e;->f I
+	269     (000003c4) move/from16          v21, v4
+	270     (000003c8) goto                 +2c
+
+d-BB@0x3ca : [ d-BB@0x3da d-BB@0x3e6 ]
+	271     (000003ca) invoke-virtual       v5, Landroid/view/View;->getVisibility()I
+	272     (000003d0) move-result          v9
+	273     (000003d2) const/16             v11, 8
+	274     (000003d6) if-ne                v9, v11, +8
+
+d-BB@0x3da : [ d-BB@0x424 ]
+	275     (000003da) invoke-virtual       v7, v5, v4, La/a/a/e/e;->a(Landroid/view/View; I)I
+	276     (000003e0) move-result          v5
+	277     (000003e2) add-int/2addr        v4, v5
+	278     (000003e4) goto                 +20
+
+d-BB@0x3e6 : [ d-BB@0x420 ]
+	279     (000003e6) invoke-virtual       v5, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	280     (000003ec) move-result-object   v9
+	281     (000003ee) check-cast           v9, La/a/a/e/e$a;
+	282     (000003f2) iget                 v11, v7, La/a/a/e/e;->f I
+	283     (000003f6) add-int              v14, v11, v6
+	284     (000003fa) move/from16          v21, v4
+	285     (000003fe) iget                 v4, v9, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	286     (00000402) add-int/2addr        v14, v4
+	287     (00000404) iget                 v4, v9, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin I
+	288     (00000408) add-int/2addr        v14, v4
+	289     (0000040a) invoke-virtual       v7, v5, La/a/a/e/e;->b(Landroid/view/View;)I
+	290     (00000410) move-result          v4
+	291     (00000412) add-int/2addr        v4, v14
+	292     (00000414) invoke-static        v11, v4, Ljava/lang/Math;->max(I I)I
+	293     (0000041a) move-result          v4
+	294     (0000041c) iput                 v4, v7, La/a/a/e/e;->f I
+
+d-BB@0x420 : [ d-BB@0x424 ]
+	295     (00000420) move/from16          v4, v21
+
+d-BB@0x424 : [ d-BB@0x3a2 ]
+	296     (00000424) add-int/lit8         v4, v4, 1
+	297     (00000428) goto                 -43
+
+d-BB@0x42a : [ d-BB@0x42e ]
+	298     (0000042a) move/from16          v3, v21
+
+d-BB@0x42e : [ d-BB@0x480 d-BB@0x510 ]
+	299     (0000042e) iget                 v4, v7, La/a/a/e/e;->f I
+	300     (00000432) invoke-virtual/range v33, Landroid/view/ViewGroup;->getPaddingTop()I
+	301     (00000438) move-result          v5
+	302     (0000043a) invoke-virtual/range v33, Landroid/view/ViewGroup;->getPaddingBottom()I
+	303     (00000440) move-result          v9
+	304     (00000442) add-int/2addr        v9, v5
+	305     (00000444) add-int/2addr        v9, v4
+	306     (00000446) iput                 v9, v7, La/a/a/e/e;->f I
+	307     (0000044a) iget                 v4, v7, La/a/a/e/e;->f I
+	308     (0000044e) invoke-virtual/range v33, Landroid/view/ViewGroup;->getSuggestedMinimumHeight()I
+	309     (00000454) move-result          v5
+	310     (00000456) invoke-static        v4, v5, Ljava/lang/Math;->max(I I)I
+	311     (0000045c) move-result          v4
+	312     (0000045e) move/from16          v5, v35
+	313     (00000462) move                 v9, v13
+	314     (00000464) const/4              v11, 0
+	315     (00000466) invoke-static        v4, v5, v11, Landroid/support/v4/view/ViewCompat;->resolveSizeAndState(I I I)I
+	316     (0000046c) move-result          v4
+	317     (0000046e) const                v11, 16777215 # [2.3509885615147286e-38]
+	318     (00000474) and-int/2addr        v11, v4
+	319     (00000476) iget                 v13, v7, La/a/a/e/e;->f I
+	320     (0000047a) sub-int/2addr        v11, v13
+	321     (0000047c) if-nez               v18, +4a
+
+d-BB@0x480 : [ d-BB@0x484 d-BB@0x48e ]
+	322     (00000480) if-eqz               v11, +7
+
+d-BB@0x484 : [ d-BB@0x48c d-BB@0x48e ]
+	323     (00000484) cmpl-float           v13, v0, v16
+	324     (00000488) if-lez               v13, +3
+
+d-BB@0x48c : [ d-BB@0x510 ]
+	325     (0000048c) goto                 +42
+
+d-BB@0x48e : [ d-BB@0x49a d-BB@0x506 ]
+	326     (0000048e) invoke-static        v1, v9, Ljava/lang/Math;->max(I I)I
+	327     (00000494) move-result          v0
+	328     (00000496) if-eqz               v15, +38
+
+d-BB@0x49a : [ d-BB@0x4a2 d-BB@0x506 ]
+	329     (0000049a) const/high16         v1, 16384 # [2.0]
+	330     (0000049e) if-eq                v3, v1, +34
+
+d-BB@0x4a2 : [ d-BB@0x4a4 ]
+	331     (000004a2) const/4              v1, 0
+
+d-BB@0x4a4 : [ d-BB@0x4a8 d-BB@0x506 ]
+	332     (000004a4) if-ge                v1, v2, +31
+
+d-BB@0x4a8 : [ d-BB@0x4b4 d-BB@0x500 ]
+	333     (000004a8) invoke-virtual       v7, v1, La/a/a/e/e;->a(I)Landroid/view/View;
+	334     (000004ae) move-result-object   v3
+	335     (000004b0) if-eqz               v3, +28
+
+d-BB@0x4b4 : [ d-BB@0x4c4 d-BB@0x4c6 ]
+	336     (000004b4) invoke-virtual       v3, Landroid/view/View;->getVisibility()I
+	337     (000004ba) move-result          v9
+	338     (000004bc) const/16             v11, 8
+	339     (000004c0) if-ne                v9, v11, +3
+
+d-BB@0x4c4 : [ d-BB@0x500 ]
+	340     (000004c4) goto                 +1e
+
+d-BB@0x4c6 : [ d-BB@0x4de d-BB@0x500 ]
+	341     (000004c6) invoke-virtual       v3, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	342     (000004cc) move-result-object   v9
+	343     (000004ce) check-cast           v9, La/a/a/e/e$a;
+	344     (000004d2) iget                 v9, v9, La/a/a/e/e$a;->a F
+	345     (000004d6) cmpl-float           v9, v9, v16
+	346     (000004da) if-lez               v9, +13
+
+d-BB@0x4de : [ d-BB@0x500 ]
+	347     (000004de) invoke-virtual       v3, Landroid/view/View;->getMeasuredWidth()I
+	348     (000004e4) move-result          v9
+	349     (000004e6) const/high16         v11, 16384 # [2.0]
+	350     (000004ea) invoke-static        v9, v11, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	351     (000004f0) move-result          v9
+	352     (000004f2) invoke-static        v6, v11, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	353     (000004f8) move-result          v13
+	354     (000004fa) invoke-virtual       v3, v9, v13, Landroid/view/View;->measure(I I)V
+
+d-BB@0x500 : [ d-BB@0x4a4 ]
+	355     (00000500) add-int/lit8         v1, v1, 1
+	356     (00000504) goto                 -30
+
+d-BB@0x506 : [ d-BB@0x6f0 ]
+	357     (00000506) move/from16          v11, v34
+	358     (0000050a) move                 v1, v8
+	359     (0000050c) goto/16              +f2
+
+d-BB@0x510 : [ d-BB@0x51c d-BB@0x51e ]
+	360     (00000510) iget                 v6, v7, La/a/a/e/e;->g F
+	361     (00000514) cmpl-float           v9, v6, v16
+	362     (00000518) if-lez               v9, +3
+
+d-BB@0x51c : [ d-BB@0x51e ]
+	363     (0000051c) move                 v0, v6
+
+d-BB@0x51e : [ d-BB@0x532 ]
+	364     (0000051e) const/4              v6, 0
+	365     (00000520) iput                 v6, v7, La/a/a/e/e;->f I
+	366     (00000524) move                 v9, v0
+	367     (00000526) const/4              v0, 0
+	368     (00000528) move/from16          v32, v8
+	369     (0000052c) move                 v8, v1
+	370     (0000052e) move/from16          v1, v32
+
+d-BB@0x532 : [ d-BB@0x536 d-BB@0x6ce ]
+	371     (00000532) if-ge                v0, v2, +ce
+
+d-BB@0x536 : [ d-BB@0x54e d-BB@0x55c ]
+	372     (00000536) invoke-virtual       v7, v0, La/a/a/e/e;->a(I)Landroid/view/View;
+	373     (0000053c) move-result-object   v13
+	374     (0000053e) invoke-virtual       v13, Landroid/view/View;->getVisibility()I
+	375     (00000544) move-result          v14
+	376     (00000546) const/16             v15, 8
+	377     (0000054a) if-ne                v14, v15, +9
+
+d-BB@0x54e : [ d-BB@0x6be ]
+	378     (0000054e) move/from16          v22, v3
+	379     (00000552) move                 v6, v11
+	380     (00000554) move/from16          v11, v34
+	381     (00000558) goto/16              +b3
+
+d-BB@0x55c : [ d-BB@0x574 d-BB@0x614 ]
+	382     (0000055c) invoke-virtual       v13, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	383     (00000562) move-result-object   v14
+	384     (00000564) check-cast           v14, La/a/a/e/e$a;
+	385     (00000568) iget                 v6, v14, La/a/a/e/e$a;->a F
+	386     (0000056c) cmpl-float           v18, v6, v16
+	387     (00000570) if-lez               v18, +52
+
+d-BB@0x574 : [ d-BB@0x5c6 d-BB@0x5d6 ]
+	388     (00000574) int-to-float         v15, v11
+	389     (00000576) mul-float            v15, v15, v6
+	390     (0000057a) div-float/2addr      v15, v9
+	391     (0000057c) float-to-int         v15, v15
+	392     (0000057e) sub-float/2addr      v9, v6
+	393     (00000580) sub-int/2addr        v11, v15
+	394     (00000582) invoke-virtual/range v33, Landroid/view/ViewGroup;->getPaddingLeft()I
+	395     (00000588) move-result          v6
+	396     (0000058a) invoke-virtual/range v33, Landroid/view/ViewGroup;->getPaddingRight()I
+	397     (00000590) move-result          v18
+	398     (00000592) add-int              v18, v18, v6
+	399     (00000596) iget                 v6, v14, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin I
+	400     (0000059a) add-int              v18, v18, v6
+	401     (0000059e) iget                 v6, v14, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin I
+	402     (000005a2) add-int              v6, v18, v6
+	403     (000005a6) move/from16          v18, v9
+	404     (000005aa) iget                 v9, v14, Landroid/view/ViewGroup$MarginLayoutParams;->width I
+	405     (000005ae) move/from16          v21, v11
+	406     (000005b2) move/from16          v11, v34
+	407     (000005b6) invoke-static        v11, v6, v9, Landroid/view/ViewGroup;->getChildMeasureSpec(I I I)I
+	408     (000005bc) move-result          v6
+	409     (000005be) iget                 v9, v14, Landroid/view/ViewGroup$MarginLayoutParams;->height I
+	410     (000005c2) if-nez               v9, +a
+
+d-BB@0x5c6 : [ d-BB@0x5ce d-BB@0x5d0 ]
+	411     (000005c6) const/high16         v9, 16384 # [2.0]
+	412     (000005ca) if-eq                v3, v9, +3
+
+d-BB@0x5ce : [ d-BB@0x5da ]
+	413     (000005ce) goto                 +6
+
+d-BB@0x5d0 : [ d-BB@0x5d4 d-BB@0x5ea ]
+	414     (000005d0) if-lez               v15, +d
+
+d-BB@0x5d4 : [ d-BB@0x5ec ]
+	415     (000005d4) goto                 +c
+
+d-BB@0x5d6 : [ d-BB@0x5da ]
+	416     (000005d6) const/high16         v9, 16384 # [2.0]
+
+d-BB@0x5da : [ d-BB@0x5ea d-BB@0x5ec ]
+	417     (000005da) invoke-virtual       v13, Landroid/view/View;->getMeasuredHeight()I
+	418     (000005e0) move-result          v22
+	419     (000005e2) add-int              v15, v22, v15
+	420     (000005e6) if-gez               v15, +3
+
+d-BB@0x5ea : [ d-BB@0x5ec ]
+	421     (000005ea) const/4              v15, 0
+
+d-BB@0x5ec : [ d-BB@0x61e ]
+	422     (000005ec) invoke-static        v15, v9, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	423     (000005f2) move-result          v15
+	424     (000005f4) invoke-virtual       v13, v6, v15, Landroid/view/View;->measure(I I)V
+	425     (000005fa) invoke-static        v13, Landroid/support/v4/view/ViewCompat;->getMeasuredState(Landroid/view/View;)I
+	426     (00000600) move-result          v6
+	427     (00000602) and-int/lit16        v6, v6, -256
+	428     (00000606) invoke-static        v10, v6, La/a/a/c/d/I;->a(I I)I
+	429     (0000060c) move-result          v10
+	430     (0000060e) move/from16          v6, v21
+	431     (00000612) goto                 +6
+
+d-BB@0x614 : [ d-BB@0x61e ]
+	432     (00000614) move                 v6, v11
+	433     (00000616) move/from16          v11, v34
+	434     (0000061a) move/from16          v18, v9
+
+d-BB@0x61e : [ d-BB@0x646 d-BB@0x658 ]
+	435     (0000061e) iget                 v9, v14, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin I
+	436     (00000622) iget                 v15, v14, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin I
+	437     (00000626) add-int/2addr        v9, v15
+	438     (00000628) invoke-virtual       v13, Landroid/view/View;->getMeasuredWidth()I
+	439     (0000062e) move-result          v15
+	440     (00000630) add-int/2addr        v15, v9
+	441     (00000632) invoke-static        v1, v15, Ljava/lang/Math;->max(I I)I
+	442     (00000638) move-result          v1
+	443     (0000063a) move/from16          v21, v1
+	444     (0000063e) const/high16         v1, 16384 # [2.0]
+	445     (00000642) if-eq                v12, v1, +b
+
+d-BB@0x646 : [ d-BB@0x654 d-BB@0x65e ]
+	446     (00000646) iget                 v1, v14, Landroid/view/ViewGroup$MarginLayoutParams;->width I
+	447     (0000064a) move/from16          v22, v3
+	448     (0000064e) const/4              v3, -1
+	449     (00000650) if-ne                v1, v3, +7
+
+d-BB@0x654 : [ d-BB@0x660 ]
+	450     (00000654) const/4              v1, 1
+	451     (00000656) goto                 +5
+
+d-BB@0x658 : [ d-BB@0x65e ]
+	452     (00000658) move/from16          v22, v3
+	453     (0000065c) const/4              v3, -1
+
+d-BB@0x65e : [ d-BB@0x660 ]
+	454     (0000065e) const/4              v1, 0
+
+d-BB@0x660 : [ d-BB@0x664 d-BB@0x666 ]
+	455     (00000660) if-eqz               v1, +3
+
+d-BB@0x664 : [ d-BB@0x666 ]
+	456     (00000664) move                 v15, v9
+
+d-BB@0x666 : [ d-BB@0x672 d-BB@0x67e ]
+	457     (00000666) invoke-static        v8, v15, Ljava/lang/Math;->max(I I)I
+	458     (0000066c) move-result          v1
+	459     (0000066e) if-eqz               v19, +8
+
+d-BB@0x672 : [ d-BB@0x67a d-BB@0x67e ]
+	460     (00000672) iget                 v8, v14, Landroid/view/ViewGroup$MarginLayoutParams;->width I
+	461     (00000676) if-ne                v8, v3, +4
+
+d-BB@0x67a : [ d-BB@0x680 ]
+	462     (0000067a) const/4              v8, 1
+	463     (0000067c) goto                 +2
+
+d-BB@0x67e : [ d-BB@0x680 ]
+	464     (0000067e) const/4              v8, 0
+
+d-BB@0x680 : [ d-BB@0x6be ]
+	465     (00000680) iget                 v9, v7, La/a/a/e/e;->f I
+	466     (00000684) invoke-virtual       v13, Landroid/view/View;->getMeasuredHeight()I
+	467     (0000068a) move-result          v15
+	468     (0000068c) add-int/2addr        v15, v9
+	469     (0000068e) iget                 v3, v14, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	470     (00000692) add-int/2addr        v15, v3
+	471     (00000694) iget                 v3, v14, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin I
+	472     (00000698) add-int/2addr        v15, v3
+	473     (0000069a) invoke-virtual       v7, v13, La/a/a/e/e;->b(Landroid/view/View;)I
+	474     (000006a0) move-result          v3
+	475     (000006a2) add-int/2addr        v3, v15
+	476     (000006a4) invoke-static        v9, v3, Ljava/lang/Math;->max(I I)I
+	477     (000006aa) move-result          v3
+	478     (000006ac) iput                 v3, v7, La/a/a/e/e;->f I
+	479     (000006b0) move/from16          v19, v8
+	480     (000006b4) move/from16          v9, v18
+	481     (000006b8) move                 v8, v1
+	482     (000006ba) move/from16          v1, v21
+
+d-BB@0x6be : [ d-BB@0x532 ]
+	483     (000006be) add-int/lit8         v0, v0, 1
+	484     (000006c2) move                 v11, v6
+	485     (000006c4) move/from16          v3, v22
+	486     (000006c8) const/4              v6, 0
+	487     (000006ca) goto/16              -cc
+
+d-BB@0x6ce : [ d-BB@0x6f0 ]
+	488     (000006ce) move/from16          v11, v34
+	489     (000006d2) iget                 v0, v7, La/a/a/e/e;->f I
+	490     (000006d6) invoke-virtual/range v33, Landroid/view/ViewGroup;->getPaddingTop()I
+	491     (000006dc) move-result          v3
+	492     (000006de) invoke-virtual/range v33, Landroid/view/ViewGroup;->getPaddingBottom()I
+	493     (000006e4) move-result          v6
+	494     (000006e6) add-int/2addr        v6, v3
+	495     (000006e8) add-int/2addr        v6, v0
+	496     (000006ea) iput                 v6, v7, La/a/a/e/e;->f I
+	497     (000006ee) move                 v0, v8
+
+d-BB@0x6f0 : [ d-BB@0x6f4 d-BB@0x6fe ]
+	498     (000006f0) if-nez               v19, +7
+
+d-BB@0x6f4 : [ d-BB@0x6fc d-BB@0x6fe ]
+	499     (000006f4) const/high16         v3, 16384 # [2.0]
+	500     (000006f8) if-eq                v12, v3, +3
+
+d-BB@0x6fc : [ d-BB@0x700 ]
+	501     (000006fc) goto                 +2
+
+d-BB@0x6fe : [ d-BB@0x700 ]
+	502     (000006fe) move                 v0, v1
+
+d-BB@0x700 : [ d-BB@0x736 d-BB@0x73c ]
+	503     (00000700) invoke-virtual/range v33, Landroid/view/ViewGroup;->getPaddingLeft()I
+	504     (00000706) move-result          v1
+	505     (00000708) invoke-virtual/range v33, Landroid/view/ViewGroup;->getPaddingRight()I
+	506     (0000070e) move-result          v3
+	507     (00000710) add-int/2addr        v3, v1
+	508     (00000712) add-int/2addr        v3, v0
+	509     (00000714) invoke-virtual/range v33, Landroid/view/ViewGroup;->getSuggestedMinimumWidth()I
+	510     (0000071a) move-result          v0
+	511     (0000071c) invoke-static        v3, v0, Ljava/lang/Math;->max(I I)I
+	512     (00000722) move-result          v0
+	513     (00000724) invoke-static        v0, v11, v10, Landroid/support/v4/view/ViewCompat;->resolveSizeAndState(I I I)I
+	514     (0000072a) move-result          v0
+	515     (0000072c) invoke-virtual       v7, v0, v4, Landroid/view/ViewGroup;->setMeasuredDimension(I I)V
+	516     (00000732) if-eqz               v20, +5
+
+d-BB@0x736 : [ d-BB@0x73c ]
+	517     (00000736) invoke-virtual       v7, v2, v5, La/a/a/e/e;->b(I I)V
+
+d-BB@0x73c : 
+	518     (0000073c) return-void          
+

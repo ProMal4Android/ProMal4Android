@@ -1,0 +1,28 @@
+# Landroid/support/v7/widget/SuggestionsAdapter;->setViewDrawable(Landroid/widget/ImageView; Landroid/graphics/drawable/Drawable; I)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.widget.ImageView
+# - v4:android.graphics.drawable.Drawable
+# - v5:int
+#
+# - return:void
+
+setViewDrawable-BB@0x0 : [ setViewDrawable-BB@0xc setViewDrawable-BB@0x14 ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) invoke-virtual       v3, v4, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	2       (00000008) if-nez               v4, +6
+
+setViewDrawable-BB@0xc : [ setViewDrawable-BB@0x12 ]
+	3       (0000000c) invoke-virtual       v3, v5, Landroid/widget/ImageView;->setVisibility(I)V
+
+setViewDrawable-BB@0x12 : 
+	4       (00000012) return-void          
+
+setViewDrawable-BB@0x14 : [ setViewDrawable-BB@0x12 ]
+	5       (00000014) invoke-virtual       v3, v1, Landroid/widget/ImageView;->setVisibility(I)V
+	6       (0000001a) invoke-virtual       v4, v1, v1, Landroid/graphics/drawable/Drawable;->setVisible(Z Z)Z
+	7       (00000020) const/4              v0, 1
+	8       (00000022) invoke-virtual       v4, v0, v1, Landroid/graphics/drawable/Drawable;->setVisible(Z Z)Z
+	9       (00000028) goto                 -b
+

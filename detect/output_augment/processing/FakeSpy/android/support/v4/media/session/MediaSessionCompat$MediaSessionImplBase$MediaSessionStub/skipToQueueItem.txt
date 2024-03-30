@@ -1,0 +1,16 @@
+# Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;->skipToQueueItem(J)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:long
+#
+# - return:void
+
+skipToQueueItem-BB@0x0 : 
+	0       (00000000) iget-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;->this$0 Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
+	1       (00000004) const/4              v1, 4
+	2       (00000006) invoke-static        v4, v5, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	3       (0000000c) move-result-object   v2
+	4       (0000000e) invoke-static        v0, v1, v2, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->access$700(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase; I Ljava/lang/Object;)V
+	5       (00000014) return-void          
+

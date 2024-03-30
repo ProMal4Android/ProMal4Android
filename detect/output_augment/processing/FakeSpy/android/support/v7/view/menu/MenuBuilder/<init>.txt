@@ -1,0 +1,44 @@
+# Landroid/support/v7/view/menu/MenuBuilder;-><init>(Landroid/content/Context;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Context
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v1, 1
+	1       (00000002) const/4              v0, 0
+	2       (00000004) invoke-direct        v2, Ljava/lang/Object;-><init>()V
+	3       (0000000a) iput                 v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mDefaultShowAsAction I
+	4       (0000000e) iput-boolean         v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mPreventDispatchingItemsChanged Z
+	5       (00000012) iput-boolean         v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mItemsChangedWhileDispatchPrevented Z
+	6       (00000016) iput-boolean         v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mOptionalIconsVisible Z
+	7       (0000001a) iput-boolean         v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mIsClosing Z
+	8       (0000001e) new-instance         v0, Ljava/util/ArrayList;
+	9       (00000022) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	10      (00000028) iput-object          v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mTempShortcutItemList Ljava/util/ArrayList;
+	11      (0000002c) new-instance         v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+	12      (00000030) invoke-direct        v0, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+	13      (00000036) iput-object          v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mPresenters Ljava/util/concurrent/CopyOnWriteArrayList;
+	14      (0000003a) iput-object          v3, v2, Landroid/support/v7/view/menu/MenuBuilder;->mContext Landroid/content/Context;
+	15      (0000003e) invoke-virtual       v3, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	16      (00000044) move-result-object   v0
+	17      (00000046) iput-object          v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mResources Landroid/content/res/Resources;
+	18      (0000004a) new-instance         v0, Ljava/util/ArrayList;
+	19      (0000004e) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	20      (00000054) iput-object          v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	21      (00000058) new-instance         v0, Ljava/util/ArrayList;
+	22      (0000005c) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	23      (00000062) iput-object          v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mVisibleItems Ljava/util/ArrayList;
+	24      (00000066) iput-boolean         v1, v2, Landroid/support/v7/view/menu/MenuBuilder;->mIsVisibleItemsStale Z
+	25      (0000006a) new-instance         v0, Ljava/util/ArrayList;
+	26      (0000006e) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	27      (00000074) iput-object          v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mActionItems Ljava/util/ArrayList;
+	28      (00000078) new-instance         v0, Ljava/util/ArrayList;
+	29      (0000007c) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	30      (00000082) iput-object          v0, v2, Landroid/support/v7/view/menu/MenuBuilder;->mNonActionItems Ljava/util/ArrayList;
+	31      (00000086) iput-boolean         v1, v2, Landroid/support/v7/view/menu/MenuBuilder;->mIsActionItemsStale Z
+	32      (0000008a) invoke-direct        v2, v1, Landroid/support/v7/view/menu/MenuBuilder;->setShortcutsVisibleInner(Z)V
+	33      (00000090) return-void          
+

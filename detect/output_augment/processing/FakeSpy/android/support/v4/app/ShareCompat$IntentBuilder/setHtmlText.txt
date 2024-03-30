@@ -1,0 +1,26 @@
+# Landroid/support/v4/app/ShareCompat$IntentBuilder;->setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.String
+#
+# - return:android.support.v4.app.ShareCompat$IntentBuilder
+
+setHtmlText-BB@0x0 : [ setHtmlText-BB@0x22 setHtmlText-BB@0x30 ]
+	0       (00000000) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	1       (00000004) const-string         v1, 'android.intent.extra.HTML_TEXT'
+	2       (00000008) invoke-virtual       v0, v1, v3, Landroid/content/Intent;->putExtra(Ljava/lang/String; Ljava/lang/String;)Landroid/content/Intent;
+	3       (0000000e) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	4       (00000012) const-string         v1, 'android.intent.extra.TEXT'
+	5       (00000016) invoke-virtual       v0, v1, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+	6       (0000001c) move-result          v0
+	7       (0000001e) if-nez               v0, +9
+
+setHtmlText-BB@0x22 : [ setHtmlText-BB@0x30 ]
+	8       (00000022) invoke-static        v3, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
+	9       (00000028) move-result-object   v0
+	10      (0000002a) invoke-virtual       v2, v0, Landroid/support/v4/app/ShareCompat$IntentBuilder;->setText(Ljava/lang/CharSequence;)Landroid/support/v4/app/ShareCompat$IntentBuilder;
+
+setHtmlText-BB@0x30 : 
+	11      (00000030) return-object        v2
+

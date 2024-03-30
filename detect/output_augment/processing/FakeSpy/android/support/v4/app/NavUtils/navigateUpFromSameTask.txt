@@ -1,0 +1,44 @@
+# Landroid/support/v4/app/NavUtils;->navigateUpFromSameTask(Landroid/app/Activity;)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.app.Activity
+#
+# - return:void
+
+navigateUpFromSameTask-BB@0x0 : [ navigateUpFromSameTask-BB@0xc navigateUpFromSameTask-BB@0x72 ]
+	0       (00000000) invoke-static        v4, Landroid/support/v4/app/NavUtils;->getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
+	1       (00000006) move-result-object   v0
+	2       (00000008) if-nez               v0, +35
+
+navigateUpFromSameTask-BB@0xc : 
+	3       (0000000c) new-instance         v1, Ljava/lang/IllegalArgumentException;
+	4       (00000010) new-instance         v2, Ljava/lang/StringBuilder;
+	5       (00000014) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	6       (0000001a) const-string         v3, 'Activity '
+	7       (0000001e) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000024) move-result-object   v2
+	9       (00000026) invoke-virtual       v4, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	10      (0000002c) move-result-object   v3
+	11      (0000002e) invoke-virtual       v3, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	12      (00000034) move-result-object   v3
+	13      (00000036) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (0000003c) move-result-object   v2
+	15      (0000003e) const-string         v3, ' does not have a parent activity name specified.'
+	16      (00000042) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000048) move-result-object   v2
+	18      (0000004a) const-string         v3, ' (Did you forget to add the android.support.PARENT_ACTIVITY <meta-data> '
+	19      (0000004e) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (00000054) move-result-object   v2
+	21      (00000056) const-string         v3, ' element in your manifest?)'
+	22      (0000005a) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	23      (00000060) move-result-object   v2
+	24      (00000062) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	25      (00000068) move-result-object   v2
+	26      (0000006a) invoke-direct        v1, v2, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	27      (00000070) throw                v1
+
+navigateUpFromSameTask-BB@0x72 : 
+	28      (00000072) invoke-static        v4, v0, Landroid/support/v4/app/NavUtils;->navigateUpTo(Landroid/app/Activity; Landroid/content/Intent;)V
+	29      (00000078) return-void          
+

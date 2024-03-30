@@ -1,0 +1,59 @@
+# Landroid/support/v4/provider/RawDocumentFile;->deleteContents(Ljava/io/File;)Z [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:java.io.File
+#
+# - return:boolean
+
+deleteContents-BB@0x0 : [ deleteContents-BB@0xe deleteContents-BB@0x76 ]
+	0       (00000000) invoke-virtual       v9, Ljava/io/File;->listFiles()[Ljava/io/File;
+	1       (00000006) move-result-object   v2
+	2       (00000008) const/4              v5, 1
+	3       (0000000a) if-eqz               v2, +36
+
+deleteContents-BB@0xe : [ deleteContents-BB@0x14 ]
+	4       (0000000e) move-object          v0, v2
+	5       (00000010) array-length         v4, v0
+	6       (00000012) const/4              v3, 0
+
+deleteContents-BB@0x14 : [ deleteContents-BB@0x18 deleteContents-BB@0x76 ]
+	7       (00000014) if-ge                v3, v4, +31
+
+deleteContents-BB@0x18 : [ deleteContents-BB@0x28 deleteContents-BB@0x32 ]
+	8       (00000018) aget-object          v1, v0, v3
+	9       (0000001c) invoke-virtual       v1, Ljava/io/File;->isDirectory()Z
+	10      (00000022) move-result          v6
+	11      (00000024) if-eqz               v6, +7
+
+deleteContents-BB@0x28 : [ deleteContents-BB@0x32 ]
+	12      (00000028) invoke-static        v1, Landroid/support/v4/provider/RawDocumentFile;->deleteContents(Ljava/io/File;)Z
+	13      (0000002e) move-result          v6
+	14      (00000030) and-int/2addr        v5, v6
+
+deleteContents-BB@0x32 : [ deleteContents-BB@0x3e deleteContents-BB@0x70 ]
+	15      (00000032) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	16      (00000038) move-result          v6
+	17      (0000003a) if-nez               v6, +1b
+
+deleteContents-BB@0x3e : [ deleteContents-BB@0x70 ]
+	18      (0000003e) const-string         v6, 'DocumentFile'
+	19      (00000042) new-instance         v7, Ljava/lang/StringBuilder;
+	20      (00000046) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	21      (0000004c) const-string         v8, 'Failed to delete '
+	22      (00000050) invoke-virtual       v7, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	23      (00000056) move-result-object   v7
+	24      (00000058) invoke-virtual       v7, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	25      (0000005e) move-result-object   v7
+	26      (00000060) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	27      (00000066) move-result-object   v7
+	28      (00000068) invoke-static        v6, v7, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	29      (0000006e) const/4              v5, 0
+
+deleteContents-BB@0x70 : [ deleteContents-BB@0x14 ]
+	30      (00000070) add-int/lit8         v3, v3, 1
+	31      (00000074) goto                 -30
+
+deleteContents-BB@0x76 : 
+	32      (00000076) return               v5
+

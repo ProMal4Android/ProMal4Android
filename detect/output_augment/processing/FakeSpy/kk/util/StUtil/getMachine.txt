@@ -1,0 +1,136 @@
+# Lkk/util/StUtil;->getMachine(Landroid/content/Context;)Ljava/lang/String; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.Context
+#
+# - return:java.lang.String
+
+getMachine-BB@0x0 : [ getMachine-BB@0x2e getMachine-BB@0xfe ]
+	0       (00000000) new-instance         v4, Ljava/lang/StringBuilder;
+	1       (00000004) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	2       (0000000a) const-string         v5, 'phone'
+	3       (0000000e) invoke-virtual       v6, v5, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	4       (00000014) move-result-object   v2
+	5       (00000016) check-cast           v2, Landroid/telephony/TelephonyManager;
+	6       (0000001a) invoke-virtual       v2, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;
+	7       (00000020) move-result-object   v3
+	8       (00000022) invoke-virtual       v2, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
+	9       (00000028) move-result-object   v1
+	10      (0000002a) if-eqz               v3, +6a
+
+getMachine-BB@0x2e : [ getMachine-BB@0x3e getMachine-BB@0xfe ]
+	11      (0000002e) const-string         v5, ''
+	12      (00000032) invoke-virtual       v3, v5, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	13      (00000038) move-result          v5
+	14      (0000003a) if-nez               v5, +62
+
+getMachine-BB@0x3e : [ getMachine-BB@0x4e getMachine-BB@0x5e ]
+	15      (0000003e) const-string         v5, '+86'
+	16      (00000042) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	17      (00000048) move-result          v5
+	18      (0000004a) if-eqz               v5, +a
+
+getMachine-BB@0x4e : [ getMachine-BB@0x5c ]
+	19      (0000004e) const/4              v5, 3
+	20      (00000050) invoke-virtual       v3, v5, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	21      (00000056) move-result-object   v3
+	22      (00000058) const-string         v5, '88'
+
+getMachine-BB@0x5c : 
+	23      (0000005c) return-object        v5
+
+getMachine-BB@0x5e : [ getMachine-BB@0x6e getMachine-BB@0x7e ]
+	24      (0000005e) const-string         v5, '86'
+	25      (00000062) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	26      (00000068) move-result          v5
+	27      (0000006a) if-eqz               v5, +a
+
+getMachine-BB@0x6e : [ getMachine-BB@0x5c ]
+	28      (0000006e) const/4              v5, 2
+	29      (00000070) invoke-virtual       v3, v5, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	30      (00000076) move-result-object   v3
+	31      (00000078) const-string         v5, '88'
+	32      (0000007c) goto                 -10
+
+getMachine-BB@0x7e : [ getMachine-BB@0x8e getMachine-BB@0x98 ]
+	33      (0000007e) const-string         v5, '+'
+	34      (00000082) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	35      (00000088) move-result          v5
+	36      (0000008a) if-eqz               v5, +7
+
+getMachine-BB@0x8e : [ getMachine-BB@0x98 ]
+	37      (0000008e) const/4              v5, 1
+	38      (00000090) invoke-virtual       v3, v5, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	39      (00000096) move-result-object   v3
+
+getMachine-BB@0x98 : [ getMachine-BB@0xa8 getMachine-BB@0xe8 ]
+	40      (00000098) const-string         v5, '13'
+	41      (0000009c) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	42      (000000a2) move-result          v5
+	43      (000000a4) if-nez               v5, +22
+
+getMachine-BB@0xa8 : [ getMachine-BB@0xb8 getMachine-BB@0xe8 ]
+	44      (000000a8) const-string         v5, '15'
+	45      (000000ac) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	46      (000000b2) move-result          v5
+	47      (000000b4) if-nez               v5, +1a
+
+getMachine-BB@0xb8 : [ getMachine-BB@0xc8 getMachine-BB@0xe8 ]
+	48      (000000b8) const-string         v5, '17'
+	49      (000000bc) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	50      (000000c2) move-result          v5
+	51      (000000c4) if-nez               v5, +12
+
+getMachine-BB@0xc8 : [ getMachine-BB@0xd8 getMachine-BB@0xe8 ]
+	52      (000000c8) const-string         v5, '18'
+	53      (000000cc) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	54      (000000d2) move-result          v5
+	55      (000000d4) if-nez               v5, +a
+
+getMachine-BB@0xd8 : [ getMachine-BB@0xe8 getMachine-BB@0xee ]
+	56      (000000d8) const-string         v5, '19'
+	57      (000000dc) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	58      (000000e2) move-result          v5
+	59      (000000e4) if-eqz               v5, +5
+
+getMachine-BB@0xe8 : [ getMachine-BB@0x5c ]
+	60      (000000e8) const-string         v5, '88'
+	61      (000000ec) goto                 -48
+
+getMachine-BB@0xee : [ getMachine-BB@0x5c ]
+	62      (000000ee) invoke-virtual       v4, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	63      (000000f4) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	64      (000000fa) move-result-object   v5
+	65      (000000fc) goto                 -50
+
+getMachine-BB@0xfe : [ getMachine-BB@0x112 getMachine-BB@0x122 ]
+	66      (000000fe) invoke-virtual       v2, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+	67      (00000104) move-result-object   v0
+	68      (00000106) invoke-static        v0, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	69      (0000010c) move-result          v5
+	70      (0000010e) if-nez               v5, +a
+
+getMachine-BB@0x112 : [ getMachine-BB@0x5c ]
+	71      (00000112) invoke-virtual       v4, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	72      (00000118) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	73      (0000011e) move-result-object   v5
+	74      (00000120) goto                 -62
+
+getMachine-BB@0x122 : [ getMachine-BB@0x126 getMachine-BB@0x13c ]
+	75      (00000122) if-eqz               v1, +d
+
+getMachine-BB@0x126 : [ getMachine-BB@0x136 getMachine-BB@0x13c ]
+	76      (00000126) const-string         v5, ''
+	77      (0000012a) invoke-virtual       v1, v5, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	78      (00000130) move-result          v5
+	79      (00000132) if-nez               v5, +5
+
+getMachine-BB@0x136 : [ getMachine-BB@0x13c ]
+	80      (00000136) invoke-virtual       v4, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+getMachine-BB@0x13c : [ getMachine-BB@0x5c ]
+	81      (0000013c) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	82      (00000142) move-result-object   v5
+	83      (00000144) goto                 -74
+

@@ -1,0 +1,103 @@
+# Lcom/realtalk/he;->a(Landroid/widget/SpinnerAdapter; Landroid/graphics/drawable/Drawable;)I [access_flags=final]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:android.widget.SpinnerAdapter
+# - v12:android.graphics.drawable.Drawable
+#
+# - return:int
+
+a-BB@0x0 : [ a-BB@0xa a-BB@0xc ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) const/4              v9, -2
+	2       (00000004) const/4              v0, 0
+	3       (00000006) if-nez               v11, +3
+
+a-BB@0xa : 
+	4       (0000000a) return               v0
+
+a-BB@0xc : [ a-BB@0x6a ]
+	5       (0000000c) invoke-virtual       v10, Lcom/realtalk/he;->getMeasuredWidth()I
+	6       (00000012) move-result          v1
+	7       (00000014) invoke-static        v1, v0, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	8       (0000001a) move-result          v6
+	9       (0000001c) invoke-virtual       v10, Lcom/realtalk/he;->getMeasuredHeight()I
+	10      (00000022) move-result          v1
+	11      (00000024) invoke-static        v1, v0, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	12      (0000002a) move-result          v7
+	13      (0000002c) invoke-virtual       v10, Lcom/realtalk/he;->getSelectedItemPosition()I
+	14      (00000032) move-result          v1
+	15      (00000034) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	16      (0000003a) move-result          v1
+	17      (0000003c) invoke-interface     v11, Landroid/widget/SpinnerAdapter;->getCount()I
+	18      (00000042) move-result          v3
+	19      (00000044) add-int/lit8         v4, v1, 15
+	20      (00000048) invoke-static        v3, v4, Ljava/lang/Math;->min(I I)I
+	21      (0000004e) move-result          v8
+	22      (00000050) sub-int              v3, v8, v1
+	23      (00000054) rsub-int/lit8        v3, v3, 15
+	24      (00000058) sub-int/2addr        v1, v3
+	25      (0000005a) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	26      (00000060) move-result          v1
+	27      (00000062) move                 v5, v1
+	28      (00000064) move-object          v3, v2
+	29      (00000066) move                 v4, v0
+	30      (00000068) move                 v1, v0
+
+a-BB@0x6a : [ a-BB@0x6e a-BB@0xc0 ]
+	31      (0000006a) if-ge                v5, v8, +2b
+
+a-BB@0x6e : [ a-BB@0x7a a-BB@0xe8 ]
+	32      (0000006e) invoke-interface     v11, v5, Landroid/widget/SpinnerAdapter;->getItemViewType(I)I
+	33      (00000074) move-result          v0
+	34      (00000076) if-eq                v0, v1, +39
+
+a-BB@0x7a : [ a-BB@0x7c ]
+	35      (0000007a) move-object          v1, v2
+
+a-BB@0x7c : [ a-BB@0x90 a-BB@0xa0 ]
+	36      (0000007c) invoke-interface     v11, v5, v1, v10, Landroid/widget/SpinnerAdapter;->getView(I Landroid/view/View; Landroid/view/ViewGroup;)Landroid/view/View;
+	37      (00000082) move-result-object   v3
+	38      (00000084) invoke-virtual       v3, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	39      (0000008a) move-result-object   v1
+	40      (0000008c) if-nez               v1, +a
+
+a-BB@0x90 : [ a-BB@0xa0 ]
+	41      (00000090) new-instance         v1, Landroid/view/ViewGroup$LayoutParams;
+	42      (00000094) invoke-direct        v1, v9, v9, Landroid/view/ViewGroup$LayoutParams;-><init>(I I)V
+	43      (0000009a) invoke-virtual       v3, v1, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+a-BB@0xa0 : [ a-BB@0x6a ]
+	44      (000000a0) invoke-virtual       v3, v6, v7, Landroid/view/View;->measure(I I)V
+	45      (000000a6) invoke-virtual       v3, Landroid/view/View;->getMeasuredWidth()I
+	46      (000000ac) move-result          v1
+	47      (000000ae) invoke-static        v4, v1, Ljava/lang/Math;->max(I I)I
+	48      (000000b4) move-result          v4
+	49      (000000b6) add-int/lit8         v1, v5, 1
+	50      (000000ba) move                 v5, v1
+	51      (000000bc) move                 v1, v0
+	52      (000000be) goto                 -2a
+
+a-BB@0xc0 : [ a-BB@0xc4 a-BB@0xe4 ]
+	53      (000000c0) if-eqz               v12, +12
+
+a-BB@0xc4 : [ a-BB@0xa ]
+	54      (000000c4) iget-object          v0, v10, Lcom/realtalk/he;->i Landroid/graphics/Rect;
+	55      (000000c8) invoke-virtual       v12, v0, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+	56      (000000ce) iget-object          v0, v10, Lcom/realtalk/he;->i Landroid/graphics/Rect;
+	57      (000000d2) iget                 v0, v0, Landroid/graphics/Rect;->left I
+	58      (000000d6) iget-object          v1, v10, Lcom/realtalk/he;->i Landroid/graphics/Rect;
+	59      (000000da) iget                 v1, v1, Landroid/graphics/Rect;->right I
+	60      (000000de) add-int/2addr        v0, v1
+	61      (000000e0) add-int/2addr        v0, v4
+	62      (000000e2) goto                 -6c
+
+a-BB@0xe4 : [ a-BB@0xa ]
+	63      (000000e4) move                 v0, v4
+	64      (000000e6) goto                 -6e
+
+a-BB@0xe8 : [ a-BB@0x7c ]
+	65      (000000e8) move                 v0, v1
+	66      (000000ea) move-object          v1, v3
+	67      (000000ec) goto                 -38
+

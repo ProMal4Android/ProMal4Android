@@ -1,0 +1,102 @@
+# Landroid/support/design/widget/CoordinatorLayout;->b(Landroid/view/View;)Landroid/support/design/widget/CoordinatorLayout$e; [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.view.View
+#
+# - return:android.support.design.widget.CoordinatorLayout$e
+
+b-BB@0x0 : [ b-BB@0x16 b-BB@0x46 ]
+	0       (00000000) const/4              v6, 1
+	1       (00000002) invoke-virtual       v7, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	2       (00000008) move-result-object   v0
+	3       (0000000a) check-cast           v0, Landroid/support/design/widget/CoordinatorLayout$e;
+	4       (0000000e) iget-boolean         v1, v0, Landroid/support/design/widget/CoordinatorLayout$e;->b Z
+	5       (00000012) if-nez               v1, +1a
+
+b-BB@0x16 : [ b-BB@0x1e b-BB@0x48 ]
+	6       (00000016) instance-of          v1, v7, Landroid/support/design/widget/CoordinatorLayout$a;
+	7       (0000001a) if-eqz               v1, +17
+
+b-BB@0x1e : [ b-BB@0x2e b-BB@0x3c ]
+	8       (0000001e) check-cast           v7, Landroid/support/design/widget/CoordinatorLayout$a;
+	9       (00000022) invoke-interface     v7, Landroid/support/design/widget/CoordinatorLayout$a;->a()Landroid/support/design/widget/CoordinatorLayout$b;
+	10      (00000028) move-result-object   v1
+	11      (0000002a) if-nez               v1, +9
+
+b-BB@0x2e : [ b-BB@0x3c ]
+	12      (0000002e) const-string         v2, 'CoordinatorLayout'
+	13      (00000032) const-string         v3, 'Attached behavior class is null'
+	14      (00000036) invoke-static        v2, v3, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+
+b-BB@0x3c : [ b-BB@0x46 ]
+	15      (0000003c) invoke-virtual       v0, v1, Landroid/support/design/widget/CoordinatorLayout$e;->a(Landroid/support/design/widget/CoordinatorLayout$b;)V
+	16      (00000042) iput-boolean         v6, v0, Landroid/support/design/widget/CoordinatorLayout$e;->b Z
+
+b-BB@0x46 : 
+	17      (00000046) return-object        v0
+
+b-BB@0x48 : [ b-BB@0x52 ]
+	18      (00000048) invoke-virtual       v7, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	19      (0000004e) move-result-object   v2
+	20      (00000050) const/4              v1, 0
+
+b-BB@0x52 : [ b-BB@0x56 b-BB@0x74 ]
+	21      (00000052) if-eqz               v2, +11
+
+b-BB@0x56 : [ b-BB@0x6a b-BB@0x74 ]
+	22      (00000056) const-class          v1, Landroid/support/design/widget/CoordinatorLayout$c;
+	23      (0000005a) invoke-virtual       v2, v1, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	24      (00000060) move-result-object   v1
+	25      (00000062) check-cast           v1, Landroid/support/design/widget/CoordinatorLayout$c;
+	26      (00000066) if-nez               v1, +7
+
+b-BB@0x6a : [ b-BB@0x52 ]
+	27      (0000006a) invoke-virtual       v2, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+	28      (00000070) move-result-object   v2
+	29      (00000072) goto                 -10
+
+b-BB@0x74 : [ b-BB@0x7a b-BB@0xa8 ]
+	30      (00000074) move-object          v2, v1
+	31      (00000076) if-eqz               v2, +19
+
+b-BB@0x7a : [ b-BB@0xa8 ]
+	32      (0000007a) invoke-interface     v2, Landroid/support/design/widget/CoordinatorLayout$c;->a()Ljava/lang/Class;
+	33      (00000080) move-result-object   v1
+	34      (00000082) const/4              v3, 0
+	35      (00000084) new-array            v3, v3, [Ljava/lang/Class;
+	36      (00000088) invoke-virtual       v1, v3, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+	37      (0000008e) move-result-object   v1
+	38      (00000090) const/4              v3, 0
+	39      (00000092) new-array            v3, v3, [Ljava/lang/Object;
+	40      (00000096) invoke-virtual       v1, v3, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+	41      (0000009c) move-result-object   v1
+	42      (0000009e) check-cast           v1, Landroid/support/design/widget/CoordinatorLayout$b;
+	43      (000000a2) invoke-virtual       v0, v1, Landroid/support/design/widget/CoordinatorLayout$e;->a(Landroid/support/design/widget/CoordinatorLayout$b;)V
+	7a:a7
+	(Ljava/lang/Exception; -> ae b-BB@0xae)
+
+b-BB@0xa8 : [ b-BB@0x46 ]
+	44      (000000a8) iput-boolean         v6, v0, Landroid/support/design/widget/CoordinatorLayout$e;->b Z
+	45      (000000ac) goto                 -33
+
+b-BB@0xae : [ b-BB@0xa8 ]
+	46      (000000ae) move-exception       v1
+	47      (000000b0) const-string         v3, 'CoordinatorLayout'
+	48      (000000b4) new-instance         v4, Ljava/lang/StringBuilder;
+	49      (000000b8) const-string         v5, 'Default behavior class '
+	50      (000000bc) invoke-direct        v4, v5, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	51      (000000c2) invoke-interface     v2, Landroid/support/design/widget/CoordinatorLayout$c;->a()Ljava/lang/Class;
+	52      (000000c8) move-result-object   v2
+	53      (000000ca) invoke-virtual       v2, Ljava/lang/Class;->getName()Ljava/lang/String;
+	54      (000000d0) move-result-object   v2
+	55      (000000d2) invoke-virtual       v4, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	56      (000000d8) move-result-object   v2
+	57      (000000da) const-string         v4, ' could not be instantiated. Did you forget a default constructor?'
+	58      (000000de) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	59      (000000e4) move-result-object   v2
+	60      (000000e6) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	61      (000000ec) move-result-object   v2
+	62      (000000ee) invoke-static        v3, v2, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	63      (000000f4) goto                 -26
+

@@ -1,0 +1,52 @@
+# Landroid/support/v4/widget/SlidingPaneLayout;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.content.Context
+# - v6:android.util.AttributeSet
+# - v7:int
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v2, 1
+	1       (00000002) const/high16         v3, 16128 # [0.5]
+	2       (00000006) invoke-direct        v4, v5, v6, v7, Landroid/view/ViewGroup;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	3       (0000000c) const                v0, -858993460 # [-107374176.0]
+	4       (00000012) iput                 v0, v4, Landroid/support/v4/widget/SlidingPaneLayout;->b I
+	5       (00000016) iput-boolean         v2, v4, Landroid/support/v4/widget/SlidingPaneLayout;->s Z
+	6       (0000001a) new-instance         v0, Landroid/graphics/Rect;
+	7       (0000001e) invoke-direct        v0, Landroid/graphics/Rect;-><init>()V
+	8       (00000024) iput-object          v0, v4, Landroid/support/v4/widget/SlidingPaneLayout;->t Landroid/graphics/Rect;
+	9       (00000028) new-instance         v0, Ljava/util/ArrayList;
+	10      (0000002c) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	11      (00000032) iput-object          v0, v4, Landroid/support/v4/widget/SlidingPaneLayout;->u Ljava/util/ArrayList;
+	12      (00000036) invoke-virtual       v5, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	13      (0000003c) move-result-object   v0
+	14      (0000003e) invoke-virtual       v0, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	15      (00000044) move-result-object   v0
+	16      (00000046) iget                 v0, v0, Landroid/util/DisplayMetrics;->density F
+	17      (0000004a) const/high16         v1, 16896 # [32.0]
+	18      (0000004e) mul-float/2addr      v1, v0
+	19      (00000050) add-float/2addr      v1, v3
+	20      (00000052) float-to-int         v1, v1
+	21      (00000054) iput                 v1, v4, Landroid/support/v4/widget/SlidingPaneLayout;->f I
+	22      (00000058) invoke-static        v5, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+	23      (0000005e) const/4              v1, 0
+	24      (00000060) invoke-virtual       v4, v1, Landroid/support/v4/widget/SlidingPaneLayout;->setWillNotDraw(Z)V
+	25      (00000066) new-instance         v1, Landroid/support/v4/widget/bs;
+	26      (0000006a) invoke-direct        v1, v4, Landroid/support/v4/widget/bs;-><init>(Landroid/support/v4/widget/SlidingPaneLayout;)V
+	27      (00000070) invoke-static        v4, v1, Landroid/support/v4/view/cf;->a(Landroid/view/View; Landroid/support/v4/view/a;)V
+	28      (00000076) invoke-static        v4, v2, Landroid/support/v4/view/cf;->c(Landroid/view/View; I)V
+	29      (0000007c) new-instance         v1, Landroid/support/v4/widget/bu;
+	30      (00000080) const/4              v2, 0
+	31      (00000082) invoke-direct        v1, v4, v2, Landroid/support/v4/widget/bu;-><init>(Landroid/support/v4/widget/SlidingPaneLayout; Landroid/support/v4/widget/br;)V
+	32      (00000088) invoke-static        v4, v3, v1, Landroid/support/v4/widget/cv;->a(Landroid/view/ViewGroup; F Landroid/support/v4/widget/cy;)Landroid/support/v4/widget/cv;
+	33      (0000008e) move-result-object   v1
+	34      (00000090) iput-object          v1, v4, Landroid/support/v4/widget/SlidingPaneLayout;->q Landroid/support/v4/widget/cv;
+	35      (00000094) iget-object          v1, v4, Landroid/support/v4/widget/SlidingPaneLayout;->q Landroid/support/v4/widget/cv;
+	36      (00000098) const/high16         v2, 17352 # [400.0]
+	37      (0000009c) mul-float/2addr      v0, v2
+	38      (0000009e) invoke-virtual       v1, v0, Landroid/support/v4/widget/cv;->a(F)V
+	39      (000000a4) return-void          
+

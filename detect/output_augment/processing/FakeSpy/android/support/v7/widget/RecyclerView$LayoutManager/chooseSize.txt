@@ -1,0 +1,35 @@
+# Landroid/support/v7/widget/RecyclerView$LayoutManager;->chooseSize(I I I)I [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:int
+# - v4:int
+# - v5:int
+#
+# - return:int
+
+chooseSize-BB@0x0 : [ D:chooseSize-BB@0x16 -2147483648:chooseSize-BB@0x20 1073741824:chooseSize-BB@0x1e ]
+	0       (00000000) invoke-static        v3, Landroid/view/View$MeasureSpec;->getMode(I)I
+	1       (00000006) move-result          v0
+	2       (00000008) invoke-static        v3, Landroid/view/View$MeasureSpec;->getSize(I)I
+	3       (0000000e) move-result          v1
+	4       (00000010) sparse-switch        v0, +12 (0x34)
+
+chooseSize-BB@0x16 : [ chooseSize-BB@0x1e ]
+	5       (00000016) invoke-static        v4, v5, Ljava/lang/Math;->max(I I)I
+	6       (0000001c) move-result          v1
+
+chooseSize-BB@0x1e : 
+	7       (0000001e) return               v1
+
+chooseSize-BB@0x20 : [ chooseSize-BB@0x1e ]
+	8       (00000020) invoke-static        v4, v5, Ljava/lang/Math;->max(I I)I
+	9       (00000026) move-result          v2
+	10      (00000028) invoke-static        v1, v2, Ljava/lang/Math;->min(I I)I
+	11      (0000002e) move-result          v1
+	12      (00000030) goto                 -9
+
+chooseSize-BB@0x32 : 
+	13      (00000032) nop                  
+	14      (00000034) sparse-switch-payload -80000000 40000000
+

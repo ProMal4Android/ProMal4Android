@@ -1,0 +1,144 @@
+# Landroid/support/v4/widget/SlidingPaneLayout;->drawChild(Landroid/graphics/Canvas; Landroid/view/View; J)Z [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.graphics.Canvas
+# - v10:android.view.View
+# - v11:long
+#
+# - return:boolean
+
+drawChild-BB@0x0 : [ drawChild-BB@0x1e drawChild-BB@0x72 ]
+	0       (00000000) invoke-virtual       v9, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	1       (00000006) move-result-object   v1
+	2       (00000008) check-cast           v1, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;
+	3       (0000000c) const/4              v4, 2
+	4       (0000000e) invoke-virtual       v8, v4, Landroid/graphics/Canvas;->save(I)I
+	5       (00000014) move-result          v3
+	6       (00000016) iget-boolean         v4, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mCanSlide Z
+	7       (0000001a) if-eqz               v4, +2c
+
+drawChild-BB@0x1e : [ drawChild-BB@0x26 drawChild-BB@0x72 ]
+	8       (0000001e) iget-boolean         v4, v1, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->slideable Z
+	9       (00000022) if-nez               v4, +28
+
+drawChild-BB@0x26 : [ drawChild-BB@0x2e drawChild-BB@0x72 ]
+	10      (00000026) iget-object          v4, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mSlideableView Landroid/view/View;
+	11      (0000002a) if-eqz               v4, +24
+
+drawChild-BB@0x2e : [ drawChild-BB@0x44 drawChild-BB@0x8e ]
+	12      (0000002e) iget-object          v4, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mTmpRect Landroid/graphics/Rect;
+	13      (00000032) invoke-virtual       v8, v4, Landroid/graphics/Canvas;->getClipBounds(Landroid/graphics/Rect;)Z
+	14      (00000038) invoke-direct        v7, Landroid/support/v4/widget/SlidingPaneLayout;->isLayoutRtlSupport()Z
+	15      (0000003e) move-result          v4
+	16      (00000040) if-eqz               v4, +27
+
+drawChild-BB@0x44 : [ drawChild-BB@0x68 ]
+	17      (00000044) iget-object          v4, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mTmpRect Landroid/graphics/Rect;
+	18      (00000048) iget-object          v5, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mTmpRect Landroid/graphics/Rect;
+	19      (0000004c) iget                 v5, v5, Landroid/graphics/Rect;->left I
+	20      (00000050) iget-object          v6, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mSlideableView Landroid/view/View;
+	21      (00000054) invoke-virtual       v6, Landroid/view/View;->getRight()I
+	22      (0000005a) move-result          v6
+	23      (0000005c) invoke-static        v5, v6, Ljava/lang/Math;->max(I I)I
+	24      (00000062) move-result          v5
+	25      (00000064) iput                 v5, v4, Landroid/graphics/Rect;->left I
+
+drawChild-BB@0x68 : [ drawChild-BB@0x72 ]
+	26      (00000068) iget-object          v4, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mTmpRect Landroid/graphics/Rect;
+	27      (0000006c) invoke-virtual       v8, v4, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
+
+drawChild-BB@0x72 : [ drawChild-BB@0x7e drawChild-BB@0xb4 ]
+	28      (00000072) sget                 v4, Landroid/os/Build$VERSION;->SDK_INT I
+	29      (00000076) const/16             v5, 11
+	30      (0000007a) if-lt                v4, v5, +1d
+
+drawChild-BB@0x7e : [ drawChild-BB@0x86 ]
+	31      (0000007e) invoke-super         v7, v8, v9, v10, v11, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas; Landroid/view/View; J)Z
+	32      (00000084) move-result          v2
+
+drawChild-BB@0x86 : 
+	33      (00000086) invoke-virtual       v8, v3, Landroid/graphics/Canvas;->restoreToCount(I)V
+	34      (0000008c) return               v2
+
+drawChild-BB@0x8e : [ drawChild-BB@0x68 ]
+	35      (0000008e) iget-object          v4, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mTmpRect Landroid/graphics/Rect;
+	36      (00000092) iget-object          v5, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mTmpRect Landroid/graphics/Rect;
+	37      (00000096) iget                 v5, v5, Landroid/graphics/Rect;->right I
+	38      (0000009a) iget-object          v6, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mSlideableView Landroid/view/View;
+	39      (0000009e) invoke-virtual       v6, Landroid/view/View;->getLeft()I
+	40      (000000a4) move-result          v6
+	41      (000000a6) invoke-static        v5, v6, Ljava/lang/Math;->min(I I)I
+	42      (000000ac) move-result          v5
+	43      (000000ae) iput                 v5, v4, Landroid/graphics/Rect;->right I
+	44      (000000b2) goto                 -25
+
+drawChild-BB@0xb4 : [ drawChild-BB@0xbc drawChild-BB@0x152 ]
+	45      (000000b4) iget-boolean         v4, v1, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->dimWhenOffset Z
+	46      (000000b8) if-eqz               v4, +4d
+
+drawChild-BB@0xbc : [ drawChild-BB@0xca drawChild-BB@0x152 ]
+	47      (000000bc) iget                 v4, v7, Landroid/support/v4/widget/SlidingPaneLayout;->mSlideOffset F
+	48      (000000c0) const/4              v5, 0
+	49      (000000c2) cmpl-float           v4, v4, v5
+	50      (000000c6) if-lez               v4, +46
+
+drawChild-BB@0xca : [ drawChild-BB@0xd6 drawChild-BB@0xde ]
+	51      (000000ca) invoke-virtual       v9, Landroid/view/View;->isDrawingCacheEnabled()Z
+	52      (000000d0) move-result          v4
+	53      (000000d2) if-nez               v4, +6
+
+drawChild-BB@0xd6 : [ drawChild-BB@0xde ]
+	54      (000000d6) const/4              v4, 1
+	55      (000000d8) invoke-virtual       v9, v4, Landroid/view/View;->setDrawingCacheEnabled(Z)V
+
+drawChild-BB@0xde : [ drawChild-BB@0xea drawChild-BB@0x10c ]
+	56      (000000de) invoke-virtual       v9, Landroid/view/View;->getDrawingCache()Landroid/graphics/Bitmap;
+	57      (000000e4) move-result-object   v0
+	58      (000000e6) if-eqz               v0, +13
+
+drawChild-BB@0xea : [ drawChild-BB@0x86 ]
+	59      (000000ea) invoke-virtual       v9, Landroid/view/View;->getLeft()I
+	60      (000000f0) move-result          v4
+	61      (000000f2) int-to-float         v4, v4
+	62      (000000f4) invoke-virtual       v9, Landroid/view/View;->getTop()I
+	63      (000000fa) move-result          v5
+	64      (000000fc) int-to-float         v5, v5
+	65      (000000fe) iget-object          v6, v1, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->dimPaint Landroid/graphics/Paint;
+	66      (00000102) invoke-virtual       v8, v0, v4, v5, v6, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap; F F Landroid/graphics/Paint;)V
+	67      (00000108) const/4              v2, 0
+	68      (0000010a) goto                 -42
+
+drawChild-BB@0x10c : [ drawChild-BB@0x86 ]
+	69      (0000010c) const-string         v4, 'SlidingPaneLayout'
+	70      (00000110) new-instance         v5, Ljava/lang/StringBuilder;
+	71      (00000114) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	72      (0000011a) const-string         v6, 'drawChild: child view '
+	73      (0000011e) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	74      (00000124) move-result-object   v5
+	75      (00000126) invoke-virtual       v5, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	76      (0000012c) move-result-object   v5
+	77      (0000012e) const-string         v6, ' returned null drawing cache'
+	78      (00000132) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	79      (00000138) move-result-object   v5
+	80      (0000013a) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	81      (00000140) move-result-object   v5
+	82      (00000142) invoke-static        v4, v5, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	83      (00000148) invoke-super         v7, v8, v9, v10, v11, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas; Landroid/view/View; J)Z
+	84      (0000014e) move-result          v2
+	85      (00000150) goto                 -65
+
+drawChild-BB@0x152 : [ drawChild-BB@0x15e drawChild-BB@0x166 ]
+	86      (00000152) invoke-virtual       v9, Landroid/view/View;->isDrawingCacheEnabled()Z
+	87      (00000158) move-result          v4
+	88      (0000015a) if-eqz               v4, +6
+
+drawChild-BB@0x15e : [ drawChild-BB@0x166 ]
+	89      (0000015e) const/4              v4, 0
+	90      (00000160) invoke-virtual       v9, v4, Landroid/view/View;->setDrawingCacheEnabled(Z)V
+
+drawChild-BB@0x166 : [ drawChild-BB@0x86 ]
+	91      (00000166) invoke-super         v7, v8, v9, v10, v11, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas; Landroid/view/View; J)Z
+	92      (0000016c) move-result          v2
+	93      (0000016e) goto                 -74
+

@@ -1,0 +1,51 @@
+# Landroid/support/v4/widget/NestedScrollView;->computeVerticalScrollRange()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v8
+#
+# - return:int
+
+computeVerticalScrollRange-BB@0x0 : [ computeVerticalScrollRange-BB@0x2c computeVerticalScrollRange-BB@0x2e ]
+	0       (00000000) const/4              v7, 0
+	1       (00000002) invoke-virtual       v8, Landroid/support/v4/widget/NestedScrollView;->getChildCount()I
+	2       (00000008) move-result          v1
+	3       (0000000a) invoke-virtual       v8, Landroid/support/v4/widget/NestedScrollView;->getHeight()I
+	4       (00000010) move-result          v5
+	5       (00000012) invoke-virtual       v8, Landroid/support/v4/widget/NestedScrollView;->getPaddingBottom()I
+	6       (00000018) move-result          v6
+	7       (0000001a) sub-int/2addr        v5, v6
+	8       (0000001c) invoke-virtual       v8, Landroid/support/v4/widget/NestedScrollView;->getPaddingTop()I
+	9       (00000022) move-result          v6
+	10      (00000024) sub-int              v0, v5, v6
+	11      (00000028) if-nez               v1, +3
+
+computeVerticalScrollRange-BB@0x2c : 
+	12      (0000002c) return               v0
+
+computeVerticalScrollRange-BB@0x2e : [ computeVerticalScrollRange-BB@0x56 computeVerticalScrollRange-BB@0x5c ]
+	13      (0000002e) invoke-virtual       v8, v7, Landroid/support/v4/widget/NestedScrollView;->getChildAt(I)Landroid/view/View;
+	14      (00000034) move-result-object   v5
+	15      (00000036) invoke-virtual       v5, Landroid/view/View;->getBottom()I
+	16      (0000003c) move-result          v3
+	17      (0000003e) invoke-virtual       v8, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	18      (00000044) move-result          v4
+	19      (00000046) sub-int              v5, v3, v0
+	20      (0000004a) invoke-static        v7, v5, Ljava/lang/Math;->max(I I)I
+	21      (00000050) move-result          v2
+	22      (00000052) if-gez               v4, +5
+
+computeVerticalScrollRange-BB@0x56 : [ computeVerticalScrollRange-BB@0x58 ]
+	23      (00000056) sub-int/2addr        v3, v4
+
+computeVerticalScrollRange-BB@0x58 : [ computeVerticalScrollRange-BB@0x2c ]
+	24      (00000058) move                 v0, v3
+	25      (0000005a) goto                 -17
+
+computeVerticalScrollRange-BB@0x5c : [ computeVerticalScrollRange-BB@0x60 computeVerticalScrollRange-BB@0x58 ]
+	26      (0000005c) if-le                v4, v2, -2
+
+computeVerticalScrollRange-BB@0x60 : [ computeVerticalScrollRange-BB@0x58 ]
+	27      (00000060) sub-int              v5, v4, v2
+	28      (00000064) add-int/2addr        v3, v5
+	29      (00000066) goto                 -7
+

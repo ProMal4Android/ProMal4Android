@@ -1,0 +1,70 @@
+# Landroid/support/v7/widget/ViewUtils;->makeOptionalFitsSystemWindows(Landroid/view/View;)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.view.View
+#
+# - return:void
+
+makeOptionalFitsSystemWindows-BB@0x0 : [ makeOptionalFitsSystemWindows-BB@0xc makeOptionalFitsSystemWindows-BB@0x46 ]
+	0       (00000000) sget                 v2, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) const/16             v3, 16
+	2       (00000008) if-lt                v2, v3, +1f
+
+makeOptionalFitsSystemWindows-BB@0xc : [ makeOptionalFitsSystemWindows-BB@0x32 makeOptionalFitsSystemWindows-BB@0x3a ]
+	3       (0000000c) invoke-virtual       v5, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	4       (00000012) move-result-object   v2
+	5       (00000014) const-string         v3, 'makeOptionalFitsSystemWindows'
+	6       (00000018) const/4              v4, 0
+	7       (0000001a) new-array            v4, v4, [Ljava/lang/Class;
+	8       (0000001e) invoke-virtual       v2, v3, v4, Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	9       (00000024) move-result-object   v1
+	10      (00000026) invoke-virtual       v1, Ljava/lang/reflect/Method;->isAccessible()Z
+	11      (0000002c) move-result          v2
+	12      (0000002e) if-nez               v2, +6
+	c:45
+	(Ljava/lang/NoSuchMethodException; -> 48 makeOptionalFitsSystemWindows-BB@0x48)
+	(Ljava/lang/reflect/InvocationTargetException; -> 5a makeOptionalFitsSystemWindows-BB@0x5a)
+	(Ljava/lang/IllegalAccessException; -> 6c makeOptionalFitsSystemWindows-BB@0x6c)
+
+makeOptionalFitsSystemWindows-BB@0x32 : [ makeOptionalFitsSystemWindows-BB@0x3a ]
+	13      (00000032) const/4              v2, 1
+	14      (00000034) invoke-virtual       v1, v2, Ljava/lang/reflect/Method;->setAccessible(Z)V
+	c:45
+	(Ljava/lang/NoSuchMethodException; -> 48 makeOptionalFitsSystemWindows-BB@0x48)
+	(Ljava/lang/reflect/InvocationTargetException; -> 5a makeOptionalFitsSystemWindows-BB@0x5a)
+	(Ljava/lang/IllegalAccessException; -> 6c makeOptionalFitsSystemWindows-BB@0x6c)
+
+makeOptionalFitsSystemWindows-BB@0x3a : [ makeOptionalFitsSystemWindows-BB@0x46 ]
+	15      (0000003a) const/4              v2, 0
+	16      (0000003c) new-array            v2, v2, [Ljava/lang/Object;
+	17      (00000040) invoke-virtual       v1, v5, v2, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	c:45
+	(Ljava/lang/NoSuchMethodException; -> 48 makeOptionalFitsSystemWindows-BB@0x48)
+	(Ljava/lang/reflect/InvocationTargetException; -> 5a makeOptionalFitsSystemWindows-BB@0x5a)
+	(Ljava/lang/IllegalAccessException; -> 6c makeOptionalFitsSystemWindows-BB@0x6c)
+
+makeOptionalFitsSystemWindows-BB@0x46 : 
+	18      (00000046) return-void          
+
+makeOptionalFitsSystemWindows-BB@0x48 : [ makeOptionalFitsSystemWindows-BB@0x46 ]
+	19      (00000048) move-exception       v0
+	20      (0000004a) const-string         v2, 'ViewUtils'
+	21      (0000004e) const-string         v3, 'Could not find method makeOptionalFitsSystemWindows. Oh well...'
+	22      (00000052) invoke-static        v2, v3, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	23      (00000058) goto                 -9
+
+makeOptionalFitsSystemWindows-BB@0x5a : [ makeOptionalFitsSystemWindows-BB@0x46 ]
+	24      (0000005a) move-exception       v0
+	25      (0000005c) const-string         v2, 'ViewUtils'
+	26      (00000060) const-string         v3, 'Could not invoke makeOptionalFitsSystemWindows'
+	27      (00000064) invoke-static        v2, v3, v0, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	28      (0000006a) goto                 -12
+
+makeOptionalFitsSystemWindows-BB@0x6c : [ makeOptionalFitsSystemWindows-BB@0x46 ]
+	29      (0000006c) move-exception       v0
+	30      (0000006e) const-string         v2, 'ViewUtils'
+	31      (00000072) const-string         v3, 'Could not invoke makeOptionalFitsSystemWindows'
+	32      (00000076) invoke-static        v2, v3, v0, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	33      (0000007c) goto                 -1b
+

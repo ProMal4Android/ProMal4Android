@@ -1,0 +1,111 @@
+# Lcom/google/android/gms/measurement/zzg;->zzzR()Lcom/google/android/gms/internal/zzqh; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:com.google.android.gms.internal.zzqh
+
+zzzR-BB@0x0 : [ zzzR-BB@0x8 zzzR-BB@0x9a ]
+	0       (00000000) iget-object          v0, v6, Lcom/google/android/gms/measurement/zzg;->zzPD Lcom/google/android/gms/internal/zzqh;
+	1       (00000004) if-nez               v0, +4b
+
+zzzR-BB@0x8 : [ zzzR-BB@0xa ]
+	2       (00000008) monitor-enter        v6
+
+zzzR-BB@0xa : [ zzzR-BB@0x12 zzzR-BB@0x98 ]
+	3       (0000000a) iget-object          v0, v6, Lcom/google/android/gms/measurement/zzg;->zzPD Lcom/google/android/gms/internal/zzqh;
+	4       (0000000e) if-nez               v0, +45
+	a:47
+	(Ljava/lang/Throwable; -> d4 zzzR-BB@0xd4)
+
+zzzR-BB@0x12 : [ zzzR-BB@0x4a ]
+	5       (00000012) new-instance         v2, Lcom/google/android/gms/internal/zzqh;
+	6       (00000016) invoke-direct        v2, Lcom/google/android/gms/internal/zzqh;-><init>()V
+	7       (0000001c) iget-object          v0, v6, Lcom/google/android/gms/measurement/zzg;->mContext Landroid/content/Context;
+	8       (00000020) invoke-virtual       v0, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+	9       (00000026) move-result-object   v3
+	10      (00000028) iget-object          v0, v6, Lcom/google/android/gms/measurement/zzg;->mContext Landroid/content/Context;
+	11      (0000002c) invoke-virtual       v0, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	12      (00000032) move-result-object   v1
+	13      (00000034) invoke-virtual       v2, v1, Lcom/google/android/gms/internal/zzqh;->setAppId(Ljava/lang/String;)V
+	14      (0000003a) invoke-virtual       v3, v1, Landroid/content/pm/PackageManager;->getInstallerPackageName(Ljava/lang/String;)Ljava/lang/String;
+	15      (00000040) move-result-object   v0
+	16      (00000042) invoke-virtual       v2, v0, Lcom/google/android/gms/internal/zzqh;->setAppInstallerId(Ljava/lang/String;)V
+	17      (00000048) const/4              v0, 0
+
+zzzR-BB@0x4a : [ zzzR-BB@0x64 zzzR-BB@0x88 ]
+	18      (0000004a) iget-object          v4, v6, Lcom/google/android/gms/measurement/zzg;->mContext Landroid/content/Context;
+	19      (0000004e) invoke-virtual       v4, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	20      (00000054) move-result-object   v4
+	21      (00000056) const/4              v5, 0
+	22      (00000058) invoke-virtual       v3, v4, v5, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String; I)Landroid/content/pm/PackageInfo;
+	23      (0000005e) move-result-object   v4
+	24      (00000060) if-eqz               v4, +14
+	4a:87
+	(Ljava/lang/Throwable; -> d4 zzzR-BB@0xd4)
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> a0 zzzR-BB@0xa0)
+
+zzzR-BB@0x64 : [ zzzR-BB@0x7c zzzR-BB@0x84 ]
+	25      (00000064) iget-object          v5, v4, Landroid/content/pm/PackageInfo;->applicationInfo Landroid/content/pm/ApplicationInfo;
+	26      (00000068) invoke-virtual       v3, v5, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
+	27      (0000006e) move-result-object   v3
+	28      (00000070) invoke-static        v3, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	29      (00000076) move-result          v5
+	30      (00000078) if-nez               v5, +6
+	4a:87
+	(Ljava/lang/Throwable; -> d4 zzzR-BB@0xd4)
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> a0 zzzR-BB@0xa0)
+
+zzzR-BB@0x7c : [ zzzR-BB@0x84 ]
+	31      (0000007c) invoke-interface     v3, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+	32      (00000082) move-result-object   v1
+	4a:87
+	(Ljava/lang/Throwable; -> d4 zzzR-BB@0xd4)
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> a0 zzzR-BB@0xa0)
+
+zzzR-BB@0x84 : [ zzzR-BB@0x88 ]
+	33      (00000084) iget-object          v0, v4, Landroid/content/pm/PackageInfo;->versionName Ljava/lang/String;
+	4a:87
+	(Ljava/lang/Throwable; -> d4 zzzR-BB@0xd4)
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> a0 zzzR-BB@0xa0)
+
+zzzR-BB@0x88 : [ zzzR-BB@0x98 ]
+	34      (00000088) invoke-virtual       v2, v1, Lcom/google/android/gms/internal/zzqh;->setAppName(Ljava/lang/String;)V
+	35      (0000008e) invoke-virtual       v2, v0, Lcom/google/android/gms/internal/zzqh;->setAppVersion(Ljava/lang/String;)V
+	36      (00000094) iput-object          v2, v6, Lcom/google/android/gms/measurement/zzg;->zzPD Lcom/google/android/gms/internal/zzqh;
+	88:99
+	(Ljava/lang/Throwable; -> d4 zzzR-BB@0xd4)
+
+zzzR-BB@0x98 : [ zzzR-BB@0x9a ]
+	37      (00000098) monitor-exit         v6
+	88:99
+	(Ljava/lang/Throwable; -> d4 zzzR-BB@0xd4)
+
+zzzR-BB@0x9a : 
+	38      (0000009a) iget-object          v0, v6, Lcom/google/android/gms/measurement/zzg;->zzPD Lcom/google/android/gms/internal/zzqh;
+	39      (0000009e) return-object        v0
+
+zzzR-BB@0xa0 : [ zzzR-BB@0xa2 ]
+	40      (000000a0) move-exception       v3
+
+zzzR-BB@0xa2 : [ zzzR-BB@0x88 ]
+	41      (000000a2) const-string         v3, 'GAv4'
+	42      (000000a6) new-instance         v4, Ljava/lang/StringBuilder;
+	43      (000000aa) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	44      (000000b0) const-string         v5, 'Error retrieving package info: appName set to '
+	45      (000000b4) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	46      (000000ba) move-result-object   v4
+	47      (000000bc) invoke-virtual       v4, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	48      (000000c2) move-result-object   v4
+	49      (000000c4) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	50      (000000ca) move-result-object   v4
+	51      (000000cc) invoke-static        v3, v4, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	52      (000000d2) goto                 -25
+	a2:d7
+	(Ljava/lang/Throwable; -> d4 zzzR-BB@0xd4)
+
+zzzR-BB@0xd4 : 
+	53      (000000d4) move-exception       v0
+	54      (000000d6) monitor-exit         v6
+	55      (000000d8) throw                v0
+

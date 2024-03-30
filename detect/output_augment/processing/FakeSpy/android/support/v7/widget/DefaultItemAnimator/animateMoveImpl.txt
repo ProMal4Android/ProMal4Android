@@ -1,0 +1,50 @@
+# Landroid/support/v7/widget/DefaultItemAnimator;->animateMoveImpl(Landroid/support/v7/widget/RecyclerView$ViewHolder; I I I I)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.support.v7.widget.RecyclerView$ViewHolder
+# - v10:int
+# - v11:int
+# - v12:int
+# - v13:int
+#
+# - return:void
+
+animateMoveImpl-BB@0x0 : [ animateMoveImpl-BB@0x12 animateMoveImpl-BB@0x20 ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) iget-object          v6, v9, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	2       (00000006) sub-int              v3, v12, v10
+	3       (0000000a) sub-int              v4, v13, v11
+	4       (0000000e) if-eqz               v3, +9
+
+animateMoveImpl-BB@0x12 : [ animateMoveImpl-BB@0x20 ]
+	5       (00000012) invoke-static        v6, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	6       (00000018) move-result-object   v0
+	7       (0000001a) invoke-virtual       v0, v1, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->translationX(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+
+animateMoveImpl-BB@0x20 : [ animateMoveImpl-BB@0x24 animateMoveImpl-BB@0x32 ]
+	8       (00000020) if-eqz               v4, +9
+
+animateMoveImpl-BB@0x24 : [ animateMoveImpl-BB@0x32 ]
+	9       (00000024) invoke-static        v6, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	10      (0000002a) move-result-object   v0
+	11      (0000002c) invoke-virtual       v0, v1, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->translationY(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+
+animateMoveImpl-BB@0x32 : 
+	12      (00000032) invoke-static        v6, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	13      (00000038) move-result-object   v5
+	14      (0000003a) iget-object          v0, v8, Landroid/support/v7/widget/DefaultItemAnimator;->mMoveAnimations Ljava/util/ArrayList;
+	15      (0000003e) invoke-virtual       v0, v9, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	16      (00000044) invoke-virtual       v8, Landroid/support/v7/widget/DefaultItemAnimator;->getMoveDuration()J
+	17      (0000004a) move-result-wide     v0
+	18      (0000004c) invoke-virtual       v5, v0, v1, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	19      (00000052) move-result-object   v7
+	20      (00000054) new-instance         v0, Landroid/support/v7/widget/DefaultItemAnimator$6;
+	21      (00000058) move-object          v1, v8
+	22      (0000005a) move-object          v2, v9
+	23      (0000005c) invoke-direct/range  v0 ... v5, Landroid/support/v7/widget/DefaultItemAnimator$6;-><init>(Landroid/support/v7/widget/DefaultItemAnimator; Landroid/support/v7/widget/RecyclerView$ViewHolder; I I Landroid/support/v4/view/ViewPropertyAnimatorCompat;)V
+	24      (00000062) invoke-virtual       v7, v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setListener(Landroid/support/v4/view/ViewPropertyAnimatorListener;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	25      (00000068) move-result-object   v0
+	26      (0000006a) invoke-virtual       v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->start()V
+	27      (00000070) return-void          
+

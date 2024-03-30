@@ -1,0 +1,82 @@
+# Lbutterknife/internal/BindingClass;->emitHumanDescription(Ljava/lang/StringBuilder; Ljava/util/Collection;)V [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.StringBuilder
+# - v6:java.util.Collection
+#
+# - return:void
+
+emitHumanDescription-BB@0x0 : [ D:emitHumanDescription-BB@0x16 1:emitHumanDescription-BB@0x64 2:emitHumanDescription-BB@0x80 ]
+	0       (00000000) invoke-interface     v6, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+	1       (00000006) move-result-object   v2
+	2       (00000008) invoke-interface     v6, Ljava/util/Collection;->size()I
+	3       (0000000e) move-result          v3
+	4       (00000010) packed-switch        v3, +5a (0xc4)
+
+emitHumanDescription-BB@0x16 : [ emitHumanDescription-BB@0x20 ]
+	5       (00000016) const/4              v1, 0
+	6       (00000018) invoke-interface     v6, Ljava/util/Collection;->size()I
+	7       (0000001e) move-result          v0
+
+emitHumanDescription-BB@0x20 : [ emitHumanDescription-BB@0x24 emitHumanDescription-BB@0x7e ]
+	8       (00000020) if-ge                v1, v0, +2f
+
+emitHumanDescription-BB@0x24 : [ emitHumanDescription-BB@0x28 emitHumanDescription-BB@0x32 ]
+	9       (00000024) if-eqz               v1, +7
+
+emitHumanDescription-BB@0x28 : [ emitHumanDescription-BB@0x32 ]
+	10      (00000028) const-string         v3, ', '
+	11      (0000002c) invoke-virtual       v5, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+emitHumanDescription-BB@0x32 : [ emitHumanDescription-BB@0x3a emitHumanDescription-BB@0x44 ]
+	12      (00000032) add-int/lit8         v3, v0, -1
+	13      (00000036) if-ne                v1, v3, +7
+
+emitHumanDescription-BB@0x3a : [ emitHumanDescription-BB@0x44 ]
+	14      (0000003a) const-string         v3, 'and '
+	15      (0000003e) invoke-virtual       v5, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+emitHumanDescription-BB@0x44 : [ emitHumanDescription-BB@0x20 ]
+	16      (00000044) invoke-interface     v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	17      (0000004a) move-result-object   v3
+	18      (0000004c) check-cast           v3, Lbutterknife/internal/ViewBinding;
+	19      (00000050) invoke-interface     v3, Lbutterknife/internal/ViewBinding;->getDescription()Ljava/lang/String;
+	20      (00000056) move-result-object   v3
+	21      (00000058) invoke-virtual       v5, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	22      (0000005e) add-int/lit8         v1, v1, 1
+	23      (00000062) goto                 -21
+
+emitHumanDescription-BB@0x64 : [ emitHumanDescription-BB@0x7e ]
+	24      (00000064) invoke-interface     v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	25      (0000006a) move-result-object   v3
+	26      (0000006c) check-cast           v3, Lbutterknife/internal/ViewBinding;
+	27      (00000070) invoke-interface     v3, Lbutterknife/internal/ViewBinding;->getDescription()Ljava/lang/String;
+	28      (00000076) move-result-object   v3
+	29      (00000078) invoke-virtual       v5, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+emitHumanDescription-BB@0x7e : 
+	30      (0000007e) return-void          
+
+emitHumanDescription-BB@0x80 : [ emitHumanDescription-BB@0x7e ]
+	31      (00000080) invoke-interface     v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	32      (00000086) move-result-object   v3
+	33      (00000088) check-cast           v3, Lbutterknife/internal/ViewBinding;
+	34      (0000008c) invoke-interface     v3, Lbutterknife/internal/ViewBinding;->getDescription()Ljava/lang/String;
+	35      (00000092) move-result-object   v3
+	36      (00000094) invoke-virtual       v5, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	37      (0000009a) move-result-object   v3
+	38      (0000009c) const-string         v4, ' and '
+	39      (000000a0) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	40      (000000a6) move-result-object   v4
+	41      (000000a8) invoke-interface     v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	42      (000000ae) move-result-object   v3
+	43      (000000b0) check-cast           v3, Lbutterknife/internal/ViewBinding;
+	44      (000000b4) invoke-interface     v3, Lbutterknife/internal/ViewBinding;->getDescription()Ljava/lang/String;
+	45      (000000ba) move-result-object   v3
+	46      (000000bc) invoke-virtual       v4, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	47      (000000c2) goto                 -22
+
+emitHumanDescription-BB@0xc4 : 
+	48      (000000c4) packed-switch-payload 1 2
+

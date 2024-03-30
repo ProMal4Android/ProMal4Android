@@ -1,0 +1,120 @@
+﻿Apk Name,Results
+AceCard,"Parse SMS content -> Get user's phone number -> Get IMEI -> Send SMS -> Block broadcast
+Register content observer -> Check device admin privileges -> Activate the device manager
+Query messages -> Send SMS -> Block broadcast
+Get Installed Apps List -> Send SMS -> Block broadcast
+Get Country -> Send SMS -> Block broadcast
+Get IMEI -> Send SMS -> Block broadcast
+Send SMS -> Block broadcast"
+AgentBKY,"Parse SMS content -> Access the Internet -> Post to the remote server
+Get device country -> Get the network operator -> Get user's phone number -> Get IMEI -> Access the Internet -> Post to the remote server"
+Aladdin,Open a new page and download -> Hide icon
+AndroidOSBrata,
+AsiaHitGroup,"check for network connectivity ->Get network info -> Access the Internet
+Get location of device -> Access the Internet
+Download File->Install Apps->Launch Apps
+Send SMS -> Access the Internet"
+Bahamut,"Query messages -> Parse SMS content -> Access the Internet -> Post to the remote server
+Record audio -> Store audio locally
+Read local file -> Post to the remote server
+Read local file -> Post to the remote server
+Read local file -> Delete file
+Get local file -> Access the Internet -> Post to the remote server
+Get the contact information -> Access the Internet -> Post to the remote server
+Get location of device -> Access the Internet
+Monitor incoming call -> Get user's phone number
+Get IMEI -> Access the Internet -> Post to the remote server
+Get IMEI -> Get the network operator
+"
+BeaverGang,"Get local file -> Access the Internet
+Get the network operator -> Access the Internet
+Get IMEI -> Access the Internet
+Get location of device -> Access the Internet
+Get network info -> Access the Internet"
+BKotlindHRX,"Query messages -> Send SMS 
+Get IMEI -> Get the network operator -> Get IMSI -> Send SMS"
+ChatSpyA,"Query messages -> Access the Internet
+Get the contact information -> Access the Internet
+Get location of device -> Access the Internet
+Get IMEI -> Access the Internet"
+Clast82,"Install Apps -> Launch Apps
+Get local file -> Access the Internet
+Get a list of package names -> Look for installed Apk"
+ClickrAd,"Get network info -> Access the Internet -> Write to SD from input
+Hide icon->Launch Apps"
+CoinHive,Get location of device -> Access the Internet -> Post to the remote server
+DoubleHidden,Get location of device -> Access the Internet
+DroidPlugin,"Launch Apps->Hide icon
+Get IMEI -> Get mac address -> Access the Internet
+Get network info -> Access the Internet
+Get the network operator -> Get IMSI -> Access the Internet"
+FlokiSpy,"Monitor received SMS -> Parse SMS content -> Access the Internet
+Query messages -> Access the Internet
+Get the SIM card serial number -> Access the Internet
+Get the network operator -> Get user's phone number -> Send SMS"
+GhostTeam,"Look for installed Apk->Download File->Install Apps->Launch Apps
+Get IMEI -> Access the Internet
+Get network info -> Access the Internet
+Get the network operator -> Access the Internet
+Get location of device -> Access the Internet
+Get network info -> Access the Internet
+Get the network operator -> Access the Internet
+"
+Gooligan,"Get network info -> Get the network operator -> Get IMSI -> Get IMEI -> Get mac address -> Access the Internet
+Get IMSI -> Get the SIM card serial number -> Access the Internet
+Get local file -> Access the Internet
+Get the application lists -> Access the Internet
+Get user's phone number -> Access the Internet
+Monitor boot -> Active CoreService
+Access the Internet -> Write to SD from input
+Download -> Get SD path -> Install Apps -> Launch Apps"
+GuerillaA,"Get location of device -> Access the Internet -> Post to the remote server
+Get network info -> Access the Internet -> Write to SD from input"
+Haken,Get location of device -> Access the Internet
+Inazigram,"Get IMEI -> Get the network operator -> Access the Internet
+Get network info -> Get the network operator -> Access the Internet"
+IndexY,"Get the contact information -> Access the Internet
+Get call records -> Access the Internet
+Get local file -> Access the Internet -> Post to the remote server
+Get location of device -> Access the Internet"
+InstaDetector,"Get location of device -> Access the Internet -> Post to the remote server
+Get network info -> Get the network operator -> Access the Internet -> Post to the remote server"
+MalBus,"Get network info -> Access the Internet -> Write to SD from input
+Get location of device -> Access the Internet"
+MilkyDoor,"Get IMEI -> Get the network operator -> Get IMSI
+Get network info -> Access the Internet
+Get local file -> Access the Internet -> Post to the remote server
+Get location of device -> Access the Internet"
+PSWAndroidOSMyVK,
+PletorD,Check device admin privileges -> Activate the device manager
+ProjectSpyHRX,"Get the SIM card serial number -> Get user's phone number
+Get IMEI -> Get the network operator -> Get user's phone number
+Get SD path -> Record audio -> Store audio locally"
+RedDawn,"Get network info -> Access the Internet
+Monitor incoming call -> Get user's phone number -> Get IMEI -> Access the Internet"
+Reputation1_2018,"Get network info -> Access the Internet
+Get location of device -> Access the Internet"
+SimBad,"Get IMEI -> Access the Internet
+Get network info -> 
+Get the network operator
+Get location of device -> Access the Internet
+Get local file -> Access the Internet
+Hide icon -> Launch Apps"
+Smesh,"Query messages -> Access the Internet
+Get location of device -> Access the Internet
+Listen on connectivity change -> Get the contact information
+Get IMEI -> Access the Internet
+Get network info -> Get the network operator -> Access the Internet"
+SpyBankerHU,"Monitor received SMS -> Parse SMS content
+Query messages -> Access the Internet -> Post to the remote server
+Get a list of package names -> Look for installed App
+Get the network operator -> Access the Internet
+Get network info -> Access the Internet
+Get location of device -> Access the Internet"
+TekyaHRX,"Get IMEI -> Get the network operator -> Access the Internet -> Post to the remote server
+Get location of device -> Access the Internet -> Post to the remote server
+Get local file -> Access the Internet -> Post to the remote server
+Get network info -> Access the Internet -> Post to the remote server"
+ZtorgA,"Get IMEI -> Get IMSI -> Get the network operator -> Access the Internet
+Monitor received SMS -> Delete SMS
+Query messages -> Delete SMS"

@@ -1,0 +1,28 @@
+# Lbutterknife/internal/BindingClass;->getOrCreateViewBindings(I)Lbutterknife/internal/ViewBindings; [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:int
+#
+# - return:butterknife.internal.ViewBindings
+
+getOrCreateViewBindings-BB@0x0 : [ getOrCreateViewBindings-BB@0x1c getOrCreateViewBindings-BB@0x38 ]
+	0       (00000000) iget-object          v1, v3, Lbutterknife/internal/BindingClass;->viewIdMap Ljava/util/Map;
+	1       (00000004) invoke-static        v4, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	2       (0000000a) move-result-object   v2
+	3       (0000000c) invoke-interface     v1, v2, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	4       (00000012) move-result-object   v0
+	5       (00000014) check-cast           v0, Lbutterknife/internal/ViewBindings;
+	6       (00000018) if-nez               v0, +10
+
+getOrCreateViewBindings-BB@0x1c : [ getOrCreateViewBindings-BB@0x38 ]
+	7       (0000001c) new-instance         v0, Lbutterknife/internal/ViewBindings;
+	8       (00000020) invoke-direct        v0, v4, Lbutterknife/internal/ViewBindings;-><init>(I)V
+	9       (00000026) iget-object          v1, v3, Lbutterknife/internal/BindingClass;->viewIdMap Ljava/util/Map;
+	10      (0000002a) invoke-static        v4, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	11      (00000030) move-result-object   v2
+	12      (00000032) invoke-interface     v1, v2, v0, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+
+getOrCreateViewBindings-BB@0x38 : 
+	13      (00000038) return-object        v0
+

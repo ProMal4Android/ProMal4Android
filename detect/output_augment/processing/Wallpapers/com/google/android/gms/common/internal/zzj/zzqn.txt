@@ -1,0 +1,80 @@
+# Lcom/google/android/gms/common/internal/zzj;->zzqn()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:void
+
+zzqn-BB@0x0 : [ zzqn-BB@0x8 zzqn-BB@0x68 ]
+	0       (00000000) iget-object          v0, v5, Lcom/google/android/gms/common/internal/zzj;->zzajM Lcom/google/android/gms/common/internal/zzj$zze;
+	1       (00000004) if-eqz               v0, +32
+
+zzqn-BB@0x8 : [ zzqn-BB@0x68 ]
+	2       (00000008) const-string         v0, 'GmsClient'
+	3       (0000000c) new-instance         v1, Ljava/lang/StringBuilder;
+	4       (00000010) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	5       (00000016) const-string         v2, 'Calling connect() while still connected, missing disconnect() for '
+	6       (0000001a) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	7       (00000020) move-result-object   v1
+	8       (00000022) invoke-virtual       v5, Lcom/google/android/gms/common/internal/zzj;->zzgh()Ljava/lang/String;
+	9       (00000028) move-result-object   v2
+	10      (0000002a) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	11      (00000030) move-result-object   v1
+	12      (00000032) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) invoke-static        v0, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	15      (00000040) iget-object          v0, v5, Lcom/google/android/gms/common/internal/zzj;->zzajH Lcom/google/android/gms/common/internal/zzl;
+	16      (00000044) invoke-virtual       v5, Lcom/google/android/gms/common/internal/zzj;->zzgh()Ljava/lang/String;
+	17      (0000004a) move-result-object   v1
+	18      (0000004c) iget-object          v2, v5, Lcom/google/android/gms/common/internal/zzj;->zzajM Lcom/google/android/gms/common/internal/zzj$zze;
+	19      (00000050) invoke-virtual       v5, Lcom/google/android/gms/common/internal/zzj;->zzql()Ljava/lang/String;
+	20      (00000056) move-result-object   v3
+	21      (00000058) invoke-virtual       v0, v1, v2, v3, Lcom/google/android/gms/common/internal/zzl;->zzb(Ljava/lang/String; Landroid/content/ServiceConnection; Ljava/lang/String;)V
+	22      (0000005e) iget-object          v0, v5, Lcom/google/android/gms/common/internal/zzj;->zzajR Ljava/util/concurrent/atomic/AtomicInteger;
+	23      (00000062) invoke-virtual       v0, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+zzqn-BB@0x68 : [ zzqn-BB@0xa6 zzqn-BB@0x106 ]
+	24      (00000068) new-instance         v0, Lcom/google/android/gms/common/internal/zzj$zze;
+	25      (0000006c) iget-object          v1, v5, Lcom/google/android/gms/common/internal/zzj;->zzajR Ljava/util/concurrent/atomic/AtomicInteger;
+	26      (00000070) invoke-virtual       v1, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+	27      (00000076) move-result          v1
+	28      (00000078) invoke-direct        v0, v5, v1, Lcom/google/android/gms/common/internal/zzj$zze;-><init>(Lcom/google/android/gms/common/internal/zzj; I)V
+	29      (0000007e) iput-object          v0, v5, Lcom/google/android/gms/common/internal/zzj;->zzajM Lcom/google/android/gms/common/internal/zzj$zze;
+	30      (00000082) iget-object          v0, v5, Lcom/google/android/gms/common/internal/zzj;->zzajH Lcom/google/android/gms/common/internal/zzl;
+	31      (00000086) invoke-virtual       v5, Lcom/google/android/gms/common/internal/zzj;->zzgh()Ljava/lang/String;
+	32      (0000008c) move-result-object   v1
+	33      (0000008e) iget-object          v2, v5, Lcom/google/android/gms/common/internal/zzj;->zzajM Lcom/google/android/gms/common/internal/zzj$zze;
+	34      (00000092) invoke-virtual       v5, Lcom/google/android/gms/common/internal/zzj;->zzql()Ljava/lang/String;
+	35      (00000098) move-result-object   v3
+	36      (0000009a) invoke-virtual       v0, v1, v2, v3, Lcom/google/android/gms/common/internal/zzl;->zza(Ljava/lang/String; Landroid/content/ServiceConnection; Ljava/lang/String;)Z
+	37      (000000a0) move-result          v0
+	38      (000000a2) if-nez               v0, +32
+
+zzqn-BB@0xa6 : [ zzqn-BB@0x106 ]
+	39      (000000a6) const-string         v0, 'GmsClient'
+	40      (000000aa) new-instance         v1, Ljava/lang/StringBuilder;
+	41      (000000ae) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	42      (000000b4) const-string         v2, 'unable to connect to service: '
+	43      (000000b8) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	44      (000000be) move-result-object   v1
+	45      (000000c0) invoke-virtual       v5, Lcom/google/android/gms/common/internal/zzj;->zzgh()Ljava/lang/String;
+	46      (000000c6) move-result-object   v2
+	47      (000000c8) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	48      (000000ce) move-result-object   v1
+	49      (000000d0) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	50      (000000d6) move-result-object   v1
+	51      (000000d8) invoke-static        v0, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	52      (000000de) iget-object          v0, v5, Lcom/google/android/gms/common/internal/zzj;->mHandler Landroid/os/Handler;
+	53      (000000e2) iget-object          v1, v5, Lcom/google/android/gms/common/internal/zzj;->mHandler Landroid/os/Handler;
+	54      (000000e6) const/4              v2, 3
+	55      (000000e8) iget-object          v3, v5, Lcom/google/android/gms/common/internal/zzj;->zzajR Ljava/util/concurrent/atomic/AtomicInteger;
+	56      (000000ec) invoke-virtual       v3, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+	57      (000000f2) move-result          v3
+	58      (000000f4) const/16             v4, 9
+	59      (000000f8) invoke-virtual       v1, v2, v3, v4, Landroid/os/Handler;->obtainMessage(I I I)Landroid/os/Message;
+	60      (000000fe) move-result-object   v1
+	61      (00000100) invoke-virtual       v0, v1, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+zzqn-BB@0x106 : 
+	62      (00000106) return-void          
+

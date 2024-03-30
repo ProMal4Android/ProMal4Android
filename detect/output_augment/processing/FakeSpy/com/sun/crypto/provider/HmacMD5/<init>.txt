@@ -1,0 +1,31 @@
+# Lcom/sun/crypto/provider/HmacMD5;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x1a <init>-BB@0x2a ]
+	0       (00000000) invoke-direct        v3, Ljavax/crypto/MacSpi;-><init>()V
+	1       (00000006) invoke-virtual       v3, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) invoke-static        v0, Lcom/sun/crypto/provider/SunJCE;->b(Ljava/lang/Class;)Z
+	4       (00000014) move-result          v0
+	5       (00000016) if-nez               v0, +a
+
+<init>-BB@0x1a : 
+	6       (0000001a) new-instance         v0, Ljava/lang/SecurityException;
+	7       (0000001e) const-string         v1, 'The SunJCE provider may have been tampered.'
+	8       (00000022) invoke-direct        v0, v1, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+	9       (00000028) throw                v0
+
+<init>-BB@0x2a : 
+	10      (0000002a) new-instance         v0, Lcom/sun/crypto/provider/HmacCore;
+	11      (0000002e) const-string         v1, 'MD5'
+	12      (00000032) invoke-static        v1, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) const/16             v2, 64
+	15      (0000003e) invoke-direct        v0, v1, v2, Lcom/sun/crypto/provider/HmacCore;-><init>(Ljava/security/MessageDigest; I)V
+	16      (00000044) iput-object          v0, v3, Lcom/sun/crypto/provider/HmacMD5;->a Lcom/sun/crypto/provider/HmacCore;
+	17      (00000048) return-void          
+

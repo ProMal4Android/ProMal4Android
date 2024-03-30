@@ -1,0 +1,18 @@
+# Landroid/support/v7/app/AppCompatDelegate;->create(Landroid/app/Dialog; Landroid/support/v7/app/AppCompatCallback;)Landroid/support/v7/app/AppCompatDelegate; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.app.Dialog
+# - v3:android.support.v7.app.AppCompatCallback
+#
+# - return:android.support.v7.app.AppCompatDelegate
+
+create-BB@0x0 : 
+	0       (00000000) invoke-virtual       v2, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-virtual       v2, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+	3       (0000000e) move-result-object   v1
+	4       (00000010) invoke-static        v0, v1, v3, Landroid/support/v7/app/AppCompatDelegate;->create(Landroid/content/Context; Landroid/view/Window; Landroid/support/v7/app/AppCompatCallback;)Landroid/support/v7/app/AppCompatDelegate;
+	5       (00000016) move-result-object   v0
+	6       (00000018) return-object        v0
+

@@ -1,0 +1,16 @@
+# Lkk/util/SUtil;-><init>(Landroid/content/Context; Ljava/lang/String;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.content.Context
+# - v3:java.lang.String
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v0, 0
+	1       (00000002) invoke-virtual       v2, v3, v0, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String; I)Landroid/content/SharedPreferences;
+	2       (00000008) move-result-object   v0
+	3       (0000000a) invoke-direct        v1, v2, v0, Lkk/util/SUtil;-><init>(Landroid/content/Context; Landroid/content/SharedPreferences;)V
+	4       (00000010) return-void          
+

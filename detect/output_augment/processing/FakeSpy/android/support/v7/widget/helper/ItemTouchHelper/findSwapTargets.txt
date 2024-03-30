@@ -1,0 +1,236 @@
+# Landroid/support/v7/widget/helper/ItemTouchHelper;->findSwapTargets(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Ljava/util/List; [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v25
+# - v26:android.support.v7.widget.RecyclerView$ViewHolder
+#
+# - return:java.util.List
+
+findSwapTargets-BB@0x0 : [ findSwapTargets-BB@0x10 findSwapTargets-BB@0x138 ]
+	0       (00000000) move-object/from16   v0, v25
+	1       (00000004) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSwapTargets Ljava/util/List;
+	2       (00000008) move-object/from16   v22, v0
+	3       (0000000c) if-nez               v22, +96
+
+findSwapTargets-BB@0x10 : [ findSwapTargets-BB@0x3c ]
+	4       (00000010) new-instance         v22, Ljava/util/ArrayList;
+	5       (00000014) invoke-direct/range  v22, Ljava/util/ArrayList;-><init>()V
+	6       (0000001a) move-object/from16   v0, v22
+	7       (0000001e) move-object/from16   v1, v25
+	8       (00000022) iput-object          v0, v1, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSwapTargets Ljava/util/List;
+	9       (00000026) new-instance         v22, Ljava/util/ArrayList;
+	10      (0000002a) invoke-direct/range  v22, Ljava/util/ArrayList;-><init>()V
+	11      (00000030) move-object/from16   v0, v22
+	12      (00000034) move-object/from16   v1, v25
+	13      (00000038) iput-object          v0, v1, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDistances Ljava/util/List;
+
+findSwapTargets-BB@0x3c : [ findSwapTargets-BB@0x10e ]
+	14      (0000003c) move-object/from16   v0, v25
+	15      (00000040) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mCallback Landroid/support/v7/widget/helper/ItemTouchHelper$Callback;
+	16      (00000044) move-object/from16   v22, v0
+	17      (00000048) invoke-virtual/range v22, Landroid/support/v7/widget/helper/ItemTouchHelper$Callback;->getBoundingBoxMargin()I
+	18      (0000004e) move-result          v16
+	19      (00000050) move-object/from16   v0, v25
+	20      (00000054) iget                 v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSelectedStartX F
+	21      (00000058) move/from16          v22, v0
+	22      (0000005c) move-object/from16   v0, v25
+	23      (00000060) iget                 v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDx F
+	24      (00000064) move/from16          v23, v0
+	25      (00000068) add-float            v22, v22, v23
+	26      (0000006c) invoke-static/range  v22, Ljava/lang/Math;->round(F)I
+	27      (00000072) move-result          v22
+	28      (00000074) sub-int              v14, v22, v16
+	29      (00000078) move-object/from16   v0, v25
+	30      (0000007c) iget                 v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSelectedStartY F
+	31      (00000080) move/from16          v22, v0
+	32      (00000084) move-object/from16   v0, v25
+	33      (00000088) iget                 v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDy F
+	34      (0000008c) move/from16          v23, v0
+	35      (00000090) add-float            v22, v22, v23
+	36      (00000094) invoke-static/range  v22, Ljava/lang/Math;->round(F)I
+	37      (0000009a) move-result          v22
+	38      (0000009c) sub-int              v21, v22, v16
+	39      (000000a0) move-object/from16   v0, v26
+	40      (000000a4) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	41      (000000a8) move-object/from16   v22, v0
+	42      (000000ac) invoke-virtual/range v22, Landroid/view/View;->getWidth()I
+	43      (000000b2) move-result          v22
+	44      (000000b4) add-int              v22, v22, v14
+	45      (000000b8) mul-int/lit8         v23, v16, 2
+	46      (000000bc) add-int              v20, v22, v23
+	47      (000000c0) move-object/from16   v0, v26
+	48      (000000c4) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	49      (000000c8) move-object/from16   v22, v0
+	50      (000000cc) invoke-virtual/range v22, Landroid/view/View;->getHeight()I
+	51      (000000d2) move-result          v22
+	52      (000000d4) add-int              v22, v22, v21
+	53      (000000d8) mul-int/lit8         v23, v16, 2
+	54      (000000dc) add-int              v4, v22, v23
+	55      (000000e0) add-int              v22, v14, v20
+	56      (000000e4) div-int/lit8         v5, v22, 2
+	57      (000000e8) add-int              v22, v21, v4
+	58      (000000ec) div-int/lit8         v6, v22, 2
+	59      (000000f0) move-object/from16   v0, v25
+	60      (000000f4) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mRecyclerView Landroid/support/v7/widget/RecyclerView;
+	61      (000000f8) move-object/from16   v22, v0
+	62      (000000fc) invoke-virtual/range v22, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	63      (00000102) move-result-object   v15
+	64      (00000104) invoke-virtual       v15, Landroid/support/v7/widget/RecyclerView$LayoutManager;->getChildCount()I
+	65      (0000010a) move-result          v7
+	66      (0000010c) const/4              v12, 0
+
+findSwapTargets-BB@0x10e : [ findSwapTargets-BB@0x112 findSwapTargets-BB@0x2f4 ]
+	67      (0000010e) if-ge                v12, v7, +f3
+
+findSwapTargets-BB@0x112 : [ findSwapTargets-BB@0x132 findSwapTargets-BB@0x160 ]
+	68      (00000112) invoke-virtual       v15, v12, Landroid/support/v7/widget/RecyclerView$LayoutManager;->getChildAt(I)Landroid/view/View;
+	69      (00000118) move-result-object   v17
+	70      (0000011a) move-object/from16   v0, v26
+	71      (0000011e) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	72      (00000122) move-object/from16   v22, v0
+	73      (00000126) move-object/from16   v0, v17
+	74      (0000012a) move-object/from16   v1, v22
+	75      (0000012e) if-ne                v0, v1, +19
+
+findSwapTargets-BB@0x132 : [ findSwapTargets-BB@0x10e ]
+	76      (00000132) add-int/lit8         v12, v12, 1
+	77      (00000136) goto                 -14
+
+findSwapTargets-BB@0x138 : [ findSwapTargets-BB@0x3c ]
+	78      (00000138) move-object/from16   v0, v25
+	79      (0000013c) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSwapTargets Ljava/util/List;
+	80      (00000140) move-object/from16   v22, v0
+	81      (00000144) invoke-interface/range v22, Ljava/util/List;->clear()V
+	82      (0000014a) move-object/from16   v0, v25
+	83      (0000014e) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDistances Ljava/util/List;
+	84      (00000152) move-object/from16   v22, v0
+	85      (00000156) invoke-interface/range v22, Ljava/util/List;->clear()V
+	86      (0000015c) goto/16              -90
+
+findSwapTargets-BB@0x160 : [ findSwapTargets-BB@0x174 findSwapTargets-BB@0x132 ]
+	87      (00000160) invoke-virtual/range v17, Landroid/view/View;->getBottom()I
+	88      (00000166) move-result          v22
+	89      (00000168) move/from16          v0, v22
+	90      (0000016c) move/from16          v1, v21
+	91      (00000170) if-lt                v0, v1, -1f
+
+findSwapTargets-BB@0x174 : [ findSwapTargets-BB@0x184 findSwapTargets-BB@0x132 ]
+	92      (00000174) invoke-virtual/range v17, Landroid/view/View;->getTop()I
+	93      (0000017a) move-result          v22
+	94      (0000017c) move/from16          v0, v22
+	95      (00000180) if-gt                v0, v4, -27
+
+findSwapTargets-BB@0x184 : [ findSwapTargets-BB@0x194 findSwapTargets-BB@0x132 ]
+	96      (00000184) invoke-virtual/range v17, Landroid/view/View;->getRight()I
+	97      (0000018a) move-result          v22
+	98      (0000018c) move/from16          v0, v22
+	99      (00000190) if-lt                v0, v14, -2f
+
+findSwapTargets-BB@0x194 : [ findSwapTargets-BB@0x1a8 findSwapTargets-BB@0x132 ]
+	100     (00000194) invoke-virtual/range v17, Landroid/view/View;->getLeft()I
+	101     (0000019a) move-result          v22
+	102     (0000019c) move/from16          v0, v22
+	103     (000001a0) move/from16          v1, v20
+	104     (000001a4) if-gt                v0, v1, -39
+
+findSwapTargets-BB@0x1a8 : [ findSwapTargets-BB@0x204 findSwapTargets-BB@0x132 ]
+	105     (000001a8) move-object/from16   v0, v25
+	106     (000001ac) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mRecyclerView Landroid/support/v7/widget/RecyclerView;
+	107     (000001b0) move-object/from16   v22, v0
+	108     (000001b4) move-object/from16   v0, v22
+	109     (000001b8) move-object/from16   v1, v17
+	110     (000001bc) invoke-virtual       v0, v1, Landroid/support/v7/widget/RecyclerView;->getChildViewHolder(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	111     (000001c2) move-result-object   v18
+	112     (000001c4) move-object/from16   v0, v25
+	113     (000001c8) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mCallback Landroid/support/v7/widget/helper/ItemTouchHelper$Callback;
+	114     (000001cc) move-object/from16   v22, v0
+	115     (000001d0) move-object/from16   v0, v25
+	116     (000001d4) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mRecyclerView Landroid/support/v7/widget/RecyclerView;
+	117     (000001d8) move-object/from16   v23, v0
+	118     (000001dc) move-object/from16   v0, v25
+	119     (000001e0) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSelected Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	120     (000001e4) move-object/from16   v24, v0
+	121     (000001e8) move-object/from16   v0, v22
+	122     (000001ec) move-object/from16   v1, v23
+	123     (000001f0) move-object/from16   v2, v24
+	124     (000001f4) move-object/from16   v3, v18
+	125     (000001f8) invoke-virtual       v0, v1, v2, v3, Landroid/support/v7/widget/helper/ItemTouchHelper$Callback;->canDropOver(Landroid/support/v7/widget/RecyclerView; Landroid/support/v7/widget/RecyclerView$ViewHolder; Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z
+	126     (000001fe) move-result          v22
+	127     (00000200) if-eqz               v22, -67
+
+findSwapTargets-BB@0x204 : [ findSwapTargets-BB@0x272 ]
+	128     (00000204) invoke-virtual/range v17, Landroid/view/View;->getLeft()I
+	129     (0000020a) move-result          v22
+	130     (0000020c) invoke-virtual/range v17, Landroid/view/View;->getRight()I
+	131     (00000212) move-result          v23
+	132     (00000214) add-int              v22, v22, v23
+	133     (00000218) div-int/lit8         v22, v22, 2
+	134     (0000021c) sub-int              v22, v5, v22
+	135     (00000220) invoke-static/range  v22, Ljava/lang/Math;->abs(I)I
+	136     (00000226) move-result          v10
+	137     (00000228) invoke-virtual/range v17, Landroid/view/View;->getTop()I
+	138     (0000022e) move-result          v22
+	139     (00000230) invoke-virtual/range v17, Landroid/view/View;->getBottom()I
+	140     (00000236) move-result          v23
+	141     (00000238) add-int              v22, v22, v23
+	142     (0000023c) div-int/lit8         v22, v22, 2
+	143     (00000240) sub-int              v22, v6, v22
+	144     (00000244) invoke-static/range  v22, Ljava/lang/Math;->abs(I)I
+	145     (0000024a) move-result          v11
+	146     (0000024c) mul-int              v22, v10, v10
+	147     (00000250) mul-int              v23, v11, v11
+	148     (00000254) add-int              v9, v22, v23
+	149     (00000258) const/16             v19, 0
+	150     (0000025c) move-object/from16   v0, v25
+	151     (00000260) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSwapTargets Ljava/util/List;
+	152     (00000264) move-object/from16   v22, v0
+	153     (00000268) invoke-interface/range v22, Ljava/util/List;->size()I
+	154     (0000026e) move-result          v8
+	155     (00000270) const/4              v13, 0
+
+findSwapTargets-BB@0x272 : [ findSwapTargets-BB@0x276 findSwapTargets-BB@0x2ac ]
+	156     (00000272) if-ge                v13, v8, +1d
+
+findSwapTargets-BB@0x276 : [ findSwapTargets-BB@0x2a2 findSwapTargets-BB@0x2ac ]
+	157     (00000276) move-object/from16   v0, v25
+	158     (0000027a) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDistances Ljava/util/List;
+	159     (0000027e) move-object/from16   v22, v0
+	160     (00000282) move-object/from16   v0, v22
+	161     (00000286) invoke-interface     v0, v13, Ljava/util/List;->get(I)Ljava/lang/Object;
+	162     (0000028c) move-result-object   v22
+	163     (0000028e) check-cast           v22, Ljava/lang/Integer;
+	164     (00000292) invoke-virtual/range v22, Ljava/lang/Integer;->intValue()I
+	165     (00000298) move-result          v22
+	166     (0000029a) move/from16          v0, v22
+	167     (0000029e) if-le                v9, v0, +7
+
+findSwapTargets-BB@0x2a2 : [ findSwapTargets-BB@0x272 ]
+	168     (000002a2) add-int/lit8         v19, v19, 1
+	169     (000002a6) add-int/lit8         v13, v13, 1
+	170     (000002aa) goto                 -1c
+
+findSwapTargets-BB@0x2ac : [ findSwapTargets-BB@0x132 ]
+	171     (000002ac) move-object/from16   v0, v25
+	172     (000002b0) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSwapTargets Ljava/util/List;
+	173     (000002b4) move-object/from16   v22, v0
+	174     (000002b8) move-object/from16   v0, v22
+	175     (000002bc) move/from16          v1, v19
+	176     (000002c0) move-object/from16   v2, v18
+	177     (000002c4) invoke-interface     v0, v1, v2, Ljava/util/List;->add(I Ljava/lang/Object;)V
+	178     (000002ca) move-object/from16   v0, v25
+	179     (000002ce) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDistances Ljava/util/List;
+	180     (000002d2) move-object/from16   v22, v0
+	181     (000002d6) invoke-static        v9, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	182     (000002dc) move-result-object   v23
+	183     (000002de) move-object/from16   v0, v22
+	184     (000002e2) move/from16          v1, v19
+	185     (000002e6) move-object/from16   v2, v23
+	186     (000002ea) invoke-interface     v0, v1, v2, Ljava/util/List;->add(I Ljava/lang/Object;)V
+	187     (000002f0) goto/16              -df
+
+findSwapTargets-BB@0x2f4 : 
+	188     (000002f4) move-object/from16   v0, v25
+	189     (000002f8) iget-object          v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSwapTargets Ljava/util/List;
+	190     (000002fc) move-object/from16   v22, v0
+	191     (00000300) return-object        v22
+

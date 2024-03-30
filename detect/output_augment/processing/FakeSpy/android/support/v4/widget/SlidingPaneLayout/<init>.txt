@@ -1,0 +1,53 @@
+# Landroid/support/v4/widget/SlidingPaneLayout;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.Context
+# - v7:android.util.AttributeSet
+# - v8:int
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v3, 1
+	1       (00000002) const/high16         v4, 16128 # [0.5]
+	2       (00000006) invoke-direct        v5, v6, v7, v8, Landroid/view/ViewGroup;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	3       (0000000c) const                v2, -858993460 # [-107374176.0]
+	4       (00000012) iput                 v2, v5, Landroid/support/v4/widget/SlidingPaneLayout;->mSliderFadeColor I
+	5       (00000016) iput-boolean         v3, v5, Landroid/support/v4/widget/SlidingPaneLayout;->mFirstLayout Z
+	6       (0000001a) new-instance         v2, Landroid/graphics/Rect;
+	7       (0000001e) invoke-direct        v2, Landroid/graphics/Rect;-><init>()V
+	8       (00000024) iput-object          v2, v5, Landroid/support/v4/widget/SlidingPaneLayout;->mTmpRect Landroid/graphics/Rect;
+	9       (00000028) new-instance         v2, Ljava/util/ArrayList;
+	10      (0000002c) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+	11      (00000032) iput-object          v2, v5, Landroid/support/v4/widget/SlidingPaneLayout;->mPostedRunnables Ljava/util/ArrayList;
+	12      (00000036) invoke-virtual       v6, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	13      (0000003c) move-result-object   v2
+	14      (0000003e) invoke-virtual       v2, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	15      (00000044) move-result-object   v2
+	16      (00000046) iget                 v0, v2, Landroid/util/DisplayMetrics;->density F
+	17      (0000004a) const/high16         v2, 16896 # [32.0]
+	18      (0000004e) mul-float/2addr      v2, v0
+	19      (00000050) add-float/2addr      v2, v4
+	20      (00000052) float-to-int         v2, v2
+	21      (00000054) iput                 v2, v5, Landroid/support/v4/widget/SlidingPaneLayout;->mOverhangSize I
+	22      (00000058) invoke-static        v6, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+	23      (0000005e) move-result-object   v1
+	24      (00000060) const/4              v2, 0
+	25      (00000062) invoke-virtual       v5, v2, Landroid/support/v4/widget/SlidingPaneLayout;->setWillNotDraw(Z)V
+	26      (00000068) new-instance         v2, Landroid/support/v4/widget/SlidingPaneLayout$AccessibilityDelegate;
+	27      (0000006c) invoke-direct        v2, v5, Landroid/support/v4/widget/SlidingPaneLayout$AccessibilityDelegate;-><init>(Landroid/support/v4/widget/SlidingPaneLayout;)V
+	28      (00000072) invoke-static        v5, v2, Landroid/support/v4/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View; Landroid/support/v4/view/AccessibilityDelegateCompat;)V
+	29      (00000078) invoke-static        v5, v3, Landroid/support/v4/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View; I)V
+	30      (0000007e) new-instance         v2, Landroid/support/v4/widget/SlidingPaneLayout$DragHelperCallback;
+	31      (00000082) const/4              v3, 0
+	32      (00000084) invoke-direct        v2, v5, v3, Landroid/support/v4/widget/SlidingPaneLayout$DragHelperCallback;-><init>(Landroid/support/v4/widget/SlidingPaneLayout; Landroid/support/v4/widget/SlidingPaneLayout$1;)V
+	33      (0000008a) invoke-static        v5, v4, v2, Landroid/support/v4/widget/ViewDragHelper;->create(Landroid/view/ViewGroup; F Landroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;
+	34      (00000090) move-result-object   v2
+	35      (00000092) iput-object          v2, v5, Landroid/support/v4/widget/SlidingPaneLayout;->mDragHelper Landroid/support/v4/widget/ViewDragHelper;
+	36      (00000096) iget-object          v2, v5, Landroid/support/v4/widget/SlidingPaneLayout;->mDragHelper Landroid/support/v4/widget/ViewDragHelper;
+	37      (0000009a) const/high16         v3, 17352 # [400.0]
+	38      (0000009e) mul-float/2addr      v3, v0
+	39      (000000a0) invoke-virtual       v2, v3, Landroid/support/v4/widget/ViewDragHelper;->setMinVelocity(F)V
+	40      (000000a6) return-void          
+

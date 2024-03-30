@@ -1,0 +1,39 @@
+# Landroid/support/v7/app/WindowDecorActionBar;->setSelectedNavigationItem(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:int
+#
+# - return:void
+
+setSelectedNavigationItem-BB@0x0 : [ D:setSelectedNavigationItem-BB@0x12 1:setSelectedNavigationItem-BB@0x3a 2:setSelectedNavigationItem-BB@0x22 ]
+	0       (00000000) iget-object          v0, v2, Landroid/support/v7/app/WindowDecorActionBar;->mDecorToolbar Landroid/support/v7/widget/DecorToolbar;
+	1       (00000004) invoke-interface     v0, Landroid/support/v7/widget/DecorToolbar;->getNavigationMode()I
+	2       (0000000a) move-result          v0
+	3       (0000000c) packed-switch        v0, +1e (0x48)
+
+setSelectedNavigationItem-BB@0x12 : 
+	4       (00000012) new-instance         v0, Ljava/lang/IllegalStateException;
+	5       (00000016) const-string         v1, 'setSelectedNavigationIndex not valid for current navigation mode'
+	6       (0000001a) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	7       (00000020) throw                v0
+
+setSelectedNavigationItem-BB@0x22 : [ setSelectedNavigationItem-BB@0x38 ]
+	8       (00000022) iget-object          v0, v2, Landroid/support/v7/app/WindowDecorActionBar;->mTabs Ljava/util/ArrayList;
+	9       (00000026) invoke-virtual       v0, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	10      (0000002c) move-result-object   v0
+	11      (0000002e) check-cast           v0, Landroid/support/v7/app/ActionBar$Tab;
+	12      (00000032) invoke-virtual       v2, v0, Landroid/support/v7/app/WindowDecorActionBar;->selectTab(Landroid/support/v7/app/ActionBar$Tab;)V
+
+setSelectedNavigationItem-BB@0x38 : 
+	13      (00000038) return-void          
+
+setSelectedNavigationItem-BB@0x3a : [ setSelectedNavigationItem-BB@0x38 ]
+	14      (0000003a) iget-object          v0, v2, Landroid/support/v7/app/WindowDecorActionBar;->mDecorToolbar Landroid/support/v7/widget/DecorToolbar;
+	15      (0000003e) invoke-interface     v0, v3, Landroid/support/v7/widget/DecorToolbar;->setDropdownSelectedPosition(I)V
+	16      (00000044) goto                 -6
+
+setSelectedNavigationItem-BB@0x46 : 
+	17      (00000046) nop                  
+	18      (00000048) packed-switch-payload 1 2
+

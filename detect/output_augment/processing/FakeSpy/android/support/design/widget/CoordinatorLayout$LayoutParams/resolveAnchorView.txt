@@ -1,0 +1,122 @@
+# Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->resolveAnchorView(Landroid/view/View; Landroid/support/design/widget/CoordinatorLayout;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.view.View
+# - v8:android.support.design.widget.CoordinatorLayout
+#
+# - return:void
+
+resolveAnchorView-BB@0x0 : [ resolveAnchorView-BB@0x1a resolveAnchorView-BB@0xa8 ]
+	0       (00000000) const/4              v3, 0
+	1       (00000002) iget                 v2, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorId I
+	2       (00000006) invoke-virtual       v8, v2, Landroid/support/design/widget/CoordinatorLayout;->findViewById(I)Landroid/view/View;
+	3       (0000000c) move-result-object   v2
+	4       (0000000e) iput-object          v2, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorView Landroid/view/View;
+	5       (00000012) iget-object          v2, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorView Landroid/view/View;
+	6       (00000016) if-eqz               v2, +49
+
+resolveAnchorView-BB@0x1a : [ resolveAnchorView-BB@0x22 resolveAnchorView-BB@0x48 ]
+	7       (0000001a) iget-object          v2, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorView Landroid/view/View;
+	8       (0000001e) if-ne                v2, v8, +15
+
+resolveAnchorView-BB@0x22 : [ resolveAnchorView-BB@0x2e resolveAnchorView-BB@0x38 ]
+	9       (00000022) invoke-virtual       v8, Landroid/support/design/widget/CoordinatorLayout;->isInEditMode()Z
+	10      (00000028) move-result          v2
+	11      (0000002a) if-eqz               v2, +7
+
+resolveAnchorView-BB@0x2e : [ resolveAnchorView-BB@0x36 ]
+	12      (0000002e) iput-object          v3, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorDirectChild Landroid/view/View;
+	13      (00000032) iput-object          v3, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorView Landroid/view/View;
+
+resolveAnchorView-BB@0x36 : 
+	14      (00000036) return-void          
+
+resolveAnchorView-BB@0x38 : 
+	15      (00000038) new-instance         v2, Ljava/lang/IllegalStateException;
+	16      (0000003c) const-string         v3, 'View can not be anchored to the the parent CoordinatorLayout'
+	17      (00000040) invoke-direct        v2, v3, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	18      (00000046) throw                v2
+
+resolveAnchorView-BB@0x48 : [ resolveAnchorView-BB@0x58 ]
+	19      (00000048) iget-object          v0, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorView Landroid/view/View;
+	20      (0000004c) iget-object          v2, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorView Landroid/view/View;
+	21      (00000050) invoke-virtual       v2, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+	22      (00000056) move-result-object   v1
+
+resolveAnchorView-BB@0x58 : [ resolveAnchorView-BB@0x5c resolveAnchorView-BB@0xa2 ]
+	23      (00000058) if-eq                v1, v8, +25
+
+resolveAnchorView-BB@0x5c : [ resolveAnchorView-BB@0x60 resolveAnchorView-BB@0xa2 ]
+	24      (0000005c) if-eqz               v1, +23
+
+resolveAnchorView-BB@0x60 : [ resolveAnchorView-BB@0x64 resolveAnchorView-BB@0x8a ]
+	25      (00000060) if-ne                v1, v7, +15
+
+resolveAnchorView-BB@0x64 : [ resolveAnchorView-BB@0x70 resolveAnchorView-BB@0x7a ]
+	26      (00000064) invoke-virtual       v8, Landroid/support/design/widget/CoordinatorLayout;->isInEditMode()Z
+	27      (0000006a) move-result          v2
+	28      (0000006c) if-eqz               v2, +7
+
+resolveAnchorView-BB@0x70 : [ resolveAnchorView-BB@0x36 ]
+	29      (00000070) iput-object          v3, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorDirectChild Landroid/view/View;
+	30      (00000074) iput-object          v3, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorView Landroid/view/View;
+	31      (00000078) goto                 -21
+
+resolveAnchorView-BB@0x7a : 
+	32      (0000007a) new-instance         v2, Ljava/lang/IllegalStateException;
+	33      (0000007e) const-string         v3, 'Anchor must not be a descendant of the anchored view'
+	34      (00000082) invoke-direct        v2, v3, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	35      (00000088) throw                v2
+
+resolveAnchorView-BB@0x8a : [ resolveAnchorView-BB@0x92 resolveAnchorView-BB@0x98 ]
+	36      (0000008a) instance-of          v2, v1, Landroid/view/View;
+	37      (0000008e) if-eqz               v2, +5
+
+resolveAnchorView-BB@0x92 : [ resolveAnchorView-BB@0x98 ]
+	38      (00000092) move-object          v0, v1
+	39      (00000094) check-cast           v0, Landroid/view/View;
+
+resolveAnchorView-BB@0x98 : [ resolveAnchorView-BB@0x58 ]
+	40      (00000098) invoke-interface     v1, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+	41      (0000009e) move-result-object   v1
+	42      (000000a0) goto                 -24
+
+resolveAnchorView-BB@0xa2 : [ resolveAnchorView-BB@0x36 ]
+	43      (000000a2) iput-object          v0, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorDirectChild Landroid/view/View;
+	44      (000000a6) goto                 -38
+
+resolveAnchorView-BB@0xa8 : [ resolveAnchorView-BB@0xb4 resolveAnchorView-BB@0xbe ]
+	45      (000000a8) invoke-virtual       v8, Landroid/support/design/widget/CoordinatorLayout;->isInEditMode()Z
+	46      (000000ae) move-result          v2
+	47      (000000b0) if-eqz               v2, +7
+
+resolveAnchorView-BB@0xb4 : [ resolveAnchorView-BB@0x36 ]
+	48      (000000b4) iput-object          v3, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorDirectChild Landroid/view/View;
+	49      (000000b8) iput-object          v3, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorView Landroid/view/View;
+	50      (000000bc) goto                 -43
+
+resolveAnchorView-BB@0xbe : 
+	51      (000000be) new-instance         v2, Ljava/lang/IllegalStateException;
+	52      (000000c2) new-instance         v3, Ljava/lang/StringBuilder;
+	53      (000000c6) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	54      (000000cc) const-string         v4, 'Could not find CoordinatorLayout descendant view with id '
+	55      (000000d0) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	56      (000000d6) move-result-object   v3
+	57      (000000d8) invoke-virtual       v8, Landroid/support/design/widget/CoordinatorLayout;->getResources()Landroid/content/res/Resources;
+	58      (000000de) move-result-object   v4
+	59      (000000e0) iget                 v5, v6, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->mAnchorId I
+	60      (000000e4) invoke-virtual       v4, v5, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+	61      (000000ea) move-result-object   v4
+	62      (000000ec) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	63      (000000f2) move-result-object   v3
+	64      (000000f4) const-string         v4, ' to anchor view '
+	65      (000000f8) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	66      (000000fe) move-result-object   v3
+	67      (00000100) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	68      (00000106) move-result-object   v3
+	69      (00000108) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	70      (0000010e) move-result-object   v3
+	71      (00000110) invoke-direct        v2, v3, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	72      (00000116) throw                v2
+

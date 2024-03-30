@@ -1,0 +1,17 @@
+# Landroid/support/graphics/drawable/PathParser;->addNode(Ljava/util/ArrayList; C [F)V [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.util.ArrayList
+# - v3:char
+# - v4:float[]
+#
+# - return:void
+
+addNode-BB@0x0 : 
+	0       (00000000) new-instance         v0, Landroid/support/graphics/drawable/PathParser$PathDataNode;
+	1       (00000004) const/4              v1, 0
+	2       (00000006) invoke-direct        v0, v3, v4, v1, Landroid/support/graphics/drawable/PathParser$PathDataNode;-><init>(C [F Landroid/support/graphics/drawable/PathParser$1;)V
+	3       (0000000c) invoke-virtual       v2, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	4       (00000012) return-void          
+

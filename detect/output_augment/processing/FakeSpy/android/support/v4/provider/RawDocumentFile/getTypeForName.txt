@@ -1,0 +1,33 @@
+# Landroid/support/v4/provider/RawDocumentFile;->getTypeForName(Ljava/lang/String;)Ljava/lang/String; [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+#
+# - return:java.lang.String
+
+getTypeForName-BB@0x0 : [ getTypeForName-BB@0x10 getTypeForName-BB@0x3a ]
+	0       (00000000) const/16             v3, 46
+	1       (00000004) invoke-virtual       v4, v3, Ljava/lang/String;->lastIndexOf(I)I
+	2       (0000000a) move-result          v1
+	3       (0000000c) if-ltz               v1, +17
+
+getTypeForName-BB@0x10 : [ getTypeForName-BB@0x38 getTypeForName-BB@0x3a ]
+	4       (00000010) add-int/lit8         v3, v1, 1
+	5       (00000014) invoke-virtual       v4, v3, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	6       (0000001a) move-result-object   v3
+	7       (0000001c) invoke-virtual       v3, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+	8       (00000022) move-result-object   v0
+	9       (00000024) invoke-static        Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
+	10      (0000002a) move-result-object   v3
+	11      (0000002c) invoke-virtual       v3, v0, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
+	12      (00000032) move-result-object   v2
+	13      (00000034) if-eqz               v2, +3
+
+getTypeForName-BB@0x38 : 
+	14      (00000038) return-object        v2
+
+getTypeForName-BB@0x3a : [ getTypeForName-BB@0x38 ]
+	15      (0000003a) const-string         v2, 'application/octet-stream'
+	16      (0000003e) goto                 -3
+

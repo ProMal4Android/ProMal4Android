@@ -1,0 +1,858 @@
+# Lbutterknife/internal/ButterKnifeProcessor;->parseListenerAnnotation(Ljava/lang/Class; Ljavax/lang/model/element/Element; Ljava/util/Map; Ljava/util/Set;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v42
+# - v43:java.lang.Class
+# - v44:javax.lang.model.element.Element
+# - v45:java.util.Map
+# - v46:java.util.Set
+#
+# - return:void
+
+parseListenerAnnotation-BB@0x0 : [ parseListenerAnnotation-BB@0x10 parseListenerAnnotation-BB@0x28 ]
+	0       (00000000) move-object/from16   v0, v44
+	1       (00000004) instance-of          v0, v0, Ljavax/lang/model/element/ExecutableElement;
+	2       (00000008) move/from16          v36, v0
+	3       (0000000c) if-eqz               v36, +e
+
+parseListenerAnnotation-BB@0x10 : [ parseListenerAnnotation-BB@0x28 parseListenerAnnotation-BB@0x60 ]
+	4       (00000010) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getKind()Ljavax/lang/model/element/ElementKind;
+	5       (00000016) move-result-object   v36
+	6       (00000018) sget-object          v37, Ljavax/lang/model/element/ElementKind;->METHOD Ljavax/lang/model/element/ElementKind;
+	7       (0000001c) move-object/from16   v0, v36
+	8       (00000020) move-object/from16   v1, v37
+	9       (00000024) if-eq                v0, v1, +1e
+
+parseListenerAnnotation-BB@0x28 : 
+	10      (00000028) new-instance         v36, Ljava/lang/IllegalStateException;
+	11      (0000002c) const-string         v37, '@%s annotation must be on a method.'
+	12      (00000030) const/16             v38, 1
+	13      (00000034) move/from16          v0, v38
+	14      (00000038) new-array            v0, v0, [Ljava/lang/Object;
+	15      (0000003c) move-object/from16   v38, v0
+	16      (00000040) const/16             v39, 0
+	17      (00000044) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	18      (0000004a) move-result-object   v40
+	19      (0000004c) aput-object          v40, v38, v39
+	20      (00000050) invoke-static/range  v37 ... v38, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	21      (00000056) move-result-object   v37
+	22      (00000058) invoke-direct/range  v36 ... v37, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	23      (0000005e) throw                v36
+
+parseListenerAnnotation-BB@0x60 : [ parseListenerAnnotation-BB@0xc4 parseListenerAnnotation-BB@0xf4 ]
+	24      (00000060) move-object/from16   v14, v44
+	25      (00000064) check-cast           v14, Ljavax/lang/model/element/ExecutableElement;
+	26      (00000068) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getEnclosingElement()Ljavax/lang/model/element/Element;
+	27      (0000006e) move-result-object   v13
+	28      (00000070) check-cast           v13, Ljavax/lang/model/element/TypeElement;
+	29      (00000074) move-object/from16   v0, v44
+	30      (00000078) move-object/from16   v1, v43
+	31      (0000007c) invoke-interface     v0, v1, Ljavax/lang/model/element/Element;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	32      (00000082) move-result-object   v4
+	33      (00000084) const-string         v36, 'value'
+	34      (00000088) const/16             v37, 0
+	35      (0000008c) move/from16          v0, v37
+	36      (00000090) new-array            v0, v0, [Ljava/lang/Class;
+	37      (00000094) move-object/from16   v37, v0
+	38      (00000098) move-object/from16   v0, v43
+	39      (0000009c) move-object/from16   v1, v36
+	40      (000000a0) move-object/from16   v2, v37
+	41      (000000a4) invoke-virtual       v0, v1, v2, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	42      (000000aa) move-result-object   v6
+	43      (000000ac) invoke-virtual       v6, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
+	44      (000000b2) move-result-object   v36
+	45      (000000b4) const-class          v37, [I
+	46      (000000b8) move-object/from16   v0, v36
+	47      (000000bc) move-object/from16   v1, v37
+	48      (000000c0) if-eq                v0, v1, +1a
+
+parseListenerAnnotation-BB@0xc4 : 
+	49      (000000c4) new-instance         v36, Ljava/lang/IllegalStateException;
+	50      (000000c8) const-string         v37, '@%s annotation value() type not int[].'
+	51      (000000cc) const/16             v38, 1
+	52      (000000d0) move/from16          v0, v38
+	53      (000000d4) new-array            v0, v0, [Ljava/lang/Object;
+	54      (000000d8) move-object/from16   v38, v0
+	55      (000000dc) const/16             v39, 0
+	56      (000000e0) aput-object          v43, v38, v39
+	57      (000000e4) invoke-static/range  v37 ... v38, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	58      (000000ea) move-result-object   v37
+	59      (000000ec) invoke-direct/range  v36 ... v37, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	60      (000000f2) throw                v36
+
+parseListenerAnnotation-BB@0xf4 : [ parseListenerAnnotation-BB@0x168 parseListenerAnnotation-BB@0x1cc ]
+	61      (000000f4) const/16             v36, 0
+	62      (000000f8) move/from16          v0, v36
+	63      (000000fc) new-array            v0, v0, [Ljava/lang/Object;
+	64      (00000100) move-object/from16   v36, v0
+	65      (00000104) move-object/from16   v0, v36
+	66      (00000108) invoke-virtual       v6, v4, v0, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	67      (0000010e) move-result-object   v36
+	68      (00000110) check-cast           v36, [I
+	69      (00000114) move-object/from16   v18, v36
+	70      (00000118) check-cast           v18, [I
+	71      (0000011c) invoke-interface     v14, Ljavax/lang/model/element/ExecutableElement;->getSimpleName()Ljavax/lang/model/element/Name;
+	72      (00000122) move-result-object   v36
+	73      (00000124) invoke-virtual/range v36, Ljava/lang/Object;->toString()Ljava/lang/String;
+	74      (0000012a) move-result-object   v27
+	75      (0000012c) invoke-static/range  v44, Lbutterknife/internal/ButterKnifeProcessor;->isRequiredBinding(Ljavax/lang/model/element/Element;)Z
+	76      (00000132) move-result          v32
+	77      (00000134) const-string         v36, 'methods'
+	78      (00000138) move-object/from16   v0, v42
+	79      (0000013c) move-object/from16   v1, v43
+	80      (00000140) move-object/from16   v2, v36
+	81      (00000144) move-object/from16   v3, v44
+	82      (00000148) invoke-direct        v0, v1, v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->isInaccessibleViaGeneratedCode(Ljava/lang/Class; Ljava/lang/String; Ljavax/lang/model/element/Element;)Z
+	83      (0000014e) move-result          v15
+	84      (00000150) invoke-direct/range  v42 ... v44, Lbutterknife/internal/ButterKnifeProcessor;->isBindingInWrongPackage(Ljava/lang/Class; Ljavax/lang/model/element/Element;)Z
+	85      (00000156) move-result          v36
+	86      (00000158) or-int               v15, v15, v36
+	87      (0000015c) invoke-static/range  v18, Lbutterknife/internal/ButterKnifeProcessor;->findDuplicate([I)Ljava/lang/Integer;
+	88      (00000162) move-result-object   v12
+	89      (00000164) if-eqz               v12, +34
+
+parseListenerAnnotation-BB@0x168 : [ parseListenerAnnotation-BB@0x1cc ]
+	90      (00000168) const-string         v36, '@%s annotation for method contains duplicate ID %d. (%s.%s)'
+	91      (0000016c) const/16             v37, 4
+	92      (00000170) move/from16          v0, v37
+	93      (00000174) new-array            v0, v0, [Ljava/lang/Object;
+	94      (00000178) move-object/from16   v37, v0
+	95      (0000017c) const/16             v38, 0
+	96      (00000180) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	97      (00000186) move-result-object   v39
+	98      (00000188) aput-object          v39, v37, v38
+	99      (0000018c) const/16             v38, 1
+	100     (00000190) aput-object          v12, v37, v38
+	101     (00000194) const/16             v38, 2
+	102     (00000198) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->getQualifiedName()Ljavax/lang/model/element/Name;
+	103     (0000019e) move-result-object   v39
+	104     (000001a0) aput-object          v39, v37, v38
+	105     (000001a4) const/16             v38, 3
+	106     (000001a8) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getSimpleName()Ljavax/lang/model/element/Name;
+	107     (000001ae) move-result-object   v39
+	108     (000001b0) aput-object          v39, v37, v38
+	109     (000001b4) move-object/from16   v0, v42
+	110     (000001b8) move-object/from16   v1, v44
+	111     (000001bc) move-object/from16   v2, v36
+	112     (000001c0) move-object/from16   v3, v37
+	113     (000001c4) invoke-direct        v0, v1, v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->error(Ljavax/lang/model/element/Element; Ljava/lang/String; [Ljava/lang/Object;)V
+	114     (000001ca) const/4              v15, 1
+
+parseListenerAnnotation-BB@0x1cc : [ parseListenerAnnotation-BB@0x1e8 parseListenerAnnotation-BB@0x234 ]
+	115     (000001cc) const-class          v36, Lbutterknife/internal/ListenerClass;
+	116     (000001d0) move-object/from16   v0, v43
+	117     (000001d4) move-object/from16   v1, v36
+	118     (000001d8) invoke-virtual       v0, v1, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	119     (000001de) move-result-object   v20
+	120     (000001e0) check-cast           v20, Lbutterknife/internal/ListenerClass;
+	121     (000001e4) if-nez               v20, +28
+
+parseListenerAnnotation-BB@0x1e8 : 
+	122     (000001e8) new-instance         v36, Ljava/lang/IllegalStateException;
+	123     (000001ec) const-string         v37, 'No @%s defined on @%s.'
+	124     (000001f0) const/16             v38, 2
+	125     (000001f4) move/from16          v0, v38
+	126     (000001f8) new-array            v0, v0, [Ljava/lang/Object;
+	127     (000001fc) move-object/from16   v38, v0
+	128     (00000200) const/16             v39, 0
+	129     (00000204) const-class          v40, Lbutterknife/internal/ListenerClass;
+	130     (00000208) invoke-virtual/range v40, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	131     (0000020e) move-result-object   v40
+	132     (00000210) aput-object          v40, v38, v39
+	133     (00000214) const/16             v39, 1
+	134     (00000218) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	135     (0000021e) move-result-object   v40
+	136     (00000220) aput-object          v40, v38, v39
+	137     (00000224) invoke-static/range  v37 ... v38, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	138     (0000022a) move-result-object   v37
+	139     (0000022c) invoke-direct/range  v36 ... v37, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	140     (00000232) throw                v36
+
+parseListenerAnnotation-BB@0x234 : [ parseListenerAnnotation-BB@0x242 ]
+	141     (00000234) move-object/from16   v0, v18
+	142     (00000238) array-length         v0, v0
+	143     (0000023a) move/from16          v37, v0
+	144     (0000023e) const/16             v36, 0
+
+parseListenerAnnotation-BB@0x242 : [ parseListenerAnnotation-BB@0x24e parseListenerAnnotation-BB@0x3ea ]
+	145     (00000242) move/from16          v0, v36
+	146     (00000246) move/from16          v1, v37
+	147     (0000024a) if-ge                v0, v1, +d0
+
+parseListenerAnnotation-BB@0x24e : [ parseListenerAnnotation-BB@0x262 parseListenerAnnotation-BB@0x374 ]
+	148     (0000024e) aget                 v17, v18, v36
+	149     (00000252) const/16             v38, -1
+	150     (00000256) move/from16          v0, v17
+	151     (0000025a) move/from16          v1, v38
+	152     (0000025e) if-ne                v0, v1, +8b
+
+parseListenerAnnotation-BB@0x262 : [ parseListenerAnnotation-BB@0x27c parseListenerAnnotation-BB@0x37c ]
+	153     (00000262) move-object/from16   v0, v18
+	154     (00000266) array-length         v0, v0
+	155     (00000268) move/from16          v38, v0
+	156     (0000026c) const/16             v39, 1
+	157     (00000270) move/from16          v0, v38
+	158     (00000274) move/from16          v1, v39
+	159     (00000278) if-ne                v0, v1, +82
+
+parseListenerAnnotation-BB@0x27c : [ parseListenerAnnotation-BB@0x280 parseListenerAnnotation-BB@0x2cc ]
+	160     (0000027c) if-nez               v32, +28
+
+parseListenerAnnotation-BB@0x280 : [ parseListenerAnnotation-BB@0x2cc ]
+	161     (00000280) const-string         v38, 'ID-free binding must not be annotated with @Nullable. (%s.%s)'
+	162     (00000284) const/16             v39, 2
+	163     (00000288) move/from16          v0, v39
+	164     (0000028c) new-array            v0, v0, [Ljava/lang/Object;
+	165     (00000290) move-object/from16   v39, v0
+	166     (00000294) const/16             v40, 0
+	167     (00000298) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->getQualifiedName()Ljavax/lang/model/element/Name;
+	168     (0000029e) move-result-object   v41
+	169     (000002a0) aput-object          v41, v39, v40
+	170     (000002a4) const/16             v40, 1
+	171     (000002a8) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getSimpleName()Ljavax/lang/model/element/Name;
+	172     (000002ae) move-result-object   v41
+	173     (000002b0) aput-object          v41, v39, v40
+	174     (000002b4) move-object/from16   v0, v42
+	175     (000002b8) move-object/from16   v1, v44
+	176     (000002bc) move-object/from16   v2, v38
+	177     (000002c0) move-object/from16   v3, v39
+	178     (000002c4) invoke-direct        v0, v1, v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->error(Ljavax/lang/model/element/Element; Ljava/lang/String; [Ljava/lang/Object;)V
+	179     (000002ca) const/4              v15, 1
+
+parseListenerAnnotation-BB@0x2cc : [ parseListenerAnnotation-BB@0x2f4 parseListenerAnnotation-BB@0x374 ]
+	180     (000002cc) invoke-interface/range v20, Lbutterknife/internal/ListenerClass;->targetType()Ljava/lang/String;
+	181     (000002d2) move-result-object   v34
+	182     (000002d4) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->asType()Ljavax/lang/model/type/TypeMirror;
+	183     (000002da) move-result-object   v38
+	184     (000002dc) move-object/from16   v0, v42
+	185     (000002e0) move-object/from16   v1, v38
+	186     (000002e4) move-object/from16   v2, v34
+	187     (000002e8) invoke-direct        v0, v1, v2, Lbutterknife/internal/ButterKnifeProcessor;->isSubtypeOfType(Ljavax/lang/model/type/TypeMirror; Ljava/lang/String;)Z
+	188     (000002ee) move-result          v38
+	189     (000002f0) if-nez               v38, +42
+
+parseListenerAnnotation-BB@0x2f4 : [ parseListenerAnnotation-BB@0x310 parseListenerAnnotation-BB@0x374 ]
+	190     (000002f4) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->asType()Ljavax/lang/model/type/TypeMirror;
+	191     (000002fa) move-result-object   v38
+	192     (000002fc) move-object/from16   v0, v42
+	193     (00000300) move-object/from16   v1, v38
+	194     (00000304) invoke-direct        v0, v1, Lbutterknife/internal/ButterKnifeProcessor;->isInterface(Ljavax/lang/model/type/TypeMirror;)Z
+	195     (0000030a) move-result          v38
+	196     (0000030c) if-nez               v38, +34
+
+parseListenerAnnotation-BB@0x310 : [ parseListenerAnnotation-BB@0x374 ]
+	197     (00000310) const-string         v38, '@%s annotation without an ID may only be used with an object of type "%s" or an interface. (%s.%s)'
+	198     (00000314) const/16             v39, 4
+	199     (00000318) move/from16          v0, v39
+	200     (0000031c) new-array            v0, v0, [Ljava/lang/Object;
+	201     (00000320) move-object/from16   v39, v0
+	202     (00000324) const/16             v40, 0
+	203     (00000328) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	204     (0000032e) move-result-object   v41
+	205     (00000330) aput-object          v41, v39, v40
+	206     (00000334) const/16             v40, 1
+	207     (00000338) aput-object          v34, v39, v40
+	208     (0000033c) const/16             v40, 2
+	209     (00000340) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->getQualifiedName()Ljavax/lang/model/element/Name;
+	210     (00000346) move-result-object   v41
+	211     (00000348) aput-object          v41, v39, v40
+	212     (0000034c) const/16             v40, 3
+	213     (00000350) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getSimpleName()Ljavax/lang/model/element/Name;
+	214     (00000356) move-result-object   v41
+	215     (00000358) aput-object          v41, v39, v40
+	216     (0000035c) move-object/from16   v0, v42
+	217     (00000360) move-object/from16   v1, v44
+	218     (00000364) move-object/from16   v2, v38
+	219     (00000368) move-object/from16   v3, v39
+	220     (0000036c) invoke-direct        v0, v1, v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->error(Ljavax/lang/model/element/Element; Ljava/lang/String; [Ljava/lang/Object;)V
+	221     (00000372) const/4              v15, 1
+
+parseListenerAnnotation-BB@0x374 : [ parseListenerAnnotation-BB@0x242 ]
+	222     (00000374) add-int/lit8         v36, v36, 1
+	223     (00000378) goto/16              -9b
+
+parseListenerAnnotation-BB@0x37c : [ parseListenerAnnotation-BB@0x374 ]
+	224     (0000037c) const-string         v38, '@%s annotation contains invalid ID %d. (%s.%s)'
+	225     (00000380) const/16             v39, 4
+	226     (00000384) move/from16          v0, v39
+	227     (00000388) new-array            v0, v0, [Ljava/lang/Object;
+	228     (0000038c) move-object/from16   v39, v0
+	229     (00000390) const/16             v40, 0
+	230     (00000394) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	231     (0000039a) move-result-object   v41
+	232     (0000039c) aput-object          v41, v39, v40
+	233     (000003a0) const/16             v40, 1
+	234     (000003a4) invoke-static/range  v17, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	235     (000003aa) move-result-object   v41
+	236     (000003ac) aput-object          v41, v39, v40
+	237     (000003b0) const/16             v40, 2
+	238     (000003b4) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->getQualifiedName()Ljavax/lang/model/element/Name;
+	239     (000003ba) move-result-object   v41
+	240     (000003bc) aput-object          v41, v39, v40
+	241     (000003c0) const/16             v40, 3
+	242     (000003c4) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getSimpleName()Ljavax/lang/model/element/Name;
+	243     (000003ca) move-result-object   v41
+	244     (000003cc) aput-object          v41, v39, v40
+	245     (000003d0) move-object/from16   v0, v42
+	246     (000003d4) move-object/from16   v1, v44
+	247     (000003d8) move-object/from16   v2, v38
+	248     (000003dc) move-object/from16   v3, v39
+	249     (000003e0) invoke-direct        v0, v1, v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->error(Ljavax/lang/model/element/Element; Ljava/lang/String; [Ljava/lang/Object;)V
+	250     (000003e6) const/4              v15, 1
+	251     (000003e8) goto                 -3a
+
+parseListenerAnnotation-BB@0x3ea : [ parseListenerAnnotation-BB@0x40c parseListenerAnnotation-BB@0x444 ]
+	252     (000003ea) invoke-interface/range v20, Lbutterknife/internal/ListenerClass;->method()[Lbutterknife/internal/ListenerMethod;
+	253     (000003f0) move-result-object   v26
+	254     (000003f2) move-object/from16   v0, v26
+	255     (000003f6) array-length         v0, v0
+	256     (000003f8) move/from16          v36, v0
+	257     (000003fc) const/16             v37, 1
+	258     (00000400) move/from16          v0, v36
+	259     (00000404) move/from16          v1, v37
+	260     (00000408) if-le                v0, v1, +1e
+
+parseListenerAnnotation-BB@0x40c : 
+	261     (0000040c) new-instance         v36, Ljava/lang/IllegalStateException;
+	262     (00000410) const-string         v37, 'Multiple listener methods specified on @%s.'
+	263     (00000414) const/16             v38, 1
+	264     (00000418) move/from16          v0, v38
+	265     (0000041c) new-array            v0, v0, [Ljava/lang/Object;
+	266     (00000420) move-object/from16   v38, v0
+	267     (00000424) const/16             v39, 0
+	268     (00000428) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	269     (0000042e) move-result-object   v40
+	270     (00000430) aput-object          v40, v38, v39
+	271     (00000434) invoke-static/range  v37 ... v38, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	272     (0000043a) move-result-object   v37
+	273     (0000043c) invoke-direct/range  v36 ... v37, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	274     (00000442) throw                v36
+
+parseListenerAnnotation-BB@0x444 : [ parseListenerAnnotation-BB@0x45e parseListenerAnnotation-BB@0x618 ]
+	275     (00000444) move-object/from16   v0, v26
+	276     (00000448) array-length         v0, v0
+	277     (0000044a) move/from16          v36, v0
+	278     (0000044e) const/16             v37, 1
+	279     (00000452) move/from16          v0, v36
+	280     (00000456) move/from16          v1, v37
+	281     (0000045a) if-ne                v0, v1, +df
+
+parseListenerAnnotation-BB@0x45e : [ parseListenerAnnotation-BB@0x476 parseListenerAnnotation-BB@0x4ae ]
+	282     (0000045e) invoke-interface/range v20, Lbutterknife/internal/ListenerClass;->callbacks()Ljava/lang/Class;
+	283     (00000464) move-result-object   v36
+	284     (00000466) const-class          v37, Lbutterknife/internal/ListenerClass$NONE;
+	285     (0000046a) move-object/from16   v0, v36
+	286     (0000046e) move-object/from16   v1, v37
+	287     (00000472) if-eq                v0, v1, +1e
+
+parseListenerAnnotation-BB@0x476 : 
+	288     (00000476) new-instance         v36, Ljava/lang/IllegalStateException;
+	289     (0000047a) const-string         v37, 'Both method() and callback() defined on @%s.'
+	290     (0000047e) const/16             v38, 1
+	291     (00000482) move/from16          v0, v38
+	292     (00000486) new-array            v0, v0, [Ljava/lang/Object;
+	293     (0000048a) move-object/from16   v38, v0
+	294     (0000048e) const/16             v39, 0
+	295     (00000492) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	296     (00000498) move-result-object   v40
+	297     (0000049a) aput-object          v40, v38, v39
+	298     (0000049e) invoke-static/range  v37 ... v38, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	299     (000004a4) move-result-object   v37
+	300     (000004a6) invoke-direct/range  v36 ... v37, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	301     (000004ac) throw                v36
+
+parseListenerAnnotation-BB@0x4ae : [ parseListenerAnnotation-BB@0x4b6 ]
+	302     (000004ae) const/16             v36, 0
+	303     (000004b2) aget-object          v21, v26, v36
+
+parseListenerAnnotation-BB@0x4b6 : [ parseListenerAnnotation-BB@0x4e4 parseListenerAnnotation-BB@0x562 ]
+	304     (000004b6) invoke-interface     v14, Ljavax/lang/model/element/ExecutableElement;->getParameters()Ljava/util/List;
+	305     (000004bc) move-result-object   v25
+	306     (000004be) invoke-interface/range v25, Ljava/util/List;->size()I
+	307     (000004c4) move-result          v36
+	308     (000004c6) invoke-interface/range v21, Lbutterknife/internal/ListenerMethod;->parameters()[Ljava/lang/String;
+	309     (000004cc) move-result-object   v37
+	310     (000004ce) move-object/from16   v0, v37
+	311     (000004d2) array-length         v0, v0
+	312     (000004d4) move/from16          v37, v0
+	313     (000004d8) move/from16          v0, v36
+	314     (000004dc) move/from16          v1, v37
+	315     (000004e0) if-le                v0, v1, +41
+
+parseListenerAnnotation-BB@0x4e4 : [ parseListenerAnnotation-BB@0x562 ]
+	316     (000004e4) const-string         v36, '@%s methods can have at most %s parameter(s). (%s.%s)'
+	317     (000004e8) const/16             v37, 4
+	318     (000004ec) move/from16          v0, v37
+	319     (000004f0) new-array            v0, v0, [Ljava/lang/Object;
+	320     (000004f4) move-object/from16   v37, v0
+	321     (000004f8) const/16             v38, 0
+	322     (000004fc) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	323     (00000502) move-result-object   v39
+	324     (00000504) aput-object          v39, v37, v38
+	325     (00000508) const/16             v38, 1
+	326     (0000050c) invoke-interface/range v21, Lbutterknife/internal/ListenerMethod;->parameters()[Ljava/lang/String;
+	327     (00000512) move-result-object   v39
+	328     (00000514) move-object/from16   v0, v39
+	329     (00000518) array-length         v0, v0
+	330     (0000051a) move/from16          v39, v0
+	331     (0000051e) invoke-static/range  v39, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	332     (00000524) move-result-object   v39
+	333     (00000526) aput-object          v39, v37, v38
+	334     (0000052a) const/16             v38, 2
+	335     (0000052e) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->getQualifiedName()Ljavax/lang/model/element/Name;
+	336     (00000534) move-result-object   v39
+	337     (00000536) aput-object          v39, v37, v38
+	338     (0000053a) const/16             v38, 3
+	339     (0000053e) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getSimpleName()Ljavax/lang/model/element/Name;
+	340     (00000544) move-result-object   v39
+	341     (00000546) aput-object          v39, v37, v38
+	342     (0000054a) move-object/from16   v0, v42
+	343     (0000054e) move-object/from16   v1, v44
+	344     (00000552) move-object/from16   v2, v36
+	345     (00000556) move-object/from16   v3, v37
+	346     (0000055a) invoke-direct        v0, v1, v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->error(Ljavax/lang/model/element/Element; Ljava/lang/String; [Ljava/lang/Object;)V
+	347     (00000560) const/4              v15, 1
+
+parseListenerAnnotation-BB@0x562 : [ parseListenerAnnotation-BB@0x57a parseListenerAnnotation-BB@0x58a ]
+	348     (00000562) invoke-interface     v14, Ljavax/lang/model/element/ExecutableElement;->getReturnType()Ljavax/lang/model/type/TypeMirror;
+	349     (00000568) move-result-object   v33
+	350     (0000056a) move-object/from16   v0, v33
+	351     (0000056e) instance-of          v0, v0, Ljavax/lang/model/type/TypeVariable;
+	352     (00000572) move/from16          v36, v0
+	353     (00000576) if-eqz               v36, +a
+
+parseListenerAnnotation-BB@0x57a : [ parseListenerAnnotation-BB@0x58a ]
+	354     (0000057a) move-object/from16   v35, v33
+	355     (0000057e) check-cast           v35, Ljavax/lang/model/type/TypeVariable;
+	356     (00000582) invoke-interface/range v35, Ljavax/lang/model/type/TypeVariable;->getUpperBound()Ljavax/lang/model/type/TypeMirror;
+	357     (00000588) move-result-object   v33
+
+parseListenerAnnotation-BB@0x58a : [ parseListenerAnnotation-BB@0x5a6 parseListenerAnnotation-BB@0x612 ]
+	358     (0000058a) invoke-interface/range v33, Ljavax/lang/model/type/TypeMirror;->toString()Ljava/lang/String;
+	359     (00000590) move-result-object   v36
+	360     (00000592) invoke-interface/range v21, Lbutterknife/internal/ListenerMethod;->returnType()Ljava/lang/String;
+	361     (00000598) move-result-object   v37
+	362     (0000059a) invoke-virtual/range v36 ... v37, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	363     (000005a0) move-result          v36
+	364     (000005a2) if-nez               v36, +38
+
+parseListenerAnnotation-BB@0x5a6 : [ parseListenerAnnotation-BB@0x612 ]
+	365     (000005a6) const-string         v36, "@%s methods must have a '%s' return type. (%s.%s)"
+	366     (000005aa) const/16             v37, 4
+	367     (000005ae) move/from16          v0, v37
+	368     (000005b2) new-array            v0, v0, [Ljava/lang/Object;
+	369     (000005b6) move-object/from16   v37, v0
+	370     (000005ba) const/16             v38, 0
+	371     (000005be) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	372     (000005c4) move-result-object   v39
+	373     (000005c6) aput-object          v39, v37, v38
+	374     (000005ca) const/16             v38, 1
+	375     (000005ce) invoke-interface/range v21, Lbutterknife/internal/ListenerMethod;->returnType()Ljava/lang/String;
+	376     (000005d4) move-result-object   v39
+	377     (000005d6) aput-object          v39, v37, v38
+	378     (000005da) const/16             v38, 2
+	379     (000005de) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->getQualifiedName()Ljavax/lang/model/element/Name;
+	380     (000005e4) move-result-object   v39
+	381     (000005e6) aput-object          v39, v37, v38
+	382     (000005ea) const/16             v38, 3
+	383     (000005ee) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getSimpleName()Ljavax/lang/model/element/Name;
+	384     (000005f4) move-result-object   v39
+	385     (000005f6) aput-object          v39, v37, v38
+	386     (000005fa) move-object/from16   v0, v42
+	387     (000005fe) move-object/from16   v1, v44
+	388     (00000602) move-object/from16   v2, v36
+	389     (00000606) move-object/from16   v3, v37
+	390     (0000060a) invoke-direct        v0, v1, v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->error(Ljavax/lang/model/element/Element; Ljava/lang/String; [Ljava/lang/Object;)V
+	391     (00000610) const/4              v15, 1
+
+parseListenerAnnotation-BB@0x612 : [ parseListenerAnnotation-BB@0x616 parseListenerAnnotation-BB@0x704 ]
+	392     (00000612) if-eqz               v15, +79
+
+parseListenerAnnotation-BB@0x616 : 
+	393     (00000616) return-void          
+
+parseListenerAnnotation-BB@0x618 : [ parseListenerAnnotation-BB@0x690 parseListenerAnnotation-BB@0x4b6 ]
+	394     (00000618) const-string         v36, 'callback'
+	395     (0000061c) const/16             v37, 0
+	396     (00000620) move/from16          v0, v37
+	397     (00000624) new-array            v0, v0, [Ljava/lang/Class;
+	398     (00000628) move-object/from16   v37, v0
+	399     (0000062c) move-object/from16   v0, v43
+	400     (00000630) move-object/from16   v1, v36
+	401     (00000634) move-object/from16   v2, v37
+	402     (00000638) invoke-virtual       v0, v1, v2, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	403     (0000063e) move-result-object   v5
+	404     (00000640) const/16             v36, 0
+	405     (00000644) move/from16          v0, v36
+	406     (00000648) new-array            v0, v0, [Ljava/lang/Object;
+	407     (0000064c) move-object/from16   v36, v0
+	408     (00000650) move-object/from16   v0, v36
+	409     (00000654) invoke-virtual       v5, v4, v0, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	410     (0000065a) move-result-object   v10
+	411     (0000065c) check-cast           v10, Ljava/lang/Enum;
+	412     (00000660) invoke-virtual       v10, Ljava/lang/Enum;->getDeclaringClass()Ljava/lang/Class;
+	413     (00000666) move-result-object   v36
+	414     (00000668) invoke-virtual       v10, Ljava/lang/Enum;->name()Ljava/lang/String;
+	415     (0000066e) move-result-object   v37
+	416     (00000670) invoke-virtual/range v36 ... v37, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+	417     (00000676) move-result-object   v11
+	418     (00000678) const-class          v36, Lbutterknife/internal/ListenerMethod;
+	419     (0000067c) move-object/from16   v0, v36
+	420     (00000680) invoke-virtual       v11, v0, Ljava/lang/reflect/Field;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+	421     (00000686) move-result-object   v21
+	422     (00000688) check-cast           v21, Lbutterknife/internal/ListenerMethod;
+	423     (0000068c) if-nez               v21, -eb
+
+parseListenerAnnotation-BB@0x690 : 
+	424     (00000690) new-instance         v36, Ljava/lang/IllegalStateException;
+	425     (00000694) const-string         v37, "No @%s defined on @%s's %s.%s."
+	426     (00000698) const/16             v38, 4
+	427     (0000069c) move/from16          v0, v38
+	428     (000006a0) new-array            v0, v0, [Ljava/lang/Object;
+	429     (000006a4) move-object/from16   v38, v0
+	430     (000006a8) const/16             v39, 0
+	431     (000006ac) const-class          v40, Lbutterknife/internal/ListenerMethod;
+	432     (000006b0) invoke-virtual/range v40, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	433     (000006b6) move-result-object   v40
+	434     (000006b8) aput-object          v40, v38, v39
+	435     (000006bc) const/16             v39, 1
+	436     (000006c0) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	437     (000006c6) move-result-object   v40
+	438     (000006c8) aput-object          v40, v38, v39
+	439     (000006cc) const/16             v39, 2
+	440     (000006d0) invoke-virtual       v10, Ljava/lang/Enum;->getDeclaringClass()Ljava/lang/Class;
+	441     (000006d6) move-result-object   v40
+	442     (000006d8) invoke-virtual/range v40, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	443     (000006de) move-result-object   v40
+	444     (000006e0) aput-object          v40, v38, v39
+	445     (000006e4) const/16             v39, 3
+	446     (000006e8) invoke-virtual       v10, Ljava/lang/Enum;->name()Ljava/lang/String;
+	447     (000006ee) move-result-object   v40
+	448     (000006f0) aput-object          v40, v38, v39
+	449     (000006f4) invoke-static/range  v37 ... v38, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	450     (000006fa) move-result-object   v37
+	451     (000006fc) invoke-direct/range  v36 ... v37, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	452     (00000702) throw                v36
+
+parseListenerAnnotation-BB@0x704 : [ parseListenerAnnotation-BB@0x714 parseListenerAnnotation-BB@0xa44 ]
+	453     (00000704) sget-object          v31, Lbutterknife/internal/Parameter;->NONE [Lbutterknife/internal/Parameter;
+	454     (00000708) invoke-interface/range v25, Ljava/util/List;->isEmpty()Z
+	455     (0000070e) move-result          v36
+	456     (00000710) if-nez               v36, +19a
+
+parseListenerAnnotation-BB@0x714 : [ parseListenerAnnotation-BB@0x74e ]
+	457     (00000714) invoke-interface/range v25, Ljava/util/List;->size()I
+	458     (0000071a) move-result          v36
+	459     (0000071c) move/from16          v0, v36
+	460     (00000720) new-array            v0, v0, [Lbutterknife/internal/Parameter;
+	461     (00000724) move-object/from16   v31, v0
+	462     (00000728) new-instance         v24, Ljava/util/BitSet;
+	463     (0000072c) invoke-interface/range v25, Ljava/util/List;->size()I
+	464     (00000732) move-result          v36
+	465     (00000734) move-object/from16   v0, v24
+	466     (00000738) move/from16          v1, v36
+	467     (0000073c) invoke-direct        v0, v1, Ljava/util/BitSet;-><init>(I)V
+	468     (00000742) invoke-interface/range v21, Lbutterknife/internal/ListenerMethod;->parameters()[Ljava/lang/String;
+	469     (00000748) move-result-object   v30
+	470     (0000074a) const/16             v16, 0
+
+parseListenerAnnotation-BB@0x74e : [ parseListenerAnnotation-BB@0x762 parseListenerAnnotation-BB@0xa44 ]
+	471     (0000074e) invoke-interface/range v25, Ljava/util/List;->size()I
+	472     (00000754) move-result          v36
+	473     (00000756) move/from16          v0, v16
+	474     (0000075a) move/from16          v1, v36
+	475     (0000075e) if-ge                v0, v1, +173
+
+parseListenerAnnotation-BB@0x762 : [ parseListenerAnnotation-BB@0x78e parseListenerAnnotation-BB@0x79e ]
+	476     (00000762) move-object/from16   v0, v25
+	477     (00000766) move/from16          v1, v16
+	478     (0000076a) invoke-interface     v0, v1, Ljava/util/List;->get(I)Ljava/lang/Object;
+	479     (00000770) move-result-object   v22
+	480     (00000772) check-cast           v22, Ljavax/lang/model/element/VariableElement;
+	481     (00000776) invoke-interface/range v22, Ljavax/lang/model/element/VariableElement;->asType()Ljavax/lang/model/type/TypeMirror;
+	482     (0000077c) move-result-object   v23
+	483     (0000077e) move-object/from16   v0, v23
+	484     (00000782) instance-of          v0, v0, Ljavax/lang/model/type/TypeVariable;
+	485     (00000786) move/from16          v36, v0
+	486     (0000078a) if-eqz               v36, +a
+
+parseListenerAnnotation-BB@0x78e : [ parseListenerAnnotation-BB@0x79e ]
+	487     (0000078e) move-object/from16   v35, v23
+	488     (00000792) check-cast           v35, Ljavax/lang/model/type/TypeVariable;
+	489     (00000796) invoke-interface/range v35, Ljavax/lang/model/type/TypeVariable;->getUpperBound()Ljavax/lang/model/type/TypeMirror;
+	490     (0000079c) move-result-object   v23
+
+parseListenerAnnotation-BB@0x79e : [ parseListenerAnnotation-BB@0x7a2 ]
+	491     (0000079e) const/16             v19, 0
+
+parseListenerAnnotation-BB@0x7a2 : [ parseListenerAnnotation-BB@0x7b8 parseListenerAnnotation-BB@0x832 ]
+	492     (000007a2) move-object/from16   v0, v30
+	493     (000007a6) array-length         v0, v0
+	494     (000007a8) move/from16          v36, v0
+	495     (000007ac) move/from16          v0, v19
+	496     (000007b0) move/from16          v1, v36
+	497     (000007b4) if-ge                v0, v1, +3f
+
+parseListenerAnnotation-BB@0x7b8 : [ parseListenerAnnotation-BB@0x7cc parseListenerAnnotation-BB@0x7d2 ]
+	498     (000007b8) move-object/from16   v0, v24
+	499     (000007bc) move/from16          v1, v19
+	500     (000007c0) invoke-virtual       v0, v1, Ljava/util/BitSet;->get(I)Z
+	501     (000007c6) move-result          v36
+	502     (000007c8) if-eqz               v36, +5
+
+parseListenerAnnotation-BB@0x7cc : [ parseListenerAnnotation-BB@0x7a2 ]
+	503     (000007cc) add-int/lit8         v19, v19, 1
+	504     (000007d0) goto                 -17
+
+parseListenerAnnotation-BB@0x7d2 : [ parseListenerAnnotation-BB@0x7ee parseListenerAnnotation-BB@0x802 ]
+	505     (000007d2) aget-object          v36, v30, v19
+	506     (000007d6) move-object/from16   v0, v42
+	507     (000007da) move-object/from16   v1, v23
+	508     (000007de) move-object/from16   v2, v36
+	509     (000007e2) invoke-direct        v0, v1, v2, Lbutterknife/internal/ButterKnifeProcessor;->isSubtypeOfType(Ljavax/lang/model/type/TypeMirror; Ljava/lang/String;)Z
+	510     (000007e8) move-result          v36
+	511     (000007ea) if-nez               v36, +c
+
+parseListenerAnnotation-BB@0x7ee : [ parseListenerAnnotation-BB@0x802 parseListenerAnnotation-BB@0x7cc ]
+	512     (000007ee) move-object/from16   v0, v42
+	513     (000007f2) move-object/from16   v1, v23
+	514     (000007f6) invoke-direct        v0, v1, Lbutterknife/internal/ButterKnifeProcessor;->isInterface(Ljavax/lang/model/type/TypeMirror;)Z
+	515     (000007fc) move-result          v36
+	516     (000007fe) if-eqz               v36, -19
+
+parseListenerAnnotation-BB@0x802 : [ parseListenerAnnotation-BB@0x832 ]
+	517     (00000802) new-instance         v36, Lbutterknife/internal/Parameter;
+	518     (00000806) invoke-interface/range v23, Ljavax/lang/model/type/TypeMirror;->toString()Ljava/lang/String;
+	519     (0000080c) move-result-object   v37
+	520     (0000080e) move-object/from16   v0, v36
+	521     (00000812) move/from16          v1, v19
+	522     (00000816) move-object/from16   v2, v37
+	523     (0000081a) invoke-direct        v0, v1, v2, Lbutterknife/internal/Parameter;-><init>(I Ljava/lang/String;)V
+	524     (00000820) aput-object          v36, v31, v16
+	525     (00000824) move-object/from16   v0, v24
+	526     (00000828) move/from16          v1, v19
+	527     (0000082c) invoke-virtual       v0, v1, Ljava/util/BitSet;->set(I)V
+
+parseListenerAnnotation-BB@0x832 : [ parseListenerAnnotation-BB@0x83a parseListenerAnnotation-BB@0xa3c ]
+	528     (00000832) aget-object          v36, v31, v16
+	529     (00000836) if-nez               v36, +103
+
+parseListenerAnnotation-BB@0x83a : [ parseListenerAnnotation-BB@0x8aa ]
+	530     (0000083a) new-instance         v9, Ljava/lang/StringBuilder;
+	531     (0000083e) invoke-direct        v9, Ljava/lang/StringBuilder;-><init>()V
+	532     (00000844) const-string         v36, 'Unable to match @'
+	533     (00000848) move-object/from16   v0, v36
+	534     (0000084c) invoke-virtual       v9, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	535     (00000852) move-result-object   v36
+	536     (00000854) invoke-virtual/range v43, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	537     (0000085a) move-result-object   v37
+	538     (0000085c) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	539     (00000862) move-result-object   v36
+	540     (00000864) const-string         v37, ' method arguments. ('
+	541     (00000868) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	542     (0000086e) move-result-object   v36
+	543     (00000870) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->getQualifiedName()Ljavax/lang/model/element/Name;
+	544     (00000876) move-result-object   v37
+	545     (00000878) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+	546     (0000087e) move-result-object   v36
+	547     (00000880) const/16             v37, 46
+	548     (00000884) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	549     (0000088a) move-result-object   v36
+	550     (0000088c) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getSimpleName()Ljavax/lang/model/element/Name;
+	551     (00000892) move-result-object   v37
+	552     (00000894) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+	553     (0000089a) move-result-object   v36
+	554     (0000089c) const/16             v37, 41
+	555     (000008a0) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	556     (000008a6) const/16             v19, 0
+
+parseListenerAnnotation-BB@0x8aa : [ parseListenerAnnotation-BB@0x8c0 parseListenerAnnotation-BB@0x982 ]
+	557     (000008aa) move-object/from16   v0, v31
+	558     (000008ae) array-length         v0, v0
+	559     (000008b0) move/from16          v36, v0
+	560     (000008b4) move/from16          v0, v19
+	561     (000008b8) move/from16          v1, v36
+	562     (000008bc) if-ge                v0, v1, +63
+
+parseListenerAnnotation-BB@0x8c0 : [ parseListenerAnnotation-BB@0x92e parseListenerAnnotation-BB@0x942 ]
+	563     (000008c0) aget-object          v28, v31, v19
+	564     (000008c4) const-string         v36, '\n\n  Parameter #'
+	565     (000008c8) move-object/from16   v0, v36
+	566     (000008cc) invoke-virtual       v9, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	567     (000008d2) move-result-object   v36
+	568     (000008d4) add-int/lit8         v37, v19, 1
+	569     (000008d8) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	570     (000008de) move-result-object   v36
+	571     (000008e0) const-string         v37, ': '
+	572     (000008e4) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	573     (000008ea) move-result-object   v37
+	574     (000008ec) move-object/from16   v0, v25
+	575     (000008f0) move/from16          v1, v19
+	576     (000008f4) invoke-interface     v0, v1, Ljava/util/List;->get(I)Ljava/lang/Object;
+	577     (000008fa) move-result-object   v36
+	578     (000008fc) check-cast           v36, Ljavax/lang/model/element/VariableElement;
+	579     (00000900) invoke-interface/range v36, Ljavax/lang/model/element/VariableElement;->asType()Ljavax/lang/model/type/TypeMirror;
+	580     (00000906) move-result-object   v36
+	581     (00000908) invoke-interface/range v36, Ljavax/lang/model/type/TypeMirror;->toString()Ljava/lang/String;
+	582     (0000090e) move-result-object   v36
+	583     (00000910) move-object/from16   v0, v37
+	584     (00000914) move-object/from16   v1, v36
+	585     (00000918) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	586     (0000091e) move-result-object   v36
+	587     (00000920) const-string         v37, '\n    '
+	588     (00000924) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	589     (0000092a) if-nez               v28, +c
+
+parseListenerAnnotation-BB@0x92e : [ parseListenerAnnotation-BB@0x93c ]
+	590     (0000092e) const-string         v36, 'did not match any listener parameters'
+	591     (00000932) move-object/from16   v0, v36
+	592     (00000936) invoke-virtual       v9, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+parseListenerAnnotation-BB@0x93c : [ parseListenerAnnotation-BB@0x8aa ]
+	593     (0000093c) add-int/lit8         v19, v19, 1
+	594     (00000940) goto                 -4b
+
+parseListenerAnnotation-BB@0x942 : [ parseListenerAnnotation-BB@0x93c ]
+	595     (00000942) const-string         v36, 'matched listener parameter #'
+	596     (00000946) move-object/from16   v0, v36
+	597     (0000094a) invoke-virtual       v9, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	598     (00000950) move-result-object   v36
+	599     (00000952) invoke-virtual/range v28, Lbutterknife/internal/Parameter;->getListenerPosition()I
+	600     (00000958) move-result          v37
+	601     (0000095a) add-int/lit8         v37, v37, 1
+	602     (0000095e) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	603     (00000964) move-result-object   v36
+	604     (00000966) const-string         v37, ': '
+	605     (0000096a) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	606     (00000970) move-result-object   v36
+	607     (00000972) invoke-virtual/range v28, Lbutterknife/internal/Parameter;->getType()Ljava/lang/String;
+	608     (00000978) move-result-object   v37
+	609     (0000097a) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	610     (00000980) goto                 -22
+
+parseListenerAnnotation-BB@0x982 : [ parseListenerAnnotation-BB@0x9cc ]
+	611     (00000982) const-string         v36, '\n\nMethods may have up to '
+	612     (00000986) move-object/from16   v0, v36
+	613     (0000098a) invoke-virtual       v9, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	614     (00000990) move-result-object   v36
+	615     (00000992) invoke-interface/range v21, Lbutterknife/internal/ListenerMethod;->parameters()[Ljava/lang/String;
+	616     (00000998) move-result-object   v37
+	617     (0000099a) move-object/from16   v0, v37
+	618     (0000099e) array-length         v0, v0
+	619     (000009a0) move/from16          v37, v0
+	620     (000009a4) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	621     (000009aa) move-result-object   v36
+	622     (000009ac) const-string         v37, ' parameter(s):\n'
+	623     (000009b0) invoke-virtual/range v36 ... v37, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	624     (000009b6) invoke-interface/range v21, Lbutterknife/internal/ListenerMethod;->parameters()[Ljava/lang/String;
+	625     (000009bc) move-result-object   v37
+	626     (000009be) move-object/from16   v0, v37
+	627     (000009c2) array-length         v0, v0
+	628     (000009c4) move/from16          v38, v0
+	629     (000009c8) const/16             v36, 0
+
+parseListenerAnnotation-BB@0x9cc : [ parseListenerAnnotation-BB@0x9d8 parseListenerAnnotation-BB@0xa00 ]
+	630     (000009cc) move/from16          v0, v36
+	631     (000009d0) move/from16          v1, v38
+	632     (000009d4) if-ge                v0, v1, +16
+
+parseListenerAnnotation-BB@0x9d8 : [ parseListenerAnnotation-BB@0x9cc ]
+	633     (000009d8) aget-object          v29, v37, v36
+	634     (000009dc) const-string         v39, '\n  '
+	635     (000009e0) move-object/from16   v0, v39
+	636     (000009e4) invoke-virtual       v9, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	637     (000009ea) move-result-object   v39
+	638     (000009ec) move-object/from16   v0, v39
+	639     (000009f0) move-object/from16   v1, v29
+	640     (000009f4) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	641     (000009fa) add-int/lit8         v36, v36, 1
+	642     (000009fe) goto                 -19
+
+parseListenerAnnotation-BB@0xa00 : [ parseListenerAnnotation-BB@0x616 ]
+	643     (00000a00) const-string         v36, '\n\nThese may be listed in any order but will be searched for from top to bottom.'
+	644     (00000a04) move-object/from16   v0, v36
+	645     (00000a08) invoke-virtual       v9, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	646     (00000a0e) invoke-virtual       v9, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	647     (00000a14) move-result-object   v36
+	648     (00000a16) const/16             v37, 0
+	649     (00000a1a) move/from16          v0, v37
+	650     (00000a1e) new-array            v0, v0, [Ljava/lang/Object;
+	651     (00000a22) move-object/from16   v37, v0
+	652     (00000a26) move-object/from16   v0, v42
+	653     (00000a2a) move-object/from16   v1, v36
+	654     (00000a2e) move-object/from16   v2, v37
+	655     (00000a32) invoke-direct        v0, v14, v1, v2, Lbutterknife/internal/ButterKnifeProcessor;->error(Ljavax/lang/model/element/Element; Ljava/lang/String; [Ljava/lang/Object;)V
+	656     (00000a38) goto/16              -211
+
+parseListenerAnnotation-BB@0xa3c : [ parseListenerAnnotation-BB@0x74e ]
+	657     (00000a3c) add-int/lit8         v16, v16, 1
+	658     (00000a40) goto/16              -179
+
+parseListenerAnnotation-BB@0xa44 : [ parseListenerAnnotation-BB@0xa80 ]
+	659     (00000a44) new-instance         v7, Lbutterknife/internal/MethodViewBinding;
+	660     (00000a48) invoke-static/range  v31, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+	661     (00000a4e) move-result-object   v36
+	662     (00000a50) move-object/from16   v0, v27
+	663     (00000a54) move-object/from16   v1, v36
+	664     (00000a58) move/from16          v2, v32
+	665     (00000a5c) invoke-direct        v7, v0, v1, v2, Lbutterknife/internal/MethodViewBinding;-><init>(Ljava/lang/String; Ljava/util/List; Z)V
+	666     (00000a62) move-object/from16   v0, v42
+	667     (00000a66) move-object/from16   v1, v45
+	668     (00000a6a) invoke-direct        v0, v1, v13, Lbutterknife/internal/ButterKnifeProcessor;->getOrCreateTargetClass(Ljava/util/Map; Ljavax/lang/model/element/TypeElement;)Lbutterknife/internal/BindingClass;
+	669     (00000a70) move-result-object   v8
+	670     (00000a72) move-object/from16   v0, v18
+	671     (00000a76) array-length         v0, v0
+	672     (00000a78) move/from16          v37, v0
+	673     (00000a7c) const/16             v36, 0
+
+parseListenerAnnotation-BB@0xa80 : [ parseListenerAnnotation-BB@0xa8c parseListenerAnnotation-BB@0xb0c ]
+	674     (00000a80) move/from16          v0, v36
+	675     (00000a84) move/from16          v1, v37
+	676     (00000a88) if-ge                v0, v1, +42
+
+parseListenerAnnotation-BB@0xa8c : [ parseListenerAnnotation-BB@0xaa8 parseListenerAnnotation-BB@0xb06 ]
+	677     (00000a8c) aget                 v17, v18, v36
+	678     (00000a90) move/from16          v0, v17
+	679     (00000a94) move-object/from16   v1, v20
+	680     (00000a98) move-object/from16   v2, v21
+	681     (00000a9c) invoke-virtual       v8, v0, v1, v2, v7, Lbutterknife/internal/BindingClass;->addMethod(I Lbutterknife/internal/ListenerClass; Lbutterknife/internal/ListenerMethod; Lbutterknife/internal/MethodViewBinding;)Z
+	682     (00000aa2) move-result          v38
+	683     (00000aa4) if-nez               v38, +31
+
+parseListenerAnnotation-BB@0xaa8 : [ parseListenerAnnotation-BB@0x616 ]
+	684     (00000aa8) const-string         v36, 'Multiple listener methods with return value specified for ID %d. (%s.%s)'
+	685     (00000aac) const/16             v37, 3
+	686     (00000ab0) move/from16          v0, v37
+	687     (00000ab4) new-array            v0, v0, [Ljava/lang/Object;
+	688     (00000ab8) move-object/from16   v37, v0
+	689     (00000abc) const/16             v38, 0
+	690     (00000ac0) invoke-static/range  v17, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	691     (00000ac6) move-result-object   v39
+	692     (00000ac8) aput-object          v39, v37, v38
+	693     (00000acc) const/16             v38, 1
+	694     (00000ad0) invoke-interface     v13, Ljavax/lang/model/element/TypeElement;->getQualifiedName()Ljavax/lang/model/element/Name;
+	695     (00000ad6) move-result-object   v39
+	696     (00000ad8) aput-object          v39, v37, v38
+	697     (00000adc) const/16             v38, 2
+	698     (00000ae0) invoke-interface/range v44, Ljavax/lang/model/element/Element;->getSimpleName()Ljavax/lang/model/element/Name;
+	699     (00000ae6) move-result-object   v39
+	700     (00000ae8) aput-object          v39, v37, v38
+	701     (00000aec) move-object/from16   v0, v42
+	702     (00000af0) move-object/from16   v1, v44
+	703     (00000af4) move-object/from16   v2, v36
+	704     (00000af8) move-object/from16   v3, v37
+	705     (00000afc) invoke-direct        v0, v1, v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->error(Ljavax/lang/model/element/Element; Ljava/lang/String; [Ljava/lang/Object;)V
+	706     (00000b02) goto/16              -276
+
+parseListenerAnnotation-BB@0xb06 : [ parseListenerAnnotation-BB@0xa80 ]
+	707     (00000b06) add-int/lit8         v36, v36, 1
+	708     (00000b0a) goto                 -45
+
+parseListenerAnnotation-BB@0xb0c : [ parseListenerAnnotation-BB@0x616 ]
+	709     (00000b0c) invoke-virtual       v13, Ljava/lang/Object;->toString()Ljava/lang/String;
+	710     (00000b12) move-result-object   v36
+	711     (00000b14) move-object/from16   v0, v46
+	712     (00000b18) move-object/from16   v1, v36
+	713     (00000b1c) invoke-interface     v0, v1, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+	714     (00000b22) goto/16              -286
+

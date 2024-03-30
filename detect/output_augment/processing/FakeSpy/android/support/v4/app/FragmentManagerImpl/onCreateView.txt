@@ -1,0 +1,296 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->onCreateView(Landroid/view/View; Ljava/lang/String; Landroid/content/Context; Landroid/util/AttributeSet;)Landroid/view/View; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:android.view.View
+# - v13:java.lang.String
+# - v14:android.content.Context
+# - v15:android.util.AttributeSet
+#
+# - return:android.view.View
+
+onCreateView-BB@0x0 : [ onCreateView-BB@0x18 onCreateView-BB@0x1a ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) const/4              v3, 0
+	2       (00000004) const/4              v5, -1
+	3       (00000006) const/4              v2, 1
+	4       (00000008) const-string         v4, 'fragment'
+	5       (0000000c) invoke-virtual       v4, v13, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	6       (00000012) move-result          v4
+	7       (00000014) if-nez               v4, +3
+
+onCreateView-BB@0x18 : 
+	8       (00000018) return-object        v0
+
+onCreateView-BB@0x1a : [ onCreateView-BB@0x36 onCreateView-BB@0x3e ]
+	9       (0000001a) const-string         v4, 'class'
+	10      (0000001e) invoke-interface     v15, v0, v4, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	11      (00000024) move-result-object   v8
+	12      (00000026) sget-object          v4, Landroid/support/v4/app/FragmentManagerImpl$FragmentTag;->Fragment [I
+	13      (0000002a) invoke-virtual       v14, v15, v4, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I)Landroid/content/res/TypedArray;
+	14      (00000030) move-result-object   v6
+	15      (00000032) if-nez               v8, +6
+
+onCreateView-BB@0x36 : [ onCreateView-BB@0x3e ]
+	16      (00000036) invoke-virtual       v6, v3, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+	17      (0000003c) move-result-object   v8
+
+onCreateView-BB@0x3e : [ onCreateView-BB@0x6e onCreateView-BB@0x18 ]
+	18      (0000003e) invoke-virtual       v6, v2, v5, Landroid/content/res/TypedArray;->getResourceId(I I)I
+	19      (00000044) move-result          v9
+	20      (00000046) const/4              v4, 2
+	21      (00000048) invoke-virtual       v6, v4, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+	22      (0000004e) move-result-object   v10
+	23      (00000050) invoke-virtual       v6, Landroid/content/res/TypedArray;->recycle()V
+	24      (00000056) iget-object          v4, v11, Landroid/support/v4/app/FragmentManagerImpl;->mHost Landroid/support/v4/app/FragmentHostCallback;
+	25      (0000005a) invoke-virtual       v4, Landroid/support/v4/app/FragmentHostCallback;->getContext()Landroid/content/Context;
+	26      (00000060) move-result-object   v4
+	27      (00000062) invoke-static        v4, v8, Landroid/support/v4/app/Fragment;->isSupportFragmentClass(Landroid/content/Context; Ljava/lang/String;)Z
+	28      (00000068) move-result          v4
+	29      (0000006a) if-eqz               v4, -29
+
+onCreateView-BB@0x6e : [ onCreateView-BB@0x72 onCreateView-BB@0xc8 ]
+	30      (0000006e) if-eqz               v12, +2d
+
+onCreateView-BB@0x72 : [ onCreateView-BB@0x7a ]
+	31      (00000072) invoke-virtual       v12, Landroid/view/View;->getId()I
+	32      (00000078) move-result          v7
+
+onCreateView-BB@0x7a : [ onCreateView-BB@0x7e onCreateView-BB@0xcc ]
+	33      (0000007a) if-ne                v7, v5, +29
+
+onCreateView-BB@0x7e : [ onCreateView-BB@0x82 onCreateView-BB@0xcc ]
+	34      (0000007e) if-ne                v9, v5, +27
+
+onCreateView-BB@0x82 : [ onCreateView-BB@0x86 onCreateView-BB@0xcc ]
+	35      (00000082) if-nez               v10, +25
+
+onCreateView-BB@0x86 : 
+	36      (00000086) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	37      (0000008a) new-instance         v2, Ljava/lang/StringBuilder;
+	38      (0000008e) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	39      (00000094) invoke-interface     v15, Landroid/util/AttributeSet;->getPositionDescription()Ljava/lang/String;
+	40      (0000009a) move-result-object   v3
+	41      (0000009c) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	42      (000000a2) move-result-object   v2
+	43      (000000a4) const-string         v3, ': Must specify unique android:id, android:tag, or have a parent with an id for '
+	44      (000000a8) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	45      (000000ae) move-result-object   v2
+	46      (000000b0) invoke-virtual       v2, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	47      (000000b6) move-result-object   v2
+	48      (000000b8) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	49      (000000be) move-result-object   v2
+	50      (000000c0) invoke-direct        v0, v2, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	51      (000000c6) throw                v0
+
+onCreateView-BB@0xc8 : [ onCreateView-BB@0x7a ]
+	52      (000000c8) move                 v7, v3
+	53      (000000ca) goto                 -28
+
+onCreateView-BB@0xcc : [ onCreateView-BB@0xd0 onCreateView-BB@0x210 ]
+	54      (000000cc) if-eq                v9, v5, +a2
+
+onCreateView-BB@0xd0 : [ onCreateView-BB@0xd8 ]
+	55      (000000d0) invoke-virtual       v11, v9, Landroid/support/v4/app/FragmentManagerImpl;->findFragmentById(I)Landroid/support/v4/app/Fragment;
+	56      (000000d6) move-result-object   v1
+
+onCreateView-BB@0xd8 : [ onCreateView-BB@0xdc onCreateView-BB@0xe8 ]
+	57      (000000d8) if-nez               v1, +8
+
+onCreateView-BB@0xdc : [ onCreateView-BB@0xe0 onCreateView-BB@0xe8 ]
+	58      (000000dc) if-eqz               v10, +6
+
+onCreateView-BB@0xe0 : [ onCreateView-BB@0xe8 ]
+	59      (000000e0) invoke-virtual       v11, v10, Landroid/support/v4/app/FragmentManagerImpl;->findFragmentByTag(Ljava/lang/String;)Landroid/support/v4/app/Fragment;
+	60      (000000e6) move-result-object   v1
+
+onCreateView-BB@0xe8 : [ onCreateView-BB@0xec onCreateView-BB@0xf8 ]
+	61      (000000e8) if-nez               v1, +8
+
+onCreateView-BB@0xec : [ onCreateView-BB@0xf0 onCreateView-BB@0xf8 ]
+	62      (000000ec) if-eq                v7, v5, +6
+
+onCreateView-BB@0xf0 : [ onCreateView-BB@0xf8 ]
+	63      (000000f0) invoke-virtual       v11, v7, Landroid/support/v4/app/FragmentManagerImpl;->findFragmentById(I)Landroid/support/v4/app/Fragment;
+	64      (000000f6) move-result-object   v1
+
+onCreateView-BB@0xf8 : [ onCreateView-BB@0x100 onCreateView-BB@0x160 ]
+	65      (000000f8) sget-boolean         v0, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG Z
+	66      (000000fc) if-eqz               v0, +32
+
+onCreateView-BB@0x100 : [ onCreateView-BB@0x160 ]
+	67      (00000100) const-string         v0, 'FragmentManager'
+	68      (00000104) new-instance         v4, Ljava/lang/StringBuilder;
+	69      (00000108) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	70      (0000010e) const-string         v5, 'onCreateView: id=0x'
+	71      (00000112) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	72      (00000118) move-result-object   v4
+	73      (0000011a) invoke-static        v9, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	74      (00000120) move-result-object   v5
+	75      (00000122) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	76      (00000128) move-result-object   v4
+	77      (0000012a) const-string         v5, ' fname='
+	78      (0000012e) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	79      (00000134) move-result-object   v4
+	80      (00000136) invoke-virtual       v4, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	81      (0000013c) move-result-object   v4
+	82      (0000013e) const-string         v5, ' existing='
+	83      (00000142) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	84      (00000148) move-result-object   v4
+	85      (0000014a) invoke-virtual       v4, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	86      (00000150) move-result-object   v4
+	87      (00000152) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	88      (00000158) move-result-object   v4
+	89      (0000015a) invoke-static        v0, v4, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+onCreateView-BB@0x160 : [ onCreateView-BB@0x164 onCreateView-BB@0x21a ]
+	90      (00000160) if-nez               v1, +5d
+
+onCreateView-BB@0x164 : [ onCreateView-BB@0x174 onCreateView-BB@0x216 ]
+	91      (00000164) invoke-static        v14, v8, Landroid/support/v4/app/Fragment;->instantiate(Landroid/content/Context; Ljava/lang/String;)Landroid/support/v4/app/Fragment;
+	92      (0000016a) move-result-object   v1
+	93      (0000016c) iput-boolean         v2, v1, Landroid/support/v4/app/Fragment;->mFromLayout Z
+	94      (00000170) if-eqz               v9, +53
+
+onCreateView-BB@0x174 : [ onCreateView-BB@0x176 ]
+	95      (00000174) move                 v0, v9
+
+onCreateView-BB@0x176 : [ onCreateView-BB@0x1ae ]
+	96      (00000176) iput                 v0, v1, Landroid/support/v4/app/Fragment;->mFragmentId I
+	97      (0000017a) iput                 v7, v1, Landroid/support/v4/app/Fragment;->mContainerId I
+	98      (0000017e) iput-object          v10, v1, Landroid/support/v4/app/Fragment;->mTag Ljava/lang/String;
+	99      (00000182) iput-boolean         v2, v1, Landroid/support/v4/app/Fragment;->mInLayout Z
+	100     (00000186) iput-object          v11, v1, Landroid/support/v4/app/Fragment;->mFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	101     (0000018a) iget-object          v0, v11, Landroid/support/v4/app/FragmentManagerImpl;->mHost Landroid/support/v4/app/FragmentHostCallback;
+	102     (0000018e) iput-object          v0, v1, Landroid/support/v4/app/Fragment;->mHost Landroid/support/v4/app/FragmentHostCallback;
+	103     (00000192) iget-object          v0, v11, Landroid/support/v4/app/FragmentManagerImpl;->mHost Landroid/support/v4/app/FragmentHostCallback;
+	104     (00000196) invoke-virtual       v0, Landroid/support/v4/app/FragmentHostCallback;->getContext()Landroid/content/Context;
+	105     (0000019c) move-result-object   v0
+	106     (0000019e) iget-object          v4, v1, Landroid/support/v4/app/Fragment;->mSavedFragmentState Landroid/os/Bundle;
+	107     (000001a2) invoke-virtual       v1, v0, v15, v4, Landroid/support/v4/app/Fragment;->onInflate(Landroid/content/Context; Landroid/util/AttributeSet; Landroid/os/Bundle;)V
+	108     (000001a8) invoke-virtual       v11, v1, v2, Landroid/support/v4/app/FragmentManagerImpl;->addFragment(Landroid/support/v4/app/Fragment; Z)V
+
+onCreateView-BB@0x1ae : [ onCreateView-BB@0x1b6 onCreateView-BB@0x2de ]
+	109     (000001ae) iget                 v0, v11, Landroid/support/v4/app/FragmentManagerImpl;->mCurState I
+	110     (000001b2) if-ge                v0, v2, +96
+
+onCreateView-BB@0x1b6 : [ onCreateView-BB@0x1be onCreateView-BB@0x2de ]
+	111     (000001b6) iget-boolean         v0, v1, Landroid/support/v4/app/Fragment;->mFromLayout Z
+	112     (000001ba) if-eqz               v0, +92
+
+onCreateView-BB@0x1be : [ onCreateView-BB@0x1ca ]
+	113     (000001be) move-object          v0, v11
+	114     (000001c0) move                 v4, v3
+	115     (000001c2) move                 v5, v3
+	116     (000001c4) invoke-virtual/range v0 ... v5, Landroid/support/v4/app/FragmentManagerImpl;->moveToState(Landroid/support/v4/app/Fragment; I I I Z)V
+
+onCreateView-BB@0x1ca : [ onCreateView-BB@0x1d2 onCreateView-BB@0x2e8 ]
+	117     (000001ca) iget-object          v0, v1, Landroid/support/v4/app/Fragment;->mView Landroid/view/View;
+	118     (000001ce) if-nez               v0, +8d
+
+onCreateView-BB@0x1d2 : 
+	119     (000001d2) new-instance         v0, Ljava/lang/IllegalStateException;
+	120     (000001d6) new-instance         v2, Ljava/lang/StringBuilder;
+	121     (000001da) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	122     (000001e0) const-string         v3, 'Fragment '
+	123     (000001e4) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	124     (000001ea) move-result-object   v2
+	125     (000001ec) invoke-virtual       v2, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	126     (000001f2) move-result-object   v2
+	127     (000001f4) const-string         v3, ' did not create a view.'
+	128     (000001f8) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	129     (000001fe) move-result-object   v2
+	130     (00000200) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	131     (00000206) move-result-object   v2
+	132     (00000208) invoke-direct        v0, v2, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	133     (0000020e) throw                v0
+
+onCreateView-BB@0x210 : [ onCreateView-BB@0xd8 ]
+	134     (00000210) move-object          v1, v0
+	135     (00000212) goto/16              -9d
+
+onCreateView-BB@0x216 : [ onCreateView-BB@0x176 ]
+	136     (00000216) move                 v0, v7
+	137     (00000218) goto                 -51
+
+onCreateView-BB@0x21a : [ onCreateView-BB@0x222 onCreateView-BB@0x2b0 ]
+	138     (0000021a) iget-boolean         v0, v1, Landroid/support/v4/app/Fragment;->mInLayout Z
+	139     (0000021e) if-eqz               v0, +49
+
+onCreateView-BB@0x222 : 
+	140     (00000222) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	141     (00000226) new-instance         v2, Ljava/lang/StringBuilder;
+	142     (0000022a) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	143     (00000230) invoke-interface     v15, Landroid/util/AttributeSet;->getPositionDescription()Ljava/lang/String;
+	144     (00000236) move-result-object   v3
+	145     (00000238) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	146     (0000023e) move-result-object   v2
+	147     (00000240) const-string         v3, ': Duplicate id 0x'
+	148     (00000244) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	149     (0000024a) move-result-object   v2
+	150     (0000024c) invoke-static        v9, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	151     (00000252) move-result-object   v3
+	152     (00000254) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	153     (0000025a) move-result-object   v2
+	154     (0000025c) const-string         v3, ', tag '
+	155     (00000260) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	156     (00000266) move-result-object   v2
+	157     (00000268) invoke-virtual       v2, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	158     (0000026e) move-result-object   v2
+	159     (00000270) const-string         v3, ', or parent id 0x'
+	160     (00000274) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	161     (0000027a) move-result-object   v2
+	162     (0000027c) invoke-static        v7, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	163     (00000282) move-result-object   v3
+	164     (00000284) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	165     (0000028a) move-result-object   v2
+	166     (0000028c) const-string         v3, ' with another fragment for '
+	167     (00000290) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	168     (00000296) move-result-object   v2
+	169     (00000298) invoke-virtual       v2, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	170     (0000029e) move-result-object   v2
+	171     (000002a0) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	172     (000002a6) move-result-object   v2
+	173     (000002a8) invoke-direct        v0, v2, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	174     (000002ae) throw                v0
+
+onCreateView-BB@0x2b0 : [ onCreateView-BB@0x2c4 onCreateView-BB@0x1ae ]
+	175     (000002b0) iput-boolean         v2, v1, Landroid/support/v4/app/Fragment;->mInLayout Z
+	176     (000002b4) iget-object          v0, v11, Landroid/support/v4/app/FragmentManagerImpl;->mHost Landroid/support/v4/app/FragmentHostCallback;
+	177     (000002b8) iput-object          v0, v1, Landroid/support/v4/app/Fragment;->mHost Landroid/support/v4/app/FragmentHostCallback;
+	178     (000002bc) iget-boolean         v0, v1, Landroid/support/v4/app/Fragment;->mRetaining Z
+	179     (000002c0) if-nez               v0, -89
+
+onCreateView-BB@0x2c4 : [ onCreateView-BB@0x1ae ]
+	180     (000002c4) iget-object          v0, v11, Landroid/support/v4/app/FragmentManagerImpl;->mHost Landroid/support/v4/app/FragmentHostCallback;
+	181     (000002c8) invoke-virtual       v0, Landroid/support/v4/app/FragmentHostCallback;->getContext()Landroid/content/Context;
+	182     (000002ce) move-result-object   v0
+	183     (000002d0) iget-object          v4, v1, Landroid/support/v4/app/Fragment;->mSavedFragmentState Landroid/os/Bundle;
+	184     (000002d4) invoke-virtual       v1, v0, v15, v4, Landroid/support/v4/app/Fragment;->onInflate(Landroid/content/Context; Landroid/util/AttributeSet; Landroid/os/Bundle;)V
+	185     (000002da) goto/16              -96
+
+onCreateView-BB@0x2de : [ onCreateView-BB@0x1ca ]
+	186     (000002de) invoke-virtual       v11, v1, Landroid/support/v4/app/FragmentManagerImpl;->moveToState(Landroid/support/v4/app/Fragment;)V
+	187     (000002e4) goto/16              -8d
+
+onCreateView-BB@0x2e8 : [ onCreateView-BB@0x2ec onCreateView-BB@0x2f6 ]
+	188     (000002e8) if-eqz               v9, +7
+
+onCreateView-BB@0x2ec : [ onCreateView-BB@0x2f6 ]
+	189     (000002ec) iget-object          v0, v1, Landroid/support/v4/app/Fragment;->mView Landroid/view/View;
+	190     (000002f0) invoke-virtual       v0, v9, Landroid/view/View;->setId(I)V
+
+onCreateView-BB@0x2f6 : [ onCreateView-BB@0x306 onCreateView-BB@0x310 ]
+	191     (000002f6) iget-object          v0, v1, Landroid/support/v4/app/Fragment;->mView Landroid/view/View;
+	192     (000002fa) invoke-virtual       v0, Landroid/view/View;->getTag()Ljava/lang/Object;
+	193     (00000300) move-result-object   v0
+	194     (00000302) if-nez               v0, +7
+
+onCreateView-BB@0x306 : [ onCreateView-BB@0x310 ]
+	195     (00000306) iget-object          v0, v1, Landroid/support/v4/app/Fragment;->mView Landroid/view/View;
+	196     (0000030a) invoke-virtual       v0, v10, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+onCreateView-BB@0x310 : [ onCreateView-BB@0x18 ]
+	197     (00000310) iget-object          v0, v1, Landroid/support/v4/app/Fragment;->mView Landroid/view/View;
+	198     (00000314) goto/16              -17e
+

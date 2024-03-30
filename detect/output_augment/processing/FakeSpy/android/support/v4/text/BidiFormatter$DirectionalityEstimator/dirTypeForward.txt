@@ -1,0 +1,64 @@
+# Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->dirTypeForward()B [access_flags=]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:byte
+
+dirTypeForward-BB@0x0 : [ dirTypeForward-BB@0x24 dirTypeForward-BB@0x50 ]
+	0       (00000000) iget-object          v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->text Ljava/lang/String;
+	1       (00000004) iget                 v3, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	2       (00000008) invoke-virtual       v2, v3, Ljava/lang/String;->charAt(I)C
+	3       (0000000e) move-result          v2
+	4       (00000010) iput-char            v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	5       (00000014) iget-char            v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	6       (00000018) invoke-static        v2, Ljava/lang/Character;->isHighSurrogate(C)Z
+	7       (0000001e) move-result          v2
+	8       (00000020) if-eqz               v2, +18
+
+dirTypeForward-BB@0x24 : [ dirTypeForward-BB@0x4e ]
+	9       (00000024) iget-object          v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->text Ljava/lang/String;
+	10      (00000028) iget                 v3, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	11      (0000002c) invoke-static        v2, v3, Ljava/lang/Character;->codePointAt(Ljava/lang/CharSequence; I)I
+	12      (00000032) move-result          v0
+	13      (00000034) iget                 v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	14      (00000038) invoke-static        v0, Ljava/lang/Character;->charCount(I)I
+	15      (0000003e) move-result          v3
+	16      (00000040) add-int/2addr        v2, v3
+	17      (00000042) iput                 v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	18      (00000046) invoke-static        v0, Ljava/lang/Character;->getDirectionality(I)B
+	19      (0000004c) move-result          v1
+
+dirTypeForward-BB@0x4e : 
+	20      (0000004e) return               v1
+
+dirTypeForward-BB@0x50 : [ dirTypeForward-BB@0x70 dirTypeForward-BB@0x4e ]
+	21      (00000050) iget                 v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	22      (00000054) add-int/lit8         v2, v2, 1
+	23      (00000058) iput                 v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	24      (0000005c) iget-char            v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	25      (00000060) invoke-static        v2, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->getCachedDirectionality(C)B
+	26      (00000066) move-result          v1
+	27      (00000068) iget-boolean         v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->isHtml Z
+	28      (0000006c) if-eqz               v2, -f
+
+dirTypeForward-BB@0x70 : [ dirTypeForward-BB@0x7c dirTypeForward-BB@0x86 ]
+	29      (00000070) iget-char            v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	30      (00000074) const/16             v3, 60
+	31      (00000078) if-ne                v2, v3, +7
+
+dirTypeForward-BB@0x7c : [ dirTypeForward-BB@0x4e ]
+	32      (0000007c) invoke-direct        v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->skipTagForward()B
+	33      (00000082) move-result          v1
+	34      (00000084) goto                 -1b
+
+dirTypeForward-BB@0x86 : [ dirTypeForward-BB@0x92 dirTypeForward-BB@0x4e ]
+	35      (00000086) iget-char            v2, v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	36      (0000008a) const/16             v3, 38
+	37      (0000008e) if-ne                v2, v3, -20
+
+dirTypeForward-BB@0x92 : [ dirTypeForward-BB@0x4e ]
+	38      (00000092) invoke-direct        v4, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->skipEntityForward()B
+	39      (00000098) move-result          v1
+	40      (0000009a) goto                 -26
+

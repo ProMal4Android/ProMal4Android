@@ -1,0 +1,34 @@
+# Lcom/mixio/tosh/aprl/afo/fourre;->onReceive(Landroid/content/Context; Landroid/content/Intent;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.content.Context
+# - v3:android.content.Intent
+#
+# - return:void
+
+onReceive-BB@0x0 : [ onReceive-BB@0x18 onReceive-BB@0x26 ]
+	0       (00000000) invoke-virtual       v3, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	1       (00000006) move-result-object   v2
+	2       (00000008) const-string         v0, 'android.intent.action.NEW_OUTGOING_CALL'
+	3       (0000000c) invoke-virtual       v2, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	4       (00000012) move-result          v2
+	5       (00000014) if-eqz               v2, +9
+
+onReceive-BB@0x18 : [ onReceive-BB@0x3c ]
+	6       (00000018) invoke-virtual       v3, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+	7       (0000001e) move-result-object   v2
+	8       (00000020) const-string         v3, 'android.intent.extra.PHONE_NUMBER'
+	9       (00000024) goto                 +c
+
+onReceive-BB@0x26 : [ onReceive-BB@0x3c ]
+	10      (00000026) const-string         v2, 'state'
+	11      (0000002a) invoke-virtual       v3, v2, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	12      (00000030) invoke-virtual       v3, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+	13      (00000036) move-result-object   v2
+	14      (00000038) const-string         v3, 'incoming_number'
+
+onReceive-BB@0x3c : 
+	15      (0000003c) invoke-virtual       v2, v3, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+	16      (00000042) return-void          
+

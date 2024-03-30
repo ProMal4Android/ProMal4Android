@@ -1,0 +1,63 @@
+# Landroid/support/v4/app/FragmentTransitionCompat21;->addTargets(Ljava/lang/Object; Ljava/util/ArrayList;)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:java.lang.Object
+# - v9:java.util.ArrayList
+#
+# - return:void
+
+addTargets-BB@0x0 : [ addTargets-BB@0xe addTargets-BB@0x36 ]
+	0       (00000000) move-object          v6, v8
+	1       (00000002) check-cast           v6, Landroid/transition/Transition;
+	2       (00000006) instance-of          v7, v6, Landroid/transition/TransitionSet;
+	3       (0000000a) if-eqz               v7, +16
+
+addTargets-BB@0xe : [ addTargets-BB@0x1e ]
+	4       (0000000e) move-object          v4, v6
+	5       (00000010) check-cast           v4, Landroid/transition/TransitionSet;
+	6       (00000014) invoke-virtual       v4, Landroid/transition/TransitionSet;->getTransitionCount()I
+	7       (0000001a) move-result          v2
+	8       (0000001c) const/4              v1, 0
+
+addTargets-BB@0x1e : [ addTargets-BB@0x22 addTargets-BB@0x7c ]
+	9       (0000001e) if-ge                v1, v2, +2f
+
+addTargets-BB@0x22 : [ addTargets-BB@0x1e ]
+	10      (00000022) invoke-virtual       v4, v1, Landroid/transition/TransitionSet;->getTransitionAt(I)Landroid/transition/Transition;
+	11      (00000028) move-result-object   v0
+	12      (0000002a) invoke-static        v0, v9, Landroid/support/v4/app/FragmentTransitionCompat21;->addTargets(Ljava/lang/Object; Ljava/util/ArrayList;)V
+	13      (00000030) add-int/lit8         v1, v1, 1
+	14      (00000034) goto                 -b
+
+addTargets-BB@0x36 : [ addTargets-BB@0x42 addTargets-BB@0x7c ]
+	15      (00000036) invoke-static        v6, Landroid/support/v4/app/FragmentTransitionCompat21;->hasSimpleTarget(Landroid/transition/Transition;)Z
+	16      (0000003c) move-result          v7
+	17      (0000003e) if-nez               v7, +1f
+
+addTargets-BB@0x42 : [ addTargets-BB@0x56 addTargets-BB@0x7c ]
+	18      (00000042) invoke-virtual       v6, Landroid/transition/Transition;->getTargets()Ljava/util/List;
+	19      (00000048) move-result-object   v5
+	20      (0000004a) invoke-static        v5, Landroid/support/v4/app/FragmentTransitionCompat21;->isNullOrEmpty(Ljava/util/List;)Z
+	21      (00000050) move-result          v7
+	22      (00000052) if-eqz               v7, +15
+
+addTargets-BB@0x56 : [ addTargets-BB@0x60 ]
+	23      (00000056) invoke-virtual       v9, Ljava/util/ArrayList;->size()I
+	24      (0000005c) move-result          v3
+	25      (0000005e) const/4              v1, 0
+
+addTargets-BB@0x60 : [ addTargets-BB@0x64 addTargets-BB@0x7c ]
+	26      (00000060) if-ge                v1, v3, +e
+
+addTargets-BB@0x64 : [ addTargets-BB@0x60 ]
+	27      (00000064) invoke-virtual       v9, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	28      (0000006a) move-result-object   v7
+	29      (0000006c) check-cast           v7, Landroid/view/View;
+	30      (00000070) invoke-virtual       v6, v7, Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
+	31      (00000076) add-int/lit8         v1, v1, 1
+	32      (0000007a) goto                 -d
+
+addTargets-BB@0x7c : 
+	33      (0000007c) return-void          
+

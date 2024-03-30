@@ -1,0 +1,92 @@
+# Landroid/support/v7/widget/Toolbar;->getChildTop(Landroid/view/View; I)I [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:android.view.View
+# - v13:int
+#
+# - return:int
+
+getChildTop-BB@0x0 : [ getChildTop-BB@0x1a getChildTop-BB@0x6e ]
+	0       (00000000) const/4              v9, 0
+	1       (00000002) invoke-virtual       v12, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	2       (00000008) move-result-object   v3
+	3       (0000000a) check-cast           v3, Landroid/support/v7/widget/Toolbar$LayoutParams;
+	4       (0000000e) invoke-virtual       v12, Landroid/view/View;->getMeasuredHeight()I
+	5       (00000014) move-result          v1
+	6       (00000016) if-lez               v13, +2c
+
+getChildTop-BB@0x1a : [ getChildTop-BB@0x22 ]
+	7       (0000001a) sub-int              v10, v1, v13
+	8       (0000001e) div-int/lit8         v0, v10, 2
+
+getChildTop-BB@0x22 : [ D:getChildTop-BB@0x34 48:getChildTop-BB@0x72 80:getChildTop-BB@0x7e ]
+	9       (00000022) iget                 v10, v3, Landroid/support/v7/widget/Toolbar$LayoutParams;->gravity I
+	10      (00000026) invoke-direct        v11, v10, Landroid/support/v7/widget/Toolbar;->getChildVerticalGravity(I)I
+	11      (0000002c) move-result          v10
+	12      (0000002e) sparse-switch        v10, +4b (0xc4)
+
+getChildTop-BB@0x34 : [ getChildTop-BB@0x64 getChildTop-BB@0x9c ]
+	13      (00000034) invoke-virtual       v11, Landroid/support/v7/widget/Toolbar;->getPaddingTop()I
+	14      (0000003a) move-result          v5
+	15      (0000003c) invoke-virtual       v11, Landroid/support/v7/widget/Toolbar;->getPaddingBottom()I
+	16      (00000042) move-result          v4
+	17      (00000044) invoke-virtual       v11, Landroid/support/v7/widget/Toolbar;->getHeight()I
+	18      (0000004a) move-result          v2
+	19      (0000004c) sub-int              v10, v2, v5
+	20      (00000050) sub-int              v6, v10, v4
+	21      (00000054) sub-int              v10, v6, v1
+	22      (00000058) div-int/lit8         v7, v10, 2
+	23      (0000005c) iget                 v10, v3, Landroid/support/v7/widget/Toolbar$LayoutParams;->topMargin I
+	24      (00000060) if-ge                v7, v10, +1e
+
+getChildTop-BB@0x64 : [ getChildTop-BB@0x68 ]
+	25      (00000064) iget                 v7, v3, Landroid/support/v7/widget/Toolbar$LayoutParams;->topMargin I
+
+getChildTop-BB@0x68 : [ getChildTop-BB@0x6c ]
+	26      (00000068) add-int              v9, v5, v7
+
+getChildTop-BB@0x6c : 
+	27      (0000006c) return               v9
+
+getChildTop-BB@0x6e : [ getChildTop-BB@0x22 ]
+	28      (0000006e) move                 v0, v9
+	29      (00000070) goto                 -27
+
+getChildTop-BB@0x72 : [ getChildTop-BB@0x6c ]
+	30      (00000072) invoke-virtual       v11, Landroid/support/v7/widget/Toolbar;->getPaddingTop()I
+	31      (00000078) move-result          v9
+	32      (0000007a) sub-int/2addr        v9, v0
+	33      (0000007c) goto                 -8
+
+getChildTop-BB@0x7e : [ getChildTop-BB@0x6c ]
+	34      (0000007e) invoke-virtual       v11, Landroid/support/v7/widget/Toolbar;->getHeight()I
+	35      (00000084) move-result          v9
+	36      (00000086) invoke-virtual       v11, Landroid/support/v7/widget/Toolbar;->getPaddingBottom()I
+	37      (0000008c) move-result          v10
+	38      (0000008e) sub-int/2addr        v9, v10
+	39      (00000090) sub-int/2addr        v9, v1
+	40      (00000092) iget                 v10, v3, Landroid/support/v7/widget/Toolbar$LayoutParams;->bottomMargin I
+	41      (00000096) sub-int/2addr        v9, v10
+	42      (00000098) sub-int/2addr        v9, v0
+	43      (0000009a) goto                 -17
+
+getChildTop-BB@0x9c : [ getChildTop-BB@0xb0 getChildTop-BB@0x68 ]
+	44      (0000009c) sub-int              v10, v2, v4
+	45      (000000a0) sub-int/2addr        v10, v1
+	46      (000000a2) sub-int/2addr        v10, v7
+	47      (000000a4) sub-int              v8, v10, v5
+	48      (000000a8) iget                 v10, v3, Landroid/support/v7/widget/Toolbar$LayoutParams;->bottomMargin I
+	49      (000000ac) if-ge                v8, v10, -22
+
+getChildTop-BB@0xb0 : [ getChildTop-BB@0x68 ]
+	50      (000000b0) iget                 v10, v3, Landroid/support/v7/widget/Toolbar$LayoutParams;->bottomMargin I
+	51      (000000b4) sub-int/2addr        v10, v8
+	52      (000000b6) sub-int              v10, v7, v10
+	53      (000000ba) invoke-static        v9, v10, Ljava/lang/Math;->max(I I)I
+	54      (000000c0) move-result          v7
+	55      (000000c2) goto                 -2d
+
+getChildTop-BB@0xc4 : 
+	56      (000000c4) sparse-switch-payload 30 50
+

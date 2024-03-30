@@ -1,0 +1,108 @@
+# Landroid/support/v7/internal/view/menu/ListMenuItemView;->setIcon(Landroid/graphics/drawable/Drawable;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.graphics.drawable.Drawable
+#
+# - return:void
+
+setIcon-BB@0x0 : [ setIcon-BB@0x12 setIcon-BB@0x20 ]
+	0       (00000000) iget-object          v0, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->a La/a/a/c/c/a/f;
+	1       (00000004) iget-object          v0, v0, La/a/a/c/c/a/f;->o La/a/a/c/c/a/e;
+	2       (00000008) iget-boolean         v0, v0, La/a/a/c/c/a/e;->q Z
+	3       (0000000c) const/4              v1, 0
+	4       (0000000e) if-nez               v0, +9
+
+setIcon-BB@0x12 : [ setIcon-BB@0x1a setIcon-BB@0x1c ]
+	5       (00000012) iget-boolean         v0, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->m Z
+	6       (00000016) if-eqz               v0, +3
+
+setIcon-BB@0x1a : [ setIcon-BB@0x20 ]
+	7       (0000001a) goto                 +3
+
+setIcon-BB@0x1c : [ setIcon-BB@0x22 ]
+	8       (0000001c) const/4              v0, 0
+	9       (0000001e) goto                 +2
+
+setIcon-BB@0x20 : [ setIcon-BB@0x22 ]
+	10      (00000020) const/4              v0, 1
+
+setIcon-BB@0x22 : [ setIcon-BB@0x26 setIcon-BB@0x30 ]
+	11      (00000022) if-nez               v0, +7
+
+setIcon-BB@0x26 : [ setIcon-BB@0x2e setIcon-BB@0x30 ]
+	12      (00000026) iget-boolean         v2, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->j Z
+	13      (0000002a) if-nez               v2, +3
+
+setIcon-BB@0x2e : 
+	14      (0000002e) return-void          
+
+setIcon-BB@0x30 : [ setIcon-BB@0x38 setIcon-BB@0x46 ]
+	15      (00000030) iget-object          v2, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->b Landroid/widget/ImageView;
+	16      (00000034) if-nez               v2, +9
+
+setIcon-BB@0x38 : [ setIcon-BB@0x3c setIcon-BB@0x46 ]
+	17      (00000038) if-nez               v5, +7
+
+setIcon-BB@0x3c : [ setIcon-BB@0x44 setIcon-BB@0x46 ]
+	18      (0000003c) iget-boolean         v2, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->j Z
+	19      (00000040) if-nez               v2, +3
+
+setIcon-BB@0x44 : 
+	20      (00000044) return-void          
+
+setIcon-BB@0x46 : [ setIcon-BB@0x4e setIcon-BB@0x74 ]
+	21      (00000046) iget-object          v2, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->b Landroid/widget/ImageView;
+	22      (0000004a) if-nez               v2, +15
+
+setIcon-BB@0x4e : [ setIcon-BB@0x74 ]
+	23      (0000004e) invoke-direct        v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->getInflater()Landroid/view/LayoutInflater;
+	24      (00000054) move-result-object   v2
+	25      (00000056) sget                 v3, La/a/a/b/g;->abc_list_menu_item_icon I
+	26      (0000005a) invoke-virtual       v2, v3, v4, v1, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
+	27      (00000060) move-result-object   v2
+	28      (00000062) check-cast           v2, Landroid/widget/ImageView;
+	29      (00000066) iput-object          v2, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->b Landroid/widget/ImageView;
+	30      (0000006a) iget-object          v2, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->b Landroid/widget/ImageView;
+	31      (0000006e) invoke-virtual       v4, v2, v1, Landroid/widget/LinearLayout;->addView(Landroid/view/View; I)V
+
+setIcon-BB@0x74 : [ setIcon-BB@0x78 setIcon-BB@0x92 ]
+	32      (00000074) if-nez               v5, +f
+
+setIcon-BB@0x78 : [ setIcon-BB@0x80 setIcon-BB@0x82 ]
+	33      (00000078) iget-boolean         v2, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->j Z
+	34      (0000007c) if-eqz               v2, +3
+
+setIcon-BB@0x80 : [ setIcon-BB@0x92 ]
+	35      (00000080) goto                 +9
+
+setIcon-BB@0x82 : [ setIcon-BB@0xbe ]
+	36      (00000082) iget-object          v5, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->b Landroid/widget/ImageView;
+	37      (00000086) const/16             v0, 8
+	38      (0000008a) invoke-virtual       v5, v0, Landroid/widget/ImageView;->setVisibility(I)V
+	39      (00000090) goto                 +17
+
+setIcon-BB@0x92 : [ setIcon-BB@0x9a setIcon-BB@0x9c ]
+	40      (00000092) iget-object          v2, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->b Landroid/widget/ImageView;
+	41      (00000096) if-eqz               v0, +3
+
+setIcon-BB@0x9a : [ setIcon-BB@0x9e ]
+	42      (0000009a) goto                 +2
+
+setIcon-BB@0x9c : [ setIcon-BB@0x9e ]
+	43      (0000009c) const/4              v5, 0
+
+setIcon-BB@0x9e : [ setIcon-BB@0xb4 setIcon-BB@0xbe ]
+	44      (0000009e) invoke-virtual       v2, v5, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	45      (000000a4) iget-object          v5, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->b Landroid/widget/ImageView;
+	46      (000000a8) invoke-virtual       v5, Landroid/widget/ImageView;->getVisibility()I
+	47      (000000ae) move-result          v5
+	48      (000000b0) if-eqz               v5, +7
+
+setIcon-BB@0xb4 : [ setIcon-BB@0xbe ]
+	49      (000000b4) iget-object          v5, v4, Landroid/support/v7/internal/view/menu/ListMenuItemView;->b Landroid/widget/ImageView;
+	50      (000000b8) invoke-virtual       v5, v1, Landroid/widget/ImageView;->setVisibility(I)V
+
+setIcon-BB@0xbe : 
+	51      (000000be) return-void          
+

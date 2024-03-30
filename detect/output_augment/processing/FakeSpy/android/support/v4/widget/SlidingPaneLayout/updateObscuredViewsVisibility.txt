@@ -1,0 +1,155 @@
+# Landroid/support/v4/widget/SlidingPaneLayout;->updateObscuredViewsVisibility(Landroid/view/View;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v21
+# - v22:android.view.View
+#
+# - return:void
+
+updateObscuredViewsVisibility-BB@0x0 : [ updateObscuredViewsVisibility-BB@0xc updateObscuredViewsVisibility-BB@0x9c ]
+	0       (00000000) invoke-direct/range  v21, Landroid/support/v4/widget/SlidingPaneLayout;->isLayoutRtlSupport()Z
+	1       (00000006) move-result          v12
+	2       (00000008) if-eqz               v12, +4a
+
+updateObscuredViewsVisibility-BB@0xc : [ updateObscuredViewsVisibility-BB@0x20 ]
+	3       (0000000c) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getWidth()I
+	4       (00000012) move-result          v19
+	5       (00000014) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getPaddingRight()I
+	6       (0000001a) move-result          v20
+	7       (0000001c) sub-int              v15, v19, v20
+
+updateObscuredViewsVisibility-BB@0x20 : [ updateObscuredViewsVisibility-BB@0x24 updateObscuredViewsVisibility-BB@0xa6 ]
+	8       (00000020) if-eqz               v12, +43
+
+updateObscuredViewsVisibility-BB@0x24 : [ updateObscuredViewsVisibility-BB@0x2c ]
+	9       (00000024) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getPaddingLeft()I
+	10      (0000002a) move-result          v10
+
+updateObscuredViewsVisibility-BB@0x2c : [ updateObscuredViewsVisibility-BB@0x4c updateObscuredViewsVisibility-BB@0xbc ]
+	11      (0000002c) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getPaddingTop()I
+	12      (00000032) move-result          v17
+	13      (00000034) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getHeight()I
+	14      (0000003a) move-result          v19
+	15      (0000003c) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getPaddingBottom()I
+	16      (00000042) move-result          v20
+	17      (00000044) sub-int              v3, v19, v20
+	18      (00000048) if-eqz               v22, +3a
+
+updateObscuredViewsVisibility-BB@0x4c : [ updateObscuredViewsVisibility-BB@0x58 updateObscuredViewsVisibility-BB@0xbc ]
+	19      (0000004c) invoke-static/range  v22, Landroid/support/v4/widget/SlidingPaneLayout;->viewIsOpaque(Landroid/view/View;)Z
+	20      (00000052) move-result          v19
+	21      (00000054) if-eqz               v19, +34
+
+updateObscuredViewsVisibility-BB@0x58 : [ updateObscuredViewsVisibility-BB@0x78 ]
+	22      (00000058) invoke-virtual/range v22, Landroid/view/View;->getLeft()I
+	23      (0000005e) move-result          v13
+	24      (00000060) invoke-virtual/range v22, Landroid/view/View;->getRight()I
+	25      (00000066) move-result          v14
+	26      (00000068) invoke-virtual/range v22, Landroid/view/View;->getTop()I
+	27      (0000006e) move-result          v16
+	28      (00000070) invoke-virtual/range v22, Landroid/view/View;->getBottom()I
+	29      (00000076) move-result          v2
+
+updateObscuredViewsVisibility-BB@0x78 : [ updateObscuredViewsVisibility-BB@0x82 ]
+	30      (00000078) const/4              v11, 0
+	31      (0000007a) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getChildCount()I
+	32      (00000080) move-result          v5
+
+updateObscuredViewsVisibility-BB@0x82 : [ updateObscuredViewsVisibility-BB@0x86 updateObscuredViewsVisibility-BB@0x9a ]
+	33      (00000082) if-ge                v11, v5, +c
+
+updateObscuredViewsVisibility-BB@0x86 : [ updateObscuredViewsVisibility-BB@0x9a updateObscuredViewsVisibility-BB@0xc8 ]
+	34      (00000086) move-object/from16   v0, v21
+	35      (0000008a) invoke-virtual       v0, v11, Landroid/support/v4/widget/SlidingPaneLayout;->getChildAt(I)Landroid/view/View;
+	36      (00000090) move-result-object   v4
+	37      (00000092) move-object/from16   v0, v22
+	38      (00000096) if-ne                v4, v0, +19
+
+updateObscuredViewsVisibility-BB@0x9a : 
+	39      (0000009a) return-void          
+
+updateObscuredViewsVisibility-BB@0x9c : [ updateObscuredViewsVisibility-BB@0x20 ]
+	40      (0000009c) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getPaddingLeft()I
+	41      (000000a2) move-result          v15
+	42      (000000a4) goto                 -42
+
+updateObscuredViewsVisibility-BB@0xa6 : [ updateObscuredViewsVisibility-BB@0x2c ]
+	43      (000000a6) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getWidth()I
+	44      (000000ac) move-result          v19
+	45      (000000ae) invoke-virtual/range v21, Landroid/support/v4/widget/SlidingPaneLayout;->getPaddingRight()I
+	46      (000000b4) move-result          v20
+	47      (000000b6) sub-int              v10, v19, v20
+	48      (000000ba) goto                 -47
+
+updateObscuredViewsVisibility-BB@0xbc : [ updateObscuredViewsVisibility-BB@0x78 ]
+	49      (000000bc) const/4              v2, 0
+	50      (000000be) move/from16          v16, v2
+	51      (000000c2) move                 v14, v2
+	52      (000000c4) move                 v13, v2
+	53      (000000c6) goto                 -27
+
+updateObscuredViewsVisibility-BB@0xc8 : [ updateObscuredViewsVisibility-BB@0xcc updateObscuredViewsVisibility-BB@0x14c ]
+	54      (000000c8) if-eqz               v12, +42
+
+updateObscuredViewsVisibility-BB@0xcc : [ updateObscuredViewsVisibility-BB@0xd0 ]
+	55      (000000cc) move/from16          v19, v10
+
+updateObscuredViewsVisibility-BB@0xd0 : [ updateObscuredViewsVisibility-BB@0xfc updateObscuredViewsVisibility-BB@0x152 ]
+	56      (000000d0) invoke-virtual       v4, Landroid/view/View;->getLeft()I
+	57      (000000d6) move-result          v20
+	58      (000000d8) invoke-static/range  v19 ... v20, Ljava/lang/Math;->max(I I)I
+	59      (000000de) move-result          v7
+	60      (000000e0) invoke-virtual       v4, Landroid/view/View;->getTop()I
+	61      (000000e6) move-result          v19
+	62      (000000e8) move/from16          v0, v17
+	63      (000000ec) move/from16          v1, v19
+	64      (000000f0) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	65      (000000f6) move-result          v9
+	66      (000000f8) if-eqz               v12, +2d
+
+updateObscuredViewsVisibility-BB@0xfc : [ updateObscuredViewsVisibility-BB@0x100 ]
+	67      (000000fc) move/from16          v19, v15
+
+updateObscuredViewsVisibility-BB@0x100 : [ updateObscuredViewsVisibility-BB@0x128 updateObscuredViewsVisibility-BB@0x158 ]
+	68      (00000100) invoke-virtual       v4, Landroid/view/View;->getRight()I
+	69      (00000106) move-result          v20
+	70      (00000108) invoke-static/range  v19 ... v20, Ljava/lang/Math;->min(I I)I
+	71      (0000010e) move-result          v8
+	72      (00000110) invoke-virtual       v4, Landroid/view/View;->getBottom()I
+	73      (00000116) move-result          v19
+	74      (00000118) move/from16          v0, v19
+	75      (0000011c) invoke-static        v3, v0, Ljava/lang/Math;->min(I I)I
+	76      (00000122) move-result          v6
+	77      (00000124) if-lt                v7, v13, +1a
+
+updateObscuredViewsVisibility-BB@0x128 : [ updateObscuredViewsVisibility-BB@0x130 updateObscuredViewsVisibility-BB@0x158 ]
+	78      (00000128) move/from16          v0, v16
+	79      (0000012c) if-lt                v9, v0, +16
+
+updateObscuredViewsVisibility-BB@0x130 : [ updateObscuredViewsVisibility-BB@0x134 updateObscuredViewsVisibility-BB@0x158 ]
+	80      (00000130) if-gt                v8, v14, +14
+
+updateObscuredViewsVisibility-BB@0x134 : [ updateObscuredViewsVisibility-BB@0x138 updateObscuredViewsVisibility-BB@0x158 ]
+	81      (00000134) if-gt                v6, v2, +12
+
+updateObscuredViewsVisibility-BB@0x138 : [ updateObscuredViewsVisibility-BB@0x13c ]
+	82      (00000138) const/16             v18, 4
+
+updateObscuredViewsVisibility-BB@0x13c : [ updateObscuredViewsVisibility-BB@0x82 ]
+	83      (0000013c) move/from16          v0, v18
+	84      (00000140) invoke-virtual       v4, v0, Landroid/view/View;->setVisibility(I)V
+	85      (00000146) add-int/lit8         v11, v11, 1
+	86      (0000014a) goto                 -64
+
+updateObscuredViewsVisibility-BB@0x14c : [ updateObscuredViewsVisibility-BB@0xd0 ]
+	87      (0000014c) move/from16          v19, v15
+	88      (00000150) goto                 -40
+
+updateObscuredViewsVisibility-BB@0x152 : [ updateObscuredViewsVisibility-BB@0x100 ]
+	89      (00000152) move/from16          v19, v10
+	90      (00000156) goto                 -2b
+
+updateObscuredViewsVisibility-BB@0x158 : [ updateObscuredViewsVisibility-BB@0x13c ]
+	91      (00000158) const/16             v18, 0
+	92      (0000015c) goto                 -10
+

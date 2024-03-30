@@ -1,0 +1,31 @@
+# Landroid/support/v7/widget/RecyclerView;->onDraw(Landroid/graphics/Canvas;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.graphics.Canvas
+#
+# - return:void
+
+onDraw-BB@0x0 : [ onDraw-BB@0x14 ]
+	0       (00000000) invoke-super         v4, v5, Landroid/view/ViewGroup;->onDraw(Landroid/graphics/Canvas;)V
+	1       (00000006) iget-object          v2, v4, Landroid/support/v7/widget/RecyclerView;->mItemDecorations Ljava/util/ArrayList;
+	2       (0000000a) invoke-virtual       v2, Ljava/util/ArrayList;->size()I
+	3       (00000010) move-result          v0
+	4       (00000012) const/4              v1, 0
+
+onDraw-BB@0x14 : [ onDraw-BB@0x18 onDraw-BB@0x38 ]
+	5       (00000014) if-ge                v1, v0, +12
+
+onDraw-BB@0x18 : [ onDraw-BB@0x14 ]
+	6       (00000018) iget-object          v2, v4, Landroid/support/v7/widget/RecyclerView;->mItemDecorations Ljava/util/ArrayList;
+	7       (0000001c) invoke-virtual       v2, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	8       (00000022) move-result-object   v2
+	9       (00000024) check-cast           v2, Landroid/support/v7/widget/RecyclerView$ItemDecoration;
+	10      (00000028) iget-object          v3, v4, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	11      (0000002c) invoke-virtual       v2, v5, v4, v3, Landroid/support/v7/widget/RecyclerView$ItemDecoration;->onDraw(Landroid/graphics/Canvas; Landroid/support/v7/widget/RecyclerView; Landroid/support/v7/widget/RecyclerView$State;)V
+	12      (00000032) add-int/lit8         v1, v1, 1
+	13      (00000036) goto                 -11
+
+onDraw-BB@0x38 : 
+	14      (00000038) return-void          
+

@@ -1,0 +1,50 @@
+# Landroid/support/v7/widget/SearchView;->c()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:void
+
+c-BB@0x0 : [ c-BB@0x28 c-BB@0x62 ]
+	0       (00000000) invoke-virtual       v4, Landroid/support/v7/widget/SearchView;->a()Z
+	1       (00000006) move-result          v0
+	2       (00000008) invoke-virtual       v4, v0, Landroid/support/v7/widget/SearchView;->a(Z)V
+	3       (0000000e) iget-object          v0, v4, Landroid/support/v7/widget/SearchView;->V Ljava/lang/Runnable;
+	4       (00000012) invoke-virtual       v4, v0, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
+	5       (00000018) iget-object          v0, v4, Landroid/support/v7/widget/SearchView;->r Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	6       (0000001c) invoke-virtual       v0, Landroid/widget/AutoCompleteTextView;->hasFocus()Z
+	7       (00000022) move-result          v0
+	8       (00000024) if-eqz               v0, +1f
+
+c-BB@0x28 : [ c-BB@0x3a c-BB@0x48 ]
+	9       (00000028) sget-object          v0, Landroid/support/v7/widget/SearchView;->q Landroid/support/v7/widget/SearchView$a;
+	10      (0000002c) iget-object          v1, v4, Landroid/support/v7/widget/SearchView;->r Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	11      (00000030) iget-object          v0, v0, Landroid/support/v7/widget/SearchView$a;->a Ljava/lang/reflect/Method;
+	12      (00000034) const/4              v2, 0
+	13      (00000036) if-eqz               v0, +9
+
+c-BB@0x3a : [ c-BB@0x48 ]
+	14      (0000003a) new-array            v3, v2, [Ljava/lang/Object;
+	15      (0000003e) invoke-virtual       v0, v1, v3, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	16      (00000044) goto                 +2
+	3a:43
+	(Ljava/lang/Exception; -> 46 c-BB@0x46)
+
+c-BB@0x46 : [ c-BB@0x48 ]
+	17      (00000046) nop                  
+
+c-BB@0x48 : [ c-BB@0x58 c-BB@0x62 ]
+	18      (00000048) sget-object          v0, Landroid/support/v7/widget/SearchView;->q Landroid/support/v7/widget/SearchView$a;
+	19      (0000004c) iget-object          v1, v4, Landroid/support/v7/widget/SearchView;->r Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	20      (00000050) iget-object          v0, v0, Landroid/support/v7/widget/SearchView$a;->b Ljava/lang/reflect/Method;
+	21      (00000054) if-eqz               v0, +7
+
+c-BB@0x58 : [ c-BB@0x62 ]
+	22      (00000058) new-array            v2, v2, [Ljava/lang/Object;
+	23      (0000005c) invoke-virtual       v0, v1, v2, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	58:61
+	(Ljava/lang/Exception; -> 62 c-BB@0x62)
+
+c-BB@0x62 : 
+	24      (00000062) return-void          
+

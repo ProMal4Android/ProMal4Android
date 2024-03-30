@@ -1,0 +1,264 @@
+# Landroid/support/v7/widget/ActivityChooserModel;->readHistoricalDataImpl()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v18
+#
+# - return:void
+
+readHistoricalDataImpl-BB@0x0 : [ readHistoricalDataImpl-BB@0x2 ]
+	0       (00000000) const/4              v3, 0
+
+readHistoricalDataImpl-BB@0x2 : [ readHistoricalDataImpl-BB@0x1e ]
+	1       (00000002) move-object/from16   v0, v18
+	2       (00000006) iget-object          v15, v0, Landroid/support/v7/widget/ActivityChooserModel;->mContext Landroid/content/Context;
+	3       (0000000a) move-object/from16   v0, v18
+	4       (0000000e) iget-object          v0, v0, Landroid/support/v7/widget/ActivityChooserModel;->mHistoryFileName Ljava/lang/String;
+	5       (00000012) move-object/from16   v16, v0
+	6       (00000016) invoke-virtual/range v15 ... v16, Landroid/content/Context;->openFileInput(Ljava/lang/String;)Ljava/io/FileInputStream;
+	7       (0000001c) move-result-object   v3
+	2:1b
+	(Ljava/io/FileNotFoundException; -> 48 readHistoricalDataImpl-BB@0x48)
+
+readHistoricalDataImpl-BB@0x1e : [ readHistoricalDataImpl-BB@0x32 ]
+	8       (0000001e) invoke-static        Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
+	9       (00000024) move-result-object   v8
+	10      (00000026) const-string         v15, 'UTF-8'
+	11      (0000002a) invoke-interface     v8, v3, v15, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream; Ljava/lang/String;)V
+	12      (00000030) const/4              v12, 0
+	1e:73
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x32 : [ readHistoricalDataImpl-BB@0x38 readHistoricalDataImpl-BB@0x4c ]
+	13      (00000032) const/4              v15, 1
+	14      (00000034) if-eq                v12, v15, +c
+	1e:73
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x38 : [ readHistoricalDataImpl-BB@0x3e readHistoricalDataImpl-BB@0x4c ]
+	15      (00000038) const/4              v15, 2
+	16      (0000003a) if-eq                v12, v15, +9
+	1e:73
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x3e : [ readHistoricalDataImpl-BB@0x32 ]
+	17      (0000003e) invoke-interface     v8, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	18      (00000044) move-result          v12
+	19      (00000046) goto                 -a
+	1e:73
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x48 : [ readHistoricalDataImpl-BB@0x4a ]
+	20      (00000048) move-exception       v4
+	1e:73
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x4a : 
+	21      (0000004a) return-void          
+	1e:73
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x4c : [ readHistoricalDataImpl-BB@0x64 readHistoricalDataImpl-BB@0xc6 ]
+	22      (0000004c) const-string         v15, 'historical-records'
+	23      (00000050) invoke-interface     v8, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	24      (00000056) move-result-object   v16
+	25      (00000058) invoke-virtual/range v15 ... v16, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	26      (0000005e) move-result          v15
+	27      (00000060) if-nez               v15, +33
+	1e:73
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x64 : 
+	28      (00000064) new-instance         v15, Lorg/xmlpull/v1/XmlPullParserException;
+	29      (00000068) const-string         v16, 'Share records file does not start with historical-records tag.'
+	30      (0000006c) invoke-direct/range  v15 ... v16, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+	31      (00000072) throw                v15
+	1e:73
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x74 : [ readHistoricalDataImpl-BB@0x76 ]
+	32      (00000074) move-exception       v14
+
+readHistoricalDataImpl-BB@0x76 : [ readHistoricalDataImpl-BB@0xba readHistoricalDataImpl-BB@0x4a ]
+	33      (00000076) sget-object          v15, Landroid/support/v7/widget/ActivityChooserModel;->LOG_TAG Ljava/lang/String;
+	34      (0000007a) new-instance         v16, Ljava/lang/StringBuilder;
+	35      (0000007e) invoke-direct/range  v16, Ljava/lang/StringBuilder;-><init>()V
+	36      (00000084) const-string         v17, 'Error reading historical recrod file: '
+	37      (00000088) invoke-virtual/range v16 ... v17, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	38      (0000008e) move-result-object   v16
+	39      (00000090) move-object/from16   v0, v18
+	40      (00000094) iget-object          v0, v0, Landroid/support/v7/widget/ActivityChooserModel;->mHistoryFileName Ljava/lang/String;
+	41      (00000098) move-object/from16   v17, v0
+	42      (0000009c) invoke-virtual/range v16 ... v17, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	43      (000000a2) move-result-object   v16
+	44      (000000a4) invoke-virtual/range v16, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	45      (000000aa) move-result-object   v16
+	46      (000000ac) move-object/from16   v0, v16
+	47      (000000b0) invoke-static        v15, v0, v14, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	48      (000000b6) if-eqz               v3, -36
+	76:b5
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+
+readHistoricalDataImpl-BB@0xba : [ readHistoricalDataImpl-BB@0x4a ]
+	49      (000000ba) invoke-virtual       v3, Ljava/io/FileInputStream;->close()V
+	50      (000000c0) goto                 -3b
+	ba:bf
+	(Ljava/io/IOException; -> c2 readHistoricalDataImpl-BB@0xc2)
+
+readHistoricalDataImpl-BB@0xc2 : [ readHistoricalDataImpl-BB@0x4a ]
+	51      (000000c2) move-exception       v15
+	52      (000000c4) goto                 -3d
+
+readHistoricalDataImpl-BB@0xc6 : [ readHistoricalDataImpl-BB@0xd4 ]
+	53      (000000c6) move-object/from16   v0, v18
+	54      (000000ca) iget-object          v5, v0, Landroid/support/v7/widget/ActivityChooserModel;->mHistoricalRecords Ljava/util/List;
+	55      (000000ce) invoke-interface     v5, Ljava/util/List;->clear()V
+	c6:d9
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0xd4 : [ readHistoricalDataImpl-BB@0xe2 readHistoricalDataImpl-BB@0xf2 ]
+	56      (000000d4) invoke-interface     v8, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	57      (000000da) move-result          v12
+	58      (000000dc) const/4              v15, 1
+	59      (000000de) if-ne                v12, v15, +a
+
+readHistoricalDataImpl-BB@0xe2 : [ readHistoricalDataImpl-BB@0xe6 readHistoricalDataImpl-BB@0x4a ]
+	60      (000000e2) if-eqz               v3, -4c
+
+readHistoricalDataImpl-BB@0xe6 : [ readHistoricalDataImpl-BB@0x4a ]
+	61      (000000e6) invoke-virtual       v3, Ljava/io/FileInputStream;->close()V
+	62      (000000ec) goto                 -51
+	e6:eb
+	(Ljava/io/IOException; -> ee readHistoricalDataImpl-BB@0xee)
+
+readHistoricalDataImpl-BB@0xee : [ readHistoricalDataImpl-BB@0x4a ]
+	63      (000000ee) move-exception       v15
+	64      (000000f0) goto                 -53
+
+readHistoricalDataImpl-BB@0xf2 : [ readHistoricalDataImpl-BB@0xf8 readHistoricalDataImpl-BB@0xd4 ]
+	65      (000000f2) const/4              v15, 3
+	66      (000000f4) if-eq                v12, v15, -10
+
+readHistoricalDataImpl-BB@0xf8 : [ readHistoricalDataImpl-BB@0xfe readHistoricalDataImpl-BB@0xd4 ]
+	67      (000000f8) const/4              v15, 4
+	68      (000000fa) if-eq                v12, v15, -13
+
+readHistoricalDataImpl-BB@0xfe : [ readHistoricalDataImpl-BB@0x116 readHistoricalDataImpl-BB@0x17c ]
+	69      (000000fe) invoke-interface     v8, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	70      (00000104) move-result-object   v7
+	71      (00000106) const-string         v15, 'historical-record'
+	72      (0000010a) invoke-virtual       v15, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	73      (00000110) move-result          v15
+	74      (00000112) if-nez               v15, +35
+	fe:125
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x116 : 
+	75      (00000116) new-instance         v15, Lorg/xmlpull/v1/XmlPullParserException;
+	76      (0000011a) const-string         v16, 'Share records file not well-formed.'
+	77      (0000011e) invoke-direct/range  v15 ... v16, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+	78      (00000124) throw                v15
+	fe:125
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x126 : [ readHistoricalDataImpl-BB@0x128 ]
+	79      (00000126) move-exception       v6
+
+readHistoricalDataImpl-BB@0x128 : [ readHistoricalDataImpl-BB@0x16c readHistoricalDataImpl-BB@0x4a ]
+	80      (00000128) sget-object          v15, Landroid/support/v7/widget/ActivityChooserModel;->LOG_TAG Ljava/lang/String;
+	81      (0000012c) new-instance         v16, Ljava/lang/StringBuilder;
+	82      (00000130) invoke-direct/range  v16, Ljava/lang/StringBuilder;-><init>()V
+	83      (00000136) const-string         v17, 'Error reading historical recrod file: '
+	84      (0000013a) invoke-virtual/range v16 ... v17, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	85      (00000140) move-result-object   v16
+	86      (00000142) move-object/from16   v0, v18
+	87      (00000146) iget-object          v0, v0, Landroid/support/v7/widget/ActivityChooserModel;->mHistoryFileName Ljava/lang/String;
+	88      (0000014a) move-object/from16   v17, v0
+	89      (0000014e) invoke-virtual/range v16 ... v17, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	90      (00000154) move-result-object   v16
+	91      (00000156) invoke-virtual/range v16, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	92      (0000015c) move-result-object   v16
+	93      (0000015e) move-object/from16   v0, v16
+	94      (00000162) invoke-static        v15, v0, v6, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	95      (00000168) if-eqz               v3, -8f
+	128:167
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+
+readHistoricalDataImpl-BB@0x16c : [ readHistoricalDataImpl-BB@0x4a ]
+	96      (0000016c) invoke-virtual       v3, Ljava/io/FileInputStream;->close()V
+	97      (00000172) goto/16              -94
+	16c:171
+	(Ljava/io/IOException; -> 176 readHistoricalDataImpl-BB@0x176)
+
+readHistoricalDataImpl-BB@0x176 : [ readHistoricalDataImpl-BB@0x4a ]
+	98      (00000176) move-exception       v15
+	99      (00000178) goto/16              -97
+
+readHistoricalDataImpl-BB@0x17c : [ readHistoricalDataImpl-BB@0x17e ]
+	100     (0000017c) const/4              v15, 0
+
+readHistoricalDataImpl-BB@0x17e : [ readHistoricalDataImpl-BB@0xd4 ]
+	101     (0000017e) const-string         v16, 'activity'
+	102     (00000182) move-object/from16   v0, v16
+	103     (00000186) invoke-interface     v8, v15, v0, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	104     (0000018c) move-result-object   v2
+	105     (0000018e) const/4              v15, 0
+	106     (00000190) const-string         v16, 'time'
+	107     (00000194) move-object/from16   v0, v16
+	108     (00000198) invoke-interface     v8, v15, v0, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	109     (0000019e) move-result-object   v15
+	110     (000001a0) invoke-static        v15, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+	111     (000001a6) move-result-wide     v10
+	112     (000001a8) const/4              v15, 0
+	113     (000001aa) const-string         v16, 'weight'
+	114     (000001ae) move-object/from16   v0, v16
+	115     (000001b2) invoke-interface     v8, v15, v0, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	116     (000001b8) move-result-object   v15
+	117     (000001ba) invoke-static        v15, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+	118     (000001c0) move-result          v13
+	119     (000001c2) new-instance         v9, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;
+	120     (000001c6) invoke-direct        v9, v2, v10, v11, v13, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;-><init>(Ljava/lang/String; J F)V
+	121     (000001cc) invoke-interface     v5, v9, Ljava/util/List;->add(Ljava/lang/Object;)Z
+	122     (000001d2) goto                 -7f
+	17e:1d1
+	(Ljava/lang/Throwable; -> 1d4 readHistoricalDataImpl-BB@0x1d4)
+	(Lorg/xmlpull/v1/XmlPullParserException; -> 74 readHistoricalDataImpl-BB@0x74)
+	(Ljava/io/IOException; -> 126 readHistoricalDataImpl-BB@0x126)
+
+readHistoricalDataImpl-BB@0x1d4 : [ readHistoricalDataImpl-BB@0x1da readHistoricalDataImpl-BB@0x1e0 ]
+	123     (000001d4) move-exception       v15
+	124     (000001d6) if-eqz               v3, +5
+
+readHistoricalDataImpl-BB@0x1da : [ readHistoricalDataImpl-BB@0x1e0 ]
+	125     (000001da) invoke-virtual       v3, Ljava/io/FileInputStream;->close()V
+	1da:1df
+	(Ljava/io/IOException; -> 1e2 readHistoricalDataImpl-BB@0x1e2)
+
+readHistoricalDataImpl-BB@0x1e0 : 
+	126     (000001e0) throw                v15
+
+readHistoricalDataImpl-BB@0x1e2 : [ readHistoricalDataImpl-BB@0x1e0 ]
+	127     (000001e2) move-exception       v16
+	128     (000001e4) goto                 -2
+

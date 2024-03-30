@@ -1,0 +1,69 @@
+# Landroid/support/v7/widget/LinearSmoothScroller;->updateActionForInterimTarget(Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;)V [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.support.v7.widget.RecyclerView$SmoothScroller$Action
+#
+# - return:void
+
+updateActionForInterimTarget-BB@0x0 : [ updateActionForInterimTarget-BB@0x22 updateActionForInterimTarget-BB@0x3a ]
+	0       (00000000) const                v5, 1176256512 # [10000.0]
+	1       (00000006) const/4              v4, 0
+	2       (00000008) const                v6, 1067030938 # [1.2000000476837158]
+	3       (0000000e) invoke-virtual       v7, Landroid/support/v7/widget/LinearSmoothScroller;->getTargetPosition()I
+	4       (00000014) move-result          v3
+	5       (00000016) invoke-virtual       v7, v3, Landroid/support/v7/widget/LinearSmoothScroller;->computeScrollVectorForPosition(I)Landroid/graphics/PointF;
+	6       (0000001c) move-result-object   v0
+	7       (0000001e) if-eqz               v0, +e
+
+updateActionForInterimTarget-BB@0x22 : [ updateActionForInterimTarget-BB@0x2e updateActionForInterimTarget-BB@0x5e ]
+	8       (00000022) iget                 v3, v0, Landroid/graphics/PointF;->x F
+	9       (00000026) cmpl-float           v3, v3, v4
+	10      (0000002a) if-nez               v3, +1a
+
+updateActionForInterimTarget-BB@0x2e : [ updateActionForInterimTarget-BB@0x3a updateActionForInterimTarget-BB@0x5e ]
+	11      (0000002e) iget                 v3, v0, Landroid/graphics/PointF;->y F
+	12      (00000032) cmpl-float           v3, v3, v4
+	13      (00000036) if-nez               v3, +14
+
+updateActionForInterimTarget-BB@0x3a : [ updateActionForInterimTarget-BB@0x5c ]
+	14      (0000003a) const-string         v3, 'LinearSmoothScroller'
+	15      (0000003e) const-string         v4, 'To support smooth scrolling, you should override \nLayoutManager#computeScrollVectorForPosition.\nFalling back to instant scroll'
+	16      (00000042) invoke-static        v3, v4, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	17      (00000048) invoke-virtual       v7, Landroid/support/v7/widget/LinearSmoothScroller;->getTargetPosition()I
+	18      (0000004e) move-result          v1
+	19      (00000050) invoke-virtual       v8, v1, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->jumpTo(I)V
+	20      (00000056) invoke-virtual       v7, Landroid/support/v7/widget/LinearSmoothScroller;->stop()V
+
+updateActionForInterimTarget-BB@0x5c : 
+	21      (0000005c) return-void          
+
+updateActionForInterimTarget-BB@0x5e : [ updateActionForInterimTarget-BB@0x5c ]
+	22      (0000005e) invoke-virtual       v7, v0, Landroid/support/v7/widget/LinearSmoothScroller;->normalize(Landroid/graphics/PointF;)V
+	23      (00000064) iput-object          v0, v7, Landroid/support/v7/widget/LinearSmoothScroller;->mTargetVector Landroid/graphics/PointF;
+	24      (00000068) iget                 v3, v0, Landroid/graphics/PointF;->x F
+	25      (0000006c) mul-float/2addr      v3, v5
+	26      (0000006e) float-to-int         v3, v3
+	27      (00000070) iput                 v3, v7, Landroid/support/v7/widget/LinearSmoothScroller;->mInterimTargetDx I
+	28      (00000074) iget                 v3, v0, Landroid/graphics/PointF;->y F
+	29      (00000078) mul-float/2addr      v3, v5
+	30      (0000007a) float-to-int         v3, v3
+	31      (0000007c) iput                 v3, v7, Landroid/support/v7/widget/LinearSmoothScroller;->mInterimTargetDy I
+	32      (00000080) const/16             v3, 10000
+	33      (00000084) invoke-virtual       v7, v3, Landroid/support/v7/widget/LinearSmoothScroller;->calculateTimeForScrolling(I)I
+	34      (0000008a) move-result          v2
+	35      (0000008c) iget                 v3, v7, Landroid/support/v7/widget/LinearSmoothScroller;->mInterimTargetDx I
+	36      (00000090) int-to-float         v3, v3
+	37      (00000092) mul-float/2addr      v3, v6
+	38      (00000094) float-to-int         v3, v3
+	39      (00000096) iget                 v4, v7, Landroid/support/v7/widget/LinearSmoothScroller;->mInterimTargetDy I
+	40      (0000009a) int-to-float         v4, v4
+	41      (0000009c) mul-float/2addr      v4, v6
+	42      (0000009e) float-to-int         v4, v4
+	43      (000000a0) int-to-float         v5, v2
+	44      (000000a2) mul-float/2addr      v5, v6
+	45      (000000a4) float-to-int         v5, v5
+	46      (000000a6) iget-object          v6, v7, Landroid/support/v7/widget/LinearSmoothScroller;->mLinearInterpolator Landroid/view/animation/LinearInterpolator;
+	47      (000000aa) invoke-virtual       v8, v3, v4, v5, v6, Landroid/support/v7/widget/RecyclerView$SmoothScroller$Action;->update(I I I Landroid/view/animation/Interpolator;)V
+	48      (000000b0) goto                 -2a
+

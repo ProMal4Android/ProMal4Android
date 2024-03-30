@@ -1,0 +1,46 @@
+# Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;->onClick(Landroid/view/View;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.view.View
+#
+# - return:void
+
+onClick-BB@0x0 : [ onClick-BB@0x8 onClick-BB@0x1e ]
+	0       (00000000) iget-object          v1, v5, Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;->mResolvedMethod Ljava/lang/reflect/Method;
+	1       (00000004) if-nez               v1, +d
+
+onClick-BB@0x8 : [ onClick-BB@0x1e ]
+	2       (00000008) iget-object          v1, v5, Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;->mHostView Landroid/view/View;
+	3       (0000000c) invoke-virtual       v1, Landroid/view/View;->getContext()Landroid/content/Context;
+	4       (00000012) move-result-object   v1
+	5       (00000014) iget-object          v2, v5, Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;->mMethodName Ljava/lang/String;
+	6       (00000018) invoke-direct        v5, v1, v2, Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;->resolveMethod(Landroid/content/Context; Ljava/lang/String;)V
+
+onClick-BB@0x1e : 
+	7       (0000001e) iget-object          v1, v5, Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;->mResolvedMethod Ljava/lang/reflect/Method;
+	8       (00000022) iget-object          v2, v5, Landroid/support/v7/app/AppCompatViewInflater$DeclaredOnClickListener;->mResolvedContext Landroid/content/Context;
+	9       (00000026) const/4              v3, 1
+	10      (00000028) new-array            v3, v3, [Ljava/lang/Object;
+	11      (0000002c) const/4              v4, 0
+	12      (0000002e) aput-object          v6, v3, v4
+	13      (00000032) invoke-virtual       v1, v2, v3, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	14      (00000038) return-void          
+	1e:37
+	(Ljava/lang/IllegalAccessException; -> 3a onClick-BB@0x3a)
+	(Ljava/lang/reflect/InvocationTargetException; -> 4c onClick-BB@0x4c)
+
+onClick-BB@0x3a : 
+	15      (0000003a) move-exception       v0
+	16      (0000003c) new-instance         v1, Ljava/lang/IllegalStateException;
+	17      (00000040) const-string         v2, 'Could not execute non-public method for android:onClick'
+	18      (00000044) invoke-direct        v1, v2, v0, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String; Ljava/lang/Throwable;)V
+	19      (0000004a) throw                v1
+
+onClick-BB@0x4c : 
+	20      (0000004c) move-exception       v0
+	21      (0000004e) new-instance         v1, Ljava/lang/IllegalStateException;
+	22      (00000052) const-string         v2, 'Could not execute method for android:onClick'
+	23      (00000056) invoke-direct        v1, v2, v0, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String; Ljava/lang/Throwable;)V
+	24      (0000005c) throw                v1
+

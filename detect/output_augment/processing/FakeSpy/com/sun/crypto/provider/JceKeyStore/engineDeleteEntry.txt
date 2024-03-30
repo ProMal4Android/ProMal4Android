@@ -1,0 +1,27 @@
+# Lcom/sun/crypto/provider/JceKeyStore;->engineDeleteEntry(Ljava/lang/String;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+#
+# - return:void
+
+engineDeleteEntry-BB@0x0 : [ engineDeleteEntry-BB@0x6 ]
+	0       (00000000) iget-object          v1, v3, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	1       (00000004) monitor-enter        v1
+
+engineDeleteEntry-BB@0x6 : 
+	2       (00000006) iget-object          v0, v3, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	3       (0000000a) invoke-virtual       v4, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+	4       (00000010) move-result-object   v2
+	5       (00000012) invoke-virtual       v0, v2, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+	6       (00000018) monitor-exit         v1
+	7       (0000001a) return-void          
+	6:1f
+	(Ljava/lang/Throwable; -> 1c engineDeleteEntry-BB@0x1c)
+
+engineDeleteEntry-BB@0x1c : 
+	8       (0000001c) move-exception       v0
+	9       (0000001e) monitor-exit         v1
+	10      (00000020) throw                v0
+

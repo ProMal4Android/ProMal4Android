@@ -1,0 +1,59 @@
+# Landroid/support/v7/widget/SearchView;->onTextChanged(Ljava/lang/CharSequence;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:java.lang.CharSequence
+#
+# - return:void
+
+onTextChanged-BB@0x0 : [ onTextChanged-BB@0x20 onTextChanged-BB@0x76 ]
+	0       (00000000) const/4              v2, 1
+	1       (00000002) const/4              v3, 0
+	2       (00000004) iget-object          v4, v5, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	3       (00000008) invoke-virtual       v4, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
+	4       (0000000e) move-result-object   v1
+	5       (00000010) iput-object          v1, v5, Landroid/support/v7/widget/SearchView;->mUserQuery Ljava/lang/CharSequence;
+	6       (00000014) invoke-static        v1, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	7       (0000001a) move-result          v4
+	8       (0000001c) if-nez               v4, +2d
+
+onTextChanged-BB@0x20 : [ onTextChanged-BB@0x22 ]
+	9       (00000020) move                 v0, v2
+
+onTextChanged-BB@0x22 : [ onTextChanged-BB@0x2c onTextChanged-BB@0x7a ]
+	10      (00000022) invoke-direct        v5, v0, Landroid/support/v7/widget/SearchView;->updateSubmitButton(Z)V
+	11      (00000028) if-nez               v0, +29
+
+onTextChanged-BB@0x2c : [ onTextChanged-BB@0x46 onTextChanged-BB@0x68 ]
+	12      (0000002c) invoke-direct        v5, v2, Landroid/support/v7/widget/SearchView;->updateVoiceButton(Z)V
+	13      (00000032) invoke-direct        v5, Landroid/support/v7/widget/SearchView;->updateCloseButton()V
+	14      (00000038) invoke-direct        v5, Landroid/support/v7/widget/SearchView;->updateSubmitArea()V
+	15      (0000003e) iget-object          v2, v5, Landroid/support/v7/widget/SearchView;->mOnQueryChangeListener Landroid/support/v7/widget/SearchView$OnQueryTextListener;
+	16      (00000042) if-eqz               v2, +13
+
+onTextChanged-BB@0x46 : [ onTextChanged-BB@0x56 onTextChanged-BB@0x68 ]
+	17      (00000046) iget-object          v2, v5, Landroid/support/v7/widget/SearchView;->mOldQueryText Ljava/lang/CharSequence;
+	18      (0000004a) invoke-static        v6, v2, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence; Ljava/lang/CharSequence;)Z
+	19      (00000050) move-result          v2
+	20      (00000052) if-nez               v2, +b
+
+onTextChanged-BB@0x56 : [ onTextChanged-BB@0x68 ]
+	21      (00000056) iget-object          v2, v5, Landroid/support/v7/widget/SearchView;->mOnQueryChangeListener Landroid/support/v7/widget/SearchView$OnQueryTextListener;
+	22      (0000005a) invoke-interface     v6, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+	23      (00000060) move-result-object   v3
+	24      (00000062) invoke-interface     v2, v3, Landroid/support/v7/widget/SearchView$OnQueryTextListener;->onQueryTextChange(Ljava/lang/String;)Z
+
+onTextChanged-BB@0x68 : 
+	25      (00000068) invoke-interface     v6, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+	26      (0000006e) move-result-object   v2
+	27      (00000070) iput-object          v2, v5, Landroid/support/v7/widget/SearchView;->mOldQueryText Ljava/lang/CharSequence;
+	28      (00000074) return-void          
+
+onTextChanged-BB@0x76 : [ onTextChanged-BB@0x22 ]
+	29      (00000076) move                 v0, v3
+	30      (00000078) goto                 -2b
+
+onTextChanged-BB@0x7a : [ onTextChanged-BB@0x2c ]
+	31      (0000007a) move                 v2, v3
+	32      (0000007c) goto                 -28
+

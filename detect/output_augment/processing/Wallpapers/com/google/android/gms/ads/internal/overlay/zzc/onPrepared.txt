@@ -1,0 +1,63 @@
+# Lcom/google/android/gms/ads/internal/overlay/zzc;->onPrepared(Landroid/media/MediaPlayer;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.media.MediaPlayer
+#
+# - return:void
+
+onPrepared-BB@0x0 : [ onPrepared-BB@0x50 onPrepared-BB@0x5a ]
+	0       (00000000) const-string         v0, 'AdMediaPlayerView prepared'
+	1       (00000004) invoke-static        v0, Lcom/google/android/gms/ads/internal/util/client/zzb;->v(Ljava/lang/String;)V
+	2       (0000000a) const/4              v0, 2
+	3       (0000000c) invoke-direct        v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzw(I)V
+	4       (00000012) iget-object          v0, v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzCO Lcom/google/android/gms/ads/internal/overlay/zzp;
+	5       (00000016) invoke-virtual       v0, Lcom/google/android/gms/ads/internal/overlay/zzp;->zzfo()V
+	6       (0000001c) sget-object          v0, Lcom/google/android/gms/internal/zzip;->zzKO Landroid/os/Handler;
+	7       (00000020) new-instance         v1, Lcom/google/android/gms/ads/internal/overlay/zzc$1;
+	8       (00000024) invoke-direct        v1, v2, Lcom/google/android/gms/ads/internal/overlay/zzc$1;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzc;)V
+	9       (0000002a) invoke-virtual       v0, v1, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+	10      (00000030) invoke-virtual       v3, Landroid/media/MediaPlayer;->getVideoWidth()I
+	11      (00000036) move-result          v0
+	12      (00000038) iput                 v0, v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzCT I
+	13      (0000003c) invoke-virtual       v3, Landroid/media/MediaPlayer;->getVideoHeight()I
+	14      (00000042) move-result          v0
+	15      (00000044) iput                 v0, v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzCU I
+	16      (00000048) iget                 v0, v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzDb I
+	17      (0000004c) if-eqz               v0, +7
+
+onPrepared-BB@0x50 : [ onPrepared-BB@0x5a ]
+	18      (00000050) iget                 v0, v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzDb I
+	19      (00000054) invoke-virtual       v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzc;->seekTo(I)V
+
+onPrepared-BB@0x5a : [ onPrepared-BB@0xb2 onPrepared-BB@0xb8 ]
+	20      (0000005a) invoke-direct        v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzeQ()V
+	21      (00000060) new-instance         v0, Ljava/lang/StringBuilder;
+	22      (00000064) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	23      (0000006a) const-string         v1, 'AdMediaPlayerView stream dimensions: '
+	24      (0000006e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (00000074) move-result-object   v0
+	26      (00000076) iget                 v1, v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzCT I
+	27      (0000007a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	28      (00000080) move-result-object   v0
+	29      (00000082) const-string         v1, ' x '
+	30      (00000086) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	31      (0000008c) move-result-object   v0
+	32      (0000008e) iget                 v1, v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzCU I
+	33      (00000092) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	34      (00000098) move-result-object   v0
+	35      (0000009a) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	36      (000000a0) move-result-object   v0
+	37      (000000a2) invoke-static        v0, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaG(Ljava/lang/String;)V
+	38      (000000a8) iget                 v0, v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzCQ I
+	39      (000000ac) const/4              v1, 3
+	40      (000000ae) if-ne                v0, v1, +5
+
+onPrepared-BB@0xb2 : [ onPrepared-BB@0xb8 ]
+	41      (000000b2) invoke-virtual       v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->play()V
+
+onPrepared-BB@0xb8 : 
+	42      (000000b8) invoke-direct        v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzeR()V
+	43      (000000be) invoke-direct        v2, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzeY()V
+	44      (000000c4) return-void          
+

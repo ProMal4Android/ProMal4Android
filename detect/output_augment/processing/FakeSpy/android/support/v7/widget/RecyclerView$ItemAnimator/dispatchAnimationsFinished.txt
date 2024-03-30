@@ -1,0 +1,30 @@
+# Landroid/support/v7/widget/RecyclerView$ItemAnimator;->dispatchAnimationsFinished()V [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+dispatchAnimationsFinished-BB@0x0 : [ dispatchAnimationsFinished-BB@0xe ]
+	0       (00000000) iget-object          v2, v3, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->mFinishedListeners Ljava/util/ArrayList;
+	1       (00000004) invoke-virtual       v2, Ljava/util/ArrayList;->size()I
+	2       (0000000a) move-result          v0
+	3       (0000000c) const/4              v1, 0
+
+dispatchAnimationsFinished-BB@0xe : [ dispatchAnimationsFinished-BB@0x12 dispatchAnimationsFinished-BB@0x2e ]
+	4       (0000000e) if-ge                v1, v0, +10
+
+dispatchAnimationsFinished-BB@0x12 : [ dispatchAnimationsFinished-BB@0xe ]
+	5       (00000012) iget-object          v2, v3, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->mFinishedListeners Ljava/util/ArrayList;
+	6       (00000016) invoke-virtual       v2, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	7       (0000001c) move-result-object   v2
+	8       (0000001e) check-cast           v2, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;
+	9       (00000022) invoke-interface     v2, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;->onAnimationsFinished()V
+	10      (00000028) add-int/lit8         v1, v1, 1
+	11      (0000002c) goto                 -f
+
+dispatchAnimationsFinished-BB@0x2e : 
+	12      (0000002e) iget-object          v2, v3, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->mFinishedListeners Ljava/util/ArrayList;
+	13      (00000032) invoke-virtual       v2, Ljava/util/ArrayList;->clear()V
+	14      (00000038) return-void          
+

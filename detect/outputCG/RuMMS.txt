@@ -1,0 +1,3045 @@
+graph [
+  directed 1
+  node [
+    id 0
+    label "Lcom/android/internal/telephony/ITelephony;->endCall()Z [access_flags=public abstract] @ 0x0"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 1
+    label "Lorg/ceremony/perfect/CoinFoundation;-><init>()V [access_flags=public constructor] @ 0x1a20"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 2
+    label "Landroid/app/Activity;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 3
+    label "Lorg/ceremony/perfect/CoinFoundation;->onCreate(Landroid/os/Bundle;)V [access_flags=protected] @ 0x1a38"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 4
+    label "Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 5
+    label "Lorg/ceremony/perfect/CoinFoundation;->finish()V"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 6
+    label "Landroid/widget/Toast;->show()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 7
+    label "Landroid/content/Intent;-><init>(Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 8
+    label "Lorg/ceremony/perfect/CoinFoundation;->startActivity(Landroid/content/Intent;)V"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 9
+    label "Landroid/widget/Toast;->makeText(Landroid/content/Context; Ljava/lang/CharSequence; I)Landroid/widget/Toast;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 10
+    label "Lorg/ceremony/perfect/CoinFoundation;->getApplicationContext()Landroid/content/Context;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 11
+    label "Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 12
+    label "Lorg/ceremony/perfect/ConstraintTrolley;-><init>()V [access_flags=public constructor] @ 0x1a90"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 13
+    label "Landroid/app/IntentService;-><init>(Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 14
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->a(Landroid/content/Context; Ljava/lang/String;)I [access_flags=private] @ 0x1aac"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 15
+    label "Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 16
+    label "Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 17
+    label "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 18
+    label "Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 19
+    label "Ljava/lang/StringBuilder;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 20
+    label "Landroid/content/Context;->startActivity(Landroid/content/Intent;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 21
+    label "Lorg/ceremony/perfect/Drill;->a(Z)V [access_flags=public static] @ 0x24e0"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 22
+    label "Landroid/content/Intent;-><init>(Ljava/lang/String; Landroid/net/Uri;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 23
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->a(Landroid/content/Context; Ljava/lang/String; Ljava/lang/String;)I [access_flags=private] @ 0x1b54"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 24
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->a()Landroid/app/PendingIntent; [access_flags=private] @ 0x1c60"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 25
+    label "Ljava/util/Iterator;->next()Ljava/lang/Object;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 26
+    label "Lorg/ceremony/perfect/b;->a(Landroid/content/Context; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent;)V [access_flags=public static] @ 0x32c0"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 27
+    label "Ljava/util/concurrent/TimeUnit;->sleep(J)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 28
+    label "Ljava/lang/String;->replace(Ljava/lang/CharSequence; Ljava/lang/CharSequence;)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 29
+    label "Lorg/ceremony/perfect/b;->b(Landroid/content/Context;)Ljava/util/ArrayList; [access_flags=public static] @ 0x3414"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 30
+    label "Ljava/util/Iterator;->hasNext()Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 31
+    label "Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 32
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->getApplicationContext()Landroid/content/Context;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 33
+    label "Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context; I Landroid/content/Intent; I)Landroid/app/PendingIntent;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 34
+    label "Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 35
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->a(Landroid/content/Context; Lorg/json/JSONArray;)I [access_flags=private] @ 0x1be0"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 36
+    label "Lorg/json/JSONArray;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 37
+    label "Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 38
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->a(Ljava/lang/String;)V [access_flags=private] @ 0x1ca0"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 39
+    label "Lorg/ceremony/perfect/d;->a(Ljava/lang/String;)V [access_flags=public] @ 0x385c"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 40
+    label "Lorg/ceremony/perfect/d;->a(Landroid/content/Context;)Lorg/ceremony/perfect/d; [access_flags=public static] @ 0x37dc"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 41
+    label "Lorg/ceremony/perfect/d;->a(Landroid/content/Context; Ljava/lang/String;)V [access_flags=public] @ 0x3828"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 42
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->a(Ljava/lang/String; I I)V [access_flags=private] @ 0x1ce8"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 43
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->a(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; I)V [access_flags=private] @ 0x1ea4"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 44
+    label "Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 45
+    label "Lorg/ceremony/perfect/a;->a(Ljava/lang/String; Ljava/lang/Object;)Lorg/ceremony/perfect/a; [access_flags=public] @ 0x30f0"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 46
+    label "Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 47
+    label "Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 48
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->a(Lorg/json/JSONObject; I I Ljava/lang/String; Ljava/lang/String; Ljava/lang/String;)Z [access_flags=private static] @ 0x1f10"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 49
+    label "Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 50
+    label "Lorg/ceremony/perfect/a;-><init>(Landroid/content/Context; I)V [access_flags=constructor] @ 0x30c0"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 51
+    label "Lorg/ceremony/perfect/a;->a()V [access_flags=public] @ 0x3124"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 52
+    label "Lorg/json/JSONObject;->optInt(Ljava/lang/String; I)I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 53
+    label "Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 54
+    label "Landroid/content/Intent;->putExtra(Ljava/lang/String; Ljava/lang/String;)Landroid/content/Intent;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 55
+    label "Landroid/content/Intent;->putExtra(Ljava/lang/String; I)Landroid/content/Intent;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 56
+    label "Lorg/ceremony/perfect/ConstraintTrolley;->onHandleIntent(Landroid/content/Intent;)V [access_flags=protected] @ 0x1f38"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 57
+    label "Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 58
+    label "Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 59
+    label "Lorg/ceremony/perfect/CylinderSequence$1;-><init>(Lorg/ceremony/perfect/CylinderSequence; I Ljava/lang/String;)V [access_flags=constructor] @ 0x1f7c"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 60
+    label "Ljava/lang/Object;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 61
+    label "Lorg/ceremony/perfect/CylinderSequence$1;->run()V [access_flags=public] @ 0x1fa0"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 62
+    label "Lorg/ceremony/perfect/b;->a(Landroid/content/Context; I Ljava/lang/String;)V [access_flags=public static] @ 0x3234"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 63
+    label "Lorg/ceremony/perfect/CylinderSequence;->getApplicationContext()Landroid/content/Context;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 64
+    label "Lorg/ceremony/perfect/CylinderSequence;-><init>()V [access_flags=public constructor] @ 0x1fcc"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 65
+    label "Lorg/ceremony/perfect/CylinderSequence;->a(I Ljava/lang/String;)V [access_flags=private] @ 0x1fe8"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 66
+    label "Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable; J)Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 67
+    label "Lorg/ceremony/perfect/CylinderSequence;->onHandleIntent(Landroid/content/Intent;)V [access_flags=protected] @ 0x2018"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 68
+    label "Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 69
+    label "Ljava/net/HttpURLConnection;->disconnect()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 70
+    label "Ljava/io/InputStream;->read([B)I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 71
+    label "Ljava/lang/IllegalStateException;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 72
+    label "Ljava/net/HttpURLConnection;->connect()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 73
+    label "Ljava/net/HttpURLConnection;->setReadTimeout(I)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 74
+    label "Ljava/net/HttpURLConnection;->setConnectTimeout(I)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 75
+    label "Ljava/lang/String;-><init>([B)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 76
+    label "Ljava/io/InputStream;->close()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 77
+    label "Ljava/io/OutputStream;->close()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 78
+    label "Lorg/json/JSONArray;->length()I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 79
+    label "Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 80
+    label "Ljava/io/ByteArrayOutputStream;->toByteArray()[B"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 81
+    label "Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 82
+    label "Lorg/ceremony/perfect/CylinderSequence;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 83
+    label "Ljava/net/URL;->openConnection()Ljava/net/URLConnection;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 84
+    label "Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 85
+    label "Lorg/ceremony/perfect/c;->b([B)[B [access_flags=public] @ 0x3784"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 86
+    label "Ljava/io/ByteArrayOutputStream;->close()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 87
+    label "Ljava/net/HttpURLConnection;->setUseCaches(Z)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 88
+    label "Lorg/ceremony/perfect/c;-><init>()V [access_flags=constructor] @ 0x3660"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 89
+    label "Ljava/io/ByteArrayOutputStream;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 90
+    label "Ljava/net/HttpURLConnection;->getResponseCode()I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 91
+    label "Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 92
+    label "Ljava/io/OutputStream;->write([B)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 93
+    label "Ljava/io/IOException;->printStackTrace()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 94
+    label "Ljava/net/HttpURLConnection;->setDoOutput(Z)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 95
+    label "Ljava/lang/String;->getBytes()[B"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 96
+    label "Ljava/io/ByteArrayOutputStream;->write([B I I)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 97
+    label "Lorg/json/JSONObject;->toString()Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 98
+    label "Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 99
+    label "Ljava/net/HttpURLConnection;->setDoInput(Z)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 100
+    label "Ljava/net/URL;-><init>(Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 101
+    label "Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 102
+    label "Lorg/ceremony/perfect/Drill;-><clinit>()V [access_flags=static constructor] @ 0x2408"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 103
+    label "Lorg/ceremony/perfect/Drill;-><init>()V [access_flags=public constructor] @ 0x24c8"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 104
+    label "Landroid/accessibilityservice/AccessibilityService;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 105
+    label "Lorg/ceremony/perfect/Drill;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Z [access_flags=private] @ 0x24f8"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 106
+    label "Ljava/lang/String;->isEmpty()Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 107
+    label "Ljava/lang/CharSequence;->toString()Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 108
+    label "Landroid/view/accessibility/AccessibilityNodeInfo;->getText()Ljava/lang/CharSequence;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 109
+    label "Landroid/view/accessibility/AccessibilityNodeInfo;->getChild(I)Landroid/view/accessibility/AccessibilityNodeInfo;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 110
+    label "Ljava/lang/String;->toLowerCase()Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 111
+    label "Landroid/view/accessibility/AccessibilityNodeInfo;->getChildCount()I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 112
+    label "Landroid/view/accessibility/AccessibilityNodeInfo;->performAction(I)Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 113
+    label "Lorg/ceremony/perfect/Drill;->a(Ljava/lang/String; Landroid/view/accessibility/AccessibilityNodeInfo;)Z [access_flags=private] @ 0x25dc"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 114
+    label "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 115
+    label "Landroid/view/accessibility/AccessibilityNodeInfo;->findAccessibilityNodeInfosByViewId(Ljava/lang/String;)Ljava/util/List;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 116
+    label "Ljava/util/List;->get(I)Ljava/lang/Object;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 117
+    label "Ljava/util/List;->size()I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 118
+    label "Lorg/ceremony/perfect/Drill;->onAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V [access_flags=public] @ 0x2630"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 119
+    label "Lorg/ceremony/perfect/d;->b(Ljava/lang/String;)Z [access_flags=public] @ 0x389c"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 120
+    label "Lorg/ceremony/perfect/Drill;->getApplicationContext()Landroid/content/Context;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 121
+    label "Landroid/view/accessibility/AccessibilityEvent;->getPackageName()Ljava/lang/CharSequence;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 122
+    label "Landroid/view/accessibility/AccessibilityEvent;->getSource()Landroid/view/accessibility/AccessibilityNodeInfo;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 123
+    label "Lorg/ceremony/perfect/Drill;->performGlobalAction(I)Z"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 124
+    label "Lorg/ceremony/perfect/FosterFraud;-><init>()V [access_flags=public constructor] @ 0x26d4"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 125
+    label "Landroid/content/BroadcastReceiver;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 126
+    label "Lorg/ceremony/perfect/Liberty;-><init>()V [access_flags=public constructor] @ 0x2700"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 127
+    label "Lorg/ceremony/perfect/Liberty;->a(Landroid/content/Context; Landroid/content/Intent;)V [access_flags=private] @ 0x2718"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 128
+    label "Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String; Z)Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 129
+    label "Lorg/ceremony/perfect/Liberty;->getResultCode()I"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 130
+    label "Lorg/ceremony/perfect/Liberty;->a(Landroid/os/Bundle;)[Ljava/lang/Object; [access_flags=private] @ 0x27b4"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 131
+    label "Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 132
+    label "Lorg/ceremony/perfect/Liberty;->b(Landroid/content/Context; Landroid/content/Intent;)V [access_flags=private] @ 0x27dc"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 133
+    label "Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 134
+    label "Landroid/telephony/SmsMessage;->getDisplayOriginatingAddress()Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 135
+    label "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 136
+    label "Landroid/telephony/SmsMessage;->createFromPdu([B Ljava/lang/String;)Landroid/telephony/SmsMessage;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 137
+    label "Landroid/content/Intent;->getExtras()Landroid/os/Bundle;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 138
+    label "Landroid/telephony/SmsMessage;->createFromPdu([B)Landroid/telephony/SmsMessage;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 139
+    label "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 140
+    label "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 141
+    label "Lorg/ceremony/perfect/Liberty;->onReceive(Landroid/content/Context; Landroid/content/Intent;)V [access_flags=public] @ 0x2958"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 142
+    label "Landroid/content/Intent;->getAction()Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 143
+    label "Lorg/ceremony/perfect/NatureTradition;-><init>()V [access_flags=public constructor] @ 0x29a8"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 144
+    label "Lorg/ceremony/perfect/NotionPillow;-><init>()V [access_flags=public constructor] @ 0x29d4"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 145
+    label "Lorg/ceremony/perfect/NotionPillow;->a()V [access_flags=private] @ 0x29ec"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 146
+    label "Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName; I I)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 147
+    label "Lorg/ceremony/perfect/NotionPillow;->getApplicationContext()Landroid/content/Context;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 148
+    label "Lorg/ceremony/perfect/NotionPillow;->getPackageManager()Landroid/content/pm/PackageManager;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 149
+    label "Landroid/content/ComponentName;-><init>(Landroid/content/Context; Ljava/lang/Class;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 150
+    label "Lorg/ceremony/perfect/NotionPillow;->onCreate(Landroid/os/Bundle;)V [access_flags=protected] @ 0x2a28"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 151
+    label "Lorg/ceremony/perfect/NotionPillow;->finish()V"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 152
+    label "Lorg/ceremony/perfect/Riot;-><init>()V [access_flags=public constructor] @ 0x2a4c"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 153
+    label "Lorg/ceremony/perfect/Riot;->a(Ljava/lang/Object;)Ljava/lang/Class; [access_flags=private] @ 0x2a64"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 154
+    label "Lorg/ceremony/perfect/Riot;->a(Landroid/content/Context;)V [access_flags=private] @ 0x2a80"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 155
+    label "Lorg/ceremony/perfect/Riot;->b(Landroid/content/Context;)Ljava/lang/Object; [access_flags=private] @ 0x2aec"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 156
+    label "Ljava/lang/reflect/Method;->setAccessible(Z)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 157
+    label "Lorg/ceremony/perfect/Riot;->a(Lcom/android/internal/telephony/ITelephony;)V [access_flags=private] @ 0x2ad4"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 158
+    label "Lorg/ceremony/perfect/Riot;->b(Ljava/lang/Object;)Ljava/lang/reflect/Method; [access_flags=private] @ 0x2b0c"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 159
+    label "Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 160
+    label "Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 161
+    label "Lorg/ceremony/perfect/Riot;->onReceive(Landroid/content/Context; Landroid/content/Intent;)V [access_flags=public] @ 0x2b38"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 162
+    label "Lorg/ceremony/perfect/Rob;-><init>()V [access_flags=public constructor] @ 0x2b58"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 163
+    label "Landroid/app/Service;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 164
+    label "Lorg/ceremony/perfect/Rob;->a()V [access_flags=private] @ 0x2b70"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 165
+    label "Landroid/app/Notification$Builder;->build()Landroid/app/Notification;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 166
+    label "Lorg/ceremony/perfect/Rob;->startForeground(I Landroid/app/Notification;)V"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 167
+    label "Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 168
+    label "Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 169
+    label "Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 170
+    label "Lorg/ceremony/perfect/Rob;->getApplicationContext()Landroid/content/Context;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 171
+    label "Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 172
+    label "Landroid/app/NotificationChannel;-><init>(Ljava/lang/String; Ljava/lang/CharSequence; I)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 173
+    label "Landroid/app/Notification$Builder;-><init>(Landroid/content/Context; Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 174
+    label "Ljava/lang/System;->currentTimeMillis()J"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 175
+    label "Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 176
+    label "Lorg/ceremony/perfect/Rob;->b()V [access_flags=private] @ 0x2c78"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 177
+    label "Landroid/app/NotificationManager;->cancel(I)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 178
+    label "Lorg/ceremony/perfect/Rob;->onCreate()V [access_flags=public] @ 0x2cac"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 179
+    label "Landroid/app/Service;->onCreate()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 180
+    label "Lorg/ceremony/perfect/Rob;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 181
+    label "Lorg/ceremony/perfect/Rob;->onDestroy()V [access_flags=public] @ 0x2cf0"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 182
+    label "Landroid/app/Service;->onDestroy()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 183
+    label "Lorg/ceremony/perfect/Rob;->stopSelf()V"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 184
+    label "Lorg/ceremony/perfect/Rumor;-><init>()V [access_flags=public constructor] @ 0x2d28"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 185
+    label "Lorg/ceremony/perfect/Rumor;->onCreate(Landroid/os/Bundle;)V [access_flags=protected] @ 0x2d40"
+    external 0
+    entrypoint 1
+  ]
+  node [
+    id 186
+    label "Lorg/ceremony/perfect/Rumor;->finish()V"
+    external 1
+    entrypoint 1
+  ]
+  node [
+    id 187
+    label "Lorg/ceremony/perfect/ScrapeTerm$1;-><init>(Lorg/ceremony/perfect/ScrapeTerm;)V [access_flags=constructor] @ 0x2d60"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 188
+    label "Lorg/ceremony/perfect/ScrapeTerm$1;->a()V [access_flags=private] @ 0x2d84"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 189
+    label "Lorg/ceremony/perfect/b;->a(Landroid/content/Context;)Z [access_flags=public static] @ 0x33d8"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 190
+    label "Lorg/ceremony/perfect/ScrapeTerm;->startActivity(Landroid/content/Intent;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 191
+    label "Lorg/ceremony/perfect/ScrapeTerm;->getApplicationContext()Landroid/content/Context;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 192
+    label "Lorg/ceremony/perfect/ScrapeTerm$1;->run()V [access_flags=public] @ 0x2de8"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 193
+    label "Lorg/ceremony/perfect/ScrapeTerm;->a(Lorg/ceremony/perfect/ScrapeTerm;)Landroid/content/Intent; [access_flags=static synthetic] @ 0x2f04"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 194
+    label "Lorg/ceremony/perfect/ScrapeTerm;->c(Lorg/ceremony/perfect/ScrapeTerm;)Ljava/lang/Runnable; [access_flags=static synthetic] @ 0x2f94"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 195
+    label "Lorg/ceremony/perfect/ScrapeTerm;->stopService(Landroid/content/Intent;)Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 196
+    label "Lorg/ceremony/perfect/ScrapeTerm;->b(Lorg/ceremony/perfect/ScrapeTerm;)V [access_flags=static synthetic] @ 0x2f7c"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 197
+    label "Lorg/ceremony/perfect/b;->a(Landroid/content/Context; Z)V [access_flags=public static] @ 0x3304"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 198
+    label "Lorg/ceremony/perfect/b;->b(Landroid/content/Context; J)Z [access_flags=public static] @ 0x34dc"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 199
+    label "Lorg/ceremony/perfect/ScrapeTerm$2;-><init>(Lorg/ceremony/perfect/ScrapeTerm;)V [access_flags=constructor] @ 0x2eac"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 200
+    label "Lorg/ceremony/perfect/ScrapeTerm;->b()Landroid/content/Intent; [access_flags=private] @ 0x2f54"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 201
+    label "Lorg/ceremony/perfect/ScrapeTerm;->a()V [access_flags=private] @ 0x2f20"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 202
+    label "Lorg/ceremony/perfect/ScrapeTerm;-><init>()V [access_flags=public constructor] @ 0x2edc"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 203
+    label "Landroid/app/Application;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 204
+    label "Landroid/os/PowerManager$WakeLock;->acquire()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 205
+    label "Landroid/os/PowerManager$WakeLock;->isHeld()Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 206
+    label "Lorg/ceremony/perfect/ScrapeTerm;->c()V [access_flags=private] @ 0x2fac"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 207
+    label "Lorg/ceremony/perfect/ScrapeTerm;->onCreate()V [access_flags=public] @ 0x2fd0"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 208
+    label "Landroid/os/HandlerThread;->start()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 209
+    label "Lorg/ceremony/perfect/ScrapeTerm;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 210
+    label "Landroid/os/PowerManager;->newWakeLock(I Ljava/lang/String;)Landroid/os/PowerManager$WakeLock;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 211
+    label "Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 212
+    label "Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 213
+    label "Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 214
+    label "Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 215
+    label "Landroid/os/Handler;-><init>(Landroid/os/Looper;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 216
+    label "Lorg/ceremony/perfect/ScrapeTerm;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 217
+    label "Lorg/ceremony/perfect/b;->a(Landroid/content/Context; J)V [access_flags=public static] @ 0x327c"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 218
+    label "Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 219
+    label "Lorg/ceremony/perfect/ScrapeTerm;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 220
+    label "Lorg/ceremony/perfect/ScrapeTerm;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 221
+    label "Landroid/app/Application;->onCreate()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 222
+    label "Lorg/json/JSONObject;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 223
+    label "Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 224
+    label "Lorg/json/JSONException;->printStackTrace()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 225
+    label "Lorg/ceremony/perfect/c;->a([B)[B [access_flags=public] @ 0x36f8"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 226
+    label "Lorg/json/JSONObject;->put(Ljava/lang/String; I)Lorg/json/JSONObject;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 227
+    label "Ljava/lang/Exception;->printStackTrace()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 228
+    label "Landroid/util/Base64;->encodeToString([B I)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 229
+    label "Lorg/ceremony/perfect/b;->c(Landroid/content/Context;)Ljava/lang/String; [access_flags=public static] @ 0x3508"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 230
+    label "Landroid/database/Cursor;->close()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 231
+    label "Landroid/database/Cursor;->getString(I)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 232
+    label "Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 233
+    label "Lorg/ceremony/perfect/b;->a()Landroid/net/Uri; [access_flags=private static] @ 0x3214"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 234
+    label "Lorg/ceremony/perfect/b;->e(Landroid/content/Context;)Landroid/content/ContentResolver; [access_flags=private static] @ 0x359c"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 235
+    label "Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 236
+    label "Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 237
+    label "Ljava/lang/String;->length()I"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 238
+    label "Ljava/lang/String;->replaceAll(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 239
+    label "Ljava/util/ArrayList;-><init>()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 240
+    label "Landroid/database/Cursor;->moveToNext()Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 241
+    label "Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 242
+    label "Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 243
+    label "Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 244
+    label "Landroid/provider/Telephony$Sms;->getDefaultSmsPackage(Landroid/content/Context;)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 245
+    label "Lorg/ceremony/perfect/b;->c(Landroid/content/Context; J)V [access_flags=private static] @ 0x3530"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 246
+    label "Lorg/ceremony/perfect/b;->f(Landroid/content/Context;)Z [access_flags=private static] @ 0x35b8"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 247
+    label "Lorg/ceremony/perfect/d;->a()[Ljava/lang/String; [access_flags=public] @ 0x3884"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 248
+    label "Lorg/ceremony/perfect/b;->h(Landroid/content/Context;)Ljava/lang/String; [access_flags=private static] @ 0x3618"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 249
+    label "Landroid/app/AlarmManager;->setRepeating(I J J Landroid/app/PendingIntent;)V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 250
+    label "Lorg/ceremony/perfect/b;->d(Landroid/content/Context;)Landroid/app/AlarmManager; [access_flags=private static] @ 0x3578"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 251
+    label "Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver; Ljava/lang/String;)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 252
+    label "Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 253
+    label "Lorg/ceremony/perfect/b;-><clinit>()V [access_flags=static constructor] @ 0x31c4"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 254
+    label "Landroid/telephony/TelephonyManager;->getNetworkOperatorName()Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 255
+    label "Lorg/ceremony/perfect/b;->g(Landroid/content/Context;)Landroid/telephony/TelephonyManager; [access_flags=private static] @ 0x35f4"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 256
+    label "Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 257
+    label "Landroid/util/Base64;->decode([B I)[B"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 258
+    label "Lorg/ceremony/perfect/c;-><clinit>()V [access_flags=static constructor] @ 0x363c"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 259
+    label "Lorg/ceremony/perfect/d;-><init>(Landroid/content/Context;)V [access_flags=private constructor] @ 0x37a8"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 260
+    label "Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 261
+    label "Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 262
+    label "Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String; Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 263
+    label "Lorg/ceremony/perfect/d;->b(Landroid/content/Context;)Landroid/content/SharedPreferences; [access_flags=private] @ 0x3808"
+    external 0
+    entrypoint 0
+  ]
+  node [
+    id 264
+    label "Landroid/content/SharedPreferences$Editor;->apply()V"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 265
+    label "Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;"
+    external 1
+    entrypoint 0
+  ]
+  node [
+    id 266
+    label "Landroid/content/Context;->getSharedPreferences(Ljava/lang/String; I)Landroid/content/SharedPreferences;"
+    external 1
+    entrypoint 0
+  ]
+  edge [
+    source 1
+    target 2
+  ]
+  edge [
+    source 3
+    target 4
+  ]
+  edge [
+    source 3
+    target 5
+  ]
+  edge [
+    source 3
+    target 6
+  ]
+  edge [
+    source 3
+    target 7
+  ]
+  edge [
+    source 3
+    target 8
+  ]
+  edge [
+    source 3
+    target 9
+  ]
+  edge [
+    source 3
+    target 10
+  ]
+  edge [
+    source 3
+    target 11
+  ]
+  edge [
+    source 12
+    target 13
+  ]
+  edge [
+    source 14
+    target 15
+  ]
+  edge [
+    source 14
+    target 16
+  ]
+  edge [
+    source 14
+    target 17
+  ]
+  edge [
+    source 14
+    target 18
+  ]
+  edge [
+    source 14
+    target 4
+  ]
+  edge [
+    source 14
+    target 19
+  ]
+  edge [
+    source 14
+    target 20
+  ]
+  edge [
+    source 14
+    target 21
+  ]
+  edge [
+    source 14
+    target 22
+  ]
+  edge [
+    source 23
+    target 24
+  ]
+  edge [
+    source 23
+    target 25
+  ]
+  edge [
+    source 23
+    target 26
+  ]
+  edge [
+    source 23
+    target 27
+  ]
+  edge [
+    source 23
+    target 28
+  ]
+  edge [
+    source 23
+    target 29
+  ]
+  edge [
+    source 23
+    target 30
+  ]
+  edge [
+    source 23
+    target 31
+  ]
+  edge [
+    source 23
+    target 32
+  ]
+  edge [
+    source 24
+    target 33
+  ]
+  edge [
+    source 24
+    target 32
+  ]
+  edge [
+    source 24
+    target 34
+  ]
+  edge [
+    source 26
+    target 241
+  ]
+  edge [
+    source 26
+    target 242
+  ]
+  edge [
+    source 26
+    target 21
+  ]
+  edge [
+    source 29
+    target 230
+  ]
+  edge [
+    source 29
+    target 231
+  ]
+  edge [
+    source 29
+    target 232
+  ]
+  edge [
+    source 29
+    target 233
+  ]
+  edge [
+    source 29
+    target 234
+  ]
+  edge [
+    source 29
+    target 235
+  ]
+  edge [
+    source 29
+    target 236
+  ]
+  edge [
+    source 29
+    target 237
+  ]
+  edge [
+    source 29
+    target 238
+  ]
+  edge [
+    source 29
+    target 239
+  ]
+  edge [
+    source 29
+    target 240
+  ]
+  edge [
+    source 35
+    target 36
+  ]
+  edge [
+    source 35
+    target 31
+  ]
+  edge [
+    source 35
+    target 37
+  ]
+  edge [
+    source 35
+    target 30
+  ]
+  edge [
+    source 35
+    target 25
+  ]
+  edge [
+    source 35
+    target 29
+  ]
+  edge [
+    source 38
+    target 32
+  ]
+  edge [
+    source 38
+    target 39
+  ]
+  edge [
+    source 38
+    target 40
+  ]
+  edge [
+    source 38
+    target 41
+  ]
+  edge [
+    source 39
+    target 260
+  ]
+  edge [
+    source 40
+    target 259
+  ]
+  edge [
+    source 41
+    target 261
+  ]
+  edge [
+    source 41
+    target 262
+  ]
+  edge [
+    source 41
+    target 263
+  ]
+  edge [
+    source 41
+    target 264
+  ]
+  edge [
+    source 42
+    target 32
+  ]
+  edge [
+    source 42
+    target 43
+  ]
+  edge [
+    source 42
+    target 36
+  ]
+  edge [
+    source 42
+    target 44
+  ]
+  edge [
+    source 42
+    target 45
+  ]
+  edge [
+    source 42
+    target 46
+  ]
+  edge [
+    source 42
+    target 47
+  ]
+  edge [
+    source 42
+    target 48
+  ]
+  edge [
+    source 42
+    target 49
+  ]
+  edge [
+    source 42
+    target 38
+  ]
+  edge [
+    source 42
+    target 35
+  ]
+  edge [
+    source 42
+    target 50
+  ]
+  edge [
+    source 42
+    target 51
+  ]
+  edge [
+    source 42
+    target 14
+  ]
+  edge [
+    source 42
+    target 23
+  ]
+  edge [
+    source 42
+    target 27
+  ]
+  edge [
+    source 43
+    target 53
+  ]
+  edge [
+    source 43
+    target 54
+  ]
+  edge [
+    source 43
+    target 55
+  ]
+  edge [
+    source 43
+    target 34
+  ]
+  edge [
+    source 43
+    target 33
+  ]
+  edge [
+    source 43
+    target 32
+  ]
+  edge [
+    source 43
+    target 26
+  ]
+  edge [
+    source 45
+    target 223
+  ]
+  edge [
+    source 45
+    target 224
+  ]
+  edge [
+    source 48
+    target 52
+  ]
+  edge [
+    source 50
+    target 222
+  ]
+  edge [
+    source 50
+    target 60
+  ]
+  edge [
+    source 51
+    target 97
+  ]
+  edge [
+    source 51
+    target 223
+  ]
+  edge [
+    source 51
+    target 222
+  ]
+  edge [
+    source 51
+    target 225
+  ]
+  edge [
+    source 51
+    target 95
+  ]
+  edge [
+    source 51
+    target 226
+  ]
+  edge [
+    source 51
+    target 227
+  ]
+  edge [
+    source 51
+    target 88
+  ]
+  edge [
+    source 51
+    target 228
+  ]
+  edge [
+    source 51
+    target 229
+  ]
+  edge [
+    source 51
+    target 62
+  ]
+  edge [
+    source 56
+    target 57
+  ]
+  edge [
+    source 56
+    target 42
+  ]
+  edge [
+    source 56
+    target 58
+  ]
+  edge [
+    source 59
+    target 60
+  ]
+  edge [
+    source 61
+    target 62
+  ]
+  edge [
+    source 61
+    target 63
+  ]
+  edge [
+    source 62
+    target 54
+  ]
+  edge [
+    source 62
+    target 34
+  ]
+  edge [
+    source 62
+    target 55
+  ]
+  edge [
+    source 62
+    target 243
+  ]
+  edge [
+    source 64
+    target 13
+  ]
+  edge [
+    source 65
+    target 66
+  ]
+  edge [
+    source 65
+    target 59
+  ]
+  edge [
+    source 67
+    target 68
+  ]
+  edge [
+    source 67
+    target 69
+  ]
+  edge [
+    source 67
+    target 70
+  ]
+  edge [
+    source 67
+    target 71
+  ]
+  edge [
+    source 67
+    target 72
+  ]
+  edge [
+    source 67
+    target 73
+  ]
+  edge [
+    source 67
+    target 58
+  ]
+  edge [
+    source 67
+    target 74
+  ]
+  edge [
+    source 67
+    target 65
+  ]
+  edge [
+    source 67
+    target 75
+  ]
+  edge [
+    source 67
+    target 52
+  ]
+  edge [
+    source 67
+    target 76
+  ]
+  edge [
+    source 67
+    target 57
+  ]
+  edge [
+    source 67
+    target 77
+  ]
+  edge [
+    source 67
+    target 78
+  ]
+  edge [
+    source 67
+    target 54
+  ]
+  edge [
+    source 67
+    target 55
+  ]
+  edge [
+    source 67
+    target 79
+  ]
+  edge [
+    source 67
+    target 80
+  ]
+  edge [
+    source 67
+    target 81
+  ]
+  edge [
+    source 67
+    target 63
+  ]
+  edge [
+    source 67
+    target 82
+  ]
+  edge [
+    source 67
+    target 83
+  ]
+  edge [
+    source 67
+    target 84
+  ]
+  edge [
+    source 67
+    target 85
+  ]
+  edge [
+    source 67
+    target 34
+  ]
+  edge [
+    source 67
+    target 86
+  ]
+  edge [
+    source 67
+    target 87
+  ]
+  edge [
+    source 67
+    target 88
+  ]
+  edge [
+    source 67
+    target 89
+  ]
+  edge [
+    source 67
+    target 90
+  ]
+  edge [
+    source 67
+    target 91
+  ]
+  edge [
+    source 67
+    target 92
+  ]
+  edge [
+    source 67
+    target 93
+  ]
+  edge [
+    source 67
+    target 94
+  ]
+  edge [
+    source 67
+    target 95
+  ]
+  edge [
+    source 67
+    target 96
+  ]
+  edge [
+    source 67
+    target 97
+  ]
+  edge [
+    source 67
+    target 98
+  ]
+  edge [
+    source 67
+    target 99
+  ]
+  edge [
+    source 67
+    target 100
+  ]
+  edge [
+    source 67
+    target 101
+  ]
+  edge [
+    source 85
+    target 257
+  ]
+  edge [
+    source 85
+    target 225
+  ]
+  edge [
+    source 88
+    target 60
+  ]
+  edge [
+    source 102
+    target 17
+  ]
+  edge [
+    source 102
+    target 18
+  ]
+  edge [
+    source 102
+    target 16
+  ]
+  edge [
+    source 102
+    target 19
+  ]
+  edge [
+    source 103
+    target 104
+  ]
+  edge [
+    source 105
+    target 106
+  ]
+  edge [
+    source 105
+    target 107
+  ]
+  edge [
+    source 105
+    target 108
+  ]
+  edge [
+    source 105
+    target 109
+  ]
+  edge [
+    source 105
+    target 105
+  ]
+  edge [
+    source 105
+    target 110
+  ]
+  edge [
+    source 105
+    target 111
+  ]
+  edge [
+    source 105
+    target 112
+  ]
+  edge [
+    source 105
+    target 113
+  ]
+  edge [
+    source 105
+    target 114
+  ]
+  edge [
+    source 113
+    target 115
+  ]
+  edge [
+    source 113
+    target 116
+  ]
+  edge [
+    source 113
+    target 117
+  ]
+  edge [
+    source 113
+    target 112
+  ]
+  edge [
+    source 118
+    target 106
+  ]
+  edge [
+    source 118
+    target 119
+  ]
+  edge [
+    source 118
+    target 107
+  ]
+  edge [
+    source 118
+    target 120
+  ]
+  edge [
+    source 118
+    target 121
+  ]
+  edge [
+    source 118
+    target 122
+  ]
+  edge [
+    source 118
+    target 105
+  ]
+  edge [
+    source 118
+    target 123
+  ]
+  edge [
+    source 118
+    target 40
+  ]
+  edge [
+    source 119
+    target 256
+  ]
+  edge [
+    source 124
+    target 125
+  ]
+  edge [
+    source 126
+    target 125
+  ]
+  edge [
+    source 127
+    target 45
+  ]
+  edge [
+    source 127
+    target 57
+  ]
+  edge [
+    source 127
+    target 46
+  ]
+  edge [
+    source 127
+    target 50
+  ]
+  edge [
+    source 127
+    target 128
+  ]
+  edge [
+    source 127
+    target 47
+  ]
+  edge [
+    source 127
+    target 58
+  ]
+  edge [
+    source 127
+    target 129
+  ]
+  edge [
+    source 127
+    target 51
+  ]
+  edge [
+    source 130
+    target 131
+  ]
+  edge [
+    source 132
+    target 19
+  ]
+  edge [
+    source 132
+    target 16
+  ]
+  edge [
+    source 132
+    target 45
+  ]
+  edge [
+    source 132
+    target 133
+  ]
+  edge [
+    source 132
+    target 134
+  ]
+  edge [
+    source 132
+    target 135
+  ]
+  edge [
+    source 132
+    target 50
+  ]
+  edge [
+    source 132
+    target 17
+  ]
+  edge [
+    source 132
+    target 136
+  ]
+  edge [
+    source 132
+    target 18
+  ]
+  edge [
+    source 132
+    target 51
+  ]
+  edge [
+    source 132
+    target 58
+  ]
+  edge [
+    source 132
+    target 137
+  ]
+  edge [
+    source 132
+    target 130
+  ]
+  edge [
+    source 132
+    target 138
+  ]
+  edge [
+    source 132
+    target 139
+  ]
+  edge [
+    source 132
+    target 140
+  ]
+  edge [
+    source 141
+    target 142
+  ]
+  edge [
+    source 141
+    target 114
+  ]
+  edge [
+    source 141
+    target 127
+  ]
+  edge [
+    source 141
+    target 132
+  ]
+  edge [
+    source 143
+    target 125
+  ]
+  edge [
+    source 144
+    target 2
+  ]
+  edge [
+    source 145
+    target 146
+  ]
+  edge [
+    source 145
+    target 147
+  ]
+  edge [
+    source 145
+    target 148
+  ]
+  edge [
+    source 145
+    target 149
+  ]
+  edge [
+    source 150
+    target 151
+  ]
+  edge [
+    source 150
+    target 11
+  ]
+  edge [
+    source 150
+    target 145
+  ]
+  edge [
+    source 152
+    target 125
+  ]
+  edge [
+    source 153
+    target 139
+  ]
+  edge [
+    source 154
+    target 155
+  ]
+  edge [
+    source 154
+    target 156
+  ]
+  edge [
+    source 154
+    target 140
+  ]
+  edge [
+    source 154
+    target 157
+  ]
+  edge [
+    source 154
+    target 158
+  ]
+  edge [
+    source 155
+    target 159
+  ]
+  edge [
+    source 157
+    target 0
+  ]
+  edge [
+    source 158
+    target 160
+  ]
+  edge [
+    source 158
+    target 153
+  ]
+  edge [
+    source 161
+    target 154
+  ]
+  edge [
+    source 162
+    target 163
+  ]
+  edge [
+    source 164
+    target 165
+  ]
+  edge [
+    source 164
+    target 16
+  ]
+  edge [
+    source 164
+    target 166
+  ]
+  edge [
+    source 164
+    target 167
+  ]
+  edge [
+    source 164
+    target 168
+  ]
+  edge [
+    source 164
+    target 135
+  ]
+  edge [
+    source 164
+    target 17
+  ]
+  edge [
+    source 164
+    target 19
+  ]
+  edge [
+    source 164
+    target 169
+  ]
+  edge [
+    source 164
+    target 170
+  ]
+  edge [
+    source 164
+    target 18
+  ]
+  edge [
+    source 164
+    target 171
+  ]
+  edge [
+    source 164
+    target 172
+  ]
+  edge [
+    source 164
+    target 173
+  ]
+  edge [
+    source 164
+    target 174
+  ]
+  edge [
+    source 164
+    target 175
+  ]
+  edge [
+    source 164
+    target 139
+  ]
+  edge [
+    source 164
+    target 140
+  ]
+  edge [
+    source 176
+    target 177
+  ]
+  edge [
+    source 178
+    target 179
+  ]
+  edge [
+    source 178
+    target 180
+  ]
+  edge [
+    source 178
+    target 164
+  ]
+  edge [
+    source 181
+    target 176
+  ]
+  edge [
+    source 181
+    target 182
+  ]
+  edge [
+    source 181
+    target 183
+  ]
+  edge [
+    source 184
+    target 2
+  ]
+  edge [
+    source 185
+    target 186
+  ]
+  edge [
+    source 185
+    target 11
+  ]
+  edge [
+    source 187
+    target 60
+  ]
+  edge [
+    source 188
+    target 189
+  ]
+  edge [
+    source 188
+    target 54
+  ]
+  edge [
+    source 188
+    target 190
+  ]
+  edge [
+    source 188
+    target 7
+  ]
+  edge [
+    source 188
+    target 21
+  ]
+  edge [
+    source 188
+    target 4
+  ]
+  edge [
+    source 188
+    target 191
+  ]
+  edge [
+    source 189
+    target 244
+  ]
+  edge [
+    source 189
+    target 114
+  ]
+  edge [
+    source 192
+    target 174
+  ]
+  edge [
+    source 192
+    target 193
+  ]
+  edge [
+    source 192
+    target 194
+  ]
+  edge [
+    source 192
+    target 191
+  ]
+  edge [
+    source 192
+    target 195
+  ]
+  edge [
+    source 192
+    target 196
+  ]
+  edge [
+    source 192
+    target 188
+  ]
+  edge [
+    source 192
+    target 66
+  ]
+  edge [
+    source 192
+    target 197
+  ]
+  edge [
+    source 192
+    target 198
+  ]
+  edge [
+    source 193
+    target 200
+  ]
+  edge [
+    source 196
+    target 201
+  ]
+  edge [
+    source 197
+    target 247
+  ]
+  edge [
+    source 197
+    target 50
+  ]
+  edge [
+    source 197
+    target 227
+  ]
+  edge [
+    source 197
+    target 189
+  ]
+  edge [
+    source 197
+    target 40
+  ]
+  edge [
+    source 197
+    target 248
+  ]
+  edge [
+    source 197
+    target 51
+  ]
+  edge [
+    source 197
+    target 45
+  ]
+  edge [
+    source 197
+    target 46
+  ]
+  edge [
+    source 198
+    target 245
+  ]
+  edge [
+    source 198
+    target 246
+  ]
+  edge [
+    source 199
+    target 60
+  ]
+  edge [
+    source 200
+    target 191
+  ]
+  edge [
+    source 200
+    target 34
+  ]
+  edge [
+    source 201
+    target 204
+  ]
+  edge [
+    source 201
+    target 205
+  ]
+  edge [
+    source 202
+    target 203
+  ]
+  edge [
+    source 202
+    target 187
+  ]
+  edge [
+    source 206
+    target 66
+  ]
+  edge [
+    source 207
+    target 208
+  ]
+  edge [
+    source 207
+    target 209
+  ]
+  edge [
+    source 207
+    target 191
+  ]
+  edge [
+    source 207
+    target 204
+  ]
+  edge [
+    source 207
+    target 210
+  ]
+  edge [
+    source 207
+    target 200
+  ]
+  edge [
+    source 207
+    target 211
+  ]
+  edge [
+    source 207
+    target 206
+  ]
+  edge [
+    source 207
+    target 212
+  ]
+  edge [
+    source 207
+    target 213
+  ]
+  edge [
+    source 207
+    target 214
+  ]
+  edge [
+    source 207
+    target 215
+  ]
+  edge [
+    source 207
+    target 216
+  ]
+  edge [
+    source 207
+    target 217
+  ]
+  edge [
+    source 207
+    target 218
+  ]
+  edge [
+    source 207
+    target 219
+  ]
+  edge [
+    source 207
+    target 199
+  ]
+  edge [
+    source 207
+    target 126
+  ]
+  edge [
+    source 207
+    target 220
+  ]
+  edge [
+    source 207
+    target 221
+  ]
+  edge [
+    source 207
+    target 174
+  ]
+  edge [
+    source 217
+    target 249
+  ]
+  edge [
+    source 217
+    target 33
+  ]
+  edge [
+    source 217
+    target 250
+  ]
+  edge [
+    source 217
+    target 34
+  ]
+  edge [
+    source 229
+    target 251
+  ]
+  edge [
+    source 229
+    target 252
+  ]
+  edge [
+    source 233
+    target 15
+  ]
+  edge [
+    source 234
+    target 252
+  ]
+  edge [
+    source 245
+    target 4
+  ]
+  edge [
+    source 245
+    target 20
+  ]
+  edge [
+    source 245
+    target 34
+  ]
+  edge [
+    source 246
+    target 256
+  ]
+  edge [
+    source 246
+    target 251
+  ]
+  edge [
+    source 246
+    target 252
+  ]
+  edge [
+    source 248
+    target 254
+  ]
+  edge [
+    source 248
+    target 255
+  ]
+  edge [
+    source 250
+    target 159
+  ]
+  edge [
+    source 253
+    target 16
+  ]
+  edge [
+    source 253
+    target 17
+  ]
+  edge [
+    source 253
+    target 19
+  ]
+  edge [
+    source 253
+    target 18
+  ]
+  edge [
+    source 255
+    target 159
+  ]
+  edge [
+    source 258
+    target 95
+  ]
+  edge [
+    source 259
+    target 265
+  ]
+  edge [
+    source 259
+    target 39
+  ]
+  edge [
+    source 259
+    target 263
+  ]
+  edge [
+    source 259
+    target 60
+  ]
+  edge [
+    source 263
+    target 266
+  ]
+]

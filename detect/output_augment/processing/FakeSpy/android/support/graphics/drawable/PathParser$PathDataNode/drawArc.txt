@@ -1,0 +1,215 @@
+# Landroid/support/graphics/drawable/PathParser$PathDataNode;->drawArc(Landroid/graphics/Path; F F F F F F F Z Z)V [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v57
+# - v58:android.graphics.Path
+# - v59:float
+# - v60:float
+# - v61:float
+# - v62:float
+# - v63:float
+# - v64:float
+# - v65:float
+# - v66:boolean
+# - v67:boolean
+#
+# - return:void
+
+drawArc-BB@0x0 : [ drawArc-BB@0xda drawArc-BB@0xea ]
+	0       (00000000) move/from16          v0, v65
+	1       (00000004) float-to-double      v2, v0
+	2       (00000006) invoke-static        v2, v3, Ljava/lang/Math;->toRadians(D)D
+	3       (0000000c) move-result-wide     v16
+	4       (0000000e) invoke-static/range  v16 ... v17, Ljava/lang/Math;->cos(D)D
+	5       (00000014) move-result-wide     v24
+	6       (00000016) invoke-static/range  v16 ... v17, Ljava/lang/Math;->sin(D)D
+	7       (0000001c) move-result-wide     v42
+	8       (0000001e) move/from16          v0, v59
+	9       (00000022) float-to-double      v2, v0
+	10      (00000024) mul-double           v2, v2, v24
+	11      (00000028) move/from16          v0, v60
+	12      (0000002c) float-to-double      v8, v0
+	13      (0000002e) mul-double           v8, v8, v42
+	14      (00000032) add-double/2addr     v2, v8
+	15      (00000034) move/from16          v0, v63
+	16      (00000038) float-to-double      v8, v0
+	17      (0000003a) div-double           v46, v2, v8
+	18      (0000003e) move/from16          v0, v59
+	19      (00000042) neg-float            v2, v0
+	20      (00000044) float-to-double      v2, v2
+	21      (00000046) mul-double           v2, v2, v42
+	22      (0000004a) move/from16          v0, v60
+	23      (0000004e) float-to-double      v8, v0
+	24      (00000050) mul-double           v8, v8, v24
+	25      (00000054) add-double/2addr     v2, v8
+	26      (00000056) move/from16          v0, v64
+	27      (0000005a) float-to-double      v8, v0
+	28      (0000005c) div-double           v52, v2, v8
+	29      (00000060) move/from16          v0, v61
+	30      (00000064) float-to-double      v2, v0
+	31      (00000066) mul-double           v2, v2, v24
+	32      (0000006a) move/from16          v0, v62
+	33      (0000006e) float-to-double      v8, v0
+	34      (00000070) mul-double           v8, v8, v42
+	35      (00000074) add-double/2addr     v2, v8
+	36      (00000076) move/from16          v0, v63
+	37      (0000007a) float-to-double      v8, v0
+	38      (0000007c) div-double           v48, v2, v8
+	39      (00000080) move/from16          v0, v61
+	40      (00000084) neg-float            v2, v0
+	41      (00000086) float-to-double      v2, v2
+	42      (00000088) mul-double           v2, v2, v42
+	43      (0000008c) move/from16          v0, v62
+	44      (00000090) float-to-double      v8, v0
+	45      (00000092) mul-double           v8, v8, v24
+	46      (00000096) add-double/2addr     v2, v8
+	47      (00000098) move/from16          v0, v64
+	48      (0000009c) float-to-double      v8, v0
+	49      (0000009e) div-double           v54, v2, v8
+	50      (000000a2) sub-double           v30, v46, v48
+	51      (000000a6) sub-double           v32, v52, v54
+	52      (000000aa) add-double           v2, v46, v48
+	53      (000000ae) const-wide/high16    v8, 16384 # [2.0]
+	54      (000000b2) div-double           v50, v2, v8
+	55      (000000b6) add-double           v2, v52, v54
+	56      (000000ba) const-wide/high16    v8, 16384 # [2.0]
+	57      (000000be) div-double           v56, v2, v8
+	58      (000000c2) mul-double           v2, v30, v30
+	59      (000000c6) mul-double           v8, v32, v32
+	60      (000000ca) add-double           v28, v2, v8
+	61      (000000ce) const-wide/16        v2, 0 # [0.0]
+	62      (000000d2) cmpl-double          v2, v28, v2
+	63      (000000d6) if-nez               v2, +a
+
+drawArc-BB@0xda : [ drawArc-BB@0xe8 ]
+	64      (000000da) const-string         v2, 'PathParser'
+	65      (000000de) const-string         v3, ' Points are coincident'
+	66      (000000e2) invoke-static        v2, v3, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+
+drawArc-BB@0xe8 : 
+	67      (000000e8) return-void          
+
+drawArc-BB@0xea : [ drawArc-BB@0x106 drawArc-BB@0x184 ]
+	68      (000000ea) const-wide/high16    v2, 16368 # [1.0]
+	69      (000000ee) div-double           v2, v2, v28
+	70      (000000f2) const-wide/high16    v8, 16336 # [0.25]
+	71      (000000f6) sub-double           v26, v2, v8
+	72      (000000fa) const-wide/16        v2, 0 # [0.0]
+	73      (000000fe) cmpg-double          v2, v26, v2
+	74      (00000102) if-gez               v2, +41
+
+drawArc-BB@0x106 : [ drawArc-BB@0xe8 ]
+	75      (00000106) const-string         v2, 'PathParser'
+	76      (0000010a) new-instance         v3, Ljava/lang/StringBuilder;
+	77      (0000010e) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	78      (00000114) const-string         v8, 'Points are too far apart '
+	79      (00000118) invoke-virtual       v3, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	80      (0000011e) move-result-object   v3
+	81      (00000120) move-wide/from16     v0, v28
+	82      (00000124) invoke-virtual       v3, v0, v1, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+	83      (0000012a) move-result-object   v3
+	84      (0000012c) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	85      (00000132) move-result-object   v3
+	86      (00000134) invoke-static        v2, v3, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	87      (0000013a) invoke-static/range  v28 ... v29, Ljava/lang/Math;->sqrt(D)D
+	88      (00000140) move-result-wide     v2
+	89      (00000142) const-wide           v8, 4611685973391391630 # [1.99999]
+	90      (0000014c) div-double/2addr     v2, v8
+	91      (0000014e) double-to-float      v0, v2
+	92      (00000150) move/from16          v22, v0
+	93      (00000154) mul-float            v7, v63, v22
+	94      (00000158) mul-float            v8, v64, v22
+	95      (0000015c) move-object/from16   v2, v58
+	96      (00000160) move/from16          v3, v59
+	97      (00000164) move/from16          v4, v60
+	98      (00000168) move/from16          v5, v61
+	99      (0000016c) move/from16          v6, v62
+	100     (00000170) move/from16          v9, v65
+	101     (00000174) move/from16          v10, v66
+	102     (00000178) move/from16          v11, v67
+	103     (0000017c) invoke-static/range  v2 ... v11, Landroid/support/graphics/drawable/PathParser$PathDataNode;->drawArc(Landroid/graphics/Path; F F F F F F F Z Z)V
+	104     (00000182) goto                 -4d
+
+drawArc-BB@0x184 : [ drawArc-BB@0x1a0 drawArc-BB@0x24e ]
+	105     (00000184) invoke-static/range  v26 ... v27, Ljava/lang/Math;->sqrt(D)D
+	106     (0000018a) move-result-wide     v36
+	107     (0000018c) mul-double           v38, v36, v30
+	108     (00000190) mul-double           v40, v36, v32
+	109     (00000194) move/from16          v0, v66
+	110     (00000198) move/from16          v1, v67
+	111     (0000019c) if-ne                v0, v1, +59
+
+drawArc-BB@0x1a0 : [ drawArc-BB@0x1a8 ]
+	112     (000001a0) sub-double           v4, v50, v40
+	113     (000001a4) add-double           v6, v56, v38
+
+drawArc-BB@0x1a8 : [ drawArc-BB@0x1d8 drawArc-BB@0x258 ]
+	114     (000001a8) sub-double           v2, v52, v6
+	115     (000001ac) sub-double           v8, v46, v4
+	116     (000001b0) invoke-static        v2, v3, v8, v9, Ljava/lang/Math;->atan2(D D)D
+	117     (000001b6) move-result-wide     v18
+	118     (000001b8) sub-double           v2, v54, v6
+	119     (000001bc) sub-double           v8, v48, v4
+	120     (000001c0) invoke-static        v2, v3, v8, v9, Ljava/lang/Math;->atan2(D D)D
+	121     (000001c6) move-result-wide     v34
+	122     (000001c8) sub-double           v20, v34, v18
+	123     (000001cc) const-wide/16        v2, 0 # [0.0]
+	124     (000001d0) cmpl-double          v2, v20, v2
+	125     (000001d4) if-ltz               v2, +42
+
+drawArc-BB@0x1d8 : [ drawArc-BB@0x1da ]
+	126     (000001d8) const/4              v2, 1
+
+drawArc-BB@0x1da : [ drawArc-BB@0x1e2 drawArc-BB@0x1fc ]
+	127     (000001da) move/from16          v0, v67
+	128     (000001de) if-eq                v0, v2, +f
+
+drawArc-BB@0x1e2 : [ drawArc-BB@0x1ee drawArc-BB@0x25c ]
+	129     (000001e2) const-wide/16        v2, 0 # [0.0]
+	130     (000001e6) cmpl-double          v2, v20, v2
+	131     (000001ea) if-lez               v2, +39
+
+drawArc-BB@0x1ee : [ drawArc-BB@0x1fc ]
+	132     (000001ee) const-wide           v2, 4618760256179416344 # [6.283185307179586]
+	133     (000001f8) sub-double           v20, v20, v2
+
+drawArc-BB@0x1fc : [ drawArc-BB@0xe8 ]
+	134     (000001fc) move/from16          v0, v63
+	135     (00000200) float-to-double      v2, v0
+	136     (00000202) mul-double/2addr     v4, v2
+	137     (00000204) move/from16          v0, v64
+	138     (00000208) float-to-double      v2, v0
+	139     (0000020a) mul-double/2addr     v6, v2
+	140     (0000020c) move-wide/from16     v44, v4
+	141     (00000210) mul-double           v2, v4, v24
+	142     (00000214) mul-double           v8, v6, v42
+	143     (00000218) sub-double           v4, v2, v8
+	144     (0000021c) mul-double           v2, v44, v42
+	145     (00000220) mul-double           v8, v6, v24
+	146     (00000224) add-double           v6, v2, v8
+	147     (00000228) move/from16          v0, v63
+	148     (0000022c) float-to-double      v8, v0
+	149     (0000022e) move/from16          v0, v64
+	150     (00000232) float-to-double      v10, v0
+	151     (00000234) move/from16          v0, v59
+	152     (00000238) float-to-double      v12, v0
+	153     (0000023a) move/from16          v0, v60
+	154     (0000023e) float-to-double      v14, v0
+	155     (00000240) move-object/from16   v3, v58
+	156     (00000244) invoke-static/range  v3 ... v21, Landroid/support/graphics/drawable/PathParser$PathDataNode;->arcToBezier(Landroid/graphics/Path; D D D D D D D D D)V
+	157     (0000024a) goto/16              -b1
+
+drawArc-BB@0x24e : [ drawArc-BB@0x1a8 ]
+	158     (0000024e) add-double           v4, v50, v40
+	159     (00000252) sub-double           v6, v56, v38
+	160     (00000256) goto                 -57
+
+drawArc-BB@0x258 : [ drawArc-BB@0x1da ]
+	161     (00000258) const/4              v2, 0
+	162     (0000025a) goto                 -40
+
+drawArc-BB@0x25c : [ drawArc-BB@0x1fc ]
+	163     (0000025c) const-wide           v2, 4618760256179416344 # [6.283185307179586]
+	164     (00000266) add-double           v20, v20, v2
+	165     (0000026a) goto                 -37
+

@@ -1,0 +1,37 @@
+# Landroid/support/v4/media/IMediaBrowserServiceCallbacksAdapterApi21;->onLoadChildren(Ljava/lang/String; Ljava/lang/Object;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:java.lang.String
+# - v7:java.lang.Object
+#
+# - return:void
+
+onLoadChildren-BB@0x0 : [ onLoadChildren-BB@0x20 ]
+	0       (00000000) iget-object          v1, v5, Landroid/support/v4/media/IMediaBrowserServiceCallbacksAdapterApi21;->mOnLoadChildrenMethod Ljava/lang/reflect/Method;
+	1       (00000004) iget-object          v2, v5, Landroid/support/v4/media/IMediaBrowserServiceCallbacksAdapterApi21;->mCallbackObject Ljava/lang/Object;
+	2       (00000008) const/4              v3, 2
+	3       (0000000a) new-array            v3, v3, [Ljava/lang/Object;
+	4       (0000000e) const/4              v4, 0
+	5       (00000010) aput-object          v6, v3, v4
+	6       (00000014) const/4              v4, 1
+	7       (00000016) aput-object          v7, v3, v4
+	8       (0000001a) invoke-virtual       v1, v2, v3, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	0:1f
+	(Ljava/lang/IllegalAccessException; -> 22 onLoadChildren-BB@0x22)
+	(Ljava/lang/reflect/InvocationTargetException; -> 2c onLoadChildren-BB@0x2c)
+
+onLoadChildren-BB@0x20 : 
+	9       (00000020) return-void          
+
+onLoadChildren-BB@0x22 : [ onLoadChildren-BB@0x24 ]
+	10      (00000022) move-exception       v0
+
+onLoadChildren-BB@0x24 : [ onLoadChildren-BB@0x20 ]
+	11      (00000024) invoke-virtual       v0, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
+	12      (0000002a) goto                 -5
+
+onLoadChildren-BB@0x2c : [ onLoadChildren-BB@0x24 ]
+	13      (0000002c) move-exception       v0
+	14      (0000002e) goto                 -5
+

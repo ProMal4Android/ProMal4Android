@@ -1,0 +1,92 @@
+# Lcom/sun/crypto/provider/DHKeyPairGenerator;->generateKeyPair()Ljava/security/KeyPair; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:java.security.KeyPair
+
+generateKeyPair-BB@0x0 : [ generateKeyPair-BB@0x8 generateKeyPair-BB@0x10 ]
+	0       (00000000) iget-object          v0, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->d Ljava/security/SecureRandom;
+	1       (00000004) if-nez               v0, +6
+
+generateKeyPair-BB@0x8 : [ generateKeyPair-BB@0x10 ]
+	2       (00000008) sget-object          v0, Lcom/sun/crypto/provider/SunJCE;->h Ljava/security/SecureRandom;
+	3       (0000000c) iput-object          v0, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->d Ljava/security/SecureRandom;
+
+generateKeyPair-BB@0x10 : [ generateKeyPair-BB@0x18 generateKeyPair-BB@0x2c ]
+	4       (00000010) iget-object          v0, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->a Ljavax/crypto/spec/DHParameterSpec;
+	5       (00000014) if-nez               v0, +c
+
+generateKeyPair-BB@0x18 : [ generateKeyPair-BB@0x2c ]
+	6       (00000018) iget                 v0, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->b I
+	7       (0000001c) iget-object          v1, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->d Ljava/security/SecureRandom;
+	8       (00000020) invoke-static        v0, v1, Lsun/security/provider/ParameterCache;->getDHParameterSpec(I Ljava/security/SecureRandom;)Ljavax/crypto/spec/DHParameterSpec;
+	9       (00000026) move-result-object   v0
+	10      (00000028) iput-object          v0, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->a Ljavax/crypto/spec/DHParameterSpec;
+	18:2b
+	(Ljava/security/GeneralSecurityException; -> ea generateKeyPair-BB@0xea)
+
+generateKeyPair-BB@0x2c : [ generateKeyPair-BB@0x4c generateKeyPair-BB@0x78 ]
+	11      (0000002c) iget-object          v0, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->a Ljavax/crypto/spec/DHParameterSpec;
+	12      (00000030) invoke-virtual       v0, Ljavax/crypto/spec/DHParameterSpec;->getP()Ljava/math/BigInteger;
+	13      (00000036) move-result-object   v0
+	14      (00000038) iget-object          v1, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->a Ljavax/crypto/spec/DHParameterSpec;
+	15      (0000003c) invoke-virtual       v1, Ljavax/crypto/spec/DHParameterSpec;->getG()Ljava/math/BigInteger;
+	16      (00000042) move-result-object   v1
+	17      (00000044) iget                 v2, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->c I
+	18      (00000048) if-gtz               v2, +18
+
+generateKeyPair-BB@0x4c : [ generateKeyPair-BB@0x78 ]
+	19      (0000004c) const/16             v2, 384
+	20      (00000050) iget                 v3, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->b I
+	21      (00000054) shr-int/lit8         v3, v3, 1
+	22      (00000058) invoke-static        v2, v3, Ljava/lang/Math;->max(I I)I
+	23      (0000005e) move-result          v2
+	24      (00000060) iput                 v2, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->c I
+	25      (00000064) iget                 v2, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->c I
+	26      (00000068) iget                 v3, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->b I
+	27      (0000006c) invoke-static        v2, v3, Ljava/lang/Math;->min(I I)I
+	28      (00000072) move-result          v2
+	29      (00000074) iput                 v2, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->c I
+
+generateKeyPair-BB@0x78 : [ generateKeyPair-BB@0x8c ]
+	30      (00000078) const-wide/16        v2, 2 # [2.0]
+	31      (0000007c) invoke-static        v2, v3, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+	32      (00000082) move-result-object   v2
+	33      (00000084) invoke-virtual       v0, v2, Ljava/math/BigInteger;->subtract(Ljava/math/BigInteger;)Ljava/math/BigInteger;
+	34      (0000008a) move-result-object   v2
+
+generateKeyPair-BB@0x8c : [ generateKeyPair-BB@0xae generateKeyPair-BB@0x8c ]
+	35      (0000008c) new-instance         v3, Ljava/math/BigInteger;
+	36      (00000090) iget                 v4, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->c I
+	37      (00000094) iget-object          v5, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->d Ljava/security/SecureRandom;
+	38      (00000098) invoke-direct        v3, v4, v5, Ljava/math/BigInteger;-><init>(I Ljava/util/Random;)V
+	39      (0000009e) sget-object          v4, Ljava/math/BigInteger;->ONE Ljava/math/BigInteger;
+	40      (000000a2) invoke-virtual       v3, v4, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+	41      (000000a8) move-result          v4
+	42      (000000aa) if-ltz               v4, -f
+
+generateKeyPair-BB@0xae : [ generateKeyPair-BB@0xba generateKeyPair-BB@0x8c ]
+	43      (000000ae) invoke-virtual       v3, v2, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+	44      (000000b4) move-result          v4
+	45      (000000b6) if-gtz               v4, -15
+
+generateKeyPair-BB@0xba : 
+	46      (000000ba) invoke-virtual       v1, v3, v0, Ljava/math/BigInteger;->modPow(Ljava/math/BigInteger; Ljava/math/BigInteger;)Ljava/math/BigInteger;
+	47      (000000c0) move-result-object   v2
+	48      (000000c2) new-instance         v4, Lcom/sun/crypto/provider/DHPublicKey;
+	49      (000000c6) iget                 v5, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->c I
+	50      (000000ca) invoke-direct        v4, v2, v0, v1, v5, Lcom/sun/crypto/provider/DHPublicKey;-><init>(Ljava/math/BigInteger; Ljava/math/BigInteger; Ljava/math/BigInteger; I)V
+	51      (000000d0) new-instance         v2, Lcom/sun/crypto/provider/DHPrivateKey;
+	52      (000000d4) iget                 v5, v6, Lcom/sun/crypto/provider/DHKeyPairGenerator;->c I
+	53      (000000d8) invoke-direct        v2, v3, v0, v1, v5, Lcom/sun/crypto/provider/DHPrivateKey;-><init>(Ljava/math/BigInteger; Ljava/math/BigInteger; Ljava/math/BigInteger; I)V
+	54      (000000de) new-instance         v0, Ljava/security/KeyPair;
+	55      (000000e2) invoke-direct        v0, v4, v2, Ljava/security/KeyPair;-><init>(Ljava/security/PublicKey; Ljava/security/PrivateKey;)V
+	56      (000000e8) return-object        v0
+
+generateKeyPair-BB@0xea : 
+	57      (000000ea) move-exception       v0
+	58      (000000ec) new-instance         v1, Ljava/security/ProviderException;
+	59      (000000f0) invoke-direct        v1, v0, Ljava/security/ProviderException;-><init>(Ljava/lang/Throwable;)V
+	60      (000000f6) throw                v1
+

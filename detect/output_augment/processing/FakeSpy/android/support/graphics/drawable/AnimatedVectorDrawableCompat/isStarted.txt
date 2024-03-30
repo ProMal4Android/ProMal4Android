@@ -1,0 +1,40 @@
+# Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->isStarted()Z [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:boolean
+
+isStarted-BB@0x0 : [ isStarted-BB@0xe isStarted-BB@0x10 ]
+	0       (00000000) const/4              v4, 0
+	1       (00000002) iget-object          v5, v6, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	2       (00000006) iget-object          v1, v5, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mAnimators Ljava/util/ArrayList;
+	3       (0000000a) if-nez               v1, +3
+
+isStarted-BB@0xe : 
+	4       (0000000e) return               v4
+
+isStarted-BB@0x10 : [ isStarted-BB@0x1a ]
+	5       (00000010) invoke-virtual       v1, Ljava/util/ArrayList;->size()I
+	6       (00000016) move-result          v3
+	7       (00000018) const/4              v2, 0
+
+isStarted-BB@0x1a : [ isStarted-BB@0x1e isStarted-BB@0xe ]
+	8       (0000001a) if-ge                v2, v3, -6
+
+isStarted-BB@0x1e : [ isStarted-BB@0x36 isStarted-BB@0x3a ]
+	9       (0000001e) invoke-virtual       v1, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	10      (00000024) move-result-object   v0
+	11      (00000026) check-cast           v0, Landroid/animation/Animator;
+	12      (0000002a) invoke-virtual       v0, Landroid/animation/Animator;->isRunning()Z
+	13      (00000030) move-result          v5
+	14      (00000032) if-eqz               v5, +4
+
+isStarted-BB@0x36 : [ isStarted-BB@0xe ]
+	15      (00000036) const/4              v4, 1
+	16      (00000038) goto                 -15
+
+isStarted-BB@0x3a : [ isStarted-BB@0x1a ]
+	17      (0000003a) add-int/lit8         v2, v2, 1
+	18      (0000003e) goto                 -12
+

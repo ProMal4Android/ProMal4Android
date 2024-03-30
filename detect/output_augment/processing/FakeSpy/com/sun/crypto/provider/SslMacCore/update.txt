@@ -1,0 +1,30 @@
+# Lcom/sun/crypto/provider/SslMacCore;->update([B I I)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:byte[]
+# - v4:int
+# - v5:int
+#
+# - return:void
+
+update-BB@0x0 : [ update-BB@0xa update-BB@0x2c ]
+	0       (00000000) iget-boolean         v0, v2, Lcom/sun/crypto/provider/SslMacCore;->first Z
+	1       (00000004) const/4              v1, 1
+	2       (00000006) if-ne                v0, v1, +13
+
+update-BB@0xa : [ update-BB@0x2c ]
+	3       (0000000a) iget-object          v0, v2, Lcom/sun/crypto/provider/SslMacCore;->md Ljava/security/MessageDigest;
+	4       (0000000e) iget-object          v1, v2, Lcom/sun/crypto/provider/SslMacCore;->secret [B
+	5       (00000012) invoke-virtual       v0, v1, Ljava/security/MessageDigest;->update([B)V
+	6       (00000018) iget-object          v0, v2, Lcom/sun/crypto/provider/SslMacCore;->md Ljava/security/MessageDigest;
+	7       (0000001c) iget-object          v1, v2, Lcom/sun/crypto/provider/SslMacCore;->pad1 [B
+	8       (00000020) invoke-virtual       v0, v1, Ljava/security/MessageDigest;->update([B)V
+	9       (00000026) const/4              v0, 0
+	10      (00000028) iput-boolean         v0, v2, Lcom/sun/crypto/provider/SslMacCore;->first Z
+
+update-BB@0x2c : 
+	11      (0000002c) iget-object          v0, v2, Lcom/sun/crypto/provider/SslMacCore;->md Ljava/security/MessageDigest;
+	12      (00000030) invoke-virtual       v0, v3, v4, v5, Ljava/security/MessageDigest;->update([B I I)V
+	13      (00000036) return-void          
+

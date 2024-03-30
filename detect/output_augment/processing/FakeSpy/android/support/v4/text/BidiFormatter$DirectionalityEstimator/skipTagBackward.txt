@@ -1,0 +1,73 @@
+# Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->skipTagBackward()B [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:byte
+
+skipTagBackward-BB@0x0 : [ skipTagBackward-BB@0x8 ]
+	0       (00000000) const/16             v4, 62
+	1       (00000004) iget                 v0, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+
+skipTagBackward-BB@0x8 : [ skipTagBackward-BB@0x10 skipTagBackward-BB@0x46 ]
+	2       (00000008) iget                 v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	3       (0000000c) if-lez               v2, +1d
+
+skipTagBackward-BB@0x10 : [ skipTagBackward-BB@0x38 skipTagBackward-BB@0x3e ]
+	4       (00000010) iget-object          v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->text Ljava/lang/String;
+	5       (00000014) iget                 v3, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	6       (00000018) add-int/lit8         v3, v3, -1
+	7       (0000001c) iput                 v3, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	8       (00000020) invoke-virtual       v2, v3, Ljava/lang/String;->charAt(I)C
+	9       (00000026) move-result          v2
+	10      (00000028) iput-char            v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	11      (0000002c) iget-char            v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	12      (00000030) const/16             v3, 60
+	13      (00000034) if-ne                v2, v3, +5
+
+skipTagBackward-BB@0x38 : [ skipTagBackward-BB@0x3c ]
+	14      (00000038) const/16             v2, 12
+
+skipTagBackward-BB@0x3c : 
+	15      (0000003c) return               v2
+
+skipTagBackward-BB@0x3e : [ skipTagBackward-BB@0x46 skipTagBackward-BB@0x54 ]
+	16      (0000003e) iget-char            v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	17      (00000042) if-ne                v2, v4, +9
+
+skipTagBackward-BB@0x46 : [ skipTagBackward-BB@0x3c ]
+	18      (00000046) iput                 v0, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	19      (0000004a) iput-char            v4, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	20      (0000004e) const/16             v2, 13
+	21      (00000052) goto                 -b
+
+skipTagBackward-BB@0x54 : [ skipTagBackward-BB@0x60 skipTagBackward-BB@0x6c ]
+	22      (00000054) iget-char            v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	23      (00000058) const/16             v3, 34
+	24      (0000005c) if-eq                v2, v3, +8
+
+skipTagBackward-BB@0x60 : [ skipTagBackward-BB@0x6c skipTagBackward-BB@0x8 ]
+	25      (00000060) iget-char            v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	26      (00000064) const/16             v3, 39
+	27      (00000068) if-ne                v2, v3, -30
+
+skipTagBackward-BB@0x6c : [ skipTagBackward-BB@0x70 ]
+	28      (0000006c) iget-char            v1, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+
+skipTagBackward-BB@0x70 : [ skipTagBackward-BB@0x78 skipTagBackward-BB@0x8 ]
+	29      (00000070) iget                 v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	30      (00000074) if-lez               v2, -36
+
+skipTagBackward-BB@0x78 : [ skipTagBackward-BB@0x98 skipTagBackward-BB@0x8 ]
+	31      (00000078) iget-object          v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->text Ljava/lang/String;
+	32      (0000007c) iget                 v3, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	33      (00000080) add-int/lit8         v3, v3, -1
+	34      (00000084) iput                 v3, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex I
+	35      (00000088) invoke-virtual       v2, v3, Ljava/lang/String;->charAt(I)C
+	36      (0000008e) move-result          v2
+	37      (00000090) iput-char            v2, v5, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar C
+	38      (00000094) if-eq                v2, v1, -46
+
+skipTagBackward-BB@0x98 : [ skipTagBackward-BB@0x70 ]
+	39      (00000098) goto                 -14
+

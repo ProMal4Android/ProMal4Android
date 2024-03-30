@@ -1,0 +1,33 @@
+# Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->getItem(I)Landroid/support/v7/view/menu/MenuItemImpl; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:int
+#
+# - return:android.support.v7.view.menu.MenuItemImpl
+
+getItem-BB@0x0 : [ getItem-BB@0x26 getItem-BB@0x32 ]
+	0       (00000000) iget-object          v1, v2, Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->this$0 Landroid/support/v7/view/menu/ListMenuPresenter;
+	1       (00000004) iget-object          v1, v1, Landroid/support/v7/view/menu/ListMenuPresenter;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	2       (00000008) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuBuilder;->getNonActionItems()Ljava/util/ArrayList;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) iget-object          v1, v2, Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->this$0 Landroid/support/v7/view/menu/ListMenuPresenter;
+	5       (00000014) invoke-static        v1, Landroid/support/v7/view/menu/ListMenuPresenter;->access$000(Landroid/support/v7/view/menu/ListMenuPresenter;)I
+	6       (0000001a) move-result          v1
+	7       (0000001c) add-int/2addr        v3, v1
+	8       (0000001e) iget                 v1, v2, Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->mExpandedIndex I
+	9       (00000022) if-ltz               v1, +8
+
+getItem-BB@0x26 : [ getItem-BB@0x2e getItem-BB@0x32 ]
+	10      (00000026) iget                 v1, v2, Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->mExpandedIndex I
+	11      (0000002a) if-lt                v3, v1, +4
+
+getItem-BB@0x2e : [ getItem-BB@0x32 ]
+	12      (0000002e) add-int/lit8         v3, v3, 1
+
+getItem-BB@0x32 : 
+	13      (00000032) invoke-virtual       v0, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	14      (00000038) move-result-object   v1
+	15      (0000003a) check-cast           v1, Landroid/support/v7/view/menu/MenuItemImpl;
+	16      (0000003e) return-object        v1
+

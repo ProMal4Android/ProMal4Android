@@ -1,0 +1,16 @@
+# Landroid/support/v4/provider/DocumentsContractApi19;->delete(Landroid/content/Context; Landroid/net/Uri;)Z [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:android.content.Context
+# - v2:android.net.Uri
+#
+# - return:boolean
+
+delete-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-static        v0, v2, Landroid/provider/DocumentsContract;->deleteDocument(Landroid/content/ContentResolver; Landroid/net/Uri;)Z
+	3       (0000000e) move-result          v0
+	4       (00000010) return               v0
+

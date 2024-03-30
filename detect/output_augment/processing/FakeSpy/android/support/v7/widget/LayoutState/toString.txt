@@ -1,0 +1,53 @@
+# Landroid/support/v7/widget/LayoutState;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : 
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuilder;
+	1       (00000004) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	2       (0000000a) const-string         v1, 'LayoutState{mAvailable='
+	3       (0000000e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	4       (00000014) move-result-object   v0
+	5       (00000016) iget                 v1, v2, Landroid/support/v7/widget/LayoutState;->mAvailable I
+	6       (0000001a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	7       (00000020) move-result-object   v0
+	8       (00000022) const-string         v1, ', mCurrentPosition='
+	9       (00000026) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (0000002c) move-result-object   v0
+	11      (0000002e) iget                 v1, v2, Landroid/support/v7/widget/LayoutState;->mCurrentPosition I
+	12      (00000032) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	13      (00000038) move-result-object   v0
+	14      (0000003a) const-string         v1, ', mItemDirection='
+	15      (0000003e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (00000044) move-result-object   v0
+	17      (00000046) iget                 v1, v2, Landroid/support/v7/widget/LayoutState;->mItemDirection I
+	18      (0000004a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	19      (00000050) move-result-object   v0
+	20      (00000052) const-string         v1, ', mLayoutDirection='
+	21      (00000056) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	22      (0000005c) move-result-object   v0
+	23      (0000005e) iget                 v1, v2, Landroid/support/v7/widget/LayoutState;->mLayoutDirection I
+	24      (00000062) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	25      (00000068) move-result-object   v0
+	26      (0000006a) const-string         v1, ', mStartLine='
+	27      (0000006e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	28      (00000074) move-result-object   v0
+	29      (00000076) iget                 v1, v2, Landroid/support/v7/widget/LayoutState;->mStartLine I
+	30      (0000007a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	31      (00000080) move-result-object   v0
+	32      (00000082) const-string         v1, ', mEndLine='
+	33      (00000086) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	34      (0000008c) move-result-object   v0
+	35      (0000008e) iget                 v1, v2, Landroid/support/v7/widget/LayoutState;->mEndLine I
+	36      (00000092) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	37      (00000098) move-result-object   v0
+	38      (0000009a) const/16             v1, 125
+	39      (0000009e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	40      (000000a4) move-result-object   v0
+	41      (000000a6) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	42      (000000ac) move-result-object   v0
+	43      (000000ae) return-object        v0
+

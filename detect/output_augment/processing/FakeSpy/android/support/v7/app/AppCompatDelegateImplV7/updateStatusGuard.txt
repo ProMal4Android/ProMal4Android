@@ -1,0 +1,158 @@
+# Landroid/support/v7/app/AppCompatDelegateImplV7;->updateStatusGuard(I)I [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:int
+#
+# - return:int
+
+updateStatusGuard-BB@0x0 : [ updateStatusGuard-BB@0xe updateStatusGuard-BB@0x112 ]
+	0       (00000000) const/4              v11, -1
+	1       (00000002) const/4              v7, 0
+	2       (00000004) const/4              v6, 0
+	3       (00000006) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mActionModeView Landroid/support/v7/widget/ActionBarContextView;
+	4       (0000000a) if-eqz               v8, +84
+
+updateStatusGuard-BB@0xe : [ updateStatusGuard-BB@0x22 updateStatusGuard-BB@0x112 ]
+	5       (0000000e) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mActionModeView Landroid/support/v7/widget/ActionBarContextView;
+	6       (00000012) invoke-virtual       v8, Landroid/support/v7/widget/ActionBarContextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	7       (00000018) move-result-object   v8
+	8       (0000001a) instance-of          v8, v8, Landroid/view/ViewGroup$MarginLayoutParams;
+	9       (0000001e) if-eqz               v8, +7a
+
+updateStatusGuard-BB@0x22 : [ updateStatusGuard-BB@0x44 updateStatusGuard-BB@0x156 ]
+	10      (00000022) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mActionModeView Landroid/support/v7/widget/ActionBarContextView;
+	11      (00000026) invoke-virtual       v8, Landroid/support/v7/widget/ActionBarContextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	12      (0000002c) move-result-object   v3
+	13      (0000002e) check-cast           v3, Landroid/view/ViewGroup$MarginLayoutParams;
+	14      (00000032) const/4              v4, 0
+	15      (00000034) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mActionModeView Landroid/support/v7/widget/ActionBarContextView;
+	16      (00000038) invoke-virtual       v8, Landroid/support/v7/widget/ActionBarContextView;->isShown()Z
+	17      (0000003e) move-result          v8
+	18      (00000040) if-eqz               v8, +8b
+
+updateStatusGuard-BB@0x44 : [ updateStatusGuard-BB@0x4c updateStatusGuard-BB@0x68 ]
+	19      (00000044) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mTempRect1 Landroid/graphics/Rect;
+	20      (00000048) if-nez               v8, +10
+
+updateStatusGuard-BB@0x4c : [ updateStatusGuard-BB@0x68 ]
+	21      (0000004c) new-instance         v8, Landroid/graphics/Rect;
+	22      (00000050) invoke-direct        v8, Landroid/graphics/Rect;-><init>()V
+	23      (00000056) iput-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mTempRect1 Landroid/graphics/Rect;
+	24      (0000005a) new-instance         v8, Landroid/graphics/Rect;
+	25      (0000005e) invoke-direct        v8, Landroid/graphics/Rect;-><init>()V
+	26      (00000064) iput-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mTempRect2 Landroid/graphics/Rect;
+
+updateStatusGuard-BB@0x68 : [ updateStatusGuard-BB@0x88 updateStatusGuard-BB@0x12a ]
+	27      (00000068) iget-object          v0, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mTempRect1 Landroid/graphics/Rect;
+	28      (0000006c) iget-object          v1, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mTempRect2 Landroid/graphics/Rect;
+	29      (00000070) invoke-virtual       v0, v7, v13, v7, v7, Landroid/graphics/Rect;->set(I I I I)V
+	30      (00000076) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mSubDecor Landroid/view/ViewGroup;
+	31      (0000007a) invoke-static        v8, v0, v1, Landroid/support/v7/widget/ViewUtils;->computeFitSystemWindows(Landroid/view/View; Landroid/graphics/Rect; Landroid/graphics/Rect;)V
+	32      (00000080) iget                 v8, v1, Landroid/graphics/Rect;->top I
+	33      (00000084) if-nez               v8, +53
+
+updateStatusGuard-BB@0x88 : [ updateStatusGuard-BB@0x8a ]
+	34      (00000088) move                 v5, v13
+
+updateStatusGuard-BB@0x8a : [ updateStatusGuard-BB@0x92 updateStatusGuard-BB@0xec ]
+	35      (0000008a) iget                 v8, v3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	36      (0000008e) if-eq                v8, v5, +2f
+
+updateStatusGuard-BB@0x92 : [ updateStatusGuard-BB@0xa0 updateStatusGuard-BB@0x12e ]
+	37      (00000092) const/4              v4, 1
+	38      (00000094) iput                 v13, v3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	39      (00000098) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	40      (0000009c) if-nez               v8, +49
+
+updateStatusGuard-BB@0xa0 : [ updateStatusGuard-BB@0xec ]
+	41      (000000a0) new-instance         v8, Landroid/view/View;
+	42      (000000a4) iget-object          v9, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mContext Landroid/content/Context;
+	43      (000000a8) invoke-direct        v8, v9, Landroid/view/View;-><init>(Landroid/content/Context;)V
+	44      (000000ae) iput-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	45      (000000b2) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	46      (000000b6) iget-object          v9, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mContext Landroid/content/Context;
+	47      (000000ba) invoke-virtual       v9, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	48      (000000c0) move-result-object   v9
+	49      (000000c2) sget                 v10, Landroid/support/v7/appcompat/R$color;->abc_input_method_navigation_guard I
+	50      (000000c6) invoke-virtual       v9, v10, Landroid/content/res/Resources;->getColor(I)I
+	51      (000000cc) move-result          v9
+	52      (000000ce) invoke-virtual       v8, v9, Landroid/view/View;->setBackgroundColor(I)V
+	53      (000000d4) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mSubDecor Landroid/view/ViewGroup;
+	54      (000000d8) iget-object          v9, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	55      (000000dc) new-instance         v10, Landroid/view/ViewGroup$LayoutParams;
+	56      (000000e0) invoke-direct        v10, v11, v13, Landroid/view/ViewGroup$LayoutParams;-><init>(I I)V
+	57      (000000e6) invoke-virtual       v8, v9, v11, v10, Landroid/view/ViewGroup;->addView(Landroid/view/View; I Landroid/view/ViewGroup$LayoutParams;)V
+
+updateStatusGuard-BB@0xec : [ updateStatusGuard-BB@0xf4 updateStatusGuard-BB@0x152 ]
+	58      (000000ec) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	59      (000000f0) if-eqz               v8, +31
+
+updateStatusGuard-BB@0xf4 : [ updateStatusGuard-BB@0xf6 ]
+	60      (000000f4) const/4              v6, 1
+
+updateStatusGuard-BB@0xf6 : [ updateStatusGuard-BB@0xfe updateStatusGuard-BB@0x104 ]
+	61      (000000f6) iget-boolean         v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mOverlayActionMode Z
+	62      (000000fa) if-nez               v8, +5
+
+updateStatusGuard-BB@0xfe : [ updateStatusGuard-BB@0x102 updateStatusGuard-BB@0x104 ]
+	63      (000000fe) if-eqz               v6, +3
+
+updateStatusGuard-BB@0x102 : [ updateStatusGuard-BB@0x104 ]
+	64      (00000102) const/4              v13, 0
+
+updateStatusGuard-BB@0x104 : [ updateStatusGuard-BB@0x108 updateStatusGuard-BB@0x112 ]
+	65      (00000104) if-eqz               v4, +7
+
+updateStatusGuard-BB@0x108 : [ updateStatusGuard-BB@0x112 ]
+	66      (00000108) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mActionModeView Landroid/support/v7/widget/ActionBarContextView;
+	67      (0000010c) invoke-virtual       v8, v3, Landroid/support/v7/widget/ActionBarContextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+updateStatusGuard-BB@0x112 : [ updateStatusGuard-BB@0x11a updateStatusGuard-BB@0x128 ]
+	68      (00000112) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	69      (00000116) if-eqz               v8, +9
+
+updateStatusGuard-BB@0x11a : [ updateStatusGuard-BB@0x122 updateStatusGuard-BB@0x166 ]
+	70      (0000011a) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	71      (0000011e) if-eqz               v6, +24
+
+updateStatusGuard-BB@0x122 : [ updateStatusGuard-BB@0x128 ]
+	72      (00000122) invoke-virtual       v8, v7, Landroid/view/View;->setVisibility(I)V
+
+updateStatusGuard-BB@0x128 : 
+	73      (00000128) return               v13
+
+updateStatusGuard-BB@0x12a : [ updateStatusGuard-BB@0x8a ]
+	74      (0000012a) move                 v5, v7
+	75      (0000012c) goto                 -51
+
+updateStatusGuard-BB@0x12e : [ updateStatusGuard-BB@0x142 updateStatusGuard-BB@0xec ]
+	76      (0000012e) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	77      (00000132) invoke-virtual       v8, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	78      (00000138) move-result-object   v2
+	79      (0000013a) iget                 v8, v2, Landroid/view/ViewGroup$LayoutParams;->height I
+	80      (0000013e) if-eq                v8, v13, -29
+
+updateStatusGuard-BB@0x142 : [ updateStatusGuard-BB@0xec ]
+	81      (00000142) iput                 v13, v2, Landroid/view/ViewGroup$LayoutParams;->height I
+	82      (00000146) iget-object          v8, v12, Landroid/support/v7/app/AppCompatDelegateImplV7;->mStatusGuard Landroid/view/View;
+	83      (0000014a) invoke-virtual       v8, v2, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+	84      (00000150) goto                 -32
+
+updateStatusGuard-BB@0x152 : [ updateStatusGuard-BB@0xf6 ]
+	85      (00000152) move                 v6, v7
+	86      (00000154) goto                 -2f
+
+updateStatusGuard-BB@0x156 : [ updateStatusGuard-BB@0x15e updateStatusGuard-BB@0x104 ]
+	87      (00000156) iget                 v8, v3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	88      (0000015a) if-eqz               v8, -2b
+
+updateStatusGuard-BB@0x15e : [ updateStatusGuard-BB@0x104 ]
+	89      (0000015e) const/4              v4, 1
+	90      (00000160) iput                 v7, v3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	91      (00000164) goto                 -30
+
+updateStatusGuard-BB@0x166 : [ updateStatusGuard-BB@0x122 ]
+	92      (00000166) const/16             v7, 8
+	93      (0000016a) goto                 -24
+

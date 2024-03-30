@@ -1,0 +1,48 @@
+# Landroid/support/design/widget/CoordinatorLayout;->getTopSortedChildren(Ljava/util/List;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:java.util.List
+#
+# - return:void
+
+getTopSortedChildren-BB@0x0 : [ getTopSortedChildren-BB@0x1a ]
+	0       (00000000) invoke-interface     v7, Ljava/util/List;->clear()V
+	1       (00000006) invoke-virtual       v6, Landroid/support/design/widget/CoordinatorLayout;->isChildrenDrawingOrderEnabled()Z
+	2       (0000000c) move-result          v4
+	3       (0000000e) invoke-virtual       v6, Landroid/support/design/widget/CoordinatorLayout;->getChildCount()I
+	4       (00000014) move-result          v1
+	5       (00000016) add-int/lit8         v3, v1, -1
+
+getTopSortedChildren-BB@0x1a : [ getTopSortedChildren-BB@0x1e getTopSortedChildren-BB@0x42 ]
+	6       (0000001a) if-ltz               v3, +14
+
+getTopSortedChildren-BB@0x1e : [ getTopSortedChildren-BB@0x22 getTopSortedChildren-BB@0x3e ]
+	7       (0000001e) if-eqz               v4, +10
+
+getTopSortedChildren-BB@0x22 : [ getTopSortedChildren-BB@0x2a ]
+	8       (00000022) invoke-virtual       v6, v1, v3, Landroid/support/design/widget/CoordinatorLayout;->getChildDrawingOrder(I I)I
+	9       (00000028) move-result          v2
+
+getTopSortedChildren-BB@0x2a : [ getTopSortedChildren-BB@0x1a ]
+	10      (0000002a) invoke-virtual       v6, v2, Landroid/support/design/widget/CoordinatorLayout;->getChildAt(I)Landroid/view/View;
+	11      (00000030) move-result-object   v0
+	12      (00000032) invoke-interface     v7, v0, Ljava/util/List;->add(Ljava/lang/Object;)Z
+	13      (00000038) add-int/lit8         v3, v3, -1
+	14      (0000003c) goto                 -11
+
+getTopSortedChildren-BB@0x3e : [ getTopSortedChildren-BB@0x2a ]
+	15      (0000003e) move                 v2, v3
+	16      (00000040) goto                 -b
+
+getTopSortedChildren-BB@0x42 : [ getTopSortedChildren-BB@0x4a getTopSortedChildren-BB@0x54 ]
+	17      (00000042) sget-object          v5, Landroid/support/design/widget/CoordinatorLayout;->TOP_SORTED_CHILDREN_COMPARATOR Ljava/util/Comparator;
+	18      (00000046) if-eqz               v5, +7
+
+getTopSortedChildren-BB@0x4a : [ getTopSortedChildren-BB@0x54 ]
+	19      (0000004a) sget-object          v5, Landroid/support/design/widget/CoordinatorLayout;->TOP_SORTED_CHILDREN_COMPARATOR Ljava/util/Comparator;
+	20      (0000004e) invoke-static        v7, v5, Ljava/util/Collections;->sort(Ljava/util/List; Ljava/util/Comparator;)V
+
+getTopSortedChildren-BB@0x54 : 
+	21      (00000054) return-void          
+

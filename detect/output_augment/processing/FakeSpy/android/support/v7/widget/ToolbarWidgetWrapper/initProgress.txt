@@ -1,0 +1,13 @@
+# Landroid/support/v7/widget/ToolbarWidgetWrapper;->initProgress()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+initProgress-BB@0x0 : 
+	0       (00000000) const-string         v0, 'ToolbarWidgetWrapper'
+	1       (00000004) const-string         v1, 'Progress display unsupported'
+	2       (00000008) invoke-static        v0, v1, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
+	3       (0000000e) return-void          
+

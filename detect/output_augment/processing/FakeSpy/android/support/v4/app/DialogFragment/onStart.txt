@@ -1,0 +1,21 @@
+# Landroid/support/v4/app/DialogFragment;->onStart()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:void
+
+onStart-BB@0x0 : [ onStart-BB@0xe onStart-BB@0x1e ]
+	0       (00000000) invoke-super         v1, Landroid/support/v4/app/Fragment;->onStart()V
+	1       (00000006) iget-object          v0, v1, Landroid/support/v4/app/DialogFragment;->mDialog Landroid/app/Dialog;
+	2       (0000000a) if-eqz               v0, +a
+
+onStart-BB@0xe : [ onStart-BB@0x1e ]
+	3       (0000000e) const/4              v0, 0
+	4       (00000010) iput-boolean         v0, v1, Landroid/support/v4/app/DialogFragment;->mViewDestroyed Z
+	5       (00000014) iget-object          v0, v1, Landroid/support/v4/app/DialogFragment;->mDialog Landroid/app/Dialog;
+	6       (00000018) invoke-virtual       v0, Landroid/app/Dialog;->show()V
+
+onStart-BB@0x1e : 
+	7       (0000001e) return-void          
+

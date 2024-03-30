@@ -1,0 +1,17 @@
+# Landroid/support/design/internal/NavigationMenuPresenter;->inflateHeaderView(I)Landroid/view/View; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:int
+#
+# - return:android.view.View
+
+inflateHeaderView-BB@0x0 : 
+	0       (00000000) iget-object          v1, v4, Landroid/support/design/internal/NavigationMenuPresenter;->mLayoutInflater Landroid/view/LayoutInflater;
+	1       (00000004) iget-object          v2, v4, Landroid/support/design/internal/NavigationMenuPresenter;->mHeaderLayout Landroid/widget/LinearLayout;
+	2       (00000008) const/4              v3, 0
+	3       (0000000a) invoke-virtual       v1, v5, v2, v3, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
+	4       (00000010) move-result-object   v0
+	5       (00000012) invoke-virtual       v4, v0, Landroid/support/design/internal/NavigationMenuPresenter;->addHeaderView(Landroid/view/View;)V
+	6       (00000018) return-object        v0
+

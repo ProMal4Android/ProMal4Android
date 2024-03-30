@@ -1,0 +1,22 @@
+# Landroid/support/v4/app/ShareCompat$IntentBuilder;->setEmailTo([Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.String[]
+#
+# - return:android.support.v4.app.ShareCompat$IntentBuilder
+
+setEmailTo-BB@0x0 : [ setEmailTo-BB@0x8 setEmailTo-BB@0xe ]
+	0       (00000000) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mToAddresses Ljava/util/ArrayList;
+	1       (00000004) if-eqz               v0, +5
+
+setEmailTo-BB@0x8 : [ setEmailTo-BB@0xe ]
+	2       (00000008) const/4              v0, 0
+	3       (0000000a) iput-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mToAddresses Ljava/util/ArrayList;
+
+setEmailTo-BB@0xe : 
+	4       (0000000e) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	5       (00000012) const-string         v1, 'android.intent.extra.EMAIL'
+	6       (00000016) invoke-virtual       v0, v1, v3, Landroid/content/Intent;->putExtra(Ljava/lang/String; [Ljava/lang/String;)Landroid/content/Intent;
+	7       (0000001c) return-object        v2
+

@@ -1,0 +1,40 @@
+# Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;->getPlaybackInfo()Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v8
+#
+# - return:android.support.v4.media.session.MediaControllerCompat$PlaybackInfo
+
+getPlaybackInfo-BB@0x0 : [ getPlaybackInfo-BB@0x2a ]
+	0       (00000000) iget-object          v1, v8, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;->mBinder Landroid/support/v4/media/session/IMediaSession;
+	1       (00000004) invoke-interface     v1, Landroid/support/v4/media/session/IMediaSession;->getVolumeAttributes()Landroid/support/v4/media/session/ParcelableVolumeInfo;
+	2       (0000000a) move-result-object   v7
+	3       (0000000c) new-instance         v0, Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;
+	4       (00000010) iget                 v1, v7, Landroid/support/v4/media/session/ParcelableVolumeInfo;->volumeType I
+	5       (00000014) iget                 v2, v7, Landroid/support/v4/media/session/ParcelableVolumeInfo;->audioStream I
+	6       (00000018) iget                 v3, v7, Landroid/support/v4/media/session/ParcelableVolumeInfo;->controlType I
+	7       (0000001c) iget                 v4, v7, Landroid/support/v4/media/session/ParcelableVolumeInfo;->maxVolume I
+	8       (00000020) iget                 v5, v7, Landroid/support/v4/media/session/ParcelableVolumeInfo;->currentVolume I
+	9       (00000024) invoke-direct/range  v0 ... v5, Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;-><init>(I I I I I)V
+	0:29
+	(Landroid/os/RemoteException; -> 2c getPlaybackInfo-BB@0x2c)
+
+getPlaybackInfo-BB@0x2a : 
+	10      (0000002a) return-object        v0
+
+getPlaybackInfo-BB@0x2c : [ getPlaybackInfo-BB@0x2a ]
+	11      (0000002c) move-exception       v6
+	12      (0000002e) const-string         v1, 'MediaControllerCompat'
+	13      (00000032) new-instance         v2, Ljava/lang/StringBuilder;
+	14      (00000036) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	15      (0000003c) const-string         v3, 'Dead object in getPlaybackInfo. '
+	16      (00000040) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000046) move-result-object   v2
+	18      (00000048) invoke-virtual       v2, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	19      (0000004e) move-result-object   v2
+	20      (00000050) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	21      (00000056) move-result-object   v2
+	22      (00000058) invoke-static        v1, v2, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	23      (0000005e) const/4              v0, 0
+	24      (00000060) goto                 -1b
+

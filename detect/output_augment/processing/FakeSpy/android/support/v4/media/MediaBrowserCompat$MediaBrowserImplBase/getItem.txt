@@ -1,0 +1,69 @@
+# Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->getItem(Ljava/lang/String; Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.String
+# - v6:android.support.v4.media.MediaBrowserCompat$ItemCallback
+#
+# - return:void
+
+getItem-BB@0x0 : [ getItem-BB@0xc getItem-BB@0x1c ]
+	0       (00000000) invoke-static        v5, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	1       (00000006) move-result          v2
+	2       (00000008) if-eqz               v2, +a
+
+getItem-BB@0xc : 
+	3       (0000000c) new-instance         v2, Ljava/lang/IllegalArgumentException;
+	4       (00000010) const-string         v3, 'mediaId is empty.'
+	5       (00000014) invoke-direct        v2, v3, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	6       (0000001a) throw                v2
+
+getItem-BB@0x1c : [ getItem-BB@0x20 getItem-BB@0x30 ]
+	7       (0000001c) if-nez               v6, +a
+
+getItem-BB@0x20 : 
+	8       (00000020) new-instance         v2, Ljava/lang/IllegalArgumentException;
+	9       (00000024) const-string         v3, 'cb is null.'
+	10      (00000028) invoke-direct        v2, v3, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	11      (0000002e) throw                v2
+
+getItem-BB@0x30 : [ getItem-BB@0x3a getItem-BB@0x5e ]
+	12      (00000030) iget                 v2, v4, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mState I
+	13      (00000034) const/4              v3, 2
+	14      (00000036) if-eq                v2, v3, +14
+
+getItem-BB@0x3a : [ getItem-BB@0x5c ]
+	15      (0000003a) const-string         v2, 'MediaBrowserCompat'
+	16      (0000003e) const-string         v3, 'Not connected, unable to retrieve the MediaItem.'
+	17      (00000042) invoke-static        v2, v3, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
+	18      (00000048) iget-object          v2, v4, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;
+	19      (0000004c) new-instance         v3, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$2;
+	20      (00000050) invoke-direct        v3, v4, v6, v5, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$2;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase; Landroid/support/v4/media/MediaBrowserCompat$ItemCallback; Ljava/lang/String;)V
+	21      (00000056) invoke-virtual       v2, v3, Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->post(Ljava/lang/Runnable;)Z
+
+getItem-BB@0x5c : 
+	22      (0000005c) return-void          
+
+getItem-BB@0x5e : [ getItem-BB@0x6c ]
+	23      (0000005e) new-instance         v1, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;
+	24      (00000062) iget-object          v2, v4, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;
+	25      (00000066) invoke-direct        v1, v5, v6, v2, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;-><init>(Ljava/lang/String; Landroid/support/v4/media/MediaBrowserCompat$ItemCallback; Landroid/os/Handler;)V
+
+getItem-BB@0x6c : [ getItem-BB@0x5c ]
+	26      (0000006c) iget-object          v2, v4, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mServiceBinderWrapper Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;
+	27      (00000070) invoke-virtual       v2, v5, v1, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->getMediaItem(Ljava/lang/String; Landroid/support/v4/os/ResultReceiver;)V
+	28      (00000076) goto                 -d
+	6c:75
+	(Landroid/os/RemoteException; -> 78 getItem-BB@0x78)
+
+getItem-BB@0x78 : [ getItem-BB@0x5c ]
+	29      (00000078) move-exception       v0
+	30      (0000007a) const-string         v2, 'MediaBrowserCompat'
+	31      (0000007e) const-string         v3, 'Remote error getting media item.'
+	32      (00000082) invoke-static        v2, v3, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
+	33      (00000088) iget-object          v2, v4, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;
+	34      (0000008c) new-instance         v3, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$3;
+	35      (00000090) invoke-direct        v3, v4, v6, v5, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$3;-><init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase; Landroid/support/v4/media/MediaBrowserCompat$ItemCallback; Ljava/lang/String;)V
+	36      (00000096) invoke-virtual       v2, v3, Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->post(Ljava/lang/Runnable;)Z
+	37      (0000009c) goto                 -20
+

@@ -1,0 +1,142 @@
+# Landroid/support/design/widget/CoordinatorLayout;->parseBehavior(Landroid/content/Context; Landroid/util/AttributeSet; Ljava/lang/String;)Landroid/support/design/widget/CoordinatorLayout$Behavior; [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.content.Context
+# - v9:android.util.AttributeSet
+# - v10:java.lang.String
+#
+# - return:android.support.design.widget.CoordinatorLayout$Behavior
+
+parseBehavior-BB@0x0 : [ parseBehavior-BB@0x10 parseBehavior-BB@0x14 ]
+	0       (00000000) const/16             v7, 46
+	1       (00000004) invoke-static        v10, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	2       (0000000a) move-result          v5
+	3       (0000000c) if-eqz               v5, +4
+
+parseBehavior-BB@0x10 : [ parseBehavior-BB@0x12 ]
+	4       (00000010) const/4              v5, 0
+
+parseBehavior-BB@0x12 : 
+	5       (00000012) return-object        v5
+
+parseBehavior-BB@0x14 : [ parseBehavior-BB@0x24 parseBehavior-BB@0xd2 ]
+	6       (00000014) const-string         v5, '.'
+	7       (00000018) invoke-virtual       v10, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	8       (0000001e) move-result          v5
+	9       (00000020) if-eqz               v5, +59
+
+parseBehavior-BB@0x24 : [ parseBehavior-BB@0x4e ]
+	10      (00000024) new-instance         v5, Ljava/lang/StringBuilder;
+	11      (00000028) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	12      (0000002e) invoke-virtual       v8, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	13      (00000034) move-result-object   v6
+	14      (00000036) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (0000003c) move-result-object   v5
+	16      (0000003e) invoke-virtual       v5, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000044) move-result-object   v5
+	18      (00000046) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	19      (0000004c) move-result-object   v4
+
+parseBehavior-BB@0x4e : [ parseBehavior-BB@0x62 parseBehavior-BB@0x76 ]
+	20      (0000004e) sget-object          v5, Landroid/support/design/widget/CoordinatorLayout;->sConstructors Ljava/lang/ThreadLocal;
+	21      (00000052) invoke-virtual       v5, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+	22      (00000058) move-result-object   v2
+	23      (0000005a) check-cast           v2, Ljava/util/Map;
+	24      (0000005e) if-nez               v2, +c
+	4e:cf
+	(Ljava/lang/Exception; -> 126 parseBehavior-BB@0x126)
+
+parseBehavior-BB@0x62 : [ parseBehavior-BB@0x76 ]
+	25      (00000062) new-instance         v2, Ljava/util/HashMap;
+	26      (00000066) invoke-direct        v2, Ljava/util/HashMap;-><init>()V
+	27      (0000006c) sget-object          v5, Landroid/support/design/widget/CoordinatorLayout;->sConstructors Ljava/lang/ThreadLocal;
+	28      (00000070) invoke-virtual       v5, v2, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+	4e:cf
+	(Ljava/lang/Exception; -> 126 parseBehavior-BB@0x126)
+
+parseBehavior-BB@0x76 : [ parseBehavior-BB@0x86 parseBehavior-BB@0xb2 ]
+	29      (00000076) invoke-interface     v2, v4, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	30      (0000007c) move-result-object   v0
+	31      (0000007e) check-cast           v0, Ljava/lang/reflect/Constructor;
+	32      (00000082) if-nez               v0, +18
+	4e:cf
+	(Ljava/lang/Exception; -> 126 parseBehavior-BB@0x126)
+
+parseBehavior-BB@0x86 : [ parseBehavior-BB@0xb2 ]
+	33      (00000086) const/4              v5, 1
+	34      (00000088) invoke-virtual       v8, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+	35      (0000008e) move-result-object   v6
+	36      (00000090) invoke-static        v4, v5, v6, Ljava/lang/Class;->forName(Ljava/lang/String; Z Ljava/lang/ClassLoader;)Ljava/lang/Class;
+	37      (00000096) move-result-object   v1
+	38      (00000098) sget-object          v5, Landroid/support/design/widget/CoordinatorLayout;->CONSTRUCTOR_PARAMS [Ljava/lang/Class;
+	39      (0000009c) invoke-virtual       v1, v5, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+	40      (000000a2) move-result-object   v0
+	41      (000000a4) const/4              v5, 1
+	42      (000000a6) invoke-virtual       v0, v5, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
+	43      (000000ac) invoke-interface     v2, v4, v0, Ljava/util/Map;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	4e:cf
+	(Ljava/lang/Exception; -> 126 parseBehavior-BB@0x126)
+
+parseBehavior-BB@0xb2 : [ parseBehavior-BB@0x12 ]
+	44      (000000b2) const/4              v5, 2
+	45      (000000b4) new-array            v5, v5, [Ljava/lang/Object;
+	46      (000000b8) const/4              v6, 0
+	47      (000000ba) aput-object          v8, v5, v6
+	48      (000000be) const/4              v6, 1
+	49      (000000c0) aput-object          v9, v5, v6
+	50      (000000c4) invoke-virtual       v0, v5, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+	51      (000000ca) move-result-object   v5
+	52      (000000cc) check-cast           v5, Landroid/support/design/widget/CoordinatorLayout$Behavior;
+	53      (000000d0) goto                 -5f
+
+parseBehavior-BB@0xd2 : [ parseBehavior-BB@0xde parseBehavior-BB@0xe2 ]
+	54      (000000d2) invoke-virtual       v10, v7, Ljava/lang/String;->indexOf(I)I
+	55      (000000d8) move-result          v5
+	56      (000000da) if-ltz               v5, +4
+
+parseBehavior-BB@0xde : [ parseBehavior-BB@0x4e ]
+	57      (000000de) move-object          v4, v10
+	58      (000000e0) goto                 -49
+
+parseBehavior-BB@0xe2 : [ parseBehavior-BB@0xf2 parseBehavior-BB@0x122 ]
+	59      (000000e2) sget-object          v5, Landroid/support/design/widget/CoordinatorLayout;->WIDGET_PACKAGE_NAME Ljava/lang/String;
+	60      (000000e6) invoke-static        v5, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	61      (000000ec) move-result          v5
+	62      (000000ee) if-nez               v5, +1a
+
+parseBehavior-BB@0xf2 : [ parseBehavior-BB@0x120 ]
+	63      (000000f2) new-instance         v5, Ljava/lang/StringBuilder;
+	64      (000000f6) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	65      (000000fc) sget-object          v6, Landroid/support/design/widget/CoordinatorLayout;->WIDGET_PACKAGE_NAME Ljava/lang/String;
+	66      (00000100) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	67      (00000106) move-result-object   v5
+	68      (00000108) invoke-virtual       v5, v7, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	69      (0000010e) move-result-object   v5
+	70      (00000110) invoke-virtual       v5, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	71      (00000116) move-result-object   v5
+	72      (00000118) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	73      (0000011e) move-result-object   v4
+
+parseBehavior-BB@0x120 : [ parseBehavior-BB@0x4e ]
+	74      (00000120) goto                 -69
+
+parseBehavior-BB@0x122 : [ parseBehavior-BB@0x120 ]
+	75      (00000122) move-object          v4, v10
+	76      (00000124) goto                 -2
+
+parseBehavior-BB@0x126 : 
+	77      (00000126) move-exception       v3
+	78      (00000128) new-instance         v5, Ljava/lang/RuntimeException;
+	79      (0000012c) new-instance         v6, Ljava/lang/StringBuilder;
+	80      (00000130) invoke-direct        v6, Ljava/lang/StringBuilder;-><init>()V
+	81      (00000136) const-string         v7, 'Could not inflate Behavior subclass '
+	82      (0000013a) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	83      (00000140) move-result-object   v6
+	84      (00000142) invoke-virtual       v6, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	85      (00000148) move-result-object   v6
+	86      (0000014a) invoke-virtual       v6, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	87      (00000150) move-result-object   v6
+	88      (00000152) invoke-direct        v5, v6, v3, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String; Ljava/lang/Throwable;)V
+	89      (00000158) throw                v5
+

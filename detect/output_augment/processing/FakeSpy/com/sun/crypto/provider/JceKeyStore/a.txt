@@ -1,0 +1,57 @@
+# Lcom/sun/crypto/provider/JceKeyStore;->a([C)Ljava/security/MessageDigest; [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:char[]
+#
+# - return:java.security.MessageDigest
+
+a-BB@0x0 : [ a-BB@0x1c ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) const-string         v0, 'SHA'
+	2       (00000006) invoke-static        v0, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+	3       (0000000c) move-result-object   v3
+	4       (0000000e) array-length         v0, v8
+	5       (00000010) mul-int/lit8         v0, v0, 2
+	6       (00000014) new-array            v4, v0, [B
+	7       (00000018) move                 v0, v1
+	8       (0000001a) move                 v2, v1
+
+a-BB@0x1c : [ a-BB@0x22 a-BB@0x48 ]
+	9       (0000001c) array-length         v5, v8
+	10      (0000001e) if-ge                v2, v5, +15
+
+a-BB@0x22 : [ a-BB@0x1c ]
+	11      (00000022) add-int/lit8         v5, v0, 1
+	12      (00000026) aget-char            v6, v8, v2
+	13      (0000002a) shr-int/lit8         v6, v6, 8
+	14      (0000002e) int-to-byte          v6, v6
+	15      (00000030) aput-byte            v6, v4, v0
+	16      (00000034) add-int/lit8         v0, v5, 1
+	17      (00000038) aget-char            v6, v8, v2
+	18      (0000003c) int-to-byte          v6, v6
+	19      (0000003e) aput-byte            v6, v4, v5
+	20      (00000042) add-int/lit8         v2, v2, 1
+	21      (00000046) goto                 -15
+
+a-BB@0x48 : [ a-BB@0x50 ]
+	22      (00000048) invoke-virtual       v3, v4, Ljava/security/MessageDigest;->update([B)V
+	23      (0000004e) move                 v0, v1
+
+a-BB@0x50 : [ a-BB@0x56 a-BB@0x60 ]
+	24      (00000050) array-length         v2, v4
+	25      (00000052) if-ge                v0, v2, +7
+
+a-BB@0x56 : [ a-BB@0x50 ]
+	26      (00000056) aput-byte            v1, v4, v0
+	27      (0000005a) add-int/lit8         v0, v0, 1
+	28      (0000005e) goto                 -7
+
+a-BB@0x60 : 
+	29      (00000060) const-string         v0, 'Mighty Aphrodite'
+	30      (00000064) const-string         v1, 'UTF8'
+	31      (00000068) invoke-virtual       v0, v1, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+	32      (0000006e) move-result-object   v0
+	33      (00000070) invoke-virtual       v3, v0, Ljava/security/MessageDigest;->update([B)V
+	34      (00000076) return-object        v3
+

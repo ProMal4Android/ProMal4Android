@@ -1,0 +1,101 @@
+# Lbutterknife/internal/BindingClass;->brewJava()Ljava/lang/String; [access_flags=]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:java.lang.String
+
+brewJava-BB@0x0 : [ brewJava-BB@0x4a brewJava-BB@0x54 ]
+	0       (00000000) const/16             v3, 10
+	1       (00000004) new-instance         v0, Ljava/lang/StringBuilder;
+	2       (00000008) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	3       (0000000e) const-string         v1, '// Generated code from Butter Knife. Do not modify!\n'
+	4       (00000012) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	5       (00000018) const-string         v1, 'package '
+	6       (0000001c) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	7       (00000022) move-result-object   v1
+	8       (00000024) iget-object          v2, v4, Lbutterknife/internal/BindingClass;->classPackage Ljava/lang/String;
+	9       (00000028) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (0000002e) move-result-object   v1
+	11      (00000030) const-string         v2, ';\n\n'
+	12      (00000034) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (0000003a) iget-object          v1, v4, Lbutterknife/internal/BindingClass;->resourceBindings Ljava/util/List;
+	14      (0000003e) invoke-interface     v1, Ljava/util/List;->isEmpty()Z
+	15      (00000044) move-result          v1
+	16      (00000046) if-nez               v1, +7
+
+brewJava-BB@0x4a : [ brewJava-BB@0x54 ]
+	17      (0000004a) const-string         v1, 'import android.content.res.Resources;\n'
+	18      (0000004e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+brewJava-BB@0x54 : [ brewJava-BB@0x64 brewJava-BB@0x74 ]
+	19      (00000054) iget-object          v1, v4, Lbutterknife/internal/BindingClass;->viewIdMap Ljava/util/Map;
+	20      (00000058) invoke-interface     v1, Ljava/util/Map;->isEmpty()Z
+	21      (0000005e) move-result          v1
+	22      (00000060) if-eqz               v1, +a
+
+brewJava-BB@0x64 : [ brewJava-BB@0x74 brewJava-BB@0x7e ]
+	23      (00000064) iget-object          v1, v4, Lbutterknife/internal/BindingClass;->collectionBindings Ljava/util/Map;
+	24      (00000068) invoke-interface     v1, Ljava/util/Map;->isEmpty()Z
+	25      (0000006e) move-result          v1
+	26      (00000070) if-nez               v1, +7
+
+brewJava-BB@0x74 : [ brewJava-BB@0x7e ]
+	27      (00000074) const-string         v1, 'import android.view.View;\n'
+	28      (00000078) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+brewJava-BB@0x7e : [ brewJava-BB@0x90 brewJava-BB@0x9a ]
+	29      (0000007e) const-string         v1, 'import butterknife.ButterKnife.Finder;\n'
+	30      (00000082) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	31      (00000088) iget-object          v1, v4, Lbutterknife/internal/BindingClass;->parentViewBinder Ljava/lang/String;
+	32      (0000008c) if-nez               v1, +7
+
+brewJava-BB@0x90 : [ brewJava-BB@0x9a ]
+	33      (00000090) const-string         v1, 'import butterknife.ButterKnife.ViewBinder;\n'
+	34      (00000094) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+brewJava-BB@0x9a : [ brewJava-BB@0xe0 brewJava-BB@0x132 ]
+	35      (0000009a) invoke-virtual       v0, v3, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	36      (000000a0) const-string         v1, 'public class '
+	37      (000000a4) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	38      (000000aa) move-result-object   v1
+	39      (000000ac) iget-object          v2, v4, Lbutterknife/internal/BindingClass;->className Ljava/lang/String;
+	40      (000000b0) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	41      (000000b6) const-string         v1, '<T extends '
+	42      (000000ba) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	43      (000000c0) move-result-object   v1
+	44      (000000c2) iget-object          v2, v4, Lbutterknife/internal/BindingClass;->targetClass Ljava/lang/String;
+	45      (000000c6) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	46      (000000cc) move-result-object   v1
+	47      (000000ce) const-string         v2, '>'
+	48      (000000d2) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	49      (000000d8) iget-object          v1, v4, Lbutterknife/internal/BindingClass;->parentViewBinder Ljava/lang/String;
+	50      (000000dc) if-eqz               v1, +2b
+
+brewJava-BB@0xe0 : [ brewJava-BB@0x102 ]
+	51      (000000e0) const-string         v1, ' extends '
+	52      (000000e4) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	53      (000000ea) move-result-object   v1
+	54      (000000ec) iget-object          v2, v4, Lbutterknife/internal/BindingClass;->parentViewBinder Ljava/lang/String;
+	55      (000000f0) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	56      (000000f6) move-result-object   v1
+	57      (000000f8) const-string         v2, '<T>'
+	58      (000000fc) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+brewJava-BB@0x102 : 
+	59      (00000102) const-string         v1, ' {\n'
+	60      (00000106) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	61      (0000010c) invoke-direct        v4, v0, Lbutterknife/internal/BindingClass;->emitBindMethod(Ljava/lang/StringBuilder;)V
+	62      (00000112) invoke-virtual       v0, v3, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	63      (00000118) invoke-direct        v4, v0, Lbutterknife/internal/BindingClass;->emitUnbindMethod(Ljava/lang/StringBuilder;)V
+	64      (0000011e) const-string         v1, '}\n'
+	65      (00000122) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	66      (00000128) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	67      (0000012e) move-result-object   v1
+	68      (00000130) return-object        v1
+
+brewJava-BB@0x132 : [ brewJava-BB@0x102 ]
+	69      (00000132) const-string         v1, ' implements ViewBinder<T>'
+	70      (00000136) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	71      (0000013c) goto                 -1d
+

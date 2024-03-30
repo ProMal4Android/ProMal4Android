@@ -1,0 +1,48 @@
+# Lorg/ceremony/perfect/a;->a()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0xa ]
+	0       (00000000) new-instance         v0, Lorg/json/JSONObject;
+	1       (00000004) invoke-direct        v0, Lorg/json/JSONObject;-><init>()V
+
+a-BB@0xa : [ a-BB@0x76 ]
+	2       (0000000a) const-string         v1, 'id'
+	3       (0000000e) iget-object          v2, v4, Lorg/ceremony/perfect/a;->b Landroid/content/Context;
+	4       (00000012) invoke-static        v2, Lorg/ceremony/perfect/b;->c(Landroid/content/Context;)Ljava/lang/String;
+	5       (00000018) move-result-object   v2
+	6       (0000001a) invoke-virtual       v0, v1, v2, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	7       (00000020) const-string         v1, 'data'
+	8       (00000024) iget-object          v2, v4, Lorg/ceremony/perfect/a;->c Lorg/json/JSONObject;
+	9       (00000028) invoke-virtual       v0, v1, v2, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	10      (0000002e) const-string         v1, 'type'
+	11      (00000032) iget                 v2, v4, Lorg/ceremony/perfect/a;->a I
+	12      (00000036) invoke-virtual       v0, v1, v2, Lorg/json/JSONObject;->put(Ljava/lang/String; I)Lorg/json/JSONObject;
+	13      (0000003c) invoke-virtual       v0, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+	14      (00000042) move-result-object   v0
+	15      (00000044) invoke-virtual       v0, Ljava/lang/String;->getBytes()[B
+	16      (0000004a) move-result-object   v0
+	17      (0000004c) new-instance         v1, Lorg/ceremony/perfect/c;
+	18      (00000050) invoke-direct        v1, Lorg/ceremony/perfect/c;-><init>()V
+	19      (00000056) invoke-virtual       v1, v0, Lorg/ceremony/perfect/c;->a([B)[B
+	20      (0000005c) move-result-object   v0
+	21      (0000005e) iget-object          v1, v4, Lorg/ceremony/perfect/a;->b Landroid/content/Context;
+	22      (00000062) iget                 v2, v4, Lorg/ceremony/perfect/a;->a I
+	23      (00000066) const/4              v3, 0
+	24      (00000068) invoke-static        v0, v3, Landroid/util/Base64;->encodeToString([B I)Ljava/lang/String;
+	25      (0000006e) move-result-object   v0
+	26      (00000070) invoke-static        v1, v2, v0, Lorg/ceremony/perfect/b;->a(Landroid/content/Context; I Ljava/lang/String;)V
+	a:75
+	(Ljava/lang/Exception; -> 78 a-BB@0x78)
+
+a-BB@0x76 : 
+	27      (00000076) return-void          
+
+a-BB@0x78 : [ a-BB@0x76 ]
+	28      (00000078) move-exception       v0
+	29      (0000007a) invoke-virtual       v0, Ljava/lang/Exception;->printStackTrace()V
+	30      (00000080) goto                 -5
+

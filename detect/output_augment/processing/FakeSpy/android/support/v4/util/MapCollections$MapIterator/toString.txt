@@ -1,0 +1,25 @@
+# Landroid/support/v4/util/MapCollections$MapIterator;->toString()Ljava/lang/String; [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : 
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuilder;
+	1       (00000004) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	2       (0000000a) invoke-virtual       v2, Landroid/support/v4/util/MapCollections$MapIterator;->getKey()Ljava/lang/Object;
+	3       (00000010) move-result-object   v1
+	4       (00000012) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	5       (00000018) move-result-object   v0
+	6       (0000001a) const-string         v1, '='
+	7       (0000001e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000024) move-result-object   v0
+	9       (00000026) invoke-virtual       v2, Landroid/support/v4/util/MapCollections$MapIterator;->getValue()Ljava/lang/Object;
+	10      (0000002c) move-result-object   v1
+	11      (0000002e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	12      (00000034) move-result-object   v0
+	13      (00000036) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	14      (0000003c) move-result-object   v0
+	15      (0000003e) return-object        v0
+

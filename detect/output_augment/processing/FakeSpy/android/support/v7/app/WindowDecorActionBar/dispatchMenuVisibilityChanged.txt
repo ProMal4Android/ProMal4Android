@@ -1,0 +1,34 @@
+# Landroid/support/v7/app/WindowDecorActionBar;->dispatchMenuVisibilityChanged(Z)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:boolean
+#
+# - return:void
+
+dispatchMenuVisibilityChanged-BB@0x0 : [ dispatchMenuVisibilityChanged-BB@0x8 dispatchMenuVisibilityChanged-BB@0xa ]
+	0       (00000000) iget-boolean         v2, v3, Landroid/support/v7/app/WindowDecorActionBar;->mLastMenuVisibility Z
+	1       (00000004) if-ne                v4, v2, +3
+
+dispatchMenuVisibilityChanged-BB@0x8 : 
+	2       (00000008) return-void          
+
+dispatchMenuVisibilityChanged-BB@0xa : [ dispatchMenuVisibilityChanged-BB@0x1c ]
+	3       (0000000a) iput-boolean         v4, v3, Landroid/support/v7/app/WindowDecorActionBar;->mLastMenuVisibility Z
+	4       (0000000e) iget-object          v2, v3, Landroid/support/v7/app/WindowDecorActionBar;->mMenuVisibilityListeners Ljava/util/ArrayList;
+	5       (00000012) invoke-virtual       v2, Ljava/util/ArrayList;->size()I
+	6       (00000018) move-result          v0
+	7       (0000001a) const/4              v1, 0
+
+dispatchMenuVisibilityChanged-BB@0x1c : [ dispatchMenuVisibilityChanged-BB@0x20 dispatchMenuVisibilityChanged-BB@0x8 ]
+	8       (0000001c) if-ge                v1, v0, -a
+
+dispatchMenuVisibilityChanged-BB@0x20 : [ dispatchMenuVisibilityChanged-BB@0x1c ]
+	9       (00000020) iget-object          v2, v3, Landroid/support/v7/app/WindowDecorActionBar;->mMenuVisibilityListeners Ljava/util/ArrayList;
+	10      (00000024) invoke-virtual       v2, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	11      (0000002a) move-result-object   v2
+	12      (0000002c) check-cast           v2, Landroid/support/v7/app/ActionBar$OnMenuVisibilityListener;
+	13      (00000030) invoke-interface     v2, v4, Landroid/support/v7/app/ActionBar$OnMenuVisibilityListener;->onMenuVisibilityChanged(Z)V
+	14      (00000036) add-int/lit8         v1, v1, 1
+	15      (0000003a) goto                 -f
+

@@ -1,0 +1,32 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->reportBackStackChanged()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+reportBackStackChanged-BB@0x0 : [ reportBackStackChanged-BB@0x8 reportBackStackChanged-BB@0x36 ]
+	0       (00000000) iget-object          v1, v2, Landroid/support/v4/app/FragmentManagerImpl;->mBackStackChangeListeners Ljava/util/ArrayList;
+	1       (00000004) if-eqz               v1, +19
+
+reportBackStackChanged-BB@0x8 : [ reportBackStackChanged-BB@0xa ]
+	2       (00000008) const/4              v0, 0
+
+reportBackStackChanged-BB@0xa : [ reportBackStackChanged-BB@0x1a reportBackStackChanged-BB@0x36 ]
+	3       (0000000a) iget-object          v1, v2, Landroid/support/v4/app/FragmentManagerImpl;->mBackStackChangeListeners Ljava/util/ArrayList;
+	4       (0000000e) invoke-virtual       v1, Ljava/util/ArrayList;->size()I
+	5       (00000014) move-result          v1
+	6       (00000016) if-ge                v0, v1, +10
+
+reportBackStackChanged-BB@0x1a : [ reportBackStackChanged-BB@0xa ]
+	7       (0000001a) iget-object          v1, v2, Landroid/support/v4/app/FragmentManagerImpl;->mBackStackChangeListeners Ljava/util/ArrayList;
+	8       (0000001e) invoke-virtual       v1, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	9       (00000024) move-result-object   v1
+	10      (00000026) check-cast           v1, Landroid/support/v4/app/FragmentManager$OnBackStackChangedListener;
+	11      (0000002a) invoke-interface     v1, Landroid/support/v4/app/FragmentManager$OnBackStackChangedListener;->onBackStackChanged()V
+	12      (00000030) add-int/lit8         v0, v0, 1
+	13      (00000034) goto                 -15
+
+reportBackStackChanged-BB@0x36 : 
+	14      (00000036) return-void          
+

@@ -1,0 +1,20 @@
+# Landroid/support/v4/content/PermissionChecker;->checkSelfPermission(Landroid/content/Context; Ljava/lang/String;)I [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Context
+# - v4:java.lang.String
+#
+# - return:int
+
+checkSelfPermission-BB@0x0 : 
+	0       (00000000) invoke-static        Landroid/os/Process;->myPid()I
+	1       (00000006) move-result          v0
+	2       (00000008) invoke-static        Landroid/os/Process;->myUid()I
+	3       (0000000e) move-result          v1
+	4       (00000010) invoke-virtual       v3, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	5       (00000016) move-result-object   v2
+	6       (00000018) invoke-static        v3, v4, v0, v1, v2, Landroid/support/v4/content/PermissionChecker;->checkPermission(Landroid/content/Context; Ljava/lang/String; I I Ljava/lang/String;)I
+	7       (0000001e) move-result          v0
+	8       (00000020) return               v0
+

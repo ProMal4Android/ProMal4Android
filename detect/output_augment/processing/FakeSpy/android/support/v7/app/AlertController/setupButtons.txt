@@ -1,0 +1,110 @@
+# Landroid/support/v7/app/AlertController;->setupButtons(Landroid/view/ViewGroup;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.view.ViewGroup
+#
+# - return:void
+
+setupButtons-BB@0x0 : [ setupButtons-BB@0x42 setupButtons-BB@0xda ]
+	0       (00000000) const/16             v7, 8
+	1       (00000004) const/4              v3, 0
+	2       (00000006) const/4              v2, 1
+	3       (00000008) const/4              v0, 2
+	4       (0000000a) const/4              v1, 4
+	5       (0000000c) const/4              v4, 0
+	6       (0000000e) const                v5, 16908313 # [2.387729906600093e-38]
+	7       (00000014) invoke-virtual       v9, v5, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+	8       (0000001a) move-result-object   v5
+	9       (0000001c) check-cast           v5, Landroid/widget/Button;
+	10      (00000020) iput-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonPositive Landroid/widget/Button;
+	11      (00000024) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonPositive Landroid/widget/Button;
+	12      (00000028) iget-object          v6, v8, Landroid/support/v7/app/AlertController;->mButtonHandler Landroid/view/View$OnClickListener;
+	13      (0000002c) invoke-virtual       v5, v6, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+	14      (00000032) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonPositiveText Ljava/lang/CharSequence;
+	15      (00000036) invoke-static        v5, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	16      (0000003c) move-result          v5
+	17      (0000003e) if-eqz               v5, +4e
+
+setupButtons-BB@0x42 : [ setupButtons-BB@0x4c ]
+	18      (00000042) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonPositive Landroid/widget/Button;
+	19      (00000046) invoke-virtual       v5, v7, Landroid/widget/Button;->setVisibility(I)V
+
+setupButtons-BB@0x4c : [ setupButtons-BB@0x80 setupButtons-BB@0xf6 ]
+	20      (0000004c) const                v5, 16908314 # [2.387730186859786e-38]
+	21      (00000052) invoke-virtual       v9, v5, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+	22      (00000058) move-result-object   v5
+	23      (0000005a) check-cast           v5, Landroid/widget/Button;
+	24      (0000005e) iput-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNegative Landroid/widget/Button;
+	25      (00000062) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNegative Landroid/widget/Button;
+	26      (00000066) iget-object          v6, v8, Landroid/support/v7/app/AlertController;->mButtonHandler Landroid/view/View$OnClickListener;
+	27      (0000006a) invoke-virtual       v5, v6, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+	28      (00000070) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNegativeText Ljava/lang/CharSequence;
+	29      (00000074) invoke-static        v5, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	30      (0000007a) move-result          v5
+	31      (0000007c) if-eqz               v5, +3d
+
+setupButtons-BB@0x80 : [ setupButtons-BB@0x8a ]
+	32      (00000080) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNegative Landroid/widget/Button;
+	33      (00000084) invoke-virtual       v5, v7, Landroid/widget/Button;->setVisibility(I)V
+
+setupButtons-BB@0x8a : [ setupButtons-BB@0xbe setupButtons-BB@0x112 ]
+	34      (0000008a) const                v5, 16908315 # [2.387730467119479e-38]
+	35      (00000090) invoke-virtual       v9, v5, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+	36      (00000096) move-result-object   v5
+	37      (00000098) check-cast           v5, Landroid/widget/Button;
+	38      (0000009c) iput-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNeutral Landroid/widget/Button;
+	39      (000000a0) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNeutral Landroid/widget/Button;
+	40      (000000a4) iget-object          v6, v8, Landroid/support/v7/app/AlertController;->mButtonHandler Landroid/view/View$OnClickListener;
+	41      (000000a8) invoke-virtual       v5, v6, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+	42      (000000ae) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNeutralText Ljava/lang/CharSequence;
+	43      (000000b2) invoke-static        v5, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	44      (000000b8) move-result          v5
+	45      (000000ba) if-eqz               v5, +2c
+
+setupButtons-BB@0xbe : [ setupButtons-BB@0xc8 ]
+	46      (000000be) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNeutral Landroid/widget/Button;
+	47      (000000c2) invoke-virtual       v5, v7, Landroid/widget/Button;->setVisibility(I)V
+
+setupButtons-BB@0xc8 : [ setupButtons-BB@0xcc setupButtons-BB@0xce ]
+	48      (000000c8) if-eqz               v4, +3
+
+setupButtons-BB@0xcc : [ setupButtons-BB@0xce ]
+	49      (000000cc) const/4              v3, 1
+
+setupButtons-BB@0xce : [ setupButtons-BB@0xd2 setupButtons-BB@0xd8 ]
+	50      (000000ce) if-nez               v3, +5
+
+setupButtons-BB@0xd2 : [ setupButtons-BB@0xd8 ]
+	51      (000000d2) invoke-virtual       v9, v7, Landroid/view/ViewGroup;->setVisibility(I)V
+
+setupButtons-BB@0xd8 : 
+	52      (000000d8) return-void          
+
+setupButtons-BB@0xda : [ setupButtons-BB@0x4c ]
+	53      (000000da) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonPositive Landroid/widget/Button;
+	54      (000000de) iget-object          v6, v8, Landroid/support/v7/app/AlertController;->mButtonPositiveText Ljava/lang/CharSequence;
+	55      (000000e2) invoke-virtual       v5, v6, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+	56      (000000e8) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonPositive Landroid/widget/Button;
+	57      (000000ec) invoke-virtual       v5, v3, Landroid/widget/Button;->setVisibility(I)V
+	58      (000000f2) or-int/2addr         v4, v2
+	59      (000000f4) goto                 -54
+
+setupButtons-BB@0xf6 : [ setupButtons-BB@0x8a ]
+	60      (000000f6) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNegative Landroid/widget/Button;
+	61      (000000fa) iget-object          v6, v8, Landroid/support/v7/app/AlertController;->mButtonNegativeText Ljava/lang/CharSequence;
+	62      (000000fe) invoke-virtual       v5, v6, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+	63      (00000104) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNegative Landroid/widget/Button;
+	64      (00000108) invoke-virtual       v5, v3, Landroid/widget/Button;->setVisibility(I)V
+	65      (0000010e) or-int/2addr         v4, v0
+	66      (00000110) goto                 -43
+
+setupButtons-BB@0x112 : [ setupButtons-BB@0xc8 ]
+	67      (00000112) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNeutral Landroid/widget/Button;
+	68      (00000116) iget-object          v6, v8, Landroid/support/v7/app/AlertController;->mButtonNeutralText Ljava/lang/CharSequence;
+	69      (0000011a) invoke-virtual       v5, v6, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+	70      (00000120) iget-object          v5, v8, Landroid/support/v7/app/AlertController;->mButtonNeutral Landroid/widget/Button;
+	71      (00000124) invoke-virtual       v5, v3, Landroid/widget/Button;->setVisibility(I)V
+	72      (0000012a) or-int/2addr         v4, v1
+	73      (0000012c) goto                 -32
+

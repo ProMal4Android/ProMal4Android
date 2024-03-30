@@ -1,0 +1,22 @@
+# Landroid/support/v7/app/WindowDecorActionBar;->setCustomView(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:int
+#
+# - return:void
+
+setCustomView-BB@0x0 : 
+	0       (00000000) invoke-virtual       v3, Landroid/support/v7/app/WindowDecorActionBar;->getThemedContext()Landroid/content/Context;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-static        v0, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) iget-object          v1, v3, Landroid/support/v7/app/WindowDecorActionBar;->mDecorToolbar Landroid/support/v7/widget/DecorToolbar;
+	5       (00000014) invoke-interface     v1, Landroid/support/v7/widget/DecorToolbar;->getViewGroup()Landroid/view/ViewGroup;
+	6       (0000001a) move-result-object   v1
+	7       (0000001c) const/4              v2, 0
+	8       (0000001e) invoke-virtual       v0, v4, v1, v2, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
+	9       (00000024) move-result-object   v0
+	10      (00000026) invoke-virtual       v3, v0, Landroid/support/v7/app/WindowDecorActionBar;->setCustomView(Landroid/view/View;)V
+	11      (0000002c) return-void          
+

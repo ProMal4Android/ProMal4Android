@@ -1,0 +1,92 @@
+# Landroid/support/v7/widget/DefaultItemAnimator;->animateChangeImpl(Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:android.support.v7.widget.DefaultItemAnimator$ChangeInfo
+#
+# - return:void
+
+animateChangeImpl-BB@0x0 : [ animateChangeImpl-BB@0xc animateChangeImpl-BB@0xe8 ]
+	0       (00000000) const/4              v6, 0
+	1       (00000002) const/4              v10, 0
+	2       (00000004) iget-object          v0, v12, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->oldHolder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	3       (00000008) if-nez               v0, +70
+
+animateChangeImpl-BB@0xc : [ animateChangeImpl-BB@0xe ]
+	4       (0000000c) move-object          v5, v6
+
+animateChangeImpl-BB@0xe : [ animateChangeImpl-BB@0x16 animateChangeImpl-BB@0xee ]
+	5       (0000000e) iget-object          v1, v12, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->newHolder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	6       (00000012) if-eqz               v1, +6e
+
+animateChangeImpl-BB@0x16 : [ animateChangeImpl-BB@0x1a ]
+	7       (00000016) iget-object          v2, v1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+
+animateChangeImpl-BB@0x1a : [ animateChangeImpl-BB@0x1e animateChangeImpl-BB@0x88 ]
+	8       (0000001a) if-eqz               v5, +37
+
+animateChangeImpl-BB@0x1e : [ animateChangeImpl-BB@0x88 ]
+	9       (0000001e) invoke-static        v5, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	10      (00000024) move-result-object   v6
+	11      (00000026) invoke-virtual       v11, Landroid/support/v7/widget/DefaultItemAnimator;->getChangeDuration()J
+	12      (0000002c) move-result-wide     v8
+	13      (0000002e) invoke-virtual       v6, v8, v9, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	14      (00000034) move-result-object   v4
+	15      (00000036) iget-object          v6, v11, Landroid/support/v7/widget/DefaultItemAnimator;->mChangeAnimations Ljava/util/ArrayList;
+	16      (0000003a) iget-object          v7, v12, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->oldHolder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	17      (0000003e) invoke-virtual       v6, v7, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	18      (00000044) iget                 v6, v12, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->toX I
+	19      (00000048) iget                 v7, v12, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->fromX I
+	20      (0000004c) sub-int/2addr        v6, v7
+	21      (0000004e) int-to-float         v6, v6
+	22      (00000050) invoke-virtual       v4, v6, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->translationX(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	23      (00000056) iget                 v6, v12, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->toY I
+	24      (0000005a) iget                 v7, v12, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->fromY I
+	25      (0000005e) sub-int/2addr        v6, v7
+	26      (00000060) int-to-float         v6, v6
+	27      (00000062) invoke-virtual       v4, v6, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->translationY(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	28      (00000068) invoke-virtual       v4, v10, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	29      (0000006e) move-result-object   v6
+	30      (00000070) new-instance         v7, Landroid/support/v7/widget/DefaultItemAnimator$7;
+	31      (00000074) invoke-direct        v7, v11, v12, v4, Landroid/support/v7/widget/DefaultItemAnimator$7;-><init>(Landroid/support/v7/widget/DefaultItemAnimator; Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo; Landroid/support/v4/view/ViewPropertyAnimatorCompat;)V
+	32      (0000007a) invoke-virtual       v6, v7, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setListener(Landroid/support/v4/view/ViewPropertyAnimatorListener;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	33      (00000080) move-result-object   v6
+	34      (00000082) invoke-virtual       v6, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->start()V
+
+animateChangeImpl-BB@0x88 : [ animateChangeImpl-BB@0x8c animateChangeImpl-BB@0xe6 ]
+	35      (00000088) if-eqz               v2, +2f
+
+animateChangeImpl-BB@0x8c : [ animateChangeImpl-BB@0xe6 ]
+	36      (0000008c) invoke-static        v2, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	37      (00000092) move-result-object   v3
+	38      (00000094) iget-object          v6, v11, Landroid/support/v7/widget/DefaultItemAnimator;->mChangeAnimations Ljava/util/ArrayList;
+	39      (00000098) iget-object          v7, v12, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->newHolder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	40      (0000009c) invoke-virtual       v6, v7, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	41      (000000a2) invoke-virtual       v3, v10, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->translationX(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	42      (000000a8) move-result-object   v6
+	43      (000000aa) invoke-virtual       v6, v10, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->translationY(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	44      (000000b0) move-result-object   v6
+	45      (000000b2) invoke-virtual       v11, Landroid/support/v7/widget/DefaultItemAnimator;->getChangeDuration()J
+	46      (000000b8) move-result-wide     v8
+	47      (000000ba) invoke-virtual       v6, v8, v9, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	48      (000000c0) move-result-object   v6
+	49      (000000c2) const/high16         v7, 16256 # [1.0]
+	50      (000000c6) invoke-virtual       v6, v7, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	51      (000000cc) move-result-object   v6
+	52      (000000ce) new-instance         v7, Landroid/support/v7/widget/DefaultItemAnimator$8;
+	53      (000000d2) invoke-direct        v7, v11, v12, v3, v2, Landroid/support/v7/widget/DefaultItemAnimator$8;-><init>(Landroid/support/v7/widget/DefaultItemAnimator; Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo; Landroid/support/v4/view/ViewPropertyAnimatorCompat; Landroid/view/View;)V
+	54      (000000d8) invoke-virtual       v6, v7, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setListener(Landroid/support/v4/view/ViewPropertyAnimatorListener;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	55      (000000de) move-result-object   v6
+	56      (000000e0) invoke-virtual       v6, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->start()V
+
+animateChangeImpl-BB@0xe6 : 
+	57      (000000e6) return-void          
+
+animateChangeImpl-BB@0xe8 : [ animateChangeImpl-BB@0xe ]
+	58      (000000e8) iget-object          v5, v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	59      (000000ec) goto                 -6f
+
+animateChangeImpl-BB@0xee : [ animateChangeImpl-BB@0x1a ]
+	60      (000000ee) move-object          v2, v6
+	61      (000000f0) goto                 -6b
+

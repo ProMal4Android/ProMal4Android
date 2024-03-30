@@ -1,0 +1,27 @@
+# Landroid/support/v7/widget/RecyclerView$ItemAnimator;->isRunning(Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;)Z [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.support.v7.widget.RecyclerView$ItemAnimator$ItemAnimatorFinishedListener
+#
+# - return:boolean
+
+isRunning-BB@0x0 : [ isRunning-BB@0xc isRunning-BB@0x16 ]
+	0       (00000000) invoke-virtual       v2, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->isRunning()Z
+	1       (00000006) move-result          v0
+	2       (00000008) if-eqz               v3, +7
+
+isRunning-BB@0xc : [ isRunning-BB@0x10 isRunning-BB@0x18 ]
+	3       (0000000c) if-nez               v0, +6
+
+isRunning-BB@0x10 : [ isRunning-BB@0x16 ]
+	4       (00000010) invoke-interface     v3, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;->onAnimationsFinished()V
+
+isRunning-BB@0x16 : 
+	5       (00000016) return               v0
+
+isRunning-BB@0x18 : [ isRunning-BB@0x16 ]
+	6       (00000018) iget-object          v1, v2, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->mFinishedListeners Ljava/util/ArrayList;
+	7       (0000001c) invoke-virtual       v1, v3, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	8       (00000022) goto                 -6
+

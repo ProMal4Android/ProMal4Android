@@ -1,0 +1,50 @@
+# Landroid/support/v4/widget/DrawerLayout;->isDrawerVisible(Landroid/view/View;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.view.View
+#
+# - return:boolean
+
+isDrawerVisible-BB@0x0 : [ isDrawerVisible-BB@0xc isDrawerVisible-BB@0x4a ]
+	0       (00000000) invoke-virtual       v3, v4, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
+	1       (00000006) move-result          v0
+	2       (00000008) if-nez               v0, +21
+
+isDrawerVisible-BB@0xc : 
+	3       (0000000c) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	4       (00000010) new-instance         v1, Ljava/lang/StringBuilder;
+	5       (00000014) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	6       (0000001a) const-string         v2, 'View '
+	7       (0000001e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000024) move-result-object   v1
+	9       (00000026) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	10      (0000002c) move-result-object   v1
+	11      (0000002e) const-string         v2, ' is not a drawer'
+	12      (00000032) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	15      (00000040) move-result-object   v1
+	16      (00000042) invoke-direct        v0, v1, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	17      (00000048) throw                v0
+
+isDrawerVisible-BB@0x4a : [ isDrawerVisible-BB@0x68 isDrawerVisible-BB@0x6c ]
+	18      (0000004a) invoke-virtual       v4, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	19      (00000050) move-result-object   v0
+	20      (00000052) check-cast           v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
+	21      (00000056) invoke-static        v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$000(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)F
+	22      (0000005c) move-result          v0
+	23      (0000005e) const/4              v1, 0
+	24      (00000060) cmpl-float           v0, v0, v1
+	25      (00000064) if-lez               v0, +4
+
+isDrawerVisible-BB@0x68 : [ isDrawerVisible-BB@0x6a ]
+	26      (00000068) const/4              v0, 1
+
+isDrawerVisible-BB@0x6a : 
+	27      (0000006a) return               v0
+
+isDrawerVisible-BB@0x6c : [ isDrawerVisible-BB@0x6a ]
+	28      (0000006c) const/4              v0, 0
+	29      (0000006e) goto                 -2
+

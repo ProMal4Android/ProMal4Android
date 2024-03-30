@@ -1,0 +1,85 @@
+# Landroid/support/v4/app/FragmentTabHost;->onAttachedToWindow()V [access_flags=protected]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:void
+
+onAttachedToWindow-BB@0x0 : [ onAttachedToWindow-BB@0x12 ]
+	0       (00000000) invoke-super         v6, Landroid/widget/TabHost;->onAttachedToWindow()V
+	1       (00000006) invoke-virtual       v6, Landroid/support/v4/app/FragmentTabHost;->getCurrentTabTag()Ljava/lang/String;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) const/4              v1, 0
+	4       (00000010) const/4              v2, 0
+
+onAttachedToWindow-BB@0x12 : [ onAttachedToWindow-BB@0x22 onAttachedToWindow-BB@0xaa ]
+	5       (00000012) iget-object          v4, v6, Landroid/support/v4/app/FragmentTabHost;->mTabs Ljava/util/ArrayList;
+	6       (00000016) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	7       (0000001c) move-result          v4
+	8       (0000001e) if-ge                v2, v4, +46
+
+onAttachedToWindow-BB@0x22 : [ onAttachedToWindow-BB@0x58 onAttachedToWindow-BB@0x84 ]
+	9       (00000022) iget-object          v4, v6, Landroid/support/v4/app/FragmentTabHost;->mTabs Ljava/util/ArrayList;
+	10      (00000026) invoke-virtual       v4, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	11      (0000002c) move-result-object   v3
+	12      (0000002e) check-cast           v3, Landroid/support/v4/app/FragmentTabHost$TabInfo;
+	13      (00000032) iget-object          v4, v6, Landroid/support/v4/app/FragmentTabHost;->mFragmentManager Landroid/support/v4/app/FragmentManager;
+	14      (00000036) invoke-static        v3, Landroid/support/v4/app/FragmentTabHost$TabInfo;->access$200(Landroid/support/v4/app/FragmentTabHost$TabInfo;)Ljava/lang/String;
+	15      (0000003c) move-result-object   v5
+	16      (0000003e) invoke-virtual       v4, v5, Landroid/support/v4/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/support/v4/app/Fragment;
+	17      (00000044) move-result-object   v4
+	18      (00000046) invoke-static        v3, v4, Landroid/support/v4/app/FragmentTabHost$TabInfo;->access$102(Landroid/support/v4/app/FragmentTabHost$TabInfo; Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment;
+	19      (0000004c) invoke-static        v3, Landroid/support/v4/app/FragmentTabHost$TabInfo;->access$100(Landroid/support/v4/app/FragmentTabHost$TabInfo;)Landroid/support/v4/app/Fragment;
+	20      (00000052) move-result-object   v4
+	21      (00000054) if-eqz               v4, +18
+
+onAttachedToWindow-BB@0x58 : [ onAttachedToWindow-BB@0x6c onAttachedToWindow-BB@0x84 ]
+	22      (00000058) invoke-static        v3, Landroid/support/v4/app/FragmentTabHost$TabInfo;->access$100(Landroid/support/v4/app/FragmentTabHost$TabInfo;)Landroid/support/v4/app/Fragment;
+	23      (0000005e) move-result-object   v4
+	24      (00000060) invoke-virtual       v4, Landroid/support/v4/app/Fragment;->isDetached()Z
+	25      (00000066) move-result          v4
+	26      (00000068) if-nez               v4, +e
+
+onAttachedToWindow-BB@0x6c : [ onAttachedToWindow-BB@0x80 onAttachedToWindow-BB@0x8a ]
+	27      (0000006c) invoke-static        v3, Landroid/support/v4/app/FragmentTabHost$TabInfo;->access$200(Landroid/support/v4/app/FragmentTabHost$TabInfo;)Ljava/lang/String;
+	28      (00000072) move-result-object   v4
+	29      (00000074) invoke-virtual       v4, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	30      (0000007a) move-result          v4
+	31      (0000007c) if-eqz               v4, +7
+
+onAttachedToWindow-BB@0x80 : [ onAttachedToWindow-BB@0x84 ]
+	32      (00000080) iput-object          v3, v6, Landroid/support/v4/app/FragmentTabHost;->mLastTab Landroid/support/v4/app/FragmentTabHost$TabInfo;
+
+onAttachedToWindow-BB@0x84 : [ onAttachedToWindow-BB@0x12 ]
+	33      (00000084) add-int/lit8         v2, v2, 1
+	34      (00000088) goto                 -3b
+
+onAttachedToWindow-BB@0x8a : [ onAttachedToWindow-BB@0x8e onAttachedToWindow-BB@0x9a ]
+	35      (0000008a) if-nez               v1, +8
+
+onAttachedToWindow-BB@0x8e : [ onAttachedToWindow-BB@0x9a ]
+	36      (0000008e) iget-object          v4, v6, Landroid/support/v4/app/FragmentTabHost;->mFragmentManager Landroid/support/v4/app/FragmentManager;
+	37      (00000092) invoke-virtual       v4, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
+	38      (00000098) move-result-object   v1
+
+onAttachedToWindow-BB@0x9a : [ onAttachedToWindow-BB@0x84 ]
+	39      (0000009a) invoke-static        v3, Landroid/support/v4/app/FragmentTabHost$TabInfo;->access$100(Landroid/support/v4/app/FragmentTabHost$TabInfo;)Landroid/support/v4/app/Fragment;
+	40      (000000a0) move-result-object   v4
+	41      (000000a2) invoke-virtual       v1, v4, Landroid/support/v4/app/FragmentTransaction;->detach(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
+	42      (000000a8) goto                 -12
+
+onAttachedToWindow-BB@0xaa : [ onAttachedToWindow-BB@0xbc onAttachedToWindow-BB@0xcc ]
+	43      (000000aa) const/4              v4, 1
+	44      (000000ac) iput-boolean         v4, v6, Landroid/support/v4/app/FragmentTabHost;->mAttached Z
+	45      (000000b0) invoke-direct        v6, v0, v1, Landroid/support/v4/app/FragmentTabHost;->doTabChanged(Ljava/lang/String; Landroid/support/v4/app/FragmentTransaction;)Landroid/support/v4/app/FragmentTransaction;
+	46      (000000b6) move-result-object   v1
+	47      (000000b8) if-eqz               v1, +a
+
+onAttachedToWindow-BB@0xbc : [ onAttachedToWindow-BB@0xcc ]
+	48      (000000bc) invoke-virtual       v1, Landroid/support/v4/app/FragmentTransaction;->commit()I
+	49      (000000c2) iget-object          v4, v6, Landroid/support/v4/app/FragmentTabHost;->mFragmentManager Landroid/support/v4/app/FragmentManager;
+	50      (000000c6) invoke-virtual       v4, Landroid/support/v4/app/FragmentManager;->executePendingTransactions()Z
+
+onAttachedToWindow-BB@0xcc : 
+	51      (000000cc) return-void          
+

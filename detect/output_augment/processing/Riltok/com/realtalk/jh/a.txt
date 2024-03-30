@@ -1,0 +1,51 @@
+# Lcom/realtalk/jh;->a(Ljava/lang/Class; Landroid/content/Context;)Z [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.Class
+# - v4:android.content.Context
+#
+# - return:boolean
+
+a-BB@0x0 : [ a-BB@0x14 a-BB@0x66 ]
+	0       (00000000) const-string         v0, 'activity'
+	1       (00000004) invoke-virtual       v4, v0, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) check-cast           v0, Landroid/app/ActivityManager;
+	4       (00000010) if-eqz               v0, +2b
+
+a-BB@0x14 : [ a-BB@0x2a ]
+	5       (00000014) const                v1, 2147483647 # [nan]
+	6       (0000001a) invoke-virtual       v0, v1, Landroid/app/ActivityManager;->getRunningServices(I)Ljava/util/List;
+	7       (00000020) move-result-object   v0
+	8       (00000022) invoke-interface     v0, Ljava/util/List;->iterator()Ljava/util/Iterator;
+	9       (00000028) move-result-object   v1
+
+a-BB@0x2a : [ a-BB@0x36 a-BB@0x66 ]
+	10      (0000002a) invoke-interface     v1, Ljava/util/Iterator;->hasNext()Z
+	11      (00000030) move-result          v0
+	12      (00000032) if-eqz               v0, +1a
+
+a-BB@0x36 : [ a-BB@0x62 a-BB@0x2a ]
+	13      (00000036) invoke-interface     v1, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	14      (0000003c) move-result-object   v0
+	15      (0000003e) check-cast           v0, Landroid/app/ActivityManager$RunningServiceInfo;
+	16      (00000042) invoke-virtual       v3, Ljava/lang/Class;->getName()Ljava/lang/String;
+	17      (00000048) move-result-object   v2
+	18      (0000004a) iget-object          v0, v0, Landroid/app/ActivityManager$RunningServiceInfo;->service Landroid/content/ComponentName;
+	19      (0000004e) invoke-virtual       v0, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+	20      (00000054) move-result-object   v0
+	21      (00000056) invoke-virtual       v2, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	22      (0000005c) move-result          v0
+	23      (0000005e) if-eqz               v0, -1a
+
+a-BB@0x62 : [ a-BB@0x64 ]
+	24      (00000062) const/4              v0, 1
+
+a-BB@0x64 : 
+	25      (00000064) return               v0
+
+a-BB@0x66 : [ a-BB@0x64 ]
+	26      (00000066) const/4              v0, 0
+	27      (00000068) goto                 -2
+

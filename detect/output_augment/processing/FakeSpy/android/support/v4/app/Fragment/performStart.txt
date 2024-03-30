@@ -1,0 +1,62 @@
+# Landroid/support/v4/app/Fragment;->performStart()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+performStart-BB@0x0 : [ performStart-BB@0x8 performStart-BB@0x1c ]
+	0       (00000000) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	1       (00000004) if-eqz               v0, +c
+
+performStart-BB@0x8 : [ performStart-BB@0x1c ]
+	2       (00000008) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	3       (0000000c) invoke-virtual       v0, Landroid/support/v4/app/FragmentManagerImpl;->noteStateNotSaved()V
+	4       (00000012) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	5       (00000016) invoke-virtual       v0, Landroid/support/v4/app/FragmentManagerImpl;->execPendingActions()Z
+
+performStart-BB@0x1c : [ performStart-BB@0x36 performStart-BB@0x74 ]
+	6       (0000001c) const/4              v0, 4
+	7       (0000001e) iput                 v0, v3, Landroid/support/v4/app/Fragment;->mState I
+	8       (00000022) const/4              v0, 0
+	9       (00000024) iput-boolean         v0, v3, Landroid/support/v4/app/Fragment;->mCalled Z
+	10      (00000028) invoke-virtual       v3, Landroid/support/v4/app/Fragment;->onStart()V
+	11      (0000002e) iget-boolean         v0, v3, Landroid/support/v4/app/Fragment;->mCalled Z
+	12      (00000032) if-nez               v0, +21
+
+performStart-BB@0x36 : 
+	13      (00000036) new-instance         v0, Landroid/support/v4/app/SuperNotCalledException;
+	14      (0000003a) new-instance         v1, Ljava/lang/StringBuilder;
+	15      (0000003e) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	16      (00000044) const-string         v2, 'Fragment '
+	17      (00000048) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	18      (0000004e) move-result-object   v1
+	19      (00000050) invoke-virtual       v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	20      (00000056) move-result-object   v1
+	21      (00000058) const-string         v2, ' did not call through to super.onStart()'
+	22      (0000005c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	23      (00000062) move-result-object   v1
+	24      (00000064) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	25      (0000006a) move-result-object   v1
+	26      (0000006c) invoke-direct        v0, v1, Landroid/support/v4/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
+	27      (00000072) throw                v0
+
+performStart-BB@0x74 : [ performStart-BB@0x7c performStart-BB@0x86 ]
+	28      (00000074) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	29      (00000078) if-eqz               v0, +7
+
+performStart-BB@0x7c : [ performStart-BB@0x86 ]
+	30      (0000007c) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	31      (00000080) invoke-virtual       v0, Landroid/support/v4/app/FragmentManagerImpl;->dispatchStart()V
+
+performStart-BB@0x86 : [ performStart-BB@0x8e performStart-BB@0x98 ]
+	32      (00000086) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mLoaderManager Landroid/support/v4/app/LoaderManagerImpl;
+	33      (0000008a) if-eqz               v0, +7
+
+performStart-BB@0x8e : [ performStart-BB@0x98 ]
+	34      (0000008e) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mLoaderManager Landroid/support/v4/app/LoaderManagerImpl;
+	35      (00000092) invoke-virtual       v0, Landroid/support/v4/app/LoaderManagerImpl;->doReportStart()V
+
+performStart-BB@0x98 : 
+	36      (00000098) return-void          
+

@@ -1,0 +1,214 @@
+# Landroid/support/v7/widget/AdapterHelper;->updatePositionWithPostponed(I I)I [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:int
+# - v13:int
+#
+# - return:int
+
+updatePositionWithPostponed-BB@0x0 : [ updatePositionWithPostponed-BB@0x18 ]
+	0       (00000000) const/16             v10, 8
+	1       (00000004) const/4              v9, 2
+	2       (00000006) const/4              v8, 1
+	3       (00000008) iget-object          v6, v11, Landroid/support/v7/widget/AdapterHelper;->mPostponedList Ljava/util/ArrayList;
+	4       (0000000c) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	5       (00000012) move-result          v0
+	6       (00000014) add-int/lit8         v2, v0, -1
+
+updatePositionWithPostponed-BB@0x18 : [ updatePositionWithPostponed-BB@0x1c updatePositionWithPostponed-BB@0x146 ]
+	7       (00000018) if-ltz               v2, +97
+
+updatePositionWithPostponed-BB@0x1c : [ updatePositionWithPostponed-BB@0x34 updatePositionWithPostponed-BB@0xfa ]
+	8       (0000001c) iget-object          v6, v11, Landroid/support/v7/widget/AdapterHelper;->mPostponedList Ljava/util/ArrayList;
+	9       (00000020) invoke-virtual       v6, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	10      (00000026) move-result-object   v4
+	11      (00000028) check-cast           v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+	12      (0000002c) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	13      (00000030) if-ne                v6, v10, +65
+
+updatePositionWithPostponed-BB@0x34 : [ updatePositionWithPostponed-BB@0x40 updatePositionWithPostponed-BB@0x72 ]
+	14      (00000034) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	15      (00000038) iget                 v7, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	16      (0000003c) if-ge                v6, v7, +1b
+
+updatePositionWithPostponed-BB@0x40 : [ updatePositionWithPostponed-BB@0x48 ]
+	17      (00000040) iget                 v5, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	18      (00000044) iget                 v1, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+
+updatePositionWithPostponed-BB@0x48 : [ updatePositionWithPostponed-BB@0x4c updatePositionWithPostponed-BB@0xb6 ]
+	19      (00000048) if-lt                v12, v5, +37
+
+updatePositionWithPostponed-BB@0x4c : [ updatePositionWithPostponed-BB@0x50 updatePositionWithPostponed-BB@0xb6 ]
+	20      (0000004c) if-gt                v12, v1, +35
+
+updatePositionWithPostponed-BB@0x50 : [ updatePositionWithPostponed-BB@0x58 updatePositionWithPostponed-BB@0x8e ]
+	21      (00000050) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	22      (00000054) if-ne                v5, v6, +1d
+
+updatePositionWithPostponed-BB@0x58 : [ updatePositionWithPostponed-BB@0x5c updatePositionWithPostponed-BB@0x7c ]
+	23      (00000058) if-ne                v13, v8, +12
+
+updatePositionWithPostponed-BB@0x5c : [ updatePositionWithPostponed-BB@0x68 ]
+	24      (0000005c) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	25      (00000060) add-int/lit8         v6, v6, 1
+	26      (00000064) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+
+updatePositionWithPostponed-BB@0x68 : [ updatePositionWithPostponed-BB@0x6c ]
+	27      (00000068) add-int/lit8         v12, v12, 1
+
+updatePositionWithPostponed-BB@0x6c : [ updatePositionWithPostponed-BB@0x18 ]
+	28      (0000006c) add-int/lit8         v2, v2, -1
+	29      (00000070) goto                 -2c
+
+updatePositionWithPostponed-BB@0x72 : [ updatePositionWithPostponed-BB@0x48 ]
+	30      (00000072) iget                 v5, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	31      (00000076) iget                 v1, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	32      (0000007a) goto                 -19
+
+updatePositionWithPostponed-BB@0x7c : [ updatePositionWithPostponed-BB@0x80 updatePositionWithPostponed-BB@0x68 ]
+	33      (0000007c) if-ne                v13, v9, -a
+
+updatePositionWithPostponed-BB@0x80 : [ updatePositionWithPostponed-BB@0x68 ]
+	34      (00000080) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	35      (00000084) add-int/lit8         v6, v6, -1
+	36      (00000088) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	37      (0000008c) goto                 -12
+
+updatePositionWithPostponed-BB@0x8e : [ updatePositionWithPostponed-BB@0x92 updatePositionWithPostponed-BB@0xa4 ]
+	38      (0000008e) if-ne                v13, v8, +b
+
+updatePositionWithPostponed-BB@0x92 : [ updatePositionWithPostponed-BB@0x9e ]
+	39      (00000092) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	40      (00000096) add-int/lit8         v6, v6, 1
+	41      (0000009a) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+
+updatePositionWithPostponed-BB@0x9e : [ updatePositionWithPostponed-BB@0x6c ]
+	42      (0000009e) add-int/lit8         v12, v12, -1
+	43      (000000a2) goto                 -1b
+
+updatePositionWithPostponed-BB@0xa4 : [ updatePositionWithPostponed-BB@0xa8 updatePositionWithPostponed-BB@0x9e ]
+	44      (000000a4) if-ne                v13, v9, -3
+
+updatePositionWithPostponed-BB@0xa8 : [ updatePositionWithPostponed-BB@0x9e ]
+	45      (000000a8) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	46      (000000ac) add-int/lit8         v6, v6, -1
+	47      (000000b0) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	48      (000000b4) goto                 -b
+
+updatePositionWithPostponed-BB@0xb6 : [ updatePositionWithPostponed-BB@0xbe updatePositionWithPostponed-BB@0x6c ]
+	49      (000000b6) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	50      (000000ba) if-ge                v12, v6, -27
+
+updatePositionWithPostponed-BB@0xbe : [ updatePositionWithPostponed-BB@0xc2 updatePositionWithPostponed-BB@0xdc ]
+	51      (000000be) if-ne                v13, v8, +f
+
+updatePositionWithPostponed-BB@0xc2 : [ updatePositionWithPostponed-BB@0x6c ]
+	52      (000000c2) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	53      (000000c6) add-int/lit8         v6, v6, 1
+	54      (000000ca) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	55      (000000ce) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	56      (000000d2) add-int/lit8         v6, v6, 1
+	57      (000000d6) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	58      (000000da) goto                 -37
+
+updatePositionWithPostponed-BB@0xdc : [ updatePositionWithPostponed-BB@0xe0 updatePositionWithPostponed-BB@0x6c ]
+	59      (000000dc) if-ne                v13, v9, -38
+
+updatePositionWithPostponed-BB@0xe0 : [ updatePositionWithPostponed-BB@0x6c ]
+	60      (000000e0) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	61      (000000e4) add-int/lit8         v6, v6, -1
+	62      (000000e8) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	63      (000000ec) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	64      (000000f0) add-int/lit8         v6, v6, -1
+	65      (000000f4) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	66      (000000f8) goto                 -46
+
+updatePositionWithPostponed-BB@0xfa : [ updatePositionWithPostponed-BB@0x102 updatePositionWithPostponed-BB@0x122 ]
+	67      (000000fa) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	68      (000000fe) if-gt                v6, v12, +12
+
+updatePositionWithPostponed-BB@0x102 : [ updatePositionWithPostponed-BB@0x10a updatePositionWithPostponed-BB@0x112 ]
+	69      (00000102) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	70      (00000106) if-ne                v6, v8, +6
+
+updatePositionWithPostponed-BB@0x10a : [ updatePositionWithPostponed-BB@0x6c ]
+	71      (0000010a) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	72      (0000010e) sub-int/2addr        v12, v6
+	73      (00000110) goto                 -52
+
+updatePositionWithPostponed-BB@0x112 : [ updatePositionWithPostponed-BB@0x11a updatePositionWithPostponed-BB@0x6c ]
+	74      (00000112) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	75      (00000116) if-ne                v6, v9, -55
+
+updatePositionWithPostponed-BB@0x11a : [ updatePositionWithPostponed-BB@0x6c ]
+	76      (0000011a) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	77      (0000011e) add-int/2addr        v12, v6
+	78      (00000120) goto                 -5a
+
+updatePositionWithPostponed-BB@0x122 : [ updatePositionWithPostponed-BB@0x126 updatePositionWithPostponed-BB@0x134 ]
+	79      (00000122) if-ne                v13, v8, +9
+
+updatePositionWithPostponed-BB@0x126 : [ updatePositionWithPostponed-BB@0x6c ]
+	80      (00000126) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	81      (0000012a) add-int/lit8         v6, v6, 1
+	82      (0000012e) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	83      (00000132) goto                 -63
+
+updatePositionWithPostponed-BB@0x134 : [ updatePositionWithPostponed-BB@0x138 updatePositionWithPostponed-BB@0x6c ]
+	84      (00000134) if-ne                v13, v9, -64
+
+updatePositionWithPostponed-BB@0x138 : [ updatePositionWithPostponed-BB@0x6c ]
+	85      (00000138) iget                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	86      (0000013c) add-int/lit8         v6, v6, -1
+	87      (00000140) iput                 v6, v4, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	88      (00000144) goto                 -6c
+
+updatePositionWithPostponed-BB@0x146 : [ updatePositionWithPostponed-BB@0x156 ]
+	89      (00000146) iget-object          v6, v11, Landroid/support/v7/widget/AdapterHelper;->mPostponedList Ljava/util/ArrayList;
+	90      (0000014a) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	91      (00000150) move-result          v6
+	92      (00000152) add-int/lit8         v2, v6, -1
+
+updatePositionWithPostponed-BB@0x156 : [ updatePositionWithPostponed-BB@0x15a updatePositionWithPostponed-BB@0x1b6 ]
+	93      (00000156) if-ltz               v2, +30
+
+updatePositionWithPostponed-BB@0x15a : [ updatePositionWithPostponed-BB@0x172 updatePositionWithPostponed-BB@0x19c ]
+	94      (0000015a) iget-object          v6, v11, Landroid/support/v7/widget/AdapterHelper;->mPostponedList Ljava/util/ArrayList;
+	95      (0000015e) invoke-virtual       v6, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	96      (00000164) move-result-object   v3
+	97      (00000166) check-cast           v3, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+	98      (0000016a) iget                 v6, v3, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	99      (0000016e) if-ne                v6, v10, +17
+
+updatePositionWithPostponed-BB@0x172 : [ updatePositionWithPostponed-BB@0x17e updatePositionWithPostponed-BB@0x186 ]
+	100     (00000172) iget                 v6, v3, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	101     (00000176) iget                 v7, v3, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	102     (0000017a) if-eq                v6, v7, +6
+
+updatePositionWithPostponed-BB@0x17e : [ updatePositionWithPostponed-BB@0x186 updatePositionWithPostponed-BB@0x196 ]
+	103     (0000017e) iget                 v6, v3, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	104     (00000182) if-gez               v6, +a
+
+updatePositionWithPostponed-BB@0x186 : [ updatePositionWithPostponed-BB@0x196 ]
+	105     (00000186) iget-object          v6, v11, Landroid/support/v7/widget/AdapterHelper;->mPostponedList Ljava/util/ArrayList;
+	106     (0000018a) invoke-virtual       v6, v2, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+	107     (00000190) invoke-virtual       v11, v3, Landroid/support/v7/widget/AdapterHelper;->recycleUpdateOp(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+
+updatePositionWithPostponed-BB@0x196 : [ updatePositionWithPostponed-BB@0x156 ]
+	108     (00000196) add-int/lit8         v2, v2, -1
+	109     (0000019a) goto                 -22
+
+updatePositionWithPostponed-BB@0x19c : [ updatePositionWithPostponed-BB@0x1a4 updatePositionWithPostponed-BB@0x196 ]
+	110     (0000019c) iget                 v6, v3, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	111     (000001a0) if-gtz               v6, -5
+
+updatePositionWithPostponed-BB@0x1a4 : [ updatePositionWithPostponed-BB@0x196 ]
+	112     (000001a4) iget-object          v6, v11, Landroid/support/v7/widget/AdapterHelper;->mPostponedList Ljava/util/ArrayList;
+	113     (000001a8) invoke-virtual       v6, v2, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+	114     (000001ae) invoke-virtual       v11, v3, Landroid/support/v7/widget/AdapterHelper;->recycleUpdateOp(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+	115     (000001b4) goto                 -f
+
+updatePositionWithPostponed-BB@0x1b6 : 
+	116     (000001b6) return               v12
+

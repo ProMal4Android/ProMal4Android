@@ -1,0 +1,63 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->freeBackStackIndex(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:int
+#
+# - return:void
+
+freeBackStackIndex-BB@0x0 : [ freeBackStackIndex-BB@0x2 ]
+	0       (00000000) monitor-enter        v3
+
+freeBackStackIndex-BB@0x2 : [ freeBackStackIndex-BB@0x16 freeBackStackIndex-BB@0x24 ]
+	1       (00000002) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mBackStackIndices Ljava/util/ArrayList;
+	2       (00000006) const/4              v1, 0
+	3       (00000008) invoke-virtual       v0, v4, v1, Ljava/util/ArrayList;->set(I Ljava/lang/Object;)Ljava/lang/Object;
+	4       (0000000e) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAvailBackStackIndices Ljava/util/ArrayList;
+	5       (00000012) if-nez               v0, +9
+	2:75
+	(Ljava/lang/Throwable; -> 72 freeBackStackIndex-BB@0x72)
+
+freeBackStackIndex-BB@0x16 : [ freeBackStackIndex-BB@0x24 ]
+	6       (00000016) new-instance         v0, Ljava/util/ArrayList;
+	7       (0000001a) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	8       (00000020) iput-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAvailBackStackIndices Ljava/util/ArrayList;
+	2:75
+	(Ljava/lang/Throwable; -> 72 freeBackStackIndex-BB@0x72)
+
+freeBackStackIndex-BB@0x24 : [ freeBackStackIndex-BB@0x2c freeBackStackIndex-BB@0x5c ]
+	9       (00000024) sget-boolean         v0, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG Z
+	10      (00000028) if-eqz               v0, +1a
+	2:75
+	(Ljava/lang/Throwable; -> 72 freeBackStackIndex-BB@0x72)
+
+freeBackStackIndex-BB@0x2c : [ freeBackStackIndex-BB@0x5c ]
+	11      (0000002c) const-string         v0, 'FragmentManager'
+	12      (00000030) new-instance         v1, Ljava/lang/StringBuilder;
+	13      (00000034) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	14      (0000003a) const-string         v2, 'Freeing back stack index '
+	15      (0000003e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (00000044) move-result-object   v1
+	17      (00000046) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	18      (0000004c) move-result-object   v1
+	19      (0000004e) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	20      (00000054) move-result-object   v1
+	21      (00000056) invoke-static        v0, v1, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	2:75
+	(Ljava/lang/Throwable; -> 72 freeBackStackIndex-BB@0x72)
+
+freeBackStackIndex-BB@0x5c : 
+	22      (0000005c) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAvailBackStackIndices Ljava/util/ArrayList;
+	23      (00000060) invoke-static        v4, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	24      (00000066) move-result-object   v1
+	25      (00000068) invoke-virtual       v0, v1, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	26      (0000006e) monitor-exit         v3
+	27      (00000070) return-void          
+	2:75
+	(Ljava/lang/Throwable; -> 72 freeBackStackIndex-BB@0x72)
+
+freeBackStackIndex-BB@0x72 : 
+	28      (00000072) move-exception       v0
+	29      (00000074) monitor-exit         v3
+	30      (00000076) throw                v0
+

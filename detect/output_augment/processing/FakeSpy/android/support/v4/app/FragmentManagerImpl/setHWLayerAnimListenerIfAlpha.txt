@@ -1,0 +1,77 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->setHWLayerAnimListenerIfAlpha(Landroid/view/View; Landroid/view/animation/Animation;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.view.View
+# - v7:android.view.animation.Animation
+#
+# - return:void
+
+setHWLayerAnimListenerIfAlpha-BB@0x0 : [ setHWLayerAnimListenerIfAlpha-BB@0x4 setHWLayerAnimListenerIfAlpha-BB@0x8 ]
+	0       (00000000) if-eqz               v6, +4
+
+setHWLayerAnimListenerIfAlpha-BB@0x4 : [ setHWLayerAnimListenerIfAlpha-BB@0x8 setHWLayerAnimListenerIfAlpha-BB@0xa ]
+	1       (00000004) if-nez               v7, +3
+
+setHWLayerAnimListenerIfAlpha-BB@0x8 : 
+	2       (00000008) return-void          
+
+setHWLayerAnimListenerIfAlpha-BB@0xa : [ setHWLayerAnimListenerIfAlpha-BB@0x16 setHWLayerAnimListenerIfAlpha-BB@0x8 ]
+	3       (0000000a) invoke-static        v6, v7, Landroid/support/v4/app/FragmentManagerImpl;->shouldRunOnHWLayer(Landroid/view/View; Landroid/view/animation/Animation;)Z
+	4       (00000010) move-result          v3
+	5       (00000012) if-eqz               v3, -5
+
+setHWLayerAnimListenerIfAlpha-BB@0x16 : [ setHWLayerAnimListenerIfAlpha-BB@0x18 ]
+	6       (00000016) const/4              v2, 0
+
+setHWLayerAnimListenerIfAlpha-BB@0x18 : [ setHWLayerAnimListenerIfAlpha-BB@0x20 setHWLayerAnimListenerIfAlpha-BB@0x40 ]
+	7       (00000018) sget-object          v3, Landroid/support/v4/app/FragmentManagerImpl;->sAnimationListenerField Ljava/lang/reflect/Field;
+	8       (0000001c) if-nez               v3, +12
+	18:53
+	(Ljava/lang/NoSuchFieldException; -> 66 setHWLayerAnimListenerIfAlpha-BB@0x66)
+	(Ljava/lang/IllegalAccessException; -> 78 setHWLayerAnimListenerIfAlpha-BB@0x78)
+
+setHWLayerAnimListenerIfAlpha-BB@0x20 : [ setHWLayerAnimListenerIfAlpha-BB@0x40 ]
+	9       (00000020) const-class          v3, Landroid/view/animation/Animation;
+	10      (00000024) const-string         v4, 'mListener'
+	11      (00000028) invoke-virtual       v3, v4, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+	12      (0000002e) move-result-object   v3
+	13      (00000030) sput-object          v3, Landroid/support/v4/app/FragmentManagerImpl;->sAnimationListenerField Ljava/lang/reflect/Field;
+	14      (00000034) sget-object          v3, Landroid/support/v4/app/FragmentManagerImpl;->sAnimationListenerField Ljava/lang/reflect/Field;
+	15      (00000038) const/4              v4, 1
+	16      (0000003a) invoke-virtual       v3, v4, Ljava/lang/reflect/Field;->setAccessible(Z)V
+	18:53
+	(Ljava/lang/NoSuchFieldException; -> 66 setHWLayerAnimListenerIfAlpha-BB@0x66)
+	(Ljava/lang/IllegalAccessException; -> 78 setHWLayerAnimListenerIfAlpha-BB@0x78)
+
+setHWLayerAnimListenerIfAlpha-BB@0x40 : [ setHWLayerAnimListenerIfAlpha-BB@0x54 ]
+	17      (00000040) sget-object          v3, Landroid/support/v4/app/FragmentManagerImpl;->sAnimationListenerField Ljava/lang/reflect/Field;
+	18      (00000044) invoke-virtual       v3, v7, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	19      (0000004a) move-result-object   v3
+	20      (0000004c) move-object          v0, v3
+	21      (0000004e) check-cast           v0, Landroid/view/animation/Animation$AnimationListener;
+	22      (00000052) move-object          v2, v0
+	18:53
+	(Ljava/lang/NoSuchFieldException; -> 66 setHWLayerAnimListenerIfAlpha-BB@0x66)
+	(Ljava/lang/IllegalAccessException; -> 78 setHWLayerAnimListenerIfAlpha-BB@0x78)
+
+setHWLayerAnimListenerIfAlpha-BB@0x54 : [ setHWLayerAnimListenerIfAlpha-BB@0x8 ]
+	23      (00000054) new-instance         v3, Landroid/support/v4/app/FragmentManagerImpl$AnimateOnHWLayerIfNeededListener;
+	24      (00000058) invoke-direct        v3, v6, v7, v2, Landroid/support/v4/app/FragmentManagerImpl$AnimateOnHWLayerIfNeededListener;-><init>(Landroid/view/View; Landroid/view/animation/Animation; Landroid/view/animation/Animation$AnimationListener;)V
+	25      (0000005e) invoke-virtual       v7, v3, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+	26      (00000064) goto                 -2e
+
+setHWLayerAnimListenerIfAlpha-BB@0x66 : [ setHWLayerAnimListenerIfAlpha-BB@0x54 ]
+	27      (00000066) move-exception       v1
+	28      (00000068) const-string         v3, 'FragmentManager'
+	29      (0000006c) const-string         v4, 'No field with the name mListener is found in Animation class'
+	30      (00000070) invoke-static        v3, v4, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	31      (00000076) goto                 -11
+
+setHWLayerAnimListenerIfAlpha-BB@0x78 : [ setHWLayerAnimListenerIfAlpha-BB@0x54 ]
+	32      (00000078) move-exception       v1
+	33      (0000007a) const-string         v3, 'FragmentManager'
+	34      (0000007e) const-string         v4, "Cannot access Animation's mListener field"
+	35      (00000082) invoke-static        v3, v4, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	36      (00000088) goto                 -1a
+

@@ -1,0 +1,33 @@
+# Landroid/support/v4/app/FragmentState;-><init>(Landroid/support/v4/app/Fragment;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.support.v4.app.Fragment
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-direct        v1, Ljava/lang/Object;-><init>()V
+	1       (00000006) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) invoke-virtual       v0, Ljava/lang/Class;->getName()Ljava/lang/String;
+	4       (00000014) move-result-object   v0
+	5       (00000016) iput-object          v0, v1, Landroid/support/v4/app/FragmentState;->mClassName Ljava/lang/String;
+	6       (0000001a) iget                 v0, v2, Landroid/support/v4/app/Fragment;->mIndex I
+	7       (0000001e) iput                 v0, v1, Landroid/support/v4/app/FragmentState;->mIndex I
+	8       (00000022) iget-boolean         v0, v2, Landroid/support/v4/app/Fragment;->mFromLayout Z
+	9       (00000026) iput-boolean         v0, v1, Landroid/support/v4/app/FragmentState;->mFromLayout Z
+	10      (0000002a) iget                 v0, v2, Landroid/support/v4/app/Fragment;->mFragmentId I
+	11      (0000002e) iput                 v0, v1, Landroid/support/v4/app/FragmentState;->mFragmentId I
+	12      (00000032) iget                 v0, v2, Landroid/support/v4/app/Fragment;->mContainerId I
+	13      (00000036) iput                 v0, v1, Landroid/support/v4/app/FragmentState;->mContainerId I
+	14      (0000003a) iget-object          v0, v2, Landroid/support/v4/app/Fragment;->mTag Ljava/lang/String;
+	15      (0000003e) iput-object          v0, v1, Landroid/support/v4/app/FragmentState;->mTag Ljava/lang/String;
+	16      (00000042) iget-boolean         v0, v2, Landroid/support/v4/app/Fragment;->mRetainInstance Z
+	17      (00000046) iput-boolean         v0, v1, Landroid/support/v4/app/FragmentState;->mRetainInstance Z
+	18      (0000004a) iget-boolean         v0, v2, Landroid/support/v4/app/Fragment;->mDetached Z
+	19      (0000004e) iput-boolean         v0, v1, Landroid/support/v4/app/FragmentState;->mDetached Z
+	20      (00000052) iget-object          v0, v2, Landroid/support/v4/app/Fragment;->mArguments Landroid/os/Bundle;
+	21      (00000056) iput-object          v0, v1, Landroid/support/v4/app/FragmentState;->mArguments Landroid/os/Bundle;
+	22      (0000005a) return-void          
+

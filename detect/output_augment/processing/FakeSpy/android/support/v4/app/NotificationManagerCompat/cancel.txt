@@ -1,0 +1,28 @@
+# Landroid/support/v4/app/NotificationManagerCompat;->cancel(Ljava/lang/String; I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.String
+# - v4:int
+#
+# - return:void
+
+cancel-BB@0x0 : [ cancel-BB@0x1a cancel-BB@0x36 ]
+	0       (00000000) sget-object          v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL Landroid/support/v4/app/NotificationManagerCompat$Impl;
+	1       (00000004) iget-object          v1, v2, Landroid/support/v4/app/NotificationManagerCompat;->mNotificationManager Landroid/app/NotificationManager;
+	2       (00000008) invoke-interface     v0, v1, v3, v4, Landroid/support/v4/app/NotificationManagerCompat$Impl;->cancelNotification(Landroid/app/NotificationManager; Ljava/lang/String; I)V
+	3       (0000000e) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	4       (00000012) const/16             v1, 19
+	5       (00000016) if-gt                v0, v1, +10
+
+cancel-BB@0x1a : [ cancel-BB@0x36 ]
+	6       (0000001a) new-instance         v0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;
+	7       (0000001e) iget-object          v1, v2, Landroid/support/v4/app/NotificationManagerCompat;->mContext Landroid/content/Context;
+	8       (00000022) invoke-virtual       v1, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	9       (00000028) move-result-object   v1
+	10      (0000002a) invoke-direct        v0, v1, v4, v3, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;-><init>(Ljava/lang/String; I Ljava/lang/String;)V
+	11      (00000030) invoke-direct        v2, v0, Landroid/support/v4/app/NotificationManagerCompat;->pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V
+
+cancel-BB@0x36 : 
+	12      (00000036) return-void          
+

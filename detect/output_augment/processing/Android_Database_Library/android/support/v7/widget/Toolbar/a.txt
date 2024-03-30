@@ -1,0 +1,104 @@
+# Landroid/support/v7/widget/Toolbar;->a(Landroid/view/View; I)I [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.view.View
+# - v8:int
+#
+# - return:int
+
+a-BB@0x0 : [ a-BB@0x1a a-BB@0x24 ]
+	0       (00000000) invoke-virtual       v7, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	1       (00000006) move-result-object   v0
+	2       (00000008) check-cast           v0, Landroid/support/v7/widget/Toolbar$b;
+	3       (0000000c) invoke-virtual       v7, Landroid/view/View;->getMeasuredHeight()I
+	4       (00000012) move-result          v7
+	5       (00000014) const/4              v1, 0
+	6       (00000016) if-lez               v8, +7
+
+a-BB@0x1a : [ a-BB@0x26 ]
+	7       (0000001a) sub-int              v8, v7, v8
+	8       (0000001e) div-int/lit8         v8, v8, 2
+	9       (00000022) goto                 +2
+
+a-BB@0x24 : [ a-BB@0x26 ]
+	10      (00000024) const/4              v8, 0
+
+a-BB@0x26 : [ a-BB@0x3e a-BB@0x4e ]
+	11      (00000026) iget                 v2, v0, La/a/a/a/a;->a I
+	12      (0000002a) and-int/lit8         v2, v2, 112
+	13      (0000002e) const/16             v3, 16
+	14      (00000032) const/16             v4, 80
+	15      (00000036) const/16             v5, 48
+	16      (0000003a) if-eq                v2, v3, +a
+
+a-BB@0x3e : [ a-BB@0x42 a-BB@0x4e ]
+	17      (0000003e) if-eq                v2, v5, +8
+
+a-BB@0x42 : [ a-BB@0x46 a-BB@0x4e ]
+	18      (00000042) if-eq                v2, v4, +6
+
+a-BB@0x46 : [ a-BB@0x4e ]
+	19      (00000046) iget                 v2, v6, Landroid/support/v7/widget/Toolbar;->u I
+	20      (0000004a) and-int/lit8         v2, v2, 112
+
+a-BB@0x4e : [ a-BB@0x52 a-BB@0xc4 ]
+	21      (0000004e) if-eq                v2, v5, +3b
+
+a-BB@0x52 : [ a-BB@0x56 a-BB@0xa6 ]
+	22      (00000052) if-eq                v2, v4, +2a
+
+a-BB@0x56 : [ a-BB@0x82 a-BB@0x86 ]
+	23      (00000056) invoke-virtual       v6, Landroid/view/ViewGroup;->getPaddingTop()I
+	24      (0000005c) move-result          v8
+	25      (0000005e) invoke-virtual       v6, Landroid/view/ViewGroup;->getPaddingBottom()I
+	26      (00000064) move-result          v2
+	27      (00000066) invoke-virtual       v6, Landroid/view/ViewGroup;->getHeight()I
+	28      (0000006c) move-result          v3
+	29      (0000006e) sub-int              v4, v3, v8
+	30      (00000072) sub-int/2addr        v4, v2
+	31      (00000074) sub-int/2addr        v4, v7
+	32      (00000076) div-int/lit8         v4, v4, 2
+	33      (0000007a) iget                 v5, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin I
+	34      (0000007e) if-ge                v4, v5, +4
+
+a-BB@0x82 : [ a-BB@0xa2 ]
+	35      (00000082) move                 v4, v5
+	36      (00000084) goto                 +f
+
+a-BB@0x86 : [ a-BB@0x96 a-BB@0xa2 ]
+	37      (00000086) sub-int/2addr        v3, v2
+	38      (00000088) sub-int/2addr        v3, v7
+	39      (0000008a) sub-int/2addr        v3, v4
+	40      (0000008c) sub-int/2addr        v3, v8
+	41      (0000008e) iget                 v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin I
+	42      (00000092) if-ge                v3, v7, +8
+
+a-BB@0x96 : [ a-BB@0xa2 ]
+	43      (00000096) sub-int/2addr        v7, v3
+	44      (00000098) sub-int/2addr        v4, v7
+	45      (0000009a) invoke-static        v1, v4, Ljava/lang/Math;->max(I I)I
+	46      (000000a0) move-result          v4
+
+a-BB@0xa2 : 
+	47      (000000a2) add-int/2addr        v8, v4
+	48      (000000a4) return               v8
+
+a-BB@0xa6 : 
+	49      (000000a6) invoke-virtual       v6, Landroid/view/ViewGroup;->getHeight()I
+	50      (000000ac) move-result          v1
+	51      (000000ae) invoke-virtual       v6, Landroid/view/ViewGroup;->getPaddingBottom()I
+	52      (000000b4) move-result          v2
+	53      (000000b6) sub-int/2addr        v1, v2
+	54      (000000b8) sub-int/2addr        v1, v7
+	55      (000000ba) iget                 v7, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin I
+	56      (000000be) sub-int/2addr        v1, v7
+	57      (000000c0) sub-int/2addr        v1, v8
+	58      (000000c2) return               v1
+
+a-BB@0xc4 : 
+	59      (000000c4) invoke-virtual       v6, Landroid/view/ViewGroup;->getPaddingTop()I
+	60      (000000ca) move-result          v7
+	61      (000000cc) sub-int/2addr        v7, v8
+	62      (000000ce) return               v7
+

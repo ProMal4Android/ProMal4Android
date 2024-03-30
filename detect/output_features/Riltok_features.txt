@@ -1,0 +1,3443 @@
+android.permission.CHANGE_WIFI_STATE
+android.permission.REAL_GET_TASKS 
+android.permission.READ_SMS
+android.permission.RECEIVE_BOOT_COMPLETED
+android.permission.ACCESS_NETWORK_STATE
+android.permission.READ_CONTACTS
+android.permission.READ_PHONE_STATE
+android.permission.CHANGE_NETWORK_STATE
+android.permission.INTERNET
+android.permission.GET_TASKS
+android.permission.SEND_SMS
+android.permission.BIND_ACCESSIBILITY_SERVICE
+android.permission.SYSTEM_ALERT_WINDOW
+android.permission.WRITE_SETTINGS
+android.permission.ACCESS_WIFI_STATE
+android.permission.WAKE_LOCK
+android.permission.RECEIVE_SMS
+android.permission.VIBRATE
+android.permission.USES_POLICY_FORCE_LOCK
+
+android.intent.action.MAIN
+android.intent.category.LAUNCHER
+android.intent.action.SEND
+android.intent.action.SENDTO
+android.intent.category.DEFAULT
+android.intent.category.BROWSABLE
+android.intent.action.RESPOND_VIA_MESSAGE
+android.intent.action.BOOT_COMPLETED
+android.intent.action.QUICKBOOT_POWERON
+android.intent.action.USER_PRESENT
+android.intent.action.PACKAGE_ADDED
+android.intent.action.PACKAGE_REMOVED
+android.intent.action.PHONE_STATE
+android.intent.action.NEW_OUTGOING_CALL
+android.intent.action.ACTION_BATTERY_LOW
+android.intent.action.ACTION_BATTERY_OKAY
+android.intent.action.ACTION_POWER_CONNECTED
+android.intent.action.ACTION_POWER_DISCONNECTED
+android.intent.action.REBOOT
+
+8850 - Lcom/realtalk/rcs/AdReceiver;-><init>:
+android/app/admin/DeviceAdminReceiver
+
+8852 - Lcom/realtalk/rcs/AdReceiver;->onReceive:
+android/app/admin/DeviceAdminReceiver
+
+17 - Landroid/support/design/internal/BaselineLayout;->onMeasure:
+java/lang/Math;->max
+
+85 - Lcom/realtalk/hu;->b:
+java/lang/Math;->max
+
+132 - Lcom/realtalk/hu;->onMeasure:
+java/lang/Math;->max
+
+332 - Lcom/realtalk/hp;-><init>:
+java/lang/Math;->max
+java/util/ArrayList;->add
+
+439 - Lcom/realtalk/ia$i;->a:
+java/lang/Math;->max
+android/util/Log;->e
+
+566 - Lcom/realtalk/ia$i;->a:
+java/lang/Math;->max
+
+681 - Lcom/realtalk/ia;->onTouchEvent:
+java/lang/Math;->max
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+android/util/Log;->e
+
+851 - Landroid/support/design/widget/CoordinatorLayout;->a:
+java/lang/Math;->max
+
+890 - Landroid/support/design/widget/AppBarLayout;->getTotalScrollRange:
+java/lang/Math;->max
+
+920 - Landroid/support/design/widget/AppBarLayout;->getDownNestedPreScrollRange:
+java/lang/Math;->max
+
+932 - Landroid/support/design/widget/AppBarLayout;->getDownNestedScrollRange:
+java/lang/Math;->max
+
+1052 - Landroid/support/design/widget/BottomSheetBehavior;->c:
+java/lang/Math;->max
+
+1060 - Landroid/support/design/widget/BottomSheetBehavior;->a:
+java/lang/Math;->max
+
+1166 - Landroid/support/design/widget/CoordinatorLayout;->a:
+java/lang/Math;->max
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+1222 - Landroid/support/design/widget/CoordinatorLayout;->a:
+java/lang/Math;->max
+
+1287 - Landroid/support/design/widget/CoordinatorLayout;->a:
+java/lang/Math;->max
+
+1303 - Landroid/support/design/widget/CoordinatorLayout;->getSuggestedMinimumHeight:
+java/lang/Math;->max
+
+1305 - Landroid/support/design/widget/CoordinatorLayout;->getSuggestedMinimumWidth:
+java/lang/Math;->max
+
+1317 - Landroid/support/design/widget/CoordinatorLayout;->onMeasure:
+java/lang/Math;->max
+
+1376 - Landroid/support/design/widget/FloatingActionButton;->getSizeDimension:
+android/content/res/Resources;->getConfiguration
+java/lang/Math;->max
+
+1530 - Landroid/support/design/widget/SwipeDismissBehavior;->a:
+java/lang/Math;->max
+
+2011 - Landroid/support/v4/widget/NestedScrollView;->getScrollRange:
+java/lang/Math;->max
+
+2022 - Landroid/support/v4/widget/NestedScrollView$a;->a:
+java/lang/Math;->max
+
+2041 - Landroid/support/v4/widget/NestedScrollView;->a:
+java/lang/Math;->max
+
+2054 - Landroid/support/v4/widget/NestedScrollView;->a:
+java/lang/Math;->max
+
+2076 - Landroid/support/v4/widget/NestedScrollView;->computeVerticalScrollRange:
+java/lang/Math;->max
+
+2122 - Landroid/support/v4/widget/NestedScrollView;->computeVerticalScrollOffset:
+java/lang/Math;->max
+
+2128 - Landroid/support/v4/widget/NestedScrollView;->draw:
+java/lang/Math;->max
+
+2146 - Landroid/support/v4/widget/NestedScrollView;->onLayout:
+java/lang/Math;->max
+
+2491 - Lcom/realtalk/gf;->a:
+java/lang/Math;->max
+
+2671 - Landroid/support/v7/widget/ActionBarOverlayLayout;->onMeasure:
+java/lang/Math;->max
+
+2684 - Landroid/support/v7/widget/ActionBarOverlayLayout;->setActionBarHideOffset:
+java/lang/Math;->max
+
+2752 - Landroid/support/v7/widget/ActionMenuView;->onLayout:
+java/lang/Math;->max
+
+2757 - Landroid/support/v7/widget/ActionMenuView;->onMeasure:
+java/lang/Math;->max
+
+2781 - Landroid/support/v7/widget/ActivityChooserView$a;->a:
+java/lang/Math;->max
+
+2861 - Landroid/support/v7/widget/AlertDialogLayout;->onMeasure:
+java/lang/Math;->max
+
+2877 - Landroid/support/v7/widget/ButtonBarLayout;->getMinimumHeight:
+java/lang/Math;->max
+
+2971 - Lcom/realtalk/ia$i;->a:
+java/lang/Math;->max
+
+3100 - Lcom/realtalk/ie;->a:
+java/lang/Math;->max
+java/lang/Math;->round
+
+3114 - Landroid/support/v7/widget/LinearLayoutManager;->a:
+java/lang/Math;->max
+
+3179 - Landroid/support/v7/widget/GridLayoutManager;->a:
+java/lang/Math;->max
+
+3195 - Landroid/support/v7/widget/GridLayoutManager;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Math;->max
+java/lang/StringBuilder;->append
+java/lang/Math;->round
+
+3202 - Landroid/support/v7/widget/GridLayoutManager;->a:
+java/lang/Math;->max
+
+3415 - Landroid/support/v7/widget/StaggeredGridLayoutManager$c;->c:
+java/lang/Math;->max
+
+3486 - Landroid/support/v7/widget/StaggeredGridLayoutManager;->c:
+java/lang/Math;->max
+
+3630 - Landroid/support/v7/widget/Toolbar;->a:
+java/lang/Math;->max
+
+3634 - Landroid/support/v7/widget/Toolbar;->a:
+java/lang/Math;->max
+
+3638 - Landroid/support/v7/widget/Toolbar;->a:
+java/lang/Math;->max
+
+3648 - Landroid/support/v7/widget/Toolbar;->b:
+java/lang/Math;->max
+
+3663 - Landroid/support/v7/widget/Toolbar;->getCurrentContentInsetEnd:
+java/lang/Math;->max
+
+3666 - Landroid/support/v7/widget/Toolbar;->getCurrentContentInsetStart:
+java/lang/Math;->max
+
+3680 - Landroid/support/v7/widget/Toolbar;->onLayout:
+java/lang/Math;->max
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+3686 - Landroid/support/v7/widget/Toolbar;->onMeasure:
+java/lang/Math;->max
+
+6497 - Lcom/realtalk/fn;-><init>:
+android/content/res/Resources;->getDisplayMetrics
+java/lang/Math;->max
+android/content/Context;->getResources
+
+6777 - Lcom/realtalk/gc;-><init>:
+android/content/res/Resources;->getDisplayMetrics
+java/lang/Math;->max
+android/content/Context;->getResources
+
+6917 - Lcom/realtalk/gi$d;->setFrame:
+java/lang/Math;->max
+
+7258 - Lcom/realtalk/he$b;->a:
+android/content/res/Resources;->getDisplayMetrics
+java/lang/Math;->max
+android/content/Context;->getResources
+
+7318 - Lcom/realtalk/he;->a:
+java/lang/Math;->max
+
+7360 - Lcom/realtalk/he;->onMeasure:
+java/lang/Math;->max
+
+8053 - Lcom/realtalk/in;-><init>:
+android/text/TextUtils;->isEmpty
+java/lang/Math;->max
+android/view/LayoutInflater;->inflate
+android/content/Context;->getString
+
+122 - Lcom/realtalk/hu;->onInitializeAccessibilityEvent:
+java/lang/Class;->getName
+
+126 - Lcom/realtalk/hu;->onInitializeAccessibilityNodeInfo:
+java/lang/Class;->getName
+
+1269 - Landroid/support/design/widget/CoordinatorLayout;->b:
+java/lang/Class;->getName
+java/lang/reflect/Constructor;->newInstance
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Object;->getClass
+java/lang/Class;->getDeclaredConstructor
+android/util/Log;->e
+
+1773 - Landroid/support/v4/app/LoaderManagerImpl;->toString:
+java/lang/StringBuilder;->append
+java/lang/Object;->getClass
+java/lang/Integer;->toHexString
+java/lang/Class;->getName
+java/lang/String;->length
+java/lang/String;->lastIndexOf
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->substring
+java/lang/Class;->getSimpleName
+
+2009 - Landroid/support/v4/widget/NestedScrollView$a;->a:
+java/lang/Class;->getName
+
+2018 - Landroid/support/v4/widget/NestedScrollView$a;->a:
+java/lang/Class;->getName
+
+2555 - Landroid/support/v7/widget/ActionBarContextView;->onInitializeAccessibilityEvent:
+android/content/Context;->getPackageName
+java/lang/Class;->getName
+java/lang/Object;->getClass
+
+4469 - Lcom/realtalk/ba;-><clinit>:
+android/util/Log;->e
+java/lang/Class;->getMethod
+java/lang/Object;->getClass
+java/lang/Class;->forName
+java/lang/Class;->getName
+
+4483 - Lcom/realtalk/bb;-><clinit>:
+java/lang/Class;->getMethod
+java/lang/Class;->getName
+java/lang/reflect/Method;->setAccessible
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/Object;->getClass
+java/lang/StringBuilder;->toString
+java/lang/Class;->forName
+
+5041 - Lcom/realtalk/cf;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Class;->getName
+java/lang/Object;->getClass
+
+5204 - Lcom/realtalk/cp;->a:
+java/lang/Class;->getName
+android/util/Log;->e
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+5969 - Lcom/realtalk/em;->a:
+java/lang/String;->equals
+java/lang/reflect/Constructor;->newInstance
+android/view/View;->setOnClickListener
+android/util/Log;->i
+java/lang/Class;->getName
+java/lang/Class;->getDeclaredConstructor
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Class;->forName
+android/util/Log;->i
+
+6264 - Lcom/realtalk/gr;->a:
+android/content/Context;->getResources
+java/lang/Class;->getName
+java/lang/String;->equals
+java/lang/Object;->getClass
+
+6371 - Lcom/realtalk/fg$a;-><init>:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Class;->getName
+java/lang/Class;->getMethod
+java/lang/Object;->getClass
+
+7039 - Lcom/realtalk/gn;->onInitializeAccessibilityEvent:
+java/lang/Class;->getName
+
+7041 - Lcom/realtalk/gn;->onInitializeAccessibilityNodeInfo:
+java/lang/Class;->getName
+
+7114 - Lcom/realtalk/hn;->a:
+java/lang/Class;->getName
+java/lang/String;->equals
+java/lang/Object;->getClass
+
+7841 - Lcom/realtalk/ib;->a:
+java/lang/Class;->getName
+
+7842 - Lcom/realtalk/ib;->a:
+java/lang/Class;->getName
+
+7935 - Lcom/realtalk/if$b;->onInitializeAccessibilityEvent:
+java/lang/Class;->getName
+
+7937 - Lcom/realtalk/if$b;->onInitializeAccessibilityNodeInfo:
+java/lang/Class;->getName
+
+8233 - Lcom/realtalk/iz;->b:
+android/util/Log;->w
+java/lang/Class;->getName
+java/lang/Object;->getClass
+android/util/Log;->e
+java/lang/String;->valueOf
+java/lang/System;->currentTimeMillis
+
+8318 - Lcom/realtalk/jh;->a:
+android/app/ActivityManager;->getRunningServices
+android/content/ComponentName;->getClassName
+java/lang/Class;->getName
+android/content/Context;->getSystemService
+java/lang/String;->equals
+
+8744 - Lcom/realtalk/lv;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->equals
+java/lang/String;->startsWith
+java/lang/StringBuilder;->append
+java/lang/Class;->getName
+java/lang/String;->substring
+android/util/Log;->d
+java/lang/StringBuilder;->append
+java/lang/String;->length
+
+8760 - Lcom/realtalk/lu;->a:
+java/lang/Class;->getName
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+133 - Lcom/realtalk/hu;->setBaselineAlignedChildIndex:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+608 - Lcom/realtalk/ia;->focusSearch:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+653 - Lcom/realtalk/ia;->onInterceptTouchEvent:
+java/lang/StringBuilder;->toString
+java/util/ArrayList;->get
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+android/util/Log;->e
+
+727 - Lcom/realtalk/ia;->setScrollingTouchSlop:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+1214 - Landroid/support/design/widget/CoordinatorLayout;->b:
+java/lang/StringBuilder;->append
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+1788 - Landroid/support/v4/media/MediaBrowserCompat$CustomActionResultReceiver;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+1797 - Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+1855 - Landroid/support/v4/media/RatingCompat;->toString:
+java/lang/StringBuilder;->append
+java/lang/String;->valueOf
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+1987 - Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+2003 - Landroid/support/v4/media/session/PlaybackStateCompat;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+2035 - Landroid/support/v4/widget/NestedScrollView$c;->toString:
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+2143 - Landroid/support/v4/widget/NestedScrollView;->onInterceptTouchEvent:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/util/Log;->e
+
+2171 - Landroid/support/v4/widget/NestedScrollView;->onTouchEvent:
+android/util/Log;->e
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+2317 - Lcom/realtalk/hf;->a:
+android/content/res/Resources;->getDisplayMetrics
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/content/Context;->getResources
+
+2826 - Lcom/realtalk/hv;->b:
+android/util/Log;->e
+java/lang/reflect/Method;->invoke
+android/content/res/Resources;->getDisplayMetrics
+java/lang/StringBuilder;->toString
+android/util/Log;->e
+java/lang/StringBuilder;->append
+android/content/Context;->getResources
+android/os/Handler;->post
+java/lang/Boolean;->valueOf
+android/util/Log;->i
+
+2995 - Lcom/realtalk/ia$i;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3043 - Landroid/support/v7/widget/LinearLayoutManager;->h:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3152 - Landroid/support/v7/widget/GridLayoutManager;->i:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3158 - Landroid/support/v7/widget/GridLayoutManager;->a:
+android/util/Log;->w
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3159 - Lcom/realtalk/ia$o;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3163 - Landroid/support/v7/widget/GridLayoutManager;->c:
+android/util/Log;->w
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3165 - Landroid/support/v7/widget/GridLayoutManager;->b:
+android/util/Log;->w
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3212 - Landroid/support/v7/widget/LinearLayoutManager$a;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3402 - Landroid/support/v7/widget/StaggeredGridLayoutManager$c$a;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+4421 - Lcom/realtalk/ay;->b:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+4422 - Lcom/realtalk/bw;->a:
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+4438 - Lcom/realtalk/bd;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/io/File;->createNewFile
+
+4451 - Lcom/realtalk/az;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+4850 - Lcom/realtalk/bv;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Base64;->encodeToString
+java/lang/StringBuilder;->append
+
+5160 - Lcom/realtalk/ck;->toString:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+5588 - Lcom/realtalk/dq;->getView:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+5737 - Lcom/realtalk/ec;->d:
+java/lang/StringBuilder;->append
+android/util/Log;->e
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+6830 - Lcom/realtalk/gd;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+7002 - Lcom/realtalk/gk$b;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Integer;->toHexString
+
+7475 - Lcom/realtalk/hj;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+7500 - Lcom/realtalk/hm$a;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+7660 - Lcom/realtalk/ia$o;->a:
+java/lang/StringBuilder;->append
+java/util/ArrayList;->size
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+7663 - Lcom/realtalk/ht;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+7835 - Lcom/realtalk/ia$t;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+7837 - Lcom/realtalk/ia$w;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+7973 - Lcom/realtalk/ih;->a:
+android/util/Log;->w
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/content/Context;->getPackageManager
+java/lang/StringBuilder;->append
+
+7990 - Lcom/realtalk/ih;->a:
+java/lang/Integer;->parseInt
+java/lang/StringBuilder;->append
+java/lang/String;->isEmpty
+java/lang/StringBuilder;->toString
+android/net/Uri;->parse
+android/content/Context;->getPackageName
+java/lang/String;->equals
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+8239 - Lcom/realtalk/jc$a;-><init>:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Thread;->currentThread
+
+8267 - Lcom/realtalk/jc$a;->newThread:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+8359 - Lcom/realtalk/jk;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/ClassNotFoundException;->getMessage
+java/util/ArrayList;->get
+java/lang/Integer;->intValue
+java/lang/Class;->forName
+java/util/ArrayList;->add
+java/lang/reflect/Method;->invoke
+android/util/Log;->e
+java/lang/Integer;->valueOf
+java/lang/StringBuilder;->append
+java/lang/NoSuchMethodException;->getMessage
+java/lang/NoSuchMethodException;->printStackTrace
+java/lang/reflect/InvocationTargetException;->printStackTrace
+android/telephony/SmsManager;->sendTextMessage
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/ClassNotFoundException;->printStackTrace
+java/lang/reflect/Method;->setAccessible
+java/lang/Object;->getClass
+java/lang/Class;->getMethod
+android/telephony/SmsManager;->getDefault
+java/lang/reflect/InvocationTargetException;->getMessage
+java/lang/Exception;->getMessage
+java/lang/IllegalAccessException;->getMessage
+java/lang/String;->equals
+
+8602 - Lcom/realtalk/kn;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/util/Locale;->getDefault
+java/util/Locale;->getCountry
+java/lang/StringBuilder;->append
+
+271 - Lcom/realtalk/ia;-><init>:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/content/Context;->getSystemService
+java/lang/StringBuilder;->toString
+java/lang/Integer;->valueOf
+java/lang/reflect/Constructor;->newInstance
+android/content/Context;->getResources
+java/lang/String;->charAt
+java/lang/reflect/Constructor;->setAccessible
+java/lang/String;->contains
+java/lang/String;->isEmpty
+java/lang/Object;->getClass
+java/lang/String;->trim
+android/content/Context;->getPackageName
+
+275 - Lcom/realtalk/ia;->setLayoutManager:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+313 - Lcom/realtalk/ia;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+369 - Lcom/realtalk/ia;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+373 - Lcom/realtalk/ia$t;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+427 - Lcom/realtalk/ia;->z:
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/view/View;->findViewById
+
+525 - Lcom/realtalk/ia$w;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->e
+
+526 - Lcom/realtalk/ia;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+549 - Lcom/realtalk/ia;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+614 - Lcom/realtalk/ia;->generateDefaultLayoutParams:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+616 - Lcom/realtalk/ia;->generateLayoutParams:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+618 - Lcom/realtalk/ia;->generateLayoutParams:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+692 - Lcom/realtalk/ia;->removeDetachedView:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+1069 - Lcom/realtalk/ec;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+1173 - Landroid/support/design/widget/CoordinatorLayout;->a:
+android/text/TextUtils;->isEmpty
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/reflect/Constructor;->setAccessible
+android/content/Context;->getPackageName
+java/lang/String;->startsWith
+java/lang/String;->indexOf
+java/lang/reflect/Constructor;->newInstance
+
+1274 - Landroid/support/design/widget/CoordinatorLayout;->b:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+
+1594 - Landroid/support/design/widget/TextInputLayout$a;->toString:
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+1839 - Landroid/support/v4/media/MediaDescriptionCompat;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+1950 - Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+2313 - Lcom/realtalk/hf;->a:
+android/content/Context;->getResources
+java/lang/StringBuilder;->toString
+java/lang/Math;->round
+android/content/res/Resources;->getDisplayMetrics
+java/lang/StringBuilder;->append
+
+2396 - Landroid/support/v7/view/menu/ListMenuItemView;->setShortcut$25d965e:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/widget/TextView;->setText
+
+2400 - Landroid/support/v7/view/menu/ListMenuItemView;->a:
+java/lang/StringBuilder;->append
+android/widget/TextView;->setText
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+2568 - Landroid/support/v7/widget/ActionBarContextView;->onMeasure:
+java/lang/StringBuilder;->append
+java/lang/Class;->getSimpleName
+java/lang/StringBuilder;->toString
+java/lang/Object;->getClass
+
+2627 - Landroid/support/v7/widget/ActionBarOverlayLayout;->i:
+java/lang/Object;->getClass
+java/lang/Class;->getSimpleName
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3019 - Lcom/realtalk/ia$o;->c:
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+java/lang/StringBuilder;->toString
+
+3020 - Lcom/realtalk/ia$o;->a:
+java/lang/StringBuilder;->toString
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+3314 - Landroid/support/v7/widget/SearchView$e;->toString:
+java/lang/StringBuilder;->append
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3755 - Lcom/realtalk/MainActivity;->onCreate:
+android/content/Context;->getPackageManager
+java/lang/StringBuilder;->toString
+android/content/pm/PackageManager;->setComponentEnabledSetting
+java/lang/StringBuilder;->append
+
+3865 - Lcom/realtalk/ad;->a:
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+3954 - Lcom/realtalk/ac;->a:
+java/lang/String;->equals
+java/lang/Integer;->toHexString
+java/lang/StringBuilder;->toString
+android/content/Context;->getResources
+java/lang/StringBuilder;->append
+
+3979 - Lcom/realtalk/ad;->a:
+java/lang/String;->equals
+java/util/ArrayList;->size
+java/lang/StringBuilder;->toString
+java/util/ArrayList;->add
+java/lang/StringBuilder;->append
+
+3988 - Lcom/realtalk/ad;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+3993 - Lcom/realtalk/ad;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+4022 - Lcom/realtalk/ax;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+4035 - Lcom/realtalk/af;-><init>:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+4038 - Lcom/realtalk/af;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+4147 - Lcom/realtalk/ah;->inflate:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+4182 - Lcom/realtalk/al;->a:
+android/os/Bundle;->getString
+android/content/Context;->getPackageManager
+android/content/Context;->getPackageName
+java/lang/StringBuilder;->append
+android/app/Activity;->getComponentName
+java/lang/StringBuilder;->toString
+java/lang/String;->charAt
+
+4300 - Lcom/realtalk/api/request/HttpRequest;->b:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+4318 - Lcom/realtalk/ar$b;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+4329 - Lcom/realtalk/ar;->a:
+java/lang/StringBuilder;->append
+android/util/Log;->v
+java/util/ArrayList;->get
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+java/util/ArrayList;->size
+java/lang/Integer;->toHexString
+android/content/Intent;->getAction
+java/util/HashMap;->get
+android/content/Context;->getContentResolver
+
+4359 - Lcom/realtalk/bv;-><init>:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+4375 - Lcom/realtalk/au;->a:
+java/lang/StringBuilder;->append
+java/lang/String;->startsWith
+java/lang/String;->endsWith
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->e
+java/lang/String;->toLowerCase
+java/lang/Integer;->toHexString
+android/util/Log;->e
+
+4395 - Lcom/realtalk/ax$b;->a:
+java/lang/StringBuilder;->append
+android/util/Log;->w
+java/lang/StringBuilder;->toString
+
+4411 - Lcom/realtalk/ax;->c:
+java/lang/String;->length
+java/lang/String;->charAt
+java/lang/StringBuilder;->toString
+java/lang/String;->substring
+java/lang/StringBuilder;->append
+
+4435 - Lcom/realtalk/bd;->a:
+java/lang/StringBuilder;->append
+java/io/FileOutputStream;->write
+android/util/Log;->e
+java/lang/StringBuilder;->toString
+java/io/IOException;->getMessage
+java/io/InputStream;->read
+
+4868 - Lcom/realtalk/bw;->b:
+java/lang/StringBuilder;->append
+android/content/pm/PackageManager;->getPackageInfo
+java/util/Collections;->sort
+android/content/Context;->getPackageManager
+java/lang/StringBuilder;->toString
+java/lang/String;->equals
+android/content/Context;->getResources
+
+5003 - Lcom/realtalk/cj;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+5039 - Lcom/realtalk/ce;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+5101 - Lcom/realtalk/cg$d;->toString:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+5194 - Lcom/realtalk/cn;->a:
+android/util/Log;->w
+java/lang/Class;->getSimpleName
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Object;->getClass
+
+5430 - Lcom/realtalk/db$b;->a:
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+5432 - Lcom/realtalk/db$b;->a:
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+5434 - Lcom/realtalk/db$b;->a:
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+5436 - Lcom/realtalk/db$b;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->e
+java/lang/StringBuilder;->append
+
+5438 - Lcom/realtalk/db$b;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->e
+java/lang/StringBuilder;->append
+
+5440 - Lcom/realtalk/db$b;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/util/Log;->e
+java/lang/StringBuilder;->append
+
+5442 - Lcom/realtalk/db$b;->b:
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+5489 - Lcom/realtalk/dh;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Object;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+5597 - Lcom/realtalk/jg;->a:
+android/provider/Settings$Secure;->getString
+android/content/Context;->getApplicationContext
+java/lang/String;->equalsIgnoreCase
+java/lang/StringBuilder;->append
+android/content/Context;->getContentResolver
+java/lang/StringBuilder;->toString
+android/content/Context;->getPackageName
+
+5600 - Lcom/realtalk/ds/StartDialog;->onCreate:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+android/content/Context;->getText
+
+5849 - Lcom/realtalk/ei$1;->uncaughtException:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->contains
+java/lang/Throwable;->getMessage
+
+6017 - Lcom/realtalk/em;->m:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/view/LayoutInflater;->inflate
+android/text/TextUtils;->isEmpty
+java/lang/StringBuilder;->toString
+
+6137 - Lcom/realtalk/eo$a;->onClick:
+android/content/Context;->getResources
+java/lang/StringBuilder;->toString
+java/lang/Class;->getMethod
+java/lang/StringBuilder;->append
+java/lang/Object;->getClass
+java/lang/reflect/Method;->invoke
+java/lang/StringBuilder;->append
+
+6141 - Lcom/realtalk/eo;->a:
+java/lang/StringBuilder;->append
+java/lang/reflect/Constructor;->setAccessible
+java/lang/StringBuilder;->toString
+java/lang/reflect/Constructor;->newInstance
+
+6219 - Lcom/realtalk/et;->a:
+java/lang/StringBuilder;->toString
+android/view/View;->findViewById
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/Object;->getClass
+java/lang/Class;->getSimpleName
+
+6253 - Lcom/realtalk/ev;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->equals
+
+6378 - Lcom/realtalk/fg$b;->a:
+android/util/Log;->w
+java/lang/reflect/Constructor;->setAccessible
+java/lang/reflect/Constructor;->newInstance
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+6396 - Lcom/realtalk/fg;->a:
+java/lang/String;->equals
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+6955 - Lcom/realtalk/gj$a;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+6964 - Lcom/realtalk/gj$c;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+6968 - Lcom/realtalk/gj$e;->a:
+java/lang/String;->valueOf
+java/io/FileOutputStream;->close
+android/util/Log;->e
+java/lang/Boolean;->valueOf
+java/lang/String;->valueOf
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/content/Context;->openFileOutput
+
+6983 - Lcom/realtalk/gj;->f:
+android/content/Context;->openFileInput
+java/lang/Long;->parseLong
+java/lang/StringBuilder;->toString
+java/io/FileInputStream;->close
+java/lang/StringBuilder;->append
+java/lang/String;->equals
+android/util/Log;->e
+
+7008 - Lcom/realtalk/gk;->b:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+7010 - Lcom/realtalk/gk;->c:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/util/ArrayList;->add
+
+7394 - Lcom/realtalk/hi;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+7416 - Lcom/realtalk/hi;->a:
+android/util/Log;->w
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/reflect/Method;->invoke
+
+7452 - Lcom/realtalk/hi;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->w
+java/lang/reflect/Method;->setAccessible
+
+7466 - Lcom/realtalk/hj$a;->toString:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+7767 - Lcom/realtalk/ia$5;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+
+7771 - Lcom/realtalk/ia$5;->c:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+7822 - Lcom/realtalk/ia$o;->e:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+java/lang/StringBuilder;->append
+
+7979 - Lcom/realtalk/ih;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/io/InputStream;->close
+java/lang/String;->equals
+android/util/Log;->e
+android/content/Context;->getContentResolver
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+7984 - Lcom/realtalk/ih;->b:
+android/content/Context;->getPackageManager
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/text/TextUtils;->isEmpty
+android/content/res/Resources;->getIdentifier
+java/lang/Integer;->parseInt
+android/net/Uri;->getPathSegments
+
+8202 - Lcom/realtalk/iw;->a:
+java/io/OutputStream;->write
+java/io/IOException;->printStackTrace
+java/net/HttpURLConnection;->getResponseCode
+java/io/BufferedReader;->close
+java/io/InputStream;->close
+java/lang/String;->valueOf
+java/net/HttpURLConnection;->getOutputStream
+java/lang/StringBuilder;->toString
+java/io/OutputStream;->close
+java/net/HttpURLConnection;->getInputStream
+java/io/BufferedReader;->readLine
+java/net/HttpURLConnection;->setRequestMethod
+java/net/HttpURLConnection;->setRequestProperty
+java/lang/StringBuilder;->append
+
+8216 - Lcom/realtalk/iw;->d:
+java/io/InputStream;->close
+java/lang/StringBuilder;->append
+java/io/BufferedReader;->close
+android/util/Log;->e
+java/net/HttpURLConnection;->setRequestMethod
+java/lang/StringBuilder;->toString
+java/net/HttpURLConnection;->getInputStream
+java/io/BufferedReader;->readLine
+
+8259 - Lcom/realtalk/ja;->a:
+java/lang/StringBuilder;->toString
+android/util/Log;->e
+java/lang/StringBuilder;->append
+
+8261 - Lcom/realtalk/ja;->toString:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+8274 - Lcom/realtalk/jd;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Object;->toString
+java/net/URLEncoder;->encode
+
+8321 - Lcom/realtalk/jh;->b:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->startsWith
+
+8322 - Lcom/realtalk/jh;->b:
+android/text/TextUtils;->isEmpty
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->toCharArray
+
+8387 - Lcom/realtalk/jp;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+8421 - Lcom/realtalk/jx;->onTextChanged:
+java/lang/String;->equals
+java/lang/String;->trim
+java/util/ArrayList;->get
+java/lang/String;->replace
+java/lang/String;->valueOf
+java/lang/StringBuilder;->append
+java/lang/String;->length
+java/lang/String;->split
+java/lang/Integer;->intValue
+java/lang/Integer;->valueOf
+java/lang/Long;->parseLong
+java/util/ArrayList;->size
+java/lang/Integer;->parseInt
+java/lang/String;->substring
+java/lang/String;->valueOf
+java/lang/String;->contains
+java/lang/StringBuilder;->toString
+java/lang/String;->startsWith
+java/lang/StringBuilder;->append
+
+8445 - Lcom/realtalk/jy;->onTextChanged:
+java/lang/StringBuilder;->append
+java/lang/String;->equals
+java/lang/String;->length
+java/lang/String;->substring
+java/lang/String;->endsWith
+java/lang/Integer;->parseInt
+java/lang/Object;->toString
+java/lang/StringBuilder;->toString
+android/widget/EditText;->getText
+java/lang/String;->startsWith
+java/lang/String;->substring
+
+8561 - Lcom/realtalk/ki;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+
+8612 - Lcom/realtalk/ko;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+8708 - Lcom/realtalk/ll;->run:
+java/lang/StringBuilder;->append
+android/util/Log;->w
+java/lang/Thread;->currentThread
+java/lang/StringBuilder;->toString
+
+8718 - Lcom/realtalk/lm;->f:
+android/util/Log;->d
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+java/lang/Object;->getClass
+
+8720 - Lcom/realtalk/lm;->a:
+java/lang/Object;->getClass
+java/lang/StringBuilder;->append
+android/util/Log;->e
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/reflect/Method;->invoke
+
+8736 - Lcom/realtalk/lm;->a:
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+
+8742 - Lcom/realtalk/lm;->a:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/Object;->getClass
+
+8750 - Lcom/realtalk/lm;->c:
+java/lang/Object;->getClass
+java/lang/StringBuilder;->toString
+java/lang/StringBuilder;->append
+android/util/Log;->w
+
+8810 - Lcom/realtalk/mess/service/receiver/SmsReceiver;->onReceive:
+java/lang/String;->equals
+java/lang/StringBuilder;->append
+android/telephony/SmsMessage;->getDisplayMessageBody
+android/content/Intent;->getAction
+android/util/Log;->d
+android/os/Bundle;->get
+android/telephony/SmsMessage;->getDisplayOriginatingAddress
+java/lang/StringBuilder;->toString
+
+142 - Lcom/realtalk/hu;->setWeightSum:
+java/lang/Math;->max
+
+1527 - Landroid/support/design/widget/SwipeDismissBehavior;->a:
+java/lang/Math;->max
+
+3536 - Landroid/support/v7/widget/StaggeredGridLayoutManager;->c:
+java/lang/Math;->round
+java/lang/Math;->max
+
+4078 - Lcom/realtalk/ah$e;->a:
+java/util/ArrayList;->get
+java/lang/Math;->max
+java/util/ArrayList;->size
+
+7646 - Lcom/realtalk/hp;->b:
+java/lang/Math;->max
+
+204 - Landroid/support/design/internal/NavigationMenuItemView;-><init>:
+android/view/LayoutInflater;->inflate
+android/content/Context;->getResources
+
+1694 - Landroid/support/design/widget/TextInputLayout;->d:
+android/view/LayoutInflater;->inflate
+
+2222 - Landroid/support/v7/app/AlertController$a$2;->newView:
+android/view/LayoutInflater;->inflate
+
+2392 - Landroid/support/v7/view/menu/ListMenuItemView;->b:
+android/view/LayoutInflater;->inflate
+
+2395 - Landroid/support/v7/view/menu/ListMenuItemView;->c:
+android/view/LayoutInflater;->inflate
+
+2405 - Landroid/support/v7/view/menu/ListMenuItemView;->setIcon:
+android/view/LayoutInflater;->inflate
+android/widget/ImageView;->setVisibility
+
+2534 - Landroid/support/v7/widget/ActionBarContextView;->a:
+android/view/View;->findViewById
+android/view/LayoutInflater;->inflate
+android/view/View;->setOnClickListener
+
+2783 - Landroid/support/v7/widget/ActivityChooserView$a;->getView:
+android/view/LayoutInflater;->inflate
+android/content/Context;->getString
+android/view/View;->findViewById
+android/widget/TextView;->setText
+android/content/Context;->getPackageManager
+
+3732 - Landroid/support/v7/widget/ViewStubCompat;->a:
+android/view/ViewGroup;->addView
+android/view/LayoutInflater;->inflate
+android/view/ViewGroup;->addView
+
+5681 - Lcom/realtalk/dx;->a:
+android/view/LayoutInflater;->inflate
+
+5682 - Lcom/realtalk/dx;->b:
+android/view/LayoutInflater;->inflate
+
+5816 - Lcom/realtalk/ef;->onCreate:
+android/text/TextUtils;->isEmpty
+android/view/ViewGroup;->removeView
+android/widget/Button;->setOnClickListener
+android/view/View;->findViewById
+android/widget/Button;->setText
+android/widget/ImageView;->setVisibility
+android/widget/ImageView;->setImageResource
+android/widget/TextView;->setText
+android/view/LayoutInflater;->inflate
+android/view/ViewGroup;->addView
+
+5986 - Lcom/realtalk/em;->a:
+android/view/ViewGroup;->removeView
+android/content/res/Resources;->getConfiguration
+android/view/LayoutInflater;->inflate
+android/content/Context;->getSystemService
+android/content/Context;->getResources
+android/view/ViewGroup;->addView
+
+6430 - Lcom/realtalk/fk;->a:
+android/view/LayoutInflater;->inflate
+
+6432 - Lcom/realtalk/fk;->a:
+android/view/LayoutInflater;->inflate
+
+6499 - Lcom/realtalk/fn;->c:
+java/lang/Boolean;->valueOf
+android/widget/TextView;->setText
+java/lang/reflect/Method;->invoke
+android/view/LayoutInflater;->inflate
+android/util/Log;->i
+
+6543 - Lcom/realtalk/fo$a;->getView:
+android/view/LayoutInflater;->inflate
+
+6556 - Lcom/realtalk/fp;->getView:
+android/view/LayoutInflater;->inflate
+
+6651 - Lcom/realtalk/fs;->setActionView:
+android/view/LayoutInflater;->inflate
+
+6824 - Lcom/realtalk/gc;->b:
+android/widget/TextView;->setText
+android/view/LayoutInflater;->inflate
+
+1089 - Lcom/realtalk/ij;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+android/content/Context;->getResources
+
+1249 - Landroid/support/design/widget/CoordinatorLayout;-><init>:
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+1342 - Lcom/realtalk/aq;->a:
+android/content/Context;->getResources
+
+1544 - Lcom/realtalk/hf;->a:
+java/lang/Math;->round
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+1657 - Lcom/realtalk/aq;->c:
+android/content/Context;->getResources
+
+2100 - Landroid/support/v4/widget/NestedScrollView;->getVerticalScrollFactorCompat:
+android/content/res/Resources;->getDisplayMetrics
+android/content/Context;->getResources
+
+2310 - Lcom/realtalk/hf;->a:
+android/content/res/Resources;->getDisplayMetrics
+android/content/Context;->getResources
+
+2338 - Landroid/support/v7/view/menu/ActionMenuItemView;-><init>:
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+2339 - Landroid/support/v7/view/menu/ActionMenuItemView;->e:
+android/content/res/Resources;->getConfiguration
+android/content/Context;->getResources
+
+2723 - Landroid/support/v7/widget/ActionMenuView;-><init>:
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+2745 - Lcom/realtalk/fq;-><init>:
+android/content/res/Resources;->getConfiguration
+android/content/Context;->getResources
+
+2901 - Landroid/support/v7/widget/ContentFrameLayout;->onMeasure:
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+3284 - Landroid/support/v7/widget/SearchView;->a:
+android/content/Context;->getResources
+android/content/res/Resources;->getConfiguration
+
+3341 - Landroid/support/v7/widget/SearchView;->getPreferredHeight:
+android/content/Context;->getResources
+
+3342 - Landroid/support/v7/widget/SearchView;->getPreferredWidth:
+android/content/Context;->getResources
+
+3860 - Lcom/realtalk/ab;->inflate:
+java/lang/String;->equals
+android/content/Context;->getResources
+java/util/ArrayList;->add
+
+3964 - Lcom/realtalk/af;-><init>:
+android/content/Context;->getResources
+
+4308 - Lcom/realtalk/aq;->b:
+android/content/Context;->getResources
+
+5417 - Lcom/realtalk/da;->c:
+android/content/Context;->getResources
+android/util/Log;->i
+java/lang/Integer;->intValue
+android/content/res/Resources;->getDisplayMetrics
+java/lang/reflect/Method;->invoke
+
+5728 - Lcom/realtalk/ec;-><init>:
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+5934 - Lcom/realtalk/ek$a;->a:
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+6000 - Lcom/realtalk/em;->b:
+android/content/Context;->getResources
+
+6065 - Lcom/realtalk/em;->i:
+android/content/Context;->getResources
+android/view/ViewGroup;->addView
+
+6084 - Lcom/realtalk/ek;->d:
+android/content/res/Resources;->getDisplayMetrics
+android/content/IntentFilter;->addAction
+android/content/res/Resources;->getConfiguration
+android/content/Context;->getResources
+android/content/Context;->registerReceiver
+
+6200 - Lcom/realtalk/et$a;->a:
+android/content/res/Resources;->getString
+android/content/Context;->getResources
+
+6209 - Lcom/realtalk/et$a;->b:
+android/content/res/Resources;->getString
+android/content/Context;->getResources
+
+6233 - Lcom/realtalk/fa;->b:
+android/content/Context;->getResources
+
+6268 - Lcom/realtalk/ew;->a:
+android/content/res/Resources;->getConfiguration
+android/content/Context;->getResources
+
+6269 - Lcom/realtalk/ew;->c:
+android/util/Log;->e
+android/content/Context;->getResources
+
+6270 - Lcom/realtalk/ew;->d:
+android/content/res/Resources;->getConfiguration
+android/content/Context;->getResources
+
+6314 - Lcom/realtalk/fa;->a:
+android/content/res/Resources;->getConfiguration
+android/content/Context;->getResources
+
+6318 - Lcom/realtalk/fd;->getResources:
+android/content/Context;->getResources
+
+6400 - Lcom/realtalk/fg;->inflate:
+android/content/Context;->getResources
+
+6428 - Lcom/realtalk/fj;->setTitle:
+android/content/Context;->getResources
+android/content/res/Resources;->getString
+
+6773 - Lcom/realtalk/fw;->a:
+android/content/Context;->getResources
+android/content/Context;->getSystemService
+
+6778 - Lcom/realtalk/fw;->a:
+android/content/Context;->getResources
+android/content/res/Resources;->getDisplayMetrics
+
+6939 - Lcom/realtalk/gi;->a:
+android/content/res/Resources;->getDisplayMetrics
+android/content/Context;->getResources
+
+7098 - Lcom/realtalk/gr$a;->a:
+android/content/Context;->getResources
+android/util/Log;->e
+
+7105 - Lcom/realtalk/gr$d;->a:
+android/content/Context;->getResources
+android/util/Log;->e
+
+7109 - Lcom/realtalk/gr;->a:
+android/content/Context;->getResources
+
+7112 - Lcom/realtalk/gr;->a:
+android/content/Context;->getResources
+java/lang/String;->endsWith
+android/util/Log;->e
+java/lang/String;->equals
+
+7391 - Lcom/realtalk/hf;->a:
+android/content/Context;->getResources
+
+7405 - Lcom/realtalk/hi;->a:
+android/content/res/Resources;->getDisplayMetrics
+java/lang/reflect/Method;->invoke
+android/content/Context;->getResources
+android/util/Log;->w
+
+7674 - Lcom/realtalk/hx$a;-><init>:
+android/content/Context;->getResources
+android/content/res/Resources;->getConfiguration
+
+7959 - Lcom/realtalk/if;->onConfigurationChanged:
+android/content/Context;->getResources
+
+8011 - Lcom/realtalk/ih;->a:
+android/content/Context;->getPackageManager
+android/widget/ImageView;->setVisibility
+android/text/TextUtils;->isEmpty
+android/content/Context;->getResources
+
+8036 - Lcom/realtalk/ij;-><init>:
+android/content/Context;->getResources
+
+8178 - Lcom/realtalk/ip;->a:
+android/app/Activity;->getWindow
+android/content/res/Resources;->getIdentifier
+android/content/Context;->getResources
+android/widget/TextView;->setText
+android/content/Context;->getSystemService
+android/util/Log;->e
+android/content/res/Resources;->getDisplayMetrics
+
+8879 - Lcom/realtalk/srs/CmndSrs;->a:
+java/lang/String;->equalsIgnoreCase
+android/content/Context;->getResources
+android/content/Intent;->putExtra
+android/app/NotificationManager;->notify
+android/content/Intent;->setFlags
+java/lang/System;->currentTimeMillis
+android/content/Context;->getSystemService
+java/util/Random;->nextInt
+android/app/PendingIntent;->getActivity
+
+2230 - Landroid/support/v7/app/AlertController$a;-><init>:
+android/content/Context;->getSystemService
+
+3222 - Landroid/support/v7/widget/SearchView$SearchAutoComplete;->a:
+android/content/Context;->getSystemService
+
+3257 - Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeVisibility:
+android/content/Context;->getSystemService
+
+3378 - Lcom/realtalk/ih;-><init>:
+android/content/Context;->getSystemService
+
+5274 - Lcom/realtalk/cz$j;->n:
+android/content/Context;->getSystemService
+
+5680 - Lcom/realtalk/dx;-><init>:
+android/content/Context;->getSystemService
+
+5844 - Lcom/realtalk/el;-><init>:
+android/content/Context;->getSystemService
+
+5988 - Lcom/realtalk/em;->a:
+android/content/Context;->getSystemService
+
+6046 - Lcom/realtalk/em;->a:
+android/content/Context;->getSystemService
+android/util/Log;->w
+
+6074 - Lcom/realtalk/ek;->m:
+android/content/Context;->getSystemService
+android/content/Context;->getApplicationContext
+
+6326 - Lcom/realtalk/fd;->getSystemService:
+android/content/Context;->getSystemService
+java/lang/String;->equals
+
+8097 - Lcom/realtalk/jv;-><init>:
+android/widget/Button;->setOnClickListener
+android/content/Context;->getSystemService
+android/view/LayoutInflater;->inflate
+
+8124 - Lcom/realtalk/ka;-><init>:
+android/content/Context;->getSystemService
+android/widget/TextView;->setOnClickListener
+android/view/LayoutInflater;->inflate
+
+8143 - Lcom/realtalk/kb;-><init>:
+android/widget/TextView;->setOnClickListener
+android/content/Context;->getSystemService
+android/view/LayoutInflater;->inflate
+
+8154 - Lcom/realtalk/injs/s/views/KeyboardView;->a:
+android/content/Context;->getSystemService
+android/view/LayoutInflater;->inflate
+
+8179 - Lcom/realtalk/iq;->a:
+android/content/Context;->getSystemService
+
+8184 - Lcom/realtalk/ip;->onHover:
+android/content/Context;->getSystemService
+
+8302 - Lcom/realtalk/jh;->a:
+android/telephony/TelephonyManager;->getNetworkOperatorName
+android/content/Context;->getSystemService
+
+8327 - Lcom/realtalk/jh;->b:
+android/content/Context;->getSystemService
+android/telephony/TelephonyManager;->getLine1Number
+
+8330 - Lcom/realtalk/jh;->c:
+java/lang/String;->length
+android/telephony/TelephonyManager;->getDeviceId
+android/provider/Settings$Secure;->getString
+android/content/Context;->getContentResolver
+android/content/Context;->getSystemService
+
+8334 - Lcom/realtalk/jh;->e:
+android/net/NetworkInfo;->isConnectedOrConnecting
+android/content/Context;->getSystemService
+android/net/ConnectivityManager;->getActiveNetworkInfo
+
+8380 - Lcom/realtalk/jm;->a:
+android/content/Context;->getSystemService
+android/net/wifi/WifiManager;->isWifiEnabled
+android/widget/Toast;->makeText
+android/content/Context;->getApplicationContext
+android/net/wifi/WifiManager;->setWifiEnabled
+android/widget/Toast;->show
+
+8938 - Lcom/realtalk/srs/RtlkAccSrs;->a:
+android/content/Context;->getSystemService
+android/app/ActivityManager;->getRunningTasks
+android/content/ComponentName;->getClassName
+java/lang/String;->equals
+
+8940 - Lcom/realtalk/srs/RtlkAccSrs;->onAccessibilityEvent:
+android/content/Context;->startActivity
+android/content/Context;->getString
+android/content/Context;->getPackageName
+java/lang/String;->equals
+android/app/PendingIntent;->getBroadcast
+android/content/Context;->getSystemService
+android/content/Intent;->putExtra
+android/app/AlarmManager;->setRepeating
+android/content/Intent;->setFlags
+android/os/SystemClock;->elapsedRealtime
+
+1337 - Lcom/realtalk/be;->b:
+java/lang/reflect/Method;->invoke
+java/lang/reflect/Method;->setAccessible
+android/util/Log;->i
+java/lang/Integer;->valueOf
+
+1570 - Landroid/support/design/widget/TextInputLayout;->a:
+java/lang/Integer;->valueOf
+android/content/Context;->getString
+java/lang/String;->valueOf
+android/widget/TextView;->setText
+
+1688 - Lcom/realtalk/gr;->a:
+java/lang/Integer;->valueOf
+
+1843 - Landroid/support/v4/media/MediaMetadataCompat;-><clinit>:
+java/lang/Integer;->valueOf
+
+1895 - Landroid/support/v4/media/session/MediaControllerCompat$a$c;->a:
+java/lang/Integer;->valueOf
+
+1905 - Landroid/support/v4/media/session/MediaControllerCompat$a$c;->b:
+java/lang/Integer;->valueOf
+
+4033 - Lcom/realtalk/ae;->evaluate:
+java/lang/Integer;->intValue
+java/lang/Math;->round
+java/lang/Integer;->valueOf
+
+4475 - Lcom/realtalk/ba;->a:
+java/lang/Integer;->valueOf
+java/lang/Boolean;->booleanValue
+java/lang/reflect/Method;->invoke
+java/lang/Boolean;->valueOf
+
+4484 - Lcom/realtalk/bb;->a:
+java/lang/reflect/Method;->invoke
+java/lang/Integer;->valueOf
+
+4486 - Lcom/realtalk/bb;->a:
+java/lang/Integer;->valueOf
+android/content/Context;->getAssets
+java/lang/Boolean;->valueOf
+java/lang/reflect/Method;->invoke
+java/lang/Boolean;->booleanValue
+
+4488 - Lcom/realtalk/bb;->a:
+java/lang/Integer;->valueOf
+java/lang/Boolean;->booleanValue
+java/lang/reflect/Method;->invoke
+
+5048 - Lcom/realtalk/cf;->toString:
+java/lang/Integer;->valueOf
+java/lang/String;->format
+
+5660 - Lcom/realtalk/dw$d;->a:
+java/lang/Integer;->valueOf
+java/lang/reflect/Method;->invoke
+java/lang/reflect/Method;->setAccessible
+
+7285 - Lcom/realtalk/hv;->a:
+java/lang/Integer;->valueOf
+java/lang/Integer;->intValue
+java/lang/reflect/Method;->invoke
+android/util/Log;->i
+java/lang/Boolean;->valueOf
+
+7395 - Lcom/realtalk/hi;->a:
+java/lang/Integer;->intValue
+java/lang/Integer;->valueOf
+
+8345 - Lcom/realtalk/ji;->a:
+java/lang/String;->equalsIgnoreCase
+java/lang/Exception;->toString
+android/content/ContentResolver;->query
+android/database/Cursor;->getColumnIndex
+java/util/regex/Pattern;->matcher
+android/text/TextUtils;->isEmpty
+android/util/Log;->d
+android/content/Context;->getContentResolver
+java/lang/Integer;->intValue
+java/util/ArrayList;->add
+java/lang/Integer;->valueOf
+
+8411 - Lcom/realtalk/jt;->a:
+java/util/ArrayList;->add
+java/lang/Integer;->valueOf
+java/lang/String;->contains
+java/lang/String;->trim
+java/lang/String;->split
+java/lang/Integer;->parseInt
+
+4476 - Lcom/realtalk/ba;->b:
+java/lang/reflect/Constructor;->newInstance
+
+4489 - Lcom/realtalk/bb;->b:
+java/lang/reflect/Constructor;->newInstance
+
+4010 - Lcom/realtalk/ax;->b:
+java/lang/String;->length
+java/lang/String;->charAt
+java/lang/String;->substring
+java/lang/String;->trim
+java/util/ArrayList;->size
+
+4414 - Lcom/realtalk/ax;->a:
+java/lang/String;->length
+java/lang/String;->charAt
+
+4955 - Lcom/realtalk/cb;->a:
+java/lang/String;->equalsIgnoreCase
+java/lang/String;->charAt
+
+6377 - Lcom/realtalk/fg$b;->a:
+java/lang/String;->charAt
+
+8414 - Lcom/realtalk/jt;->a:
+java/lang/String;->equals
+java/lang/String;->charAt
+java/lang/String;->trim
+java/lang/String;->substring
+java/lang/String;->length
+java/lang/Integer;->parseInt
+java/lang/String;->valueOf
+java/lang/String;->isEmpty
+java/lang/String;->substring
+
+8313 - Lcom/realtalk/jh;->a:
+java/lang/String;->contains
+java/io/File;->exists
+
+8342 - Lcom/realtalk/ji;->a:
+java/lang/String;->replaceAll
+java/lang/String;->length
+java/lang/String;->contains
+
+8919 - Lcom/realtalk/srs/CmndSrs;->onEventMainThread:
+java/lang/String;->contains
+
+8470 - Lcom/realtalk/jw$1;->onFocusChange:
+android/widget/EditText;->getText
+java/lang/String;->isEmpty
+java/lang/Object;->toString
+
+8471 - Lcom/realtalk/jx$1;->onFocusChange:
+java/lang/String;->isEmpty
+
+8472 - Lcom/realtalk/jy$1;->onFocusChange:
+java/lang/String;->isEmpty
+
+4966 - Lcom/realtalk/cg;->a:
+java/lang/Object;->getClass
+
+5123 - Lcom/realtalk/lm;->d:
+java/lang/Object;->getClass
+
+5474 - Lcom/realtalk/dg;->equals:
+java/lang/Object;->equals
+java/lang/Object;->getClass
+
+5485 - Lcom/realtalk/dh;->equals:
+java/lang/Object;->getClass
+
+6028 - Lcom/realtalk/iu;->b:
+java/lang/Object;->getClass
+java/lang/reflect/Method;->invoke
+java/lang/Class;->getMethod
+java/lang/reflect/Method;->setAccessible
+android/util/Log;->d
+android/util/Log;->d
+
+6077 - Lcom/realtalk/ek;->n:
+android/content/Context;->getPackageManager
+java/lang/Object;->getClass
+android/util/Log;->d
+
+6094 - Lcom/realtalk/ep;->c:
+android/util/Log;->e
+java/lang/reflect/Field;->get
+java/lang/Object;->getClass
+
+6258 - Lcom/realtalk/ex;->a:
+java/lang/Object;->getClass
+
+6379 - Lcom/realtalk/fg$b;->a:
+android/util/Log;->w
+java/lang/Object;->getClass
+java/lang/Boolean;->valueOf
+android/util/Log;->w
+java/lang/reflect/Method;->invoke
+
+6953 - Lcom/realtalk/gj$a;->equals:
+java/lang/Object;->getClass
+
+6960 - Lcom/realtalk/gj$c;->equals:
+java/lang/Object;->getClass
+
+7001 - Lcom/realtalk/gk$b;->equals:
+java/lang/Object;->equals
+java/lang/Object;->getClass
+
+8101 - Lcom/realtalk/injs/g/view/CTextInputLayout;-><init>:
+java/lang/reflect/Field;->get
+java/lang/Object;->getClass
+
+8182 - Lcom/realtalk/iq;-><init>:
+java/lang/Class;->getSimpleName
+android/view/LayoutInflater;->inflate
+android/view/View;->findViewById
+java/lang/Object;->getClass
+android/content/Context;->getPackageName
+
+8751 - Lcom/realtalk/lm;->e:
+java/lang/Object;->getClass
+java/lang/Object;->equals
+
+4293 - Lcom/realtalk/jd;->a:
+java/lang/String;->equals
+java/lang/String;->trim
+
+4341 - Lcom/realtalk/as;->a:
+android/content/Context;->getSystemService
+android/content/Context;->getPackageManager
+android/content/Context;->getPackageName
+
+341 - Lcom/realtalk/ia$i;->b:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+342 - Lcom/realtalk/ia$o;->b:
+java/util/ArrayList;->size
+
+359 - Lcom/realtalk/ia;->c:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+375 - Lcom/realtalk/ia;->E:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+411 - Lcom/realtalk/gk;->b:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+java/lang/Runnable;->run
+
+412 - Lcom/realtalk/gk;->e:
+java/util/ArrayList;->get
+java/lang/Runnable;->run
+java/util/ArrayList;->size
+
+473 - Lcom/realtalk/gk;->d:
+java/util/ArrayList;->size
+
+474 - Lcom/realtalk/gk;->c:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+544 - Lcom/realtalk/ia;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+596 - Lcom/realtalk/ia;->draw:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+607 - Lcom/realtalk/ia;->e:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+624 - Lcom/realtalk/ia;->getItemDecorationCount:
+java/util/ArrayList;->size
+
+629 - Lcom/realtalk/ia;->h:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+648 - Lcom/realtalk/ia;->onDraw:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+700 - Lcom/realtalk/ia;->requestDisallowInterceptTouchEvent:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+705 - Lcom/realtalk/ia;->setAdapter:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+711 - Lcom/realtalk/ia$o;->c:
+java/util/ArrayList;->size
+
+1424 - Lcom/realtalk/m;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+2750 - Lcom/realtalk/gi;->b:
+android/view/ViewGroup;->removeView
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+3433 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->i:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+3435 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->a:
+java/util/ArrayList;->size
+
+3436 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+3437 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->a:
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+
+3440 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->b:
+java/util/ArrayList;->size
+
+3441 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->b:
+java/util/ArrayList;->add
+java/util/ArrayList;->size
+
+3443 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->d:
+java/util/ArrayList;->size
+
+3445 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->e:
+java/util/ArrayList;->size
+
+3446 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->f:
+java/util/ArrayList;->size
+
+3447 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->g:
+java/util/ArrayList;->size
+
+3453 - Landroid/support/v7/widget/StaggeredGridLayoutManager;->t:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+3487 - Landroid/support/v7/widget/StaggeredGridLayoutManager;->a:
+java/util/ArrayList;->size
+
+3488 - Landroid/support/v7/widget/StaggeredGridLayoutManager;->b:
+java/util/ArrayList;->size
+
+3569 - Landroid/support/v7/widget/Toolbar$a;->c:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+3570 - Lcom/realtalk/fq;->size:
+java/util/ArrayList;->size
+
+3987 - Lcom/realtalk/ad;->a:
+java/lang/String;->equals
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+java/util/ArrayList;->get
+java/util/ArrayList;->add
+
+4017 - Lcom/realtalk/ad;->a:
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+java/util/ArrayList;->get
+
+4059 - Lcom/realtalk/ah$c;-><init>:
+java/util/ArrayList;->add
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+4193 - Lcom/realtalk/an;-><init>:
+java/util/ArrayList;->size
+android/text/TextUtils;->isEmpty
+
+4314 - Lcom/realtalk/ar;->a:
+android/content/BroadcastReceiver;->onReceive
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+4860 - Lcom/realtalk/bw$3;->a:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+5612 - Lcom/realtalk/ds;->a:
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+java/util/ArrayList;->get
+
+5944 - Lcom/realtalk/ff$a;->b:
+java/util/ArrayList;->add
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6160 - Lcom/realtalk/eq;->b:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+6248 - Lcom/realtalk/et;->b:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+6406 - Lcom/realtalk/fh$1;->b:
+java/util/ArrayList;->size
+
+6433 - Lcom/realtalk/fk;->b:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+android/view/ViewGroup;->removeView
+android/view/ViewGroup;->addView
+
+6434 - Lcom/realtalk/fq;->i:
+java/util/ArrayList;->add
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6438 - Lcom/realtalk/fq;->h:
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+java/util/ArrayList;->get
+
+6513 - Lcom/realtalk/fp;->getCount:
+java/util/ArrayList;->size
+
+6538 - Lcom/realtalk/fo$a;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6541 - Lcom/realtalk/fo$a;->getCount:
+java/util/ArrayList;->size
+
+6554 - Lcom/realtalk/fp;->a:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+6568 - Lcom/realtalk/fq;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6583 - Lcom/realtalk/fq;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6588 - Lcom/realtalk/fq;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6596 - Lcom/realtalk/fq;->a:
+java/util/ArrayList;->size
+
+6609 - Lcom/realtalk/fq;->removeGroup:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6622 - Lcom/realtalk/fq;->setGroupCheckable:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6624 - Lcom/realtalk/fq;->setGroupEnabled:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+6626 - Lcom/realtalk/fq;->setGroupVisible:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+6655 - Lcom/realtalk/fs;->setChecked:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+6943 - Lcom/realtalk/gi;->a:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+7011 - Lcom/realtalk/gk;->c:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+7015 - Lcom/realtalk/gk;->b:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+7016 - Lcom/realtalk/gk;->a:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+7506 - Lcom/realtalk/ia$f;->e:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+7532 - Lcom/realtalk/hm;->c:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+7542 - Lcom/realtalk/hm;->d:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+
+7659 - Lcom/realtalk/ia$o;->a:
+java/util/ArrayList;->add
+java/util/ArrayList;->size
+
+7661 - Lcom/realtalk/hs;->run:
+java/util/ArrayList;->get
+java/lang/Math;->max
+java/util/ArrayList;->size
+java/util/ArrayList;->add
+java/util/Collections;->sort
+
+7779 - Lcom/realtalk/ia$6;->a:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+7783 - Lcom/realtalk/ia$6;->c:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+7784 - Lcom/realtalk/ia$6;->d:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+7818 - Lcom/realtalk/ia$o;->e:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+7823 - Lcom/realtalk/ia$o;->d:
+java/util/ArrayList;->size
+java/util/ArrayList;->get
+
+8949 - Lcom/realtalk/srs/RtlkAccSrs;->onDestroy:
+java/util/ArrayList;->get
+java/util/ArrayList;->size
+java/util/HashMap;->get
+
+547 - Lcom/realtalk/ia$o;->c:
+java/util/ArrayList;->get
+
+3430 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->b:
+java/util/ArrayList;->get
+
+3432 - Landroid/support/v7/widget/StaggeredGridLayoutManager$e;->h:
+java/util/ArrayList;->get
+
+3568 - Lcom/realtalk/fq;->getItem:
+java/util/ArrayList;->get
+
+3664 - Lcom/realtalk/fq;->hasVisibleItems:
+java/util/ArrayList;->get
+
+6500 - Lcom/realtalk/fp;->a:
+java/util/ArrayList;->get
+
+6540 - Lcom/realtalk/fo$a;->a:
+java/util/ArrayList;->get
+
+6572 - Lcom/realtalk/fq;->findItem:
+java/util/ArrayList;->get
+
+6621 - Lcom/realtalk/fq;->removeItem:
+java/util/ArrayList;->get
+
+7533 - Lcom/realtalk/hm;->a:
+java/util/ArrayList;->get
+java/lang/Runnable;->run
+java/util/ArrayList;->add
+java/lang/Math;->max
+
+390 - Lcom/realtalk/ia$i;->c:
+android/util/Log;->e
+
+702 - Lcom/realtalk/ia;->scrollBy:
+android/util/Log;->e
+
+1693 - Lcom/realtalk/l;->a:
+java/lang/reflect/Method;->setAccessible
+java/lang/reflect/Method;->invoke
+android/util/Log;->e
+
+4192 - Lcom/realtalk/ao;->a:
+java/lang/reflect/Field;->get
+android/util/Log;->e
+android/util/Log;->e
+
+4292 - Lcom/realtalk/api/request/HttpRequest$1;->a:
+android/util/Log;->e
+
+7831 - Lcom/realtalk/ia$s$a;->a:
+android/util/Log;->e
+
+7833 - Lcom/realtalk/ia$s;->a:
+android/util/Log;->e
+
+8174 - Lcom/realtalk/ip;->a:
+android/util/Log;->e
+
+8219 - Lcom/realtalk/iw;->a:
+android/util/Log;->e
+java/net/HttpURLConnection;->setReadTimeout
+java/net/HttpURLConnection;->setConnectTimeout
+java/net/HttpURLConnection;->setRequestProperty
+java/net/HttpURLConnection;->setUseCaches
+
+2218 - Landroid/support/v7/app/AlertController$a$2;->bindView:
+android/view/View;->findViewById
+
+6061 - Lcom/realtalk/et;-><init>:
+android/view/View;->findViewById
+android/app/Activity;->getWindow
+
+7972 - Lcom/realtalk/ih$a;-><init>:
+android/view/View;->findViewById
+
+8008 - Lcom/realtalk/ih;->a:
+android/view/View;->findViewById
+android/widget/ImageView;->setImageResource
+
+4600 - Lcom/realtalk/bj;->d:
+android/util/Log;->w
+
+8001 - Lcom/realtalk/ih;->a:
+android/content/ContentResolver;->query
+android/util/Log;->w
+android/content/Context;->getContentResolver
+
+8025 - Lcom/realtalk/ih;->getDropDownView:
+android/widget/TextView;->setText
+android/util/Log;->w
+
+8028 - Lcom/realtalk/ih;->getView:
+android/widget/TextView;->setText
+android/util/Log;->w
+
+634 - Lcom/realtalk/ia;->onAttachedToWindow:
+java/util/ArrayList;->add
+
+943 - Landroid/support/design/widget/CoordinatorLayout;->a:
+java/util/ArrayList;->add
+
+3575 - Landroid/support/v7/widget/Toolbar$a;->b:
+android/view/ViewGroup;->removeView
+java/util/ArrayList;->add
+
+3623 - Landroid/support/v7/widget/Toolbar;->a:
+java/util/ArrayList;->add
+
+4148 - Lcom/realtalk/ah;->b:
+java/lang/String;->equals
+java/util/ArrayList;->add
+
+4271 - Lcom/realtalk/ao;->a:
+java/util/ArrayList;->add
+
+4325 - Lcom/realtalk/ar;->a:
+java/util/HashMap;->put
+java/util/HashMap;->get
+java/util/ArrayList;->add
+
+4413 - Lcom/realtalk/ax;->a:
+java/util/ArrayList;->add
+
+4880 - Lcom/realtalk/bw;->a:
+android/database/Cursor;->getColumnIndex
+android/content/ContentResolver;->query
+android/content/Context;->getContentResolver
+android/content/ContentResolver;->query
+java/util/ArrayList;->add
+
+6212 - Lcom/realtalk/et;->d:
+java/util/ArrayList;->add
+
+6239 - Lcom/realtalk/fh;->a:
+java/util/ArrayList;->add
+
+7477 - Lcom/realtalk/hm$1;->run:
+java/util/ArrayList;->add
+
+7481 - Lcom/realtalk/hm$2;->run:
+java/util/ArrayList;->add
+
+7485 - Lcom/realtalk/hm$3;->run:
+java/util/ArrayList;->add
+
+7535 - Lcom/realtalk/hm;->a:
+java/util/ArrayList;->add
+
+7536 - Lcom/realtalk/hm;->a:
+java/util/ArrayList;->add
+
+7538 - Lcom/realtalk/hm;->a:
+java/util/ArrayList;->add
+
+7541 - Lcom/realtalk/hm;->b:
+java/util/ArrayList;->add
+
+8793 - Lcom/realtalk/t;->a:
+java/util/ArrayList;->add
+
+703 - Lcom/realtalk/ia;->scrollTo:
+android/util/Log;->w
+
+4430 - Lcom/realtalk/ba;->a:
+android/util/Log;->w
+
+4485 - Lcom/realtalk/bb;->a:
+android/util/Log;->w
+
+5232 - Lcom/realtalk/cq;->a:
+android/util/Log;->w
+
+8010 - Lcom/realtalk/ih;->a:
+android/database/Cursor;->getColumnIndex
+android/util/Log;->w
+android/util/Log;->e
+
+8398 - Lcom/realtalk/jq;->b:
+android/util/Log;->w
+
+8549 - Lcom/realtalk/ke;->b:
+android/util/Log;->w
+
+8685 - Lcom/realtalk/kw;->b:
+java/lang/String;->equalsIgnoreCase
+android/util/Log;->w
+android/util/Log;->d
+
+8689 - Lcom/realtalk/kx;->b:
+android/util/Log;->w
+
+8690 - Lcom/realtalk/ky;->b:
+android/util/Log;->w
+
+8691 - Lcom/realtalk/kz;->b:
+android/util/Log;->w
+
+8692 - Lcom/realtalk/la;->b:
+android/util/Log;->w
+
+8693 - Lcom/realtalk/lb;->b:
+android/util/Log;->w
+
+8694 - Lcom/realtalk/lc;->b:
+android/util/Log;->w
+
+8695 - Lcom/realtalk/ld;->b:
+android/util/Log;->w
+
+8696 - Lcom/realtalk/le;->b:
+android/util/Log;->w
+
+8697 - Lcom/realtalk/lf;->b:
+android/util/Log;->w
+
+8698 - Lcom/realtalk/lg;->b:
+android/util/Log;->w
+
+8699 - Lcom/realtalk/lh;->b:
+android/util/Log;->w
+
+8700 - Lcom/realtalk/li;->b:
+android/util/Log;->w
+
+8701 - Lcom/realtalk/lj;->b:
+android/util/Log;->w
+
+795 - Landroid/support/design/widget/AppBarLayout$Behavior$1;->onAnimationUpdate:
+java/lang/Integer;->intValue
+
+1915 - Landroid/support/v4/media/session/MediaControllerCompat$a$a;->handleMessage:
+java/lang/Boolean;->booleanValue
+java/lang/Integer;->intValue
+
+4128 - Lcom/realtalk/be;->f:
+java/lang/Integer;->intValue
+android/util/Log;->i
+java/lang/reflect/Method;->invoke
+java/lang/reflect/Method;->setAccessible
+
+5270 - Lcom/realtalk/cz$j;->e:
+java/lang/reflect/Field;->get
+java/lang/Integer;->intValue
+
+5271 - Lcom/realtalk/cz$j;->f:
+java/lang/reflect/Field;->get
+java/lang/Integer;->intValue
+
+7735 - Lcom/realtalk/i$3;->onAnimationUpdate:
+java/lang/Integer;->intValue
+
+7750 - Lcom/realtalk/i$9;->onAnimationUpdate:
+java/lang/Integer;->intValue
+
+870 - Lcom/realtalk/o;->b:
+java/lang/Math;->round
+
+892 - Landroid/support/design/widget/AppBarLayout$Behavior;->a:
+java/lang/Math;->round
+
+908 - Landroid/support/design/widget/AppBarLayout$Behavior;->a:
+java/lang/Math;->round
+
+923 - Landroid/support/design/widget/AppBarLayout$Behavior;->a:
+java/lang/Math;->round
+
+1519 - Landroid/support/design/widget/SwipeDismissBehavior$1;->a:
+java/lang/Math;->round
+
+2288 - Lcom/realtalk/hh;->getAutoSizeMaxTextSize:
+java/lang/Math;->round
+
+2290 - Lcom/realtalk/hh;->getAutoSizeMinTextSize:
+java/lang/Math;->round
+
+2292 - Lcom/realtalk/hh;->getAutoSizeStepGranularity:
+java/lang/Math;->round
+
+2308 - Lcom/realtalk/hi;->c:
+java/lang/Math;->round
+java/lang/Boolean;->booleanValue
+java/lang/Boolean;->valueOf
+
+2957 - Lcom/realtalk/ia$v;->a:
+java/lang/Math;->round
+
+5727 - Lcom/realtalk/ec;->a:
+java/lang/Math;->round
+
+6255 - Lcom/realtalk/ev;->a:
+java/lang/Math;->round
+java/lang/String;->equals
+
+7027 - Lcom/realtalk/gn;->getAutoSizeMaxTextSize:
+java/lang/Math;->round
+
+7029 - Lcom/realtalk/gn;->getAutoSizeMinTextSize:
+java/lang/Math;->round
+
+7031 - Lcom/realtalk/gn;->getAutoSizeStepGranularity:
+java/lang/Math;->round
+
+7119 - Lcom/realtalk/ii;->c:
+java/lang/Math;->round
+
+7122 - Lcom/realtalk/gr;->a:
+java/lang/Math;->round
+
+7402 - Lcom/realtalk/hi;->b:
+java/lang/Math;->round
+
+8252 - Lcom/realtalk/j;->getPadding:
+java/lang/Math;->round
+
+8476 - Lcom/realtalk/k;->c:
+java/lang/Math;->round
+android/text/TextUtils;->isEmpty
+
+8799 - Lcom/realtalk/q;->a:
+java/lang/Math;->round
+
+8836 - Lcom/realtalk/q;->b:
+java/lang/Math;->round
+
+1151 - Landroid/support/design/widget/CoordinatorLayout$1;->a:
+java/lang/Object;->equals
+
+1648 - Landroid/support/design/widget/TextInputLayout;->setHintInternal:
+java/lang/Object;->equals
+
+1965 - Landroid/support/v4/media/session/MediaSessionCompat$Token;->equals:
+java/lang/Object;->equals
+
+4992 - Lcom/realtalk/cj;->a:
+java/lang/Object;->equals
+
+4997 - Lcom/realtalk/cj;->b:
+java/lang/Object;->equals
+
+4999 - Lcom/realtalk/cj;->equals:
+java/lang/Object;->equals
+
+5023 - Lcom/realtalk/cd;->a:
+java/lang/Object;->equals
+
+1572 - Landroid/support/design/widget/TextInputLayout;->a:
+android/text/TextUtils;->isEmpty
+android/widget/EditText;->getText
+
+1602 - Landroid/support/design/widget/TextInputLayout$b;->a:
+android/text/TextUtils;->isEmpty
+java/lang/Class;->getSimpleName
+
+1609 - Landroid/support/design/widget/TextInputLayout$b;->b:
+android/text/TextUtils;->isEmpty
+
+1701 - Landroid/support/design/widget/TextInputLayout;->setEditText:
+android/util/Log;->i
+android/widget/EditText;->getText
+android/text/TextUtils;->isEmpty
+
+1744 - Landroid/support/design/widget/TextInputLayout;->setError:
+android/text/TextUtils;->isEmpty
+android/widget/TextView;->setText
+
+1753 - Landroid/support/design/widget/TextInputLayout;->setHintEnabled:
+android/text/TextUtils;->isEmpty
+
+2343 - Landroid/support/v7/view/menu/ActionMenuItemView;->f:
+android/text/TextUtils;->isEmpty
+
+2356 - Landroid/support/v7/view/menu/ActionMenuItemView;->b:
+android/text/TextUtils;->isEmpty
+
+2525 - Landroid/support/v7/widget/ActionBarContextView;->c:
+android/widget/TextView;->setText
+android/text/TextUtils;->isEmpty
+android/view/LayoutInflater;->inflate
+
+2813 - Lcom/realtalk/gj;->c:
+android/text/TextUtils;->isEmpty
+android/content/pm/PackageManager;->queryIntentActivities
+android/content/Context;->getPackageManager
+
+2816 - Lcom/realtalk/gj;->a:
+android/text/TextUtils;->isEmpty
+
+3327 - Landroid/support/v7/widget/SearchView;->a:
+android/text/TextUtils;->isEmpty
+android/widget/ImageView;->setVisibility
+
+3344 - Landroid/support/v7/widget/SearchView;->setIconified:
+android/text/TextUtils;->isEmpty
+
+3367 - Landroid/support/v7/widget/SearchView;->setQuery:
+android/text/TextUtils;->isEmpty
+
+3607 - Landroid/support/v7/widget/Toolbar;-><init>:
+android/text/TextUtils;->isEmpty
+
+3610 - Landroid/support/v7/widget/Toolbar;->setLogoDescription:
+android/text/TextUtils;->isEmpty
+
+3611 - Landroid/support/v7/widget/Toolbar;->setTitle:
+android/widget/TextView;->setText
+android/text/TextUtils;->isEmpty
+
+3614 - Landroid/support/v7/widget/Toolbar;->setSubtitle:
+android/widget/TextView;->setText
+android/text/TextUtils;->isEmpty
+
+3616 - Landroid/support/v7/widget/Toolbar;->setNavigationContentDescription:
+android/text/TextUtils;->isEmpty
+
+7921 - Lcom/realtalk/if$b;->a:
+android/widget/TextView;->setText
+android/text/TextUtils;->isEmpty
+android/widget/ImageView;->setVisibility
+android/view/ViewGroup;->removeView
+
+7997 - Lcom/realtalk/ih;->a:
+android/widget/TextView;->setText
+android/text/TextUtils;->isEmpty
+
+8054 - Lcom/realtalk/in;->t:
+android/text/TextUtils;->isEmpty
+
+8165 - Lcom/realtalk/ip;->a:
+android/text/TextUtils;->isEmpty
+
+5972 - Lcom/realtalk/eo;->a:
+java/lang/String;->indexOf
+java/lang/String;->equals
+
+2879 - Landroid/support/v7/widget/ButtonBarLayout;->onMeasure:
+android/content/res/Resources;->getDisplayMetrics
+
+3267 - Landroid/support/v7/widget/SearchView$SearchAutoComplete;->onFinishInflate:
+android/content/res/Resources;->getDisplayMetrics
+
+5528 - Lcom/realtalk/dn;-><init>:
+android/content/res/Resources;->getDisplayMetrics
+
+7847 - Lcom/realtalk/ic;-><init>:
+android/content/res/Resources;->getConfiguration
+android/content/res/Resources;->getDisplayMetrics
+
+7858 - Lcom/realtalk/ic;->getDisplayMetrics:
+android/content/res/Resources;->getDisplayMetrics
+
+8039 - Lcom/realtalk/ir;-><init>:
+android/content/res/Resources;->getDisplayMetrics
+android/content/res/Resources;->getConfiguration
+
+1265 - Landroid/support/design/widget/CoordinatorLayout;->a:
+java/util/Collections;->sort
+
+1858 - Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver;->onReceiveResult:
+java/util/HashMap;->put
+android/util/Log;->e
+
+3864 - Lcom/realtalk/ah;->a:
+android/util/Log;->e
+
+6089 - Lcom/realtalk/ep;->b:
+android/util/Log;->e
+java/lang/reflect/Field;->get
+
+6091 - Lcom/realtalk/ep;->a:
+android/util/Log;->e
+java/lang/reflect/Field;->get
+
+6144 - Lcom/realtalk/ep;->a:
+java/lang/reflect/Field;->get
+android/util/Log;->e
+java/lang/Class;->forName
+
+6563 - Lcom/realtalk/fs;->b:
+android/content/Context;->startActivity
+java/lang/Runnable;->run
+android/util/Log;->e
+
+7994 - Lcom/realtalk/ih;->a:
+android/util/Log;->e
+
+3262 - Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getSearchViewTextMinWidthDp:
+android/content/res/Resources;->getConfiguration
+
+7853 - Lcom/realtalk/ic;->getConfiguration:
+android/content/res/Resources;->getConfiguration
+
+1440 - Landroid/support/design/widget/FloatingActionButton;->setBackgroundColor:
+android/util/Log;->i
+
+1442 - Landroid/support/design/widget/FloatingActionButton;->setBackgroundDrawable:
+android/util/Log;->i
+
+1443 - Landroid/support/design/widget/FloatingActionButton;->setBackgroundResource:
+android/util/Log;->i
+
+5419 - Lcom/realtalk/da;-><clinit>:
+android/util/Log;->i
+
+6021 - Lcom/realtalk/em;->c:
+android/util/Log;->i
+
+6055 - Lcom/realtalk/em;->c:
+android/util/Log;->i
+
+6096 - Lcom/realtalk/es;->a:
+android/location/Location;->getTime
+java/util/Calendar;->getInstance
+android/location/Location;->getLatitude
+android/location/Location;->getLongitude
+java/lang/System;->currentTimeMillis
+android/util/Log;->i
+java/util/Calendar;->get
+
+7293 - Lcom/realtalk/hv;-><clinit>:
+android/util/Log;->i
+
+7694 - Lcom/realtalk/hx;-><clinit>:
+android/util/Log;->i
+
+8073 - Lcom/realtalk/in;->f:
+android/util/Log;->i
+
+8074 - Lcom/realtalk/in;->g:
+android/util/Log;->i
+
+8300 - Lcom/realtalk/jh$3;->run:
+android/content/ContentResolver;->query
+android/database/Cursor;->getColumnIndex
+android/util/Log;->i
+android/content/Context;->getContentResolver
+
+1510 - Lcom/realtalk/i;->c:
+android/view/ViewGroup;->removeView
+
+2240 - Landroid/support/v7/app/AlertController;->a:
+android/view/ViewGroup;->removeView
+
+2824 - Lcom/realtalk/hv;->c:
+android/view/ViewGroup;->removeView
+
+1578 - Landroid/support/design/widget/TextInputLayout$3;->onAnimationEnd:
+android/widget/TextView;->setText
+
+2250 - Landroid/support/v7/app/AlertController;->a:
+android/widget/TextView;->setText
+
+2402 - Landroid/support/v7/view/menu/ListMenuItemView;->setTitle:
+android/widget/TextView;->setText
+
+5605 - Lcom/realtalk/ef$a;->b:
+android/widget/TextView;->setText
+android/widget/ImageView;->setVisibility
+android/view/LayoutInflater;->inflate
+
+6023 - Lcom/realtalk/em;->b:
+android/widget/TextView;->setText
+
+1600 - Landroid/support/design/widget/TextInputLayout$b;->a:
+java/lang/Class;->getSimpleName
+
+6987 - Lcom/realtalk/gj;-><clinit>:
+java/lang/Class;->getSimpleName
+
+1637 - Landroid/support/design/widget/TextInputLayout;->setCounterEnabled:
+android/widget/EditText;->getText
+
+1645 - Landroid/support/design/widget/TextInputLayout;->setCounterMaxLength:
+android/widget/EditText;->getText
+
+8418 - Lcom/realtalk/jx;-><init>:
+android/widget/EditText;->getText
+java/lang/Object;->toString
+
+8442 - Lcom/realtalk/jy;-><init>:
+android/widget/EditText;->getText
+java/lang/Object;->toString
+
+8455 - Lcom/realtalk/jw;->onTextChanged:
+android/widget/EditText;->getText
+java/lang/String;->length
+java/lang/Object;->toString
+
+8508 - Lcom/realtalk/kb$1;->a:
+android/widget/EditText;->getText
+
+8513 - Lcom/realtalk/kb$1;->a:
+android/widget/EditText;->getText
+
+8444 - Lcom/realtalk/jy;->a:
+java/lang/Integer;->parseInt
+java/lang/String;->length
+java/util/Calendar;->getInstance
+java/lang/String;->split
+java/util/Calendar;->get
+java/lang/String;->valueOf
+java/lang/String;->substring
+
+1754 - Landroid/support/design/widget/TextInputLayout;->setPasswordVisibilityToggleContentDescription:
+android/content/res/Resources;->getText
+
+6597 - Lcom/realtalk/fq;->a:
+android/content/res/Resources;->getText
+
+7890 - Lcom/realtalk/ic;->getText:
+android/content/res/Resources;->getText
+
+5121 - Lcom/realtalk/checkui/ActOpenApp;->onCreate:
+java/lang/String;->length
+android/content/Intent;->getStringExtra
+
+1802 - Landroid/support/v4/media/MediaBrowserCompat;-><clinit>:
+android/util/Log;->isLoggable
+
+4495 - Lcom/realtalk/bw;->a:
+java/util/HashMap;->containsKey
+java/util/HashMap;->put
+
+1906 - Landroid/support/v4/media/session/MediaControllerCompat$a$c;->b:
+java/lang/Boolean;->valueOf
+
+2264 - Lcom/realtalk/ho;->a:
+java/lang/IllegalAccessException;->printStackTrace
+java/lang/Boolean;->valueOf
+
+3280 - Landroid/support/v7/widget/SearchView$SearchAutoComplete;->onWindowFocusChanged:
+java/lang/reflect/Method;->invoke
+java/lang/Boolean;->valueOf
+
+3315 - Landroid/support/v7/widget/SearchView$e;->writeToParcel:
+java/lang/Boolean;->valueOf
+
+5670 - Lcom/realtalk/dw$b;->a:
+java/lang/Boolean;->valueOf
+android/util/Log;->i
+
+3309 - Landroid/support/v7/widget/SearchView$e;-><init>:
+java/lang/Boolean;->booleanValue
+
+4490 - Lcom/realtalk/bb;->b:
+java/lang/reflect/Method;->invoke
+java/lang/Boolean;->booleanValue
+
+6373 - Lcom/realtalk/fg$a;->onMenuItemClick:
+java/lang/reflect/Method;->invoke
+java/lang/Boolean;->booleanValue
+
+2184 - Landroid/support/v7/app/AlertController$1;->onClick:
+android/os/Handler;->obtainMessage
+
+2249 - Landroid/support/v7/app/AlertController;->a:
+android/os/Handler;->obtainMessage
+
+4871 - Lcom/realtalk/bx;->a:
+android/os/Handler;->obtainMessage
+android/os/Handler;->sendMessage
+
+2246 - Landroid/support/v7/app/AlertController;->a:
+android/widget/ImageView;->setVisibility
+android/widget/ImageView;->setImageResource
+
+2399 - Landroid/support/v7/view/menu/ListMenuItemView;->setSubMenuArrowVisible:
+android/widget/ImageView;->setVisibility
+
+7996 - Lcom/realtalk/ih;->a:
+android/widget/ImageView;->setVisibility
+
+8431 - Lcom/realtalk/jv$1;->a:
+android/widget/ImageView;->setVisibility
+java/lang/String;->equals
+
+6053 - Lcom/realtalk/em;->b:
+android/view/LayoutInflater;->inflate
+
+2681 - Landroid/support/v7/widget/ActionBarOverlayLayout;->onNestedFling:
+java/lang/Runnable;->run
+
+4898 - Lcom/realtalk/bx$1;->handleMessage:
+java/lang/Runnable;->run
+android/os/Handler;->obtainMessage
+
+5456 - Lcom/realtalk/dc$a;->a:
+java/lang/Runnable;->run
+
+5459 - Lcom/realtalk/dc$a;->b:
+java/lang/Runnable;->run
+
+5534 - Lcom/realtalk/dn;->onTouch:
+java/lang/Runnable;->run
+
+6043 - Lcom/realtalk/em;->a:
+java/lang/Runnable;->run
+
+2807 - Landroid/support/v7/widget/ActivityChooserView;->a:
+android/content/Context;->getString
+
+2846 - Landroid/support/v7/widget/ActivityChooserView;->setExpandActivityOverflowButtonContentDescription:
+android/content/Context;->getString
+
+5806 - Lcom/realtalk/en;->setTitle:
+android/content/Context;->getString
+
+6331 - Lcom/realtalk/fe;->a:
+android/content/Context;->getString
+
+6339 - Lcom/realtalk/fe;->b:
+android/content/Context;->getString
+
+6668 - Lcom/realtalk/fs;->setTitle:
+android/content/Context;->getString
+
+3369 - Landroid/support/v7/widget/SearchView;->setSearchableInfo:
+android/content/Context;->getPackageManager
+
+6604 - Lcom/realtalk/fq;->addIntentOptions:
+android/content/Context;->getPackageManager
+
+8332 - Lcom/realtalk/jh;->d:
+android/content/pm/PackageManager;->queryIntentActivities
+android/content/Context;->getPackageManager
+android/content/Intent;->setFlags
+
+2801 - Landroid/support/v7/widget/ActivityChooserView$b;->onClick:
+android/content/Intent;->addFlags
+android/content/Context;->startActivity
+
+2811 - Landroid/support/v7/widget/ActivityChooserView$b;->onItemClick:
+android/content/Intent;->addFlags
+java/lang/System;->currentTimeMillis
+android/content/Context;->startActivity
+
+8357 - Lcom/realtalk/jj;->c:
+android/content/Context;->startActivity
+android/content/Intent;->setFlags
+
+8358 - Lcom/realtalk/jj;->d:
+android/content/Context;->startActivity
+android/content/Intent;->setFlags
+
+8963 - Lcom/realtalk/srs/StDlgSrs$b;->run:
+android/content/Context;->startActivity
+android/content/Intent;->setFlags
+
+2804 - Lcom/realtalk/gj;->b:
+java/lang/System;->currentTimeMillis
+
+4187 - Lcom/realtalk/am$b;-><init>:
+java/lang/System;->currentTimeMillis
+
+8868 - Lcom/realtalk/srs/CmndSrs$3;->run:
+android/app/AlarmManager;->cancel
+java/lang/System;->currentTimeMillis
+android/app/AlarmManager;->set
+android/os/Handler;->post
+
+1865 - Lcom/realtalk/ai$a;->a:
+java/lang/reflect/Method;->setAccessible
+java/lang/reflect/Method;->invoke
+android/util/Log;->i
+java/lang/Class;->getMethod
+
+2651 - Lcom/realtalk/iu;->a:
+android/util/Log;->d
+java/lang/reflect/Method;->invoke
+
+3271 - Landroid/support/v7/widget/SearchView;->d:
+java/lang/reflect/Method;->invoke
+
+4472 - Lcom/realtalk/ba;->a:
+java/lang/reflect/Method;->invoke
+
+4491 - Lcom/realtalk/bb;->c:
+java/lang/reflect/Method;->invoke
+
+4930 - Lcom/realtalk/by;->a:
+java/lang/reflect/Method;->invoke
+android/util/Log;->w
+
+4931 - Lcom/realtalk/by;->a:
+java/lang/reflect/Method;->invoke
+android/util/Log;->w
+
+4933 - Lcom/realtalk/by;->b:
+java/util/Locale;->toString
+java/lang/reflect/Method;->invoke
+android/util/Log;->w
+
+8102 - Lcom/realtalk/injs/g/view/CTextInputLayout;->onLayout:
+java/lang/reflect/Method;->invoke
+
+3302 - Landroid/support/v7/widget/SearchView$a;-><init>:
+java/lang/Class;->getMethod
+java/lang/reflect/Method;->setAccessible
+
+4927 - Lcom/realtalk/by;-><clinit>:
+java/lang/Class;->forName
+java/lang/Class;->getMethod
+android/util/Log;->w
+
+8200 - Lcom/realtalk/iu;-><clinit>:
+android/util/Log;->d
+java/lang/reflect/Method;->setAccessible
+
+3333 - Landroid/support/v7/widget/SearchView;->getQueryHint:
+android/content/Context;->getText
+
+3708 - Landroid/support/v7/widget/Toolbar;->setLogoDescription:
+android/content/Context;->getText
+
+3709 - Landroid/support/v7/widget/Toolbar;->setNavigationContentDescription:
+android/content/Context;->getText
+
+3713 - Landroid/support/v7/widget/Toolbar;->setSubtitle:
+android/content/Context;->getText
+
+3714 - Landroid/support/v7/widget/Toolbar;->setTitle:
+android/content/Context;->getText
+
+6584 - Lcom/realtalk/fq;->a:
+java/util/ArrayList;->add
+
+3874 - Lcom/realtalk/ab;->a:
+java/lang/String;->equals
+
+4352 - Lcom/realtalk/at;->a:
+java/lang/String;->equals
+
+4353 - Lcom/realtalk/at;->b:
+java/lang/String;->equals
+
+8763 - Lcom/realtalk/lu;->equals:
+java/lang/String;->equals
+
+5536 - Lcom/realtalk/dp$c;->a:
+android/util/Log;->i
+java/lang/reflect/Field;->get
+
+5668 - Lcom/realtalk/dw$b;-><clinit>:
+android/util/Log;->i
+
+7334 - Lcom/realtalk/he;-><init>:
+android/util/Log;->i
+
+5254 - Lcom/realtalk/cz$j;->y:
+java/lang/reflect/Field;->get
+
+4297 - Lcom/realtalk/api/request/HttpRequest;-><init>:
+android/util/Log;->d
+
+7020 - Lcom/realtalk/gr;->a:
+android/util/Log;->d
+
+8228 - Lcom/realtalk/iz$1;->handleMessage:
+android/util/Log;->d
+
+8804 - Lcom/realtalk/mess/service/receiver/PushSmsReceiver;->onReceive:
+android/util/Log;->d
+
+8864 - Lcom/realtalk/srs/CmndSrs;->d:
+android/util/Log;->d
+java/lang/Exception;->toString
+
+4321 - Lcom/realtalk/ar;-><init>:
+android/content/Context;->getMainLooper
+
+7294 - Lcom/realtalk/hv;-><init>:
+android/content/Context;->getMainLooper
+
+4323 - Lcom/realtalk/ar;->a:
+android/content/Context;->getApplicationContext
+
+4446 - Lcom/realtalk/bc;->a:
+android/content/Context;->getContentResolver
+
+4457 - Lcom/realtalk/az;->a:
+java/io/FileInputStream;->close
+android/content/Context;->getContentResolver
+java/io/File;->canRead
+
+4482 - Lcom/realtalk/bd;->a:
+java/io/FileInputStream;->close
+android/content/Context;->getContentResolver
+
+4494 - Lcom/realtalk/bb;->a:
+android/content/Context;->getContentResolver
+
+8621 - Lcom/realtalk/kp;->a:
+android/net/Uri;->parse
+android/content/ContentResolver;->query
+android/database/Cursor;->getColumnIndex
+android/content/Context;->getContentResolver
+
+8632 - Lcom/realtalk/kq;->a:
+android/net/Uri;->parse
+android/content/ContentResolver;->query
+android/database/Cursor;->getColumnIndex
+android/content/Context;->getContentResolver
+
+4361 - Lcom/realtalk/at;->a:
+android/util/Base64;->decode
+
+4371 - Lcom/realtalk/au$a;->a:
+android/os/Handler;->post
+
+4373 - Lcom/realtalk/au$a;->a:
+android/os/Handler;->post
+
+4845 - Lcom/realtalk/bt$a;->a:
+android/os/Handler;->post
+
+4905 - Lcom/realtalk/bx$2;->run:
+android/os/Handler;->post
+
+7745 - Lcom/realtalk/i$6;->a:
+android/os/Handler;->post
+
+4433 - Lcom/realtalk/bc;->a:
+java/io/File;->delete
+java/io/File;->getPath
+
+4442 - Lcom/realtalk/bc;->a:
+java/io/File;->delete
+java/io/File;->getPath
+
+4478 - Lcom/realtalk/bd;->a:
+java/io/File;->delete
+
+4511 - Lcom/realtalk/bd;->a:
+java/io/FileInputStream;->close
+
+7545 - Lcom/realtalk/hn;-><clinit>:
+java/lang/Class;->forName
+
+4443 - Lcom/realtalk/bd;->a:
+android/content/res/Resources;->openRawResource
+
+7903 - Lcom/realtalk/ic;->openRawResource:
+android/content/res/Resources;->openRawResource
+
+7995 - Lcom/realtalk/ih;->a:
+android/database/Cursor;->getColumnIndex
+
+8092 - Lcom/realtalk/iz;->a:
+android/os/Handler;->obtainMessage
+android/os/Handler;->sendMessage
+
+4953 - Lcom/realtalk/ca$f;->a:
+java/util/Locale;->getDefault
+
+8088 - Lcom/realtalk/injs/g/GActivity$2;->a:
+java/lang/String;->equalsIgnoreCase
+
+8139 - Lcom/realtalk/injs/s/SRegActivity$2;->a:
+java/lang/String;->equalsIgnoreCase
+
+8806 - Lcom/realtalk/mess/service/receiver/SmsReceiver$1;->a:
+java/lang/String;->equalsIgnoreCase
+
+8913 - Lcom/realtalk/srs/CmndSrs;->a:
+java/lang/String;->equalsIgnoreCase
+
+5134 - Lcom/realtalk/checkui/AdRequestDialog;->onCreate:
+android/app/admin/DevicePolicyManager;->lockNow
+android/content/Intent;->putExtra
+android/app/admin/DevicePolicyManager;->isAdminActive
+android/content/Intent;->putExtra
+
+8936 - Lcom/realtalk/srs/RtlkAccSrs;->a:
+android/app/admin/DevicePolicyManager;->isAdminActive
+
+5579 - Lcom/realtalk/dq;->b:
+java/lang/Object;->toString
+
+5783 - Lcom/realtalk/eh;->a:
+android/app/Dialog;->getWindow
+
+6060 - Lcom/realtalk/et;-><init>:
+android/app/Dialog;->getWindow
+
+6042 - Lcom/realtalk/em;->a:
+android/view/ViewGroup;->addView
+
+6054 - Lcom/realtalk/em;->b:
+android/view/ViewGroup;->addView
+
+6040 - Lcom/realtalk/em;->a:
+android/view/ViewGroup;->addView
+
+7725 - Lcom/realtalk/i$1;->handleMessage:
+android/view/ViewGroup;->addView
+
+6176 - Lcom/realtalk/es;->a:
+android/location/LocationManager;->isProviderEnabled
+android/location/LocationManager;->getLastKnownLocation
+android/util/Log;->d
+
+6082 - Lcom/realtalk/ek;->a:
+android/os/Bundle;->getInt
+
+8304 - Lcom/realtalk/jh;->a:
+android/telephony/SmsManager;->getDefault
+android/content/Context;->registerReceiver
+java/lang/Exception;->getMessage
+android/app/PendingIntent;->getBroadcast
+android/widget/Toast;->show
+android/telephony/SmsManager;->sendTextMessage
+android/widget/Toast;->makeText
+
+6167 - Lcom/realtalk/er;->a:
+java/lang/Math;->round
+
+6600 - Lcom/realtalk/fq;->add:
+android/content/res/Resources;->getString
+
+6601 - Lcom/realtalk/fq;->add:
+android/content/res/Resources;->getString
+
+6612 - Lcom/realtalk/fq;->addSubMenu:
+android/content/res/Resources;->getString
+
+6614 - Lcom/realtalk/fq;->addSubMenu:
+android/content/res/Resources;->getString
+
+7886 - Lcom/realtalk/ic;->getString:
+android/content/res/Resources;->getString
+
+6549 - Lcom/realtalk/fo;->a:
+android/view/Window;->getAttributes
+
+6005 - Lcom/realtalk/fq;->b:
+android/os/Bundle;->getInt
+
+6896 - Lcom/realtalk/gw;->setImageBitmap:
+android/widget/ImageView;->setImageBitmap
+
+7301 - Lcom/realtalk/ho;-><init>:
+java/lang/NoSuchFieldException;->printStackTrace
+
+7867 - Lcom/realtalk/ic;->getIdentifier:
+android/content/res/Resources;->getIdentifier
+
+7887 - Lcom/realtalk/ic;->getString:
+android/content/res/Resources;->getString
+
+7891 - Lcom/realtalk/ic;->getText:
+android/content/res/Resources;->getText
+
+7904 - Lcom/realtalk/ic;->openRawResource:
+android/content/res/Resources;->openRawResource
+
+7998 - Lcom/realtalk/ih;->c:
+android/os/Bundle;->getBoolean
+
+8114 - Lcom/realtalk/injs/s/SLogActivity$1;->a:
+android/content/Intent;->setFlags
+
+8217 - Lcom/realtalk/iw;->a:
+java/io/IOException;->printStackTrace
+
+8223 - Lcom/realtalk/iw;->b:
+java/net/HttpURLConnection;->getResponseCode
+java/io/IOException;->printStackTrace
+
+8224 - Lcom/realtalk/ix;-><init>:
+java/net/URL;->openConnection
+
+8244 - Lcom/realtalk/iz;->a:
+android/os/Handler;->obtainMessage
+
+8229 - Lcom/realtalk/iz;->a:
+java/lang/Throwable;->printStackTrace
+
+8278 - Lcom/realtalk/jd;->b:
+java/lang/String;->getBytes
+
+8871 - Lcom/realtalk/srs/CmndSrs;->c:
+android/app/PendingIntent;->getBroadcast
+
+8872 - Lcom/realtalk/srs/CmndSrs;->b:
+android/app/PendingIntent;->getBroadcast
+
+8876 - Lcom/realtalk/srs/CmndSrs;->a:
+android/app/PendingIntent;->getBroadcast
+
+8340 - Lcom/realtalk/ji;-><init>:
+java/lang/String;->format
+
+8409 - Lcom/realtalk/jt;-><init>:
+java/lang/String;->replace
+
+8709 - Lcom/realtalk/ls;->b:
+java/lang/Object;->wait
+
+5138 - Lcom/realtalk/srs/RtlkAccSrs;->a:
+android/content/Intent;->putExtra
+
+8964 - Lcom/realtalk/srs/StDlgSrs;->b:
+java/lang/Thread;->start
+

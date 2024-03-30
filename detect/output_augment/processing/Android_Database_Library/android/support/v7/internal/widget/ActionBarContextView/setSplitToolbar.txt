@@ -1,0 +1,95 @@
+# Landroid/support/v7/internal/widget/ActionBarContextView;->setSplitToolbar(Z)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:boolean
+#
+# - return:void
+
+setSplitToolbar-BB@0x0 : [ setSplitToolbar-BB@0x8 setSplitToolbar-BB@0x106 ]
+	0       (00000000) iget-boolean         v0, v5, La/a/a/c/d/a;->e Z
+	1       (00000004) if-eq                v0, v6, +81
+
+setSplitToolbar-BB@0x8 : [ setSplitToolbar-BB@0x10 setSplitToolbar-BB@0x102 ]
+	2       (00000008) iget-object          v0, v5, La/a/a/c/d/a;->c La/a/a/e/b;
+	3       (0000000c) if-eqz               v0, +7b
+
+setSplitToolbar-BB@0x10 : [ setSplitToolbar-BB@0x22 setSplitToolbar-BB@0x6c ]
+	4       (00000010) new-instance         v0, Landroid/view/ViewGroup$LayoutParams;
+	5       (00000014) const/4              v1, -2
+	6       (00000016) const/4              v2, -1
+	7       (00000018) invoke-direct        v0, v1, v2, Landroid/view/ViewGroup$LayoutParams;-><init>(I I)V
+	8       (0000001e) if-nez               v6, +27
+
+setSplitToolbar-BB@0x22 : [ setSplitToolbar-BB@0x56 setSplitToolbar-BB@0x60 ]
+	9       (00000022) iget-object          v1, v5, La/a/a/c/d/a;->c La/a/a/e/b;
+	10      (00000026) invoke-virtual       v1, v5, La/a/a/e/b;->a(Landroid/view/ViewGroup;)La/a/a/c/c/a/k;
+	11      (0000002c) move-result-object   v1
+	12      (0000002e) check-cast           v1, Landroid/support/v7/widget/ActionMenuView;
+	13      (00000032) iput-object          v1, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	14      (00000036) iget-object          v1, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	15      (0000003a) const/4              v2, 0
+	16      (0000003c) invoke-virtual       v1, v2, Landroid/view/ViewGroup;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+	17      (00000042) iget-object          v1, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	18      (00000046) invoke-virtual       v1, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+	19      (0000004c) move-result-object   v1
+	20      (0000004e) check-cast           v1, Landroid/view/ViewGroup;
+	21      (00000052) if-eqz               v1, +7
+
+setSplitToolbar-BB@0x56 : [ setSplitToolbar-BB@0x60 ]
+	22      (00000056) iget-object          v2, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	23      (0000005a) invoke-virtual       v1, v2, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+setSplitToolbar-BB@0x60 : [ setSplitToolbar-BB@0x102 ]
+	24      (00000060) iget-object          v1, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	25      (00000064) invoke-virtual       v5, v1, v0, Landroid/view/ViewGroup;->addView(Landroid/view/View; Landroid/view/ViewGroup$LayoutParams;)V
+	26      (0000006a) goto                 +4c
+
+setSplitToolbar-BB@0x6c : [ setSplitToolbar-BB@0xea setSplitToolbar-BB@0xf4 ]
+	27      (0000006c) iget-object          v1, v5, La/a/a/c/d/a;->c La/a/a/e/b;
+	28      (00000070) invoke-virtual       v5, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+	29      (00000076) move-result-object   v3
+	30      (00000078) invoke-virtual       v3, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	31      (0000007e) move-result-object   v3
+	32      (00000080) invoke-virtual       v3, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	33      (00000086) move-result-object   v3
+	34      (00000088) iget                 v3, v3, Landroid/util/DisplayMetrics;->widthPixels I
+	35      (0000008c) iput                 v3, v1, La/a/a/e/b;->l I
+	36      (00000090) const/4              v3, 1
+	37      (00000092) iput-boolean         v3, v1, La/a/a/e/b;->p Z
+	38      (00000096) iput-boolean         v3, v1, La/a/a/e/b;->q Z
+	39      (0000009a) iget-object          v1, v5, La/a/a/c/d/a;->c La/a/a/e/b;
+	40      (0000009e) const                v4, 2147483647 # [nan]
+	41      (000000a4) iput                 v4, v1, La/a/a/e/b;->n I
+	42      (000000a8) iput-boolean         v3, v1, La/a/a/e/b;->o Z
+	43      (000000ac) iput                 v2, v0, Landroid/view/ViewGroup$LayoutParams;->width I
+	44      (000000b0) iget                 v2, v5, La/a/a/c/d/a;->f I
+	45      (000000b4) iput                 v2, v0, Landroid/view/ViewGroup$LayoutParams;->height I
+	46      (000000b8) invoke-virtual       v1, v5, La/a/a/e/b;->a(Landroid/view/ViewGroup;)La/a/a/c/c/a/k;
+	47      (000000be) move-result-object   v1
+	48      (000000c0) check-cast           v1, Landroid/support/v7/widget/ActionMenuView;
+	49      (000000c4) iput-object          v1, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	50      (000000c8) iget-object          v1, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	51      (000000cc) iget-object          v2, v5, Landroid/support/v7/internal/widget/ActionBarContextView;->q Landroid/graphics/drawable/Drawable;
+	52      (000000d0) invoke-virtual       v1, v2, Landroid/view/ViewGroup;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+	53      (000000d6) iget-object          v1, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	54      (000000da) invoke-virtual       v1, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+	55      (000000e0) move-result-object   v1
+	56      (000000e2) check-cast           v1, Landroid/view/ViewGroup;
+	57      (000000e6) if-eqz               v1, +7
+
+setSplitToolbar-BB@0xea : [ setSplitToolbar-BB@0xf4 ]
+	58      (000000ea) iget-object          v2, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	59      (000000ee) invoke-virtual       v1, v2, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+setSplitToolbar-BB@0xf4 : [ setSplitToolbar-BB@0x102 ]
+	60      (000000f4) iget-object          v1, v5, La/a/a/c/d/a;->d Landroid/view/ViewGroup;
+	61      (000000f8) iget-object          v2, v5, La/a/a/c/d/a;->b Landroid/support/v7/widget/ActionMenuView;
+	62      (000000fc) invoke-virtual       v1, v2, v0, Landroid/view/ViewGroup;->addView(Landroid/view/View; Landroid/view/ViewGroup$LayoutParams;)V
+
+setSplitToolbar-BB@0x102 : [ setSplitToolbar-BB@0x106 ]
+	63      (00000102) iput-boolean         v6, v5, La/a/a/c/d/a;->e Z
+
+setSplitToolbar-BB@0x106 : 
+	64      (00000106) return-void          
+

@@ -1,0 +1,87 @@
+# Landroid/support/v7/widget/ActivityChooserModel;->chooseActivity(I)Landroid/content/Intent; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:int
+#
+# - return:android.content.Intent
+
+chooseActivity-BB@0x0 : [ chooseActivity-BB@0x8 ]
+	0       (00000000) const/4              v6, 0
+	1       (00000002) iget-object          v7, v10, Landroid/support/v7/widget/ActivityChooserModel;->mInstanceLock Ljava/lang/Object;
+	2       (00000006) monitor-enter        v7
+
+chooseActivity-BB@0x8 : [ chooseActivity-BB@0x10 chooseActivity-BB@0x16 ]
+	3       (00000008) iget-object          v8, v10, Landroid/support/v7/widget/ActivityChooserModel;->mIntent Landroid/content/Intent;
+	4       (0000000c) if-nez               v8, +5
+	8:ad
+	(Ljava/lang/Throwable; -> aa chooseActivity-BB@0xaa)
+
+chooseActivity-BB@0x10 : [ chooseActivity-BB@0x14 ]
+	5       (00000010) monitor-exit         v7
+	6       (00000012) move-object          v0, v6
+	8:ad
+	(Ljava/lang/Throwable; -> aa chooseActivity-BB@0xaa)
+
+chooseActivity-BB@0x14 : 
+	7       (00000014) return-object        v0
+	8:ad
+	(Ljava/lang/Throwable; -> aa chooseActivity-BB@0xaa)
+
+chooseActivity-BB@0x16 : [ chooseActivity-BB@0x6a chooseActivity-BB@0x8a ]
+	8       (00000016) invoke-direct        v10, Landroid/support/v7/widget/ActivityChooserModel;->ensureConsistentState()V
+	9       (0000001c) iget-object          v8, v10, Landroid/support/v7/widget/ActivityChooserModel;->mActivities Ljava/util/List;
+	10      (00000020) invoke-interface     v8, v11, Ljava/util/List;->get(I)Ljava/lang/Object;
+	11      (00000026) move-result-object   v2
+	12      (00000028) check-cast           v2, Landroid/support/v7/widget/ActivityChooserModel$ActivityResolveInfo;
+	13      (0000002c) new-instance         v3, Landroid/content/ComponentName;
+	14      (00000030) iget-object          v8, v2, Landroid/support/v7/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo Landroid/content/pm/ResolveInfo;
+	15      (00000034) iget-object          v8, v8, Landroid/content/pm/ResolveInfo;->activityInfo Landroid/content/pm/ActivityInfo;
+	16      (00000038) iget-object          v8, v8, Landroid/content/pm/ActivityInfo;->packageName Ljava/lang/String;
+	17      (0000003c) iget-object          v9, v2, Landroid/support/v7/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo Landroid/content/pm/ResolveInfo;
+	18      (00000040) iget-object          v9, v9, Landroid/content/pm/ResolveInfo;->activityInfo Landroid/content/pm/ActivityInfo;
+	19      (00000044) iget-object          v9, v9, Landroid/content/pm/ActivityInfo;->name Ljava/lang/String;
+	20      (00000048) invoke-direct        v3, v8, v9, Landroid/content/ComponentName;-><init>(Ljava/lang/String; Ljava/lang/String;)V
+	21      (0000004e) new-instance         v0, Landroid/content/Intent;
+	22      (00000052) iget-object          v8, v10, Landroid/support/v7/widget/ActivityChooserModel;->mIntent Landroid/content/Intent;
+	23      (00000056) invoke-direct        v0, v8, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+	24      (0000005c) invoke-virtual       v0, v3, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+	25      (00000062) iget-object          v8, v10, Landroid/support/v7/widget/ActivityChooserModel;->mActivityChoserModelPolicy Landroid/support/v7/widget/ActivityChooserModel$OnChooseActivityListener;
+	26      (00000066) if-eqz               v8, +12
+	8:ad
+	(Ljava/lang/Throwable; -> aa chooseActivity-BB@0xaa)
+
+chooseActivity-BB@0x6a : [ chooseActivity-BB@0x84 chooseActivity-BB@0x8a ]
+	27      (0000006a) new-instance         v1, Landroid/content/Intent;
+	28      (0000006e) invoke-direct        v1, v0, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+	29      (00000074) iget-object          v8, v10, Landroid/support/v7/widget/ActivityChooserModel;->mActivityChoserModelPolicy Landroid/support/v7/widget/ActivityChooserModel$OnChooseActivityListener;
+	30      (00000078) invoke-interface     v8, v10, v1, Landroid/support/v7/widget/ActivityChooserModel$OnChooseActivityListener;->onChooseActivity(Landroid/support/v7/widget/ActivityChooserModel; Landroid/content/Intent;)Z
+	31      (0000007e) move-result          v4
+	32      (00000080) if-eqz               v4, +5
+	8:ad
+	(Ljava/lang/Throwable; -> aa chooseActivity-BB@0xaa)
+
+chooseActivity-BB@0x84 : [ chooseActivity-BB@0x14 ]
+	33      (00000084) monitor-exit         v7
+	34      (00000086) move-object          v0, v6
+	35      (00000088) goto                 -3a
+	8:ad
+	(Ljava/lang/Throwable; -> aa chooseActivity-BB@0xaa)
+
+chooseActivity-BB@0x8a : [ chooseActivity-BB@0x14 ]
+	36      (0000008a) new-instance         v5, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;
+	37      (0000008e) invoke-static        Ljava/lang/System;->currentTimeMillis()J
+	38      (00000094) move-result-wide     v8
+	39      (00000096) const/high16         v6, 16256 # [1.0]
+	40      (0000009a) invoke-direct        v5, v3, v8, v9, v6, Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;-><init>(Landroid/content/ComponentName; J F)V
+	41      (000000a0) invoke-direct        v10, v5, Landroid/support/v7/widget/ActivityChooserModel;->addHisoricalRecord(Landroid/support/v7/widget/ActivityChooserModel$HistoricalRecord;)Z
+	42      (000000a6) monitor-exit         v7
+	43      (000000a8) goto                 -4a
+	8:ad
+	(Ljava/lang/Throwable; -> aa chooseActivity-BB@0xaa)
+
+chooseActivity-BB@0xaa : 
+	44      (000000aa) move-exception       v6
+	45      (000000ac) monitor-exit         v7
+	46      (000000ae) throw                v6
+

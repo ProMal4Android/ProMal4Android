@@ -1,0 +1,66 @@
+# Landroid/support/design/widget/HeaderBehavior;->fling(Landroid/support/design/widget/CoordinatorLayout; Landroid/view/View; I I F)Z [access_flags=final]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.support.design.widget.CoordinatorLayout
+# - v11:android.view.View
+# - v12:int
+# - v13:int
+# - v14:float
+#
+# - return:boolean
+
+fling-BB@0x0 : [ fling-BB@0xa fling-BB@0x1a ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) iget-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mFlingRunnable Ljava/lang/Runnable;
+	2       (00000006) if-eqz               v0, +a
+
+fling-BB@0xa : [ fling-BB@0x1a ]
+	3       (0000000a) iget-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mFlingRunnable Ljava/lang/Runnable;
+	4       (0000000e) invoke-virtual       v11, v0, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+	5       (00000014) const/4              v0, 0
+	6       (00000016) iput-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mFlingRunnable Ljava/lang/Runnable;
+
+fling-BB@0x1a : [ fling-BB@0x22 fling-BB@0x36 ]
+	7       (0000001a) iget-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+	8       (0000001e) if-nez               v0, +c
+
+fling-BB@0x22 : [ fling-BB@0x36 ]
+	9       (00000022) invoke-virtual       v11, Landroid/view/View;->getContext()Landroid/content/Context;
+	10      (00000028) move-result-object   v0
+	11      (0000002a) invoke-static        v0, Landroid/support/v4/widget/ScrollerCompat;->create(Landroid/content/Context;)Landroid/support/v4/widget/ScrollerCompat;
+	12      (00000030) move-result-object   v0
+	13      (00000032) iput-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+
+fling-BB@0x36 : [ fling-BB@0x6a fling-BB@0x86 ]
+	14      (00000036) iget-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+	15      (0000003a) invoke-virtual       v9, Landroid/support/design/widget/HeaderBehavior;->getTopAndBottomOffset()I
+	16      (00000040) move-result          v2
+	17      (00000042) invoke-static        v14, Ljava/lang/Math;->round(F)I
+	18      (00000048) move-result          v4
+	19      (0000004a) move                 v3, v1
+	20      (0000004c) move                 v5, v1
+	21      (0000004e) move                 v6, v1
+	22      (00000050) move                 v7, v12
+	23      (00000052) move                 v8, v13
+	24      (00000054) invoke-virtual/range v0 ... v8, Landroid/support/v4/widget/ScrollerCompat;->fling(I I I I I I I I)V
+	25      (0000005a) iget-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+	26      (0000005e) invoke-virtual       v0, Landroid/support/v4/widget/ScrollerCompat;->computeScrollOffset()Z
+	27      (00000064) move-result          v0
+	28      (00000066) if-eqz               v0, +10
+
+fling-BB@0x6a : [ fling-BB@0x84 ]
+	29      (0000006a) new-instance         v0, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;
+	30      (0000006e) invoke-direct        v0, v9, v10, v11, Landroid/support/design/widget/HeaderBehavior$FlingRunnable;-><init>(Landroid/support/design/widget/HeaderBehavior; Landroid/support/design/widget/CoordinatorLayout; Landroid/view/View;)V
+	31      (00000074) iput-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mFlingRunnable Ljava/lang/Runnable;
+	32      (00000078) iget-object          v0, v9, Landroid/support/design/widget/HeaderBehavior;->mFlingRunnable Ljava/lang/Runnable;
+	33      (0000007c) invoke-static        v11, v0, Landroid/support/v4/view/ViewCompat;->postOnAnimation(Landroid/view/View; Ljava/lang/Runnable;)V
+	34      (00000082) const/4              v1, 1
+
+fling-BB@0x84 : 
+	35      (00000084) return               v1
+
+fling-BB@0x86 : [ fling-BB@0x84 ]
+	36      (00000086) invoke-virtual       v9, v10, v11, Landroid/support/design/widget/HeaderBehavior;->onFlingFinished(Landroid/support/design/widget/CoordinatorLayout; Landroid/view/View;)V
+	37      (0000008c) goto                 -4
+

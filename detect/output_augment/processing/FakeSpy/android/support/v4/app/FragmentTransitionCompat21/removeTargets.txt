@@ -1,0 +1,73 @@
+# Landroid/support/v4/app/FragmentTransitionCompat21;->removeTargets(Ljava/lang/Object; Ljava/util/ArrayList;)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:java.lang.Object
+# - v9:java.util.ArrayList
+#
+# - return:void
+
+removeTargets-BB@0x0 : [ removeTargets-BB@0xe removeTargets-BB@0x36 ]
+	0       (00000000) move-object          v5, v8
+	1       (00000002) check-cast           v5, Landroid/transition/Transition;
+	2       (00000006) instance-of          v6, v5, Landroid/transition/TransitionSet;
+	3       (0000000a) if-eqz               v6, +16
+
+removeTargets-BB@0xe : [ removeTargets-BB@0x1e ]
+	4       (0000000e) move-object          v3, v5
+	5       (00000010) check-cast           v3, Landroid/transition/TransitionSet;
+	6       (00000014) invoke-virtual       v3, Landroid/transition/TransitionSet;->getTransitionCount()I
+	7       (0000001a) move-result          v2
+	8       (0000001c) const/4              v1, 0
+
+removeTargets-BB@0x1e : [ removeTargets-BB@0x22 removeTargets-BB@0x96 ]
+	9       (0000001e) if-ge                v1, v2, +3c
+
+removeTargets-BB@0x22 : [ removeTargets-BB@0x1e ]
+	10      (00000022) invoke-virtual       v3, v1, Landroid/transition/TransitionSet;->getTransitionAt(I)Landroid/transition/Transition;
+	11      (00000028) move-result-object   v0
+	12      (0000002a) invoke-static        v0, v9, Landroid/support/v4/app/FragmentTransitionCompat21;->removeTargets(Ljava/lang/Object; Ljava/util/ArrayList;)V
+	13      (00000030) add-int/lit8         v1, v1, 1
+	14      (00000034) goto                 -b
+
+removeTargets-BB@0x36 : [ removeTargets-BB@0x42 removeTargets-BB@0x96 ]
+	15      (00000036) invoke-static        v5, Landroid/support/v4/app/FragmentTransitionCompat21;->hasSimpleTarget(Landroid/transition/Transition;)Z
+	16      (0000003c) move-result          v6
+	17      (0000003e) if-nez               v6, +2c
+
+removeTargets-BB@0x42 : [ removeTargets-BB@0x4e removeTargets-BB@0x96 ]
+	18      (00000042) invoke-virtual       v5, Landroid/transition/Transition;->getTargets()Ljava/util/List;
+	19      (00000048) move-result-object   v4
+	20      (0000004a) if-eqz               v4, +26
+
+removeTargets-BB@0x4e : [ removeTargets-BB@0x62 removeTargets-BB@0x96 ]
+	21      (0000004e) invoke-interface     v4, Ljava/util/List;->size()I
+	22      (00000054) move-result          v6
+	23      (00000056) invoke-virtual       v9, Ljava/util/ArrayList;->size()I
+	24      (0000005c) move-result          v7
+	25      (0000005e) if-ne                v6, v7, +1c
+
+removeTargets-BB@0x62 : [ removeTargets-BB@0x6e removeTargets-BB@0x96 ]
+	26      (00000062) invoke-interface     v4, v9, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
+	27      (00000068) move-result          v6
+	28      (0000006a) if-eqz               v6, +16
+
+removeTargets-BB@0x6e : [ removeTargets-BB@0x7a ]
+	29      (0000006e) invoke-virtual       v9, Ljava/util/ArrayList;->size()I
+	30      (00000074) move-result          v6
+	31      (00000076) add-int/lit8         v1, v6, -1
+
+removeTargets-BB@0x7a : [ removeTargets-BB@0x7e removeTargets-BB@0x96 ]
+	32      (0000007a) if-ltz               v1, +e
+
+removeTargets-BB@0x7e : [ removeTargets-BB@0x7a ]
+	33      (0000007e) invoke-virtual       v9, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	34      (00000084) move-result-object   v6
+	35      (00000086) check-cast           v6, Landroid/view/View;
+	36      (0000008a) invoke-virtual       v5, v6, Landroid/transition/Transition;->removeTarget(Landroid/view/View;)Landroid/transition/Transition;
+	37      (00000090) add-int/lit8         v1, v1, -1
+	38      (00000094) goto                 -d
+
+removeTargets-BB@0x96 : 
+	39      (00000096) return-void          
+

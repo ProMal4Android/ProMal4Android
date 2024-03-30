@@ -1,0 +1,31 @@
+# Landroid/support/v7/view/menu/MenuBuilder;->removeItemAtInt(I Z)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:int
+# - v3:boolean
+#
+# - return:void
+
+removeItemAtInt-BB@0x0 : [ removeItemAtInt-BB@0x4 removeItemAtInt-BB@0x14 ]
+	0       (00000000) if-ltz               v2, +a
+
+removeItemAtInt-BB@0x4 : [ removeItemAtInt-BB@0x14 removeItemAtInt-BB@0x16 ]
+	1       (00000004) iget-object          v0, v1, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	2       (00000008) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	3       (0000000e) move-result          v0
+	4       (00000010) if-lt                v2, v0, +3
+
+removeItemAtInt-BB@0x14 : 
+	5       (00000014) return-void          
+
+removeItemAtInt-BB@0x16 : [ removeItemAtInt-BB@0x24 removeItemAtInt-BB@0x14 ]
+	6       (00000016) iget-object          v0, v1, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	7       (0000001a) invoke-virtual       v0, v2, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+	8       (00000020) if-eqz               v3, -6
+
+removeItemAtInt-BB@0x24 : [ removeItemAtInt-BB@0x14 ]
+	9       (00000024) const/4              v0, 1
+	10      (00000026) invoke-virtual       v1, v0, Landroid/support/v7/view/menu/MenuBuilder;->onItemsChanged(Z)V
+	11      (0000002c) goto                 -c
+

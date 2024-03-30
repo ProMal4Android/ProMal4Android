@@ -1,0 +1,41 @@
+# Landroid/support/v7/widget/Toolbar;->b(Landroid/view/View; I [I I)I [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.view.View
+# - v7:int
+# - v8:int[]
+# - v9:int
+#
+# - return:int
+
+b-BB@0x0 : 
+	0       (00000000) invoke-virtual       v6, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	1       (00000006) move-result-object   v0
+	2       (00000008) check-cast           v0, Landroid/support/v7/widget/Toolbar$b;
+	3       (0000000c) iget                 v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin I
+	4       (00000010) const/4              v2, 1
+	5       (00000012) aget                 v3, v8, v2
+	6       (00000016) sub-int/2addr        v1, v3
+	7       (00000018) const/4              v3, 0
+	8       (0000001a) invoke-static        v3, v1, Ljava/lang/Math;->max(I I)I
+	9       (00000020) move-result          v4
+	10      (00000022) sub-int/2addr        v7, v4
+	11      (00000024) neg-int              v1, v1
+	12      (00000026) invoke-static        v3, v1, Ljava/lang/Math;->max(I I)I
+	13      (0000002c) move-result          v1
+	14      (0000002e) aput                 v1, v8, v2
+	15      (00000032) invoke-virtual       v5, v6, v9, Landroid/support/v7/widget/Toolbar;->a(Landroid/view/View; I)I
+	16      (00000038) move-result          v8
+	17      (0000003a) invoke-virtual       v6, Landroid/view/View;->getMeasuredWidth()I
+	18      (00000040) move-result          v9
+	19      (00000042) sub-int              v1, v7, v9
+	20      (00000046) invoke-virtual       v6, Landroid/view/View;->getMeasuredHeight()I
+	21      (0000004c) move-result          v2
+	22      (0000004e) add-int/2addr        v2, v8
+	23      (00000050) invoke-virtual       v6, v1, v8, v7, v2, Landroid/view/View;->layout(I I I I)V
+	24      (00000056) iget                 v6, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin I
+	25      (0000005a) add-int/2addr        v9, v6
+	26      (0000005c) sub-int/2addr        v7, v9
+	27      (0000005e) return               v7
+

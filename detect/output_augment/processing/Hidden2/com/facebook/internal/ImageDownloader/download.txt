@@ -1,0 +1,229 @@
+# Lcom/facebook/internal/ImageDownloader;->download(Lcom/facebook/internal/ImageDownloader$RequestKey; Landroid/content/Context;)V [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:com.facebook.internal.ImageDownloader$RequestKey
+# - v10:android.content.Context
+#
+# - return:void
+
+download-BB@0x0 : [ download-BB@0x6 ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) const/4              v1, 0
+	2       (00000004) const/4              v2, 1
+
+download-BB@0x6 : [ download-BB@0x28 ]
+	3       (00000006) new-instance         v3, Ljava/net/URL;
+	4       (0000000a) iget-object          v4, v9, Lcom/facebook/internal/ImageDownloader$RequestKey;->uri Landroid/net/Uri;
+	5       (0000000e) invoke-virtual       v4, Landroid/net/Uri;->toString()Ljava/lang/String;
+	6       (00000014) move-result-object   v4
+	7       (00000016) invoke-direct        v3, v4, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+	8       (0000001c) invoke-virtual       v3, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+	9       (00000022) move-result-object   v3
+	10      (00000024) check-cast           v3, Ljava/net/HttpURLConnection;
+	6:27
+	(Ljava/lang/Throwable; -> 144 download-BB@0x144)
+	(Ljava/io/IOException; -> 156 download-BB@0x156)
+
+download-BB@0x28 : [ download-BB@0x3e download-BB@0x11c ]
+	11      (00000028) invoke-virtual       v3, v1, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
+	12      (0000002e) invoke-virtual       v3, Ljava/net/HttpURLConnection;->getResponseCode()I
+	13      (00000034) move-result          v4
+	14      (00000036) const/16             v5, 200
+	15      (0000003a) if-eq                v4, v5, +71
+	28:4b
+	(Ljava/lang/Throwable; -> 13a download-BB@0x13a)
+	(Ljava/io/IOException; -> 13e download-BB@0x13e)
+
+download-BB@0x3e : [ D:download-BB@0x44 301:download-BB@0xb6 302:download-BB@0xb6 ]
+	16      (0000003e) packed-switch        v4, +9f (0x17c)
+	28:4b
+	(Ljava/lang/Throwable; -> 13a download-BB@0x13a)
+	(Ljava/io/IOException; -> 13e download-BB@0x13e)
+
+download-BB@0x44 : [ download-BB@0x4c ]
+	17      (00000044) invoke-virtual       v3, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
+	18      (0000004a) move-result-object   v10
+	28:4b
+	(Ljava/lang/Throwable; -> 13a download-BB@0x13a)
+	(Ljava/io/IOException; -> 13e download-BB@0x13e)
+
+download-BB@0x4c : [ download-BB@0x5a download-BB@0x8a ]
+	19      (0000004c) new-instance         v4, Ljava/lang/StringBuilder;
+	20      (00000050) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	21      (00000056) if-eqz               v10, +1a
+	4c:a5
+	(Ljava/lang/Throwable; -> ac download-BB@0xac)
+	(Ljava/io/IOException; -> b2 download-BB@0xb2)
+
+download-BB@0x5a : [ download-BB@0x6c ]
+	22      (0000005a) new-instance         v5, Ljava/io/InputStreamReader;
+	23      (0000005e) invoke-direct        v5, v10, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+	24      (00000064) const/16             v6, 128
+	25      (00000068) new-array            v6, v6, [C
+	4c:a5
+	(Ljava/lang/Throwable; -> ac download-BB@0xac)
+	(Ljava/io/IOException; -> b2 download-BB@0xb2)
+
+download-BB@0x6c : [ download-BB@0x7a download-BB@0x82 ]
+	26      (0000006c) array-length         v7, v6
+	27      (0000006e) invoke-virtual       v5, v6, v1, v7, Ljava/io/InputStreamReader;->read([C I I)I
+	28      (00000074) move-result          v7
+	29      (00000076) if-lez               v7, +6
+	4c:a5
+	(Ljava/lang/Throwable; -> ac download-BB@0xac)
+	(Ljava/io/IOException; -> b2 download-BB@0xb2)
+
+download-BB@0x7a : [ download-BB@0x6c ]
+	30      (0000007a) invoke-virtual       v4, v6, v1, v7, Ljava/lang/StringBuilder;->append([C I I)Ljava/lang/StringBuilder;
+	31      (00000080) goto                 -a
+	4c:a5
+	(Ljava/lang/Throwable; -> ac download-BB@0xac)
+	(Ljava/io/IOException; -> b2 download-BB@0xb2)
+
+download-BB@0x82 : [ download-BB@0x94 ]
+	32      (00000082) invoke-static        v5, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
+	33      (00000088) goto                 +6
+	4c:a5
+	(Ljava/lang/Throwable; -> ac download-BB@0xac)
+	(Ljava/io/IOException; -> b2 download-BB@0xb2)
+
+download-BB@0x8a : [ download-BB@0x94 ]
+	34      (0000008a) const-string         v5, 'Unexpected error while downloading an image.'
+	35      (0000008e) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	4c:a5
+	(Ljava/lang/Throwable; -> ac download-BB@0xac)
+	(Ljava/io/IOException; -> b2 download-BB@0xb2)
+
+download-BB@0x94 : [ download-BB@0x12c ]
+	36      (00000094) new-instance         v5, Lcom/facebook/FacebookException;
+	37      (00000098) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	38      (0000009e) move-result-object   v4
+	39      (000000a0) invoke-direct        v5, v4, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
+	40      (000000a6) move-object          v4, v0
+	41      (000000a8) move-object          v0, v5
+	42      (000000aa) goto                 +41
+
+download-BB@0xac : [ download-BB@0x148 ]
+	43      (000000ac) move-exception       v9
+	44      (000000ae) move-object          v0, v10
+	45      (000000b0) goto                 +4c
+
+download-BB@0xb2 : [ download-BB@0x15c ]
+	46      (000000b2) move-exception       v4
+	47      (000000b4) goto                 +54
+
+download-BB@0xb6 : [ download-BB@0xce download-BB@0x10c ]
+	48      (000000b6) const-string         v10, 'location'
+	49      (000000ba) invoke-virtual       v3, v10, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
+	50      (000000c0) move-result-object   v10
+	51      (000000c2) invoke-static        v10, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
+	52      (000000c8) move-result          v2
+	53      (000000ca) if-nez               v2, +21
+	b6:10b
+	(Ljava/lang/Throwable; -> 13a download-BB@0x13a)
+	(Ljava/io/IOException; -> 114 download-BB@0x114)
+
+download-BB@0xce : [ download-BB@0xec download-BB@0x10c ]
+	54      (000000ce) invoke-static        v10, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	55      (000000d4) move-result-object   v10
+	56      (000000d6) iget-object          v2, v9, Lcom/facebook/internal/ImageDownloader$RequestKey;->uri Landroid/net/Uri;
+	57      (000000da) invoke-static        v2, v10, Lcom/facebook/internal/UrlRedirectCache;->cacheUriRedirect(Landroid/net/Uri; Landroid/net/Uri;)V
+	58      (000000e0) invoke-static        v9, Lcom/facebook/internal/ImageDownloader;->removePendingRequest(Lcom/facebook/internal/ImageDownloader$RequestKey;)Lcom/facebook/internal/ImageDownloader$DownloaderContext;
+	59      (000000e6) move-result-object   v2
+	60      (000000e8) if-eqz               v2, +12
+	b6:10b
+	(Ljava/lang/Throwable; -> 13a download-BB@0x13a)
+	(Ljava/io/IOException; -> 114 download-BB@0x114)
+
+download-BB@0xec : [ download-BB@0xf4 download-BB@0x10c ]
+	61      (000000ec) iget-boolean         v4, v2, Lcom/facebook/internal/ImageDownloader$DownloaderContext;->isCancelled Z
+	62      (000000f0) if-nez               v4, +e
+	b6:10b
+	(Ljava/lang/Throwable; -> 13a download-BB@0x13a)
+	(Ljava/io/IOException; -> 114 download-BB@0x114)
+
+download-BB@0xf4 : [ download-BB@0x10c ]
+	63      (000000f4) iget-object          v2, v2, Lcom/facebook/internal/ImageDownloader$DownloaderContext;->request Lcom/facebook/internal/ImageRequest;
+	64      (000000f8) new-instance         v4, Lcom/facebook/internal/ImageDownloader$RequestKey;
+	65      (000000fc) iget-object          v5, v9, Lcom/facebook/internal/ImageDownloader$RequestKey;->tag Ljava/lang/Object;
+	66      (00000100) invoke-direct        v4, v10, v5, Lcom/facebook/internal/ImageDownloader$RequestKey;-><init>(Landroid/net/Uri; Ljava/lang/Object;)V
+	67      (00000106) invoke-static        v2, v4, v1, Lcom/facebook/internal/ImageDownloader;->enqueueCacheRead(Lcom/facebook/internal/ImageRequest; Lcom/facebook/internal/ImageDownloader$RequestKey; Z)V
+	b6:10b
+	(Ljava/lang/Throwable; -> 13a download-BB@0x13a)
+	(Ljava/io/IOException; -> 114 download-BB@0x114)
+
+download-BB@0x10c : [ download-BB@0x12c ]
+	68      (0000010c) move-object          v10, v0
+	69      (0000010e) move-object          v4, v10
+	70      (00000110) const/4              v2, 0
+	71      (00000112) goto                 +d
+
+download-BB@0x114 : [ download-BB@0x15c ]
+	72      (00000114) move-exception       v4
+	73      (00000116) move-object          v10, v0
+	74      (00000118) const/4              v2, 0
+	75      (0000011a) goto                 +21
+
+download-BB@0x11c : [ download-BB@0x124 ]
+	76      (0000011c) invoke-static        v10, v3, Lcom/facebook/internal/ImageResponseCache;->interceptAndCacheImageStream(Landroid/content/Context; Ljava/net/HttpURLConnection;)Ljava/io/InputStream;
+	77      (00000122) move-result-object   v10
+	11c:123
+	(Ljava/lang/Throwable; -> 13a download-BB@0x13a)
+	(Ljava/io/IOException; -> 13e download-BB@0x13e)
+
+download-BB@0x124 : [ download-BB@0x12c ]
+	78      (00000124) invoke-static        v10, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+	79      (0000012a) move-result-object   v4
+	124:12b
+	(Ljava/lang/Throwable; -> ac download-BB@0xac)
+	(Ljava/io/IOException; -> b2 download-BB@0xb2)
+
+download-BB@0x12c : [ download-BB@0x16e ]
+	80      (0000012c) invoke-static        v10, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
+	81      (00000132) invoke-static        v3, Lcom/facebook/internal/Utility;->disconnectQuietly(Ljava/net/URLConnection;)V
+	82      (00000138) goto                 +1b
+
+download-BB@0x13a : [ download-BB@0x148 ]
+	83      (0000013a) move-exception       v9
+	84      (0000013c) goto                 +6
+
+download-BB@0x13e : [ download-BB@0x15c ]
+	85      (0000013e) move-exception       v4
+	86      (00000140) move-object          v10, v0
+	87      (00000142) goto                 +d
+
+download-BB@0x144 : [ download-BB@0x148 ]
+	88      (00000144) move-exception       v9
+	89      (00000146) move-object          v3, v0
+
+download-BB@0x148 : 
+	90      (00000148) invoke-static        v0, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
+	91      (0000014e) invoke-static        v3, Lcom/facebook/internal/Utility;->disconnectQuietly(Ljava/net/URLConnection;)V
+	92      (00000154) throw                v9
+
+download-BB@0x156 : [ download-BB@0x15c ]
+	93      (00000156) move-exception       v4
+	94      (00000158) move-object          v10, v0
+	95      (0000015a) move-object          v3, v10
+
+download-BB@0x15c : [ download-BB@0x16e ]
+	96      (0000015c) invoke-static        v10, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
+	97      (00000162) invoke-static        v3, Lcom/facebook/internal/Utility;->disconnectQuietly(Ljava/net/URLConnection;)V
+	98      (00000168) move-object          v8, v4
+	99      (0000016a) move-object          v4, v0
+	100     (0000016c) move-object          v0, v8
+
+download-BB@0x16e : [ download-BB@0x172 download-BB@0x178 ]
+	101     (0000016e) if-eqz               v2, +5
+
+download-BB@0x172 : [ download-BB@0x178 ]
+	102     (00000172) invoke-static        v9, v0, v4, v1, Lcom/facebook/internal/ImageDownloader;->issueResponse(Lcom/facebook/internal/ImageDownloader$RequestKey; Ljava/lang/Exception; Landroid/graphics/Bitmap; Z)V
+
+download-BB@0x178 : 
+	103     (00000178) return-void          
+
+download-BB@0x17a : 
+	104     (0000017a) nop                  
+	105     (0000017c) packed-switch-payload 12d 12e
+

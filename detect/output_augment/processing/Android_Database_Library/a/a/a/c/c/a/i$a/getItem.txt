@@ -1,0 +1,41 @@
+# La/a/a/c/c/a/i$a;->getItem(I)La/a/a/c/c/a/f; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:int
+#
+# - return:a.a.a.c.c.a.f
+
+getItem-BB@0x0 : [ getItem-BB@0x10 getItem-BB@0x20 ]
+	0       (00000000) iget-object          v0, v2, La/a/a/c/c/a/i$a;->c La/a/a/c/c/a/i;
+	1       (00000004) invoke-static        v0, La/a/a/c/c/a/i;->a(La/a/a/c/c/a/i;)Z
+	2       (0000000a) move-result          v0
+	3       (0000000c) if-eqz               v0, +a
+
+getItem-BB@0x10 : [ getItem-BB@0x2c ]
+	4       (00000010) iget-object          v0, v2, La/a/a/c/c/a/i$a;->a La/a/a/c/c/a/e;
+	5       (00000014) invoke-virtual       v0, La/a/a/c/c/a/e;->a()V
+	6       (0000001a) iget-object          v0, v0, La/a/a/c/c/a/e;->k Ljava/util/ArrayList;
+	7       (0000001e) goto                 +7
+
+getItem-BB@0x20 : [ getItem-BB@0x2c ]
+	8       (00000020) iget-object          v0, v2, La/a/a/c/c/a/i$a;->a La/a/a/c/c/a/e;
+	9       (00000024) invoke-virtual       v0, La/a/a/c/c/a/e;->c()Ljava/util/ArrayList;
+	10      (0000002a) move-result-object   v0
+
+getItem-BB@0x2c : [ getItem-BB@0x34 getItem-BB@0x3c ]
+	11      (0000002c) iget                 v1, v2, La/a/a/c/c/a/i$a;->b I
+	12      (00000030) if-ltz               v1, +6
+
+getItem-BB@0x34 : [ getItem-BB@0x38 getItem-BB@0x3c ]
+	13      (00000034) if-lt                v3, v1, +4
+
+getItem-BB@0x38 : [ getItem-BB@0x3c ]
+	14      (00000038) add-int/lit8         v3, v3, 1
+
+getItem-BB@0x3c : 
+	15      (0000003c) invoke-virtual       v0, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	16      (00000042) move-result-object   v3
+	17      (00000044) check-cast           v3, La/a/a/c/c/a/f;
+	18      (00000048) return-object        v3
+

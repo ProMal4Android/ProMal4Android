@@ -1,0 +1,33 @@
+# Landroid/support/v4/widget/DrawerLayout;->gravityToString(I)Ljava/lang/String; [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:int
+#
+# - return:java.lang.String
+
+gravityToString-BB@0x0 : [ gravityToString-BB@0xa gravityToString-BB@0x10 ]
+	0       (00000000) and-int/lit8         v0, v2, 3
+	1       (00000004) const/4              v1, 3
+	2       (00000006) if-ne                v0, v1, +5
+
+gravityToString-BB@0xa : [ gravityToString-BB@0xe ]
+	3       (0000000a) const-string         v0, 'LEFT'
+
+gravityToString-BB@0xe : 
+	4       (0000000e) return-object        v0
+
+gravityToString-BB@0x10 : [ gravityToString-BB@0x1a gravityToString-BB@0x20 ]
+	5       (00000010) and-int/lit8         v0, v2, 5
+	6       (00000014) const/4              v1, 5
+	7       (00000016) if-ne                v0, v1, +5
+
+gravityToString-BB@0x1a : [ gravityToString-BB@0xe ]
+	8       (0000001a) const-string         v0, 'RIGHT'
+	9       (0000001e) goto                 -8
+
+gravityToString-BB@0x20 : [ gravityToString-BB@0xe ]
+	10      (00000020) invoke-static        v2, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	11      (00000026) move-result-object   v0
+	12      (00000028) goto                 -d
+

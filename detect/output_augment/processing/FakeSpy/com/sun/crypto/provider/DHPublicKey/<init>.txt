@@ -1,0 +1,230 @@
+# Lcom/sun/crypto/provider/DHPublicKey;-><init>([B)V [access_flags=constructor]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:byte[]
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x24 ]
+	0       (00000000) const/16             v4, 48
+	1       (00000004) invoke-direct        v5, Ljava/lang/Object;-><init>()V
+	2       (0000000a) const/4              v0, 7
+	3       (0000000c) new-array            v0, v0, [I
+	4       (00000010) fill-array-data      v0, +ec (0x1e8)
+	5       (00000016) iput-object          v0, v5, Lcom/sun/crypto/provider/DHPublicKey;->DH_data [I
+	6       (0000001a) new-instance         v0, Ljava/io/ByteArrayInputStream;
+	7       (0000001e) invoke-direct        v0, v6, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+<init>-BB@0x24 : [ <init>-BB@0x36 <init>-BB@0x58 ]
+	8       (00000024) new-instance         v1, Lsun/security/util/DerValue;
+	9       (00000028) invoke-direct        v1, v0, Lsun/security/util/DerValue;-><init>(Ljava/io/InputStream;)V
+	10      (0000002e) iget-byte            v0, v1, Lsun/security/util/DerValue;->tag B
+	11      (00000032) if-eq                v0, v4, +13
+	24:45
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x36 : 
+	12      (00000036) new-instance         v0, Ljava/security/InvalidKeyException;
+	13      (0000003a) const-string         v1, 'Invalid key format'
+	14      (0000003e) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	15      (00000044) throw                v0
+	24:45
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x46 : 
+	16      (00000046) move-exception       v0
+	17      (00000048) new-instance         v0, Ljava/security/InvalidKeyException;
+	18      (0000004c) const-string         v1, 'Private-value length too big'
+	19      (00000050) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	20      (00000056) throw                v0
+
+<init>-BB@0x58 : [ <init>-BB@0x6c <init>-BB@0xb8 ]
+	21      (00000058) iget-object          v0, v1, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	22      (0000005c) invoke-virtual       v0, Lsun/security/util/DerInputStream;->getDerValue()Lsun/security/util/DerValue;
+	23      (00000062) move-result-object   v0
+	24      (00000064) iget-byte            v2, v0, Lsun/security/util/DerValue;->tag B
+	25      (00000068) if-eq                v2, v4, +28
+	58:7b
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x6c : 
+	26      (0000006c) new-instance         v0, Ljava/security/InvalidKeyException;
+	27      (00000070) const-string         v1, 'AlgId is not a SEQUENCE'
+	28      (00000074) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	29      (0000007a) throw                v0
+	58:7b
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x7c : 
+	30      (0000007c) move-exception       v0
+	31      (0000007e) new-instance         v1, Ljava/security/InvalidKeyException;
+	32      (00000082) new-instance         v2, Ljava/lang/StringBuilder;
+	33      (00000086) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	34      (0000008c) const-string         v3, 'Error parsing key encoding: '
+	35      (00000090) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	36      (00000096) move-result-object   v2
+	37      (00000098) invoke-virtual       v0, Ljava/io/IOException;->toString()Ljava/lang/String;
+	38      (0000009e) move-result-object   v0
+	39      (000000a0) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	40      (000000a6) move-result-object   v0
+	41      (000000a8) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	42      (000000ae) move-result-object   v0
+	43      (000000b0) invoke-direct        v1, v0, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	44      (000000b6) throw                v1
+
+<init>-BB@0xb8 : [ <init>-BB@0xcc <init>-BB@0xdc ]
+	45      (000000b8) invoke-virtual       v0, Lsun/security/util/DerValue;->toDerInputStream()Lsun/security/util/DerInputStream;
+	46      (000000be) move-result-object   v0
+	47      (000000c0) invoke-virtual       v0, Lsun/security/util/DerInputStream;->getOID()Lsun/security/util/ObjectIdentifier;
+	48      (000000c6) move-result-object   v2
+	49      (000000c8) if-nez               v2, +a
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0xcc : 
+	50      (000000cc) new-instance         v0, Ljava/security/InvalidKeyException;
+	51      (000000d0) const-string         v1, 'Null OID'
+	52      (000000d4) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	53      (000000da) throw                v0
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0xdc : [ <init>-BB@0xe8 <init>-BB@0xf8 ]
+	54      (000000dc) invoke-virtual       v0, Lsun/security/util/DerInputStream;->available()I
+	55      (000000e2) move-result          v2
+	56      (000000e4) if-nez               v2, +a
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0xe8 : 
+	57      (000000e8) new-instance         v0, Ljava/security/InvalidKeyException;
+	58      (000000ec) const-string         v1, 'Parameters missing'
+	59      (000000f0) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	60      (000000f6) throw                v0
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0xf8 : [ <init>-BB@0x10a <init>-BB@0x11a ]
+	61      (000000f8) invoke-virtual       v0, Lsun/security/util/DerInputStream;->getDerValue()Lsun/security/util/DerValue;
+	62      (000000fe) move-result-object   v0
+	63      (00000100) iget-byte            v2, v0, Lsun/security/util/DerValue;->tag B
+	64      (00000104) const/4              v3, 5
+	65      (00000106) if-ne                v2, v3, +a
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x10a : 
+	66      (0000010a) new-instance         v0, Ljava/security/InvalidKeyException;
+	67      (0000010e) const-string         v1, 'Null parameters'
+	68      (00000112) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	69      (00000118) throw                v0
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x11a : [ <init>-BB@0x122 <init>-BB@0x132 ]
+	70      (0000011a) iget-byte            v2, v0, Lsun/security/util/DerValue;->tag B
+	71      (0000011e) if-eq                v2, v4, +a
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x122 : 
+	72      (00000122) new-instance         v0, Ljava/security/InvalidKeyException;
+	73      (00000126) const-string         v1, 'Parameters not a SEQUENCE'
+	74      (0000012a) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	75      (00000130) throw                v0
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x132 : [ <init>-BB@0x16c <init>-BB@0x17c ]
+	76      (00000132) iget-object          v2, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	77      (00000136) invoke-virtual       v2, Lsun/security/util/DerInputStream;->reset()V
+	78      (0000013c) iget-object          v2, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	79      (00000140) invoke-virtual       v2, Lsun/security/util/DerInputStream;->getBigInteger()Ljava/math/BigInteger;
+	80      (00000146) move-result-object   v2
+	81      (00000148) iput-object          v2, v5, Lcom/sun/crypto/provider/DHPublicKey;->p Ljava/math/BigInteger;
+	82      (0000014c) iget-object          v2, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	83      (00000150) invoke-virtual       v2, Lsun/security/util/DerInputStream;->getBigInteger()Ljava/math/BigInteger;
+	84      (00000156) move-result-object   v2
+	85      (00000158) iput-object          v2, v5, Lcom/sun/crypto/provider/DHPublicKey;->g Ljava/math/BigInteger;
+	86      (0000015c) iget-object          v2, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	87      (00000160) invoke-virtual       v2, Lsun/security/util/DerInputStream;->available()I
+	88      (00000166) move-result          v2
+	89      (00000168) if-eqz               v2, +a
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x16c : [ <init>-BB@0x17c ]
+	90      (0000016c) iget-object          v2, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	91      (00000170) invoke-virtual       v2, Lsun/security/util/DerInputStream;->getInteger()I
+	92      (00000176) move-result          v2
+	93      (00000178) iput                 v2, v5, Lcom/sun/crypto/provider/DHPublicKey;->l I
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x17c : [ <init>-BB@0x18c <init>-BB@0x19c ]
+	94      (0000017c) iget-object          v0, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	95      (00000180) invoke-virtual       v0, Lsun/security/util/DerInputStream;->available()I
+	96      (00000186) move-result          v0
+	97      (00000188) if-eqz               v0, +a
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x18c : 
+	98      (0000018c) new-instance         v0, Ljava/security/InvalidKeyException;
+	99      (00000190) const-string         v1, 'Extra parameter data'
+	100     (00000194) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	101     (0000019a) throw                v0
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x19c : [ <init>-BB@0x1c2 <init>-BB@0x1d2 ]
+	102     (0000019c) iget-object          v0, v1, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	103     (000001a0) invoke-virtual       v0, Lsun/security/util/DerInputStream;->getBitString()[B
+	104     (000001a6) move-result-object   v0
+	105     (000001a8) iput-object          v0, v5, Lcom/sun/crypto/provider/DHPublicKey;->key [B
+	106     (000001ac) invoke-direct        v5, Lcom/sun/crypto/provider/DHPublicKey;->parseKeyBits()V
+	107     (000001b2) iget-object          v0, v1, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	108     (000001b6) invoke-virtual       v0, Lsun/security/util/DerInputStream;->available()I
+	109     (000001bc) move-result          v0
+	110     (000001be) if-eqz               v0, +a
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x1c2 : 
+	111     (000001c2) new-instance         v0, Ljava/security/InvalidKeyException;
+	112     (000001c6) const-string         v1, 'Excess key data'
+	113     (000001ca) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	114     (000001d0) throw                v0
+	b8:1e5
+	(Ljava/lang/NumberFormatException; -> 46 <init>-BB@0x46)
+	(Ljava/io/IOException; -> 7c <init>-BB@0x7c)
+
+<init>-BB@0x1d2 : 
+	115     (000001d2) invoke-virtual       v6, Ljava/lang/Object;->clone()Ljava/lang/Object;
+	116     (000001d8) move-result-object   v0
+	117     (000001da) check-cast           v0, [B
+	118     (000001de) check-cast           v0, [B
+	119     (000001e2) iput-object          v0, v5, Lcom/sun/crypto/provider/DHPublicKey;->encodedKey [B
+	120     (000001e6) return-void          
+
+<init>-BB@0x1e8 : 
+	121     (000001e8) fill-array-data-payload bytearray(b'\x01\x00\x00\x00\x02\x00\x00\x00H\x03\x00\x00\x8d\xbb\x01\x00\x01\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00') | \x01\x00\x00\x00\x02\x00\x00\x00\x48\x03\x00\x00\x8d\xbb\x01\x00\x01\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00
+

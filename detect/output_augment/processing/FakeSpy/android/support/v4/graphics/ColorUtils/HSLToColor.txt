@@ -1,0 +1,167 @@
+# Landroid/support/v4/graphics/ColorUtils;->HSLToColor([F)I [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:float[]
+#
+# - return:int
+
+HSLToColor-BB@0x0 : [ D:HSLToColor-BB@0x72 0:HSLToColor-BB@0xa6 1:HSLToColor-BB@0xda 2:HSLToColor-BB@0x10e 3:HSLToColor-BB@0x142 4:HSLToColor-BB@0x178 5:HSLToColor-BB@0x1ae 6:HSLToColor-BB@0x1ae ]
+	0       (00000000) const/4              v10, 0
+	1       (00000002) aget                 v3, v13, v10
+	2       (00000006) const/4              v10, 1
+	3       (00000008) aget                 v8, v13, v10
+	4       (0000000c) const/4              v10, 2
+	5       (0000000e) aget                 v5, v13, v10
+	6       (00000012) const/high16         v10, 16256 # [1.0]
+	7       (00000016) const/high16         v11, 16384 # [2.0]
+	8       (0000001a) mul-float/2addr      v11, v5
+	9       (0000001c) const/high16         v12, 16256 # [1.0]
+	10      (00000020) sub-float/2addr      v11, v12
+	11      (00000022) invoke-static        v11, Ljava/lang/Math;->abs(F)F
+	12      (00000028) move-result          v11
+	13      (0000002a) sub-float/2addr      v10, v11
+	14      (0000002c) mul-float            v1, v10, v8
+	15      (00000030) const/high16         v10, 16128 # [0.5]
+	16      (00000034) mul-float/2addr      v10, v1
+	17      (00000036) sub-float            v6, v5, v10
+	18      (0000003a) const/high16         v10, 16256 # [1.0]
+	19      (0000003e) const/high16         v11, 17008 # [60.0]
+	20      (00000042) div-float            v11, v3, v11
+	21      (00000046) const/high16         v12, 16384 # [2.0]
+	22      (0000004a) rem-float/2addr      v11, v12
+	23      (0000004c) const/high16         v12, 16256 # [1.0]
+	24      (00000050) sub-float/2addr      v11, v12
+	25      (00000052) invoke-static        v11, Ljava/lang/Math;->abs(F)F
+	26      (00000058) move-result          v11
+	27      (0000005a) sub-float/2addr      v10, v11
+	28      (0000005c) mul-float            v9, v1, v10
+	29      (00000060) float-to-int         v10, v3
+	30      (00000062) div-int/lit8         v4, v10, 60
+	31      (00000066) const/4              v7, 0
+	32      (00000068) const/4              v2, 0
+	33      (0000006a) const/4              v0, 0
+	34      (0000006c) packed-switch        v4, +bc (0x1e4)
+
+HSLToColor-BB@0x72 : 
+	35      (00000072) const/4              v10, 0
+	36      (00000074) const/16             v11, 255
+	37      (00000078) invoke-static        v7, v10, v11, Landroid/support/v4/graphics/ColorUtils;->constrain(I I I)I
+	38      (0000007e) move-result          v7
+	39      (00000080) const/4              v10, 0
+	40      (00000082) const/16             v11, 255
+	41      (00000086) invoke-static        v2, v10, v11, Landroid/support/v4/graphics/ColorUtils;->constrain(I I I)I
+	42      (0000008c) move-result          v2
+	43      (0000008e) const/4              v10, 0
+	44      (00000090) const/16             v11, 255
+	45      (00000094) invoke-static        v0, v10, v11, Landroid/support/v4/graphics/ColorUtils;->constrain(I I I)I
+	46      (0000009a) move-result          v0
+	47      (0000009c) invoke-static        v7, v2, v0, Landroid/graphics/Color;->rgb(I I I)I
+	48      (000000a2) move-result          v10
+	49      (000000a4) return               v10
+
+HSLToColor-BB@0xa6 : [ HSLToColor-BB@0x72 ]
+	50      (000000a6) const/high16         v10, 17279 # [255.0]
+	51      (000000aa) add-float            v11, v1, v6
+	52      (000000ae) mul-float/2addr      v10, v11
+	53      (000000b0) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	54      (000000b6) move-result          v7
+	55      (000000b8) const/high16         v10, 17279 # [255.0]
+	56      (000000bc) add-float            v11, v9, v6
+	57      (000000c0) mul-float/2addr      v10, v11
+	58      (000000c2) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	59      (000000c8) move-result          v2
+	60      (000000ca) const/high16         v10, 17279 # [255.0]
+	61      (000000ce) mul-float/2addr      v10, v6
+	62      (000000d0) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	63      (000000d6) move-result          v0
+	64      (000000d8) goto                 -33
+
+HSLToColor-BB@0xda : [ HSLToColor-BB@0x72 ]
+	65      (000000da) const/high16         v10, 17279 # [255.0]
+	66      (000000de) add-float            v11, v9, v6
+	67      (000000e2) mul-float/2addr      v10, v11
+	68      (000000e4) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	69      (000000ea) move-result          v7
+	70      (000000ec) const/high16         v10, 17279 # [255.0]
+	71      (000000f0) add-float            v11, v1, v6
+	72      (000000f4) mul-float/2addr      v10, v11
+	73      (000000f6) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	74      (000000fc) move-result          v2
+	75      (000000fe) const/high16         v10, 17279 # [255.0]
+	76      (00000102) mul-float/2addr      v10, v6
+	77      (00000104) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	78      (0000010a) move-result          v0
+	79      (0000010c) goto                 -4d
+
+HSLToColor-BB@0x10e : [ HSLToColor-BB@0x72 ]
+	80      (0000010e) const/high16         v10, 17279 # [255.0]
+	81      (00000112) mul-float/2addr      v10, v6
+	82      (00000114) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	83      (0000011a) move-result          v7
+	84      (0000011c) const/high16         v10, 17279 # [255.0]
+	85      (00000120) add-float            v11, v1, v6
+	86      (00000124) mul-float/2addr      v10, v11
+	87      (00000126) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	88      (0000012c) move-result          v2
+	89      (0000012e) const/high16         v10, 17279 # [255.0]
+	90      (00000132) add-float            v11, v9, v6
+	91      (00000136) mul-float/2addr      v10, v11
+	92      (00000138) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	93      (0000013e) move-result          v0
+	94      (00000140) goto                 -67
+
+HSLToColor-BB@0x142 : [ HSLToColor-BB@0x72 ]
+	95      (00000142) const/high16         v10, 17279 # [255.0]
+	96      (00000146) mul-float/2addr      v10, v6
+	97      (00000148) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	98      (0000014e) move-result          v7
+	99      (00000150) const/high16         v10, 17279 # [255.0]
+	100     (00000154) add-float            v11, v9, v6
+	101     (00000158) mul-float/2addr      v10, v11
+	102     (0000015a) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	103     (00000160) move-result          v2
+	104     (00000162) const/high16         v10, 17279 # [255.0]
+	105     (00000166) add-float            v11, v1, v6
+	106     (0000016a) mul-float/2addr      v10, v11
+	107     (0000016c) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	108     (00000172) move-result          v0
+	109     (00000174) goto/16              -81
+
+HSLToColor-BB@0x178 : [ HSLToColor-BB@0x72 ]
+	110     (00000178) const/high16         v10, 17279 # [255.0]
+	111     (0000017c) add-float            v11, v9, v6
+	112     (00000180) mul-float/2addr      v10, v11
+	113     (00000182) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	114     (00000188) move-result          v7
+	115     (0000018a) const/high16         v10, 17279 # [255.0]
+	116     (0000018e) mul-float/2addr      v10, v6
+	117     (00000190) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	118     (00000196) move-result          v2
+	119     (00000198) const/high16         v10, 17279 # [255.0]
+	120     (0000019c) add-float            v11, v1, v6
+	121     (000001a0) mul-float/2addr      v10, v11
+	122     (000001a2) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	123     (000001a8) move-result          v0
+	124     (000001aa) goto/16              -9c
+
+HSLToColor-BB@0x1ae : [ HSLToColor-BB@0x72 ]
+	125     (000001ae) const/high16         v10, 17279 # [255.0]
+	126     (000001b2) add-float            v11, v1, v6
+	127     (000001b6) mul-float/2addr      v10, v11
+	128     (000001b8) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	129     (000001be) move-result          v7
+	130     (000001c0) const/high16         v10, 17279 # [255.0]
+	131     (000001c4) mul-float/2addr      v10, v6
+	132     (000001c6) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	133     (000001cc) move-result          v2
+	134     (000001ce) const/high16         v10, 17279 # [255.0]
+	135     (000001d2) add-float            v11, v9, v6
+	136     (000001d6) mul-float/2addr      v10, v11
+	137     (000001d8) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	138     (000001de) move-result          v0
+	139     (000001e0) goto/16              -b7
+
+HSLToColor-BB@0x1e4 : 
+	140     (000001e4) packed-switch-payload 0 1 2 3 4 5 6
+

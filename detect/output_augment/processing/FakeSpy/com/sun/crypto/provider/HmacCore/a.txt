@@ -1,0 +1,27 @@
+# Lcom/sun/crypto/provider/HmacCore;->a([B I I)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:byte[]
+# - v4:int
+# - v5:int
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0xa a-BB@0x1e ]
+	0       (00000000) iget-boolean         v0, v2, Lcom/sun/crypto/provider/HmacCore;->d Z
+	1       (00000004) const/4              v1, 1
+	2       (00000006) if-ne                v0, v1, +c
+
+a-BB@0xa : [ a-BB@0x1e ]
+	3       (0000000a) iget-object          v0, v2, Lcom/sun/crypto/provider/HmacCore;->a Ljava/security/MessageDigest;
+	4       (0000000e) iget-object          v1, v2, Lcom/sun/crypto/provider/HmacCore;->b [B
+	5       (00000012) invoke-virtual       v0, v1, Ljava/security/MessageDigest;->update([B)V
+	6       (00000018) const/4              v0, 0
+	7       (0000001a) iput-boolean         v0, v2, Lcom/sun/crypto/provider/HmacCore;->d Z
+
+a-BB@0x1e : 
+	8       (0000001e) iget-object          v0, v2, Lcom/sun/crypto/provider/HmacCore;->a Ljava/security/MessageDigest;
+	9       (00000022) invoke-virtual       v0, v3, v4, v5, Ljava/security/MessageDigest;->update([B I I)V
+	10      (00000028) return-void          
+

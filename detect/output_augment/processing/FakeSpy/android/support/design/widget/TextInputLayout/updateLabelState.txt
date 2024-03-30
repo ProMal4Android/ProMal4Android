@@ -1,0 +1,120 @@
+# Landroid/support/design/widget/TextInputLayout;->updateLabelState(Z)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:boolean
+#
+# - return:void
+
+updateLabelState-BB@0x0 : [ updateLabelState-BB@0xc updateLabelState-BB@0xaa ]
+	0       (00000000) const/4              v3, 1
+	1       (00000002) const/4              v4, 0
+	2       (00000004) iget-object          v5, v7, Landroid/support/design/widget/TextInputLayout;->mEditText Landroid/widget/EditText;
+	3       (00000008) if-eqz               v5, +51
+
+updateLabelState-BB@0xc : [ updateLabelState-BB@0x24 updateLabelState-BB@0xaa ]
+	4       (0000000c) iget-object          v5, v7, Landroid/support/design/widget/TextInputLayout;->mEditText Landroid/widget/EditText;
+	5       (00000010) invoke-virtual       v5, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+	6       (00000016) move-result-object   v5
+	7       (00000018) invoke-static        v5, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	8       (0000001e) move-result          v5
+	9       (00000020) if-nez               v5, +45
+
+updateLabelState-BB@0x24 : [ updateLabelState-BB@0x26 ]
+	10      (00000024) move                 v0, v3
+
+updateLabelState-BB@0x26 : [ updateLabelState-BB@0x50 updateLabelState-BB@0xae ]
+	11      (00000026) invoke-virtual       v7, Landroid/support/design/widget/TextInputLayout;->getDrawableState()[I
+	12      (0000002c) move-result-object   v5
+	13      (0000002e) const                v6, 16842908 # [2.36939952138826e-38]
+	14      (00000034) invoke-static        v5, v6, Landroid/support/design/widget/TextInputLayout;->arrayContains([I I)Z
+	15      (0000003a) move-result          v2
+	16      (0000003c) invoke-virtual       v7, Landroid/support/design/widget/TextInputLayout;->getError()Ljava/lang/CharSequence;
+	17      (00000042) move-result-object   v5
+	18      (00000044) invoke-static        v5, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	19      (0000004a) move-result          v5
+	20      (0000004c) if-nez               v5, +31
+
+updateLabelState-BB@0x50 : [ updateLabelState-BB@0x52 ]
+	21      (00000050) move                 v1, v3
+
+updateLabelState-BB@0x52 : [ updateLabelState-BB@0x5a updateLabelState-BB@0x70 ]
+	22      (00000052) iget-object          v3, v7, Landroid/support/design/widget/TextInputLayout;->mDefaultTextColor Landroid/content/res/ColorStateList;
+	23      (00000056) if-eqz               v3, +d
+
+updateLabelState-BB@0x5a : [ updateLabelState-BB@0x70 ]
+	24      (0000005a) iget-object          v3, v7, Landroid/support/design/widget/TextInputLayout;->mCollapsingTextHelper Landroid/support/design/widget/CollapsingTextHelper;
+	25      (0000005e) iget-object          v4, v7, Landroid/support/design/widget/TextInputLayout;->mDefaultTextColor Landroid/content/res/ColorStateList;
+	26      (00000062) invoke-virtual       v4, Landroid/content/res/ColorStateList;->getDefaultColor()I
+	27      (00000068) move-result          v4
+	28      (0000006a) invoke-virtual       v3, v4, Landroid/support/design/widget/CollapsingTextHelper;->setExpandedTextColor(I)V
+
+updateLabelState-BB@0x70 : [ updateLabelState-BB@0x78 updateLabelState-BB@0xb2 ]
+	29      (00000070) iget-boolean         v3, v7, Landroid/support/design/widget/TextInputLayout;->mCounterOverflowed Z
+	30      (00000074) if-eqz               v3, +1f
+
+updateLabelState-BB@0x78 : [ updateLabelState-BB@0x80 updateLabelState-BB@0xb2 ]
+	31      (00000078) iget-object          v3, v7, Landroid/support/design/widget/TextInputLayout;->mCounterView Landroid/widget/TextView;
+	32      (0000007c) if-eqz               v3, +1b
+
+updateLabelState-BB@0x80 : [ updateLabelState-BB@0x96 ]
+	33      (00000080) iget-object          v3, v7, Landroid/support/design/widget/TextInputLayout;->mCollapsingTextHelper Landroid/support/design/widget/CollapsingTextHelper;
+	34      (00000084) iget-object          v4, v7, Landroid/support/design/widget/TextInputLayout;->mCounterView Landroid/widget/TextView;
+	35      (00000088) invoke-virtual       v4, Landroid/widget/TextView;->getCurrentTextColor()I
+	36      (0000008e) move-result          v4
+	37      (00000090) invoke-virtual       v3, v4, Landroid/support/design/widget/CollapsingTextHelper;->setCollapsedTextColor(I)V
+
+updateLabelState-BB@0x96 : [ updateLabelState-BB@0x9a updateLabelState-BB@0xa2 ]
+	38      (00000096) if-nez               v0, +6
+
+updateLabelState-BB@0x9a : [ updateLabelState-BB@0x9e updateLabelState-BB@0xa2 ]
+	39      (0000009a) if-nez               v2, +4
+
+updateLabelState-BB@0x9e : [ updateLabelState-BB@0xa2 updateLabelState-BB@0xf6 ]
+	40      (0000009e) if-eqz               v1, +2c
+
+updateLabelState-BB@0xa2 : [ updateLabelState-BB@0xa8 ]
+	41      (000000a2) invoke-direct        v7, v8, Landroid/support/design/widget/TextInputLayout;->collapseHint(Z)V
+
+updateLabelState-BB@0xa8 : 
+	42      (000000a8) return-void          
+
+updateLabelState-BB@0xaa : [ updateLabelState-BB@0x26 ]
+	43      (000000aa) move                 v0, v4
+	44      (000000ac) goto                 -43
+
+updateLabelState-BB@0xae : [ updateLabelState-BB@0x52 ]
+	45      (000000ae) move                 v1, v4
+	46      (000000b0) goto                 -2f
+
+updateLabelState-BB@0xb2 : [ updateLabelState-BB@0xb6 updateLabelState-BB@0xd6 ]
+	47      (000000b2) if-eqz               v2, +12
+
+updateLabelState-BB@0xb6 : [ updateLabelState-BB@0xbe updateLabelState-BB@0xd6 ]
+	48      (000000b6) iget-object          v3, v7, Landroid/support/design/widget/TextInputLayout;->mFocusedTextColor Landroid/content/res/ColorStateList;
+	49      (000000ba) if-eqz               v3, +e
+
+updateLabelState-BB@0xbe : [ updateLabelState-BB@0x96 ]
+	50      (000000be) iget-object          v3, v7, Landroid/support/design/widget/TextInputLayout;->mCollapsingTextHelper Landroid/support/design/widget/CollapsingTextHelper;
+	51      (000000c2) iget-object          v4, v7, Landroid/support/design/widget/TextInputLayout;->mFocusedTextColor Landroid/content/res/ColorStateList;
+	52      (000000c6) invoke-virtual       v4, Landroid/content/res/ColorStateList;->getDefaultColor()I
+	53      (000000cc) move-result          v4
+	54      (000000ce) invoke-virtual       v3, v4, Landroid/support/design/widget/CollapsingTextHelper;->setCollapsedTextColor(I)V
+	55      (000000d4) goto                 -1f
+
+updateLabelState-BB@0xd6 : [ updateLabelState-BB@0xde updateLabelState-BB@0x96 ]
+	56      (000000d6) iget-object          v3, v7, Landroid/support/design/widget/TextInputLayout;->mDefaultTextColor Landroid/content/res/ColorStateList;
+	57      (000000da) if-eqz               v3, -22
+
+updateLabelState-BB@0xde : [ updateLabelState-BB@0x96 ]
+	58      (000000de) iget-object          v3, v7, Landroid/support/design/widget/TextInputLayout;->mCollapsingTextHelper Landroid/support/design/widget/CollapsingTextHelper;
+	59      (000000e2) iget-object          v4, v7, Landroid/support/design/widget/TextInputLayout;->mDefaultTextColor Landroid/content/res/ColorStateList;
+	60      (000000e6) invoke-virtual       v4, Landroid/content/res/ColorStateList;->getDefaultColor()I
+	61      (000000ec) move-result          v4
+	62      (000000ee) invoke-virtual       v3, v4, Landroid/support/design/widget/CollapsingTextHelper;->setCollapsedTextColor(I)V
+	63      (000000f4) goto                 -2f
+
+updateLabelState-BB@0xf6 : [ updateLabelState-BB@0xa8 ]
+	64      (000000f6) invoke-direct        v7, v8, Landroid/support/design/widget/TextInputLayout;->expandHint(Z)V
+	65      (000000fc) goto                 -2a
+

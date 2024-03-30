@@ -1,0 +1,36 @@
+# Landroid/support/v7/view/a;->e()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:int
+
+e-BB@0x0 : [ e-BB@0x3c e-BB@0x50 ]
+	0       (00000000) const/4              v4, 0
+	1       (00000002) iget-object          v0, v5, Landroid/support/v7/view/a;->a Landroid/content/Context;
+	2       (00000006) const/4              v1, 0
+	3       (00000008) sget-object          v2, Landroid/support/v7/a/l;->ActionBar [I
+	4       (0000000c) sget                 v3, Landroid/support/v7/a/b;->actionBarStyle I
+	5       (00000010) invoke-virtual       v0, v1, v2, v3, v4, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I I I)Landroid/content/res/TypedArray;
+	6       (00000016) move-result-object   v1
+	7       (00000018) sget                 v0, Landroid/support/v7/a/l;->ActionBar_height I
+	8       (0000001c) invoke-virtual       v1, v0, v4, Landroid/content/res/TypedArray;->getLayoutDimension(I I)I
+	9       (00000022) move-result          v0
+	10      (00000024) iget-object          v2, v5, Landroid/support/v7/view/a;->a Landroid/content/Context;
+	11      (00000028) invoke-virtual       v2, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	12      (0000002e) move-result-object   v2
+	13      (00000030) invoke-virtual       v5, Landroid/support/v7/view/a;->d()Z
+	14      (00000036) move-result          v3
+	15      (00000038) if-nez               v3, +c
+
+e-BB@0x3c : [ e-BB@0x50 ]
+	16      (0000003c) sget                 v3, Landroid/support/v7/a/e;->abc_action_bar_stacked_max_height I
+	17      (00000040) invoke-virtual       v2, v3, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+	18      (00000046) move-result          v2
+	19      (00000048) invoke-static        v0, v2, Ljava/lang/Math;->min(I I)I
+	20      (0000004e) move-result          v0
+
+e-BB@0x50 : 
+	21      (00000050) invoke-virtual       v1, Landroid/content/res/TypedArray;->recycle()V
+	22      (00000056) return               v0
+

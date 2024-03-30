@@ -1,0 +1,50 @@
+# Landroid/support/v4/app/Fragment;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : [ toString-BB@0x1c toString-BB@0x30 ]
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuilder;
+	1       (00000004) const/16             v1, 128
+	2       (00000008) invoke-direct        v0, v1, Ljava/lang/StringBuilder;-><init>(I)V
+	3       (0000000e) invoke-static        v2, v0, Landroid/support/v4/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object; Ljava/lang/StringBuilder;)V
+	4       (00000014) iget                 v1, v2, Landroid/support/v4/app/Fragment;->mIndex I
+	5       (00000018) if-ltz               v1, +c
+
+toString-BB@0x1c : [ toString-BB@0x30 ]
+	6       (0000001c) const-string         v1, ' #'
+	7       (00000020) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000026) iget                 v1, v2, Landroid/support/v4/app/Fragment;->mIndex I
+	9       (0000002a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+toString-BB@0x30 : [ toString-BB@0x38 toString-BB@0x54 ]
+	10      (00000030) iget                 v1, v2, Landroid/support/v4/app/Fragment;->mFragmentId I
+	11      (00000034) if-eqz               v1, +10
+
+toString-BB@0x38 : [ toString-BB@0x54 ]
+	12      (00000038) const-string         v1, ' id=0x'
+	13      (0000003c) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (00000042) iget                 v1, v2, Landroid/support/v4/app/Fragment;->mFragmentId I
+	15      (00000046) invoke-static        v1, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	16      (0000004c) move-result-object   v1
+	17      (0000004e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+toString-BB@0x54 : [ toString-BB@0x5c toString-BB@0x70 ]
+	18      (00000054) iget-object          v1, v2, Landroid/support/v4/app/Fragment;->mTag Ljava/lang/String;
+	19      (00000058) if-eqz               v1, +c
+
+toString-BB@0x5c : [ toString-BB@0x70 ]
+	20      (0000005c) const-string         v1, ' '
+	21      (00000060) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	22      (00000066) iget-object          v1, v2, Landroid/support/v4/app/Fragment;->mTag Ljava/lang/String;
+	23      (0000006a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+toString-BB@0x70 : 
+	24      (00000070) const/16             v1, 125
+	25      (00000074) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	26      (0000007a) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	27      (00000080) move-result-object   v1
+	28      (00000082) return-object        v1
+

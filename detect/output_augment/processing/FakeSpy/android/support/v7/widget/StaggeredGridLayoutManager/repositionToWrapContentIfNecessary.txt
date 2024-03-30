@@ -1,0 +1,155 @@
+# Landroid/support/v7/widget/StaggeredGridLayoutManager;->repositionToWrapContentIfNecessary()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v14
+#
+# - return:void
+
+repositionToWrapContentIfNecessary-BB@0x0 : [ repositionToWrapContentIfNecessary-BB@0x16 repositionToWrapContentIfNecessary-BB@0x18 ]
+	0       (00000000) const/4              v13, 1
+	1       (00000002) iget-object          v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSecondaryOrientation Landroid/support/v7/widget/OrientationHelper;
+	2       (00000006) invoke-virtual       v11, Landroid/support/v7/widget/OrientationHelper;->getMode()I
+	3       (0000000c) move-result          v11
+	4       (0000000e) const/high16         v12, 16384 # [2.0]
+	5       (00000012) if-ne                v11, v12, +3
+
+repositionToWrapContentIfNecessary-BB@0x16 : 
+	6       (00000016) return-void          
+
+repositionToWrapContentIfNecessary-BB@0x18 : [ repositionToWrapContentIfNecessary-BB@0x24 ]
+	7       (00000018) const/4              v7, 0
+	8       (0000001a) invoke-virtual       v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->getChildCount()I
+	9       (00000020) move-result          v2
+	10      (00000022) const/4              v4, 0
+
+repositionToWrapContentIfNecessary-BB@0x24 : [ repositionToWrapContentIfNecessary-BB@0x28 repositionToWrapContentIfNecessary-BB@0x7e ]
+	11      (00000024) if-ge                v4, v2, +2d
+
+repositionToWrapContentIfNecessary-BB@0x28 : [ repositionToWrapContentIfNecessary-BB@0x46 repositionToWrapContentIfNecessary-BB@0x4c ]
+	12      (00000028) invoke-virtual       v14, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager;->getChildAt(I)Landroid/view/View;
+	13      (0000002e) move-result-object   v1
+	14      (00000030) iget-object          v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSecondaryOrientation Landroid/support/v7/widget/OrientationHelper;
+	15      (00000034) invoke-virtual       v11, v1, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
+	16      (0000003a) move-result          v11
+	17      (0000003c) int-to-float         v10, v11
+	18      (0000003e) cmpg-float           v11, v10, v7
+	19      (00000042) if-gez               v11, +5
+
+repositionToWrapContentIfNecessary-BB@0x46 : [ repositionToWrapContentIfNecessary-BB@0x24 ]
+	20      (00000046) add-int/lit8         v4, v4, 1
+	21      (0000004a) goto                 -13
+
+repositionToWrapContentIfNecessary-BB@0x4c : [ repositionToWrapContentIfNecessary-BB@0x64 repositionToWrapContentIfNecessary-BB@0x74 ]
+	22      (0000004c) invoke-virtual       v1, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	23      (00000052) move-result-object   v5
+	24      (00000054) check-cast           v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;
+	25      (00000058) invoke-virtual       v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->isFullSpan()Z
+	26      (0000005e) move-result          v11
+	27      (00000060) if-eqz               v11, +a
+
+repositionToWrapContentIfNecessary-BB@0x64 : [ repositionToWrapContentIfNecessary-BB@0x74 ]
+	28      (00000064) const/high16         v11, 16256 # [1.0]
+	29      (00000068) mul-float/2addr      v11, v10
+	30      (0000006a) iget                 v12, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSpanCount I
+	31      (0000006e) int-to-float         v12, v12
+	32      (00000070) div-float            v10, v11, v12
+
+repositionToWrapContentIfNecessary-BB@0x74 : [ repositionToWrapContentIfNecessary-BB@0x46 ]
+	33      (00000074) invoke-static        v7, v10, Ljava/lang/Math;->max(F F)F
+	34      (0000007a) move-result          v7
+	35      (0000007c) goto                 -1b
+
+repositionToWrapContentIfNecessary-BB@0x7e : [ repositionToWrapContentIfNecessary-BB@0xa6 repositionToWrapContentIfNecessary-BB@0xba ]
+	36      (0000007e) iget                 v0, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSizePerSpan I
+	37      (00000082) iget                 v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSpanCount I
+	38      (00000086) int-to-float         v11, v11
+	39      (00000088) mul-float/2addr      v11, v7
+	40      (0000008a) invoke-static        v11, Ljava/lang/Math;->round(F)I
+	41      (00000090) move-result          v3
+	42      (00000092) iget-object          v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSecondaryOrientation Landroid/support/v7/widget/OrientationHelper;
+	43      (00000096) invoke-virtual       v11, Landroid/support/v7/widget/OrientationHelper;->getMode()I
+	44      (0000009c) move-result          v11
+	45      (0000009e) const/high16         v12, -32768 # [-0.0]
+	46      (000000a2) if-ne                v11, v12, +c
+
+repositionToWrapContentIfNecessary-BB@0xa6 : [ repositionToWrapContentIfNecessary-BB@0xba ]
+	47      (000000a6) iget-object          v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSecondaryOrientation Landroid/support/v7/widget/OrientationHelper;
+	48      (000000aa) invoke-virtual       v11, Landroid/support/v7/widget/OrientationHelper;->getTotalSpace()I
+	49      (000000b0) move-result          v11
+	50      (000000b2) invoke-static        v3, v11, Ljava/lang/Math;->min(I I)I
+	51      (000000b8) move-result          v3
+
+repositionToWrapContentIfNecessary-BB@0xba : [ repositionToWrapContentIfNecessary-BB@0xc8 repositionToWrapContentIfNecessary-BB@0x16 ]
+	52      (000000ba) invoke-virtual       v14, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager;->updateMeasureSpecs(I)V
+	53      (000000c0) iget                 v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSizePerSpan I
+	54      (000000c4) if-eq                v11, v0, -57
+
+repositionToWrapContentIfNecessary-BB@0xc8 : [ repositionToWrapContentIfNecessary-BB@0xca ]
+	55      (000000c8) const/4              v4, 0
+
+repositionToWrapContentIfNecessary-BB@0xca : [ repositionToWrapContentIfNecessary-BB@0xce repositionToWrapContentIfNecessary-BB@0x16 ]
+	56      (000000ca) if-ge                v4, v2, -5a
+
+repositionToWrapContentIfNecessary-BB@0xce : [ repositionToWrapContentIfNecessary-BB@0xea repositionToWrapContentIfNecessary-BB@0xf0 ]
+	57      (000000ce) invoke-virtual       v14, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager;->getChildAt(I)Landroid/view/View;
+	58      (000000d4) move-result-object   v1
+	59      (000000d6) invoke-virtual       v1, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	60      (000000dc) move-result-object   v6
+	61      (000000de) check-cast           v6, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;
+	62      (000000e2) iget-boolean         v11, v6, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan Z
+	63      (000000e6) if-eqz               v11, +5
+
+repositionToWrapContentIfNecessary-BB@0xea : [ repositionToWrapContentIfNecessary-BB@0xca ]
+	64      (000000ea) add-int/lit8         v4, v4, 1
+	65      (000000ee) goto                 -12
+
+repositionToWrapContentIfNecessary-BB@0xf0 : [ repositionToWrapContentIfNecessary-BB@0xfc repositionToWrapContentIfNecessary-BB@0x144 ]
+	66      (000000f0) invoke-virtual       v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->isLayoutRTL()Z
+	67      (000000f6) move-result          v11
+	68      (000000f8) if-eqz               v11, +26
+
+repositionToWrapContentIfNecessary-BB@0xfc : [ repositionToWrapContentIfNecessary-BB@0x104 repositionToWrapContentIfNecessary-BB@0x144 ]
+	69      (000000fc) iget                 v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mOrientation I
+	70      (00000100) if-ne                v11, v13, +22
+
+repositionToWrapContentIfNecessary-BB@0x104 : [ repositionToWrapContentIfNecessary-BB@0xea ]
+	71      (00000104) iget                 v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSpanCount I
+	72      (00000108) add-int/lit8         v11, v11, -1
+	73      (0000010c) iget-object          v12, v6, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	74      (00000110) iget                 v12, v12, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mIndex I
+	75      (00000114) sub-int/2addr        v11, v12
+	76      (00000116) neg-int              v11, v11
+	77      (00000118) iget                 v12, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSizePerSpan I
+	78      (0000011c) mul-int              v8, v11, v12
+	79      (00000120) iget                 v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSpanCount I
+	80      (00000124) add-int/lit8         v11, v11, -1
+	81      (00000128) iget-object          v12, v6, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	82      (0000012c) iget                 v12, v12, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mIndex I
+	83      (00000130) sub-int/2addr        v11, v12
+	84      (00000132) neg-int              v11, v11
+	85      (00000134) mul-int              v9, v11, v0
+	86      (00000138) sub-int              v11, v8, v9
+	87      (0000013c) invoke-virtual       v1, v11, Landroid/view/View;->offsetLeftAndRight(I)V
+	88      (00000142) goto                 -2c
+
+repositionToWrapContentIfNecessary-BB@0x144 : [ repositionToWrapContentIfNecessary-BB@0x168 repositionToWrapContentIfNecessary-BB@0x174 ]
+	89      (00000144) iget-object          v11, v6, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	90      (00000148) iget                 v11, v11, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mIndex I
+	91      (0000014c) iget                 v12, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSizePerSpan I
+	92      (00000150) mul-int              v8, v11, v12
+	93      (00000154) iget-object          v11, v6, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	94      (00000158) iget                 v11, v11, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mIndex I
+	95      (0000015c) mul-int              v9, v11, v0
+	96      (00000160) iget                 v11, v14, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mOrientation I
+	97      (00000164) if-ne                v11, v13, +8
+
+repositionToWrapContentIfNecessary-BB@0x168 : [ repositionToWrapContentIfNecessary-BB@0xea ]
+	98      (00000168) sub-int              v11, v8, v9
+	99      (0000016c) invoke-virtual       v1, v11, Landroid/view/View;->offsetLeftAndRight(I)V
+	100     (00000172) goto                 -44
+
+repositionToWrapContentIfNecessary-BB@0x174 : [ repositionToWrapContentIfNecessary-BB@0xea ]
+	101     (00000174) sub-int              v11, v8, v9
+	102     (00000178) invoke-virtual       v1, v11, Landroid/view/View;->offsetTopAndBottom(I)V
+	103     (0000017e) goto                 -4a
+

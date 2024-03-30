@@ -1,0 +1,123 @@
+# Lbutterknife/internal/ButterKnifeProcessor;->isSubtypeOfType(Ljavax/lang/model/type/TypeMirror; Ljava/lang/String;)Z [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:javax.lang.model.type.TypeMirror
+# - v14:java.lang.String
+#
+# - return:boolean
+
+isSubtypeOfType-BB@0x0 : [ isSubtypeOfType-BB@0x18 isSubtypeOfType-BB@0x1a ]
+	0       (00000000) const/4              v9, 0
+	1       (00000002) const/4              v8, 1
+	2       (00000004) invoke-interface     v13, Ljavax/lang/model/type/TypeMirror;->toString()Ljava/lang/String;
+	3       (0000000a) move-result-object   v10
+	4       (0000000c) invoke-virtual       v14, v10, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	5       (00000012) move-result          v10
+	6       (00000014) if-eqz               v10, +3
+
+isSubtypeOfType-BB@0x18 : 
+	7       (00000018) return               v8
+
+isSubtypeOfType-BB@0x1a : [ isSubtypeOfType-BB@0x2a isSubtypeOfType-BB@0x2e ]
+	8       (0000001a) invoke-interface     v13, Ljavax/lang/model/type/TypeMirror;->getKind()Ljavax/lang/model/type/TypeKind;
+	9       (00000020) move-result-object   v10
+	10      (00000022) sget-object          v11, Ljavax/lang/model/type/TypeKind;->DECLARED Ljavax/lang/model/type/TypeKind;
+	11      (00000026) if-eq                v10, v11, +4
+
+isSubtypeOfType-BB@0x2a : [ isSubtypeOfType-BB@0x18 ]
+	12      (0000002a) move                 v8, v9
+	13      (0000002c) goto                 -a
+
+isSubtypeOfType-BB@0x2e : [ isSubtypeOfType-BB@0x48 isSubtypeOfType-BB@0xb6 ]
+	14      (0000002e) move-object          v0, v13
+	15      (00000030) check-cast           v0, Ljavax/lang/model/type/DeclaredType;
+	16      (00000034) invoke-interface     v0, Ljavax/lang/model/type/DeclaredType;->getTypeArguments()Ljava/util/List;
+	17      (0000003a) move-result-object   v5
+	18      (0000003c) invoke-interface     v5, Ljava/util/List;->size()I
+	19      (00000042) move-result          v10
+	20      (00000044) if-lez               v10, +39
+
+isSubtypeOfType-BB@0x48 : [ isSubtypeOfType-BB@0x6e ]
+	21      (00000048) new-instance         v7, Ljava/lang/StringBuilder;
+	22      (0000004c) invoke-interface     v0, Ljavax/lang/model/type/DeclaredType;->asElement()Ljavax/lang/model/element/Element;
+	23      (00000052) move-result-object   v10
+	24      (00000054) invoke-virtual       v10, Ljava/lang/Object;->toString()Ljava/lang/String;
+	25      (0000005a) move-result-object   v10
+	26      (0000005c) invoke-direct        v7, v10, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	27      (00000062) const/16             v10, 60
+	28      (00000066) invoke-virtual       v7, v10, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	29      (0000006c) const/4              v2, 0
+
+isSubtypeOfType-BB@0x6e : [ isSubtypeOfType-BB@0x7a isSubtypeOfType-BB@0x98 ]
+	30      (0000006e) invoke-interface     v5, Ljava/util/List;->size()I
+	31      (00000074) move-result          v10
+	32      (00000076) if-ge                v2, v10, +11
+
+isSubtypeOfType-BB@0x7a : [ isSubtypeOfType-BB@0x7e isSubtypeOfType-BB@0x88 ]
+	33      (0000007a) if-lez               v2, +7
+
+isSubtypeOfType-BB@0x7e : [ isSubtypeOfType-BB@0x88 ]
+	34      (0000007e) const/16             v10, 44
+	35      (00000082) invoke-virtual       v7, v10, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+isSubtypeOfType-BB@0x88 : [ isSubtypeOfType-BB@0x6e ]
+	36      (00000088) const/16             v10, 63
+	37      (0000008c) invoke-virtual       v7, v10, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	38      (00000092) add-int/lit8         v2, v2, 1
+	39      (00000096) goto                 -14
+
+isSubtypeOfType-BB@0x98 : [ isSubtypeOfType-BB@0xb6 isSubtypeOfType-BB@0x18 ]
+	40      (00000098) const/16             v10, 62
+	41      (0000009c) invoke-virtual       v7, v10, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	42      (000000a2) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	43      (000000a8) move-result-object   v10
+	44      (000000aa) invoke-virtual       v10, v14, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	45      (000000b0) move-result          v10
+	46      (000000b2) if-nez               v10, -4d
+
+isSubtypeOfType-BB@0xb6 : [ isSubtypeOfType-BB@0xc6 isSubtypeOfType-BB@0xca ]
+	47      (000000b6) invoke-interface     v0, Ljavax/lang/model/type/DeclaredType;->asElement()Ljavax/lang/model/element/Element;
+	48      (000000bc) move-result-object   v1
+	49      (000000be) instance-of          v10, v1, Ljavax/lang/model/element/TypeElement;
+	50      (000000c2) if-nez               v10, +4
+
+isSubtypeOfType-BB@0xc6 : [ isSubtypeOfType-BB@0x18 ]
+	51      (000000c6) move                 v8, v9
+	52      (000000c8) goto                 -58
+
+isSubtypeOfType-BB@0xca : [ isSubtypeOfType-BB@0xe4 isSubtypeOfType-BB@0x18 ]
+	53      (000000ca) move-object          v6, v1
+	54      (000000cc) check-cast           v6, Ljavax/lang/model/element/TypeElement;
+	55      (000000d0) invoke-interface     v6, Ljavax/lang/model/element/TypeElement;->getSuperclass()Ljavax/lang/model/type/TypeMirror;
+	56      (000000d6) move-result-object   v4
+	57      (000000d8) invoke-direct        v12, v4, v14, Lbutterknife/internal/ButterKnifeProcessor;->isSubtypeOfType(Ljavax/lang/model/type/TypeMirror; Ljava/lang/String;)Z
+	58      (000000de) move-result          v10
+	59      (000000e0) if-nez               v10, -64
+
+isSubtypeOfType-BB@0xe4 : [ isSubtypeOfType-BB@0xf4 ]
+	60      (000000e4) invoke-interface     v6, Ljavax/lang/model/element/TypeElement;->getInterfaces()Ljava/util/List;
+	61      (000000ea) move-result-object   v10
+	62      (000000ec) invoke-interface     v10, Ljava/util/List;->iterator()Ljava/util/Iterator;
+	63      (000000f2) move-result-object   v10
+
+isSubtypeOfType-BB@0xf4 : [ isSubtypeOfType-BB@0x100 isSubtypeOfType-BB@0x11a ]
+	64      (000000f4) invoke-interface     v10, Ljava/util/Iterator;->hasNext()Z
+	65      (000000fa) move-result          v11
+	66      (000000fc) if-eqz               v11, +f
+
+isSubtypeOfType-BB@0x100 : [ isSubtypeOfType-BB@0x118 isSubtypeOfType-BB@0xf4 ]
+	67      (00000100) invoke-interface     v10, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	68      (00000106) move-result-object   v3
+	69      (00000108) check-cast           v3, Ljavax/lang/model/type/TypeMirror;
+	70      (0000010c) invoke-direct        v12, v3, v14, Lbutterknife/internal/ButterKnifeProcessor;->isSubtypeOfType(Ljavax/lang/model/type/TypeMirror; Ljava/lang/String;)Z
+	71      (00000112) move-result          v11
+	72      (00000114) if-eqz               v11, -10
+
+isSubtypeOfType-BB@0x118 : [ isSubtypeOfType-BB@0x18 ]
+	73      (00000118) goto                 -80
+
+isSubtypeOfType-BB@0x11a : [ isSubtypeOfType-BB@0x18 ]
+	74      (0000011a) move                 v8, v9
+	75      (0000011c) goto/16              -82
+

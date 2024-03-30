@@ -1,0 +1,22 @@
+# Landroid/support/v4/view/ViewPager;->removeView(Landroid/view/View;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.view.View
+#
+# - return:void
+
+removeView-BB@0x0 : [ removeView-BB@0x8 removeView-BB@0x10 ]
+	0       (00000000) iget-boolean         v0, v1, Landroid/support/v4/view/ViewPager;->mInLayout Z
+	1       (00000004) if-eqz               v0, +6
+
+removeView-BB@0x8 : [ removeView-BB@0xe ]
+	2       (00000008) invoke-virtual       v1, v2, Landroid/support/v4/view/ViewPager;->removeViewInLayout(Landroid/view/View;)V
+
+removeView-BB@0xe : 
+	3       (0000000e) return-void          
+
+removeView-BB@0x10 : [ removeView-BB@0xe ]
+	4       (00000010) invoke-super         v1, v2, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+	5       (00000016) goto                 -4
+

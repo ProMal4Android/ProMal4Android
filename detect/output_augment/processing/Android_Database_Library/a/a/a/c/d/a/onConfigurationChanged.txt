@@ -1,0 +1,51 @@
+# La/a/a/c/d/a;->onConfigurationChanged(Landroid/content/res/Configuration;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.content.res.Configuration
+#
+# - return:void
+
+onConfigurationChanged-BB@0x0 : [ onConfigurationChanged-BB@0x46 onConfigurationChanged-BB@0x7a ]
+	0       (00000000) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) invoke-super         v4, v5, Landroid/view/ViewGroup;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+	2       (0000000a) invoke-virtual       v4, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+	3       (00000010) move-result-object   v5
+	4       (00000012) const/4              v0, 0
+	5       (00000014) sget-object          v1, La/a/a/b/i;->ActionBar [I
+	6       (00000018) sget                 v2, La/a/a/b/a;->actionBarStyle I
+	7       (0000001c) const/4              v3, 0
+	8       (0000001e) invoke-virtual       v5, v0, v1, v2, v3, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I I I)Landroid/content/res/TypedArray;
+	9       (00000024) move-result-object   v5
+	10      (00000026) sget                 v0, La/a/a/b/i;->ActionBar_height I
+	11      (0000002a) invoke-virtual       v5, v0, v3, Landroid/content/res/TypedArray;->getLayoutDimension(I I)I
+	12      (00000030) move-result          v0
+	13      (00000032) invoke-virtual       v4, v0, La/a/a/c/d/a;->setContentHeight(I)V
+	14      (00000038) invoke-virtual       v5, Landroid/content/res/TypedArray;->recycle()V
+	15      (0000003e) iget-object          v5, v4, La/a/a/c/d/a;->c La/a/a/e/b;
+	16      (00000042) if-eqz               v5, +1c
+
+onConfigurationChanged-BB@0x46 : [ onConfigurationChanged-BB@0x4e onConfigurationChanged-BB@0x6a ]
+	17      (00000046) iget-boolean         v0, v5, La/a/a/e/b;->o Z
+	18      (0000004a) if-nez               v0, +10
+
+onConfigurationChanged-BB@0x4e : [ onConfigurationChanged-BB@0x6a ]
+	19      (0000004e) iget-object          v0, v5, La/a/a/c/c/a/b;->b Landroid/content/Context;
+	20      (00000052) invoke-virtual       v0, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	21      (00000058) move-result-object   v0
+	22      (0000005a) sget                 v1, La/a/a/b/f;->abc_max_action_buttons I
+	23      (0000005e) invoke-virtual       v0, v1, Landroid/content/res/Resources;->getInteger(I)I
+	24      (00000064) move-result          v0
+	25      (00000066) iput                 v0, v5, La/a/a/e/b;->n I
+
+onConfigurationChanged-BB@0x6a : [ onConfigurationChanged-BB@0x72 onConfigurationChanged-BB@0x7a ]
+	26      (0000006a) iget-object          v5, v5, La/a/a/c/c/a/b;->c La/a/a/c/c/a/e;
+	27      (0000006e) if-eqz               v5, +6
+
+onConfigurationChanged-BB@0x72 : [ onConfigurationChanged-BB@0x7a ]
+	28      (00000072) const/4              v0, 1
+	29      (00000074) invoke-virtual       v5, v0, La/a/a/c/c/a/e;->b(Z)V
+
+onConfigurationChanged-BB@0x7a : 
+	30      (0000007a) return-void          
+

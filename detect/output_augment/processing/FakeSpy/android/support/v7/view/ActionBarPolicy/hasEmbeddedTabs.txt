@@ -1,0 +1,35 @@
+# Landroid/support/v7/view/ActionBarPolicy;->hasEmbeddedTabs()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:boolean
+
+hasEmbeddedTabs-BB@0x0 : [ hasEmbeddedTabs-BB@0x18 hasEmbeddedTabs-BB@0x32 ]
+	0       (00000000) iget-object          v1, v3, Landroid/support/v7/view/ActionBarPolicy;->mContext Landroid/content/Context;
+	1       (00000004) invoke-virtual       v1, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) iget                 v0, v1, Landroid/content/pm/ApplicationInfo;->targetSdkVersion I
+	4       (00000010) const/16             v1, 16
+	5       (00000014) if-lt                v0, v1, +f
+
+hasEmbeddedTabs-BB@0x18 : [ hasEmbeddedTabs-BB@0x30 ]
+	6       (00000018) iget-object          v1, v3, Landroid/support/v7/view/ActionBarPolicy;->mContext Landroid/content/Context;
+	7       (0000001c) invoke-virtual       v1, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	8       (00000022) move-result-object   v1
+	9       (00000024) sget                 v2, Landroid/support/v7/appcompat/R$bool;->abc_action_bar_embed_tabs I
+	10      (00000028) invoke-virtual       v1, v2, Landroid/content/res/Resources;->getBoolean(I)Z
+	11      (0000002e) move-result          v1
+
+hasEmbeddedTabs-BB@0x30 : 
+	12      (00000030) return               v1
+
+hasEmbeddedTabs-BB@0x32 : [ hasEmbeddedTabs-BB@0x30 ]
+	13      (00000032) iget-object          v1, v3, Landroid/support/v7/view/ActionBarPolicy;->mContext Landroid/content/Context;
+	14      (00000036) invoke-virtual       v1, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	15      (0000003c) move-result-object   v1
+	16      (0000003e) sget                 v2, Landroid/support/v7/appcompat/R$bool;->abc_action_bar_embed_tabs_pre_jb I
+	17      (00000042) invoke-virtual       v1, v2, Landroid/content/res/Resources;->getBoolean(I)Z
+	18      (00000048) move-result          v1
+	19      (0000004a) goto                 -d
+

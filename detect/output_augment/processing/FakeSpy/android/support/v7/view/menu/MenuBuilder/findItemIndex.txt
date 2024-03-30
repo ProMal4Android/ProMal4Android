@@ -1,0 +1,36 @@
+# Landroid/support/v7/view/menu/MenuBuilder;->findItemIndex(I)I [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:int
+#
+# - return:int
+
+findItemIndex-BB@0x0 : [ findItemIndex-BB@0xa ]
+	0       (00000000) invoke-virtual       v4, Landroid/support/v7/view/menu/MenuBuilder;->size()I
+	1       (00000006) move-result          v2
+	2       (00000008) const/4              v0, 0
+
+findItemIndex-BB@0xa : [ findItemIndex-BB@0xe findItemIndex-BB@0x32 ]
+	3       (0000000a) if-ge                v0, v2, +14
+
+findItemIndex-BB@0xe : [ findItemIndex-BB@0x2a findItemIndex-BB@0x2c ]
+	4       (0000000e) iget-object          v3, v4, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	5       (00000012) invoke-virtual       v3, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	6       (00000018) move-result-object   v1
+	7       (0000001a) check-cast           v1, Landroid/support/v7/view/menu/MenuItemImpl;
+	8       (0000001e) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->getItemId()I
+	9       (00000024) move-result          v3
+	10      (00000026) if-ne                v3, v5, +3
+
+findItemIndex-BB@0x2a : 
+	11      (0000002a) return               v0
+
+findItemIndex-BB@0x2c : [ findItemIndex-BB@0xa ]
+	12      (0000002c) add-int/lit8         v0, v0, 1
+	13      (00000030) goto                 -13
+
+findItemIndex-BB@0x32 : [ findItemIndex-BB@0x2a ]
+	14      (00000032) const/4              v0, -1
+	15      (00000034) goto                 -5
+

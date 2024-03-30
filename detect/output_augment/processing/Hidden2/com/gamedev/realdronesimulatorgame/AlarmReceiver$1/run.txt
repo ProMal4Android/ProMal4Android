@@ -1,0 +1,276 @@
+# Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v7
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0xfe run-BB@0x20c ]
+	0       (00000000) const-string         v0, 'ExampleJobService'
+	1       (00000004) new-instance         v1, Ljava/lang/StringBuilder;
+	2       (00000008) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	3       (0000000e) const-string         v2, 'updatecont: '
+	4       (00000012) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	5       (00000018) iget-object          v2, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	6       (0000001c) const-string         v3, 'updatecont'
+	7       (00000020) const/4              v4, 0
+	8       (00000022) invoke-interface     v2, v3, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	9       (00000028) move-result          v2
+	10      (0000002a) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	11      (00000030) const-string         v2, ' update: '
+	12      (00000034) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (0000003a) iget-object          v2, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	14      (0000003e) const-string         v3, 'update'
+	15      (00000042) const-string         v5, 'null'
+	16      (00000046) invoke-interface     v2, v3, v5, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	17      (0000004c) move-result-object   v2
+	18      (0000004e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	19      (00000054) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	20      (0000005a) move-result-object   v1
+	21      (0000005c) invoke-static        v0, v1, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	22      (00000062) iget-object          v0, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->b Landroid/content/SharedPreferences$Editor;
+	23      (00000066) const-string         v1, 'updatecont'
+	24      (0000006a) iget-object          v2, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	25      (0000006e) const-string         v3, 'updatecont'
+	26      (00000072) invoke-interface     v2, v3, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	27      (00000078) move-result          v2
+	28      (0000007a) const/4              v3, 1
+	29      (0000007c) add-int/2addr        v2, v3
+	30      (0000007e) invoke-interface     v0, v1, v2, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	31      (00000084) iget-object          v0, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->b Landroid/content/SharedPreferences$Editor;
+	32      (00000088) const-string         v1, 'mincont'
+	33      (0000008c) iget-object          v2, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	34      (00000090) const-string         v5, 'mincont'
+	35      (00000094) invoke-interface     v2, v5, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	36      (0000009a) move-result          v2
+	37      (0000009c) add-int/2addr        v2, v3
+	38      (0000009e) invoke-interface     v0, v1, v2, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	39      (000000a4) iget-object          v0, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->b Landroid/content/SharedPreferences$Editor;
+	40      (000000a8) invoke-interface     v0, Landroid/content/SharedPreferences$Editor;->apply()V
+	41      (000000ae) iget-object          v0, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	42      (000000b2) const-string         v1, 'updatecont'
+	43      (000000b6) invoke-interface     v0, v1, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	44      (000000bc) move-result          v0
+	45      (000000be) iget-object          v1, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	46      (000000c2) const-string         v2, 'jobtime'
+	47      (000000c6) const-string         v5, '15'
+	48      (000000ca) invoke-interface     v1, v2, v5, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	49      (000000d0) move-result-object   v1
+	50      (000000d2) invoke-static        v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+	51      (000000d8) move-result          v1
+	52      (000000da) mul-int              v0, v0, v1
+	53      (000000de) iget-object          v1, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	54      (000000e2) const-string         v2, 'update'
+	55      (000000e6) const-string         v5, '1000'
+	56      (000000ea) invoke-interface     v1, v2, v5, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	57      (000000f0) move-result-object   v1
+	58      (000000f2) invoke-static        v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+	59      (000000f8) move-result          v1
+	60      (000000fa) if-lt                v0, v1, +89
+
+run-BB@0xfe : [ run-BB@0x128 ]
+	61      (000000fe) new-instance         v0, Ljava/net/URL;
+	62      (00000102) const-string         v1, 'http://remoteapp-3d8f.kxcdn.com/realdronesimulator/remote.txt'
+	63      (00000106) invoke-direct        v0, v1, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+	64      (0000010c) new-instance         v1, Ljava/io/BufferedReader;
+	65      (00000110) new-instance         v2, Ljava/io/InputStreamReader;
+	66      (00000114) invoke-virtual       v0, Ljava/net/URL;->openStream()Ljava/io/InputStream;
+	67      (0000011a) move-result-object   v0
+	68      (0000011c) invoke-direct        v2, v0, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+	69      (00000122) invoke-direct        v1, v2, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+	fe:1e5
+	(Ljava/net/MalformedURLException; -> 1ec run-BB@0x1ec)
+	(Ljava/io/IOException; -> 1ec run-BB@0x1ec)
+	(Ljava/lang/Exception; -> 1e8 run-BB@0x1e8)
+
+run-BB@0x128 : [ run-BB@0x134 run-BB@0x1e0 ]
+	70      (00000128) invoke-virtual       v1, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+	71      (0000012e) move-result-object   v0
+	72      (00000130) if-eqz               v0, +58
+	fe:1e5
+	(Ljava/net/MalformedURLException; -> 1ec run-BB@0x1ec)
+	(Ljava/io/IOException; -> 1ec run-BB@0x1ec)
+	(Ljava/lang/Exception; -> 1e8 run-BB@0x1e8)
+
+run-BB@0x134 : [ run-BB@0x148 run-BB@0x128 ]
+	73      (00000134) const-string         v2, ':'
+	74      (00000138) invoke-virtual       v0, v2, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+	75      (0000013e) move-result-object   v2
+	76      (00000140) array-length         v2, v2
+	77      (00000142) const/4              v5, 2
+	78      (00000144) if-lt                v2, v5, -e
+	fe:1e5
+	(Ljava/net/MalformedURLException; -> 1ec run-BB@0x1ec)
+	(Ljava/io/IOException; -> 1ec run-BB@0x1ec)
+	(Ljava/lang/Exception; -> 1e8 run-BB@0x1e8)
+
+run-BB@0x148 : [ run-BB@0x128 ]
+	79      (00000148) const-string         v2, 'ExampleJobService'
+	80      (0000014c) new-instance         v5, Ljava/lang/StringBuilder;
+	81      (00000150) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	82      (00000156) const-string         v6, 'value0: '
+	83      (0000015a) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	84      (00000160) const-string         v6, ':'
+	85      (00000164) invoke-virtual       v0, v6, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+	86      (0000016a) move-result-object   v6
+	87      (0000016c) aget-object          v6, v6, v4
+	88      (00000170) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	89      (00000176) const-string         v6, ' value1: '
+	90      (0000017a) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	91      (00000180) const-string         v6, ':'
+	92      (00000184) invoke-virtual       v0, v6, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+	93      (0000018a) move-result-object   v6
+	94      (0000018c) aget-object          v6, v6, v3
+	95      (00000190) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	96      (00000196) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	97      (0000019c) move-result-object   v5
+	98      (0000019e) invoke-static        v2, v5, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	99      (000001a4) iget-object          v2, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->b Landroid/content/SharedPreferences$Editor;
+	100     (000001a8) const-string         v5, ':'
+	101     (000001ac) invoke-virtual       v0, v5, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+	102     (000001b2) move-result-object   v5
+	103     (000001b4) aget-object          v5, v5, v4
+	104     (000001b8) invoke-virtual       v5, Ljava/lang/String;->toString()Ljava/lang/String;
+	105     (000001be) move-result-object   v5
+	106     (000001c0) const-string         v6, ':'
+	107     (000001c4) invoke-virtual       v0, v6, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+	108     (000001ca) move-result-object   v0
+	109     (000001cc) aget-object          v0, v0, v3
+	110     (000001d0) invoke-virtual       v0, Ljava/lang/String;->toString()Ljava/lang/String;
+	111     (000001d6) move-result-object   v0
+	112     (000001d8) invoke-interface     v2, v5, v0, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String; Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+	113     (000001de) goto                 -5b
+	fe:1e5
+	(Ljava/net/MalformedURLException; -> 1ec run-BB@0x1ec)
+	(Ljava/io/IOException; -> 1ec run-BB@0x1ec)
+	(Ljava/lang/Exception; -> 1e8 run-BB@0x1e8)
+
+run-BB@0x1e0 : [ run-BB@0x1ec ]
+	114     (000001e0) invoke-virtual       v1, Ljava/io/BufferedReader;->close()V
+	115     (000001e6) goto                 +3
+
+run-BB@0x1e8 : [ run-BB@0x206 ]
+	116     (000001e8) move-exception       v0
+	117     (000001ea) goto                 +e
+
+run-BB@0x1ec : [ run-BB@0x20c ]
+	118     (000001ec) iget-object          v0, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->b Landroid/content/SharedPreferences$Editor;
+	119     (000001f0) const-string         v1, 'updatecont'
+	120     (000001f4) invoke-interface     v0, v1, v4, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	121     (000001fa) iget-object          v0, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->b Landroid/content/SharedPreferences$Editor;
+	122     (000001fe) invoke-interface     v0, Landroid/content/SharedPreferences$Editor;->apply()V
+	123     (00000204) goto                 +4
+	1ec:203
+	(Ljava/lang/Exception; -> 1e8 run-BB@0x1e8)
+
+run-BB@0x206 : [ run-BB@0x20c ]
+	124     (00000206) invoke-virtual       v0, Ljava/lang/Exception;->printStackTrace()V
+
+run-BB@0x20c : [ run-BB@0x20e ]
+	125     (0000020c) const/4              v0, 0
+
+run-BB@0x20e : [ run-BB@0x22e run-BB@0x354 ]
+	126     (0000020e) iget-object          v1, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	127     (00000212) const-string         v2, 'windowtime'
+	128     (00000216) const-string         v3, '60'
+	129     (0000021a) invoke-interface     v1, v2, v3, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	130     (00000220) move-result-object   v1
+	131     (00000222) invoke-static        v1, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+	132     (00000228) move-result          v1
+	133     (0000022a) if-gt                v0, v1, +95
+
+run-BB@0x22e : [ run-BB@0x26a run-BB@0x318 ]
+	134     (0000022e) const-string         v1, 'ExampleJobService'
+	135     (00000232) new-instance         v2, Ljava/lang/StringBuilder;
+	136     (00000236) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	137     (0000023c) const-string         v3, 'run: '
+	138     (00000240) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	139     (00000246) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	140     (0000024c) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	141     (00000252) move-result-object   v2
+	142     (00000254) invoke-static        v1, v2, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	143     (0000025a) iget-object          v1, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->c Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;
+	144     (0000025e) invoke-static        v1, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;->a(Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;)Z
+	145     (00000264) move-result          v1
+	146     (00000266) if-eqz               v1, +59
+
+run-BB@0x26a : [ run-BB@0x2ba run-BB@0x318 ]
+	147     (0000026a) iget-object          v1, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	148     (0000026e) const-string         v2, 'mincont'
+	149     (00000272) invoke-interface     v1, v2, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	150     (00000278) move-result          v1
+	151     (0000027a) iget-object          v2, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	152     (0000027e) const-string         v3, 'jobtime'
+	153     (00000282) const-string         v5, '15'
+	154     (00000286) invoke-interface     v2, v3, v5, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	155     (0000028c) move-result-object   v2
+	156     (0000028e) invoke-static        v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+	157     (00000294) move-result          v2
+	158     (00000296) mul-int              v1, v1, v2
+	159     (0000029a) iget-object          v2, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->a Landroid/content/SharedPreferences;
+	160     (0000029e) const-string         v3, 'minimetime'
+	161     (000002a2) const-string         v5, '60'
+	162     (000002a6) invoke-interface     v2, v3, v5, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	163     (000002ac) move-result-object   v2
+	164     (000002ae) invoke-static        v2, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+	165     (000002b4) move-result          v2
+	166     (000002b6) if-lt                v1, v2, +31
+
+run-BB@0x2ba : 
+	167     (000002ba) const-string         v0, 'ExampleJobService'
+	168     (000002be) const-string         v1, 'screen is on'
+	169     (000002c2) invoke-static        v0, v1, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	170     (000002c8) iget-object          v0, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->b Landroid/content/SharedPreferences$Editor;
+	171     (000002cc) const-string         v1, 'mincont'
+	172     (000002d0) invoke-interface     v0, v1, v4, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	173     (000002d6) iget-object          v0, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->b Landroid/content/SharedPreferences$Editor;
+	174     (000002da) invoke-interface     v0, Landroid/content/SharedPreferences$Editor;->apply()V
+	175     (000002e0) new-instance         v0, Landroid/content/Intent;
+	176     (000002e4) iget-object          v1, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->c Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;
+	177     (000002e8) invoke-static        v1, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;->b(Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;)Landroid/content/Context;
+	178     (000002ee) move-result-object   v1
+	179     (000002f0) const-class          v2, Lcom/gamedev/realdronesimulatorgame/TransActivity;
+	180     (000002f4) invoke-direct        v0, v1, v2, Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V
+	181     (000002fa) const/high16         v1, 4096 # [2.524354896707238e-29]
+	182     (000002fe) invoke-virtual       v0, v1, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+	183     (00000304) iget-object          v1, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->c Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;
+	184     (00000308) invoke-static        v1, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;->b(Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;)Landroid/content/Context;
+	185     (0000030e) move-result-object   v1
+	186     (00000310) invoke-virtual       v1, v0, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+	187     (00000316) return-void          
+
+run-BB@0x318 : [ run-BB@0x336 run-BB@0x338 ]
+	188     (00000318) const-string         v1, 'ExampleJobService'
+	189     (0000031c) const-string         v2, 'screen is off or mintime'
+	190     (00000320) invoke-static        v1, v2, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	191     (00000326) iget-object          v1, v7, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver$1;->c Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;
+	192     (0000032a) invoke-static        v1, Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;->c(Lcom/gamedev/realdronesimulatorgame/AlarmReceiver;)Z
+	193     (00000330) move-result          v1
+	194     (00000332) if-eqz               v1, +3
+
+run-BB@0x336 : 
+	195     (00000336) return-void          
+
+run-BB@0x338 : [ run-BB@0x33c ]
+	196     (00000338) const-wide/16        v1, 5000 # [5000.0]
+
+run-BB@0x33c : [ run-BB@0x34c ]
+	197     (0000033c) invoke-static        v1, v2, Ljava/lang/Thread;->sleep(J)V
+	198     (00000342) goto                 +5
+	33c:341
+	(Ljava/lang/InterruptedException; -> 344 run-BB@0x344)
+
+run-BB@0x344 : [ run-BB@0x34c ]
+	199     (00000344) move-exception       v1
+	200     (00000346) invoke-virtual       v1, Ljava/lang/InterruptedException;->printStackTrace()V
+
+run-BB@0x34c : [ run-BB@0x20e ]
+	201     (0000034c) add-int/lit8         v0, v0, 5
+	202     (00000350) goto/16              -a1
+
+run-BB@0x354 : 
+	203     (00000354) const-string         v0, 'ExampleJobService'
+	204     (00000358) const-string         v1, 'Alarm finished'
+	205     (0000035c) invoke-static        v0, v1, Landroid/util/Log;->d(Ljava/lang/String; Ljava/lang/String;)I
+	206     (00000362) return-void          
+

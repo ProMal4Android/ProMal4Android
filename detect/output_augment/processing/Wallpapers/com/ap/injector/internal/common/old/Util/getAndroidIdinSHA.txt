@@ -1,0 +1,65 @@
+# Lcom/ap/injector/internal/common/old/Util;->getAndroidIdinSHA(Landroid/content/Context;)Ljava/lang/String; [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.content.Context
+#
+# - return:java.lang.String
+
+getAndroidIdinSHA-BB@0x0 : [ getAndroidIdinSHA-BB@0x4 getAndroidIdinSHA-BB@0xa ]
+	0       (00000000) if-nez               v8, +5
+
+getAndroidIdinSHA-BB@0x4 : [ getAndroidIdinSHA-BB@0x8 ]
+	1       (00000004) const-string         v5, ''
+
+getAndroidIdinSHA-BB@0x8 : 
+	2       (00000008) return-object        v5
+
+getAndroidIdinSHA-BB@0xa : [ getAndroidIdinSHA-BB@0x8 ]
+	3       (0000000a) invoke-virtual       v8, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	4       (00000010) move-result-object   v5
+	5       (00000012) invoke-virtual       v5, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+	6       (00000018) move-result-object   v5
+	7       (0000001a) sget-object          v6, Lcom/ap/injector/internal/common/old/Config;->ANDROID_ID Ljava/lang/String;
+	8       (0000001e) invoke-static        v5, v6, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver; Ljava/lang/String;)Ljava/lang/String;
+	9       (00000024) move-result-object   v2
+	10      (00000026) sget-object          v5, Lcom/ap/injector/internal/common/old/Util;->SHA_1 Ljava/lang/String;
+	11      (0000002a) invoke-static        v5, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+	12      (00000030) move-result-object   v0
+	13      (00000032) invoke-virtual       v2, Ljava/lang/String;->getBytes()[B
+	14      (00000038) move-result-object   v5
+	15      (0000003a) const/4              v6, 0
+	16      (0000003c) invoke-virtual       v2, Ljava/lang/String;->length()I
+	17      (00000042) move-result          v7
+	18      (00000044) invoke-virtual       v0, v5, v6, v7, Ljava/security/MessageDigest;->update([B I I)V
+	19      (0000004a) new-instance         v5, Ljava/math/BigInteger;
+	20      (0000004e) const/4              v6, 1
+	21      (00000050) invoke-virtual       v0, Ljava/security/MessageDigest;->digest()[B
+	22      (00000056) move-result-object   v7
+	23      (00000058) invoke-direct        v5, v6, v7, Ljava/math/BigInteger;-><init>(I [B)V
+	24      (0000005e) const/16             v6, 16
+	25      (00000062) invoke-virtual       v5, v6, Ljava/math/BigInteger;->toString(I)Ljava/lang/String;
+	26      (00000068) move-result-object   v5
+	27      (0000006a) goto                 -31
+	a:67
+	(Ljava/lang/NullPointerException; -> 6c getAndroidIdinSHA-BB@0x6c)
+	(Ljava/security/NoSuchAlgorithmException; -> 74 getAndroidIdinSHA-BB@0x74)
+	(Ljava/lang/Exception; -> 82 getAndroidIdinSHA-BB@0x82)
+
+getAndroidIdinSHA-BB@0x6c : [ getAndroidIdinSHA-BB@0x8 ]
+	28      (0000006c) move-exception       v1
+	29      (0000006e) sget-object          v5, Lcom/ap/injector/internal/common/old/Util;->NOT_FOUND2 Ljava/lang/String;
+	30      (00000072) goto                 -35
+
+getAndroidIdinSHA-BB@0x74 : [ getAndroidIdinSHA-BB@0x8 ]
+	31      (00000074) move-exception       v3
+	32      (00000076) invoke-virtual       v3, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
+	33      (0000007c) sget-object          v5, Lcom/ap/injector/internal/common/old/Util;->NOT_FOUND2 Ljava/lang/String;
+	34      (00000080) goto                 -3c
+
+getAndroidIdinSHA-BB@0x82 : [ getAndroidIdinSHA-BB@0x8 ]
+	35      (00000082) move-exception       v4
+	36      (00000084) invoke-virtual       v4, Ljava/lang/Exception;->printStackTrace()V
+	37      (0000008a) sget-object          v5, Lcom/ap/injector/internal/common/old/Util;->NOT_FOUND2 Ljava/lang/String;
+	38      (0000008e) goto                 -43
+

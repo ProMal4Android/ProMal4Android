@@ -1,0 +1,28 @@
+# Lcom/sun/crypto/provider/HmacMD5KeyGenerator;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x28 <init>-BB@0x38 ]
+	0       (00000000) invoke-direct        v2, Ljavax/crypto/KeyGeneratorSpi;-><init>()V
+	1       (00000006) const/4              v0, 0
+	2       (00000008) iput-object          v0, v2, Lcom/sun/crypto/provider/HmacMD5KeyGenerator;->a Ljava/security/SecureRandom;
+	3       (0000000c) const/16             v0, 64
+	4       (00000010) iput                 v0, v2, Lcom/sun/crypto/provider/HmacMD5KeyGenerator;->b I
+	5       (00000014) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	6       (0000001a) move-result-object   v0
+	7       (0000001c) invoke-static        v0, Lcom/sun/crypto/provider/SunJCE;->b(Ljava/lang/Class;)Z
+	8       (00000022) move-result          v0
+	9       (00000024) if-nez               v0, +a
+
+<init>-BB@0x28 : 
+	10      (00000028) new-instance         v0, Ljava/lang/SecurityException;
+	11      (0000002c) const-string         v1, 'The SunJCE provider may have been tampered.'
+	12      (00000030) invoke-direct        v0, v1, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+	13      (00000036) throw                v0
+
+<init>-BB@0x38 : 
+	14      (00000038) return-void          
+

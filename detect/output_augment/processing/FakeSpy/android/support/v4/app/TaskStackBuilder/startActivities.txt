@@ -1,0 +1,56 @@
+# Landroid/support/v4/app/TaskStackBuilder;->startActivities(Landroid/os/Bundle;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.os.Bundle
+#
+# - return:void
+
+startActivities-BB@0x0 : [ startActivities-BB@0x12 startActivities-BB@0x22 ]
+	0       (00000000) const/4              v4, 0
+	1       (00000002) iget-object          v2, v5, Landroid/support/v4/app/TaskStackBuilder;->mIntents Ljava/util/ArrayList;
+	2       (00000006) invoke-virtual       v2, Ljava/util/ArrayList;->isEmpty()Z
+	3       (0000000c) move-result          v2
+	4       (0000000e) if-eqz               v2, +a
+
+startActivities-BB@0x12 : 
+	5       (00000012) new-instance         v2, Ljava/lang/IllegalStateException;
+	6       (00000016) const-string         v3, 'No intents added to TaskStackBuilder; cannot startActivities'
+	7       (0000001a) invoke-direct        v2, v3, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	8       (00000020) throw                v2
+
+startActivities-BB@0x22 : [ startActivities-BB@0x72 startActivities-BB@0x9a ]
+	9       (00000022) iget-object          v2, v5, Landroid/support/v4/app/TaskStackBuilder;->mIntents Ljava/util/ArrayList;
+	10      (00000026) iget-object          v3, v5, Landroid/support/v4/app/TaskStackBuilder;->mIntents Ljava/util/ArrayList;
+	11      (0000002a) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	12      (00000030) move-result          v3
+	13      (00000032) new-array            v3, v3, [Landroid/content/Intent;
+	14      (00000036) invoke-virtual       v2, v3, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+	15      (0000003c) move-result-object   v0
+	16      (0000003e) check-cast           v0, [Landroid/content/Intent;
+	17      (00000042) new-instance         v2, Landroid/content/Intent;
+	18      (00000046) aget-object          v3, v0, v4
+	19      (0000004a) invoke-direct        v2, v3, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+	20      (00000050) const                v3, 268484608 # [2.539146038680132e-29]
+	21      (00000056) invoke-virtual       v2, v3, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+	22      (0000005c) move-result-object   v2
+	23      (0000005e) aput-object          v2, v0, v4
+	24      (00000062) iget-object          v2, v5, Landroid/support/v4/app/TaskStackBuilder;->mSourceContext Landroid/content/Context;
+	25      (00000066) invoke-static        v2, v0, v6, Landroid/support/v4/content/ContextCompat;->startActivities(Landroid/content/Context; [Landroid/content/Intent; Landroid/os/Bundle;)Z
+	26      (0000006c) move-result          v2
+	27      (0000006e) if-nez               v2, +16
+
+startActivities-BB@0x72 : [ startActivities-BB@0x9a ]
+	28      (00000072) new-instance         v1, Landroid/content/Intent;
+	29      (00000076) array-length         v2, v0
+	30      (00000078) add-int/lit8         v2, v2, -1
+	31      (0000007c) aget-object          v2, v0, v2
+	32      (00000080) invoke-direct        v1, v2, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+	33      (00000086) const/high16         v2, 4096 # [2.524354896707238e-29]
+	34      (0000008a) invoke-virtual       v1, v2, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+	35      (00000090) iget-object          v2, v5, Landroid/support/v4/app/TaskStackBuilder;->mSourceContext Landroid/content/Context;
+	36      (00000094) invoke-virtual       v2, v1, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+startActivities-BB@0x9a : 
+	37      (0000009a) return-void          
+

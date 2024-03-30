@@ -1,0 +1,30 @@
+# Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->getStartLine(I)I [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:int
+#
+# - return:int
+
+getStartLine-BB@0x0 : [ getStartLine-BB@0xc getStartLine-BB@0x12 ]
+	0       (00000000) iget                 v0, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mCachedStart I
+	1       (00000004) const/high16         v1, -32768 # [-0.0]
+	2       (00000008) if-eq                v0, v1, +5
+
+getStartLine-BB@0xc : [ getStartLine-BB@0x10 ]
+	3       (0000000c) iget                 v3, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mCachedStart I
+
+getStartLine-BB@0x10 : 
+	4       (00000010) return               v3
+
+getStartLine-BB@0x12 : [ getStartLine-BB@0x22 getStartLine-BB@0x10 ]
+	5       (00000012) iget-object          v0, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	6       (00000016) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	7       (0000001c) move-result          v0
+	8       (0000001e) if-eqz               v0, -7
+
+getStartLine-BB@0x22 : [ getStartLine-BB@0x10 ]
+	9       (00000022) invoke-virtual       v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->calculateCachedStart()V
+	10      (00000028) iget                 v3, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mCachedStart I
+	11      (0000002c) goto                 -e
+

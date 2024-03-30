@@ -1,0 +1,54 @@
+# Landroid/support/v4/media/session/MediaSessionCompatApi18;->setState(Ljava/lang/Object; I J F J)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:java.lang.Object
+# - v11:int
+# - v12:long
+# - v13:float
+# - v14:long
+#
+# - return:void
+
+setState-BB@0x0 : [ setState-BB@0x12 setState-BB@0x48 ]
+	0       (00000000) const-wide/16        v6, 0 # [0.0]
+	1       (00000004) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	2       (0000000a) move-result-wide     v0
+	3       (0000000c) const/4              v4, 3
+	4       (0000000e) if-ne                v9, v4, +1d
+
+setState-BB@0x12 : [ setState-BB@0x1a setState-BB@0x48 ]
+	5       (00000012) cmp-long             v4, v10, v6
+	6       (00000016) if-lez               v4, +19
+
+setState-BB@0x1a : [ setState-BB@0x26 setState-BB@0x46 ]
+	7       (0000001a) const-wide/16        v2, 0 # [0.0]
+	8       (0000001e) cmp-long             v4, v13, v6
+	9       (00000022) if-lez               v4, +12
+
+setState-BB@0x26 : [ setState-BB@0x34 setState-BB@0x46 ]
+	10      (00000026) sub-long             v2, v0, v13
+	11      (0000002a) const/4              v4, 0
+	12      (0000002c) cmpl-float           v4, v12, v4
+	13      (00000030) if-lez               v4, +b
+
+setState-BB@0x34 : [ setState-BB@0x40 setState-BB@0x46 ]
+	14      (00000034) const/high16         v4, 16256 # [1.0]
+	15      (00000038) cmpl-float           v4, v12, v4
+	16      (0000003c) if-eqz               v4, +5
+
+setState-BB@0x40 : [ setState-BB@0x46 ]
+	17      (00000040) long-to-float        v4, v2
+	18      (00000042) mul-float/2addr      v4, v12
+	19      (00000044) float-to-long        v2, v4
+
+setState-BB@0x46 : [ setState-BB@0x48 ]
+	20      (00000046) add-long/2addr       v10, v2
+
+setState-BB@0x48 : 
+	21      (00000048) invoke-static        v9, Landroid/support/v4/media/session/MediaSessionCompatApi14;->getRccStateFromState(I)I
+	22      (0000004e) move-result          v9
+	23      (00000050) check-cast           v8, Landroid/media/RemoteControlClient;
+	24      (00000054) invoke-virtual       v8, v9, v10, v11, v12, Landroid/media/RemoteControlClient;->setPlaybackState(I J F)V
+	25      (0000005a) return-void          
+

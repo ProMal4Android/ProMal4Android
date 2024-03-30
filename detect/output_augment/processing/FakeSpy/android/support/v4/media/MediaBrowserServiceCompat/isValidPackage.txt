@@ -1,0 +1,41 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat;->isValidPackage(Ljava/lang/String; I)Z [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:java.lang.String
+# - v8:int
+#
+# - return:boolean
+
+isValidPackage-BB@0x0 : [ isValidPackage-BB@0x6 isValidPackage-BB@0x8 ]
+	0       (00000000) const/4              v4, 0
+	1       (00000002) if-nez               v7, +3
+
+isValidPackage-BB@0x6 : 
+	2       (00000006) return               v4
+
+isValidPackage-BB@0x8 : [ isValidPackage-BB@0x1c ]
+	3       (00000008) invoke-virtual       v6, Landroid/support/v4/media/MediaBrowserServiceCompat;->getPackageManager()Landroid/content/pm/PackageManager;
+	4       (0000000e) move-result-object   v3
+	5       (00000010) invoke-virtual       v3, v8, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+	6       (00000016) move-result-object   v2
+	7       (00000018) array-length         v0, v2
+	8       (0000001a) const/4              v1, 0
+
+isValidPackage-BB@0x1c : [ isValidPackage-BB@0x20 isValidPackage-BB@0x6 ]
+	9       (0000001c) if-ge                v1, v0, -b
+
+isValidPackage-BB@0x20 : [ isValidPackage-BB@0x30 isValidPackage-BB@0x34 ]
+	10      (00000020) aget-object          v5, v2, v1
+	11      (00000024) invoke-virtual       v5, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	12      (0000002a) move-result          v5
+	13      (0000002c) if-eqz               v5, +4
+
+isValidPackage-BB@0x30 : [ isValidPackage-BB@0x6 ]
+	14      (00000030) const/4              v4, 1
+	15      (00000032) goto                 -16
+
+isValidPackage-BB@0x34 : [ isValidPackage-BB@0x1c ]
+	16      (00000034) add-int/lit8         v1, v1, 1
+	17      (00000038) goto                 -e
+

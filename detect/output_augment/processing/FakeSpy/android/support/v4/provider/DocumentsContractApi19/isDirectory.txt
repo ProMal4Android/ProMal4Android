@@ -1,0 +1,17 @@
+# Landroid/support/v4/provider/DocumentsContractApi19;->isDirectory(Landroid/content/Context; Landroid/net/Uri;)Z [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.content.Context
+# - v3:android.net.Uri
+#
+# - return:boolean
+
+isDirectory-BB@0x0 : 
+	0       (00000000) const-string         v0, 'vnd.android.document/directory'
+	1       (00000004) invoke-static        v2, v3, Landroid/support/v4/provider/DocumentsContractApi19;->getRawType(Landroid/content/Context; Landroid/net/Uri;)Ljava/lang/String;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) invoke-virtual       v0, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	4       (00000012) move-result          v0
+	5       (00000014) return               v0
+

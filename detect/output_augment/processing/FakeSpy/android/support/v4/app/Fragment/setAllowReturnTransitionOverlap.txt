@@ -1,0 +1,14 @@
+# Landroid/support/v4/app/Fragment;->setAllowReturnTransitionOverlap(Z)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:boolean
+#
+# - return:void
+
+setAllowReturnTransitionOverlap-BB@0x0 : 
+	0       (00000000) invoke-static        v2, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	1       (00000006) move-result-object   v0
+	2       (00000008) iput-object          v0, v1, Landroid/support/v4/app/Fragment;->mAllowReturnTransitionOverlap Ljava/lang/Boolean;
+	3       (0000000c) return-void          
+

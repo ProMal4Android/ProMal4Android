@@ -1,0 +1,77 @@
+# Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-><init>(Landroid/content/Context; Ljava/lang/String; Landroid/content/ComponentName; Landroid/app/PendingIntent;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.content.Context
+# - v5:java.lang.String
+# - v6:android.content.ComponentName
+# - v7:android.app.PendingIntent
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x46 <init>-BB@0x56 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) invoke-direct        v3, Ljava/lang/Object;-><init>()V
+	2       (00000008) new-instance         v0, Ljava/lang/Object;
+	3       (0000000c) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	4       (00000012) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mLock Ljava/lang/Object;
+	5       (00000016) new-instance         v0, Landroid/os/RemoteCallbackList;
+	6       (0000001a) invoke-direct        v0, Landroid/os/RemoteCallbackList;-><init>()V
+	7       (00000020) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mControllerCallbacks Landroid/os/RemoteCallbackList;
+	8       (00000024) iput-boolean         v2, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mDestroyed Z
+	9       (00000028) iput-boolean         v2, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mIsActive Z
+	10      (0000002c) iput-boolean         v2, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mIsRccRegistered Z
+	11      (00000030) iput-boolean         v2, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mIsMbrRegistered Z
+	12      (00000034) new-instance         v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;
+	13      (00000038) invoke-direct        v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$1;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;)V
+	14      (0000003e) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mVolumeCallback Landroid/support/v4/media/VolumeProviderCompat$Callback;
+	15      (00000042) if-nez               v6, +a
+
+<init>-BB@0x46 : 
+	16      (00000046) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	17      (0000004a) const-string         v1, 'MediaButtonReceiver component may not be null.'
+	18      (0000004e) invoke-direct        v0, v1, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	19      (00000054) throw                v0
+
+<init>-BB@0x56 : [ <init>-BB@0xc2 <init>-BB@0xd0 ]
+	20      (00000056) iput-object          v4, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mContext Landroid/content/Context;
+	21      (0000005a) invoke-virtual       v4, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	22      (00000060) move-result-object   v0
+	23      (00000062) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mPackageName Ljava/lang/String;
+	24      (00000066) const-string         v0, 'audio'
+	25      (0000006a) invoke-virtual       v4, v0, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	26      (00000070) move-result-object   v0
+	27      (00000072) check-cast           v0, Landroid/media/AudioManager;
+	28      (00000076) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mAudioManager Landroid/media/AudioManager;
+	29      (0000007a) iput-object          v5, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mTag Ljava/lang/String;
+	30      (0000007e) iput-object          v6, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mComponentName Landroid/content/ComponentName;
+	31      (00000082) iput-object          v7, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mMediaButtonEventReceiver Landroid/app/PendingIntent;
+	32      (00000086) new-instance         v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;
+	33      (0000008a) invoke-direct        v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;)V
+	34      (00000090) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mStub Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;
+	35      (00000094) new-instance         v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
+	36      (00000098) iget-object          v1, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mStub Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;
+	37      (0000009c) invoke-direct        v0, v1, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;)V
+	38      (000000a2) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mToken Landroid/support/v4/media/session/MediaSessionCompat$Token;
+	39      (000000a6) iput                 v2, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRatingType I
+	40      (000000aa) const/4              v0, 1
+	41      (000000ac) iput                 v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mVolumeType I
+	42      (000000b0) const/4              v0, 3
+	43      (000000b2) iput                 v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mLocalStream I
+	44      (000000b6) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	45      (000000ba) const/16             v1, 14
+	46      (000000be) if-lt                v0, v1, +9
+
+<init>-BB@0xc2 : [ <init>-BB@0xce ]
+	47      (000000c2) invoke-static        v7, Landroid/support/v4/media/session/MediaSessionCompatApi14;->createRemoteControlClient(Landroid/app/PendingIntent;)Ljava/lang/Object;
+	48      (000000c8) move-result-object   v0
+	49      (000000ca) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRccObj Ljava/lang/Object;
+
+<init>-BB@0xce : 
+	50      (000000ce) return-void          
+
+<init>-BB@0xd0 : [ <init>-BB@0xce ]
+	51      (000000d0) const/4              v0, 0
+	52      (000000d2) iput-object          v0, v3, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mRccObj Ljava/lang/Object;
+	53      (000000d6) goto                 -4
+

@@ -1,0 +1,96 @@
+# Landroid/support/design/widget/CoordinatorLayout;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.content.Context
+# - v8:android.util.AttributeSet
+# - v9:int
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0xa8 <init>-BB@0xea ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) invoke-direct        v6, v7, v8, v9, Landroid/view/ViewGroup;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	2       (00000008) new-instance         v1, Landroid/support/design/widget/n;
+	3       (0000000c) invoke-direct        v1, v6, Landroid/support/design/widget/n;-><init>(Landroid/support/design/widget/CoordinatorLayout;)V
+	4       (00000012) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->d Ljava/util/Comparator;
+	5       (00000016) new-instance         v1, Ljava/util/ArrayList;
+	6       (0000001a) invoke-direct        v1, Ljava/util/ArrayList;-><init>()V
+	7       (00000020) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->g Ljava/util/List;
+	8       (00000024) new-instance         v1, Ljava/util/ArrayList;
+	9       (00000028) invoke-direct        v1, Ljava/util/ArrayList;-><init>()V
+	10      (0000002e) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->h Ljava/util/List;
+	11      (00000032) new-instance         v1, Ljava/util/ArrayList;
+	12      (00000036) invoke-direct        v1, Ljava/util/ArrayList;-><init>()V
+	13      (0000003c) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->i Ljava/util/List;
+	14      (00000040) new-instance         v1, Landroid/graphics/Rect;
+	15      (00000044) invoke-direct        v1, Landroid/graphics/Rect;-><init>()V
+	16      (0000004a) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->j Landroid/graphics/Rect;
+	17      (0000004e) new-instance         v1, Landroid/graphics/Rect;
+	18      (00000052) invoke-direct        v1, Landroid/graphics/Rect;-><init>()V
+	19      (00000058) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->k Landroid/graphics/Rect;
+	20      (0000005c) new-instance         v1, Landroid/graphics/Rect;
+	21      (00000060) invoke-direct        v1, Landroid/graphics/Rect;-><init>()V
+	22      (00000066) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->l Landroid/graphics/Rect;
+	23      (0000006a) const/4              v1, 2
+	24      (0000006c) new-array            v1, v1, [I
+	25      (00000070) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->m [I
+	26      (00000074) new-instance         v1, Landroid/support/v4/view/bm;
+	27      (00000078) invoke-direct        v1, v6, Landroid/support/v4/view/bm;-><init>(Landroid/view/ViewGroup;)V
+	28      (0000007e) iput-object          v1, v6, Landroid/support/design/widget/CoordinatorLayout;->z Landroid/support/v4/view/bm;
+	29      (00000082) invoke-static        v7, Landroid/support/design/widget/ch;->a(Landroid/content/Context;)V
+	30      (00000088) sget-object          v1, Landroid/support/design/k;->CoordinatorLayout [I
+	31      (0000008c) sget                 v2, Landroid/support/design/j;->Widget_Design_CoordinatorLayout I
+	32      (00000090) invoke-virtual       v7, v8, v1, v9, v2, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I I I)Landroid/content/res/TypedArray;
+	33      (00000096) move-result-object   v1
+	34      (00000098) sget                 v2, Landroid/support/design/k;->CoordinatorLayout_keylines I
+	35      (0000009c) invoke-virtual       v1, v2, v0, Landroid/content/res/TypedArray;->getResourceId(I I)I
+	36      (000000a2) move-result          v2
+	37      (000000a4) if-eqz               v2, +23
+
+<init>-BB@0xa8 : [ <init>-BB@0xce ]
+	38      (000000a8) invoke-virtual       v7, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	39      (000000ae) move-result-object   v3
+	40      (000000b0) invoke-virtual       v3, v2, Landroid/content/res/Resources;->getIntArray(I)[I
+	41      (000000b6) move-result-object   v2
+	42      (000000b8) iput-object          v2, v6, Landroid/support/design/widget/CoordinatorLayout;->p [I
+	43      (000000bc) invoke-virtual       v3, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	44      (000000c2) move-result-object   v2
+	45      (000000c4) iget                 v2, v2, Landroid/util/DisplayMetrics;->density F
+	46      (000000c8) iget-object          v3, v6, Landroid/support/design/widget/CoordinatorLayout;->p [I
+	47      (000000cc) array-length         v3, v3
+
+<init>-BB@0xce : [ <init>-BB@0xd2 <init>-BB@0xea ]
+	48      (000000ce) if-ge                v0, v3, +e
+
+<init>-BB@0xd2 : [ <init>-BB@0xce ]
+	49      (000000d2) iget-object          v4, v6, Landroid/support/design/widget/CoordinatorLayout;->p [I
+	50      (000000d6) aget                 v5, v4, v0
+	51      (000000da) int-to-float         v5, v5
+	52      (000000dc) mul-float/2addr      v5, v2
+	53      (000000de) float-to-int         v5, v5
+	54      (000000e0) aput                 v5, v4, v0
+	55      (000000e4) add-int/lit8         v0, v0, 1
+	56      (000000e8) goto                 -d
+
+<init>-BB@0xea : [ <init>-BB@0x108 <init>-BB@0x11c ]
+	57      (000000ea) sget                 v0, Landroid/support/design/k;->CoordinatorLayout_statusBarBackground I
+	58      (000000ee) invoke-virtual       v1, v0, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+	59      (000000f4) move-result-object   v0
+	60      (000000f6) iput-object          v0, v6, Landroid/support/design/widget/CoordinatorLayout;->x Landroid/graphics/drawable/Drawable;
+	61      (000000fa) invoke-virtual       v1, Landroid/content/res/TypedArray;->recycle()V
+	62      (00000100) sget-object          v0, Landroid/support/design/widget/CoordinatorLayout;->f Landroid/support/design/widget/v;
+	63      (00000104) if-eqz               v0, +c
+
+<init>-BB@0x108 : [ <init>-BB@0x11c ]
+	64      (00000108) sget-object          v0, Landroid/support/design/widget/CoordinatorLayout;->f Landroid/support/design/widget/v;
+	65      (0000010c) new-instance         v1, Landroid/support/design/widget/o;
+	66      (00000110) invoke-direct        v1, v6, Landroid/support/design/widget/o;-><init>(Landroid/support/design/widget/CoordinatorLayout;)V
+	67      (00000116) invoke-interface     v0, v6, v1, Landroid/support/design/widget/v;->a(Landroid/view/View; Landroid/support/v4/view/bn;)V
+
+<init>-BB@0x11c : 
+	68      (0000011c) new-instance         v0, Landroid/support/design/widget/q;
+	69      (00000120) invoke-direct        v0, v6, Landroid/support/design/widget/q;-><init>(Landroid/support/design/widget/CoordinatorLayout;)V
+	70      (00000126) invoke-super         v6, v0, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+	71      (0000012c) return-void          
+

@@ -1,0 +1,47 @@
+# Landroid/support/v4/widget/DrawerLayout;->isDrawerOpen(Landroid/view/View;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.view.View
+#
+# - return:boolean
+
+isDrawerOpen-BB@0x0 : [ isDrawerOpen-BB@0xe isDrawerOpen-BB@0x4c ]
+	0       (00000000) const/4              v1, 1
+	1       (00000002) invoke-virtual       v4, v5, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
+	2       (00000008) move-result          v2
+	3       (0000000a) if-nez               v2, +21
+
+isDrawerOpen-BB@0xe : 
+	4       (0000000e) new-instance         v1, Ljava/lang/IllegalArgumentException;
+	5       (00000012) new-instance         v2, Ljava/lang/StringBuilder;
+	6       (00000016) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	7       (0000001c) const-string         v3, 'View '
+	8       (00000020) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000026) move-result-object   v2
+	10      (00000028) invoke-virtual       v2, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	11      (0000002e) move-result-object   v2
+	12      (00000030) const-string         v3, ' is not a drawer'
+	13      (00000034) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (0000003a) move-result-object   v2
+	15      (0000003c) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	16      (00000042) move-result-object   v2
+	17      (00000044) invoke-direct        v1, v2, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	18      (0000004a) throw                v1
+
+isDrawerOpen-BB@0x4c : [ isDrawerOpen-BB@0x68 isDrawerOpen-BB@0x6a ]
+	19      (0000004c) invoke-virtual       v5, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	20      (00000052) move-result-object   v0
+	21      (00000054) check-cast           v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
+	22      (00000058) invoke-static        v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$100(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)I
+	23      (0000005e) move-result          v2
+	24      (00000060) and-int/lit8         v2, v2, 1
+	25      (00000064) if-ne                v2, v1, +3
+
+isDrawerOpen-BB@0x68 : 
+	26      (00000068) return               v1
+
+isDrawerOpen-BB@0x6a : [ isDrawerOpen-BB@0x68 ]
+	27      (0000006a) const/4              v1, 0
+	28      (0000006c) goto                 -2
+

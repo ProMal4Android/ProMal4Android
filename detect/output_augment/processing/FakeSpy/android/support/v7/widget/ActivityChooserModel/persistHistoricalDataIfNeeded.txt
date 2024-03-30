@@ -1,0 +1,48 @@
+# Landroid/support/v7/widget/ActivityChooserModel;->persistHistoricalDataIfNeeded()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:void
+
+persistHistoricalDataIfNeeded-BB@0x0 : [ persistHistoricalDataIfNeeded-BB@0xa persistHistoricalDataIfNeeded-BB@0x1a ]
+	0       (00000000) const/4              v4, 0
+	1       (00000002) iget-boolean         v0, v5, Landroid/support/v7/widget/ActivityChooserModel;->mReadShareHistoryCalled Z
+	2       (00000006) if-nez               v0, +a
+
+persistHistoricalDataIfNeeded-BB@0xa : 
+	3       (0000000a) new-instance         v0, Ljava/lang/IllegalStateException;
+	4       (0000000e) const-string         v1, 'No preceding call to #readHistoricalData'
+	5       (00000012) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	6       (00000018) throw                v0
+
+persistHistoricalDataIfNeeded-BB@0x1a : [ persistHistoricalDataIfNeeded-BB@0x22 persistHistoricalDataIfNeeded-BB@0x24 ]
+	7       (0000001a) iget-boolean         v0, v5, Landroid/support/v7/widget/ActivityChooserModel;->mHistoricalRecordsChanged Z
+	8       (0000001e) if-nez               v0, +3
+
+persistHistoricalDataIfNeeded-BB@0x22 : 
+	9       (00000022) return-void          
+
+persistHistoricalDataIfNeeded-BB@0x24 : [ persistHistoricalDataIfNeeded-BB@0x38 persistHistoricalDataIfNeeded-BB@0x22 ]
+	10      (00000024) iput-boolean         v4, v5, Landroid/support/v7/widget/ActivityChooserModel;->mHistoricalRecordsChanged Z
+	11      (00000028) iget-object          v0, v5, Landroid/support/v7/widget/ActivityChooserModel;->mHistoryFileName Ljava/lang/String;
+	12      (0000002c) invoke-static        v0, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	13      (00000032) move-result          v0
+	14      (00000034) if-nez               v0, -9
+
+persistHistoricalDataIfNeeded-BB@0x38 : [ persistHistoricalDataIfNeeded-BB@0x22 ]
+	15      (00000038) new-instance         v0, Landroid/support/v7/widget/ActivityChooserModel$PersistHistoryAsyncTask;
+	16      (0000003c) const/4              v1, 0
+	17      (0000003e) invoke-direct        v0, v5, v1, Landroid/support/v7/widget/ActivityChooserModel$PersistHistoryAsyncTask;-><init>(Landroid/support/v7/widget/ActivityChooserModel; Landroid/support/v7/widget/ActivityChooserModel$1;)V
+	18      (00000044) const/4              v1, 2
+	19      (00000046) new-array            v1, v1, [Ljava/lang/Object;
+	20      (0000004a) new-instance         v2, Ljava/util/ArrayList;
+	21      (0000004e) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserModel;->mHistoricalRecords Ljava/util/List;
+	22      (00000052) invoke-direct        v2, v3, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+	23      (00000058) aput-object          v2, v1, v4
+	24      (0000005c) const/4              v2, 1
+	25      (0000005e) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserModel;->mHistoryFileName Ljava/lang/String;
+	26      (00000062) aput-object          v3, v1, v2
+	27      (00000066) invoke-static        v0, v1, Landroid/support/v4/os/AsyncTaskCompat;->executeParallel(Landroid/os/AsyncTask; [Ljava/lang/Object;)Landroid/os/AsyncTask;
+	28      (0000006c) goto                 -25
+

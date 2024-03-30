@@ -1,0 +1,184 @@
+# Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->update()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v15
+#
+# - return:void
+
+update-BB@0x0 : [ update-BB@0x1e update-BB@0x72 ]
+	0       (00000000) const/16             v14, 16
+	1       (00000004) const/16             v11, 8
+	2       (00000008) const/4              v13, -2
+	3       (0000000a) const/4              v9, 0
+	4       (0000000c) const/4              v12, 0
+	5       (0000000e) iget-object          v6, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTab Landroid/support/v7/app/ActionBar$Tab;
+	6       (00000012) invoke-virtual       v6, Landroid/support/v7/app/ActionBar$Tab;->getCustomView()Landroid/view/View;
+	7       (00000018) move-result-object   v0
+	8       (0000001a) if-eqz               v0, +2c
+
+update-BB@0x1e : [ update-BB@0x2a update-BB@0x3e ]
+	9       (0000001e) invoke-virtual       v0, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+	10      (00000024) move-result-object   v1
+	11      (00000026) if-eq                v1, v15, +c
+
+update-BB@0x2a : [ update-BB@0x2e update-BB@0x38 ]
+	12      (0000002a) if-eqz               v1, +7
+
+update-BB@0x2e : [ update-BB@0x38 ]
+	13      (0000002e) check-cast           v1, Landroid/view/ViewGroup;
+	14      (00000032) invoke-virtual       v1, v0, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+update-BB@0x38 : [ update-BB@0x3e ]
+	15      (00000038) invoke-virtual       v15, v0, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->addView(Landroid/view/View;)V
+
+update-BB@0x3e : [ update-BB@0x4a update-BB@0x54 ]
+	16      (0000003e) iput-object          v0, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mCustomView Landroid/view/View;
+	17      (00000042) iget-object          v9, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+	18      (00000046) if-eqz               v9, +7
+
+update-BB@0x4a : [ update-BB@0x54 ]
+	19      (0000004a) iget-object          v9, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+	20      (0000004e) invoke-virtual       v9, v11, Landroid/widget/TextView;->setVisibility(I)V
+
+update-BB@0x54 : [ update-BB@0x5c update-BB@0x70 ]
+	21      (00000054) iget-object          v9, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	22      (00000058) if-eqz               v9, +c
+
+update-BB@0x5c : [ update-BB@0x70 ]
+	23      (0000005c) iget-object          v9, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	24      (00000060) invoke-virtual       v9, v11, Landroid/widget/ImageView;->setVisibility(I)V
+	25      (00000066) iget-object          v9, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	26      (0000006a) invoke-virtual       v9, v12, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+update-BB@0x70 : 
+	27      (00000070) return-void          
+
+update-BB@0x72 : [ update-BB@0x7a update-BB@0x88 ]
+	28      (00000072) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mCustomView Landroid/view/View;
+	29      (00000076) if-eqz               v10, +9
+
+update-BB@0x7a : [ update-BB@0x88 ]
+	30      (0000007a) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mCustomView Landroid/view/View;
+	31      (0000007e) invoke-virtual       v15, v10, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->removeView(Landroid/view/View;)V
+	32      (00000084) iput-object          v12, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mCustomView Landroid/view/View;
+
+update-BB@0x88 : [ update-BB@0x9c update-BB@0x190 ]
+	33      (00000088) invoke-virtual       v6, Landroid/support/v7/app/ActionBar$Tab;->getIcon()Landroid/graphics/drawable/Drawable;
+	34      (0000008e) move-result-object   v3
+	35      (00000090) invoke-virtual       v6, Landroid/support/v7/app/ActionBar$Tab;->getText()Ljava/lang/CharSequence;
+	36      (00000096) move-result-object   v7
+	37      (00000098) if-eqz               v3, +7c
+
+update-BB@0x9c : [ update-BB@0xa4 update-BB@0xd4 ]
+	38      (0000009c) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	39      (000000a0) if-nez               v10, +1a
+
+update-BB@0xa4 : [ update-BB@0xd4 ]
+	40      (000000a4) new-instance         v4, Landroid/widget/ImageView;
+	41      (000000a8) invoke-virtual       v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->getContext()Landroid/content/Context;
+	42      (000000ae) move-result-object   v10
+	43      (000000b0) invoke-direct        v4, v10, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+	44      (000000b6) new-instance         v5, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;
+	45      (000000ba) invoke-direct        v5, v13, v13, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;-><init>(I I)V
+	46      (000000c0) iput                 v14, v5, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->gravity I
+	47      (000000c4) invoke-virtual       v4, v5, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+	48      (000000ca) invoke-virtual       v15, v4, v9, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->addView(Landroid/view/View; I)V
+	49      (000000d0) iput-object          v4, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+
+update-BB@0xd4 : [ update-BB@0xe8 ]
+	50      (000000d4) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	51      (000000d8) invoke-virtual       v10, v3, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	52      (000000de) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	53      (000000e2) invoke-virtual       v10, v9, Landroid/widget/ImageView;->setVisibility(I)V
+
+update-BB@0xe8 : [ update-BB@0xf4 update-BB@0x1ae ]
+	54      (000000e8) invoke-static        v7, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	55      (000000ee) move-result          v10
+	56      (000000f0) if-nez               v10, +5f
+
+update-BB@0xf4 : [ update-BB@0xf6 ]
+	57      (000000f4) const/4              v2, 1
+
+update-BB@0xf6 : [ update-BB@0xfa update-BB@0x1b2 ]
+	58      (000000f6) if-eqz               v2, +5e
+
+update-BB@0xfa : [ update-BB@0x102 update-BB@0x140 ]
+	59      (000000fa) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+	60      (000000fe) if-nez               v10, +21
+
+update-BB@0x102 : [ update-BB@0x140 ]
+	61      (00000102) new-instance         v8, Landroid/support/v7/widget/AppCompatTextView;
+	62      (00000106) invoke-virtual       v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->getContext()Landroid/content/Context;
+	63      (0000010c) move-result-object   v10
+	64      (0000010e) sget                 v11, Landroid/support/v7/appcompat/R$attr;->actionBarTabTextStyle I
+	65      (00000112) invoke-direct        v8, v10, v12, v11, Landroid/support/v7/widget/AppCompatTextView;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	66      (00000118) sget-object          v10, Landroid/text/TextUtils$TruncateAt;->END Landroid/text/TextUtils$TruncateAt;
+	67      (0000011c) invoke-virtual       v8, v10, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+	68      (00000122) new-instance         v5, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;
+	69      (00000126) invoke-direct        v5, v13, v13, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;-><init>(I I)V
+	70      (0000012c) iput                 v14, v5, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;->gravity I
+	71      (00000130) invoke-virtual       v8, v5, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+	72      (00000136) invoke-virtual       v15, v8, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->addView(Landroid/view/View;)V
+	73      (0000013c) iput-object          v8, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+
+update-BB@0x140 : [ update-BB@0x154 ]
+	74      (00000140) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+	75      (00000144) invoke-virtual       v10, v7, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	76      (0000014a) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+	77      (0000014e) invoke-virtual       v10, v9, Landroid/widget/TextView;->setVisibility(I)V
+
+update-BB@0x154 : [ update-BB@0x15c update-BB@0x16e ]
+	78      (00000154) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	79      (00000158) if-eqz               v10, +b
+
+update-BB@0x15c : [ update-BB@0x16e ]
+	80      (0000015c) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	81      (00000160) invoke-virtual       v6, Landroid/support/v7/app/ActionBar$Tab;->getContentDescription()Ljava/lang/CharSequence;
+	82      (00000166) move-result-object   v11
+	83      (00000168) invoke-virtual       v10, v11, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+update-BB@0x16e : [ update-BB@0x172 update-BB@0x1d0 ]
+	84      (0000016e) if-nez               v2, +31
+
+update-BB@0x172 : [ update-BB@0x186 update-BB@0x1d0 ]
+	85      (00000172) invoke-virtual       v6, Landroid/support/v7/app/ActionBar$Tab;->getContentDescription()Ljava/lang/CharSequence;
+	86      (00000178) move-result-object   v10
+	87      (0000017a) invoke-static        v10, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	88      (00000180) move-result          v10
+	89      (00000182) if-nez               v10, +27
+
+update-BB@0x186 : [ update-BB@0x70 ]
+	90      (00000186) invoke-virtual       v15, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+	91      (0000018c) goto/16              -8e
+
+update-BB@0x190 : [ update-BB@0x198 update-BB@0xe8 ]
+	92      (00000190) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	93      (00000194) if-eqz               v10, -56
+
+update-BB@0x198 : [ update-BB@0xe8 ]
+	94      (00000198) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	95      (0000019c) invoke-virtual       v10, v11, Landroid/widget/ImageView;->setVisibility(I)V
+	96      (000001a2) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mIconView Landroid/widget/ImageView;
+	97      (000001a6) invoke-virtual       v10, v12, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	98      (000001ac) goto                 -62
+
+update-BB@0x1ae : [ update-BB@0xf6 ]
+	99      (000001ae) move                 v2, v9
+	100     (000001b0) goto                 -5d
+
+update-BB@0x1b2 : [ update-BB@0x1ba update-BB@0x154 ]
+	101     (000001b2) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+	102     (000001b6) if-eqz               v10, -31
+
+update-BB@0x1ba : [ update-BB@0x154 ]
+	103     (000001ba) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+	104     (000001be) invoke-virtual       v10, v11, Landroid/widget/TextView;->setVisibility(I)V
+	105     (000001c4) iget-object          v10, v15, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->mTextView Landroid/widget/TextView;
+	106     (000001c8) invoke-virtual       v10, v12, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	107     (000001ce) goto                 -3d
+
+update-BB@0x1d0 : [ update-BB@0x70 ]
+	108     (000001d0) invoke-virtual       v15, v12, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+	109     (000001d6) invoke-virtual       v15, v9, Landroid/support/v7/widget/ScrollingTabContainerView$TabView;->setLongClickable(Z)V
+	110     (000001dc) goto/16              -b6
+

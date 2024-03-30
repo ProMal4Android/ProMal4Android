@@ -1,0 +1,35 @@
+# Landroid/support/v7/widget/ActivityChooserModel;->readHistoricalDataIfNeeded()Z [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:boolean
+
+readHistoricalDataIfNeeded-BB@0x0 : [ readHistoricalDataIfNeeded-BB@0xc readHistoricalDataIfNeeded-BB@0x34 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) const/4              v1, 0
+	2       (00000004) iget-boolean         v2, v3, Landroid/support/v7/widget/ActivityChooserModel;->mCanReadHistoricalData Z
+	3       (00000008) if-eqz               v2, +16
+
+readHistoricalDataIfNeeded-BB@0xc : [ readHistoricalDataIfNeeded-BB@0x14 readHistoricalDataIfNeeded-BB@0x34 ]
+	4       (0000000c) iget-boolean         v2, v3, Landroid/support/v7/widget/ActivityChooserModel;->mHistoricalRecordsChanged Z
+	5       (00000010) if-eqz               v2, +12
+
+readHistoricalDataIfNeeded-BB@0x14 : [ readHistoricalDataIfNeeded-BB@0x24 readHistoricalDataIfNeeded-BB@0x34 ]
+	6       (00000014) iget-object          v2, v3, Landroid/support/v7/widget/ActivityChooserModel;->mHistoryFileName Ljava/lang/String;
+	7       (00000018) invoke-static        v2, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	8       (0000001e) move-result          v2
+	9       (00000020) if-nez               v2, +a
+
+readHistoricalDataIfNeeded-BB@0x24 : [ readHistoricalDataIfNeeded-BB@0x32 ]
+	10      (00000024) iput-boolean         v1, v3, Landroid/support/v7/widget/ActivityChooserModel;->mCanReadHistoricalData Z
+	11      (00000028) iput-boolean         v0, v3, Landroid/support/v7/widget/ActivityChooserModel;->mReadShareHistoryCalled Z
+	12      (0000002c) invoke-direct        v3, Landroid/support/v7/widget/ActivityChooserModel;->readHistoricalDataImpl()V
+
+readHistoricalDataIfNeeded-BB@0x32 : 
+	13      (00000032) return               v0
+
+readHistoricalDataIfNeeded-BB@0x34 : [ readHistoricalDataIfNeeded-BB@0x32 ]
+	14      (00000034) move                 v0, v1
+	15      (00000036) goto                 -2
+

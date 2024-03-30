@@ -1,0 +1,28 @@
+# Landroid/support/v4/view/PagerTitleStripIcs$SingleLineAllCapsTransform;->getTransformation(Ljava/lang/CharSequence; Landroid/view/View;)Ljava/lang/CharSequence; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.CharSequence
+# - v4:android.view.View
+#
+# - return:java.lang.CharSequence
+
+getTransformation-BB@0x0 : [ getTransformation-BB@0xc getTransformation-BB@0x22 ]
+	0       (00000000) invoke-super         v2, v3, v4, Landroid/text/method/SingleLineTransformationMethod;->getTransformation(Ljava/lang/CharSequence; Landroid/view/View;)Ljava/lang/CharSequence;
+	1       (00000006) move-result-object   v3
+	2       (00000008) if-eqz               v3, +d
+
+getTransformation-BB@0xc : [ getTransformation-BB@0x20 ]
+	3       (0000000c) invoke-interface     v3, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+	4       (00000012) move-result-object   v0
+	5       (00000014) iget-object          v1, v2, Landroid/support/v4/view/PagerTitleStripIcs$SingleLineAllCapsTransform;->mLocale Ljava/util/Locale;
+	6       (00000018) invoke-virtual       v0, v1, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+	7       (0000001e) move-result-object   v0
+
+getTransformation-BB@0x20 : 
+	8       (00000020) return-object        v0
+
+getTransformation-BB@0x22 : [ getTransformation-BB@0x20 ]
+	9       (00000022) const/4              v0, 0
+	10      (00000024) goto                 -2
+

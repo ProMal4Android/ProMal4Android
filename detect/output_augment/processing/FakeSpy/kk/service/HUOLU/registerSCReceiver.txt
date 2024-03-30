@@ -1,0 +1,20 @@
+# Lkk/service/HUOLU;->registerSCReceiver()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+registerSCReceiver-BB@0x0 : 
+	0       (00000000) new-instance         v0, Landroid/content/IntentFilter;
+	1       (00000004) invoke-direct        v0, Landroid/content/IntentFilter;-><init>()V
+	2       (0000000a) const-string         v1, 'android.intent.action.USER_PRESENT'
+	3       (0000000e) invoke-virtual       v0, v1, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+	4       (00000014) const-string         v1, 'android.intent.action.SCREEN_ON'
+	5       (00000018) invoke-virtual       v0, v1, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+	6       (0000001e) const-string         v1, 'android.intent.action.SCREEN_OFF'
+	7       (00000022) invoke-virtual       v0, v1, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+	8       (00000028) iget-object          v1, v2, Lkk/service/HUOLU;->SCReceiver Landroid/content/BroadcastReceiver;
+	9       (0000002c) invoke-virtual       v2, v1, v0, Lkk/service/HUOLU;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;
+	10      (00000032) return-void          
+

@@ -1,0 +1,128 @@
+# Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-><init>(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup; Landroid/support/v4/util/ArrayMap;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.support.graphics.drawable.VectorDrawableCompat$VGroup
+# - v10:android.support.v4.util.ArrayMap
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0xb0 <init>-BB@0xba ]
+	0       (00000000) const/high16         v7, 16256 # [1.0]
+	1       (00000004) const/4              v6, 0
+	2       (00000006) invoke-direct        v8, Ljava/lang/Object;-><init>()V
+	3       (0000000c) new-instance         v5, Landroid/graphics/Matrix;
+	4       (00000010) invoke-direct        v5, Landroid/graphics/Matrix;-><init>()V
+	5       (00000016) iput-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mStackedMatrix Landroid/graphics/Matrix;
+	6       (0000001a) new-instance         v5, Ljava/util/ArrayList;
+	7       (0000001e) invoke-direct        v5, Ljava/util/ArrayList;-><init>()V
+	8       (00000024) iput-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mChildren Ljava/util/ArrayList;
+	9       (00000028) iput                 v6, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mRotate F
+	10      (0000002c) iput                 v6, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mPivotX F
+	11      (00000030) iput                 v6, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mPivotY F
+	12      (00000034) iput                 v7, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mScaleX F
+	13      (00000038) iput                 v7, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mScaleY F
+	14      (0000003c) iput                 v6, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mTranslateX F
+	15      (00000040) iput                 v6, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mTranslateY F
+	16      (00000044) new-instance         v5, Landroid/graphics/Matrix;
+	17      (00000048) invoke-direct        v5, Landroid/graphics/Matrix;-><init>()V
+	18      (0000004e) iput-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mLocalMatrix Landroid/graphics/Matrix;
+	19      (00000052) const/4              v5, 0
+	20      (00000054) iput-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mGroupName Ljava/lang/String;
+	21      (00000058) iget                 v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mRotate F
+	22      (0000005c) iput                 v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mRotate F
+	23      (00000060) iget                 v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mPivotX F
+	24      (00000064) iput                 v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mPivotX F
+	25      (00000068) iget                 v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mPivotY F
+	26      (0000006c) iput                 v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mPivotY F
+	27      (00000070) iget                 v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mScaleX F
+	28      (00000074) iput                 v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mScaleX F
+	29      (00000078) iget                 v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mScaleY F
+	30      (0000007c) iput                 v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mScaleY F
+	31      (00000080) iget                 v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mTranslateX F
+	32      (00000084) iput                 v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mTranslateX F
+	33      (00000088) iget                 v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mTranslateY F
+	34      (0000008c) iput                 v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mTranslateY F
+	35      (00000090) iget-object          v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mThemeAttrs [I
+	36      (00000094) iput-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mThemeAttrs [I
+	37      (00000098) iget-object          v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mGroupName Ljava/lang/String;
+	38      (0000009c) iput-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mGroupName Ljava/lang/String;
+	39      (000000a0) iget                 v5, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mChangingConfigurations I
+	40      (000000a4) iput                 v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mChangingConfigurations I
+	41      (000000a8) iget-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mGroupName Ljava/lang/String;
+	42      (000000ac) if-eqz               v5, +7
+
+<init>-BB@0xb0 : [ <init>-BB@0xba ]
+	43      (000000b0) iget-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mGroupName Ljava/lang/String;
+	44      (000000b4) invoke-virtual       v10, v5, v8, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+
+<init>-BB@0xba : [ <init>-BB@0xce ]
+	45      (000000ba) iget-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mLocalMatrix Landroid/graphics/Matrix;
+	46      (000000be) iget-object          v6, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mLocalMatrix Landroid/graphics/Matrix;
+	47      (000000c2) invoke-virtual       v5, v6, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+	48      (000000c8) iget-object          v0, v9, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mChildren Ljava/util/ArrayList;
+	49      (000000cc) const/4              v3, 0
+
+<init>-BB@0xce : [ <init>-BB@0xda <init>-BB@0x168 ]
+	50      (000000ce) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	51      (000000d4) move-result          v5
+	52      (000000d6) if-ge                v3, v5, +49
+
+<init>-BB@0xda : [ <init>-BB@0xea <init>-BB@0x10a ]
+	53      (000000da) invoke-virtual       v0, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	54      (000000e0) move-result-object   v1
+	55      (000000e2) instance-of          v5, v1, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;
+	56      (000000e6) if-eqz               v5, +12
+
+<init>-BB@0xea : [ <init>-BB@0x104 ]
+	57      (000000ea) move-object          v2, v1
+	58      (000000ec) check-cast           v2, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;
+	59      (000000f0) iget-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mChildren Ljava/util/ArrayList;
+	60      (000000f4) new-instance         v6, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;
+	61      (000000f8) invoke-direct        v6, v2, v10, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-><init>(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup; Landroid/support/v4/util/ArrayMap;)V
+	62      (000000fe) invoke-virtual       v5, v6, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+<init>-BB@0x104 : [ <init>-BB@0xce ]
+	63      (00000104) add-int/lit8         v3, v3, 1
+	64      (00000108) goto                 -1d
+
+<init>-BB@0x10a : [ <init>-BB@0x114 <init>-BB@0x140 ]
+	65      (0000010a) const/4              v4, 0
+	66      (0000010c) instance-of          v5, v1, Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;
+	67      (00000110) if-eqz               v5, +18
+
+<init>-BB@0x114 : [ <init>-BB@0x122 ]
+	68      (00000114) new-instance         v4, Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;
+	69      (00000118) check-cast           v1, Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;
+	70      (0000011c) invoke-direct        v4, v1, Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;-><init>(Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;)V
+
+<init>-BB@0x122 : [ <init>-BB@0x134 <init>-BB@0x104 ]
+	71      (00000122) iget-object          v5, v8, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mChildren Ljava/util/ArrayList;
+	72      (00000126) invoke-virtual       v5, v4, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	73      (0000012c) iget-object          v5, v4, Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;->mPathName Ljava/lang/String;
+	74      (00000130) if-eqz               v5, -16
+
+<init>-BB@0x134 : [ <init>-BB@0x104 ]
+	75      (00000134) iget-object          v5, v4, Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;->mPathName Ljava/lang/String;
+	76      (00000138) invoke-virtual       v10, v5, v4, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	77      (0000013e) goto                 -1d
+
+<init>-BB@0x140 : [ <init>-BB@0x148 <init>-BB@0x158 ]
+	78      (00000140) instance-of          v5, v1, Landroid/support/graphics/drawable/VectorDrawableCompat$VClipPath;
+	79      (00000144) if-eqz               v5, +a
+
+<init>-BB@0x148 : [ <init>-BB@0x122 ]
+	80      (00000148) new-instance         v4, Landroid/support/graphics/drawable/VectorDrawableCompat$VClipPath;
+	81      (0000014c) check-cast           v1, Landroid/support/graphics/drawable/VectorDrawableCompat$VClipPath;
+	82      (00000150) invoke-direct        v4, v1, Landroid/support/graphics/drawable/VectorDrawableCompat$VClipPath;-><init>(Landroid/support/graphics/drawable/VectorDrawableCompat$VClipPath;)V
+	83      (00000156) goto                 -1a
+
+<init>-BB@0x158 : 
+	84      (00000158) new-instance         v5, Ljava/lang/IllegalStateException;
+	85      (0000015c) const-string         v6, 'Unknown object in the tree!'
+	86      (00000160) invoke-direct        v5, v6, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	87      (00000166) throw                v5
+
+<init>-BB@0x168 : 
+	88      (00000168) return-void          
+

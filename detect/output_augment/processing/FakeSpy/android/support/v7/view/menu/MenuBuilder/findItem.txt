@@ -1,0 +1,52 @@
+# Landroid/support/v7/view/menu/MenuBuilder;->findItem(I)Landroid/view/MenuItem; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:int
+#
+# - return:android.view.MenuItem
+
+findItem-BB@0x0 : [ findItem-BB@0xa ]
+	0       (00000000) invoke-virtual       v5, Landroid/support/v7/view/menu/MenuBuilder;->size()I
+	1       (00000006) move-result          v3
+	2       (00000008) const/4              v0, 0
+
+findItem-BB@0xa : [ findItem-BB@0xe findItem-BB@0x56 ]
+	3       (0000000a) if-ge                v0, v3, +26
+
+findItem-BB@0xe : [ findItem-BB@0x2a findItem-BB@0x2c ]
+	4       (0000000e) iget-object          v4, v5, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	5       (00000012) invoke-virtual       v4, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	6       (00000018) move-result-object   v1
+	7       (0000001a) check-cast           v1, Landroid/support/v7/view/menu/MenuItemImpl;
+	8       (0000001e) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->getItemId()I
+	9       (00000024) move-result          v4
+	10      (00000026) if-ne                v4, v6, +3
+
+findItem-BB@0x2a : 
+	11      (0000002a) return-object        v1
+
+findItem-BB@0x2c : [ findItem-BB@0x38 findItem-BB@0x50 ]
+	12      (0000002c) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->hasSubMenu()Z
+	13      (00000032) move-result          v4
+	14      (00000034) if-eqz               v4, +e
+
+findItem-BB@0x38 : [ findItem-BB@0x4c findItem-BB@0x50 ]
+	15      (00000038) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->getSubMenu()Landroid/view/SubMenu;
+	16      (0000003e) move-result-object   v4
+	17      (00000040) invoke-interface     v4, v6, Landroid/view/SubMenu;->findItem(I)Landroid/view/MenuItem;
+	18      (00000046) move-result-object   v2
+	19      (00000048) if-eqz               v2, +4
+
+findItem-BB@0x4c : [ findItem-BB@0x2a ]
+	20      (0000004c) move-object          v1, v2
+	21      (0000004e) goto                 -12
+
+findItem-BB@0x50 : [ findItem-BB@0xa ]
+	22      (00000050) add-int/lit8         v0, v0, 1
+	23      (00000054) goto                 -25
+
+findItem-BB@0x56 : [ findItem-BB@0x2a ]
+	24      (00000056) const/4              v1, 0
+	25      (00000058) goto                 -17
+

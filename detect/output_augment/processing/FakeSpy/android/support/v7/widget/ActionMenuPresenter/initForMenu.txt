@@ -1,0 +1,95 @@
+# Landroid/support/v7/widget/ActionMenuPresenter;->initForMenu(Landroid/content/Context; Landroid/support/v7/view/menu/MenuBuilder;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.content.Context
+# - v10:android.support.v7.view.menu.MenuBuilder
+#
+# - return:void
+
+initForMenu-BB@0x0 : [ initForMenu-BB@0x22 initForMenu-BB@0x2e ]
+	0       (00000000) const/4              v7, 0
+	1       (00000002) const/4              v6, 0
+	2       (00000004) invoke-super         v8, v9, v10, Landroid/support/v7/view/menu/BaseMenuPresenter;->initForMenu(Landroid/content/Context; Landroid/support/v7/view/menu/MenuBuilder;)V
+	3       (0000000a) invoke-virtual       v9, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	4       (00000010) move-result-object   v1
+	5       (00000012) invoke-static        v9, Landroid/support/v7/view/ActionBarPolicy;->get(Landroid/content/Context;)Landroid/support/v7/view/ActionBarPolicy;
+	6       (00000018) move-result-object   v0
+	7       (0000001a) iget-boolean         v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mReserveOverflowSet Z
+	8       (0000001e) if-nez               v4, +8
+
+initForMenu-BB@0x22 : [ initForMenu-BB@0x2e ]
+	9       (00000022) invoke-virtual       v0, Landroid/support/v7/view/ActionBarPolicy;->showsOverflowMenuButton()Z
+	10      (00000028) move-result          v4
+	11      (0000002a) iput-boolean         v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mReserveOverflow Z
+
+initForMenu-BB@0x2e : [ initForMenu-BB@0x36 initForMenu-BB@0x42 ]
+	12      (0000002e) iget-boolean         v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mWidthLimitSet Z
+	13      (00000032) if-nez               v4, +8
+
+initForMenu-BB@0x36 : [ initForMenu-BB@0x42 ]
+	14      (00000036) invoke-virtual       v0, Landroid/support/v7/view/ActionBarPolicy;->getEmbeddedMenuWidthLimit()I
+	15      (0000003c) move-result          v4
+	16      (0000003e) iput                 v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mWidthLimit I
+
+initForMenu-BB@0x42 : [ initForMenu-BB@0x4a initForMenu-BB@0x56 ]
+	17      (00000042) iget-boolean         v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mMaxItemsSet Z
+	18      (00000046) if-nez               v4, +8
+
+initForMenu-BB@0x4a : [ initForMenu-BB@0x56 ]
+	19      (0000004a) invoke-virtual       v0, Landroid/support/v7/view/ActionBarPolicy;->getMaxActionButtons()I
+	20      (00000050) move-result          v4
+	21      (00000052) iput                 v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mMaxItems I
+
+initForMenu-BB@0x56 : [ initForMenu-BB@0x62 initForMenu-BB@0xdc ]
+	22      (00000056) iget                 v3, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mWidthLimit I
+	23      (0000005a) iget-boolean         v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mReserveOverflow Z
+	24      (0000005e) if-eqz               v4, +3f
+
+initForMenu-BB@0x62 : [ initForMenu-BB@0x6a initForMenu-BB@0xac ]
+	25      (00000062) iget-object          v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mOverflowButton Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
+	26      (00000066) if-nez               v4, +23
+
+initForMenu-BB@0x6a : [ initForMenu-BB@0x84 initForMenu-BB@0x9a ]
+	27      (0000006a) new-instance         v4, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
+	28      (0000006e) iget-object          v5, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mSystemContext Landroid/content/Context;
+	29      (00000072) invoke-direct        v4, v8, v5, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;-><init>(Landroid/support/v7/widget/ActionMenuPresenter; Landroid/content/Context;)V
+	30      (00000078) iput-object          v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mOverflowButton Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
+	31      (0000007c) iget-boolean         v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mPendingOverflowIconSet Z
+	32      (00000080) if-eqz               v4, +d
+
+initForMenu-BB@0x84 : [ initForMenu-BB@0x9a ]
+	33      (00000084) iget-object          v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mOverflowButton Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
+	34      (00000088) iget-object          v5, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mPendingOverflowIcon Landroid/graphics/drawable/Drawable;
+	35      (0000008c) invoke-virtual       v4, v5, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	36      (00000092) iput-object          v7, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mPendingOverflowIcon Landroid/graphics/drawable/Drawable;
+	37      (00000096) iput-boolean         v6, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mPendingOverflowIconSet Z
+
+initForMenu-BB@0x9a : [ initForMenu-BB@0xac ]
+	38      (0000009a) invoke-static        v6, v6, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	39      (000000a0) move-result          v2
+	40      (000000a2) iget-object          v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mOverflowButton Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
+	41      (000000a6) invoke-virtual       v4, v2, v2, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;->measure(I I)V
+
+initForMenu-BB@0xac : [ initForMenu-BB@0xba ]
+	42      (000000ac) iget-object          v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mOverflowButton Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
+	43      (000000b0) invoke-virtual       v4, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;->getMeasuredWidth()I
+	44      (000000b6) move-result          v4
+	45      (000000b8) sub-int/2addr        v3, v4
+
+initForMenu-BB@0xba : 
+	46      (000000ba) iput                 v3, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mActionItemWidthLimit I
+	47      (000000be) const/high16         v4, 16992 # [56.0]
+	48      (000000c2) invoke-virtual       v1, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	49      (000000c8) move-result-object   v5
+	50      (000000ca) iget                 v5, v5, Landroid/util/DisplayMetrics;->density F
+	51      (000000ce) mul-float/2addr      v4, v5
+	52      (000000d0) float-to-int         v4, v4
+	53      (000000d2) iput                 v4, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mMinCellSize I
+	54      (000000d6) iput-object          v7, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mScrapActionButtonView Landroid/view/View;
+	55      (000000da) return-void          
+
+initForMenu-BB@0xdc : [ initForMenu-BB@0xba ]
+	56      (000000dc) iput-object          v7, v8, Landroid/support/v7/widget/ActionMenuPresenter;->mOverflowButton Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
+	57      (000000e0) goto                 -13
+

@@ -1,0 +1,529 @@
+# Landroid/support/v7/widget/GridLayoutManager;->a(Lcom/realtalk/ia$o; Lcom/realtalk/ia$t; Landroid/support/v7/widget/LinearLayoutManager$c; Landroid/support/v7/widget/LinearLayoutManager$b;)V [access_flags=final]
+#
+# Parameters:
+# - local registers: v0...v15
+# - v16:com.realtalk.ia$o
+# - v17:com.realtalk.ia$t
+# - v18:android.support.v7.widget.LinearLayoutManager$c
+# - v19:android.support.v7.widget.LinearLayoutManager$b
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x14 a-BB@0x12c ]
+	0       (00000000) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->j Lcom/realtalk/hz;
+	1       (00000004) invoke-virtual       v2, Lcom/realtalk/hz;->h()I
+	2       (0000000a) move-result          v10
+	3       (0000000c) const/high16         v2, 16384 # [2.0]
+	4       (00000010) if-eq                v10, v2, +8e
+
+a-BB@0x14 : [ a-BB@0x18 ]
+	5       (00000014) const/4              v2, 1
+	6       (00000016) move                 v3, v2
+
+a-BB@0x18 : [ a-BB@0x24 a-BB@0x134 ]
+	7       (00000018) invoke-virtual       v15, Landroid/support/v7/widget/GridLayoutManager;->m()I
+	8       (0000001e) move-result          v2
+	9       (00000020) if-lez               v2, +8a
+
+a-BB@0x24 : [ a-BB@0x32 ]
+	10      (00000024) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->c [I
+	11      (00000028) iget                 v4, v15, Landroid/support/v7/widget/GridLayoutManager;->b I
+	12      (0000002c) aget                 v2, v2, v4
+	13      (00000030) move                 v9, v2
+
+a-BB@0x32 : [ a-BB@0x36 a-BB@0x3c ]
+	14      (00000032) if-eqz               v3, +5
+
+a-BB@0x36 : [ a-BB@0x3c ]
+	15      (00000036) invoke-direct        v15, Landroid/support/v7/widget/GridLayoutManager;->t()V
+
+a-BB@0x3c : [ a-BB@0x4a a-BB@0x13c ]
+	16      (0000003c) move-object/from16   v0, v18
+	17      (00000040) iget                 v2, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->e I
+	18      (00000044) const/4              v4, 1
+	19      (00000046) if-ne                v2, v4, +7b
+
+a-BB@0x4a : [ a-BB@0x4e ]
+	20      (0000004a) const/4              v2, 1
+	21      (0000004c) move                 v4, v2
+
+a-BB@0x4e : [ a-BB@0x58 a-BB@0x8a ]
+	22      (0000004e) const/4              v5, 0
+	23      (00000050) iget                 v2, v15, Landroid/support/v7/widget/GridLayoutManager;->b I
+	24      (00000054) if-nez               v4, +1b
+
+a-BB@0x58 : [ a-BB@0x8a ]
+	25      (00000058) move-object/from16   v0, v18
+	26      (0000005c) iget                 v2, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->d I
+	27      (00000060) move-object/from16   v0, v16
+	28      (00000064) move-object/from16   v1, v17
+	29      (00000068) invoke-direct        v15, v0, v1, v2, Landroid/support/v7/widget/GridLayoutManager;->b(Lcom/realtalk/ia$o; Lcom/realtalk/ia$t; I)I
+	30      (0000006e) move-result          v2
+	31      (00000070) move-object/from16   v0, v18
+	32      (00000074) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->d I
+	33      (00000078) move-object/from16   v0, v16
+	34      (0000007c) move-object/from16   v1, v17
+	35      (00000080) invoke-direct        v15, v0, v1, v6, Landroid/support/v7/widget/GridLayoutManager;->c(Lcom/realtalk/ia$o; Lcom/realtalk/ia$t; I)I
+	36      (00000086) move-result          v6
+	37      (00000088) add-int/2addr        v2, v6
+
+a-BB@0x8a : [ a-BB@0x92 a-BB@0x16a ]
+	38      (0000008a) iget                 v6, v15, Landroid/support/v7/widget/GridLayoutManager;->b I
+	39      (0000008e) if-ge                v5, v6, +6e
+
+a-BB@0x92 : [ a-BB@0xa6 a-BB@0x16a ]
+	40      (00000092) move-object/from16   v0, v18
+	41      (00000096) move-object/from16   v1, v17
+	42      (0000009a) invoke-virtual       v0, v1, Landroid/support/v7/widget/LinearLayoutManager$c;->a(Lcom/realtalk/ia$t;)Z
+	43      (000000a0) move-result          v6
+	44      (000000a2) if-eqz               v6, +64
+
+a-BB@0xa6 : [ a-BB@0xaa a-BB@0x16a ]
+	45      (000000a6) if-lez               v2, +62
+
+a-BB@0xaa : [ a-BB@0xca a-BB@0x142 ]
+	46      (000000aa) move-object/from16   v0, v18
+	47      (000000ae) iget                 v6, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->d I
+	48      (000000b2) move-object/from16   v0, v16
+	49      (000000b6) move-object/from16   v1, v17
+	50      (000000ba) invoke-direct        v15, v0, v1, v6, Landroid/support/v7/widget/GridLayoutManager;->c(Lcom/realtalk/ia$o; Lcom/realtalk/ia$t; I)I
+	51      (000000c0) move-result          v7
+	52      (000000c2) iget                 v8, v15, Landroid/support/v7/widget/GridLayoutManager;->b I
+	53      (000000c6) if-le                v7, v8, +3e
+
+a-BB@0xca : 
+	54      (000000ca) new-instance         v2, Ljava/lang/IllegalArgumentException;
+	55      (000000ce) new-instance         v3, Ljava/lang/StringBuilder;
+	56      (000000d2) const-string         v4, 'Item at position '
+	57      (000000d6) invoke-direct        v3, v4, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	58      (000000dc) invoke-virtual       v3, v6, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	59      (000000e2) move-result-object   v3
+	60      (000000e4) const-string         v4, ' requires '
+	61      (000000e8) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	62      (000000ee) move-result-object   v3
+	63      (000000f0) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	64      (000000f6) move-result-object   v3
+	65      (000000f8) const-string         v4, ' spans but GridLayoutManager has only '
+	66      (000000fc) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	67      (00000102) move-result-object   v3
+	68      (00000104) iget                 v4, v15, Landroid/support/v7/widget/GridLayoutManager;->b I
+	69      (00000108) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	70      (0000010e) move-result-object   v3
+	71      (00000110) const-string         v4, ' spans.'
+	72      (00000114) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	73      (0000011a) move-result-object   v3
+	74      (0000011c) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	75      (00000122) move-result-object   v3
+	76      (00000124) invoke-direct        v2, v3, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	77      (0000012a) throw                v2
+
+a-BB@0x12c : [ a-BB@0x18 ]
+	78      (0000012c) const/4              v2, 0
+	79      (0000012e) move                 v3, v2
+	80      (00000130) goto/16              -8c
+
+a-BB@0x134 : [ a-BB@0x32 ]
+	81      (00000134) const/4              v2, 0
+	82      (00000136) move                 v9, v2
+	83      (00000138) goto/16              -83
+
+a-BB@0x13c : [ a-BB@0x4e ]
+	84      (0000013c) const/4              v2, 0
+	85      (0000013e) move                 v4, v2
+	86      (00000140) goto                 -79
+
+a-BB@0x142 : [ a-BB@0x148 a-BB@0x16a ]
+	87      (00000142) sub-int/2addr        v2, v7
+	88      (00000144) if-ltz               v2, +13
+
+a-BB@0x148 : [ a-BB@0x15c a-BB@0x16a ]
+	89      (00000148) move-object/from16   v0, v18
+	90      (0000014c) move-object/from16   v1, v16
+	91      (00000150) invoke-virtual       v0, v1, Landroid/support/v7/widget/LinearLayoutManager$c;->a(Lcom/realtalk/ia$o;)Landroid/view/View;
+	92      (00000156) move-result-object   v6
+	93      (00000158) if-eqz               v6, +9
+
+a-BB@0x15c : [ a-BB@0x8a ]
+	94      (0000015c) iget-object          v7, v15, Landroid/support/v7/widget/GridLayoutManager;->d [Landroid/view/View;
+	95      (00000160) aput-object          v6, v7, v5
+	96      (00000164) add-int/lit8         v5, v5, 1
+	97      (00000168) goto                 -6f
+
+a-BB@0x16a : [ a-BB@0x16e a-BB@0x17a ]
+	98      (0000016a) if-nez               v5, +8
+
+a-BB@0x16e : [ a-BB@0x178 ]
+	99      (0000016e) const/4              v2, 1
+	100     (00000170) move-object/from16   v0, v19
+	101     (00000174) iput-boolean         v2, v0, Landroid/support/v7/widget/LinearLayoutManager$b;->b Z
+
+a-BB@0x178 : 
+	102     (00000178) return-void          
+
+a-BB@0x17a : [ a-BB@0x190 ]
+	103     (0000017a) const/4              v7, 0
+	104     (0000017c) const/4              v6, 0
+	105     (0000017e) move-object/from16   v0, v16
+	106     (00000182) move-object/from16   v1, v17
+	107     (00000186) invoke-direct        v15, v0, v1, v5, v4, Landroid/support/v7/widget/GridLayoutManager;->a(Lcom/realtalk/ia$o; Lcom/realtalk/ia$t; I Z)V
+	108     (0000018c) const/4              v2, 0
+	109     (0000018e) move                 v8, v2
+
+a-BB@0x190 : [ a-BB@0x194 a-BB@0x23e ]
+	110     (00000190) if-ge                v8, v5, +57
+
+a-BB@0x194 : [ a-BB@0x1a8 a-BB@0x222 ]
+	111     (00000194) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->d [Landroid/view/View;
+	112     (00000198) aget-object          v11, v2, v8
+	113     (0000019c) move-object/from16   v0, v18
+	114     (000001a0) iget-object          v2, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->k Ljava/util/List;
+	115     (000001a4) if-nez               v2, +3f
+
+a-BB@0x1a8 : [ a-BB@0x1ac a-BB@0x216 ]
+	116     (000001a8) if-eqz               v4, +37
+
+a-BB@0x1ac : [ a-BB@0x1b6 ]
+	117     (000001ac) const/4              v2, -1
+	118     (000001ae) const/4              v12, 0
+	119     (000001b0) invoke-super         v15, v11, v2, v12, Lcom/realtalk/ia$i;->a(Landroid/view/View; I Z)V
+
+a-BB@0x1b6 : [ a-BB@0x1d8 a-BB@0x1da ]
+	120     (000001b6) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->h Landroid/graphics/Rect;
+	121     (000001ba) invoke-virtual       v15, v11, v2, Landroid/support/v7/widget/GridLayoutManager;->b(Landroid/view/View; Landroid/graphics/Rect;)V
+	122     (000001c0) const/4              v2, 0
+	123     (000001c2) invoke-direct        v15, v11, v10, v2, Landroid/support/v7/widget/GridLayoutManager;->b(Landroid/view/View; I Z)V
+	124     (000001c8) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->j Lcom/realtalk/hz;
+	125     (000001cc) invoke-virtual       v2, v11, Lcom/realtalk/hz;->e(Landroid/view/View;)I
+	126     (000001d2) move-result          v2
+	127     (000001d4) if-le                v2, v7, +3
+
+a-BB@0x1d8 : [ a-BB@0x1da ]
+	128     (000001d8) move                 v7, v2
+
+a-BB@0x1da : [ a-BB@0x20c a-BB@0x506 ]
+	129     (000001da) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	130     (000001e0) move-result-object   v2
+	131     (000001e2) check-cast           v2, Landroid/support/v7/widget/GridLayoutManager$b;
+	132     (000001e6) const/high16         v12, 16256 # [1.0]
+	133     (000001ea) iget-object          v13, v15, Landroid/support/v7/widget/GridLayoutManager;->j Lcom/realtalk/hz;
+	134     (000001ee) invoke-virtual       v13, v11, Lcom/realtalk/hz;->f(Landroid/view/View;)I
+	135     (000001f4) move-result          v11
+	136     (000001f6) int-to-float         v11, v11
+	137     (000001f8) mul-float/2addr      v11, v12
+	138     (000001fa) iget                 v2, v2, Landroid/support/v7/widget/GridLayoutManager$b;->b I
+	139     (000001fe) int-to-float         v2, v2
+	140     (00000200) div-float            v2, v11, v2
+	141     (00000204) cmpl-float           v11, v2, v6
+	142     (00000208) if-lez               v11, +17f
+
+a-BB@0x20c : [ a-BB@0x190 ]
+	143     (0000020c) add-int/lit8         v6, v8, 1
+	144     (00000210) move                 v8, v6
+	145     (00000212) move                 v6, v2
+	146     (00000214) goto                 -42
+
+a-BB@0x216 : [ a-BB@0x1b6 ]
+	147     (00000216) const/4              v2, 0
+	148     (00000218) const/4              v12, 0
+	149     (0000021a) invoke-super         v15, v11, v2, v12, Lcom/realtalk/ia$i;->a(Landroid/view/View; I Z)V
+	150     (00000220) goto                 -35
+
+a-BB@0x222 : [ a-BB@0x226 a-BB@0x232 ]
+	151     (00000222) if-eqz               v4, +8
+
+a-BB@0x226 : [ a-BB@0x1b6 ]
+	152     (00000226) const/4              v2, -1
+	153     (00000228) const/4              v12, 1
+	154     (0000022a) invoke-super         v15, v11, v2, v12, Lcom/realtalk/ia$i;->a(Landroid/view/View; I Z)V
+	155     (00000230) goto                 -3d
+
+a-BB@0x232 : [ a-BB@0x1b6 ]
+	156     (00000232) const/4              v2, 0
+	157     (00000234) const/4              v12, 1
+	158     (00000236) invoke-super         v15, v11, v2, v12, Lcom/realtalk/ia$i;->a(Landroid/view/View; I Z)V
+	159     (0000023c) goto                 -43
+
+a-BB@0x23e : [ a-BB@0x242 a-BB@0x298 ]
+	160     (0000023e) if-eqz               v3, +2d
+
+a-BB@0x242 : [ a-BB@0x266 ]
+	161     (00000242) iget                 v2, v15, Landroid/support/v7/widget/GridLayoutManager;->b I
+	162     (00000246) int-to-float         v2, v2
+	163     (00000248) mul-float/2addr      v2, v6
+	164     (0000024a) invoke-static        v2, Ljava/lang/Math;->round(F)I
+	165     (00000250) move-result          v2
+	166     (00000252) invoke-static        v2, v9, Ljava/lang/Math;->max(I I)I
+	167     (00000258) move-result          v2
+	168     (0000025a) invoke-direct        v15, v2, Landroid/support/v7/widget/GridLayoutManager;->h(I)V
+	169     (00000260) const/4              v3, 0
+	170     (00000262) const/4              v2, 0
+	171     (00000264) move                 v4, v2
+
+a-BB@0x266 : [ a-BB@0x26a a-BB@0x29a ]
+	172     (00000266) if-ge                v4, v5, +1a
+
+a-BB@0x26a : [ a-BB@0x28e a-BB@0x500 ]
+	173     (0000026a) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->d [Landroid/view/View;
+	174     (0000026e) aget-object          v2, v2, v4
+	175     (00000272) const/high16         v6, 16384 # [2.0]
+	176     (00000276) const/4              v7, 1
+	177     (00000278) invoke-direct        v15, v2, v6, v7, Landroid/support/v7/widget/GridLayoutManager;->b(Landroid/view/View; I Z)V
+	178     (0000027e) iget-object          v6, v15, Landroid/support/v7/widget/GridLayoutManager;->j Lcom/realtalk/hz;
+	179     (00000282) invoke-virtual       v6, v2, Lcom/realtalk/hz;->e(Landroid/view/View;)I
+	180     (00000288) move-result          v2
+	181     (0000028a) if-le                v2, v3, +13b
+
+a-BB@0x28e : [ a-BB@0x266 ]
+	182     (0000028e) add-int/lit8         v3, v4, 1
+	183     (00000292) move                 v4, v3
+	184     (00000294) move                 v3, v2
+	185     (00000296) goto                 -18
+
+a-BB@0x298 : [ a-BB@0x29a ]
+	186     (00000298) move                 v3, v7
+
+a-BB@0x29a : [ a-BB@0x29e ]
+	187     (0000029a) const/4              v2, 0
+	188     (0000029c) move                 v6, v2
+
+a-BB@0x29e : [ a-BB@0x2a2 a-BB@0x36c ]
+	189     (0000029e) if-ge                v6, v5, +67
+
+a-BB@0x2a2 : [ a-BB@0x2ba a-BB@0x33a ]
+	190     (000002a2) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->d [Landroid/view/View;
+	191     (000002a6) aget-object          v7, v2, v6
+	192     (000002aa) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->j Lcom/realtalk/hz;
+	193     (000002ae) invoke-virtual       v2, v7, Lcom/realtalk/hz;->e(Landroid/view/View;)I
+	194     (000002b4) move-result          v2
+	195     (000002b6) if-eq                v2, v3, +42
+
+a-BB@0x2ba : [ a-BB@0x310 a-BB@0x342 ]
+	196     (000002ba) invoke-virtual       v7, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	197     (000002c0) move-result-object   v2
+	198     (000002c2) check-cast           v2, Landroid/support/v7/widget/GridLayoutManager$b;
+	199     (000002c6) iget-object          v4, v2, Landroid/support/v7/widget/GridLayoutManager$b;->d Landroid/graphics/Rect;
+	200     (000002ca) iget                 v8, v4, Landroid/graphics/Rect;->top I
+	201     (000002ce) iget                 v9, v4, Landroid/graphics/Rect;->bottom I
+	202     (000002d2) add-int/2addr        v8, v9
+	203     (000002d4) iget                 v9, v2, Landroid/support/v7/widget/GridLayoutManager$b;->topMargin I
+	204     (000002d8) add-int/2addr        v8, v9
+	205     (000002da) iget                 v9, v2, Landroid/support/v7/widget/GridLayoutManager$b;->bottomMargin I
+	206     (000002de) add-int/2addr        v8, v9
+	207     (000002e0) iget                 v9, v4, Landroid/graphics/Rect;->left I
+	208     (000002e4) iget                 v4, v4, Landroid/graphics/Rect;->right I
+	209     (000002e8) add-int/2addr        v4, v9
+	210     (000002ea) iget                 v9, v2, Landroid/support/v7/widget/GridLayoutManager$b;->leftMargin I
+	211     (000002ee) add-int/2addr        v4, v9
+	212     (000002f0) iget                 v9, v2, Landroid/support/v7/widget/GridLayoutManager$b;->rightMargin I
+	213     (000002f4) add-int/2addr        v4, v9
+	214     (000002f6) iget                 v9, v2, Landroid/support/v7/widget/GridLayoutManager$b;->a I
+	215     (000002fa) iget                 v10, v2, Landroid/support/v7/widget/GridLayoutManager$b;->b I
+	216     (000002fe) invoke-direct        v15, v9, v10, Landroid/support/v7/widget/GridLayoutManager;->i(I I)I
+	217     (00000304) move-result          v9
+	218     (00000306) iget                 v10, v15, Landroid/support/v7/widget/GridLayoutManager;->i I
+	219     (0000030a) const/4              v11, 1
+	220     (0000030c) if-ne                v10, v11, +1b
+
+a-BB@0x310 : [ a-BB@0x332 ]
+	221     (00000310) const/high16         v10, 16384 # [2.0]
+	222     (00000314) iget                 v2, v2, Landroid/support/v7/widget/GridLayoutManager$b;->width I
+	223     (00000318) const/4              v11, 0
+	224     (0000031a) invoke-static        v9, v10, v4, v2, v11, Landroid/support/v7/widget/GridLayoutManager;->a(I I I I Z)I
+	225     (00000320) move-result          v2
+	226     (00000322) sub-int              v4, v3, v8
+	227     (00000326) const/high16         v8, 16384 # [2.0]
+	228     (0000032a) invoke-static        v4, v8, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	229     (00000330) move-result          v4
+
+a-BB@0x332 : [ a-BB@0x33a ]
+	230     (00000332) const/4              v8, 1
+	231     (00000334) invoke-direct        v15, v7, v2, v4, v8, Landroid/support/v7/widget/GridLayoutManager;->a(Landroid/view/View; I I Z)V
+
+a-BB@0x33a : [ a-BB@0x29e ]
+	232     (0000033a) add-int/lit8         v2, v6, 1
+	233     (0000033e) move                 v6, v2
+	234     (00000340) goto                 -51
+
+a-BB@0x342 : [ a-BB@0x332 ]
+	235     (00000342) sub-int              v4, v3, v4
+	236     (00000346) const/high16         v10, 16384 # [2.0]
+	237     (0000034a) invoke-static        v4, v10, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	238     (00000350) move-result          v4
+	239     (00000352) const/high16         v10, 16384 # [2.0]
+	240     (00000356) iget                 v2, v2, Landroid/support/v7/widget/GridLayoutManager$b;->height I
+	241     (0000035a) const/4              v11, 0
+	242     (0000035c) invoke-static        v9, v10, v8, v2, v11, Landroid/support/v7/widget/GridLayoutManager;->a(I I I I Z)I
+	243     (00000362) move-result          v2
+	244     (00000364) move                 v14, v4
+	245     (00000366) move                 v4, v2
+	246     (00000368) move                 v2, v14
+	247     (0000036a) goto                 -1c
+
+a-BB@0x36c : [ a-BB@0x386 a-BB@0x46e ]
+	248     (0000036c) move-object/from16   v0, v19
+	249     (00000370) iput                 v3, v0, Landroid/support/v7/widget/LinearLayoutManager$b;->a I
+	250     (00000374) const/4              v2, 0
+	251     (00000376) const/4              v7, 0
+	252     (00000378) const/4              v6, 0
+	253     (0000037a) const/4              v4, 0
+	254     (0000037c) iget                 v8, v15, Landroid/support/v7/widget/GridLayoutManager;->i I
+	255     (00000380) const/4              v9, 1
+	256     (00000382) if-ne                v8, v9, +76
+
+a-BB@0x386 : [ a-BB@0x394 a-BB@0x460 ]
+	257     (00000386) move-object/from16   v0, v18
+	258     (0000038a) iget                 v4, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->f I
+	259     (0000038e) const/4              v6, -1
+	260     (00000390) if-ne                v4, v6, +68
+
+a-BB@0x394 : [ a-BB@0x3a8 ]
+	261     (00000394) move-object/from16   v0, v18
+	262     (00000398) iget                 v4, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->b I
+	263     (0000039c) sub-int              v3, v4, v3
+	264     (000003a0) move                 v6, v7
+	265     (000003a2) move                 v14, v3
+	266     (000003a4) move                 v3, v4
+	267     (000003a6) move                 v4, v14
+
+a-BB@0x3a8 : [ a-BB@0x3b4 ]
+	268     (000003a8) const/4              v7, 0
+	269     (000003aa) move                 v8, v7
+	270     (000003ac) move                 v7, v6
+	271     (000003ae) move                 v6, v4
+	272     (000003b0) move                 v4, v3
+	273     (000003b2) move                 v3, v2
+
+a-BB@0x3b4 : [ a-BB@0x3b8 a-BB@0x4f0 ]
+	274     (000003b4) if-ge                v8, v5, +9e
+
+a-BB@0x3b8 : [ a-BB@0x3d6 a-BB@0x4ca ]
+	275     (000003b8) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->d [Landroid/view/View;
+	276     (000003bc) aget-object          v9, v2, v8
+	277     (000003c0) invoke-virtual       v9, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	278     (000003c6) move-result-object   v2
+	279     (000003c8) check-cast           v2, Landroid/support/v7/widget/GridLayoutManager$b;
+	280     (000003cc) iget                 v10, v15, Landroid/support/v7/widget/GridLayoutManager;->i I
+	281     (000003d0) const/4              v11, 1
+	282     (000003d2) if-ne                v10, v11, +7c
+
+a-BB@0x3d6 : [ a-BB@0x3e2 a-BB@0x4a4 ]
+	283     (000003d6) invoke-virtual       v15, Landroid/support/v7/widget/GridLayoutManager;->h()Z
+	284     (000003dc) move-result          v3
+	285     (000003de) if-eqz               v3, +63
+
+a-BB@0x3e2 : [ a-BB@0x40e ]
+	286     (000003e2) invoke-virtual       v15, Landroid/support/v7/widget/GridLayoutManager;->n()I
+	287     (000003e8) move-result          v3
+	288     (000003ea) iget-object          v7, v15, Landroid/support/v7/widget/GridLayoutManager;->c [I
+	289     (000003ee) iget                 v10, v15, Landroid/support/v7/widget/GridLayoutManager;->b I
+	290     (000003f2) iget                 v11, v2, Landroid/support/v7/widget/GridLayoutManager$b;->a I
+	291     (000003f6) sub-int/2addr        v10, v11
+	292     (000003f8) aget                 v7, v7, v10
+	293     (000003fc) add-int/2addr        v7, v3
+	294     (000003fe) iget-object          v3, v15, Landroid/support/v7/widget/GridLayoutManager;->j Lcom/realtalk/hz;
+	295     (00000402) invoke-virtual       v3, v9, Lcom/realtalk/hz;->f(Landroid/view/View;)I
+	296     (00000408) move-result          v3
+	297     (0000040a) sub-int              v3, v7, v3
+
+a-BB@0x40e : [ a-BB@0x424 a-BB@0x434 ]
+	298     (0000040e) invoke-static        v9, v3, v6, v7, v4, Landroid/support/v7/widget/GridLayoutManager;->a(Landroid/view/View; I I I I)V
+	299     (00000414) iget-object          v10, v2, Lcom/realtalk/ia$j;->c Lcom/realtalk/ia$w;
+	300     (00000418) invoke-virtual       v10, Lcom/realtalk/ia$w;->m()Z
+	301     (0000041e) move-result          v10
+	302     (00000420) if-nez               v10, +a
+
+a-BB@0x424 : [ a-BB@0x434 a-BB@0x43e ]
+	303     (00000424) iget-object          v2, v2, Lcom/realtalk/ia$j;->c Lcom/realtalk/ia$w;
+	304     (00000428) invoke-virtual       v2, Lcom/realtalk/ia$w;->s()Z
+	305     (0000042e) move-result          v2
+	306     (00000430) if-eqz               v2, +7
+
+a-BB@0x434 : [ a-BB@0x43e ]
+	307     (00000434) const/4              v2, 1
+	308     (00000436) move-object/from16   v0, v19
+	309     (0000043a) iput-boolean         v2, v0, Landroid/support/v7/widget/LinearLayoutManager$b;->c Z
+
+a-BB@0x43e : [ a-BB@0x3b4 ]
+	310     (0000043e) move-object/from16   v0, v19
+	311     (00000442) iget-boolean         v2, v0, Landroid/support/v7/widget/LinearLayoutManager$b;->d Z
+	312     (00000446) invoke-virtual       v9, Landroid/view/View;->hasFocusable()Z
+	313     (0000044c) move-result          v9
+	314     (0000044e) or-int/2addr         v2, v9
+	315     (00000450) move-object/from16   v0, v19
+	316     (00000454) iput-boolean         v2, v0, Landroid/support/v7/widget/LinearLayoutManager$b;->d Z
+	317     (00000458) add-int/lit8         v2, v8, 1
+	318     (0000045c) move                 v8, v2
+	319     (0000045e) goto                 -55
+
+a-BB@0x460 : [ a-BB@0x3a8 ]
+	320     (00000460) move-object/from16   v0, v18
+	321     (00000464) iget                 v4, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->b I
+	322     (00000468) add-int/2addr        v3, v4
+	323     (0000046a) move                 v6, v7
+	324     (0000046c) goto                 -62
+
+a-BB@0x46e : [ a-BB@0x47c a-BB@0x490 ]
+	325     (0000046e) move-object/from16   v0, v18
+	326     (00000472) iget                 v2, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->f I
+	327     (00000476) const/4              v7, -1
+	328     (00000478) if-ne                v2, v7, +c
+
+a-BB@0x47c : [ a-BB@0x3a8 ]
+	329     (0000047c) move-object/from16   v0, v18
+	330     (00000480) iget                 v7, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->b I
+	331     (00000484) sub-int              v2, v7, v3
+	332     (00000488) move                 v3, v4
+	333     (0000048a) move                 v4, v6
+	334     (0000048c) move                 v6, v7
+	335     (0000048e) goto                 -73
+
+a-BB@0x490 : [ a-BB@0x3a8 ]
+	336     (00000490) move-object/from16   v0, v18
+	337     (00000494) iget                 v2, v0, Landroid/support/v7/widget/LinearLayoutManager$c;->b I
+	338     (00000498) add-int/2addr        v3, v2
+	339     (0000049a) move                 v14, v4
+	340     (0000049c) move                 v4, v6
+	341     (0000049e) move                 v6, v3
+	342     (000004a0) move                 v3, v14
+	343     (000004a2) goto                 -7d
+
+a-BB@0x4a4 : [ a-BB@0x40e ]
+	344     (000004a4) invoke-virtual       v15, Landroid/support/v7/widget/GridLayoutManager;->n()I
+	345     (000004aa) move-result          v3
+	346     (000004ac) iget-object          v7, v15, Landroid/support/v7/widget/GridLayoutManager;->c [I
+	347     (000004b0) iget                 v10, v2, Landroid/support/v7/widget/GridLayoutManager$b;->a I
+	348     (000004b4) aget                 v7, v7, v10
+	349     (000004b8) add-int/2addr        v3, v7
+	350     (000004ba) iget-object          v7, v15, Landroid/support/v7/widget/GridLayoutManager;->j Lcom/realtalk/hz;
+	351     (000004be) invoke-virtual       v7, v9, Lcom/realtalk/hz;->f(Landroid/view/View;)I
+	352     (000004c4) move-result          v7
+	353     (000004c6) add-int/2addr        v7, v3
+	354     (000004c8) goto                 -5d
+
+a-BB@0x4ca : [ a-BB@0x40e ]
+	355     (000004ca) invoke-virtual       v15, Landroid/support/v7/widget/GridLayoutManager;->o()I
+	356     (000004d0) move-result          v4
+	357     (000004d2) iget-object          v6, v15, Landroid/support/v7/widget/GridLayoutManager;->c [I
+	358     (000004d6) iget                 v10, v2, Landroid/support/v7/widget/GridLayoutManager$b;->a I
+	359     (000004da) aget                 v6, v6, v10
+	360     (000004de) add-int/2addr        v6, v4
+	361     (000004e0) iget-object          v4, v15, Landroid/support/v7/widget/GridLayoutManager;->j Lcom/realtalk/hz;
+	362     (000004e4) invoke-virtual       v4, v9, Lcom/realtalk/hz;->f(Landroid/view/View;)I
+	363     (000004ea) move-result          v4
+	364     (000004ec) add-int/2addr        v4, v6
+	365     (000004ee) goto                 -70
+
+a-BB@0x4f0 : [ a-BB@0x178 ]
+	366     (000004f0) iget-object          v2, v15, Landroid/support/v7/widget/GridLayoutManager;->d [Landroid/view/View;
+	367     (000004f4) const/4              v3, 0
+	368     (000004f6) invoke-static        v2, v3, Ljava/util/Arrays;->fill([Ljava/lang/Object; Ljava/lang/Object;)V
+	369     (000004fc) goto/16              -1c2
+
+a-BB@0x500 : [ a-BB@0x28e ]
+	370     (00000500) move                 v2, v3
+	371     (00000502) goto/16              -13a
+
+a-BB@0x506 : [ a-BB@0x20c ]
+	372     (00000506) move                 v2, v6
+	373     (00000508) goto/16              -17e
+

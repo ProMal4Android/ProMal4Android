@@ -1,0 +1,77 @@
+# La/a/a/e/i;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I I)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.content.Context
+# - v5:android.util.AttributeSet
+# - v6:int
+# - v7:int
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0xbc <init>-BB@0xc0 ]
+	0       (00000000) invoke-direct        v3, Ljava/lang/Object;-><init>()V
+	1       (00000006) const/4              v0, -2
+	2       (00000008) iput                 v0, v3, La/a/a/e/i;->f I
+	3       (0000000c) iput                 v0, v3, La/a/a/e/i;->g I
+	4       (00000010) const/4              v0, 0
+	5       (00000012) iput                 v0, v3, La/a/a/e/i;->k I
+	6       (00000016) iput-boolean         v0, v3, La/a/a/e/i;->l Z
+	7       (0000001a) iput-boolean         v0, v3, La/a/a/e/i;->m Z
+	8       (0000001e) const                v1, 2147483647 # [nan]
+	9       (00000024) iput                 v1, v3, La/a/a/e/i;->n I
+	10      (00000028) iput                 v0, v3, La/a/a/e/i;->p I
+	11      (0000002c) new-instance         v1, La/a/a/e/i$g;
+	12      (00000030) const/4              v2, 0
+	13      (00000032) invoke-direct        v1, v3, v2, La/a/a/e/i$g;-><init>(La/a/a/e/i; La/a/a/e/f;)V
+	14      (00000038) iput-object          v1, v3, La/a/a/e/i;->v La/a/a/e/i$g;
+	15      (0000003c) new-instance         v1, La/a/a/e/i$f;
+	16      (00000040) invoke-direct        v1, v3, v2, La/a/a/e/i$f;-><init>(La/a/a/e/i; La/a/a/e/f;)V
+	17      (00000046) iput-object          v1, v3, La/a/a/e/i;->w La/a/a/e/i$f;
+	18      (0000004a) new-instance         v1, La/a/a/e/i$e;
+	19      (0000004e) invoke-direct        v1, v3, v2, La/a/a/e/i$e;-><init>(La/a/a/e/i; La/a/a/e/f;)V
+	20      (00000054) iput-object          v1, v3, La/a/a/e/i;->x La/a/a/e/i$e;
+	21      (00000058) new-instance         v1, La/a/a/e/i$c;
+	22      (0000005c) invoke-direct        v1, v3, v2, La/a/a/e/i$c;-><init>(La/a/a/e/i; La/a/a/e/f;)V
+	23      (00000062) iput-object          v1, v3, La/a/a/e/i;->y La/a/a/e/i$c;
+	24      (00000066) new-instance         v1, Landroid/os/Handler;
+	25      (0000006a) invoke-direct        v1, Landroid/os/Handler;-><init>()V
+	26      (00000070) iput-object          v1, v3, La/a/a/e/i;->z Landroid/os/Handler;
+	27      (00000074) new-instance         v1, Landroid/graphics/Rect;
+	28      (00000078) invoke-direct        v1, Landroid/graphics/Rect;-><init>()V
+	29      (0000007e) iput-object          v1, v3, La/a/a/e/i;->A Landroid/graphics/Rect;
+	30      (00000082) iput-object          v4, v3, La/a/a/e/i;->b Landroid/content/Context;
+	31      (00000086) sget-object          v1, La/a/a/b/i;->ListPopupWindow [I
+	32      (0000008a) invoke-virtual       v4, v5, v1, v6, v7, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I I I)Landroid/content/res/TypedArray;
+	33      (00000090) move-result-object   v7
+	34      (00000092) sget                 v1, La/a/a/b/i;->ListPopupWindow_android_dropDownHorizontalOffset I
+	35      (00000096) invoke-virtual       v7, v1, v0, Landroid/content/res/TypedArray;->getDimensionPixelOffset(I I)I
+	36      (0000009c) move-result          v1
+	37      (0000009e) iput                 v1, v3, La/a/a/e/i;->h I
+	38      (000000a2) sget                 v1, La/a/a/b/i;->ListPopupWindow_android_dropDownVerticalOffset I
+	39      (000000a6) invoke-virtual       v7, v1, v0, Landroid/content/res/TypedArray;->getDimensionPixelOffset(I I)I
+	40      (000000ac) move-result          v0
+	41      (000000ae) iput                 v0, v3, La/a/a/e/i;->i I
+	42      (000000b2) iget                 v0, v3, La/a/a/e/i;->i I
+	43      (000000b6) const/4              v1, 1
+	44      (000000b8) if-eqz               v0, +4
+
+<init>-BB@0xbc : [ <init>-BB@0xc0 ]
+	45      (000000bc) iput-boolean         v1, v3, La/a/a/e/i;->j Z
+
+<init>-BB@0xc0 : 
+	46      (000000c0) invoke-virtual       v7, Landroid/content/res/TypedArray;->recycle()V
+	47      (000000c6) new-instance         v7, La/a/a/c/d/k;
+	48      (000000ca) invoke-direct        v7, v4, v5, v6, La/a/a/c/d/k;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	49      (000000d0) iput-object          v7, v3, La/a/a/e/i;->c Landroid/widget/PopupWindow;
+	50      (000000d4) iget-object          v4, v3, La/a/a/e/i;->c Landroid/widget/PopupWindow;
+	51      (000000d8) invoke-virtual       v4, v1, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
+	52      (000000de) iget-object          v4, v3, La/a/a/e/i;->b Landroid/content/Context;
+	53      (000000e2) invoke-virtual       v4, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	54      (000000e8) move-result-object   v4
+	55      (000000ea) invoke-virtual       v4, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+	56      (000000f0) move-result-object   v4
+	57      (000000f2) iget-object          v4, v4, Landroid/content/res/Configuration;->locale Ljava/util/Locale;
+	58      (000000f6) invoke-static        v4, Landroid/support/v4/text/TextUtilsCompat;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+	59      (000000fc) return-void          
+

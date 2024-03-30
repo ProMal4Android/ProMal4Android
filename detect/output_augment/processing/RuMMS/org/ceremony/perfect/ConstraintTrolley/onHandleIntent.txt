@@ -1,0 +1,28 @@
+# Lorg/ceremony/perfect/ConstraintTrolley;->onHandleIntent(Landroid/content/Intent;)V [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.content.Intent
+#
+# - return:void
+
+onHandleIntent-BB@0x0 : [ onHandleIntent-BB@0x6 onHandleIntent-BB@0x8 ]
+	0       (00000000) const/4              v3, 0
+	1       (00000002) if-nez               v5, +3
+
+onHandleIntent-BB@0x6 : 
+	2       (00000006) return-void          
+
+onHandleIntent-BB@0x8 : [ onHandleIntent-BB@0x6 ]
+	3       (00000008) const-string         v0, 'body'
+	4       (0000000c) invoke-virtual       v5, v0, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	5       (00000012) move-result-object   v0
+	6       (00000014) const-string         v1, 'type'
+	7       (00000018) invoke-virtual       v5, v1, v3, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	8       (0000001e) move-result          v1
+	9       (00000020) const-string         v2, 'waitrun'
+	10      (00000024) invoke-virtual       v5, v2, v3, Landroid/content/Intent;->getIntExtra(Ljava/lang/String; I)I
+	11      (0000002a) move-result          v2
+	12      (0000002c) invoke-direct        v4, v0, v1, v2, Lorg/ceremony/perfect/ConstraintTrolley;->a(Ljava/lang/String; I I)V
+	13      (00000032) goto                 -16
+

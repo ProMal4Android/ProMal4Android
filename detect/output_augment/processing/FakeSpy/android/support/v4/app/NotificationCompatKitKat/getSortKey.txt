@@ -1,0 +1,15 @@
+# Landroid/support/v4/app/NotificationCompatKitKat;->getSortKey(Landroid/app/Notification;)Ljava/lang/String; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.app.Notification
+#
+# - return:java.lang.String
+
+getSortKey-BB@0x0 : 
+	0       (00000000) iget-object          v0, v2, Landroid/app/Notification;->extras Landroid/os/Bundle;
+	1       (00000004) const-string         v1, 'android.support.sortKey'
+	2       (00000008) invoke-virtual       v0, v1, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) return-object        v0
+

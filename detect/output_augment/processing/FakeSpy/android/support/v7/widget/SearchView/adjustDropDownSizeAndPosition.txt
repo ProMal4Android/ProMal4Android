@@ -1,0 +1,77 @@
+# Landroid/support/v7/widget/SearchView;->adjustDropDownSizeAndPosition()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v9
+#
+# - return:void
+
+adjustDropDownSizeAndPosition-BB@0x0 : [ adjustDropDownSizeAndPosition-BB@0x12 adjustDropDownSizeAndPosition-BB@0xb2 ]
+	0       (00000000) iget-object          v7, v9, Landroid/support/v7/widget/SearchView;->mDropDownAnchor Landroid/view/View;
+	1       (00000004) invoke-virtual       v7, Landroid/view/View;->getWidth()I
+	2       (0000000a) move-result          v7
+	3       (0000000c) const/4              v8, 1
+	4       (0000000e) if-le                v7, v8, +52
+
+adjustDropDownSizeAndPosition-BB@0x12 : [ adjustDropDownSizeAndPosition-BB@0x48 adjustDropDownSizeAndPosition-BB@0xb4 ]
+	5       (00000012) invoke-virtual       v9, Landroid/support/v7/widget/SearchView;->getContext()Landroid/content/Context;
+	6       (00000018) move-result-object   v7
+	7       (0000001a) invoke-virtual       v7, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	8       (00000020) move-result-object   v5
+	9       (00000022) iget-object          v7, v9, Landroid/support/v7/widget/SearchView;->mSearchPlate Landroid/view/View;
+	10      (00000026) invoke-virtual       v7, Landroid/view/View;->getPaddingLeft()I
+	11      (0000002c) move-result          v0
+	12      (0000002e) new-instance         v1, Landroid/graphics/Rect;
+	13      (00000032) invoke-direct        v1, Landroid/graphics/Rect;-><init>()V
+	14      (00000038) invoke-static        v9, Landroid/support/v7/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
+	15      (0000003e) move-result          v3
+	16      (00000040) iget-boolean         v7, v9, Landroid/support/v7/widget/SearchView;->mIconifiedByDefault Z
+	17      (00000044) if-eqz               v7, +38
+
+adjustDropDownSizeAndPosition-BB@0x48 : [ adjustDropDownSizeAndPosition-BB@0x64 ]
+	18      (00000048) sget                 v7, Landroid/support/v7/appcompat/R$dimen;->abc_dropdownitem_icon_width I
+	19      (0000004c) invoke-virtual       v5, v7, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+	20      (00000052) move-result          v7
+	21      (00000054) sget                 v8, Landroid/support/v7/appcompat/R$dimen;->abc_dropdownitem_text_padding_left I
+	22      (00000058) invoke-virtual       v5, v8, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+	23      (0000005e) move-result          v8
+	24      (00000060) add-int              v2, v7, v8
+
+adjustDropDownSizeAndPosition-BB@0x64 : [ adjustDropDownSizeAndPosition-BB@0x7a adjustDropDownSizeAndPosition-BB@0xb8 ]
+	25      (00000064) iget-object          v7, v9, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	26      (00000068) invoke-virtual       v7, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getDropDownBackground()Landroid/graphics/drawable/Drawable;
+	27      (0000006e) move-result-object   v7
+	28      (00000070) invoke-virtual       v7, v1, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+	29      (00000076) if-eqz               v3, +21
+
+adjustDropDownSizeAndPosition-BB@0x7a : [ adjustDropDownSizeAndPosition-BB@0x80 ]
+	30      (0000007a) iget                 v7, v1, Landroid/graphics/Rect;->left I
+	31      (0000007e) neg-int              v4, v7
+
+adjustDropDownSizeAndPosition-BB@0x80 : [ adjustDropDownSizeAndPosition-BB@0xb2 ]
+	32      (00000080) iget-object          v7, v9, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	33      (00000084) invoke-virtual       v7, v4, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setDropDownHorizontalOffset(I)V
+	34      (0000008a) iget-object          v7, v9, Landroid/support/v7/widget/SearchView;->mDropDownAnchor Landroid/view/View;
+	35      (0000008e) invoke-virtual       v7, Landroid/view/View;->getWidth()I
+	36      (00000094) move-result          v7
+	37      (00000096) iget                 v8, v1, Landroid/graphics/Rect;->left I
+	38      (0000009a) add-int/2addr        v7, v8
+	39      (0000009c) iget                 v8, v1, Landroid/graphics/Rect;->right I
+	40      (000000a0) add-int/2addr        v7, v8
+	41      (000000a2) add-int/2addr        v7, v2
+	42      (000000a4) sub-int              v6, v7, v0
+	43      (000000a8) iget-object          v7, v9, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	44      (000000ac) invoke-virtual       v7, v6, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setDropDownWidth(I)V
+
+adjustDropDownSizeAndPosition-BB@0xb2 : 
+	45      (000000b2) return-void          
+
+adjustDropDownSizeAndPosition-BB@0xb4 : [ adjustDropDownSizeAndPosition-BB@0x64 ]
+	46      (000000b4) const/4              v2, 0
+	47      (000000b6) goto                 -29
+
+adjustDropDownSizeAndPosition-BB@0xb8 : [ adjustDropDownSizeAndPosition-BB@0x80 ]
+	48      (000000b8) iget                 v7, v1, Landroid/graphics/Rect;->left I
+	49      (000000bc) add-int/2addr        v7, v2
+	50      (000000be) sub-int              v4, v0, v7
+	51      (000000c2) goto                 -21
+

@@ -1,0 +1,93 @@
+# Landroid/support/v4/widget/SimpleCursorAdapter;->bindView(Landroid/view/View; Landroid/content/Context; Landroid/database/Cursor;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:android.view.View
+# - v13:android.content.Context
+# - v14:android.database.Cursor
+#
+# - return:void
+
+bindView-BB@0x0 : [ bindView-BB@0x14 ]
+	0       (00000000) iget-object          v0, v11, Landroid/support/v4/widget/SimpleCursorAdapter;->mViewBinder Landroid/support/v4/widget/SimpleCursorAdapter$ViewBinder;
+	1       (00000004) iget-object          v8, v11, Landroid/support/v4/widget/SimpleCursorAdapter;->mTo [I
+	2       (00000008) array-length         v2, v8
+	3       (0000000a) iget-object          v3, v11, Landroid/support/v4/widget/SimpleCursorAdapter;->mFrom [I
+	4       (0000000e) iget-object          v6, v11, Landroid/support/v4/widget/SimpleCursorAdapter;->mTo [I
+	5       (00000012) const/4              v4, 0
+
+bindView-BB@0x14 : [ bindView-BB@0x18 bindView-BB@0xcc ]
+	6       (00000014) if-ge                v4, v2, +5c
+
+bindView-BB@0x18 : [ bindView-BB@0x28 bindView-BB@0x64 ]
+	7       (00000018) aget                 v8, v6, v4
+	8       (0000001c) invoke-virtual       v12, v8, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	9       (00000022) move-result-object   v7
+	10      (00000024) if-eqz               v7, +20
+
+bindView-BB@0x28 : [ bindView-BB@0x2e bindView-BB@0x3a ]
+	11      (00000028) const/4              v1, 0
+	12      (0000002a) if-eqz               v0, +8
+
+bindView-BB@0x2e : [ bindView-BB@0x3a ]
+	13      (0000002e) aget                 v8, v3, v4
+	14      (00000032) invoke-interface     v0, v7, v14, v8, Landroid/support/v4/widget/SimpleCursorAdapter$ViewBinder;->setViewValue(Landroid/view/View; Landroid/database/Cursor; I)Z
+	15      (00000038) move-result          v1
+
+bindView-BB@0x3a : [ bindView-BB@0x3e bindView-BB@0x64 ]
+	16      (0000003a) if-nez               v1, +15
+
+bindView-BB@0x3e : [ bindView-BB@0x4e bindView-BB@0x52 ]
+	17      (0000003e) aget                 v8, v3, v4
+	18      (00000042) invoke-interface     v14, v8, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+	19      (00000048) move-result-object   v5
+	20      (0000004a) if-nez               v5, +4
+
+bindView-BB@0x4e : [ bindView-BB@0x52 ]
+	21      (0000004e) const-string         v5, ''
+
+bindView-BB@0x52 : [ bindView-BB@0x5a bindView-BB@0x6a ]
+	22      (00000052) instance-of          v8, v7, Landroid/widget/TextView;
+	23      (00000056) if-eqz               v8, +a
+
+bindView-BB@0x5a : [ bindView-BB@0x64 ]
+	24      (0000005a) check-cast           v7, Landroid/widget/TextView;
+	25      (0000005e) invoke-virtual       v11, v7, v5, Landroid/support/v4/widget/SimpleCursorAdapter;->setViewText(Landroid/widget/TextView; Ljava/lang/String;)V
+
+bindView-BB@0x64 : [ bindView-BB@0x14 ]
+	26      (00000064) add-int/lit8         v4, v4, 1
+	27      (00000068) goto                 -2a
+
+bindView-BB@0x6a : [ bindView-BB@0x72 bindView-BB@0x7e ]
+	28      (0000006a) instance-of          v8, v7, Landroid/widget/ImageView;
+	29      (0000006e) if-eqz               v8, +8
+
+bindView-BB@0x72 : [ bindView-BB@0x64 ]
+	30      (00000072) check-cast           v7, Landroid/widget/ImageView;
+	31      (00000076) invoke-virtual       v11, v7, v5, Landroid/support/v4/widget/SimpleCursorAdapter;->setViewImage(Landroid/widget/ImageView; Ljava/lang/String;)V
+	32      (0000007c) goto                 -c
+
+bindView-BB@0x7e : 
+	33      (0000007e) new-instance         v8, Ljava/lang/IllegalStateException;
+	34      (00000082) new-instance         v9, Ljava/lang/StringBuilder;
+	35      (00000086) invoke-direct        v9, Ljava/lang/StringBuilder;-><init>()V
+	36      (0000008c) invoke-virtual       v7, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	37      (00000092) move-result-object   v10
+	38      (00000094) invoke-virtual       v10, Ljava/lang/Class;->getName()Ljava/lang/String;
+	39      (0000009a) move-result-object   v10
+	40      (0000009c) invoke-virtual       v9, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	41      (000000a2) move-result-object   v9
+	42      (000000a4) const-string         v10, ' is not a '
+	43      (000000a8) invoke-virtual       v9, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	44      (000000ae) move-result-object   v9
+	45      (000000b0) const-string         v10, ' view that can be bounds by this SimpleCursorAdapter'
+	46      (000000b4) invoke-virtual       v9, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	47      (000000ba) move-result-object   v9
+	48      (000000bc) invoke-virtual       v9, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	49      (000000c2) move-result-object   v9
+	50      (000000c4) invoke-direct        v8, v9, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	51      (000000ca) throw                v8
+
+bindView-BB@0xcc : 
+	52      (000000cc) return-void          
+

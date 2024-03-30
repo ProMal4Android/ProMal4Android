@@ -1,0 +1,148 @@
+# Landroid/support/design/widget/TabLayout$TabView;->updateTextAndIcon(Landroid/widget/TextView; Landroid/widget/ImageView;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:android.widget.TextView
+# - v12:android.widget.ImageView
+#
+# - return:void
+
+updateTextAndIcon-BB@0x0 : [ updateTextAndIcon-BB@0x10 updateTextAndIcon-BB@0xea ]
+	0       (00000000) const/16             v9, 8
+	1       (00000004) const/4              v6, 0
+	2       (00000006) const/4              v7, 0
+	3       (00000008) iget-object          v8, v10, Landroid/support/design/widget/TabLayout$TabView;->mTab Landroid/support/design/widget/TabLayout$Tab;
+	4       (0000000c) if-eqz               v8, +6f
+
+updateTextAndIcon-BB@0x10 : [ updateTextAndIcon-BB@0x1c ]
+	5       (00000010) iget-object          v8, v10, Landroid/support/design/widget/TabLayout$TabView;->mTab Landroid/support/design/widget/TabLayout$Tab;
+	6       (00000014) invoke-virtual       v8, Landroid/support/design/widget/TabLayout$Tab;->getIcon()Landroid/graphics/drawable/Drawable;
+	7       (0000001a) move-result-object   v3
+
+updateTextAndIcon-BB@0x1c : [ updateTextAndIcon-BB@0x24 updateTextAndIcon-BB@0xee ]
+	8       (0000001c) iget-object          v8, v10, Landroid/support/design/widget/TabLayout$TabView;->mTab Landroid/support/design/widget/TabLayout$Tab;
+	9       (00000020) if-eqz               v8, +67
+
+updateTextAndIcon-BB@0x24 : [ updateTextAndIcon-BB@0x30 ]
+	10      (00000024) iget-object          v8, v10, Landroid/support/design/widget/TabLayout$TabView;->mTab Landroid/support/design/widget/TabLayout$Tab;
+	11      (00000028) invoke-virtual       v8, Landroid/support/design/widget/TabLayout$Tab;->getText()Ljava/lang/CharSequence;
+	12      (0000002e) move-result-object   v5
+
+updateTextAndIcon-BB@0x30 : [ updateTextAndIcon-BB@0x38 updateTextAndIcon-BB@0xf2 ]
+	13      (00000030) iget-object          v8, v10, Landroid/support/design/widget/TabLayout$TabView;->mTab Landroid/support/design/widget/TabLayout$Tab;
+	14      (00000034) if-eqz               v8, +5f
+
+updateTextAndIcon-BB@0x38 : [ updateTextAndIcon-BB@0x44 ]
+	15      (00000038) iget-object          v8, v10, Landroid/support/design/widget/TabLayout$TabView;->mTab Landroid/support/design/widget/TabLayout$Tab;
+	16      (0000003c) invoke-virtual       v8, Landroid/support/design/widget/TabLayout$Tab;->getContentDescription()Ljava/lang/CharSequence;
+	17      (00000042) move-result-object   v1
+
+updateTextAndIcon-BB@0x44 : [ updateTextAndIcon-BB@0x48 updateTextAndIcon-BB@0x64 ]
+	18      (00000044) if-eqz               v12, +10
+
+updateTextAndIcon-BB@0x48 : [ updateTextAndIcon-BB@0x4c updateTextAndIcon-BB@0xf6 ]
+	19      (00000048) if-eqz               v3, +57
+
+updateTextAndIcon-BB@0x4c : [ updateTextAndIcon-BB@0x5e ]
+	20      (0000004c) invoke-virtual       v12, v3, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	21      (00000052) invoke-virtual       v12, v7, Landroid/widget/ImageView;->setVisibility(I)V
+	22      (00000058) invoke-virtual       v10, v7, Landroid/support/design/widget/TabLayout$TabView;->setVisibility(I)V
+
+updateTextAndIcon-BB@0x5e : [ updateTextAndIcon-BB@0x64 ]
+	23      (0000005e) invoke-virtual       v12, v1, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+updateTextAndIcon-BB@0x64 : [ updateTextAndIcon-BB@0x70 updateTextAndIcon-BB@0x104 ]
+	24      (00000064) invoke-static        v5, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	25      (0000006a) move-result          v8
+	26      (0000006c) if-nez               v8, +4c
+
+updateTextAndIcon-BB@0x70 : [ updateTextAndIcon-BB@0x72 ]
+	27      (00000070) const/4              v2, 1
+
+updateTextAndIcon-BB@0x72 : [ updateTextAndIcon-BB@0x76 updateTextAndIcon-BB@0x92 ]
+	28      (00000072) if-eqz               v11, +10
+
+updateTextAndIcon-BB@0x76 : [ updateTextAndIcon-BB@0x7a updateTextAndIcon-BB@0x108 ]
+	29      (00000076) if-eqz               v2, +49
+
+updateTextAndIcon-BB@0x7a : [ updateTextAndIcon-BB@0x8c ]
+	30      (0000007a) invoke-virtual       v11, v5, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	31      (00000080) invoke-virtual       v11, v7, Landroid/widget/TextView;->setVisibility(I)V
+	32      (00000086) invoke-virtual       v10, v7, Landroid/support/design/widget/TabLayout$TabView;->setVisibility(I)V
+
+updateTextAndIcon-BB@0x8c : [ updateTextAndIcon-BB@0x92 ]
+	33      (0000008c) invoke-virtual       v11, v1, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+updateTextAndIcon-BB@0x92 : [ updateTextAndIcon-BB@0x96 updateTextAndIcon-BB@0xd2 ]
+	34      (00000092) if-eqz               v12, +20
+
+updateTextAndIcon-BB@0x96 : [ updateTextAndIcon-BB@0xa8 updateTextAndIcon-BB@0xc0 ]
+	35      (00000096) invoke-virtual       v12, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	36      (0000009c) move-result-object   v4
+	37      (0000009e) check-cast           v4, Landroid/view/ViewGroup$MarginLayoutParams;
+	38      (000000a2) const/4              v0, 0
+	39      (000000a4) if-eqz               v2, +e
+
+updateTextAndIcon-BB@0xa8 : [ updateTextAndIcon-BB@0xb4 updateTextAndIcon-BB@0xc0 ]
+	40      (000000a8) invoke-virtual       v12, Landroid/widget/ImageView;->getVisibility()I
+	41      (000000ae) move-result          v8
+	42      (000000b0) if-nez               v8, +8
+
+updateTextAndIcon-BB@0xb4 : [ updateTextAndIcon-BB@0xc0 ]
+	43      (000000b4) iget-object          v8, v10, Landroid/support/design/widget/TabLayout$TabView;->this$0 Landroid/support/design/widget/TabLayout;
+	44      (000000b8) invoke-static        v8, v9, Landroid/support/design/widget/TabLayout;->access$2100(Landroid/support/design/widget/TabLayout; I)I
+	45      (000000be) move-result          v0
+
+updateTextAndIcon-BB@0xc0 : [ updateTextAndIcon-BB@0xc8 updateTextAndIcon-BB@0xd2 ]
+	46      (000000c0) iget                 v8, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin I
+	47      (000000c4) if-eq                v0, v8, +7
+
+updateTextAndIcon-BB@0xc8 : [ updateTextAndIcon-BB@0xd2 ]
+	48      (000000c8) iput                 v0, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin I
+	49      (000000cc) invoke-virtual       v12, Landroid/widget/ImageView;->requestLayout()V
+
+updateTextAndIcon-BB@0xd2 : [ updateTextAndIcon-BB@0xd6 updateTextAndIcon-BB@0x116 ]
+	50      (000000d2) if-nez               v2, +22
+
+updateTextAndIcon-BB@0xd6 : [ updateTextAndIcon-BB@0xe2 updateTextAndIcon-BB@0x116 ]
+	51      (000000d6) invoke-static        v1, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	52      (000000dc) move-result          v8
+	53      (000000de) if-nez               v8, +1c
+
+updateTextAndIcon-BB@0xe2 : [ updateTextAndIcon-BB@0xe8 ]
+	54      (000000e2) invoke-virtual       v10, v10, Landroid/support/design/widget/TabLayout$TabView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+
+updateTextAndIcon-BB@0xe8 : 
+	55      (000000e8) return-void          
+
+updateTextAndIcon-BB@0xea : [ updateTextAndIcon-BB@0x1c ]
+	56      (000000ea) move-object          v3, v6
+	57      (000000ec) goto                 -68
+
+updateTextAndIcon-BB@0xee : [ updateTextAndIcon-BB@0x30 ]
+	58      (000000ee) move-object          v5, v6
+	59      (000000f0) goto                 -60
+
+updateTextAndIcon-BB@0xf2 : [ updateTextAndIcon-BB@0x44 ]
+	60      (000000f2) move-object          v1, v6
+	61      (000000f4) goto                 -58
+
+updateTextAndIcon-BB@0xf6 : [ updateTextAndIcon-BB@0x5e ]
+	62      (000000f6) invoke-virtual       v12, v9, Landroid/widget/ImageView;->setVisibility(I)V
+	63      (000000fc) invoke-virtual       v12, v6, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	64      (00000102) goto                 -52
+
+updateTextAndIcon-BB@0x104 : [ updateTextAndIcon-BB@0x72 ]
+	65      (00000104) move                 v2, v7
+	66      (00000106) goto                 -4a
+
+updateTextAndIcon-BB@0x108 : [ updateTextAndIcon-BB@0x8c ]
+	67      (00000108) invoke-virtual       v11, v9, Landroid/widget/TextView;->setVisibility(I)V
+	68      (0000010e) invoke-virtual       v11, v6, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	69      (00000114) goto                 -44
+
+updateTextAndIcon-BB@0x116 : [ updateTextAndIcon-BB@0xe8 ]
+	70      (00000116) invoke-virtual       v10, v6, Landroid/support/design/widget/TabLayout$TabView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+	71      (0000011c) invoke-virtual       v10, v7, Landroid/support/design/widget/TabLayout$TabView;->setLongClickable(Z)V
+	72      (00000122) goto                 -1d
+

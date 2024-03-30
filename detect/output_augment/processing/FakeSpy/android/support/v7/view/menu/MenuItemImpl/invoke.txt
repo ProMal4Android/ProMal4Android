@@ -1,0 +1,73 @@
+# Landroid/support/v7/view/menu/MenuItemImpl;->invoke()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:boolean
+
+invoke-BB@0x0 : [ invoke-BB@0xa invoke-BB@0x1c ]
+	0       (00000000) const/4              v1, 1
+	1       (00000002) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mClickListener Landroid/view/MenuItem$OnMenuItemClickListener;
+	2       (00000006) if-eqz               v2, +b
+
+invoke-BB@0xa : [ invoke-BB@0x1a invoke-BB@0x1c ]
+	3       (0000000a) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mClickListener Landroid/view/MenuItem$OnMenuItemClickListener;
+	4       (0000000e) invoke-interface     v2, v4, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
+	5       (00000014) move-result          v2
+	6       (00000016) if-eqz               v2, +3
+
+invoke-BB@0x1a : 
+	7       (0000001a) return               v1
+
+invoke-BB@0x1c : [ invoke-BB@0x38 invoke-BB@0x1a ]
+	8       (0000001c) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	9       (00000020) iget-object          v3, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	10      (00000024) invoke-virtual       v3, Landroid/support/v7/view/menu/MenuBuilder;->getRootMenu()Landroid/support/v7/view/menu/MenuBuilder;
+	11      (0000002a) move-result-object   v3
+	12      (0000002c) invoke-virtual       v2, v3, v4, Landroid/support/v7/view/menu/MenuBuilder;->dispatchMenuItemSelected(Landroid/support/v7/view/menu/MenuBuilder; Landroid/view/MenuItem;)Z
+	13      (00000032) move-result          v2
+	14      (00000034) if-nez               v2, -d
+
+invoke-BB@0x38 : [ invoke-BB@0x40 invoke-BB@0x4c ]
+	15      (00000038) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mItemCallback Ljava/lang/Runnable;
+	16      (0000003c) if-eqz               v2, +8
+
+invoke-BB@0x40 : [ invoke-BB@0x1a ]
+	17      (00000040) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mItemCallback Ljava/lang/Runnable;
+	18      (00000044) invoke-interface     v2, Ljava/lang/Runnable;->run()V
+	19      (0000004a) goto                 -18
+
+invoke-BB@0x4c : [ invoke-BB@0x54 invoke-BB@0x7c ]
+	20      (0000004c) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mIntent Landroid/content/Intent;
+	21      (00000050) if-eqz               v2, +16
+
+invoke-BB@0x54 : [ invoke-BB@0x1a ]
+	22      (00000054) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	23      (00000058) invoke-virtual       v2, Landroid/support/v7/view/menu/MenuBuilder;->getContext()Landroid/content/Context;
+	24      (0000005e) move-result-object   v2
+	25      (00000060) iget-object          v3, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mIntent Landroid/content/Intent;
+	26      (00000064) invoke-virtual       v2, v3, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+	27      (0000006a) goto                 -28
+	54:69
+	(Landroid/content/ActivityNotFoundException; -> 6c invoke-BB@0x6c)
+
+invoke-BB@0x6c : [ invoke-BB@0x7c ]
+	28      (0000006c) move-exception       v0
+	29      (0000006e) const-string         v2, 'MenuItemImpl'
+	30      (00000072) const-string         v3, "Can't find activity to handle intent; ignoring"
+	31      (00000076) invoke-static        v2, v3, v0, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+
+invoke-BB@0x7c : [ invoke-BB@0x84 invoke-BB@0x94 ]
+	32      (0000007c) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mActionProvider Landroid/support/v4/view/ActionProvider;
+	33      (00000080) if-eqz               v2, +a
+
+invoke-BB@0x84 : [ invoke-BB@0x94 invoke-BB@0x1a ]
+	34      (00000084) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mActionProvider Landroid/support/v4/view/ActionProvider;
+	35      (00000088) invoke-virtual       v2, Landroid/support/v4/view/ActionProvider;->onPerformDefaultAction()Z
+	36      (0000008e) move-result          v2
+	37      (00000090) if-nez               v2, -3b
+
+invoke-BB@0x94 : [ invoke-BB@0x1a ]
+	38      (00000094) const/4              v1, 0
+	39      (00000096) goto                 -3e
+

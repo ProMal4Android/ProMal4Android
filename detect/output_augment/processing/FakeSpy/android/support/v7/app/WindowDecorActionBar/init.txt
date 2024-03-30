@@ -1,0 +1,147 @@
+# Landroid/support/v7/app/WindowDecorActionBar;->init(Landroid/view/View;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:android.view.View
+#
+# - return:void
+
+init-BB@0x0 : [ init-BB@0x20 init-BB@0x2a ]
+	0       (00000000) const/4              v7, 1
+	1       (00000002) const/4              v6, 0
+	2       (00000004) sget                 v5, Landroid/support/v7/appcompat/R$id;->decor_content_parent I
+	3       (00000008) invoke-virtual       v12, v5, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	4       (0000000e) move-result-object   v5
+	5       (00000010) check-cast           v5, Landroid/support/v7/widget/ActionBarOverlayLayout;
+	6       (00000014) iput-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mOverlayLayout Landroid/support/v7/widget/ActionBarOverlayLayout;
+	7       (00000018) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mOverlayLayout Landroid/support/v7/widget/ActionBarOverlayLayout;
+	8       (0000001c) if-eqz               v5, +7
+
+init-BB@0x20 : [ init-BB@0x2a ]
+	9       (00000020) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mOverlayLayout Landroid/support/v7/widget/ActionBarOverlayLayout;
+	10      (00000024) invoke-virtual       v5, v11, Landroid/support/v7/widget/ActionBarOverlayLayout;->setActionBarVisibilityCallback(Landroid/support/v7/widget/ActionBarOverlayLayout$ActionBarVisibilityCallback;)V
+
+init-BB@0x2a : [ init-BB@0x72 init-BB@0x82 ]
+	11      (0000002a) sget                 v5, Landroid/support/v7/appcompat/R$id;->action_bar I
+	12      (0000002e) invoke-virtual       v12, v5, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	13      (00000034) move-result-object   v5
+	14      (00000036) invoke-direct        v11, v5, Landroid/support/v7/app/WindowDecorActionBar;->getDecorToolbar(Landroid/view/View;)Landroid/support/v7/widget/DecorToolbar;
+	15      (0000003c) move-result-object   v5
+	16      (0000003e) iput-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mDecorToolbar Landroid/support/v7/widget/DecorToolbar;
+	17      (00000042) sget                 v5, Landroid/support/v7/appcompat/R$id;->action_context_bar I
+	18      (00000046) invoke-virtual       v12, v5, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	19      (0000004c) move-result-object   v5
+	20      (0000004e) check-cast           v5, Landroid/support/v7/widget/ActionBarContextView;
+	21      (00000052) iput-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mContextView Landroid/support/v7/widget/ActionBarContextView;
+	22      (00000056) sget                 v5, Landroid/support/v7/appcompat/R$id;->action_bar_container I
+	23      (0000005a) invoke-virtual       v12, v5, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	24      (00000060) move-result-object   v5
+	25      (00000062) check-cast           v5, Landroid/support/v7/widget/ActionBarContainer;
+	26      (00000066) iput-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mContainerView Landroid/support/v7/widget/ActionBarContainer;
+	27      (0000006a) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mDecorToolbar Landroid/support/v7/widget/DecorToolbar;
+	28      (0000006e) if-eqz               v5, +a
+
+init-BB@0x72 : [ init-BB@0x7a init-BB@0x82 ]
+	29      (00000072) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mContextView Landroid/support/v7/widget/ActionBarContextView;
+	30      (00000076) if-eqz               v5, +6
+
+init-BB@0x7a : [ init-BB@0x82 init-BB@0xd0 ]
+	31      (0000007a) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mContainerView Landroid/support/v7/widget/ActionBarContainer;
+	32      (0000007e) if-nez               v5, +29
+
+init-BB@0x82 : 
+	33      (00000082) new-instance         v5, Ljava/lang/IllegalStateException;
+	34      (00000086) new-instance         v6, Ljava/lang/StringBuilder;
+	35      (0000008a) invoke-direct        v6, Ljava/lang/StringBuilder;-><init>()V
+	36      (00000090) invoke-virtual       v11, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	37      (00000096) move-result-object   v7
+	38      (00000098) invoke-virtual       v7, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+	39      (0000009e) move-result-object   v7
+	40      (000000a0) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	41      (000000a6) move-result-object   v6
+	42      (000000a8) const-string         v7, ' can only be used '
+	43      (000000ac) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	44      (000000b2) move-result-object   v6
+	45      (000000b4) const-string         v7, 'with a compatible window decor layout'
+	46      (000000b8) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	47      (000000be) move-result-object   v6
+	48      (000000c0) invoke-virtual       v6, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	49      (000000c6) move-result-object   v6
+	50      (000000c8) invoke-direct        v5, v6, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	51      (000000ce) throw                v5
+
+init-BB@0xd0 : [ init-BB@0xf4 init-BB@0x17c ]
+	52      (000000d0) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mDecorToolbar Landroid/support/v7/widget/DecorToolbar;
+	53      (000000d4) invoke-interface     v5, Landroid/support/v7/widget/DecorToolbar;->getContext()Landroid/content/Context;
+	54      (000000da) move-result-object   v5
+	55      (000000dc) iput-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mContext Landroid/content/Context;
+	56      (000000e0) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mDecorToolbar Landroid/support/v7/widget/DecorToolbar;
+	57      (000000e4) invoke-interface     v5, Landroid/support/v7/widget/DecorToolbar;->getDisplayOptions()I
+	58      (000000ea) move-result          v2
+	59      (000000ec) and-int/lit8         v5, v2, 4
+	60      (000000f0) if-eqz               v5, +46
+
+init-BB@0xf4 : [ init-BB@0xf6 ]
+	61      (000000f4) move                 v4, v7
+
+init-BB@0xf6 : [ init-BB@0xfa init-BB@0xfe ]
+	62      (000000f6) if-eqz               v4, +4
+
+init-BB@0xfa : [ init-BB@0xfe ]
+	63      (000000fa) iput-boolean         v7, v11, Landroid/support/v7/app/WindowDecorActionBar;->mDisplayHomeAsUpSet Z
+
+init-BB@0xfe : [ init-BB@0x116 init-BB@0x11a ]
+	64      (000000fe) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mContext Landroid/content/Context;
+	65      (00000102) invoke-static        v5, Landroid/support/v7/view/ActionBarPolicy;->get(Landroid/content/Context;)Landroid/support/v7/view/ActionBarPolicy;
+	66      (00000108) move-result-object   v1
+	67      (0000010a) invoke-virtual       v1, Landroid/support/v7/view/ActionBarPolicy;->enableHomeButtonByDefault()Z
+	68      (00000110) move-result          v5
+	69      (00000112) if-nez               v5, +4
+
+init-BB@0x116 : [ init-BB@0x11a init-BB@0x180 ]
+	70      (00000116) if-eqz               v4, +35
+
+init-BB@0x11a : [ init-BB@0x11c ]
+	71      (0000011a) move                 v5, v7
+
+init-BB@0x11c : [ init-BB@0x156 init-BB@0x15c ]
+	72      (0000011c) invoke-virtual       v11, v5, Landroid/support/v7/app/WindowDecorActionBar;->setHomeButtonEnabled(Z)V
+	73      (00000122) invoke-virtual       v1, Landroid/support/v7/view/ActionBarPolicy;->hasEmbeddedTabs()Z
+	74      (00000128) move-result          v5
+	75      (0000012a) invoke-direct        v11, v5, Landroid/support/v7/app/WindowDecorActionBar;->setHasEmbeddedTabs(Z)V
+	76      (00000130) iget-object          v5, v11, Landroid/support/v7/app/WindowDecorActionBar;->mContext Landroid/content/Context;
+	77      (00000134) const/4              v8, 0
+	78      (00000136) sget-object          v9, Landroid/support/v7/appcompat/R$styleable;->ActionBar [I
+	79      (0000013a) sget                 v10, Landroid/support/v7/appcompat/R$attr;->actionBarStyle I
+	80      (0000013e) invoke-virtual       v5, v8, v9, v10, v6, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I I I)Landroid/content/res/TypedArray;
+	81      (00000144) move-result-object   v0
+	82      (00000146) sget                 v5, Landroid/support/v7/appcompat/R$styleable;->ActionBar_hideOnContentScroll I
+	83      (0000014a) invoke-virtual       v0, v5, v6, Landroid/content/res/TypedArray;->getBoolean(I Z)Z
+	84      (00000150) move-result          v5
+	85      (00000152) if-eqz               v5, +5
+
+init-BB@0x156 : [ init-BB@0x15c ]
+	86      (00000156) invoke-virtual       v11, v7, Landroid/support/v7/app/WindowDecorActionBar;->setHideOnContentScrollEnabled(Z)V
+
+init-BB@0x15c : [ init-BB@0x16c init-BB@0x174 ]
+	87      (0000015c) sget                 v5, Landroid/support/v7/appcompat/R$styleable;->ActionBar_elevation I
+	88      (00000160) invoke-virtual       v0, v5, v6, Landroid/content/res/TypedArray;->getDimensionPixelSize(I I)I
+	89      (00000166) move-result          v3
+	90      (00000168) if-eqz               v3, +6
+
+init-BB@0x16c : [ init-BB@0x174 ]
+	91      (0000016c) int-to-float         v5, v3
+	92      (0000016e) invoke-virtual       v11, v5, Landroid/support/v7/app/WindowDecorActionBar;->setElevation(F)V
+
+init-BB@0x174 : 
+	93      (00000174) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+	94      (0000017a) return-void          
+
+init-BB@0x17c : [ init-BB@0xf6 ]
+	95      (0000017c) move                 v4, v6
+	96      (0000017e) goto                 -44
+
+init-BB@0x180 : [ init-BB@0x11c ]
+	97      (00000180) move                 v5, v6
+	98      (00000182) goto                 -33
+

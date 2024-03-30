@@ -1,0 +1,48 @@
+# Landroid/support/design/widget/Snackbar$SnackbarLayout;-><init>(Landroid/content/Context; Landroid/util/AttributeSet;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.content.Context
+# - v6:android.util.AttributeSet
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x46 <init>-BB@0x5c ]
+	0       (00000000) const/4              v2, -1
+	1       (00000002) const/4              v3, 1
+	2       (00000004) invoke-direct        v4, v5, v6, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context; Landroid/util/AttributeSet;)V
+	3       (0000000a) sget-object          v1, Landroid/support/design/R$styleable;->SnackbarLayout [I
+	4       (0000000e) invoke-virtual       v5, v6, v1, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I)Landroid/content/res/TypedArray;
+	5       (00000014) move-result-object   v0
+	6       (00000016) sget                 v1, Landroid/support/design/R$styleable;->SnackbarLayout_android_maxWidth I
+	7       (0000001a) invoke-virtual       v0, v1, v2, Landroid/content/res/TypedArray;->getDimensionPixelSize(I I)I
+	8       (00000020) move-result          v1
+	9       (00000022) iput                 v1, v4, Landroid/support/design/widget/Snackbar$SnackbarLayout;->mMaxWidth I
+	10      (00000026) sget                 v1, Landroid/support/design/R$styleable;->SnackbarLayout_maxActionInlineWidth I
+	11      (0000002a) invoke-virtual       v0, v1, v2, Landroid/content/res/TypedArray;->getDimensionPixelSize(I I)I
+	12      (00000030) move-result          v1
+	13      (00000032) iput                 v1, v4, Landroid/support/design/widget/Snackbar$SnackbarLayout;->mMaxInlineActionWidth I
+	14      (00000036) sget                 v1, Landroid/support/design/R$styleable;->SnackbarLayout_elevation I
+	15      (0000003a) invoke-virtual       v0, v1, Landroid/content/res/TypedArray;->hasValue(I)Z
+	16      (00000040) move-result          v1
+	17      (00000042) if-eqz               v1, +d
+
+<init>-BB@0x46 : [ <init>-BB@0x5c ]
+	18      (00000046) sget                 v1, Landroid/support/design/R$styleable;->SnackbarLayout_elevation I
+	19      (0000004a) const/4              v2, 0
+	20      (0000004c) invoke-virtual       v0, v1, v2, Landroid/content/res/TypedArray;->getDimensionPixelSize(I I)I
+	21      (00000052) move-result          v1
+	22      (00000054) int-to-float         v1, v1
+	23      (00000056) invoke-static        v4, v1, Landroid/support/v4/view/ViewCompat;->setElevation(Landroid/view/View; F)V
+
+<init>-BB@0x5c : 
+	24      (0000005c) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+	25      (00000062) invoke-virtual       v4, v3, Landroid/support/design/widget/Snackbar$SnackbarLayout;->setClickable(Z)V
+	26      (00000068) invoke-static        v5, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+	27      (0000006e) move-result-object   v1
+	28      (00000070) sget                 v2, Landroid/support/design/R$layout;->design_layout_snackbar_include I
+	29      (00000074) invoke-virtual       v1, v2, v4, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup;)Landroid/view/View;
+	30      (0000007a) invoke-static        v4, v3, Landroid/support/v4/view/ViewCompat;->setAccessibilityLiveRegion(Landroid/view/View; I)V
+	31      (00000080) invoke-static        v4, v3, Landroid/support/v4/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View; I)V
+	32      (00000086) return-void          
+

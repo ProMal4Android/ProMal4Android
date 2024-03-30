@@ -1,0 +1,42 @@
+# Landroid/support/v4/view/ViewParentCompatLollipop;->onNestedPreFling(Landroid/view/ViewParent; Landroid/view/View; F F)Z [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.view.ViewParent
+# - v5:android.view.View
+# - v6:float
+# - v7:float
+#
+# - return:boolean
+
+onNestedPreFling-BB@0x0 : [ onNestedPreFling-BB@0x8 ]
+	0       (00000000) invoke-interface     v4, v5, v6, v7, Landroid/view/ViewParent;->onNestedPreFling(Landroid/view/View; F F)Z
+	1       (00000006) move-result          v1
+	0:5
+	(Ljava/lang/AbstractMethodError; -> a onNestedPreFling-BB@0xa)
+
+onNestedPreFling-BB@0x8 : 
+	2       (00000008) return               v1
+
+onNestedPreFling-BB@0xa : [ onNestedPreFling-BB@0x8 ]
+	3       (0000000a) move-exception       v0
+	4       (0000000c) const-string         v1, 'ViewParentCompat'
+	5       (00000010) new-instance         v2, Ljava/lang/StringBuilder;
+	6       (00000014) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	7       (0000001a) const-string         v3, 'ViewParent '
+	8       (0000001e) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000024) move-result-object   v2
+	10      (00000026) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	11      (0000002c) move-result-object   v2
+	12      (0000002e) const-string         v3, ' does not implement interface '
+	13      (00000032) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (00000038) move-result-object   v2
+	15      (0000003a) const-string         v3, 'method onNestedPreFling'
+	16      (0000003e) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000044) move-result-object   v2
+	18      (00000046) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	19      (0000004c) move-result-object   v2
+	20      (0000004e) invoke-static        v1, v2, v0, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	21      (00000054) const/4              v1, 0
+	22      (00000056) goto                 -27
+

@@ -1,0 +1,121 @@
+# Landroid/support/v4/app/Fragment;->instantiate(Landroid/content/Context; Ljava/lang/String; Landroid/os/Bundle;)Landroid/support/v4/app/Fragment; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.Context
+# - v7:java.lang.String
+# - v8:android.os.Bundle
+#
+# - return:android.support.v4.app.Fragment
+
+instantiate-BB@0x0 : [ instantiate-BB@0x14 instantiate-BB@0x2e ]
+	0       (00000000) sget-object          v3, Landroid/support/v4/app/Fragment;->sClassMap Landroid/support/v4/util/SimpleArrayMap;
+	1       (00000004) invoke-virtual       v3, v7, Landroid/support/v4/util/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) check-cast           v0, Ljava/lang/Class;
+	4       (00000010) if-nez               v0, +f
+	0:57
+	(Ljava/lang/ClassNotFoundException; -> 5a instantiate-BB@0x5a)
+	(Ljava/lang/InstantiationException; -> a6 instantiate-BB@0xa6)
+	(Ljava/lang/IllegalAccessException; -> f2 instantiate-BB@0xf2)
+
+instantiate-BB@0x14 : [ instantiate-BB@0x2e ]
+	5       (00000014) invoke-virtual       v6, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+	6       (0000001a) move-result-object   v3
+	7       (0000001c) invoke-virtual       v3, v7, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+	8       (00000022) move-result-object   v0
+	9       (00000024) sget-object          v3, Landroid/support/v4/app/Fragment;->sClassMap Landroid/support/v4/util/SimpleArrayMap;
+	10      (00000028) invoke-virtual       v3, v7, v0, Landroid/support/v4/util/SimpleArrayMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	0:57
+	(Ljava/lang/ClassNotFoundException; -> 5a instantiate-BB@0x5a)
+	(Ljava/lang/InstantiationException; -> a6 instantiate-BB@0xa6)
+	(Ljava/lang/IllegalAccessException; -> f2 instantiate-BB@0xf2)
+
+instantiate-BB@0x2e : [ instantiate-BB@0x3e instantiate-BB@0x58 ]
+	11      (0000002e) invoke-virtual       v0, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+	12      (00000034) move-result-object   v2
+	13      (00000036) check-cast           v2, Landroid/support/v4/app/Fragment;
+	14      (0000003a) if-eqz               v8, +f
+	0:57
+	(Ljava/lang/ClassNotFoundException; -> 5a instantiate-BB@0x5a)
+	(Ljava/lang/InstantiationException; -> a6 instantiate-BB@0xa6)
+	(Ljava/lang/IllegalAccessException; -> f2 instantiate-BB@0xf2)
+
+instantiate-BB@0x3e : [ instantiate-BB@0x58 ]
+	15      (0000003e) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	16      (00000044) move-result-object   v3
+	17      (00000046) invoke-virtual       v3, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+	18      (0000004c) move-result-object   v3
+	19      (0000004e) invoke-virtual       v8, v3, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
+	20      (00000054) iput-object          v8, v2, Landroid/support/v4/app/Fragment;->mArguments Landroid/os/Bundle;
+	0:57
+	(Ljava/lang/ClassNotFoundException; -> 5a instantiate-BB@0x5a)
+	(Ljava/lang/InstantiationException; -> a6 instantiate-BB@0xa6)
+	(Ljava/lang/IllegalAccessException; -> f2 instantiate-BB@0xf2)
+
+instantiate-BB@0x58 : 
+	21      (00000058) return-object        v2
+
+instantiate-BB@0x5a : 
+	22      (0000005a) move-exception       v1
+	23      (0000005c) new-instance         v3, Landroid/support/v4/app/Fragment$InstantiationException;
+	24      (00000060) new-instance         v4, Ljava/lang/StringBuilder;
+	25      (00000064) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	26      (0000006a) const-string         v5, 'Unable to instantiate fragment '
+	27      (0000006e) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	28      (00000074) move-result-object   v4
+	29      (00000076) invoke-virtual       v4, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	30      (0000007c) move-result-object   v4
+	31      (0000007e) const-string         v5, ': make sure class name exists, is public, and has an'
+	32      (00000082) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	33      (00000088) move-result-object   v4
+	34      (0000008a) const-string         v5, ' empty constructor that is public'
+	35      (0000008e) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	36      (00000094) move-result-object   v4
+	37      (00000096) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	38      (0000009c) move-result-object   v4
+	39      (0000009e) invoke-direct        v3, v4, v1, Landroid/support/v4/app/Fragment$InstantiationException;-><init>(Ljava/lang/String; Ljava/lang/Exception;)V
+	40      (000000a4) throw                v3
+
+instantiate-BB@0xa6 : 
+	41      (000000a6) move-exception       v1
+	42      (000000a8) new-instance         v3, Landroid/support/v4/app/Fragment$InstantiationException;
+	43      (000000ac) new-instance         v4, Ljava/lang/StringBuilder;
+	44      (000000b0) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	45      (000000b6) const-string         v5, 'Unable to instantiate fragment '
+	46      (000000ba) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	47      (000000c0) move-result-object   v4
+	48      (000000c2) invoke-virtual       v4, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	49      (000000c8) move-result-object   v4
+	50      (000000ca) const-string         v5, ': make sure class name exists, is public, and has an'
+	51      (000000ce) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	52      (000000d4) move-result-object   v4
+	53      (000000d6) const-string         v5, ' empty constructor that is public'
+	54      (000000da) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	55      (000000e0) move-result-object   v4
+	56      (000000e2) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	57      (000000e8) move-result-object   v4
+	58      (000000ea) invoke-direct        v3, v4, v1, Landroid/support/v4/app/Fragment$InstantiationException;-><init>(Ljava/lang/String; Ljava/lang/Exception;)V
+	59      (000000f0) throw                v3
+
+instantiate-BB@0xf2 : 
+	60      (000000f2) move-exception       v1
+	61      (000000f4) new-instance         v3, Landroid/support/v4/app/Fragment$InstantiationException;
+	62      (000000f8) new-instance         v4, Ljava/lang/StringBuilder;
+	63      (000000fc) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	64      (00000102) const-string         v5, 'Unable to instantiate fragment '
+	65      (00000106) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	66      (0000010c) move-result-object   v4
+	67      (0000010e) invoke-virtual       v4, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	68      (00000114) move-result-object   v4
+	69      (00000116) const-string         v5, ': make sure class name exists, is public, and has an'
+	70      (0000011a) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	71      (00000120) move-result-object   v4
+	72      (00000122) const-string         v5, ' empty constructor that is public'
+	73      (00000126) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	74      (0000012c) move-result-object   v4
+	75      (0000012e) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	76      (00000134) move-result-object   v4
+	77      (00000136) invoke-direct        v3, v4, v1, Landroid/support/v4/app/Fragment$InstantiationException;-><init>(Ljava/lang/String; Ljava/lang/Exception;)V
+	78      (0000013c) throw                v3
+

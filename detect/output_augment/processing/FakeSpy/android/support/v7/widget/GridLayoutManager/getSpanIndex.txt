@@ -1,0 +1,58 @@
+# Landroid/support/v7/widget/GridLayoutManager;->getSpanIndex(Landroid/support/v7/widget/RecyclerView$Recycler; Landroid/support/v7/widget/RecyclerView$State; I)I [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.support.v7.widget.RecyclerView$Recycler
+# - v7:android.support.v7.widget.RecyclerView$State
+# - v8:int
+#
+# - return:int
+
+getSpanIndex-BB@0x0 : [ getSpanIndex-BB@0xe getSpanIndex-BB@0x20 ]
+	0       (00000000) const/4              v3, -1
+	1       (00000002) invoke-virtual       v7, Landroid/support/v7/widget/RecyclerView$State;->isPreLayout()Z
+	2       (00000008) move-result          v2
+	3       (0000000a) if-nez               v2, +b
+
+getSpanIndex-BB@0xe : [ getSpanIndex-BB@0x1e ]
+	4       (0000000e) iget-object          v2, v5, Landroid/support/v7/widget/GridLayoutManager;->mSpanSizeLookup Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;
+	5       (00000012) iget                 v3, v5, Landroid/support/v7/widget/GridLayoutManager;->mSpanCount I
+	6       (00000016) invoke-virtual       v2, v8, v3, Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;->getCachedSpanIndex(I I)I
+	7       (0000001c) move-result          v1
+
+getSpanIndex-BB@0x1e : 
+	8       (0000001e) return               v1
+
+getSpanIndex-BB@0x20 : [ getSpanIndex-BB@0x30 getSpanIndex-BB@0x1e ]
+	9       (00000020) iget-object          v2, v5, Landroid/support/v7/widget/GridLayoutManager;->mPreLayoutSpanIndexCache Landroid/util/SparseIntArray;
+	10      (00000024) invoke-virtual       v2, v8, v3, Landroid/util/SparseIntArray;->get(I I)I
+	11      (0000002a) move-result          v1
+	12      (0000002c) if-ne                v1, v3, -7
+
+getSpanIndex-BB@0x30 : [ getSpanIndex-BB@0x3c getSpanIndex-BB@0x70 ]
+	13      (00000030) invoke-virtual       v6, v8, Landroid/support/v7/widget/RecyclerView$Recycler;->convertPreLayoutPositionToPostLayout(I)I
+	14      (00000036) move-result          v0
+	15      (00000038) if-ne                v0, v3, +1c
+
+getSpanIndex-BB@0x3c : [ getSpanIndex-BB@0x1e ]
+	16      (0000003c) const-string         v2, 'GridLayoutManager'
+	17      (00000040) new-instance         v3, Ljava/lang/StringBuilder;
+	18      (00000044) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	19      (0000004a) const-string         v4, 'Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:'
+	20      (0000004e) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	21      (00000054) move-result-object   v3
+	22      (00000056) invoke-virtual       v3, v8, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	23      (0000005c) move-result-object   v3
+	24      (0000005e) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	25      (00000064) move-result-object   v3
+	26      (00000066) invoke-static        v2, v3, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	27      (0000006c) const/4              v1, 0
+	28      (0000006e) goto                 -28
+
+getSpanIndex-BB@0x70 : [ getSpanIndex-BB@0x1e ]
+	29      (00000070) iget-object          v2, v5, Landroid/support/v7/widget/GridLayoutManager;->mSpanSizeLookup Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;
+	30      (00000074) iget                 v3, v5, Landroid/support/v7/widget/GridLayoutManager;->mSpanCount I
+	31      (00000078) invoke-virtual       v2, v0, v3, Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;->getCachedSpanIndex(I I)I
+	32      (0000007e) move-result          v1
+	33      (00000080) goto                 -31
+

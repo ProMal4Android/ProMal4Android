@@ -1,0 +1,71 @@
+# Landroid/support/v7/widget/DefaultItemAnimator;->animateMove(Landroid/support/v7/widget/RecyclerView$ViewHolder; I I I I)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:android.support.v7.widget.RecyclerView$ViewHolder
+# - v13:int
+# - v14:int
+# - v15:int
+# - v16:int
+#
+# - return:boolean
+
+animateMove-BB@0x0 : [ animateMove-BB@0x3a animateMove-BB@0x48 ]
+	0       (00000000) iget-object          v9, v12, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	1       (00000004) int-to-float         v0, v13
+	2       (00000006) iget-object          v1, v12, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	3       (0000000a) invoke-static        v1, Landroid/support/v4/view/ViewCompat;->getTranslationX(Landroid/view/View;)F
+	4       (00000010) move-result          v1
+	5       (00000012) add-float/2addr      v0, v1
+	6       (00000014) float-to-int         v13, v0
+	7       (00000016) int-to-float         v0, v14
+	8       (00000018) iget-object          v1, v12, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	9       (0000001c) invoke-static        v1, Landroid/support/v4/view/ViewCompat;->getTranslationY(Landroid/view/View;)F
+	10      (00000022) move-result          v1
+	11      (00000024) add-float/2addr      v0, v1
+	12      (00000026) float-to-int         v14, v0
+	13      (00000028) invoke-direct        v11, v12, Landroid/support/v7/widget/DefaultItemAnimator;->resetAnimation(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	14      (0000002e) sub-int              v7, v15, v13
+	15      (00000032) sub-int              v8, v16, v14
+	16      (00000036) if-nez               v7, +9
+
+animateMove-BB@0x3a : [ animateMove-BB@0x3e animateMove-BB@0x48 ]
+	17      (0000003a) if-nez               v8, +7
+
+animateMove-BB@0x3e : [ animateMove-BB@0x46 ]
+	18      (0000003e) invoke-virtual       v11, v12, Landroid/support/v7/widget/DefaultItemAnimator;->dispatchMoveFinished(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	19      (00000044) const/4              v0, 0
+
+animateMove-BB@0x46 : 
+	20      (00000046) return               v0
+
+animateMove-BB@0x48 : [ animateMove-BB@0x4c animateMove-BB@0x56 ]
+	21      (00000048) if-eqz               v7, +7
+
+animateMove-BB@0x4c : [ animateMove-BB@0x56 ]
+	22      (0000004c) neg-int              v0, v7
+	23      (0000004e) int-to-float         v0, v0
+	24      (00000050) invoke-static        v9, v0, Landroid/support/v4/view/ViewCompat;->setTranslationX(Landroid/view/View; F)V
+
+animateMove-BB@0x56 : [ animateMove-BB@0x5a animateMove-BB@0x64 ]
+	25      (00000056) if-eqz               v8, +7
+
+animateMove-BB@0x5a : [ animateMove-BB@0x64 ]
+	26      (0000005a) neg-int              v0, v8
+	27      (0000005c) int-to-float         v0, v0
+	28      (0000005e) invoke-static        v9, v0, Landroid/support/v4/view/ViewCompat;->setTranslationY(Landroid/view/View; F)V
+
+animateMove-BB@0x64 : [ animateMove-BB@0x46 ]
+	29      (00000064) iget-object          v10, v11, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingMoves Ljava/util/ArrayList;
+	30      (00000068) new-instance         v0, Landroid/support/v7/widget/DefaultItemAnimator$MoveInfo;
+	31      (0000006c) const/4              v6, 0
+	32      (0000006e) move-object          v1, v12
+	33      (00000070) move                 v2, v13
+	34      (00000072) move                 v3, v14
+	35      (00000074) move                 v4, v15
+	36      (00000076) move/from16          v5, v16
+	37      (0000007a) invoke-direct/range  v0 ... v6, Landroid/support/v7/widget/DefaultItemAnimator$MoveInfo;-><init>(Landroid/support/v7/widget/RecyclerView$ViewHolder; I I I I Landroid/support/v7/widget/DefaultItemAnimator$1;)V
+	38      (00000080) invoke-virtual       v10, v0, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	39      (00000086) const/4              v0, 1
+	40      (00000088) goto                 -21
+

@@ -1,0 +1,31 @@
+# Landroid/support/v4/app/Fragment;->findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment; [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+#
+# - return:android.support.v4.app.Fragment
+
+findFragmentByWho-BB@0x0 : [ findFragmentByWho-BB@0x10 findFragmentByWho-BB@0x12 ]
+	0       (00000000) iget-object          v0, v1, Landroid/support/v4/app/Fragment;->mWho Ljava/lang/String;
+	1       (00000004) invoke-virtual       v2, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	2       (0000000a) move-result          v0
+	3       (0000000c) if-eqz               v0, +3
+
+findFragmentByWho-BB@0x10 : 
+	4       (00000010) return-object        v1
+
+findFragmentByWho-BB@0x12 : [ findFragmentByWho-BB@0x1a findFragmentByWho-BB@0x28 ]
+	5       (00000012) iget-object          v0, v1, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	6       (00000016) if-eqz               v0, +9
+
+findFragmentByWho-BB@0x1a : [ findFragmentByWho-BB@0x10 ]
+	7       (0000001a) iget-object          v0, v1, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	8       (0000001e) invoke-virtual       v0, v2, Landroid/support/v4/app/FragmentManagerImpl;->findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;
+	9       (00000024) move-result-object   v1
+	10      (00000026) goto                 -b
+
+findFragmentByWho-BB@0x28 : [ findFragmentByWho-BB@0x10 ]
+	11      (00000028) const/4              v1, 0
+	12      (0000002a) goto                 -d
+

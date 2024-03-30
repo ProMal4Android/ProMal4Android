@@ -1,0 +1,23 @@
+# Landroid/support/v4/app/ShareCompat;->getCallingPackage(Landroid/app/Activity;)Ljava/lang/String; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.app.Activity
+#
+# - return:java.lang.String
+
+getCallingPackage-BB@0x0 : [ getCallingPackage-BB@0xc getCallingPackage-BB@0x20 ]
+	0       (00000000) invoke-virtual       v3, Landroid/app/Activity;->getCallingPackage()Ljava/lang/String;
+	1       (00000006) move-result-object   v0
+	2       (00000008) if-nez               v0, +c
+
+getCallingPackage-BB@0xc : [ getCallingPackage-BB@0x20 ]
+	3       (0000000c) invoke-virtual       v3, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+	4       (00000012) move-result-object   v1
+	5       (00000014) const-string         v2, 'android.support.v4.app.EXTRA_CALLING_PACKAGE'
+	6       (00000018) invoke-virtual       v1, v2, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	7       (0000001e) move-result-object   v0
+
+getCallingPackage-BB@0x20 : 
+	8       (00000020) return-object        v0
+

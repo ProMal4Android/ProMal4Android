@@ -1,0 +1,24 @@
+# Landroid/support/v7/view/menu/ActionMenuItemView;->hasText()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:boolean
+
+hasText-BB@0x0 : [ hasText-BB@0x14 hasText-BB@0x18 ]
+	0       (00000000) invoke-virtual       v1, Landroid/support/v7/view/menu/ActionMenuItemView;->getText()Ljava/lang/CharSequence;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-static        v0, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	3       (0000000e) move-result          v0
+	4       (00000010) if-nez               v0, +4
+
+hasText-BB@0x14 : [ hasText-BB@0x16 ]
+	5       (00000014) const/4              v0, 1
+
+hasText-BB@0x16 : 
+	6       (00000016) return               v0
+
+hasText-BB@0x18 : [ hasText-BB@0x16 ]
+	7       (00000018) const/4              v0, 0
+	8       (0000001a) goto                 -2
+

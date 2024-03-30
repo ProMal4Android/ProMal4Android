@@ -1,0 +1,68 @@
+# Lcom/sun/crypto/provider/DESedeWrapCipher;->engineGetParameters()Ljava/security/AlgorithmParameters; [access_flags=protected]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:java.security.AlgorithmParameters
+
+engineGetParameters-BB@0x0 : [ engineGetParameters-BB@0xa engineGetParameters-BB@0x36 ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) iget-object          v1, v4, Lcom/sun/crypto/provider/DESedeWrapCipher;->c [B
+	2       (00000006) if-eqz               v1, +18
+
+engineGetParameters-BB@0xa : [ engineGetParameters-BB@0x16 ]
+	3       (0000000a) iget-object          v0, v4, Lcom/sun/crypto/provider/DESedeWrapCipher;->d Ljava/security/Key;
+	4       (0000000e) invoke-interface     v0, Ljava/security/Key;->getAlgorithm()Ljava/lang/String;
+	5       (00000014) move-result-object   v0
+
+engineGetParameters-BB@0x16 : [ engineGetParameters-BB@0x22 ]
+	6       (00000016) const-string         v1, 'SunJCE'
+	7       (0000001a) invoke-static        v0, v1, Ljava/security/AlgorithmParameters;->getInstance(Ljava/lang/String; Ljava/lang/String;)Ljava/security/AlgorithmParameters;
+	8       (00000020) move-result-object   v0
+	16:1f
+	(Ljava/security/NoSuchAlgorithmException; -> 38 engineGetParameters-BB@0x38)
+	(Ljava/security/NoSuchProviderException; -> 78 engineGetParameters-BB@0x78)
+
+engineGetParameters-BB@0x22 : [ engineGetParameters-BB@0x36 ]
+	9       (00000022) new-instance         v1, Ljavax/crypto/spec/IvParameterSpec;
+	10      (00000026) iget-object          v2, v4, Lcom/sun/crypto/provider/DESedeWrapCipher;->c [B
+	11      (0000002a) invoke-direct        v1, v2, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
+	12      (00000030) invoke-virtual       v0, v1, Ljava/security/AlgorithmParameters;->init(Ljava/security/spec/AlgorithmParameterSpec;)V
+	22:35
+	(Ljava/security/spec/InvalidParameterSpecException; -> 8a engineGetParameters-BB@0x8a)
+
+engineGetParameters-BB@0x36 : 
+	13      (00000036) return-object        v0
+
+engineGetParameters-BB@0x38 : 
+	14      (00000038) move-exception       v1
+	15      (0000003a) new-instance         v1, Ljava/lang/RuntimeException;
+	16      (0000003e) new-instance         v2, Ljava/lang/StringBuilder;
+	17      (00000042) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	18      (00000048) const-string         v3, 'Cannot find '
+	19      (0000004c) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (00000052) move-result-object   v2
+	21      (00000054) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	22      (0000005a) move-result-object   v0
+	23      (0000005c) const-string         v2, ' AlgorithmParameters implementation in SunJCE provider'
+	24      (00000060) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (00000066) move-result-object   v0
+	26      (00000068) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	27      (0000006e) move-result-object   v0
+	28      (00000070) invoke-direct        v1, v0, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	29      (00000076) throw                v1
+
+engineGetParameters-BB@0x78 : 
+	30      (00000078) move-exception       v0
+	31      (0000007a) new-instance         v0, Ljava/lang/RuntimeException;
+	32      (0000007e) const-string         v1, 'Cannot find SunJCE provider'
+	33      (00000082) invoke-direct        v0, v1, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	34      (00000088) throw                v0
+
+engineGetParameters-BB@0x8a : 
+	35      (0000008a) move-exception       v0
+	36      (0000008c) new-instance         v0, Ljava/lang/RuntimeException;
+	37      (00000090) const-string         v1, 'IvParameterSpec not supported'
+	38      (00000094) invoke-direct        v0, v1, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	39      (0000009a) throw                v0
+

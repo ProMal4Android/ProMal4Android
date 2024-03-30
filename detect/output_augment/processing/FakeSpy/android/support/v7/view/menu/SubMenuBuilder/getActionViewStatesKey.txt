@@ -1,0 +1,45 @@
+# Landroid/support/v7/view/menu/SubMenuBuilder;->getActionViewStatesKey()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:java.lang.String
+
+getActionViewStatesKey-BB@0x0 : [ getActionViewStatesKey-BB@0x8 getActionViewStatesKey-BB@0x1c ]
+	0       (00000000) iget-object          v1, v3, Landroid/support/v7/view/menu/SubMenuBuilder;->mItem Landroid/support/v7/view/menu/MenuItemImpl;
+	1       (00000004) if-eqz               v1, +c
+
+getActionViewStatesKey-BB@0x8 : [ getActionViewStatesKey-BB@0x14 ]
+	2       (00000008) iget-object          v1, v3, Landroid/support/v7/view/menu/SubMenuBuilder;->mItem Landroid/support/v7/view/menu/MenuItemImpl;
+	3       (0000000c) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->getItemId()I
+	4       (00000012) move-result          v0
+
+getActionViewStatesKey-BB@0x14 : [ getActionViewStatesKey-BB@0x18 getActionViewStatesKey-BB@0x20 ]
+	5       (00000014) if-nez               v0, +6
+
+getActionViewStatesKey-BB@0x18 : [ getActionViewStatesKey-BB@0x1a ]
+	6       (00000018) const/4              v1, 0
+
+getActionViewStatesKey-BB@0x1a : 
+	7       (0000001a) return-object        v1
+
+getActionViewStatesKey-BB@0x1c : [ getActionViewStatesKey-BB@0x14 ]
+	8       (0000001c) const/4              v0, 0
+	9       (0000001e) goto                 -5
+
+getActionViewStatesKey-BB@0x20 : [ getActionViewStatesKey-BB@0x1a ]
+	10      (00000020) new-instance         v1, Ljava/lang/StringBuilder;
+	11      (00000024) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	12      (0000002a) invoke-super         v3, Landroid/support/v7/view/menu/MenuBuilder;->getActionViewStatesKey()Ljava/lang/String;
+	13      (00000030) move-result-object   v2
+	14      (00000032) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (00000038) move-result-object   v1
+	16      (0000003a) const-string         v2, ':'
+	17      (0000003e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	18      (00000044) move-result-object   v1
+	19      (00000046) invoke-virtual       v1, v0, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	20      (0000004c) move-result-object   v1
+	21      (0000004e) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	22      (00000054) move-result-object   v1
+	23      (00000056) goto                 -1e
+

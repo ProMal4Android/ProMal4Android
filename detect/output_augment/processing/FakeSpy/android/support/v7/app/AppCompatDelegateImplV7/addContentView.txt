@@ -1,0 +1,21 @@
+# Landroid/support/v7/app/AppCompatDelegateImplV7;->addContentView(Landroid/view/View; Landroid/view/ViewGroup$LayoutParams;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.view.View
+# - v5:android.view.ViewGroup$LayoutParams
+#
+# - return:void
+
+addContentView-BB@0x0 : 
+	0       (00000000) invoke-direct        v3, Landroid/support/v7/app/AppCompatDelegateImplV7;->ensureSubDecor()V
+	1       (00000006) iget-object          v1, v3, Landroid/support/v7/app/AppCompatDelegateImplV7;->mSubDecor Landroid/view/ViewGroup;
+	2       (0000000a) const                v2, 16908290 # [2.387723460627157e-38]
+	3       (00000010) invoke-virtual       v1, v2, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+	4       (00000016) move-result-object   v0
+	5       (00000018) check-cast           v0, Landroid/view/ViewGroup;
+	6       (0000001c) invoke-virtual       v0, v4, v5, Landroid/view/ViewGroup;->addView(Landroid/view/View; Landroid/view/ViewGroup$LayoutParams;)V
+	7       (00000022) iget-object          v1, v3, Landroid/support/v7/app/AppCompatDelegateImplV7;->mOriginalWindowCallback Landroid/view/Window$Callback;
+	8       (00000026) invoke-interface     v1, Landroid/view/Window$Callback;->onContentChanged()V
+	9       (0000002c) return-void          
+

@@ -1,0 +1,214 @@
+# Landroid/support/v7/app/TwilightCalculator;->calculateTwilight(J D D)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v32
+# - v33:long
+# - v34:double
+# - v35:double
+#
+# - return:void
+
+calculateTwilight-BB@0x0 : [ calculateTwilight-BB@0x1ea calculateTwilight-BB@0x21c ]
+	0       (00000000) const-wide           v22, 946728000000 # [4.67745780756e-312]
+	1       (0000000a) sub-long             v22, v30, v22
+	2       (0000000e) move-wide/from16     v0, v22
+	3       (00000012) long-to-float        v0, v0
+	4       (00000014) move/from16          v22, v0
+	5       (00000018) const                v23, 1285868416 # [86400000.0]
+	6       (0000001e) div-float            v8, v22, v23
+	7       (00000022) const                v22, 1086828178 # [6.240059852600098]
+	8       (00000028) const                v23, 1015868197 # [0.017201969400048256]
+	9       (0000002e) mul-float            v23, v23, v8
+	10      (00000032) add-float            v12, v22, v23
+	11      (00000036) float-to-double      v0, v12
+	12      (00000038) move-wide/from16     v22, v0
+	13      (0000003c) const-wide           v24, 4584977093208571904 # [0.03341960161924362]
+	14      (00000046) float-to-double      v0, v12
+	15      (00000048) move-wide/from16     v26, v0
+	16      (0000004c) invoke-static/range  v26 ... v27, Ljava/lang/Math;->sin(D)D
+	17      (00000052) move-result-wide     v26
+	18      (00000054) mul-double           v24, v24, v26
+	19      (00000058) add-double           v22, v22, v24
+	20      (0000005c) const-wide           v24, 4555074754578481152 # [0.00034906598739326]
+	21      (00000066) const/high16         v26, 16384 # [2.0]
+	22      (0000006a) mul-float            v26, v26, v12
+	23      (0000006e) move/from16          v0, v26
+	24      (00000072) float-to-double      v0, v0
+	25      (00000074) move-wide/from16     v26, v0
+	26      (00000078) invoke-static/range  v26 ... v27, Ljava/lang/Math;->sin(D)D
+	27      (0000007e) move-result-wide     v26
+	28      (00000080) mul-double           v24, v24, v26
+	29      (00000084) add-double           v22, v22, v24
+	30      (00000088) const-wide           v24, 4527795603731644416 # [5.236000106378924e-06]
+	31      (00000092) const/high16         v26, 16448 # [3.0]
+	32      (00000096) mul-float            v26, v26, v12
+	33      (0000009a) move/from16          v0, v26
+	34      (0000009e) float-to-double      v0, v0
+	35      (000000a0) move-wide/from16     v26, v0
+	36      (000000a4) invoke-static/range  v26 ... v27, Ljava/lang/Math;->sin(D)D
+	37      (000000aa) move-result-wide     v26
+	38      (000000ac) mul-double           v24, v24, v26
+	39      (000000b0) add-double           v20, v22, v24
+	40      (000000b4) const-wide           v22, 4610769955021710130 # [1.796593063]
+	41      (000000be) add-double           v22, v22, v20
+	42      (000000c2) const-wide           v24, 4614256656552045848 # [3.141592653589793]
+	43      (000000cc) add-double           v16, v22, v24
+	44      (000000d0) move-wide/from16     v0, v34
+	45      (000000d4) neg-double           v0, v0
+	46      (000000d6) move-wide/from16     v22, v0
+	47      (000000da) const-wide           v24, 4645040803167600640 # [360.0]
+	48      (000000e4) div-double           v4, v22, v24
+	49      (000000e8) const                v22, 980151802 # [0.0008999999845400453]
+	50      (000000ee) sub-float            v22, v8, v22
+	51      (000000f2) move/from16          v0, v22
+	52      (000000f6) float-to-double      v0, v0
+	53      (000000f8) move-wide/from16     v22, v0
+	54      (000000fc) sub-double           v22, v22, v4
+	55      (00000100) invoke-static/range  v22 ... v23, Ljava/lang/Math;->round(D)J
+	56      (00000106) move-result-wide     v22
+	57      (00000108) move-wide/from16     v0, v22
+	58      (0000010c) long-to-float        v13, v0
+	59      (0000010e) const                v22, 980151802 # [0.0008999999845400453]
+	60      (00000114) add-float            v22, v22, v13
+	61      (00000118) move/from16          v0, v22
+	62      (0000011c) float-to-double      v0, v0
+	63      (0000011e) move-wide/from16     v22, v0
+	64      (00000122) add-double           v22, v22, v4
+	65      (00000126) const-wide           v24, 4572760506128099233 # [0.0053]
+	66      (00000130) float-to-double      v0, v12
+	67      (00000132) move-wide/from16     v26, v0
+	68      (00000136) invoke-static/range  v26 ... v27, Ljava/lang/Math;->sin(D)D
+	69      (0000013c) move-result-wide     v26
+	70      (0000013e) mul-double           v24, v24, v26
+	71      (00000142) add-double           v22, v22, v24
+	72      (00000146) const-wide           v24, -4648766856319305620 # [-0.0069]
+	73      (00000150) const-wide/high16    v26, 16384 # [2.0]
+	74      (00000154) mul-double           v26, v26, v16
+	75      (00000158) invoke-static/range  v26 ... v27, Ljava/lang/Math;->sin(D)D
+	76      (0000015e) move-result-wide     v26
+	77      (00000160) mul-double           v24, v24, v26
+	78      (00000164) add-double           v18, v22, v24
+	79      (00000168) invoke-static/range  v16 ... v17, Ljava/lang/Math;->sin(D)D
+	80      (0000016e) move-result-wide     v22
+	81      (00000170) const-wide           v24, 4601044547609296896 # [0.4092797040939331]
+	82      (0000017a) invoke-static/range  v24 ... v25, Ljava/lang/Math;->sin(D)D
+	83      (00000180) move-result-wide     v24
+	84      (00000182) mul-double           v22, v22, v24
+	85      (00000186) invoke-static/range  v22 ... v23, Ljava/lang/Math;->asin(D)D
+	86      (0000018c) move-result-wide     v14
+	87      (0000018e) const-wide           v22, 4580687790437564416 # [0.01745329238474369]
+	88      (00000198) mul-double           v10, v32, v22
+	89      (0000019c) const-wide           v22, -4631161762379464704 # [-0.10471975803375244]
+	90      (000001a6) invoke-static/range  v22 ... v23, Ljava/lang/Math;->sin(D)D
+	91      (000001ac) move-result-wide     v22
+	92      (000001ae) invoke-static        v10, v11, Ljava/lang/Math;->sin(D)D
+	93      (000001b4) move-result-wide     v24
+	94      (000001b6) invoke-static        v14, v15, Ljava/lang/Math;->sin(D)D
+	95      (000001bc) move-result-wide     v26
+	96      (000001be) mul-double           v24, v24, v26
+	97      (000001c2) sub-double           v22, v22, v24
+	98      (000001c6) invoke-static        v10, v11, Ljava/lang/Math;->cos(D)D
+	99      (000001cc) move-result-wide     v24
+	100     (000001ce) invoke-static        v14, v15, Ljava/lang/Math;->cos(D)D
+	101     (000001d4) move-result-wide     v26
+	102     (000001d6) mul-double           v24, v24, v26
+	103     (000001da) div-double           v6, v22, v24
+	104     (000001de) const-wide/high16    v22, 16368 # [1.0]
+	105     (000001e2) cmpl-double          v22, v6, v22
+	106     (000001e6) if-ltz               v22, +1b
+
+calculateTwilight-BB@0x1ea : [ calculateTwilight-BB@0x21a ]
+	107     (000001ea) const/16             v22, 1
+	108     (000001ee) move/from16          v0, v22
+	109     (000001f2) move-object/from16   v1, v29
+	110     (000001f6) iput                 v0, v1, Landroid/support/v7/app/TwilightCalculator;->state I
+	111     (000001fa) const-wide/16        v22, -1 # [-1.0]
+	112     (000001fe) move-wide/from16     v0, v22
+	113     (00000202) move-object/from16   v2, v29
+	114     (00000206) iput-wide            v0, v2, Landroid/support/v7/app/TwilightCalculator;->sunset J
+	115     (0000020a) const-wide/16        v22, -1 # [-1.0]
+	116     (0000020e) move-wide/from16     v0, v22
+	117     (00000212) move-object/from16   v2, v29
+	118     (00000216) iput-wide            v0, v2, Landroid/support/v7/app/TwilightCalculator;->sunrise J
+
+calculateTwilight-BB@0x21a : 
+	119     (0000021a) return-void          
+
+calculateTwilight-BB@0x21c : [ calculateTwilight-BB@0x228 calculateTwilight-BB@0x25a ]
+	120     (0000021c) const-wide/high16    v22, -16400 # [-1.0]
+	121     (00000220) cmpg-double          v22, v6, v22
+	122     (00000224) if-gtz               v22, +1b
+
+calculateTwilight-BB@0x228 : [ calculateTwilight-BB@0x21a ]
+	123     (00000228) const/16             v22, 0
+	124     (0000022c) move/from16          v0, v22
+	125     (00000230) move-object/from16   v1, v29
+	126     (00000234) iput                 v0, v1, Landroid/support/v7/app/TwilightCalculator;->state I
+	127     (00000238) const-wide/16        v22, -1 # [-1.0]
+	128     (0000023c) move-wide/from16     v0, v22
+	129     (00000240) move-object/from16   v2, v29
+	130     (00000244) iput-wide            v0, v2, Landroid/support/v7/app/TwilightCalculator;->sunset J
+	131     (00000248) const-wide/16        v22, -1 # [-1.0]
+	132     (0000024c) move-wide/from16     v0, v22
+	133     (00000250) move-object/from16   v2, v29
+	134     (00000254) iput-wide            v0, v2, Landroid/support/v7/app/TwilightCalculator;->sunrise J
+	135     (00000258) goto                 -1f
+
+calculateTwilight-BB@0x25a : [ calculateTwilight-BB@0x2fe calculateTwilight-BB@0x326 ]
+	136     (0000025a) invoke-static        v6, v7, Ljava/lang/Math;->acos(D)D
+	137     (00000260) move-result-wide     v22
+	138     (00000262) const-wide           v24, 4618760256179416344 # [6.283185307179586]
+	139     (0000026c) div-double           v22, v22, v24
+	140     (00000270) move-wide/from16     v0, v22
+	141     (00000274) double-to-float      v9, v0
+	142     (00000276) float-to-double      v0, v9
+	143     (00000278) move-wide/from16     v22, v0
+	144     (0000027c) add-double           v22, v22, v18
+	145     (00000280) const-wide           v24, 4725570615333879808 # [86400000.0]
+	146     (0000028a) mul-double           v22, v22, v24
+	147     (0000028e) invoke-static/range  v22 ... v23, Ljava/lang/Math;->round(D)J
+	148     (00000294) move-result-wide     v22
+	149     (00000296) const-wide           v24, 946728000000 # [4.67745780756e-312]
+	150     (000002a0) add-long             v22, v22, v24
+	151     (000002a4) move-wide/from16     v0, v22
+	152     (000002a8) move-object/from16   v2, v29
+	153     (000002ac) iput-wide            v0, v2, Landroid/support/v7/app/TwilightCalculator;->sunset J
+	154     (000002b0) float-to-double      v0, v9
+	155     (000002b2) move-wide/from16     v22, v0
+	156     (000002b6) sub-double           v22, v18, v22
+	157     (000002ba) const-wide           v24, 4725570615333879808 # [86400000.0]
+	158     (000002c4) mul-double           v22, v22, v24
+	159     (000002c8) invoke-static/range  v22 ... v23, Ljava/lang/Math;->round(D)J
+	160     (000002ce) move-result-wide     v22
+	161     (000002d0) const-wide           v24, 946728000000 # [4.67745780756e-312]
+	162     (000002da) add-long             v22, v22, v24
+	163     (000002de) move-wide/from16     v0, v22
+	164     (000002e2) move-object/from16   v2, v29
+	165     (000002e6) iput-wide            v0, v2, Landroid/support/v7/app/TwilightCalculator;->sunrise J
+	166     (000002ea) move-object/from16   v0, v29
+	167     (000002ee) iget-wide            v0, v0, Landroid/support/v7/app/TwilightCalculator;->sunrise J
+	168     (000002f2) move-wide/from16     v22, v0
+	169     (000002f6) cmp-long             v22, v22, v30
+	170     (000002fa) if-gez               v22, +16
+
+calculateTwilight-BB@0x2fe : [ calculateTwilight-BB@0x312 calculateTwilight-BB@0x326 ]
+	171     (000002fe) move-object/from16   v0, v29
+	172     (00000302) iget-wide            v0, v0, Landroid/support/v7/app/TwilightCalculator;->sunset J
+	173     (00000306) move-wide/from16     v22, v0
+	174     (0000030a) cmp-long             v22, v22, v30
+	175     (0000030e) if-lez               v22, +c
+
+calculateTwilight-BB@0x312 : [ calculateTwilight-BB@0x21a ]
+	176     (00000312) const/16             v22, 0
+	177     (00000316) move/from16          v0, v22
+	178     (0000031a) move-object/from16   v1, v29
+	179     (0000031e) iput                 v0, v1, Landroid/support/v7/app/TwilightCalculator;->state I
+	180     (00000322) goto/16              -84
+
+calculateTwilight-BB@0x326 : [ calculateTwilight-BB@0x21a ]
+	181     (00000326) const/16             v22, 1
+	182     (0000032a) move/from16          v0, v22
+	183     (0000032e) move-object/from16   v1, v29
+	184     (00000332) iput                 v0, v1, Landroid/support/v7/app/TwilightCalculator;->state I
+	185     (00000336) goto/16              -8e
+

@@ -1,0 +1,14 @@
+# Landroid/support/v4/app/OneShotPreDrawListener;->onPreDraw()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:boolean
+
+onPreDraw-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Landroid/support/v4/app/OneShotPreDrawListener;->removeListener()V
+	1       (00000006) iget-object          v0, v1, Landroid/support/v4/app/OneShotPreDrawListener;->mRunnable Ljava/lang/Runnable;
+	2       (0000000a) invoke-interface     v0, Ljava/lang/Runnable;->run()V
+	3       (00000010) const/4              v0, 1
+	4       (00000012) return               v0
+

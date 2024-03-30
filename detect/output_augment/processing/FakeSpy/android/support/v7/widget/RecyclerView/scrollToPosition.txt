@@ -1,0 +1,32 @@
+# Landroid/support/v7/widget/RecyclerView;->scrollToPosition(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:int
+#
+# - return:void
+
+scrollToPosition-BB@0x0 : [ scrollToPosition-BB@0x8 scrollToPosition-BB@0xa ]
+	0       (00000000) iget-boolean         v0, v2, Landroid/support/v7/widget/RecyclerView;->mLayoutFrozen Z
+	1       (00000004) if-eqz               v0, +3
+
+scrollToPosition-BB@0x8 : 
+	2       (00000008) return-void          
+
+scrollToPosition-BB@0xa : [ scrollToPosition-BB@0x18 scrollToPosition-BB@0x28 ]
+	3       (0000000a) invoke-virtual       v2, Landroid/support/v7/widget/RecyclerView;->stopScroll()V
+	4       (00000010) iget-object          v0, v2, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	5       (00000014) if-nez               v0, +a
+
+scrollToPosition-BB@0x18 : [ scrollToPosition-BB@0x8 ]
+	6       (00000018) const-string         v0, 'RecyclerView'
+	7       (0000001c) const-string         v1, 'Cannot scroll to position a LayoutManager set. Call setLayoutManager with a non-null argument.'
+	8       (00000020) invoke-static        v0, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	9       (00000026) goto                 -f
+
+scrollToPosition-BB@0x28 : [ scrollToPosition-BB@0x8 ]
+	10      (00000028) iget-object          v0, v2, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	11      (0000002c) invoke-virtual       v0, v3, Landroid/support/v7/widget/RecyclerView$LayoutManager;->scrollToPosition(I)V
+	12      (00000032) invoke-virtual       v2, Landroid/support/v7/widget/RecyclerView;->awakenScrollBars()Z
+	13      (00000038) goto                 -18
+

@@ -1,0 +1,42 @@
+# Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;->dispatchMediaButtonEvent(Landroid/view/KeyEvent;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.view.KeyEvent
+#
+# - return:boolean
+
+dispatchMediaButtonEvent-BB@0x0 : [ dispatchMediaButtonEvent-BB@0x4 dispatchMediaButtonEvent-BB@0x14 ]
+	0       (00000000) if-nez               v5, +a
+
+dispatchMediaButtonEvent-BB@0x4 : 
+	1       (00000004) new-instance         v1, Ljava/lang/IllegalArgumentException;
+	2       (00000008) const-string         v2, 'event may not be null.'
+	3       (0000000c) invoke-direct        v1, v2, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	4       (00000012) throw                v1
+
+dispatchMediaButtonEvent-BB@0x14 : [ dispatchMediaButtonEvent-BB@0x1e ]
+	5       (00000014) iget-object          v1, v4, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;->mBinder Landroid/support/v4/media/session/IMediaSession;
+	6       (00000018) invoke-interface     v1, v5, Landroid/support/v4/media/session/IMediaSession;->sendMediaButton(Landroid/view/KeyEvent;)Z
+	14:1d
+	(Landroid/os/RemoteException; -> 22 dispatchMediaButtonEvent-BB@0x22)
+
+dispatchMediaButtonEvent-BB@0x1e : 
+	7       (0000001e) const/4              v1, 0
+	8       (00000020) return               v1
+
+dispatchMediaButtonEvent-BB@0x22 : [ dispatchMediaButtonEvent-BB@0x1e ]
+	9       (00000022) move-exception       v0
+	10      (00000024) const-string         v1, 'MediaControllerCompat'
+	11      (00000028) new-instance         v2, Ljava/lang/StringBuilder;
+	12      (0000002c) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	13      (00000032) const-string         v3, 'Dead object in dispatchMediaButtonEvent. '
+	14      (00000036) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (0000003c) move-result-object   v2
+	16      (0000003e) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	17      (00000044) move-result-object   v2
+	18      (00000046) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	19      (0000004c) move-result-object   v2
+	20      (0000004e) invoke-static        v1, v2, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	21      (00000054) goto                 -1b
+

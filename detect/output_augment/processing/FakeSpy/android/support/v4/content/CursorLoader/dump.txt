@@ -1,0 +1,54 @@
+# Landroid/support/v4/content/CursorLoader;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+# - v3:java.io.FileDescriptor
+# - v4:java.io.PrintWriter
+# - v5:java.lang.String[]
+#
+# - return:void
+
+dump-BB@0x0 : 
+	0       (00000000) invoke-super         v1, v2, v3, v4, v5, Landroid/support/v4/content/AsyncTaskLoader;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V
+	1       (00000006) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	2       (0000000c) const-string         v0, 'mUri='
+	3       (00000010) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	4       (00000016) iget-object          v0, v1, Landroid/support/v4/content/CursorLoader;->mUri Landroid/net/Uri;
+	5       (0000001a) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+	6       (00000020) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	7       (00000026) const-string         v0, 'mProjection='
+	8       (0000002a) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	9       (00000030) iget-object          v0, v1, Landroid/support/v4/content/CursorLoader;->mProjection [Ljava/lang/String;
+	10      (00000034) invoke-static        v0, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+	11      (0000003a) move-result-object   v0
+	12      (0000003c) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	13      (00000042) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	14      (00000048) const-string         v0, 'mSelection='
+	15      (0000004c) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	16      (00000052) iget-object          v0, v1, Landroid/support/v4/content/CursorLoader;->mSelection Ljava/lang/String;
+	17      (00000056) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	18      (0000005c) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	19      (00000062) const-string         v0, 'mSelectionArgs='
+	20      (00000066) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	21      (0000006c) iget-object          v0, v1, Landroid/support/v4/content/CursorLoader;->mSelectionArgs [Ljava/lang/String;
+	22      (00000070) invoke-static        v0, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+	23      (00000076) move-result-object   v0
+	24      (00000078) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	25      (0000007e) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	26      (00000084) const-string         v0, 'mSortOrder='
+	27      (00000088) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	28      (0000008e) iget-object          v0, v1, Landroid/support/v4/content/CursorLoader;->mSortOrder Ljava/lang/String;
+	29      (00000092) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	30      (00000098) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	31      (0000009e) const-string         v0, 'mCursor='
+	32      (000000a2) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	33      (000000a8) iget-object          v0, v1, Landroid/support/v4/content/CursorLoader;->mCursor Landroid/database/Cursor;
+	34      (000000ac) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+	35      (000000b2) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	36      (000000b8) const-string         v0, 'mContentChanged='
+	37      (000000bc) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	38      (000000c2) iget-boolean         v0, v1, Landroid/support/v4/content/CursorLoader;->mContentChanged Z
+	39      (000000c6) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Z)V
+	40      (000000cc) return-void          
+

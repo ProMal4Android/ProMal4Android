@@ -1,0 +1,86 @@
+# Landroid/support/v7/widget/StaggeredGridLayoutManager;->recycleFromStart(Landroid/support/v7/widget/RecyclerView$Recycler; I)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.support.v7.widget.RecyclerView$Recycler
+# - v7:int
+#
+# - return:void
+
+recycleFromStart-BB@0x0 : [ recycleFromStart-BB@0x2 ]
+	0       (00000000) const/4              v4, 1
+
+recycleFromStart-BB@0x2 : [ recycleFromStart-BB@0xe recycleFromStart-BB@0x62 ]
+	1       (00000002) invoke-virtual       v5, Landroid/support/v7/widget/StaggeredGridLayoutManager;->getChildCount()I
+	2       (00000008) move-result          v3
+	3       (0000000a) if-lez               v3, +2c
+
+recycleFromStart-BB@0xe : [ recycleFromStart-BB@0x28 recycleFromStart-BB@0x62 ]
+	4       (0000000e) const/4              v3, 0
+	5       (00000010) invoke-virtual       v5, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager;->getChildAt(I)Landroid/view/View;
+	6       (00000016) move-result-object   v0
+	7       (00000018) iget-object          v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mPrimaryOrientation Landroid/support/v7/widget/OrientationHelper;
+	8       (0000001c) invoke-virtual       v3, v0, Landroid/support/v7/widget/OrientationHelper;->getDecoratedEnd(Landroid/view/View;)I
+	9       (00000022) move-result          v3
+	10      (00000024) if-gt                v3, v7, +1f
+
+recycleFromStart-BB@0x28 : [ recycleFromStart-BB@0x3c recycleFromStart-BB@0x88 ]
+	11      (00000028) invoke-virtual       v0, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	12      (0000002e) move-result-object   v2
+	13      (00000030) check-cast           v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;
+	14      (00000034) iget-boolean         v3, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan Z
+	15      (00000038) if-eqz               v3, +28
+
+recycleFromStart-BB@0x3c : [ recycleFromStart-BB@0x3e ]
+	16      (0000003c) const/4              v1, 0
+
+recycleFromStart-BB@0x3e : [ recycleFromStart-BB@0x46 recycleFromStart-BB@0x6a ]
+	17      (0000003e) iget                 v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSpanCount I
+	18      (00000042) if-ge                v1, v3, +14
+
+recycleFromStart-BB@0x46 : [ recycleFromStart-BB@0x62 recycleFromStart-BB@0x64 ]
+	19      (00000046) iget-object          v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSpans [Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	20      (0000004a) aget-object          v3, v3, v1
+	21      (0000004e) invoke-static        v3, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->access$200(Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;)Ljava/util/ArrayList;
+	22      (00000054) move-result-object   v3
+	23      (00000056) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	24      (0000005c) move-result          v3
+	25      (0000005e) if-ne                v3, v4, +3
+
+recycleFromStart-BB@0x62 : 
+	26      (00000062) return-void          
+
+recycleFromStart-BB@0x64 : [ recycleFromStart-BB@0x3e ]
+	27      (00000064) add-int/lit8         v1, v1, 1
+	28      (00000068) goto                 -15
+
+recycleFromStart-BB@0x6a : [ recycleFromStart-BB@0x6c ]
+	29      (0000006a) const/4              v1, 0
+
+recycleFromStart-BB@0x6c : [ recycleFromStart-BB@0x74 recycleFromStart-BB@0xaa ]
+	30      (0000006c) iget                 v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSpanCount I
+	31      (00000070) if-ge                v1, v3, +1d
+
+recycleFromStart-BB@0x74 : [ recycleFromStart-BB@0x6c ]
+	32      (00000074) iget-object          v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mSpans [Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	33      (00000078) aget-object          v3, v3, v1
+	34      (0000007c) invoke-virtual       v3, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->popStart()V
+	35      (00000082) add-int/lit8         v1, v1, 1
+	36      (00000086) goto                 -d
+
+recycleFromStart-BB@0x88 : [ recycleFromStart-BB@0xa0 recycleFromStart-BB@0x62 ]
+	37      (00000088) iget-object          v3, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	38      (0000008c) invoke-static        v3, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->access$200(Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;)Ljava/util/ArrayList;
+	39      (00000092) move-result-object   v3
+	40      (00000094) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	41      (0000009a) move-result          v3
+	42      (0000009c) if-eq                v3, v4, -1d
+
+recycleFromStart-BB@0xa0 : [ recycleFromStart-BB@0xaa ]
+	43      (000000a0) iget-object          v3, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	44      (000000a4) invoke-virtual       v3, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->popStart()V
+
+recycleFromStart-BB@0xaa : [ recycleFromStart-BB@0x2 ]
+	45      (000000aa) invoke-virtual       v5, v0, v6, Landroid/support/v7/widget/StaggeredGridLayoutManager;->removeAndRecycleView(Landroid/view/View; Landroid/support/v7/widget/RecyclerView$Recycler;)V
+	46      (000000b0) goto                 -57
+

@@ -1,0 +1,32 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->isDone()Z [access_flags=]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:boolean
+
+isDone-BB@0x0 : [ isDone-BB@0x8 isDone-BB@0x1e ]
+	0       (00000000) iget-boolean         v0, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mDetachCalled Z
+	1       (00000004) if-nez               v0, +d
+
+isDone-BB@0x8 : [ isDone-BB@0x10 isDone-BB@0x1e ]
+	2       (00000008) iget-boolean         v0, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mSendResultCalled Z
+	3       (0000000c) if-nez               v0, +9
+
+isDone-BB@0x10 : [ isDone-BB@0x18 isDone-BB@0x1a ]
+	4       (00000010) iget-boolean         v0, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mSendErrorCalled Z
+	5       (00000014) if-eqz               v0, +3
+
+isDone-BB@0x18 : [ isDone-BB@0x1e ]
+	6       (00000018) goto                 +3
+
+isDone-BB@0x1a : [ isDone-BB@0x20 ]
+	7       (0000001a) const/4              v0, 0
+	8       (0000001c) goto                 +2
+
+isDone-BB@0x1e : [ isDone-BB@0x20 ]
+	9       (0000001e) const/4              v0, 1
+
+isDone-BB@0x20 : 
+	10      (00000020) return               v0
+

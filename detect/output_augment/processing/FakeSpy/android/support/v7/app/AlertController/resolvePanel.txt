@@ -1,0 +1,55 @@
+# Landroid/support/v7/app/AlertController;->resolvePanel(Landroid/view/View; Landroid/view/View;)Landroid/view/ViewGroup; [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.view.View
+# - v4:android.view.View
+#
+# - return:android.view.ViewGroup
+
+resolvePanel-BB@0x0 : [ resolvePanel-BB@0x4 resolvePanel-BB@0x20 ]
+	0       (00000000) if-nez               v3, +10
+
+resolvePanel-BB@0x4 : [ resolvePanel-BB@0xc resolvePanel-BB@0x18 ]
+	1       (00000004) instance-of          v1, v4, Landroid/view/ViewStub;
+	2       (00000008) if-eqz               v1, +8
+
+resolvePanel-BB@0xc : [ resolvePanel-BB@0x18 ]
+	3       (0000000c) check-cast           v4, Landroid/view/ViewStub;
+	4       (00000010) invoke-virtual       v4, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+	5       (00000016) move-result-object   v4
+
+resolvePanel-BB@0x18 : [ resolvePanel-BB@0x1e ]
+	6       (00000018) move-object          v1, v4
+	7       (0000001a) check-cast           v1, Landroid/view/ViewGroup;
+
+resolvePanel-BB@0x1e : 
+	8       (0000001e) return-object        v1
+
+resolvePanel-BB@0x20 : [ resolvePanel-BB@0x24 resolvePanel-BB@0x3e ]
+	9       (00000020) if-eqz               v4, +f
+
+resolvePanel-BB@0x24 : [ resolvePanel-BB@0x34 resolvePanel-BB@0x3e ]
+	10      (00000024) invoke-virtual       v4, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+	11      (0000002a) move-result-object   v0
+	12      (0000002c) instance-of          v1, v0, Landroid/view/ViewGroup;
+	13      (00000030) if-eqz               v1, +7
+
+resolvePanel-BB@0x34 : [ resolvePanel-BB@0x3e ]
+	14      (00000034) check-cast           v0, Landroid/view/ViewGroup;
+	15      (00000038) invoke-virtual       v0, v4, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+resolvePanel-BB@0x3e : [ resolvePanel-BB@0x46 resolvePanel-BB@0x52 ]
+	16      (0000003e) instance-of          v1, v3, Landroid/view/ViewStub;
+	17      (00000042) if-eqz               v1, +8
+
+resolvePanel-BB@0x46 : [ resolvePanel-BB@0x52 ]
+	18      (00000046) check-cast           v3, Landroid/view/ViewStub;
+	19      (0000004a) invoke-virtual       v3, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+	20      (00000050) move-result-object   v3
+
+resolvePanel-BB@0x52 : [ resolvePanel-BB@0x1e ]
+	21      (00000052) move-object          v1, v3
+	22      (00000054) check-cast           v1, Landroid/view/ViewGroup;
+	23      (00000058) goto                 -1d
+

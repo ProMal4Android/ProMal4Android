@@ -1,0 +1,83 @@
+# Landroid/support/v7/widget/ListPopupWindow;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I I)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.content.Context
+# - v8:android.util.AttributeSet
+# - v9:int
+# - v10:int
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0xcc <init>-BB@0xd0 ]
+	0       (00000000) const/4              v5, 1
+	1       (00000002) const/4              v2, -2
+	2       (00000004) const/4              v3, 0
+	3       (00000006) const/4              v4, 0
+	4       (00000008) invoke-direct        v6, Ljava/lang/Object;-><init>()V
+	5       (0000000e) iput                 v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownHeight I
+	6       (00000012) iput                 v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownWidth I
+	7       (00000016) const/16             v2, 1002
+	8       (0000001a) iput                 v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownWindowLayoutType I
+	9       (0000001e) iput                 v4, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownGravity I
+	10      (00000022) iput-boolean         v4, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownAlwaysVisible Z
+	11      (00000026) iput-boolean         v4, v6, Landroid/support/v7/widget/ListPopupWindow;->mForceIgnoreOutsideTouch Z
+	12      (0000002a) const                v2, 2147483647 # [nan]
+	13      (00000030) iput                 v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mListItemExpandMaximum I
+	14      (00000034) iput                 v4, v6, Landroid/support/v7/widget/ListPopupWindow;->mPromptPosition I
+	15      (00000038) new-instance         v2, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;
+	16      (0000003c) invoke-direct        v2, v6, v3, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;-><init>(Landroid/support/v7/widget/ListPopupWindow; Landroid/support/v7/widget/ListPopupWindow$1;)V
+	17      (00000042) iput-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mResizePopupRunnable Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;
+	18      (00000046) new-instance         v2, Landroid/support/v7/widget/ListPopupWindow$PopupTouchInterceptor;
+	19      (0000004a) invoke-direct        v2, v6, v3, Landroid/support/v7/widget/ListPopupWindow$PopupTouchInterceptor;-><init>(Landroid/support/v7/widget/ListPopupWindow; Landroid/support/v7/widget/ListPopupWindow$1;)V
+	20      (00000050) iput-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mTouchInterceptor Landroid/support/v7/widget/ListPopupWindow$PopupTouchInterceptor;
+	21      (00000054) new-instance         v2, Landroid/support/v7/widget/ListPopupWindow$PopupScrollListener;
+	22      (00000058) invoke-direct        v2, v6, v3, Landroid/support/v7/widget/ListPopupWindow$PopupScrollListener;-><init>(Landroid/support/v7/widget/ListPopupWindow; Landroid/support/v7/widget/ListPopupWindow$1;)V
+	23      (0000005e) iput-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mScrollListener Landroid/support/v7/widget/ListPopupWindow$PopupScrollListener;
+	24      (00000062) new-instance         v2, Landroid/support/v7/widget/ListPopupWindow$ListSelectorHider;
+	25      (00000066) invoke-direct        v2, v6, v3, Landroid/support/v7/widget/ListPopupWindow$ListSelectorHider;-><init>(Landroid/support/v7/widget/ListPopupWindow; Landroid/support/v7/widget/ListPopupWindow$1;)V
+	26      (0000006c) iput-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mHideSelector Landroid/support/v7/widget/ListPopupWindow$ListSelectorHider;
+	27      (00000070) new-instance         v2, Landroid/graphics/Rect;
+	28      (00000074) invoke-direct        v2, Landroid/graphics/Rect;-><init>()V
+	29      (0000007a) iput-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mTempRect Landroid/graphics/Rect;
+	30      (0000007e) iput-object          v7, v6, Landroid/support/v7/widget/ListPopupWindow;->mContext Landroid/content/Context;
+	31      (00000082) new-instance         v2, Landroid/os/Handler;
+	32      (00000086) invoke-virtual       v7, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
+	33      (0000008c) move-result-object   v3
+	34      (0000008e) invoke-direct        v2, v3, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+	35      (00000094) iput-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mHandler Landroid/os/Handler;
+	36      (00000098) sget-object          v2, Landroid/support/v7/appcompat/R$styleable;->ListPopupWindow [I
+	37      (0000009c) invoke-virtual       v7, v8, v2, v9, v10, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I I I)Landroid/content/res/TypedArray;
+	38      (000000a2) move-result-object   v0
+	39      (000000a4) sget                 v2, Landroid/support/v7/appcompat/R$styleable;->ListPopupWindow_android_dropDownHorizontalOffset I
+	40      (000000a8) invoke-virtual       v0, v2, v4, Landroid/content/res/TypedArray;->getDimensionPixelOffset(I I)I
+	41      (000000ae) move-result          v2
+	42      (000000b0) iput                 v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownHorizontalOffset I
+	43      (000000b4) sget                 v2, Landroid/support/v7/appcompat/R$styleable;->ListPopupWindow_android_dropDownVerticalOffset I
+	44      (000000b8) invoke-virtual       v0, v2, v4, Landroid/content/res/TypedArray;->getDimensionPixelOffset(I I)I
+	45      (000000be) move-result          v2
+	46      (000000c0) iput                 v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownVerticalOffset I
+	47      (000000c4) iget                 v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownVerticalOffset I
+	48      (000000c8) if-eqz               v2, +4
+
+<init>-BB@0xcc : [ <init>-BB@0xd0 ]
+	49      (000000cc) iput-boolean         v5, v6, Landroid/support/v7/widget/ListPopupWindow;->mDropDownVerticalOffsetSet Z
+
+<init>-BB@0xd0 : 
+	50      (000000d0) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+	51      (000000d6) new-instance         v2, Landroid/support/v7/widget/AppCompatPopupWindow;
+	52      (000000da) invoke-direct        v2, v7, v8, v9, Landroid/support/v7/widget/AppCompatPopupWindow;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	53      (000000e0) iput-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mPopup Landroid/widget/PopupWindow;
+	54      (000000e4) iget-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mPopup Landroid/widget/PopupWindow;
+	55      (000000e8) invoke-virtual       v2, v5, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
+	56      (000000ee) iget-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mContext Landroid/content/Context;
+	57      (000000f2) invoke-virtual       v2, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	58      (000000f8) move-result-object   v2
+	59      (000000fa) invoke-virtual       v2, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+	60      (00000100) move-result-object   v2
+	61      (00000102) iget-object          v1, v2, Landroid/content/res/Configuration;->locale Ljava/util/Locale;
+	62      (00000106) invoke-static        v1, Landroid/support/v4/text/TextUtilsCompat;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+	63      (0000010c) move-result          v2
+	64      (0000010e) iput                 v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mLayoutDirection I
+	65      (00000112) return-void          
+

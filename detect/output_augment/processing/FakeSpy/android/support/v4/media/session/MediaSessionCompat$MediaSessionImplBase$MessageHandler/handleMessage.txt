@@ -1,0 +1,153 @@
+# Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;->handleMessage(Landroid/os/Message;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.os.Message
+#
+# - return:void
+
+handleMessage-BB@0x0 : [ handleMessage-BB@0x12 handleMessage-BB@0x14 ]
+	0       (00000000) const/4              v6, 0
+	1       (00000002) iget-object          v4, v7, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;->this$0 Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
+	2       (00000006) invoke-static        v4, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->access$2700(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;)Landroid/support/v4/media/session/MediaSessionCompat$Callback;
+	3       (0000000c) move-result-object   v0
+	4       (0000000e) if-nez               v0, +3
+
+handleMessage-BB@0x12 : 
+	5       (00000012) return-void          
+
+handleMessage-BB@0x14 : [ D:handleMessage-BB@0x1e 1:handleMessage-BB@0x20 2:handleMessage-BB@0x28 3:handleMessage-BB@0x40 4:handleMessage-BB@0x70 5:handleMessage-BB@0x88 6:handleMessage-BB@0x90 7:handleMessage-BB@0x98 8:handleMessage-BB@0xa0 9:handleMessage-BB@0xa8 10:handleMessage-BB@0xb0 11:handleMessage-BB@0xb8 12:handleMessage-BB@0xd0 13:handleMessage-BB@0xe0 14:handleMessage-BB@0xf8 15:handleMessage-BB@0x12e 16:handleMessage-BB@0x14c 17:handleMessage-BB@0x16a 18:handleMessage-BB@0x58 ]
+	6       (00000014) iget                 v4, v8, Landroid/os/Message;->what I
+	7       (00000018) packed-switch        v4, +b8 (0x188)
+
+handleMessage-BB@0x1e : [ handleMessage-BB@0x12 ]
+	8       (0000001e) goto                 -6
+
+handleMessage-BB@0x20 : [ handleMessage-BB@0x12 ]
+	9       (00000020) invoke-virtual       v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlay()V
+	10      (00000026) goto                 -a
+
+handleMessage-BB@0x28 : [ handleMessage-BB@0x12 ]
+	11      (00000028) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	12      (0000002c) check-cast           v4, Ljava/lang/String;
+	13      (00000030) invoke-virtual       v8, Landroid/os/Message;->getData()Landroid/os/Bundle;
+	14      (00000036) move-result-object   v5
+	15      (00000038) invoke-virtual       v0, v4, v5, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromMediaId(Ljava/lang/String; Landroid/os/Bundle;)V
+	16      (0000003e) goto                 -16
+
+handleMessage-BB@0x40 : [ handleMessage-BB@0x12 ]
+	17      (00000040) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	18      (00000044) check-cast           v4, Ljava/lang/String;
+	19      (00000048) invoke-virtual       v8, Landroid/os/Message;->getData()Landroid/os/Bundle;
+	20      (0000004e) move-result-object   v5
+	21      (00000050) invoke-virtual       v0, v4, v5, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromSearch(Ljava/lang/String; Landroid/os/Bundle;)V
+	22      (00000056) goto                 -22
+
+handleMessage-BB@0x58 : [ handleMessage-BB@0x12 ]
+	23      (00000058) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	24      (0000005c) check-cast           v4, Landroid/net/Uri;
+	25      (00000060) invoke-virtual       v8, Landroid/os/Message;->getData()Landroid/os/Bundle;
+	26      (00000066) move-result-object   v5
+	27      (00000068) invoke-virtual       v0, v4, v5, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromUri(Landroid/net/Uri; Landroid/os/Bundle;)V
+	28      (0000006e) goto                 -2e
+
+handleMessage-BB@0x70 : [ handleMessage-BB@0x12 ]
+	29      (00000070) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	30      (00000074) check-cast           v4, Ljava/lang/Long;
+	31      (00000078) invoke-virtual       v4, Ljava/lang/Long;->longValue()J
+	32      (0000007e) move-result-wide     v4
+	33      (00000080) invoke-virtual       v0, v4, v5, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSkipToQueueItem(J)V
+	34      (00000086) goto                 -3a
+
+handleMessage-BB@0x88 : [ handleMessage-BB@0x12 ]
+	35      (00000088) invoke-virtual       v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPause()V
+	36      (0000008e) goto                 -3e
+
+handleMessage-BB@0x90 : [ handleMessage-BB@0x12 ]
+	37      (00000090) invoke-virtual       v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onStop()V
+	38      (00000096) goto                 -42
+
+handleMessage-BB@0x98 : [ handleMessage-BB@0x12 ]
+	39      (00000098) invoke-virtual       v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSkipToNext()V
+	40      (0000009e) goto                 -46
+
+handleMessage-BB@0xa0 : [ handleMessage-BB@0x12 ]
+	41      (000000a0) invoke-virtual       v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSkipToPrevious()V
+	42      (000000a6) goto                 -4a
+
+handleMessage-BB@0xa8 : [ handleMessage-BB@0x12 ]
+	43      (000000a8) invoke-virtual       v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onFastForward()V
+	44      (000000ae) goto                 -4e
+
+handleMessage-BB@0xb0 : [ handleMessage-BB@0x12 ]
+	45      (000000b0) invoke-virtual       v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onRewind()V
+	46      (000000b6) goto                 -52
+
+handleMessage-BB@0xb8 : [ handleMessage-BB@0x12 ]
+	47      (000000b8) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	48      (000000bc) check-cast           v4, Ljava/lang/Long;
+	49      (000000c0) invoke-virtual       v4, Ljava/lang/Long;->longValue()J
+	50      (000000c6) move-result-wide     v4
+	51      (000000c8) invoke-virtual       v0, v4, v5, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSeekTo(J)V
+	52      (000000ce) goto                 -5e
+
+handleMessage-BB@0xd0 : [ handleMessage-BB@0x12 ]
+	53      (000000d0) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	54      (000000d4) check-cast           v4, Landroid/support/v4/media/RatingCompat;
+	55      (000000d8) invoke-virtual       v0, v4, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSetRating(Landroid/support/v4/media/RatingCompat;)V
+	56      (000000de) goto                 -66
+
+handleMessage-BB@0xe0 : [ handleMessage-BB@0x12 ]
+	57      (000000e0) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	58      (000000e4) check-cast           v4, Ljava/lang/String;
+	59      (000000e8) invoke-virtual       v8, Landroid/os/Message;->getData()Landroid/os/Bundle;
+	60      (000000ee) move-result-object   v5
+	61      (000000f0) invoke-virtual       v0, v4, v5, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onCustomAction(Ljava/lang/String; Landroid/os/Bundle;)V
+	62      (000000f6) goto                 -72
+
+handleMessage-BB@0xf8 : [ handleMessage-BB@0x124 handleMessage-BB@0x12 ]
+	63      (000000f8) iget-object          v3, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	64      (000000fc) check-cast           v3, Landroid/view/KeyEvent;
+	65      (00000100) new-instance         v2, Landroid/content/Intent;
+	66      (00000104) const-string         v4, 'android.intent.action.MEDIA_BUTTON'
+	67      (00000108) invoke-direct        v2, v4, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+	68      (0000010e) const-string         v4, 'android.intent.extra.KEY_EVENT'
+	69      (00000112) invoke-virtual       v2, v4, v3, Landroid/content/Intent;->putExtra(Ljava/lang/String; Landroid/os/Parcelable;)Landroid/content/Intent;
+	70      (00000118) invoke-virtual       v0, v2, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onMediaButtonEvent(Landroid/content/Intent;)Z
+	71      (0000011e) move-result          v4
+	72      (00000120) if-nez               v4, -87
+
+handleMessage-BB@0x124 : [ handleMessage-BB@0x12 ]
+	73      (00000124) invoke-direct        v7, v3, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;->onMediaButtonEvent(Landroid/view/KeyEvent; Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
+	74      (0000012a) goto/16              -8c
+
+handleMessage-BB@0x12e : [ handleMessage-BB@0x12 ]
+	75      (0000012e) iget-object          v1, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	76      (00000132) check-cast           v1, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$Command;
+	77      (00000136) iget-object          v4, v1, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$Command;->command Ljava/lang/String;
+	78      (0000013a) iget-object          v5, v1, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$Command;->extras Landroid/os/Bundle;
+	79      (0000013e) iget-object          v6, v1, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$Command;->stub Landroid/os/ResultReceiver;
+	80      (00000142) invoke-virtual       v0, v4, v5, v6, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onCommand(Ljava/lang/String; Landroid/os/Bundle; Landroid/os/ResultReceiver;)V
+	81      (00000148) goto/16              -9b
+
+handleMessage-BB@0x14c : [ handleMessage-BB@0x12 ]
+	82      (0000014c) iget-object          v5, v7, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;->this$0 Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
+	83      (00000150) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	84      (00000154) check-cast           v4, Ljava/lang/Integer;
+	85      (00000158) invoke-virtual       v4, Ljava/lang/Integer;->intValue()I
+	86      (0000015e) move-result          v4
+	87      (00000160) invoke-static        v5, v4, v6, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->access$1700(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase; I I)V
+	88      (00000166) goto/16              -aa
+
+handleMessage-BB@0x16a : [ handleMessage-BB@0x12 ]
+	89      (0000016a) iget-object          v5, v7, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;->this$0 Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
+	90      (0000016e) iget-object          v4, v8, Landroid/os/Message;->obj Ljava/lang/Object;
+	91      (00000172) check-cast           v4, Ljava/lang/Integer;
+	92      (00000176) invoke-virtual       v4, Ljava/lang/Integer;->intValue()I
+	93      (0000017c) move-result          v4
+	94      (0000017e) invoke-static        v5, v4, v6, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->access$1800(Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase; I I)V
+	95      (00000184) goto/16              -b9
+
+handleMessage-BB@0x188 : 
+	96      (00000188) packed-switch-payload 1 2 3 4 5 6 7 8 9 a b c d e f 10 11 12
+

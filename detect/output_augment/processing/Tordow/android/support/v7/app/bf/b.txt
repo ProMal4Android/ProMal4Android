@@ -1,0 +1,77 @@
+# Landroid/support/v7/app/bf;->b(Landroid/view/Menu;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.view.Menu
+#
+# - return:void
+
+b-BB@0x0 : [ b-BB@0xa b-BB@0xce ]
+	0       (00000000) const/4              v4, 1
+	1       (00000002) iget-object          v0, v5, Landroid/support/v7/app/bf;->g Landroid/support/v7/view/menu/g;
+	2       (00000006) if-nez               v0, +64
+
+b-BB@0xa : [ b-BB@0x12 b-BB@0xce ]
+	3       (0000000a) instance-of          v0, v6, Landroid/support/v7/view/menu/i;
+	4       (0000000e) if-eqz               v0, +60
+
+b-BB@0x12 : [ b-BB@0x5c b-BB@0x66 ]
+	5       (00000012) check-cast           v6, Landroid/support/v7/view/menu/i;
+	6       (00000016) iget-object          v0, v5, Landroid/support/v7/app/bf;->a Landroid/support/v7/widget/bg;
+	7       (0000001a) invoke-interface     v0, Landroid/support/v7/widget/bg;->b()Landroid/content/Context;
+	8       (00000020) move-result-object   v0
+	9       (00000022) new-instance         v1, Landroid/util/TypedValue;
+	10      (00000026) invoke-direct        v1, Landroid/util/TypedValue;-><init>()V
+	11      (0000002c) invoke-virtual       v0, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	12      (00000032) move-result-object   v2
+	13      (00000034) invoke-virtual       v2, Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+	14      (0000003a) move-result-object   v2
+	15      (0000003c) invoke-virtual       v0, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+	16      (00000042) move-result-object   v3
+	17      (00000044) invoke-virtual       v2, v3, Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+	18      (0000004a) sget                 v3, Landroid/support/v7/a/b;->actionBarPopupTheme I
+	19      (0000004e) invoke-virtual       v2, v3, v1, v4, Landroid/content/res/Resources$Theme;->resolveAttribute(I Landroid/util/TypedValue; Z)Z
+	20      (00000054) iget                 v3, v1, Landroid/util/TypedValue;->resourceId I
+	21      (00000058) if-eqz               v3, +7
+
+b-BB@0x5c : [ b-BB@0x66 ]
+	22      (0000005c) iget                 v3, v1, Landroid/util/TypedValue;->resourceId I
+	23      (00000060) invoke-virtual       v2, v3, v4, Landroid/content/res/Resources$Theme;->applyStyle(I Z)V
+
+b-BB@0x66 : [ b-BB@0x78 b-BB@0xd0 ]
+	24      (00000066) sget                 v3, Landroid/support/v7/a/b;->panelMenuListTheme I
+	25      (0000006a) invoke-virtual       v2, v3, v1, v4, Landroid/content/res/Resources$Theme;->resolveAttribute(I Landroid/util/TypedValue; Z)Z
+	26      (00000070) iget                 v3, v1, Landroid/util/TypedValue;->resourceId I
+	27      (00000074) if-eqz               v3, +2e
+
+b-BB@0x78 : [ b-BB@0x82 ]
+	28      (00000078) iget                 v1, v1, Landroid/util/TypedValue;->resourceId I
+	29      (0000007c) invoke-virtual       v2, v1, v4, Landroid/content/res/Resources$Theme;->applyStyle(I Z)V
+
+b-BB@0x82 : [ b-BB@0xce ]
+	30      (00000082) new-instance         v1, Landroid/view/ContextThemeWrapper;
+	31      (00000086) const/4              v3, 0
+	32      (00000088) invoke-direct        v1, v0, v3, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context; I)V
+	33      (0000008e) invoke-virtual       v1, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+	34      (00000094) move-result-object   v0
+	35      (00000096) invoke-virtual       v0, v2, Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+	36      (0000009c) new-instance         v0, Landroid/support/v7/view/menu/g;
+	37      (000000a0) sget                 v2, Landroid/support/v7/a/i;->abc_list_menu_item_layout I
+	38      (000000a4) invoke-direct        v0, v1, v2, Landroid/support/v7/view/menu/g;-><init>(Landroid/content/Context; I)V
+	39      (000000aa) iput-object          v0, v5, Landroid/support/v7/app/bf;->g Landroid/support/v7/view/menu/g;
+	40      (000000ae) iget-object          v0, v5, Landroid/support/v7/app/bf;->g Landroid/support/v7/view/menu/g;
+	41      (000000b2) new-instance         v1, Landroid/support/v7/app/bk;
+	42      (000000b6) const/4              v2, 0
+	43      (000000b8) invoke-direct        v1, v5, v2, Landroid/support/v7/app/bk;-><init>(Landroid/support/v7/app/bf; Landroid/support/v7/app/bg;)V
+	44      (000000be) invoke-virtual       v0, v1, Landroid/support/v7/view/menu/g;->a(Landroid/support/v7/view/menu/y;)V
+	45      (000000c4) iget-object          v0, v5, Landroid/support/v7/app/bf;->g Landroid/support/v7/view/menu/g;
+	46      (000000c8) invoke-virtual       v6, v0, Landroid/support/v7/view/menu/i;->a(Landroid/support/v7/view/menu/x;)V
+
+b-BB@0xce : 
+	47      (000000ce) return-void          
+
+b-BB@0xd0 : [ b-BB@0x82 ]
+	48      (000000d0) sget                 v1, Landroid/support/v7/a/k;->Theme_AppCompat_CompactMenu I
+	49      (000000d4) invoke-virtual       v2, v1, v4, Landroid/content/res/Resources$Theme;->applyStyle(I Z)V
+	50      (000000da) goto                 -2c
+

@@ -1,0 +1,78 @@
+# Landroid/support/v4/app/FragmentActivity;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+# - v5:java.io.FileDescriptor
+# - v6:java.io.PrintWriter
+# - v7:java.lang.String[]
+#
+# - return:void
+
+dump-BB@0x0 : [ dump-BB@0xc dump-BB@0xc ]
+	0       (00000000) sget                 v1, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) const/16             v2, 11
+	2       (00000008) if-lt                v1, v2, +2
+
+dump-BB@0xc : 
+	3       (0000000c) invoke-virtual       v6, v4, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	4       (00000012) const-string         v1, 'Local FragmentActivity '
+	5       (00000016) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	6       (0000001c) invoke-static        v3, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+	7       (00000022) move-result          v1
+	8       (00000024) invoke-static        v1, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	9       (0000002a) move-result-object   v1
+	10      (0000002c) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	11      (00000032) const-string         v1, ' State:'
+	12      (00000036) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	13      (0000003c) new-instance         v1, Ljava/lang/StringBuilder;
+	14      (00000040) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	15      (00000046) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (0000004c) move-result-object   v1
+	17      (0000004e) const-string         v2, '  '
+	18      (00000052) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	19      (00000058) move-result-object   v1
+	20      (0000005a) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	21      (00000060) move-result-object   v0
+	22      (00000062) invoke-virtual       v6, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	23      (00000068) const-string         v1, 'mCreated='
+	24      (0000006c) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	25      (00000072) iget-boolean         v1, v3, Landroid/support/v4/app/FragmentActivity;->mCreated Z
+	26      (00000076) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Z)V
+	27      (0000007c) const-string         v1, 'mResumed='
+	28      (00000080) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	29      (00000086) iget-boolean         v1, v3, Landroid/support/v4/app/FragmentActivity;->mResumed Z
+	30      (0000008a) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Z)V
+	31      (00000090) const-string         v1, ' mStopped='
+	32      (00000094) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	33      (0000009a) iget-boolean         v1, v3, Landroid/support/v4/app/FragmentActivity;->mStopped Z
+	34      (0000009e) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Z)V
+	35      (000000a4) const-string         v1, ' mReallyStopped='
+	36      (000000a8) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	37      (000000ae) iget-boolean         v1, v3, Landroid/support/v4/app/FragmentActivity;->mReallyStopped Z
+	38      (000000b2) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->println(Z)V
+	39      (000000b8) iget-object          v1, v3, Landroid/support/v4/app/FragmentActivity;->mFragments Landroid/support/v4/app/FragmentController;
+	40      (000000bc) invoke-virtual       v1, v0, v5, v6, v7, Landroid/support/v4/app/FragmentController;->dumpLoaders(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V
+	41      (000000c2) iget-object          v1, v3, Landroid/support/v4/app/FragmentActivity;->mFragments Landroid/support/v4/app/FragmentController;
+	42      (000000c6) invoke-virtual       v1, Landroid/support/v4/app/FragmentController;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
+	43      (000000cc) move-result-object   v1
+	44      (000000ce) invoke-virtual       v1, v4, v5, v6, v7, Landroid/support/v4/app/FragmentManager;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V
+	45      (000000d4) invoke-virtual       v6, v4, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	46      (000000da) const-string         v1, 'View Hierarchy:'
+	47      (000000de) invoke-virtual       v6, v1, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+	48      (000000e4) new-instance         v1, Ljava/lang/StringBuilder;
+	49      (000000e8) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	50      (000000ee) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	51      (000000f4) move-result-object   v1
+	52      (000000f6) const-string         v2, '  '
+	53      (000000fa) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	54      (00000100) move-result-object   v1
+	55      (00000102) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	56      (00000108) move-result-object   v1
+	57      (0000010a) invoke-virtual       v3, Landroid/support/v4/app/FragmentActivity;->getWindow()Landroid/view/Window;
+	58      (00000110) move-result-object   v2
+	59      (00000112) invoke-virtual       v2, Landroid/view/Window;->getDecorView()Landroid/view/View;
+	60      (00000118) move-result-object   v2
+	61      (0000011a) invoke-direct        v3, v1, v6, v2, Landroid/support/v4/app/FragmentActivity;->dumpViewHierarchy(Ljava/lang/String; Ljava/io/PrintWriter; Landroid/view/View;)V
+	62      (00000120) return-void          
+

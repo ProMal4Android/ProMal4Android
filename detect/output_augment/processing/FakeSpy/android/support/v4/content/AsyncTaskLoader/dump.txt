@@ -1,0 +1,67 @@
+# Landroid/support/v4/content/AsyncTaskLoader;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.String
+# - v6:java.io.FileDescriptor
+# - v7:java.io.PrintWriter
+# - v8:java.lang.String[]
+#
+# - return:void
+
+dump-BB@0x0 : [ dump-BB@0xe dump-BB@0x40 ]
+	0       (00000000) invoke-super         v4, v5, v6, v7, v8, Landroid/support/v4/content/Loader;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V
+	1       (00000006) iget-object          v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mTask Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
+	2       (0000000a) if-eqz               v0, +1b
+
+dump-BB@0xe : [ dump-BB@0x40 ]
+	3       (0000000e) invoke-virtual       v7, v5, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	4       (00000014) const-string         v0, 'mTask='
+	5       (00000018) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	6       (0000001e) iget-object          v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mTask Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
+	7       (00000022) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
+	8       (00000028) const-string         v0, ' waiting='
+	9       (0000002c) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	10      (00000032) iget-object          v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mTask Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
+	11      (00000036) iget-boolean         v0, v0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->waiting Z
+	12      (0000003a) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->println(Z)V
+
+dump-BB@0x40 : [ dump-BB@0x48 dump-BB@0x7a ]
+	13      (00000040) iget-object          v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mCancellingTask Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
+	14      (00000044) if-eqz               v0, +1b
+
+dump-BB@0x48 : [ dump-BB@0x7a ]
+	15      (00000048) invoke-virtual       v7, v5, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	16      (0000004e) const-string         v0, 'mCancellingTask='
+	17      (00000052) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	18      (00000058) iget-object          v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mCancellingTask Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
+	19      (0000005c) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
+	20      (00000062) const-string         v0, ' waiting='
+	21      (00000066) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	22      (0000006c) iget-object          v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mCancellingTask Landroid/support/v4/content/AsyncTaskLoader$LoadTask;
+	23      (00000070) iget-boolean         v0, v0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->waiting Z
+	24      (00000074) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->println(Z)V
+
+dump-BB@0x7a : [ dump-BB@0x8a dump-BB@0xc6 ]
+	25      (0000007a) iget-wide            v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mUpdateThrottle J
+	26      (0000007e) const-wide/16        v2, 0 # [0.0]
+	27      (00000082) cmp-long             v0, v0, v2
+	28      (00000086) if-eqz               v0, +20
+
+dump-BB@0x8a : [ dump-BB@0xc6 ]
+	29      (0000008a) invoke-virtual       v7, v5, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	30      (00000090) const-string         v0, 'mUpdateThrottle='
+	31      (00000094) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	32      (0000009a) iget-wide            v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mUpdateThrottle J
+	33      (0000009e) invoke-static        v0, v1, v7, Landroid/support/v4/util/TimeUtils;->formatDuration(J Ljava/io/PrintWriter;)V
+	34      (000000a4) const-string         v0, ' mLastLoadCompleteTime='
+	35      (000000a8) invoke-virtual       v7, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	36      (000000ae) iget-wide            v0, v4, Landroid/support/v4/content/AsyncTaskLoader;->mLastLoadCompleteTime J
+	37      (000000b2) invoke-static        Landroid/os/SystemClock;->uptimeMillis()J
+	38      (000000b8) move-result-wide     v2
+	39      (000000ba) invoke-static        v0, v1, v2, v3, v7, Landroid/support/v4/util/TimeUtils;->formatDuration(J J Ljava/io/PrintWriter;)V
+	40      (000000c0) invoke-virtual       v7, Ljava/io/PrintWriter;->println()V
+
+dump-BB@0xc6 : 
+	41      (000000c6) return-void          
+

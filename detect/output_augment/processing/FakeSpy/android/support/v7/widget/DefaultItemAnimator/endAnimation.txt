@@ -1,0 +1,201 @@
+# Landroid/support/v7/widget/DefaultItemAnimator;->endAnimation(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:android.support.v7.widget.RecyclerView$ViewHolder
+#
+# - return:void
+
+endAnimation-BB@0x0 : [ endAnimation-BB@0x28 ]
+	0       (00000000) const/high16         v9, 16256 # [1.0]
+	1       (00000004) const/4              v8, 0
+	2       (00000006) iget-object          v6, v11, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	3       (0000000a) invoke-static        v6, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	4       (00000010) move-result-object   v7
+	5       (00000012) invoke-virtual       v7, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->cancel()V
+	6       (00000018) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingMoves Ljava/util/ArrayList;
+	7       (0000001c) invoke-virtual       v7, Ljava/util/ArrayList;->size()I
+	8       (00000022) move-result          v7
+	9       (00000024) add-int/lit8         v2, v7, -1
+
+endAnimation-BB@0x28 : [ endAnimation-BB@0x2c endAnimation-BB@0x66 ]
+	10      (00000028) if-ltz               v2, +1f
+
+endAnimation-BB@0x2c : [ endAnimation-BB@0x44 endAnimation-BB@0x60 ]
+	11      (0000002c) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingMoves Ljava/util/ArrayList;
+	12      (00000030) invoke-virtual       v7, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	13      (00000036) move-result-object   v4
+	14      (00000038) check-cast           v4, Landroid/support/v7/widget/DefaultItemAnimator$MoveInfo;
+	15      (0000003c) iget-object          v7, v4, Landroid/support/v7/widget/DefaultItemAnimator$MoveInfo;->holder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	16      (00000040) if-ne                v7, v11, +10
+
+endAnimation-BB@0x44 : [ endAnimation-BB@0x60 ]
+	17      (00000044) invoke-static        v6, v8, Landroid/support/v4/view/ViewCompat;->setTranslationY(Landroid/view/View; F)V
+	18      (0000004a) invoke-static        v6, v8, Landroid/support/v4/view/ViewCompat;->setTranslationX(Landroid/view/View; F)V
+	19      (00000050) invoke-virtual       v10, v11, Landroid/support/v7/widget/DefaultItemAnimator;->dispatchMoveFinished(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	20      (00000056) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingMoves Ljava/util/ArrayList;
+	21      (0000005a) invoke-virtual       v7, v2, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+endAnimation-BB@0x60 : [ endAnimation-BB@0x28 ]
+	22      (00000060) add-int/lit8         v2, v2, -1
+	23      (00000064) goto                 -1e
+
+endAnimation-BB@0x66 : [ endAnimation-BB@0x80 endAnimation-BB@0x8c ]
+	24      (00000066) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingChanges Ljava/util/ArrayList;
+	25      (0000006a) invoke-direct        v10, v7, v11, Landroid/support/v7/widget/DefaultItemAnimator;->endChangeAnimation(Ljava/util/List; Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	26      (00000070) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingRemovals Ljava/util/ArrayList;
+	27      (00000074) invoke-virtual       v7, v11, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+	28      (0000007a) move-result          v7
+	29      (0000007c) if-eqz               v7, +8
+
+endAnimation-BB@0x80 : [ endAnimation-BB@0x8c ]
+	30      (00000080) invoke-static        v6, v9, Landroid/support/v4/view/ViewCompat;->setAlpha(Landroid/view/View; F)V
+	31      (00000086) invoke-virtual       v10, v11, Landroid/support/v7/widget/DefaultItemAnimator;->dispatchRemoveFinished(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+
+endAnimation-BB@0x8c : [ endAnimation-BB@0x9c endAnimation-BB@0xa8 ]
+	32      (0000008c) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingAdditions Ljava/util/ArrayList;
+	33      (00000090) invoke-virtual       v7, v11, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+	34      (00000096) move-result          v7
+	35      (00000098) if-eqz               v7, +8
+
+endAnimation-BB@0x9c : [ endAnimation-BB@0xa8 ]
+	36      (0000009c) invoke-static        v6, v9, Landroid/support/v4/view/ViewCompat;->setAlpha(Landroid/view/View; F)V
+	37      (000000a2) invoke-virtual       v10, v11, Landroid/support/v7/widget/DefaultItemAnimator;->dispatchAddFinished(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+
+endAnimation-BB@0xa8 : [ endAnimation-BB@0xb8 ]
+	38      (000000a8) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mChangesList Ljava/util/ArrayList;
+	39      (000000ac) invoke-virtual       v7, Ljava/util/ArrayList;->size()I
+	40      (000000b2) move-result          v7
+	41      (000000b4) add-int/lit8         v2, v7, -1
+
+endAnimation-BB@0xb8 : [ endAnimation-BB@0xbc endAnimation-BB@0xee ]
+	42      (000000b8) if-ltz               v2, +1b
+
+endAnimation-BB@0xbc : [ endAnimation-BB@0xde endAnimation-BB@0xe8 ]
+	43      (000000bc) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mChangesList Ljava/util/ArrayList;
+	44      (000000c0) invoke-virtual       v7, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	45      (000000c6) move-result-object   v1
+	46      (000000c8) check-cast           v1, Ljava/util/ArrayList;
+	47      (000000cc) invoke-direct        v10, v1, v11, Landroid/support/v7/widget/DefaultItemAnimator;->endChangeAnimation(Ljava/util/List; Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	48      (000000d2) invoke-virtual       v1, Ljava/util/ArrayList;->isEmpty()Z
+	49      (000000d8) move-result          v7
+	50      (000000da) if-eqz               v7, +7
+
+endAnimation-BB@0xde : [ endAnimation-BB@0xe8 ]
+	51      (000000de) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mChangesList Ljava/util/ArrayList;
+	52      (000000e2) invoke-virtual       v7, v2, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+endAnimation-BB@0xe8 : [ endAnimation-BB@0xb8 ]
+	53      (000000e8) add-int/lit8         v2, v2, -1
+	54      (000000ec) goto                 -1a
+
+endAnimation-BB@0xee : [ endAnimation-BB@0xfe ]
+	55      (000000ee) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mMovesList Ljava/util/ArrayList;
+	56      (000000f2) invoke-virtual       v7, Ljava/util/ArrayList;->size()I
+	57      (000000f8) move-result          v7
+	58      (000000fa) add-int/lit8         v2, v7, -1
+
+endAnimation-BB@0xfe : [ endAnimation-BB@0x102 endAnimation-BB@0x170 ]
+	59      (000000fe) if-ltz               v2, +39
+
+endAnimation-BB@0x102 : [ endAnimation-BB@0x11e ]
+	60      (00000102) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mMovesList Ljava/util/ArrayList;
+	61      (00000106) invoke-virtual       v7, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	62      (0000010c) move-result-object   v5
+	63      (0000010e) check-cast           v5, Ljava/util/ArrayList;
+	64      (00000112) invoke-virtual       v5, Ljava/util/ArrayList;->size()I
+	65      (00000118) move-result          v7
+	66      (0000011a) add-int/lit8         v3, v7, -1
+
+endAnimation-BB@0x11e : [ endAnimation-BB@0x122 endAnimation-BB@0x164 ]
+	67      (0000011e) if-ltz               v3, +23
+
+endAnimation-BB@0x122 : [ endAnimation-BB@0x136 endAnimation-BB@0x16a ]
+	68      (00000122) invoke-virtual       v5, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	69      (00000128) move-result-object   v4
+	70      (0000012a) check-cast           v4, Landroid/support/v7/widget/DefaultItemAnimator$MoveInfo;
+	71      (0000012e) iget-object          v7, v4, Landroid/support/v7/widget/DefaultItemAnimator$MoveInfo;->holder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	72      (00000132) if-ne                v7, v11, +1c
+
+endAnimation-BB@0x136 : [ endAnimation-BB@0x15a endAnimation-BB@0x164 ]
+	73      (00000136) invoke-static        v6, v8, Landroid/support/v4/view/ViewCompat;->setTranslationY(Landroid/view/View; F)V
+	74      (0000013c) invoke-static        v6, v8, Landroid/support/v4/view/ViewCompat;->setTranslationX(Landroid/view/View; F)V
+	75      (00000142) invoke-virtual       v10, v11, Landroid/support/v7/widget/DefaultItemAnimator;->dispatchMoveFinished(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	76      (00000148) invoke-virtual       v5, v3, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+	77      (0000014e) invoke-virtual       v5, Ljava/util/ArrayList;->isEmpty()Z
+	78      (00000154) move-result          v7
+	79      (00000156) if-eqz               v7, +7
+
+endAnimation-BB@0x15a : [ endAnimation-BB@0x164 ]
+	80      (0000015a) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mMovesList Ljava/util/ArrayList;
+	81      (0000015e) invoke-virtual       v7, v2, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+endAnimation-BB@0x164 : [ endAnimation-BB@0xfe ]
+	82      (00000164) add-int/lit8         v2, v2, -1
+	83      (00000168) goto                 -35
+
+endAnimation-BB@0x16a : [ endAnimation-BB@0x11e ]
+	84      (0000016a) add-int/lit8         v3, v3, -1
+	85      (0000016e) goto                 -28
+
+endAnimation-BB@0x170 : [ endAnimation-BB@0x180 ]
+	86      (00000170) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mAdditionsList Ljava/util/ArrayList;
+	87      (00000174) invoke-virtual       v7, Ljava/util/ArrayList;->size()I
+	88      (0000017a) move-result          v7
+	89      (0000017c) add-int/lit8         v2, v7, -1
+
+endAnimation-BB@0x180 : [ endAnimation-BB@0x184 endAnimation-BB@0x1c8 ]
+	90      (00000180) if-ltz               v2, +24
+
+endAnimation-BB@0x184 : [ endAnimation-BB@0x1a0 endAnimation-BB@0x1c2 ]
+	91      (00000184) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mAdditionsList Ljava/util/ArrayList;
+	92      (00000188) invoke-virtual       v7, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	93      (0000018e) move-result-object   v0
+	94      (00000190) check-cast           v0, Ljava/util/ArrayList;
+	95      (00000194) invoke-virtual       v0, v11, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+	96      (0000019a) move-result          v7
+	97      (0000019c) if-eqz               v7, +13
+
+endAnimation-BB@0x1a0 : [ endAnimation-BB@0x1b8 endAnimation-BB@0x1c2 ]
+	98      (000001a0) invoke-static        v6, v9, Landroid/support/v4/view/ViewCompat;->setAlpha(Landroid/view/View; F)V
+	99      (000001a6) invoke-virtual       v10, v11, Landroid/support/v7/widget/DefaultItemAnimator;->dispatchAddFinished(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	100     (000001ac) invoke-virtual       v0, Ljava/util/ArrayList;->isEmpty()Z
+	101     (000001b2) move-result          v7
+	102     (000001b4) if-eqz               v7, +7
+
+endAnimation-BB@0x1b8 : [ endAnimation-BB@0x1c2 ]
+	103     (000001b8) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mAdditionsList Ljava/util/ArrayList;
+	104     (000001bc) invoke-virtual       v7, v2, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+endAnimation-BB@0x1c2 : [ endAnimation-BB@0x180 ]
+	105     (000001c2) add-int/lit8         v2, v2, -1
+	106     (000001c6) goto                 -23
+
+endAnimation-BB@0x1c8 : [ endAnimation-BB@0x1d8 endAnimation-BB@0x1d8 ]
+	107     (000001c8) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mRemoveAnimations Ljava/util/ArrayList;
+	108     (000001cc) invoke-virtual       v7, v11, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+	109     (000001d2) move-result          v7
+	110     (000001d4) if-eqz               v7, +2
+
+endAnimation-BB@0x1d8 : [ endAnimation-BB@0x1e8 endAnimation-BB@0x1e8 ]
+	111     (000001d8) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mAddAnimations Ljava/util/ArrayList;
+	112     (000001dc) invoke-virtual       v7, v11, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+	113     (000001e2) move-result          v7
+	114     (000001e4) if-eqz               v7, +2
+
+endAnimation-BB@0x1e8 : [ endAnimation-BB@0x1f8 endAnimation-BB@0x1f8 ]
+	115     (000001e8) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mChangeAnimations Ljava/util/ArrayList;
+	116     (000001ec) invoke-virtual       v7, v11, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+	117     (000001f2) move-result          v7
+	118     (000001f4) if-eqz               v7, +2
+
+endAnimation-BB@0x1f8 : [ endAnimation-BB@0x208 endAnimation-BB@0x208 ]
+	119     (000001f8) iget-object          v7, v10, Landroid/support/v7/widget/DefaultItemAnimator;->mMoveAnimations Ljava/util/ArrayList;
+	120     (000001fc) invoke-virtual       v7, v11, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+	121     (00000202) move-result          v7
+	122     (00000204) if-eqz               v7, +2
+
+endAnimation-BB@0x208 : 
+	123     (00000208) invoke-direct        v10, Landroid/support/v7/widget/DefaultItemAnimator;->dispatchFinishedWhenDone()V
+	124     (0000020e) return-void          
+

@@ -1,0 +1,70 @@
+# Landroid/support/v4/app/SharedElementCallback;->onCreateSnapshotView(Landroid/content/Context; Landroid/os/Parcelable;)Landroid/view/View; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.content.Context
+# - v10:android.os.Parcelable
+#
+# - return:android.view.View
+
+onCreateSnapshotView-BB@0x0 : [ onCreateSnapshotView-BB@0xa onCreateSnapshotView-BB@0x8a ]
+	0       (00000000) const/4              v5, 0
+	1       (00000002) instance-of          v6, v10, Landroid/os/Bundle;
+	2       (00000006) if-eqz               v6, +42
+
+onCreateSnapshotView-BB@0xa : [ onCreateSnapshotView-BB@0x24 onCreateSnapshotView-BB@0x28 ]
+	3       (0000000a) move-object          v1, v10
+	4       (0000000c) check-cast           v1, Landroid/os/Bundle;
+	5       (00000010) const-string         v6, 'sharedElement:snapshot:bitmap'
+	6       (00000014) invoke-virtual       v1, v6, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+	7       (0000001a) move-result-object   v0
+	8       (0000001c) check-cast           v0, Landroid/graphics/Bitmap;
+	9       (00000020) if-nez               v0, +4
+
+onCreateSnapshotView-BB@0x24 : [ onCreateSnapshotView-BB@0x26 ]
+	10      (00000024) const/4              v6, 0
+
+onCreateSnapshotView-BB@0x26 : 
+	11      (00000026) return-object        v6
+
+onCreateSnapshotView-BB@0x28 : [ onCreateSnapshotView-BB@0x64 onCreateSnapshotView-BB@0x86 ]
+	12      (00000028) new-instance         v2, Landroid/widget/ImageView;
+	13      (0000002c) invoke-direct        v2, v9, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+	14      (00000032) move-object          v5, v2
+	15      (00000034) invoke-virtual       v2, v0, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+	16      (0000003a) const-string         v6, 'sharedElement:snapshot:imageScaleType'
+	17      (0000003e) invoke-virtual       v1, v6, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+	18      (00000044) move-result-object   v6
+	19      (00000046) invoke-static        v6, Landroid/widget/ImageView$ScaleType;->valueOf(Ljava/lang/String;)Landroid/widget/ImageView$ScaleType;
+	20      (0000004c) move-result-object   v6
+	21      (0000004e) invoke-virtual       v2, v6, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+	22      (00000054) invoke-virtual       v2, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
+	23      (0000005a) move-result-object   v6
+	24      (0000005c) sget-object          v7, Landroid/widget/ImageView$ScaleType;->MATRIX Landroid/widget/ImageView$ScaleType;
+	25      (00000060) if-ne                v6, v7, +13
+
+onCreateSnapshotView-BB@0x64 : [ onCreateSnapshotView-BB@0x86 ]
+	26      (00000064) const-string         v6, 'sharedElement:snapshot:imageMatrix'
+	27      (00000068) invoke-virtual       v1, v6, Landroid/os/Bundle;->getFloatArray(Ljava/lang/String;)[F
+	28      (0000006e) move-result-object   v4
+	29      (00000070) new-instance         v3, Landroid/graphics/Matrix;
+	30      (00000074) invoke-direct        v3, Landroid/graphics/Matrix;-><init>()V
+	31      (0000007a) invoke-virtual       v3, v4, Landroid/graphics/Matrix;->setValues([F)V
+	32      (00000080) invoke-virtual       v2, v3, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+onCreateSnapshotView-BB@0x86 : [ onCreateSnapshotView-BB@0x26 ]
+	33      (00000086) move-object          v6, v5
+	34      (00000088) goto                 -31
+
+onCreateSnapshotView-BB@0x8a : [ onCreateSnapshotView-BB@0x92 onCreateSnapshotView-BB@0x86 ]
+	35      (0000008a) instance-of          v6, v10, Landroid/graphics/Bitmap;
+	36      (0000008e) if-eqz               v6, -4
+
+onCreateSnapshotView-BB@0x92 : [ onCreateSnapshotView-BB@0x86 ]
+	37      (00000092) move-object          v0, v10
+	38      (00000094) check-cast           v0, Landroid/graphics/Bitmap;
+	39      (00000098) new-instance         v5, Landroid/widget/ImageView;
+	40      (0000009c) invoke-direct        v5, v9, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+	41      (000000a2) invoke-virtual       v5, v0, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+	42      (000000a8) goto                 -11
+

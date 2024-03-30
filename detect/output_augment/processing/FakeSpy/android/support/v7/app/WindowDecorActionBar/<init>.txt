@@ -1,0 +1,50 @@
+# Landroid/support/v7/app/WindowDecorActionBar;-><init>(Landroid/app/Activity; Z)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.app.Activity
+# - v6:boolean
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x80 <init>-BB@0x92 ]
+	0       (00000000) const/4              v3, 1
+	1       (00000002) invoke-direct        v4, Landroid/support/v7/app/ActionBar;-><init>()V
+	2       (00000008) new-instance         v2, Ljava/util/ArrayList;
+	3       (0000000c) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+	4       (00000012) iput-object          v2, v4, Landroid/support/v7/app/WindowDecorActionBar;->mTabs Ljava/util/ArrayList;
+	5       (00000016) const/4              v2, -1
+	6       (00000018) iput                 v2, v4, Landroid/support/v7/app/WindowDecorActionBar;->mSavedTabPosition I
+	7       (0000001c) new-instance         v2, Ljava/util/ArrayList;
+	8       (00000020) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+	9       (00000026) iput-object          v2, v4, Landroid/support/v7/app/WindowDecorActionBar;->mMenuVisibilityListeners Ljava/util/ArrayList;
+	10      (0000002a) const/4              v2, 0
+	11      (0000002c) iput                 v2, v4, Landroid/support/v7/app/WindowDecorActionBar;->mCurWindowVisibility I
+	12      (00000030) iput-boolean         v3, v4, Landroid/support/v7/app/WindowDecorActionBar;->mContentAnimations Z
+	13      (00000034) iput-boolean         v3, v4, Landroid/support/v7/app/WindowDecorActionBar;->mNowShowing Z
+	14      (00000038) new-instance         v2, Landroid/support/v7/app/WindowDecorActionBar$1;
+	15      (0000003c) invoke-direct        v2, v4, Landroid/support/v7/app/WindowDecorActionBar$1;-><init>(Landroid/support/v7/app/WindowDecorActionBar;)V
+	16      (00000042) iput-object          v2, v4, Landroid/support/v7/app/WindowDecorActionBar;->mHideListener Landroid/support/v4/view/ViewPropertyAnimatorListener;
+	17      (00000046) new-instance         v2, Landroid/support/v7/app/WindowDecorActionBar$2;
+	18      (0000004a) invoke-direct        v2, v4, Landroid/support/v7/app/WindowDecorActionBar$2;-><init>(Landroid/support/v7/app/WindowDecorActionBar;)V
+	19      (00000050) iput-object          v2, v4, Landroid/support/v7/app/WindowDecorActionBar;->mShowListener Landroid/support/v4/view/ViewPropertyAnimatorListener;
+	20      (00000054) new-instance         v2, Landroid/support/v7/app/WindowDecorActionBar$3;
+	21      (00000058) invoke-direct        v2, v4, Landroid/support/v7/app/WindowDecorActionBar$3;-><init>(Landroid/support/v7/app/WindowDecorActionBar;)V
+	22      (0000005e) iput-object          v2, v4, Landroid/support/v7/app/WindowDecorActionBar;->mUpdateListener Landroid/support/v4/view/ViewPropertyAnimatorUpdateListener;
+	23      (00000062) iput-object          v5, v4, Landroid/support/v7/app/WindowDecorActionBar;->mActivity Landroid/app/Activity;
+	24      (00000066) invoke-virtual       v5, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+	25      (0000006c) move-result-object   v1
+	26      (0000006e) invoke-virtual       v1, Landroid/view/Window;->getDecorView()Landroid/view/View;
+	27      (00000074) move-result-object   v0
+	28      (00000076) invoke-direct        v4, v0, Landroid/support/v7/app/WindowDecorActionBar;->init(Landroid/view/View;)V
+	29      (0000007c) if-nez               v6, +b
+
+<init>-BB@0x80 : [ <init>-BB@0x92 ]
+	30      (00000080) const                v2, 16908290 # [2.387723460627157e-38]
+	31      (00000086) invoke-virtual       v0, v2, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	32      (0000008c) move-result-object   v2
+	33      (0000008e) iput-object          v2, v4, Landroid/support/v7/app/WindowDecorActionBar;->mContentView Landroid/view/View;
+
+<init>-BB@0x92 : 
+	34      (00000092) return-void          
+

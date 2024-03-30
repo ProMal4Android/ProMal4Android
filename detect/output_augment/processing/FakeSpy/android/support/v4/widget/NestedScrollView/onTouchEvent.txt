@@ -1,0 +1,557 @@
+# Landroid/support/v4/widget/NestedScrollView;->onTouchEvent(Landroid/view/MotionEvent;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v33
+# - v34:android.view.MotionEvent
+#
+# - return:boolean
+
+onTouchEvent-BB@0x0 : [ onTouchEvent-BB@0x1a onTouchEvent-BB@0x24 ]
+	0       (00000000) invoke-direct/range  v33, Landroid/support/v4/widget/NestedScrollView;->initVelocityTrackerIfNotExists()V
+	1       (00000006) invoke-static/range  v34, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
+	2       (0000000c) move-result-object   v31
+	3       (0000000e) invoke-static/range  v34, Landroid/support/v4/view/MotionEventCompat;->getActionMasked(Landroid/view/MotionEvent;)I
+	4       (00000014) move-result          v21
+	5       (00000016) if-nez               v21, +7
+
+onTouchEvent-BB@0x1a : [ onTouchEvent-BB@0x24 ]
+	6       (0000001a) const/4              v2, 0
+	7       (0000001c) move-object/from16   v0, v33
+	8       (00000020) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mNestedYOffset I
+
+onTouchEvent-BB@0x24 : [ D:onTouchEvent-BB@0x40 0:onTouchEvent-BB@0x68 1:onTouchEvent-BB@0x49a 2:onTouchEvent-BB@0x10e 3:onTouchEvent-BB@0x55c 4:onTouchEvent-BB@0x40 5:onTouchEvent-BB@0x5c6 6:onTouchEvent-BB@0x604 ]
+	9       (00000024) const/4              v2, 0
+	10      (00000026) move-object/from16   v0, v33
+	11      (0000002a) iget                 v3, v0, Landroid/support/v4/widget/NestedScrollView;->mNestedYOffset I
+	12      (0000002e) int-to-float         v3, v3
+	13      (00000030) move-object/from16   v0, v31
+	14      (00000034) invoke-virtual       v0, v2, v3, Landroid/view/MotionEvent;->offsetLocation(F F)V
+	15      (0000003a) packed-switch        v21, +2ff (0x638)
+
+onTouchEvent-BB@0x40 : [ onTouchEvent-BB@0x4c onTouchEvent-BB@0x5e ]
+	16      (00000040) move-object/from16   v0, v33
+	17      (00000044) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mVelocityTracker Landroid/view/VelocityTracker;
+	18      (00000048) if-eqz               v2, +b
+
+onTouchEvent-BB@0x4c : [ onTouchEvent-BB@0x5e ]
+	19      (0000004c) move-object/from16   v0, v33
+	20      (00000050) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mVelocityTracker Landroid/view/VelocityTracker;
+	21      (00000054) move-object/from16   v0, v31
+	22      (00000058) invoke-virtual       v2, v0, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+
+onTouchEvent-BB@0x5e : [ onTouchEvent-BB@0x66 ]
+	23      (0000005e) invoke-virtual/range v31, Landroid/view/MotionEvent;->recycle()V
+	24      (00000064) const/4              v2, 1
+
+onTouchEvent-BB@0x66 : 
+	25      (00000066) return               v2
+
+onTouchEvent-BB@0x68 : [ onTouchEvent-BB@0x74 onTouchEvent-BB@0x78 ]
+	26      (00000068) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getChildCount()I
+	27      (0000006e) move-result          v2
+	28      (00000070) if-nez               v2, +4
+
+onTouchEvent-BB@0x74 : [ onTouchEvent-BB@0x66 ]
+	29      (00000074) const/4              v2, 0
+	30      (00000076) goto                 -8
+
+onTouchEvent-BB@0x78 : [ onTouchEvent-BB@0x8c onTouchEvent-BB@0x10a ]
+	31      (00000078) move-object/from16   v0, v33
+	32      (0000007c) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+	33      (00000080) invoke-virtual       v2, Landroid/support/v4/widget/ScrollerCompat;->isFinished()Z
+	34      (00000086) move-result          v2
+	35      (00000088) if-nez               v2, +41
+
+onTouchEvent-BB@0x8c : [ onTouchEvent-BB@0x8e ]
+	36      (0000008c) const/4              v2, 1
+
+onTouchEvent-BB@0x8e : [ onTouchEvent-BB@0x9a onTouchEvent-BB@0xb2 ]
+	37      (0000008e) move-object/from16   v0, v33
+	38      (00000092) iput-boolean         v2, v0, Landroid/support/v4/widget/NestedScrollView;->mIsBeingDragged Z
+	39      (00000096) if-eqz               v2, +e
+
+onTouchEvent-BB@0x9a : [ onTouchEvent-BB@0xa6 onTouchEvent-BB@0xb2 ]
+	40      (0000009a) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getParent()Landroid/view/ViewParent;
+	41      (000000a0) move-result-object   v28
+	42      (000000a2) if-eqz               v28, +8
+
+onTouchEvent-BB@0xa6 : [ onTouchEvent-BB@0xb2 ]
+	43      (000000a6) const/4              v2, 1
+	44      (000000a8) move-object/from16   v0, v28
+	45      (000000ac) invoke-interface     v0, v2, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+onTouchEvent-BB@0xb2 : [ onTouchEvent-BB@0xc6 onTouchEvent-BB@0xd4 ]
+	46      (000000b2) move-object/from16   v0, v33
+	47      (000000b6) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+	48      (000000ba) invoke-virtual       v2, Landroid/support/v4/widget/ScrollerCompat;->isFinished()Z
+	49      (000000c0) move-result          v2
+	50      (000000c2) if-nez               v2, +9
+
+onTouchEvent-BB@0xc6 : [ onTouchEvent-BB@0xd4 ]
+	51      (000000c6) move-object/from16   v0, v33
+	52      (000000ca) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+	53      (000000ce) invoke-virtual       v2, Landroid/support/v4/widget/ScrollerCompat;->abortAnimation()V
+
+onTouchEvent-BB@0xd4 : [ onTouchEvent-BB@0x40 ]
+	54      (000000d4) invoke-virtual/range v34, Landroid/view/MotionEvent;->getY()F
+	55      (000000da) move-result          v2
+	56      (000000dc) float-to-int         v2, v2
+	57      (000000de) move-object/from16   v0, v33
+	58      (000000e2) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mLastMotionY I
+	59      (000000e6) const/4              v2, 0
+	60      (000000e8) move-object/from16   v0, v34
+	61      (000000ec) invoke-static        v0, v2, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent; I)I
+	62      (000000f2) move-result          v2
+	63      (000000f4) move-object/from16   v0, v33
+	64      (000000f8) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mActivePointerId I
+	65      (000000fc) const/4              v2, 2
+	66      (000000fe) move-object/from16   v0, v33
+	67      (00000102) invoke-virtual       v0, v2, Landroid/support/v4/widget/NestedScrollView;->startNestedScroll(I)Z
+	68      (00000108) goto                 -64
+
+onTouchEvent-BB@0x10a : [ onTouchEvent-BB@0x8e ]
+	69      (0000010a) const/4              v2, 0
+	70      (0000010c) goto                 -3f
+
+onTouchEvent-BB@0x10e : [ onTouchEvent-BB@0x12c onTouchEvent-BB@0x174 ]
+	71      (0000010e) move-object/from16   v0, v33
+	72      (00000112) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mActivePointerId I
+	73      (00000116) move-object/from16   v0, v34
+	74      (0000011a) invoke-static        v0, v2, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent; I)I
+	75      (00000120) move-result          v22
+	76      (00000122) const/4              v2, -1
+	77      (00000124) move/from16          v0, v22
+	78      (00000128) if-ne                v0, v2, +26
+
+onTouchEvent-BB@0x12c : [ onTouchEvent-BB@0x40 ]
+	79      (0000012c) const-string         v2, 'NestedScrollView'
+	80      (00000130) new-instance         v3, Ljava/lang/StringBuilder;
+	81      (00000134) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	82      (0000013a) const-string         v5, 'Invalid pointerId='
+	83      (0000013e) invoke-virtual       v3, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	84      (00000144) move-result-object   v3
+	85      (00000146) move-object/from16   v0, v33
+	86      (0000014a) iget                 v5, v0, Landroid/support/v4/widget/NestedScrollView;->mActivePointerId I
+	87      (0000014e) invoke-virtual       v3, v5, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	88      (00000154) move-result-object   v3
+	89      (00000156) const-string         v5, ' in onTouchEvent'
+	90      (0000015a) invoke-virtual       v3, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	91      (00000160) move-result-object   v3
+	92      (00000162) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	93      (00000168) move-result-object   v3
+	94      (0000016a) invoke-static        v2, v3, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	95      (00000170) goto/16              -98
+
+onTouchEvent-BB@0x174 : [ onTouchEvent-BB@0x1b8 onTouchEvent-BB@0x204 ]
+	96      (00000174) move-object/from16   v0, v34
+	97      (00000178) move/from16          v1, v22
+	98      (0000017c) invoke-static        v0, v1, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent; I)F
+	99      (00000182) move-result          v2
+	100     (00000184) float-to-int         v0, v2
+	101     (00000186) move/from16          v32, v0
+	102     (0000018a) move-object/from16   v0, v33
+	103     (0000018e) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mLastMotionY I
+	104     (00000192) sub-int              v4, v2, v32
+	105     (00000196) const/4              v2, 0
+	106     (00000198) move-object/from16   v0, v33
+	107     (0000019c) iget-object          v3, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollConsumed [I
+	108     (000001a0) move-object/from16   v0, v33
+	109     (000001a4) iget-object          v5, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollOffset [I
+	110     (000001a8) move-object/from16   v0, v33
+	111     (000001ac) invoke-virtual       v0, v2, v4, v3, v5, Landroid/support/v4/widget/NestedScrollView;->dispatchNestedPreScroll(I I [I [I)Z
+	112     (000001b2) move-result          v2
+	113     (000001b4) if-eqz               v2, +28
+
+onTouchEvent-BB@0x1b8 : [ onTouchEvent-BB@0x204 ]
+	114     (000001b8) move-object/from16   v0, v33
+	115     (000001bc) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollConsumed [I
+	116     (000001c0) const/4              v3, 1
+	117     (000001c2) aget                 v2, v2, v3
+	118     (000001c6) sub-int/2addr        v4, v2
+	119     (000001c8) const/4              v2, 0
+	120     (000001ca) move-object/from16   v0, v33
+	121     (000001ce) iget-object          v3, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollOffset [I
+	122     (000001d2) const/4              v5, 1
+	123     (000001d4) aget                 v3, v3, v5
+	124     (000001d8) int-to-float         v3, v3
+	125     (000001da) move-object/from16   v0, v31
+	126     (000001de) invoke-virtual       v0, v2, v3, Landroid/view/MotionEvent;->offsetLocation(F F)V
+	127     (000001e4) move-object/from16   v0, v33
+	128     (000001e8) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mNestedYOffset I
+	129     (000001ec) move-object/from16   v0, v33
+	130     (000001f0) iget-object          v3, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollOffset [I
+	131     (000001f4) const/4              v5, 1
+	132     (000001f6) aget                 v3, v3, v5
+	133     (000001fa) add-int/2addr        v2, v3
+	134     (000001fc) move-object/from16   v0, v33
+	135     (00000200) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mNestedYOffset I
+
+onTouchEvent-BB@0x204 : [ onTouchEvent-BB@0x210 onTouchEvent-BB@0x254 ]
+	136     (00000204) move-object/from16   v0, v33
+	137     (00000208) iget-boolean         v2, v0, Landroid/support/v4/widget/NestedScrollView;->mIsBeingDragged Z
+	138     (0000020c) if-nez               v2, +24
+
+onTouchEvent-BB@0x210 : [ onTouchEvent-BB@0x224 onTouchEvent-BB@0x254 ]
+	139     (00000210) invoke-static        v4, Ljava/lang/Math;->abs(I)I
+	140     (00000216) move-result          v2
+	141     (00000218) move-object/from16   v0, v33
+	142     (0000021c) iget                 v3, v0, Landroid/support/v4/widget/NestedScrollView;->mTouchSlop I
+	143     (00000220) if-le                v2, v3, +1a
+
+onTouchEvent-BB@0x224 : [ onTouchEvent-BB@0x230 onTouchEvent-BB@0x23c ]
+	144     (00000224) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getParent()Landroid/view/ViewParent;
+	145     (0000022a) move-result-object   v28
+	146     (0000022c) if-eqz               v28, +8
+
+onTouchEvent-BB@0x230 : [ onTouchEvent-BB@0x23c ]
+	147     (00000230) const/4              v2, 1
+	148     (00000232) move-object/from16   v0, v28
+	149     (00000236) invoke-interface     v0, v2, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+onTouchEvent-BB@0x23c : [ onTouchEvent-BB@0x24a onTouchEvent-BB@0x372 ]
+	150     (0000023c) const/4              v2, 1
+	151     (0000023e) move-object/from16   v0, v33
+	152     (00000242) iput-boolean         v2, v0, Landroid/support/v4/widget/NestedScrollView;->mIsBeingDragged Z
+	153     (00000246) if-lez               v4, +96
+
+onTouchEvent-BB@0x24a : [ onTouchEvent-BB@0x254 ]
+	154     (0000024a) move-object/from16   v0, v33
+	155     (0000024e) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mTouchSlop I
+	156     (00000252) sub-int/2addr        v4, v2
+
+onTouchEvent-BB@0x254 : [ onTouchEvent-BB@0x260 onTouchEvent-BB@0x40 ]
+	157     (00000254) move-object/from16   v0, v33
+	158     (00000258) iget-boolean         v2, v0, Landroid/support/v4/widget/NestedScrollView;->mIsBeingDragged Z
+	159     (0000025c) if-eqz               v2, -10e
+
+onTouchEvent-BB@0x260 : [ onTouchEvent-BB@0x296 onTouchEvent-BB@0x2a4 ]
+	160     (00000260) move-object/from16   v0, v33
+	161     (00000264) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollOffset [I
+	162     (00000268) const/4              v3, 1
+	163     (0000026a) aget                 v2, v2, v3
+	164     (0000026e) sub-int              v2, v32, v2
+	165     (00000272) move-object/from16   v0, v33
+	166     (00000276) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mLastMotionY I
+	167     (0000027a) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	168     (00000280) move-result          v26
+	169     (00000282) invoke-direct/range  v33, Landroid/support/v4/widget/NestedScrollView;->getScrollRange()I
+	170     (00000288) move-result          v8
+	171     (0000028a) invoke-static/range  v33, Landroid/support/v4/view/ViewCompat;->getOverScrollMode(Landroid/view/View;)I
+	172     (00000290) move-result          v27
+	173     (00000292) if-eqz               v27, +9
+
+onTouchEvent-BB@0x296 : [ onTouchEvent-BB@0x2a0 onTouchEvent-BB@0x380 ]
+	174     (00000296) const/4              v2, 1
+	175     (00000298) move/from16          v0, v27
+	176     (0000029c) if-ne                v0, v2, +72
+
+onTouchEvent-BB@0x2a0 : [ onTouchEvent-BB@0x2a4 onTouchEvent-BB@0x380 ]
+	177     (000002a0) if-lez               v8, +70
+
+onTouchEvent-BB@0x2a4 : [ onTouchEvent-BB@0x2a8 ]
+	178     (000002a4) const/16             v23, 1
+
+onTouchEvent-BB@0x2a8 : [ onTouchEvent-BB@0x2cc onTouchEvent-BB@0x2e6 ]
+	179     (000002a8) const/4              v3, 0
+	180     (000002aa) const/4              v5, 0
+	181     (000002ac) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	182     (000002b2) move-result          v6
+	183     (000002b4) const/4              v7, 0
+	184     (000002b6) const/4              v9, 0
+	185     (000002b8) const/4              v10, 0
+	186     (000002ba) const/4              v11, 1
+	187     (000002bc) move-object/from16   v2, v33
+	188     (000002c0) invoke-virtual/range v2 ... v11, Landroid/support/v4/widget/NestedScrollView;->overScrollByCompat(I I I I I I I I Z)Z
+	189     (000002c6) move-result          v2
+	190     (000002c8) if-eqz               v2, +f
+
+onTouchEvent-BB@0x2cc : [ onTouchEvent-BB@0x2d8 onTouchEvent-BB@0x2e6 ]
+	191     (000002cc) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->hasNestedScrollingParent()Z
+	192     (000002d2) move-result          v2
+	193     (000002d4) if-nez               v2, +9
+
+onTouchEvent-BB@0x2d8 : [ onTouchEvent-BB@0x2e6 ]
+	194     (000002d8) move-object/from16   v0, v33
+	195     (000002dc) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mVelocityTracker Landroid/view/VelocityTracker;
+	196     (000002e0) invoke-virtual       v2, Landroid/view/VelocityTracker;->clear()V
+
+onTouchEvent-BB@0x2e6 : [ onTouchEvent-BB@0x312 onTouchEvent-BB@0x386 ]
+	197     (000002e6) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	198     (000002ec) move-result          v2
+	199     (000002ee) sub-int              v11, v2, v26
+	200     (000002f2) sub-int              v13, v4, v11
+	201     (000002f6) const/4              v10, 0
+	202     (000002f8) const/4              v12, 0
+	203     (000002fa) move-object/from16   v0, v33
+	204     (000002fe) iget-object          v14, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollOffset [I
+	205     (00000302) move-object/from16   v9, v33
+	206     (00000306) invoke-virtual/range v9 ... v14, Landroid/support/v4/widget/NestedScrollView;->dispatchNestedScroll(I I I I [I)Z
+	207     (0000030c) move-result          v2
+	208     (0000030e) if-eqz               v2, +3c
+
+onTouchEvent-BB@0x312 : [ onTouchEvent-BB@0x40 ]
+	209     (00000312) move-object/from16   v0, v33
+	210     (00000316) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mLastMotionY I
+	211     (0000031a) move-object/from16   v0, v33
+	212     (0000031e) iget-object          v3, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollOffset [I
+	213     (00000322) const/4              v5, 1
+	214     (00000324) aget                 v3, v3, v5
+	215     (00000328) sub-int/2addr        v2, v3
+	216     (0000032a) move-object/from16   v0, v33
+	217     (0000032e) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mLastMotionY I
+	218     (00000332) const/4              v2, 0
+	219     (00000334) move-object/from16   v0, v33
+	220     (00000338) iget-object          v3, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollOffset [I
+	221     (0000033c) const/4              v5, 1
+	222     (0000033e) aget                 v3, v3, v5
+	223     (00000342) int-to-float         v3, v3
+	224     (00000344) move-object/from16   v0, v31
+	225     (00000348) invoke-virtual       v0, v2, v3, Landroid/view/MotionEvent;->offsetLocation(F F)V
+	226     (0000034e) move-object/from16   v0, v33
+	227     (00000352) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mNestedYOffset I
+	228     (00000356) move-object/from16   v0, v33
+	229     (0000035a) iget-object          v3, v0, Landroid/support/v4/widget/NestedScrollView;->mScrollOffset [I
+	230     (0000035e) const/4              v5, 1
+	231     (00000360) aget                 v3, v3, v5
+	232     (00000364) add-int/2addr        v2, v3
+	233     (00000366) move-object/from16   v0, v33
+	234     (0000036a) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mNestedYOffset I
+	235     (0000036e) goto/16              -197
+
+onTouchEvent-BB@0x372 : [ onTouchEvent-BB@0x254 ]
+	236     (00000372) move-object/from16   v0, v33
+	237     (00000376) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mTouchSlop I
+	238     (0000037a) add-int/2addr        v4, v2
+	239     (0000037c) goto/16              -94
+
+onTouchEvent-BB@0x380 : [ onTouchEvent-BB@0x2a8 ]
+	240     (00000380) const/16             v23, 0
+	241     (00000384) goto                 -6e
+
+onTouchEvent-BB@0x386 : [ onTouchEvent-BB@0x38a onTouchEvent-BB@0x40 ]
+	242     (00000386) if-eqz               v23, -1a3
+
+onTouchEvent-BB@0x38a : [ onTouchEvent-BB@0x398 onTouchEvent-BB@0x430 ]
+	243     (0000038a) invoke-direct/range  v33, Landroid/support/v4/widget/NestedScrollView;->ensureGlows()V
+	244     (00000390) add-int              v29, v26, v4
+	245     (00000394) if-gez               v29, +4e
+
+onTouchEvent-BB@0x398 : [ onTouchEvent-BB@0x3e4 onTouchEvent-BB@0x3f2 ]
+	246     (00000398) move-object/from16   v0, v33
+	247     (0000039c) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowTop Landroid/support/v4/widget/EdgeEffectCompat;
+	248     (000003a0) int-to-float         v3, v4
+	249     (000003a2) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getHeight()I
+	250     (000003a8) move-result          v5
+	251     (000003aa) int-to-float         v5, v5
+	252     (000003ac) div-float/2addr      v3, v5
+	253     (000003ae) move-object/from16   v0, v34
+	254     (000003b2) move/from16          v1, v22
+	255     (000003b6) invoke-static        v0, v1, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent; I)F
+	256     (000003bc) move-result          v5
+	257     (000003be) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getWidth()I
+	258     (000003c4) move-result          v6
+	259     (000003c6) int-to-float         v6, v6
+	260     (000003c8) div-float/2addr      v5, v6
+	261     (000003ca) invoke-virtual       v2, v3, v5, Landroid/support/v4/widget/EdgeEffectCompat;->onPull(F F)Z
+	262     (000003d0) move-object/from16   v0, v33
+	263     (000003d4) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowBottom Landroid/support/v4/widget/EdgeEffectCompat;
+	264     (000003d8) invoke-virtual       v2, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+	265     (000003de) move-result          v2
+	266     (000003e0) if-nez               v2, +9
+
+onTouchEvent-BB@0x3e4 : [ onTouchEvent-BB@0x3f2 ]
+	267     (000003e4) move-object/from16   v0, v33
+	268     (000003e8) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowBottom Landroid/support/v4/widget/EdgeEffectCompat;
+	269     (000003ec) invoke-virtual       v2, Landroid/support/v4/widget/EdgeEffectCompat;->onRelease()Z
+
+onTouchEvent-BB@0x3f2 : [ onTouchEvent-BB@0x3fe onTouchEvent-BB@0x40 ]
+	270     (000003f2) move-object/from16   v0, v33
+	271     (000003f6) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowTop Landroid/support/v4/widget/EdgeEffectCompat;
+	272     (000003fa) if-eqz               v2, -1dd
+
+onTouchEvent-BB@0x3fe : [ onTouchEvent-BB@0x412 onTouchEvent-BB@0x426 ]
+	273     (000003fe) move-object/from16   v0, v33
+	274     (00000402) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowTop Landroid/support/v4/widget/EdgeEffectCompat;
+	275     (00000406) invoke-virtual       v2, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+	276     (0000040c) move-result          v2
+	277     (0000040e) if-eqz               v2, +c
+
+onTouchEvent-BB@0x412 : [ onTouchEvent-BB@0x426 onTouchEvent-BB@0x40 ]
+	278     (00000412) move-object/from16   v0, v33
+	279     (00000416) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowBottom Landroid/support/v4/widget/EdgeEffectCompat;
+	280     (0000041a) invoke-virtual       v2, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+	281     (00000420) move-result          v2
+	282     (00000422) if-nez               v2, -1f1
+
+onTouchEvent-BB@0x426 : [ onTouchEvent-BB@0x40 ]
+	283     (00000426) invoke-static/range  v33, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
+	284     (0000042c) goto/16              -1f6
+
+onTouchEvent-BB@0x430 : [ onTouchEvent-BB@0x438 onTouchEvent-BB@0x3f2 ]
+	285     (00000430) move/from16          v0, v29
+	286     (00000434) if-le                v0, v8, -21
+
+onTouchEvent-BB@0x438 : [ onTouchEvent-BB@0x48a onTouchEvent-BB@0x3f2 ]
+	287     (00000438) move-object/from16   v0, v33
+	288     (0000043c) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowBottom Landroid/support/v4/widget/EdgeEffectCompat;
+	289     (00000440) int-to-float         v3, v4
+	290     (00000442) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getHeight()I
+	291     (00000448) move-result          v5
+	292     (0000044a) int-to-float         v5, v5
+	293     (0000044c) div-float/2addr      v3, v5
+	294     (0000044e) const/high16         v5, 16256 # [1.0]
+	295     (00000452) move-object/from16   v0, v34
+	296     (00000456) move/from16          v1, v22
+	297     (0000045a) invoke-static        v0, v1, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent; I)F
+	298     (00000460) move-result          v6
+	299     (00000462) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getWidth()I
+	300     (00000468) move-result          v7
+	301     (0000046a) int-to-float         v7, v7
+	302     (0000046c) div-float/2addr      v6, v7
+	303     (0000046e) sub-float/2addr      v5, v6
+	304     (00000470) invoke-virtual       v2, v3, v5, Landroid/support/v4/widget/EdgeEffectCompat;->onPull(F F)Z
+	305     (00000476) move-object/from16   v0, v33
+	306     (0000047a) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowTop Landroid/support/v4/widget/EdgeEffectCompat;
+	307     (0000047e) invoke-virtual       v2, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+	308     (00000484) move-result          v2
+	309     (00000486) if-nez               v2, -4a
+
+onTouchEvent-BB@0x48a : [ onTouchEvent-BB@0x3f2 ]
+	310     (0000048a) move-object/from16   v0, v33
+	311     (0000048e) iget-object          v2, v0, Landroid/support/v4/widget/NestedScrollView;->mEdgeGlowTop Landroid/support/v4/widget/EdgeEffectCompat;
+	312     (00000492) invoke-virtual       v2, Landroid/support/v4/widget/EdgeEffectCompat;->onRelease()Z
+	313     (00000498) goto                 -53
+
+onTouchEvent-BB@0x49a : [ onTouchEvent-BB@0x4a6 onTouchEvent-BB@0x508 ]
+	314     (0000049a) move-object/from16   v0, v33
+	315     (0000049e) iget-boolean         v2, v0, Landroid/support/v4/widget/NestedScrollView;->mIsBeingDragged Z
+	316     (000004a2) if-eqz               v2, +33
+
+onTouchEvent-BB@0x4a6 : [ onTouchEvent-BB@0x4f8 onTouchEvent-BB@0x51c ]
+	317     (000004a6) move-object/from16   v0, v33
+	318     (000004aa) iget-object          v0, v0, Landroid/support/v4/widget/NestedScrollView;->mVelocityTracker Landroid/view/VelocityTracker;
+	319     (000004ae) move-object/from16   v30, v0
+	320     (000004b2) const/16             v2, 1000
+	321     (000004b6) move-object/from16   v0, v33
+	322     (000004ba) iget                 v3, v0, Landroid/support/v4/widget/NestedScrollView;->mMaximumVelocity I
+	323     (000004be) int-to-float         v3, v3
+	324     (000004c0) move-object/from16   v0, v30
+	325     (000004c4) invoke-virtual       v0, v2, v3, Landroid/view/VelocityTracker;->computeCurrentVelocity(I F)V
+	326     (000004ca) move-object/from16   v0, v33
+	327     (000004ce) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mActivePointerId I
+	328     (000004d2) move-object/from16   v0, v30
+	329     (000004d6) invoke-static        v0, v2, Landroid/support/v4/view/VelocityTrackerCompat;->getYVelocity(Landroid/view/VelocityTracker; I)F
+	330     (000004dc) move-result          v2
+	331     (000004de) float-to-int         v0, v2
+	332     (000004e0) move/from16          v25, v0
+	333     (000004e4) invoke-static/range  v25, Ljava/lang/Math;->abs(I)I
+	334     (000004ea) move-result          v2
+	335     (000004ec) move-object/from16   v0, v33
+	336     (000004f0) iget                 v3, v0, Landroid/support/v4/widget/NestedScrollView;->mMinimumVelocity I
+	337     (000004f4) if-le                v2, v3, +14
+
+onTouchEvent-BB@0x4f8 : [ onTouchEvent-BB@0x508 ]
+	338     (000004f8) move/from16          v0, v25
+	339     (000004fc) neg-int              v2, v0
+	340     (000004fe) move-object/from16   v0, v33
+	341     (00000502) invoke-direct        v0, v2, Landroid/support/v4/widget/NestedScrollView;->flingWithNestedDispatch(I)V
+
+onTouchEvent-BB@0x508 : [ onTouchEvent-BB@0x40 ]
+	342     (00000508) const/4              v2, -1
+	343     (0000050a) move-object/from16   v0, v33
+	344     (0000050e) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mActivePointerId I
+	345     (00000512) invoke-direct/range  v33, Landroid/support/v4/widget/NestedScrollView;->endDrag()V
+	346     (00000518) goto/16              -26c
+
+onTouchEvent-BB@0x51c : [ onTouchEvent-BB@0x554 onTouchEvent-BB@0x508 ]
+	347     (0000051c) move-object/from16   v0, v33
+	348     (00000520) iget-object          v14, v0, Landroid/support/v4/widget/NestedScrollView;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+	349     (00000524) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getScrollX()I
+	350     (0000052a) move-result          v15
+	351     (0000052c) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	352     (00000532) move-result          v16
+	353     (00000534) const/16             v17, 0
+	354     (00000538) const/16             v18, 0
+	355     (0000053c) const/16             v19, 0
+	356     (00000540) invoke-direct/range  v33, Landroid/support/v4/widget/NestedScrollView;->getScrollRange()I
+	357     (00000546) move-result          v20
+	358     (00000548) invoke-virtual/range v14 ... v20, Landroid/support/v4/widget/ScrollerCompat;->springBack(I I I I I I)Z
+	359     (0000054e) move-result          v2
+	360     (00000550) if-eqz               v2, -24
+
+onTouchEvent-BB@0x554 : [ onTouchEvent-BB@0x508 ]
+	361     (00000554) invoke-static/range  v33, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
+	362     (0000055a) goto                 -29
+
+onTouchEvent-BB@0x55c : [ onTouchEvent-BB@0x568 onTouchEvent-BB@0x5b2 ]
+	363     (0000055c) move-object/from16   v0, v33
+	364     (00000560) iget-boolean         v2, v0, Landroid/support/v4/widget/NestedScrollView;->mIsBeingDragged Z
+	365     (00000564) if-eqz               v2, +27
+
+onTouchEvent-BB@0x568 : [ onTouchEvent-BB@0x574 onTouchEvent-BB@0x5b2 ]
+	366     (00000568) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getChildCount()I
+	367     (0000056e) move-result          v2
+	368     (00000570) if-lez               v2, +21
+
+onTouchEvent-BB@0x574 : [ onTouchEvent-BB@0x5ac onTouchEvent-BB@0x5b2 ]
+	369     (00000574) move-object/from16   v0, v33
+	370     (00000578) iget-object          v14, v0, Landroid/support/v4/widget/NestedScrollView;->mScroller Landroid/support/v4/widget/ScrollerCompat;
+	371     (0000057c) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getScrollX()I
+	372     (00000582) move-result          v15
+	373     (00000584) invoke-virtual/range v33, Landroid/support/v4/widget/NestedScrollView;->getScrollY()I
+	374     (0000058a) move-result          v16
+	375     (0000058c) const/16             v17, 0
+	376     (00000590) const/16             v18, 0
+	377     (00000594) const/16             v19, 0
+	378     (00000598) invoke-direct/range  v33, Landroid/support/v4/widget/NestedScrollView;->getScrollRange()I
+	379     (0000059e) move-result          v20
+	380     (000005a0) invoke-virtual/range v14 ... v20, Landroid/support/v4/widget/ScrollerCompat;->springBack(I I I I I I)Z
+	381     (000005a6) move-result          v2
+	382     (000005a8) if-eqz               v2, +5
+
+onTouchEvent-BB@0x5ac : [ onTouchEvent-BB@0x5b2 ]
+	383     (000005ac) invoke-static/range  v33, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
+
+onTouchEvent-BB@0x5b2 : [ onTouchEvent-BB@0x40 ]
+	384     (000005b2) const/4              v2, -1
+	385     (000005b4) move-object/from16   v0, v33
+	386     (000005b8) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mActivePointerId I
+	387     (000005bc) invoke-direct/range  v33, Landroid/support/v4/widget/NestedScrollView;->endDrag()V
+	388     (000005c2) goto/16              -2c1
+
+onTouchEvent-BB@0x5c6 : [ onTouchEvent-BB@0x40 ]
+	389     (000005c6) invoke-static/range  v34, Landroid/support/v4/view/MotionEventCompat;->getActionIndex(Landroid/view/MotionEvent;)I
+	390     (000005cc) move-result          v24
+	391     (000005ce) move-object/from16   v0, v34
+	392     (000005d2) move/from16          v1, v24
+	393     (000005d6) invoke-static        v0, v1, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent; I)F
+	394     (000005dc) move-result          v2
+	395     (000005de) float-to-int         v2, v2
+	396     (000005e0) move-object/from16   v0, v33
+	397     (000005e4) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mLastMotionY I
+	398     (000005e8) move-object/from16   v0, v34
+	399     (000005ec) move/from16          v1, v24
+	400     (000005f0) invoke-static        v0, v1, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent; I)I
+	401     (000005f6) move-result          v2
+	402     (000005f8) move-object/from16   v0, v33
+	403     (000005fc) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mActivePointerId I
+	404     (00000600) goto/16              -2e0
+
+onTouchEvent-BB@0x604 : [ onTouchEvent-BB@0x40 ]
+	405     (00000604) invoke-direct/range  v33 ... v34, Landroid/support/v4/widget/NestedScrollView;->onSecondaryPointerUp(Landroid/view/MotionEvent;)V
+	406     (0000060a) move-object/from16   v0, v33
+	407     (0000060e) iget                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mActivePointerId I
+	408     (00000612) move-object/from16   v0, v34
+	409     (00000616) invoke-static        v0, v2, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent; I)I
+	410     (0000061c) move-result          v2
+	411     (0000061e) move-object/from16   v0, v34
+	412     (00000622) invoke-static        v0, v2, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent; I)F
+	413     (00000628) move-result          v2
+	414     (0000062a) float-to-int         v2, v2
+	415     (0000062c) move-object/from16   v0, v33
+	416     (00000630) iput                 v2, v0, Landroid/support/v4/widget/NestedScrollView;->mLastMotionY I
+	417     (00000634) goto/16              -2fa
+
+onTouchEvent-BB@0x638 : 
+	418     (00000638) packed-switch-payload 0 1 2 3 4 5 6
+

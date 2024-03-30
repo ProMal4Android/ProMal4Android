@@ -1,0 +1,85 @@
+# Landroid/support/v4/content/FileProvider$SimplePathStrategy;->getFileForUri(Landroid/net/Uri;)Ljava/io/File; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.net.Uri
+#
+# - return:java.io.File
+
+getFileForUri-BB@0x0 : [ getFileForUri-BB@0x4e getFileForUri-BB@0x80 ]
+	0       (00000000) const/4              v7, 1
+	1       (00000002) invoke-virtual       v10, Landroid/net/Uri;->getEncodedPath()Ljava/lang/String;
+	2       (00000008) move-result-object   v2
+	3       (0000000a) const/16             v6, 47
+	4       (0000000e) invoke-virtual       v2, v6, v7, Ljava/lang/String;->indexOf(I I)I
+	5       (00000014) move-result          v4
+	6       (00000016) invoke-virtual       v2, v7, v4, Ljava/lang/String;->substring(I I)Ljava/lang/String;
+	7       (0000001c) move-result-object   v6
+	8       (0000001e) invoke-static        v6, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+	9       (00000024) move-result-object   v5
+	10      (00000026) add-int/lit8         v6, v4, 1
+	11      (0000002a) invoke-virtual       v2, v6, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	12      (00000030) move-result-object   v6
+	13      (00000032) invoke-static        v6, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+	14      (00000038) move-result-object   v2
+	15      (0000003a) iget-object          v6, v9, Landroid/support/v4/content/FileProvider$SimplePathStrategy;->mRoots Ljava/util/HashMap;
+	16      (0000003e) invoke-virtual       v6, v5, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	17      (00000044) move-result-object   v3
+	18      (00000046) check-cast           v3, Ljava/io/File;
+	19      (0000004a) if-nez               v3, +1b
+
+getFileForUri-BB@0x4e : 
+	20      (0000004e) new-instance         v6, Ljava/lang/IllegalArgumentException;
+	21      (00000052) new-instance         v7, Ljava/lang/StringBuilder;
+	22      (00000056) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	23      (0000005c) const-string         v8, 'Unable to find configured root for '
+	24      (00000060) invoke-virtual       v7, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (00000066) move-result-object   v7
+	26      (00000068) invoke-virtual       v7, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	27      (0000006e) move-result-object   v7
+	28      (00000070) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	29      (00000076) move-result-object   v7
+	30      (00000078) invoke-direct        v6, v7, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	31      (0000007e) throw                v6
+
+getFileForUri-BB@0x80 : [ getFileForUri-BB@0x8a ]
+	32      (00000080) new-instance         v1, Ljava/io/File;
+	33      (00000084) invoke-direct        v1, v3, v2, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+
+getFileForUri-BB@0x8a : [ getFileForUri-BB@0xae getFileForUri-BB@0xf2 ]
+	34      (0000008a) invoke-virtual       v1, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
+	35      (00000090) move-result-object   v1
+	36      (00000092) invoke-virtual       v1, Ljava/io/File;->getPath()Ljava/lang/String;
+	37      (00000098) move-result-object   v6
+	38      (0000009a) invoke-virtual       v3, Ljava/io/File;->getPath()Ljava/lang/String;
+	39      (000000a0) move-result-object   v7
+	40      (000000a2) invoke-virtual       v6, v7, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	41      (000000a8) move-result          v6
+	42      (000000aa) if-nez               v6, +24
+	8a:8f
+	(Ljava/io/IOException; -> be getFileForUri-BB@0xbe)
+
+getFileForUri-BB@0xae : 
+	43      (000000ae) new-instance         v6, Ljava/lang/SecurityException;
+	44      (000000b2) const-string         v7, 'Resolved path jumped beyond configured root'
+	45      (000000b6) invoke-direct        v6, v7, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+	46      (000000bc) throw                v6
+
+getFileForUri-BB@0xbe : 
+	47      (000000be) move-exception       v0
+	48      (000000c0) new-instance         v6, Ljava/lang/IllegalArgumentException;
+	49      (000000c4) new-instance         v7, Ljava/lang/StringBuilder;
+	50      (000000c8) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	51      (000000ce) const-string         v8, 'Failed to resolve canonical path for '
+	52      (000000d2) invoke-virtual       v7, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	53      (000000d8) move-result-object   v7
+	54      (000000da) invoke-virtual       v7, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	55      (000000e0) move-result-object   v7
+	56      (000000e2) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	57      (000000e8) move-result-object   v7
+	58      (000000ea) invoke-direct        v6, v7, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	59      (000000f0) throw                v6
+
+getFileForUri-BB@0xf2 : 
+	60      (000000f2) return-object        v1
+

@@ -1,0 +1,45 @@
+# Landroid/support/v4/app/BackStackRecord;->setNameOverride(Landroid/support/v4/util/ArrayMap; Ljava/lang/String; Ljava/lang/String;)V [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.support.v4.util.ArrayMap
+# - v3:java.lang.String
+# - v4:java.lang.String
+#
+# - return:void
+
+setNameOverride-BB@0x0 : [ setNameOverride-BB@0x4 setNameOverride-BB@0x30 ]
+	0       (00000000) if-eqz               v3, +18
+
+setNameOverride-BB@0x4 : [ setNameOverride-BB@0x8 setNameOverride-BB@0x30 ]
+	1       (00000004) if-eqz               v4, +16
+
+setNameOverride-BB@0x8 : [ setNameOverride-BB@0xa ]
+	2       (00000008) const/4              v0, 0
+
+setNameOverride-BB@0xa : [ setNameOverride-BB@0x16 setNameOverride-BB@0x38 ]
+	3       (0000000a) invoke-virtual       v2, Landroid/support/v4/util/ArrayMap;->size()I
+	4       (00000010) move-result          v1
+	5       (00000012) if-ge                v0, v1, +13
+
+setNameOverride-BB@0x16 : [ setNameOverride-BB@0x2a setNameOverride-BB@0x32 ]
+	6       (00000016) invoke-virtual       v2, v0, Landroid/support/v4/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+	7       (0000001c) move-result-object   v1
+	8       (0000001e) invoke-virtual       v3, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	9       (00000024) move-result          v1
+	10      (00000026) if-eqz               v1, +6
+
+setNameOverride-BB@0x2a : [ setNameOverride-BB@0x30 ]
+	11      (0000002a) invoke-virtual       v2, v0, v4, Landroid/support/v4/util/ArrayMap;->setValueAt(I Ljava/lang/Object;)Ljava/lang/Object;
+
+setNameOverride-BB@0x30 : 
+	12      (00000030) return-void          
+
+setNameOverride-BB@0x32 : [ setNameOverride-BB@0xa ]
+	13      (00000032) add-int/lit8         v0, v0, 1
+	14      (00000036) goto                 -16
+
+setNameOverride-BB@0x38 : [ setNameOverride-BB@0x30 ]
+	15      (00000038) invoke-virtual       v2, v3, v4, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	16      (0000003e) goto                 -7
+

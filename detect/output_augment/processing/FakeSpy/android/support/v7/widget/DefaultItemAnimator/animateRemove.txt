@@ -1,0 +1,15 @@
+# Landroid/support/v7/widget/DefaultItemAnimator;->animateRemove(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.support.v7.widget.RecyclerView$ViewHolder
+#
+# - return:boolean
+
+animateRemove-BB@0x0 : 
+	0       (00000000) invoke-direct        v1, v2, Landroid/support/v7/widget/DefaultItemAnimator;->resetAnimation(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	1       (00000006) iget-object          v0, v1, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingRemovals Ljava/util/ArrayList;
+	2       (0000000a) invoke-virtual       v0, v2, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	3       (00000010) const/4              v0, 1
+	4       (00000012) return               v0
+

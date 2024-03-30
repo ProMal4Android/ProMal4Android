@@ -1,0 +1,48 @@
+# Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->calculateCachedStart()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:void
+
+calculateCachedStart-BB@0x0 : [ calculateCachedStart-BB@0x36 calculateCachedStart-BB@0x72 ]
+	0       (00000000) iget-object          v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	1       (00000004) const/4              v4, 0
+	2       (00000006) invoke-virtual       v3, v4, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	3       (0000000c) move-result-object   v2
+	4       (0000000e) check-cast           v2, Landroid/view/View;
+	5       (00000012) invoke-virtual       v5, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->getLayoutParams(Landroid/view/View;)Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;
+	6       (00000018) move-result-object   v1
+	7       (0000001a) iget-object          v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->this$0 Landroid/support/v7/widget/StaggeredGridLayoutManager;
+	8       (0000001e) iget-object          v3, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mPrimaryOrientation Landroid/support/v7/widget/OrientationHelper;
+	9       (00000022) invoke-virtual       v3, v2, Landroid/support/v7/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
+	10      (00000028) move-result          v3
+	11      (0000002a) iput                 v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mCachedStart I
+	12      (0000002e) iget-boolean         v3, v1, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan Z
+	13      (00000032) if-eqz               v3, +20
+
+calculateCachedStart-BB@0x36 : [ calculateCachedStart-BB@0x52 calculateCachedStart-BB@0x72 ]
+	14      (00000036) iget-object          v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->this$0 Landroid/support/v7/widget/StaggeredGridLayoutManager;
+	15      (0000003a) iget-object          v3, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mLazySpanLookup Landroid/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup;
+	16      (0000003e) invoke-virtual       v1, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->getViewLayoutPosition()I
+	17      (00000044) move-result          v4
+	18      (00000046) invoke-virtual       v3, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup;->getFullSpanItem(I)Landroid/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;
+	19      (0000004c) move-result-object   v0
+	20      (0000004e) if-eqz               v0, +12
+
+calculateCachedStart-BB@0x52 : [ calculateCachedStart-BB@0x5c calculateCachedStart-BB@0x72 ]
+	21      (00000052) iget                 v3, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapDir I
+	22      (00000056) const/4              v4, -1
+	23      (00000058) if-ne                v3, v4, +d
+
+calculateCachedStart-BB@0x5c : [ calculateCachedStart-BB@0x72 ]
+	24      (0000005c) iget                 v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mCachedStart I
+	25      (00000060) iget                 v4, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mIndex I
+	26      (00000064) invoke-virtual       v0, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->getGapForSpan(I)I
+	27      (0000006a) move-result          v4
+	28      (0000006c) sub-int/2addr        v3, v4
+	29      (0000006e) iput                 v3, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mCachedStart I
+
+calculateCachedStart-BB@0x72 : 
+	30      (00000072) return-void          
+

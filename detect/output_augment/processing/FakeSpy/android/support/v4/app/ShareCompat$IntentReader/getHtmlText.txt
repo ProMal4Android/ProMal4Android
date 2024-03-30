@@ -1,0 +1,38 @@
+# Landroid/support/v4/app/ShareCompat$IntentReader;->getHtmlText()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:java.lang.String
+
+getHtmlText-BB@0x0 : [ getHtmlText-BB@0x14 getHtmlText-BB@0x30 ]
+	0       (00000000) iget-object          v2, v4, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent Landroid/content/Intent;
+	1       (00000004) const-string         v3, 'android.intent.extra.HTML_TEXT'
+	2       (00000008) invoke-virtual       v2, v3, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) if-nez               v0, +10
+
+getHtmlText-BB@0x14 : [ getHtmlText-BB@0x24 getHtmlText-BB@0x32 ]
+	5       (00000014) invoke-virtual       v4, Landroid/support/v4/app/ShareCompat$IntentReader;->getText()Ljava/lang/CharSequence;
+	6       (0000001a) move-result-object   v1
+	7       (0000001c) instance-of          v2, v1, Landroid/text/Spanned;
+	8       (00000020) if-eqz               v2, +9
+
+getHtmlText-BB@0x24 : [ getHtmlText-BB@0x30 ]
+	9       (00000024) check-cast           v1, Landroid/text/Spanned;
+	10      (00000028) invoke-static        v1, Landroid/text/Html;->toHtml(Landroid/text/Spanned;)Ljava/lang/String;
+	11      (0000002e) move-result-object   v0
+
+getHtmlText-BB@0x30 : 
+	12      (00000030) return-object        v0
+
+getHtmlText-BB@0x32 : [ getHtmlText-BB@0x36 getHtmlText-BB@0x30 ]
+	13      (00000032) if-eqz               v1, -1
+
+getHtmlText-BB@0x36 : [ getHtmlText-BB@0x30 ]
+	14      (00000036) invoke-static        Landroid/support/v4/app/ShareCompat;->access$000()Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
+	15      (0000003c) move-result-object   v2
+	16      (0000003e) invoke-interface     v2, v1, Landroid/support/v4/app/ShareCompat$ShareCompatImpl;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
+	17      (00000044) move-result-object   v0
+	18      (00000046) goto                 -b
+

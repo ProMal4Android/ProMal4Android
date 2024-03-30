@@ -1,0 +1,35 @@
+# Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->retain()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+retain-BB@0x0 : [ retain-BB@0x8 retain-BB@0x38 ]
+	0       (00000000) sget-boolean         v0, Landroid/support/v4/app/LoaderManagerImpl;->DEBUG Z
+	1       (00000004) if-eqz               v0, +1a
+
+retain-BB@0x8 : [ retain-BB@0x38 ]
+	2       (00000008) const-string         v0, 'LoaderManager'
+	3       (0000000c) new-instance         v1, Ljava/lang/StringBuilder;
+	4       (00000010) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	5       (00000016) const-string         v2, '  Retaining: '
+	6       (0000001a) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	7       (00000020) move-result-object   v1
+	8       (00000022) invoke-virtual       v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	9       (00000028) move-result-object   v1
+	10      (0000002a) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	11      (00000030) move-result-object   v1
+	12      (00000032) invoke-static        v0, v1, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+retain-BB@0x38 : 
+	13      (00000038) const/4              v0, 1
+	14      (0000003a) iput-boolean         v0, v3, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mRetaining Z
+	15      (0000003e) iget-boolean         v0, v3, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mStarted Z
+	16      (00000042) iput-boolean         v0, v3, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mRetainingStarted Z
+	17      (00000046) const/4              v0, 0
+	18      (00000048) iput-boolean         v0, v3, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mStarted Z
+	19      (0000004c) const/4              v0, 0
+	20      (0000004e) iput-object          v0, v3, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mCallbacks Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
+	21      (00000052) return-void          
+

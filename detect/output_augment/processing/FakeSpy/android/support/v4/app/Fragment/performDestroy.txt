@@ -1,0 +1,43 @@
+# Landroid/support/v4/app/Fragment;->performDestroy()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+performDestroy-BB@0x0 : [ performDestroy-BB@0xa performDestroy-BB@0x14 ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	2       (00000006) if-eqz               v0, +7
+
+performDestroy-BB@0xa : [ performDestroy-BB@0x14 ]
+	3       (0000000a) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	4       (0000000e) invoke-virtual       v0, Landroid/support/v4/app/FragmentManagerImpl;->dispatchDestroy()V
+
+performDestroy-BB@0x14 : [ performDestroy-BB@0x2a performDestroy-BB@0x68 ]
+	5       (00000014) iput                 v1, v3, Landroid/support/v4/app/Fragment;->mState I
+	6       (00000018) iput-boolean         v1, v3, Landroid/support/v4/app/Fragment;->mCalled Z
+	7       (0000001c) invoke-virtual       v3, Landroid/support/v4/app/Fragment;->onDestroy()V
+	8       (00000022) iget-boolean         v0, v3, Landroid/support/v4/app/Fragment;->mCalled Z
+	9       (00000026) if-nez               v0, +21
+
+performDestroy-BB@0x2a : 
+	10      (0000002a) new-instance         v0, Landroid/support/v4/app/SuperNotCalledException;
+	11      (0000002e) new-instance         v1, Ljava/lang/StringBuilder;
+	12      (00000032) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	13      (00000038) const-string         v2, 'Fragment '
+	14      (0000003c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (00000042) move-result-object   v1
+	16      (00000044) invoke-virtual       v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	17      (0000004a) move-result-object   v1
+	18      (0000004c) const-string         v2, ' did not call through to super.onDestroy()'
+	19      (00000050) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (00000056) move-result-object   v1
+	21      (00000058) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	22      (0000005e) move-result-object   v1
+	23      (00000060) invoke-direct        v0, v1, Landroid/support/v4/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
+	24      (00000066) throw                v0
+
+performDestroy-BB@0x68 : 
+	25      (00000068) return-void          
+

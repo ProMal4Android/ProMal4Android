@@ -1,0 +1,48 @@
+# Landroid/support/v7/widget/AdapterHelper$UpdateOp;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : 
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuilder;
+	1       (00000004) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	2       (0000000a) invoke-static        v2, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+	3       (00000010) move-result          v1
+	4       (00000012) invoke-static        v1, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	5       (00000018) move-result-object   v1
+	6       (0000001a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	7       (00000020) move-result-object   v0
+	8       (00000022) const-string         v1, '['
+	9       (00000026) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (0000002c) move-result-object   v0
+	11      (0000002e) invoke-virtual       v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmdToString()Ljava/lang/String;
+	12      (00000034) move-result-object   v1
+	13      (00000036) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (0000003c) move-result-object   v0
+	15      (0000003e) const-string         v1, ',s:'
+	16      (00000042) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000048) move-result-object   v0
+	18      (0000004a) iget                 v1, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	19      (0000004e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	20      (00000054) move-result-object   v0
+	21      (00000056) const-string         v1, 'c:'
+	22      (0000005a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	23      (00000060) move-result-object   v0
+	24      (00000062) iget                 v1, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	25      (00000066) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	26      (0000006c) move-result-object   v0
+	27      (0000006e) const-string         v1, ',p:'
+	28      (00000072) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	29      (00000078) move-result-object   v0
+	30      (0000007a) iget-object          v1, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	31      (0000007e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	32      (00000084) move-result-object   v0
+	33      (00000086) const-string         v1, ']'
+	34      (0000008a) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	35      (00000090) move-result-object   v0
+	36      (00000092) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	37      (00000098) move-result-object   v0
+	38      (0000009a) return-object        v0
+

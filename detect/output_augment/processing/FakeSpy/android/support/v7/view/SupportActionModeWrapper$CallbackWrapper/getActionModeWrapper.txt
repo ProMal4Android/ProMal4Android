@@ -1,0 +1,43 @@
+# Landroid/support/v7/view/SupportActionModeWrapper$CallbackWrapper;->getActionModeWrapper(Landroid/support/v7/view/ActionMode;)Landroid/view/ActionMode; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.support.v7.view.ActionMode
+#
+# - return:android.view.ActionMode
+
+getActionModeWrapper-BB@0x0 : [ getActionModeWrapper-BB@0xe ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) iget-object          v3, v4, Landroid/support/v7/view/SupportActionModeWrapper$CallbackWrapper;->mActionModes Ljava/util/ArrayList;
+	2       (00000006) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	3       (0000000c) move-result          v0
+
+getActionModeWrapper-BB@0xe : [ getActionModeWrapper-BB@0x12 getActionModeWrapper-BB@0x36 ]
+	4       (0000000e) if-ge                v1, v0, +14
+
+getActionModeWrapper-BB@0x12 : [ getActionModeWrapper-BB@0x26 getActionModeWrapper-BB@0x30 ]
+	5       (00000012) iget-object          v3, v4, Landroid/support/v7/view/SupportActionModeWrapper$CallbackWrapper;->mActionModes Ljava/util/ArrayList;
+	6       (00000016) invoke-virtual       v3, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	7       (0000001c) move-result-object   v2
+	8       (0000001e) check-cast           v2, Landroid/support/v7/view/SupportActionModeWrapper;
+	9       (00000022) if-eqz               v2, +7
+
+getActionModeWrapper-BB@0x26 : [ getActionModeWrapper-BB@0x2e getActionModeWrapper-BB@0x30 ]
+	10      (00000026) iget-object          v3, v2, Landroid/support/v7/view/SupportActionModeWrapper;->mWrappedObject Landroid/support/v7/view/ActionMode;
+	11      (0000002a) if-ne                v3, v5, +3
+
+getActionModeWrapper-BB@0x2e : 
+	12      (0000002e) return-object        v2
+
+getActionModeWrapper-BB@0x30 : [ getActionModeWrapper-BB@0xe ]
+	13      (00000030) add-int/lit8         v1, v1, 1
+	14      (00000034) goto                 -13
+
+getActionModeWrapper-BB@0x36 : [ getActionModeWrapper-BB@0x2e ]
+	15      (00000036) new-instance         v2, Landroid/support/v7/view/SupportActionModeWrapper;
+	16      (0000003a) iget-object          v3, v4, Landroid/support/v7/view/SupportActionModeWrapper$CallbackWrapper;->mContext Landroid/content/Context;
+	17      (0000003e) invoke-direct        v2, v3, v5, Landroid/support/v7/view/SupportActionModeWrapper;-><init>(Landroid/content/Context; Landroid/support/v7/view/ActionMode;)V
+	18      (00000044) iget-object          v3, v4, Landroid/support/v7/view/SupportActionModeWrapper$CallbackWrapper;->mActionModes Ljava/util/ArrayList;
+	19      (00000048) invoke-virtual       v3, v2, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	20      (0000004e) goto                 -10
+

@@ -1,0 +1,74 @@
+# Landroid/support/v4/provider/DocumentsContractApi19;->exists(Landroid/content/Context; Landroid/net/Uri;)Z [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.content.Context
+# - v11:android.net.Uri
+#
+# - return:boolean
+
+exists-BB@0x0 : [ exists-BB@0x10 ]
+	0       (00000000) const/4              v8, 1
+	1       (00000002) const/4              v9, 0
+	2       (00000004) invoke-virtual       v10, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+	3       (0000000a) move-result-object   v0
+	4       (0000000c) const/4              v6, 0
+	5       (0000000e) const/4              v1, 1
+
+exists-BB@0x10 : [ exists-BB@0x3a exists-BB@0x44 ]
+	6       (00000010) new-array            v2, v1, [Ljava/lang/String;
+	7       (00000014) const/4              v1, 0
+	8       (00000016) const-string         v3, 'document_id'
+	9       (0000001a) aput-object          v3, v2, v1
+	10      (0000001e) const/4              v3, 0
+	11      (00000020) const/4              v4, 0
+	12      (00000022) const/4              v5, 0
+	13      (00000024) move-object          v1, v11
+	14      (00000026) invoke-virtual/range v0 ... v5, Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+	15      (0000002c) move-result-object   v6
+	16      (0000002e) invoke-interface     v6, Landroid/database/Cursor;->getCount()I
+	17      (00000034) move-result          v1
+	18      (00000036) if-lez               v1, +7
+	10:33
+	(Ljava/lang/Throwable; -> 84 exists-BB@0x84)
+	(Ljava/lang/Exception; -> 48 exists-BB@0x48)
+
+exists-BB@0x3a : [ exists-BB@0x3c ]
+	19      (0000003a) move                 v1, v8
+
+exists-BB@0x3c : [ exists-BB@0x42 ]
+	20      (0000003c) invoke-static        v6, Landroid/support/v4/provider/DocumentsContractApi19;->closeQuietly(Ljava/lang/AutoCloseable;)V
+
+exists-BB@0x42 : 
+	21      (00000042) return               v1
+
+exists-BB@0x44 : [ exists-BB@0x3c ]
+	22      (00000044) move                 v1, v9
+	23      (00000046) goto                 -5
+
+exists-BB@0x48 : [ exists-BB@0x4a ]
+	24      (00000048) move-exception       v7
+
+exists-BB@0x4a : [ exists-BB@0x42 ]
+	25      (0000004a) const-string         v1, 'DocumentFile'
+	26      (0000004e) new-instance         v2, Ljava/lang/StringBuilder;
+	27      (00000052) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	28      (00000058) const-string         v3, 'Failed query: '
+	29      (0000005c) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	30      (00000062) move-result-object   v2
+	31      (00000064) invoke-virtual       v2, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	32      (0000006a) move-result-object   v2
+	33      (0000006c) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	34      (00000072) move-result-object   v2
+	35      (00000074) invoke-static        v1, v2, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	36      (0000007a) invoke-static        v6, Landroid/support/v4/provider/DocumentsContractApi19;->closeQuietly(Ljava/lang/AutoCloseable;)V
+	37      (00000080) move                 v1, v9
+	38      (00000082) goto                 -20
+	4a:79
+	(Ljava/lang/Throwable; -> 84 exists-BB@0x84)
+
+exists-BB@0x84 : 
+	39      (00000084) move-exception       v1
+	40      (00000086) invoke-static        v6, Landroid/support/v4/provider/DocumentsContractApi19;->closeQuietly(Ljava/lang/AutoCloseable;)V
+	41      (0000008c) throw                v1
+

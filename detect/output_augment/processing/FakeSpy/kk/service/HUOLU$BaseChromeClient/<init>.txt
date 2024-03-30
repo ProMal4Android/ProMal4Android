@@ -1,0 +1,27 @@
+# Lkk/service/HUOLU$BaseChromeClient;-><init>(Lkk/service/HUOLU; I)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:kk.service.HUOLU
+# - v4:int
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0xe <init>-BB@0x10 ]
+	0       (00000000) iput-object          v3, v2, Lkk/service/HUOLU$BaseChromeClient;->this$0 Lkk/service/HUOLU;
+	1       (00000004) invoke-direct        v2, Landroid/webkit/WebChromeClient;-><init>()V
+	2       (0000000a) if-eqz               v4, +3
+
+<init>-BB@0xe : 
+	3       (0000000e) return-void          
+
+<init>-BB@0x10 : [ <init>-BB@0xe ]
+	4       (00000010) const/4              v0, 1
+	5       (00000012) iput-boolean         v0, v2, Lkk/service/HUOLU$BaseChromeClient;->isNext Z
+	6       (00000016) new-instance         v0, Ljava/lang/Thread;
+	7       (0000001a) new-instance         v1, Lkk/service/HUOLU$BaseChromeClient$1;
+	8       (0000001e) invoke-direct        v1, v2, v3, Lkk/service/HUOLU$BaseChromeClient$1;-><init>(Lkk/service/HUOLU$BaseChromeClient; Lkk/service/HUOLU;)V
+	9       (00000024) invoke-direct        v0, v1, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+	10      (0000002a) invoke-virtual       v0, Ljava/lang/Thread;->start()V
+	11      (00000030) goto                 -11
+

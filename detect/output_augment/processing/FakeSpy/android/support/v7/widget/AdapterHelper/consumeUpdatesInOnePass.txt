@@ -1,0 +1,84 @@
+# Landroid/support/v7/widget/AdapterHelper;->consumeUpdatesInOnePass()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v7
+#
+# - return:void
+
+consumeUpdatesInOnePass-BB@0x0 : [ consumeUpdatesInOnePass-BB@0x14 ]
+	0       (00000000) invoke-virtual       v7, Landroid/support/v7/widget/AdapterHelper;->consumePostponedUpdates()V
+	1       (00000006) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mPendingUpdates Ljava/util/ArrayList;
+	2       (0000000a) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	3       (00000010) move-result          v0
+	4       (00000012) const/4              v1, 0
+
+consumeUpdatesInOnePass-BB@0x14 : [ consumeUpdatesInOnePass-BB@0x18 consumeUpdatesInOnePass-BB@0xc6 ]
+	5       (00000014) if-ge                v1, v0, +59
+
+consumeUpdatesInOnePass-BB@0x18 : [ D:consumeUpdatesInOnePass-BB@0x32 1:consumeUpdatesInOnePass-BB@0x4a 2:consumeUpdatesInOnePass-BB@0x68 3:consumeUpdatesInOnePass-BB@0x32 4:consumeUpdatesInOnePass-BB@0x86 5:consumeUpdatesInOnePass-BB@0x32 6:consumeUpdatesInOnePass-BB@0x32 7:consumeUpdatesInOnePass-BB@0x32 8:consumeUpdatesInOnePass-BB@0xa8 ]
+	6       (00000018) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mPendingUpdates Ljava/util/ArrayList;
+	7       (0000001c) invoke-virtual       v3, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	8       (00000022) move-result-object   v2
+	9       (00000024) check-cast           v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+	10      (00000028) iget                 v3, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	11      (0000002c) packed-switch        v3, +56 (0xd8)
+
+consumeUpdatesInOnePass-BB@0x32 : [ consumeUpdatesInOnePass-BB@0x3a consumeUpdatesInOnePass-BB@0x44 ]
+	12      (00000032) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mOnItemProcessedCallback Ljava/lang/Runnable;
+	13      (00000036) if-eqz               v3, +7
+
+consumeUpdatesInOnePass-BB@0x3a : [ consumeUpdatesInOnePass-BB@0x44 ]
+	14      (0000003a) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mOnItemProcessedCallback Ljava/lang/Runnable;
+	15      (0000003e) invoke-interface     v3, Ljava/lang/Runnable;->run()V
+
+consumeUpdatesInOnePass-BB@0x44 : [ consumeUpdatesInOnePass-BB@0x14 ]
+	16      (00000044) add-int/lit8         v1, v1, 1
+	17      (00000048) goto                 -1a
+
+consumeUpdatesInOnePass-BB@0x4a : [ consumeUpdatesInOnePass-BB@0x32 ]
+	18      (0000004a) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	19      (0000004e) invoke-interface     v3, v2, Landroid/support/v7/widget/AdapterHelper$Callback;->onDispatchSecondPass(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+	20      (00000054) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	21      (00000058) iget                 v4, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	22      (0000005c) iget                 v5, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	23      (00000060) invoke-interface     v3, v4, v5, Landroid/support/v7/widget/AdapterHelper$Callback;->offsetPositionsForAdd(I I)V
+	24      (00000066) goto                 -1a
+
+consumeUpdatesInOnePass-BB@0x68 : [ consumeUpdatesInOnePass-BB@0x32 ]
+	25      (00000068) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	26      (0000006c) invoke-interface     v3, v2, Landroid/support/v7/widget/AdapterHelper$Callback;->onDispatchSecondPass(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+	27      (00000072) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	28      (00000076) iget                 v4, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	29      (0000007a) iget                 v5, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	30      (0000007e) invoke-interface     v3, v4, v5, Landroid/support/v7/widget/AdapterHelper$Callback;->offsetPositionsForRemovingInvisible(I I)V
+	31      (00000084) goto                 -29
+
+consumeUpdatesInOnePass-BB@0x86 : [ consumeUpdatesInOnePass-BB@0x32 ]
+	32      (00000086) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	33      (0000008a) invoke-interface     v3, v2, Landroid/support/v7/widget/AdapterHelper$Callback;->onDispatchSecondPass(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+	34      (00000090) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	35      (00000094) iget                 v4, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	36      (00000098) iget                 v5, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	37      (0000009c) iget-object          v6, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	38      (000000a0) invoke-interface     v3, v4, v5, v6, Landroid/support/v7/widget/AdapterHelper$Callback;->markViewHoldersUpdated(I I Ljava/lang/Object;)V
+	39      (000000a6) goto                 -3a
+
+consumeUpdatesInOnePass-BB@0xa8 : [ consumeUpdatesInOnePass-BB@0x32 ]
+	40      (000000a8) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	41      (000000ac) invoke-interface     v3, v2, Landroid/support/v7/widget/AdapterHelper$Callback;->onDispatchSecondPass(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+	42      (000000b2) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	43      (000000b6) iget                 v4, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	44      (000000ba) iget                 v5, v2, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	45      (000000be) invoke-interface     v3, v4, v5, Landroid/support/v7/widget/AdapterHelper$Callback;->offsetPositionsForMove(I I)V
+	46      (000000c4) goto                 -49
+
+consumeUpdatesInOnePass-BB@0xc6 : 
+	47      (000000c6) iget-object          v3, v7, Landroid/support/v7/widget/AdapterHelper;->mPendingUpdates Ljava/util/ArrayList;
+	48      (000000ca) invoke-virtual       v7, v3, Landroid/support/v7/widget/AdapterHelper;->recycleUpdateOpsAndClearList(Ljava/util/List;)V
+	49      (000000d0) const/4              v3, 0
+	50      (000000d2) iput                 v3, v7, Landroid/support/v7/widget/AdapterHelper;->mExistingUpdateTypes I
+	51      (000000d6) return-void          
+
+consumeUpdatesInOnePass-BB@0xd8 : 
+	52      (000000d8) packed-switch-payload 1 2 3 4 5 6 7 8
+

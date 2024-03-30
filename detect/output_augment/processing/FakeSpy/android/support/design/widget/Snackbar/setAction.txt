@@ -1,0 +1,38 @@
+# Landroid/support/design/widget/Snackbar;->setAction(Ljava/lang/CharSequence; Landroid/view/View$OnClickListener;)Landroid/support/design/widget/Snackbar; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.CharSequence
+# - v4:android.view.View$OnClickListener
+#
+# - return:android.support.design.widget.Snackbar
+
+setAction-BB@0x0 : [ setAction-BB@0x18 setAction-BB@0x1c ]
+	0       (00000000) iget-object          v1, v2, Landroid/support/design/widget/Snackbar;->mView Landroid/support/design/widget/Snackbar$SnackbarLayout;
+	1       (00000004) invoke-virtual       v1, Landroid/support/design/widget/Snackbar$SnackbarLayout;->getActionView()Landroid/widget/Button;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) invoke-static        v3, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	4       (00000012) move-result          v1
+	5       (00000014) if-nez               v1, +4
+
+setAction-BB@0x18 : [ setAction-BB@0x1c setAction-BB@0x30 ]
+	6       (00000018) if-nez               v4, +c
+
+setAction-BB@0x1c : [ setAction-BB@0x2e ]
+	7       (0000001c) const/16             v1, 8
+	8       (00000020) invoke-virtual       v0, v1, Landroid/widget/TextView;->setVisibility(I)V
+	9       (00000026) const/4              v1, 0
+	10      (00000028) invoke-virtual       v0, v1, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+setAction-BB@0x2e : 
+	11      (0000002e) return-object        v2
+
+setAction-BB@0x30 : [ setAction-BB@0x2e ]
+	12      (00000030) const/4              v1, 0
+	13      (00000032) invoke-virtual       v0, v1, Landroid/widget/TextView;->setVisibility(I)V
+	14      (00000038) invoke-virtual       v0, v3, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	15      (0000003e) new-instance         v1, Landroid/support/design/widget/Snackbar$2;
+	16      (00000042) invoke-direct        v1, v2, v4, Landroid/support/design/widget/Snackbar$2;-><init>(Landroid/support/design/widget/Snackbar; Landroid/view/View$OnClickListener;)V
+	17      (00000048) invoke-virtual       v0, v1, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+	18      (0000004e) goto                 -10
+

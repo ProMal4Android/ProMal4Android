@@ -1,0 +1,16 @@
+# Landroid/support/v4/app/RemoteInput$ImplBase;->addResultsToIntent([Landroid/support/v4/app/RemoteInput; Landroid/content/Intent; Landroid/os/Bundle;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.support.v4.app.RemoteInput[]
+# - v4:android.content.Intent
+# - v5:android.os.Bundle
+#
+# - return:void
+
+addResultsToIntent-BB@0x0 : 
+	0       (00000000) const-string         v0, 'RemoteInput'
+	1       (00000004) const-string         v1, 'RemoteInput is only supported from API Level 16'
+	2       (00000008) invoke-static        v0, v1, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	3       (0000000e) return-void          
+

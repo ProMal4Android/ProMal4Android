@@ -1,0 +1,38 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->dispatchConfigurationChanged(Landroid/content/res/Configuration;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.content.res.Configuration
+#
+# - return:void
+
+dispatchConfigurationChanged-BB@0x0 : [ dispatchConfigurationChanged-BB@0x8 dispatchConfigurationChanged-BB@0x3a ]
+	0       (00000000) iget-object          v2, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	1       (00000004) if-eqz               v2, +1b
+
+dispatchConfigurationChanged-BB@0x8 : [ dispatchConfigurationChanged-BB@0xa ]
+	2       (00000008) const/4              v1, 0
+
+dispatchConfigurationChanged-BB@0xa : [ dispatchConfigurationChanged-BB@0x1a dispatchConfigurationChanged-BB@0x3a ]
+	3       (0000000a) iget-object          v2, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	4       (0000000e) invoke-virtual       v2, Ljava/util/ArrayList;->size()I
+	5       (00000014) move-result          v2
+	6       (00000016) if-ge                v1, v2, +12
+
+dispatchConfigurationChanged-BB@0x1a : [ dispatchConfigurationChanged-BB@0x2e dispatchConfigurationChanged-BB@0x34 ]
+	7       (0000001a) iget-object          v2, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	8       (0000001e) invoke-virtual       v2, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	9       (00000024) move-result-object   v0
+	10      (00000026) check-cast           v0, Landroid/support/v4/app/Fragment;
+	11      (0000002a) if-eqz               v0, +5
+
+dispatchConfigurationChanged-BB@0x2e : [ dispatchConfigurationChanged-BB@0x34 ]
+	12      (0000002e) invoke-virtual       v0, v4, Landroid/support/v4/app/Fragment;->performConfigurationChanged(Landroid/content/res/Configuration;)V
+
+dispatchConfigurationChanged-BB@0x34 : [ dispatchConfigurationChanged-BB@0xa ]
+	13      (00000034) add-int/lit8         v1, v1, 1
+	14      (00000038) goto                 -17
+
+dispatchConfigurationChanged-BB@0x3a : 
+	15      (0000003a) return-void          
+

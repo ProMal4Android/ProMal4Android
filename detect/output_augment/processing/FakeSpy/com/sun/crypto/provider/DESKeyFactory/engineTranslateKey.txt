@@ -1,0 +1,69 @@
+# Lcom/sun/crypto/provider/DESKeyFactory;->engineTranslateKey(Ljavax/crypto/SecretKey;)Ljavax/crypto/SecretKey; [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:javax.crypto.SecretKey
+#
+# - return:javax.crypto.SecretKey
+
+engineTranslateKey-BB@0x0 : [ engineTranslateKey-BB@0x4 engineTranslateKey-BB@0x5a ]
+	0       (00000000) if-eqz               v3, +2d
+
+engineTranslateKey-BB@0x4 : [ engineTranslateKey-BB@0x1c engineTranslateKey-BB@0x5a ]
+	1       (00000004) invoke-interface     v3, Ljavax/crypto/SecretKey;->getAlgorithm()Ljava/lang/String;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) const-string         v1, 'DES'
+	4       (00000010) invoke-virtual       v0, v1, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	5       (00000016) move-result          v0
+	6       (00000018) if-eqz               v0, +21
+	4:69
+	(Ljava/security/spec/InvalidKeySpecException; -> 6a engineTranslateKey-BB@0x6a)
+
+engineTranslateKey-BB@0x1c : [ engineTranslateKey-BB@0x34 engineTranslateKey-BB@0x5a ]
+	7       (0000001c) invoke-interface     v3, Ljavax/crypto/SecretKey;->getFormat()Ljava/lang/String;
+	8       (00000022) move-result-object   v0
+	9       (00000024) const-string         v1, 'RAW'
+	10      (00000028) invoke-virtual       v0, v1, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	11      (0000002e) move-result          v0
+	12      (00000030) if-eqz               v0, +15
+	4:69
+	(Ljava/security/spec/InvalidKeySpecException; -> 6a engineTranslateKey-BB@0x6a)
+
+engineTranslateKey-BB@0x34 : [ engineTranslateKey-BB@0x3c engineTranslateKey-BB@0x3e ]
+	13      (00000034) instance-of          v0, v3, Lcom/sun/crypto/provider/DESKey;
+	14      (00000038) if-eqz               v0, +3
+	4:69
+	(Ljava/security/spec/InvalidKeySpecException; -> 6a engineTranslateKey-BB@0x6a)
+
+engineTranslateKey-BB@0x3c : 
+	15      (0000003c) return-object        v3
+	4:69
+	(Ljava/security/spec/InvalidKeySpecException; -> 6a engineTranslateKey-BB@0x6a)
+
+engineTranslateKey-BB@0x3e : [ engineTranslateKey-BB@0x3c ]
+	16      (0000003e) const-class          v0, Ljavax/crypto/spec/DESKeySpec;
+	17      (00000042) nop                  
+	18      (00000044) invoke-virtual       v2, v3, v0, Lcom/sun/crypto/provider/DESKeyFactory;->engineGetKeySpec(Ljavax/crypto/SecretKey; Ljava/lang/Class;)Ljava/security/spec/KeySpec;
+	19      (0000004a) move-result-object   v0
+	20      (0000004c) check-cast           v0, Ljavax/crypto/spec/DESKeySpec;
+	21      (00000050) invoke-virtual       v2, v0, Lcom/sun/crypto/provider/DESKeyFactory;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
+	22      (00000056) move-result-object   v3
+	23      (00000058) goto                 -e
+	4:69
+	(Ljava/security/spec/InvalidKeySpecException; -> 6a engineTranslateKey-BB@0x6a)
+
+engineTranslateKey-BB@0x5a : 
+	24      (0000005a) new-instance         v0, Ljava/security/InvalidKeyException;
+	25      (0000005e) const-string         v1, 'Inappropriate key format/algorithm'
+	26      (00000062) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	27      (00000068) throw                v0
+	4:69
+	(Ljava/security/spec/InvalidKeySpecException; -> 6a engineTranslateKey-BB@0x6a)
+
+engineTranslateKey-BB@0x6a : 
+	28      (0000006a) move-exception       v0
+	29      (0000006c) new-instance         v0, Ljava/security/InvalidKeyException;
+	30      (00000070) const-string         v1, 'Cannot translate key'
+	31      (00000074) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	32      (0000007a) throw                v0
+

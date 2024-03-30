@@ -1,0 +1,148 @@
+# Landroid/support/v4/content/FileProvider$SimplePathStrategy;->getUriForFile(Ljava/io/File;)Landroid/net/Uri; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:java.io.File
+#
+# - return:android.net.Uri
+
+getUriForFile-BB@0x0 : [ getUriForFile-BB@0x1e ]
+	0       (00000000) invoke-virtual       v10, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+	1       (00000006) move-result-object   v3
+	2       (00000008) const/4              v2, 0
+	3       (0000000a) iget-object          v6, v9, Landroid/support/v4/content/FileProvider$SimplePathStrategy;->mRoots Ljava/util/HashMap;
+	4       (0000000e) invoke-virtual       v6, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+	5       (00000014) move-result-object   v6
+	6       (00000016) invoke-interface     v6, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+	7       (0000001c) move-result-object   v1
+	0:5
+	(Ljava/io/IOException; -> 86 getUriForFile-BB@0x86)
+
+getUriForFile-BB@0x1e : [ getUriForFile-BB@0x2a getUriForFile-BB@0xba ]
+	8       (0000001e) invoke-interface     v1, Ljava/util/Iterator;->hasNext()Z
+	9       (00000024) move-result          v6
+	10      (00000026) if-eqz               v6, +4a
+
+getUriForFile-BB@0x2a : [ getUriForFile-BB@0x56 getUriForFile-BB@0x1e ]
+	11      (0000002a) invoke-interface     v1, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	12      (00000030) move-result-object   v4
+	13      (00000032) check-cast           v4, Ljava/util/Map$Entry;
+	14      (00000036) invoke-interface     v4, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	15      (0000003c) move-result-object   v6
+	16      (0000003e) check-cast           v6, Ljava/io/File;
+	17      (00000042) invoke-virtual       v6, Ljava/io/File;->getPath()Ljava/lang/String;
+	18      (00000048) move-result-object   v5
+	19      (0000004a) invoke-virtual       v3, v5, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	20      (00000050) move-result          v6
+	21      (00000052) if-eqz               v6, -1a
+
+getUriForFile-BB@0x56 : [ getUriForFile-BB@0x5a getUriForFile-BB@0x82 ]
+	22      (00000056) if-eqz               v2, +16
+
+getUriForFile-BB@0x5a : [ getUriForFile-BB@0x82 getUriForFile-BB@0x1e ]
+	23      (0000005a) invoke-virtual       v5, Ljava/lang/String;->length()I
+	24      (00000060) move-result          v7
+	25      (00000062) invoke-interface     v2, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	26      (00000068) move-result-object   v6
+	27      (0000006a) check-cast           v6, Ljava/io/File;
+	28      (0000006e) invoke-virtual       v6, Ljava/io/File;->getPath()Ljava/lang/String;
+	29      (00000074) move-result-object   v6
+	30      (00000076) invoke-virtual       v6, Ljava/lang/String;->length()I
+	31      (0000007c) move-result          v6
+	32      (0000007e) if-le                v7, v6, -30
+
+getUriForFile-BB@0x82 : [ getUriForFile-BB@0x1e ]
+	33      (00000082) move-object          v2, v4
+	34      (00000084) goto                 -33
+
+getUriForFile-BB@0x86 : 
+	35      (00000086) move-exception       v0
+	36      (00000088) new-instance         v6, Ljava/lang/IllegalArgumentException;
+	37      (0000008c) new-instance         v7, Ljava/lang/StringBuilder;
+	38      (00000090) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	39      (00000096) const-string         v8, 'Failed to resolve canonical path for '
+	40      (0000009a) invoke-virtual       v7, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	41      (000000a0) move-result-object   v7
+	42      (000000a2) invoke-virtual       v7, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	43      (000000a8) move-result-object   v7
+	44      (000000aa) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	45      (000000b0) move-result-object   v7
+	46      (000000b2) invoke-direct        v6, v7, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	47      (000000b8) throw                v6
+
+getUriForFile-BB@0xba : [ getUriForFile-BB@0xbe getUriForFile-BB@0xf0 ]
+	48      (000000ba) if-nez               v2, +1b
+
+getUriForFile-BB@0xbe : 
+	49      (000000be) new-instance         v6, Ljava/lang/IllegalArgumentException;
+	50      (000000c2) new-instance         v7, Ljava/lang/StringBuilder;
+	51      (000000c6) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	52      (000000cc) const-string         v8, 'Failed to find configured root that contains '
+	53      (000000d0) invoke-virtual       v7, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	54      (000000d6) move-result-object   v7
+	55      (000000d8) invoke-virtual       v7, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	56      (000000de) move-result-object   v7
+	57      (000000e0) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	58      (000000e6) move-result-object   v7
+	59      (000000e8) invoke-direct        v6, v7, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	60      (000000ee) throw                v6
+
+getUriForFile-BB@0xf0 : [ getUriForFile-BB@0x114 getUriForFile-BB@0x1a6 ]
+	61      (000000f0) invoke-interface     v2, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	62      (000000f6) move-result-object   v6
+	63      (000000f8) check-cast           v6, Ljava/io/File;
+	64      (000000fc) invoke-virtual       v6, Ljava/io/File;->getPath()Ljava/lang/String;
+	65      (00000102) move-result-object   v5
+	66      (00000104) const-string         v6, '/'
+	67      (00000108) invoke-virtual       v5, v6, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+	68      (0000010e) move-result          v6
+	69      (00000110) if-eqz               v6, +4b
+
+getUriForFile-BB@0x114 : [ getUriForFile-BB@0x124 ]
+	70      (00000114) invoke-virtual       v5, Ljava/lang/String;->length()I
+	71      (0000011a) move-result          v6
+	72      (0000011c) invoke-virtual       v3, v6, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	73      (00000122) move-result-object   v3
+
+getUriForFile-BB@0x124 : 
+	74      (00000124) new-instance         v7, Ljava/lang/StringBuilder;
+	75      (00000128) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	76      (0000012e) invoke-interface     v2, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+	77      (00000134) move-result-object   v6
+	78      (00000136) check-cast           v6, Ljava/lang/String;
+	79      (0000013a) invoke-static        v6, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+	80      (00000140) move-result-object   v6
+	81      (00000142) invoke-virtual       v7, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	82      (00000148) move-result-object   v6
+	83      (0000014a) const/16             v7, 47
+	84      (0000014e) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	85      (00000154) move-result-object   v6
+	86      (00000156) const-string         v7, '/'
+	87      (0000015a) invoke-static        v3, v7, Landroid/net/Uri;->encode(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	88      (00000160) move-result-object   v7
+	89      (00000162) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	90      (00000168) move-result-object   v6
+	91      (0000016a) invoke-virtual       v6, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	92      (00000170) move-result-object   v3
+	93      (00000172) new-instance         v6, Landroid/net/Uri$Builder;
+	94      (00000176) invoke-direct        v6, Landroid/net/Uri$Builder;-><init>()V
+	95      (0000017c) const-string         v7, 'content'
+	96      (00000180) invoke-virtual       v6, v7, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	97      (00000186) move-result-object   v6
+	98      (00000188) iget-object          v7, v9, Landroid/support/v4/content/FileProvider$SimplePathStrategy;->mAuthority Ljava/lang/String;
+	99      (0000018c) invoke-virtual       v6, v7, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	100     (00000192) move-result-object   v6
+	101     (00000194) invoke-virtual       v6, v3, Landroid/net/Uri$Builder;->encodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	102     (0000019a) move-result-object   v6
+	103     (0000019c) invoke-virtual       v6, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+	104     (000001a2) move-result-object   v6
+	105     (000001a4) return-object        v6
+
+getUriForFile-BB@0x1a6 : [ getUriForFile-BB@0x124 ]
+	106     (000001a6) invoke-virtual       v5, Ljava/lang/String;->length()I
+	107     (000001ac) move-result          v6
+	108     (000001ae) add-int/lit8         v6, v6, 1
+	109     (000001b2) invoke-virtual       v3, v6, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	110     (000001b8) move-result-object   v3
+	111     (000001ba) goto                 -4b
+

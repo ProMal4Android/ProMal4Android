@@ -1,0 +1,32 @@
+# Landroid/support/v4/app/NotificationManagerCompat$NotifyTask;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : 
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuilder;
+	1       (00000004) const-string         v1, 'NotifyTask['
+	2       (00000008) invoke-direct        v0, v1, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	3       (0000000e) const-string         v1, 'packageName:'
+	4       (00000012) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	5       (00000018) move-result-object   v1
+	6       (0000001a) iget-object          v2, v3, Landroid/support/v4/app/NotificationManagerCompat$NotifyTask;->packageName Ljava/lang/String;
+	7       (0000001e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000024) const-string         v1, ', id:'
+	9       (00000028) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (0000002e) move-result-object   v1
+	11      (00000030) iget                 v2, v3, Landroid/support/v4/app/NotificationManagerCompat$NotifyTask;->id I
+	12      (00000034) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	13      (0000003a) const-string         v1, ', tag:'
+	14      (0000003e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (00000044) move-result-object   v1
+	16      (00000046) iget-object          v2, v3, Landroid/support/v4/app/NotificationManagerCompat$NotifyTask;->tag Ljava/lang/String;
+	17      (0000004a) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	18      (00000050) const-string         v1, ']'
+	19      (00000054) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (0000005a) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	21      (00000060) move-result-object   v1
+	22      (00000062) return-object        v1
+

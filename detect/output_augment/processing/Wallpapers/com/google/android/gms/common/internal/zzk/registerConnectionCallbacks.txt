@@ -1,0 +1,69 @@
+# Lcom/google/android/gms/common/internal/zzk;->registerConnectionCallbacks(Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:com.google.android.gms.common.api.GoogleApiClient$ConnectionCallbacks
+#
+# - return:void
+
+registerConnectionCallbacks-BB@0x0 : [ registerConnectionCallbacks-BB@0xc ]
+	0       (00000000) invoke-static        v5, Lcom/google/android/gms/common/internal/zzx;->zzy(Ljava/lang/Object;)Ljava/lang/Object;
+	1       (00000006) iget-object          v1, v4, Lcom/google/android/gms/common/internal/zzk;->zzpK Ljava/lang/Object;
+	2       (0000000a) monitor-enter        v1
+
+registerConnectionCallbacks-BB@0xc : [ registerConnectionCallbacks-BB@0x1c registerConnectionCallbacks-BB@0x84 ]
+	3       (0000000c) iget-object          v0, v4, Lcom/google/android/gms/common/internal/zzk;->zzaka Ljava/util/ArrayList;
+	4       (00000010) invoke-virtual       v0, v5, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+	5       (00000016) move-result          v0
+	6       (00000018) if-eqz               v0, +36
+	c:59
+	(Ljava/lang/Throwable; -> 90 registerConnectionCallbacks-BB@0x90)
+
+registerConnectionCallbacks-BB@0x1c : [ registerConnectionCallbacks-BB@0x58 ]
+	7       (0000001c) const-string         v0, 'GmsClientEvents'
+	8       (00000020) new-instance         v2, Ljava/lang/StringBuilder;
+	9       (00000024) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	10      (0000002a) const-string         v3, 'registerConnectionCallbacks(): listener '
+	11      (0000002e) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	12      (00000034) move-result-object   v2
+	13      (00000036) invoke-virtual       v2, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	14      (0000003c) move-result-object   v2
+	15      (0000003e) const-string         v3, ' is already registered'
+	16      (00000042) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000048) move-result-object   v2
+	18      (0000004a) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	19      (00000050) move-result-object   v2
+	20      (00000052) invoke-static        v0, v2, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	c:59
+	(Ljava/lang/Throwable; -> 90 registerConnectionCallbacks-BB@0x90)
+
+registerConnectionCallbacks-BB@0x58 : [ registerConnectionCallbacks-BB@0x6a registerConnectionCallbacks-BB@0x82 ]
+	21      (00000058) monitor-exit         v1
+	22      (0000005a) iget-object          v0, v4, Lcom/google/android/gms/common/internal/zzk;->zzajZ Lcom/google/android/gms/common/internal/zzk$zza;
+	23      (0000005e) invoke-interface     v0, Lcom/google/android/gms/common/internal/zzk$zza;->isConnected()Z
+	24      (00000064) move-result          v0
+	25      (00000066) if-eqz               v0, +e
+
+registerConnectionCallbacks-BB@0x6a : [ registerConnectionCallbacks-BB@0x82 ]
+	26      (0000006a) iget-object          v0, v4, Lcom/google/android/gms/common/internal/zzk;->mHandler Landroid/os/Handler;
+	27      (0000006e) iget-object          v1, v4, Lcom/google/android/gms/common/internal/zzk;->mHandler Landroid/os/Handler;
+	28      (00000072) const/4              v2, 1
+	29      (00000074) invoke-virtual       v1, v2, v5, Landroid/os/Handler;->obtainMessage(I Ljava/lang/Object;)Landroid/os/Message;
+	30      (0000007a) move-result-object   v1
+	31      (0000007c) invoke-virtual       v0, v1, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+registerConnectionCallbacks-BB@0x82 : 
+	32      (00000082) return-void          
+
+registerConnectionCallbacks-BB@0x84 : [ registerConnectionCallbacks-BB@0x58 ]
+	33      (00000084) iget-object          v0, v4, Lcom/google/android/gms/common/internal/zzk;->zzaka Ljava/util/ArrayList;
+	34      (00000088) invoke-virtual       v0, v5, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	35      (0000008e) goto                 -1b
+	84:93
+	(Ljava/lang/Throwable; -> 90 registerConnectionCallbacks-BB@0x90)
+
+registerConnectionCallbacks-BB@0x90 : 
+	36      (00000090) move-exception       v0
+	37      (00000092) monitor-exit         v1
+	38      (00000094) throw                v0
+

@@ -1,0 +1,29 @@
+# Landroid/support/v7/widget/ToolbarWidgetWrapper;->setDefaultNavigationContentDescription(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:int
+#
+# - return:void
+
+setDefaultNavigationContentDescription-BB@0x0 : [ setDefaultNavigationContentDescription-BB@0x8 setDefaultNavigationContentDescription-BB@0xa ]
+	0       (00000000) iget                 v0, v1, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mDefaultNavigationContentDescription I
+	1       (00000004) if-ne                v2, v0, +3
+
+setDefaultNavigationContentDescription-BB@0x8 : 
+	2       (00000008) return-void          
+
+setDefaultNavigationContentDescription-BB@0xa : [ setDefaultNavigationContentDescription-BB@0x26 setDefaultNavigationContentDescription-BB@0x8 ]
+	3       (0000000a) iput                 v2, v1, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mDefaultNavigationContentDescription I
+	4       (0000000e) iget-object          v0, v1, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mToolbar Landroid/support/v7/widget/Toolbar;
+	5       (00000012) invoke-virtual       v0, Landroid/support/v7/widget/Toolbar;->getNavigationContentDescription()Ljava/lang/CharSequence;
+	6       (00000018) move-result-object   v0
+	7       (0000001a) invoke-static        v0, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	8       (00000020) move-result          v0
+	9       (00000022) if-eqz               v0, -d
+
+setDefaultNavigationContentDescription-BB@0x26 : [ setDefaultNavigationContentDescription-BB@0x8 ]
+	10      (00000026) iget                 v0, v1, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mDefaultNavigationContentDescription I
+	11      (0000002a) invoke-virtual       v1, v0, Landroid/support/v7/widget/ToolbarWidgetWrapper;->setNavigationContentDescription(I)V
+	12      (00000030) goto                 -14
+

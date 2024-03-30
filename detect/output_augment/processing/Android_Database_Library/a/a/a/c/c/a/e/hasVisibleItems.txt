@@ -1,0 +1,36 @@
+# La/a/a/c/c/a/e;->hasVisibleItems()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:boolean
+
+hasVisibleItems-BB@0x0 : [ hasVisibleItems-BB@0xc ]
+	0       (00000000) invoke-virtual       v4, La/a/a/c/c/a/e;->size()I
+	1       (00000006) move-result          v0
+	2       (00000008) const/4              v1, 0
+	3       (0000000a) const/4              v2, 0
+
+hasVisibleItems-BB@0xc : [ hasVisibleItems-BB@0x10 hasVisibleItems-BB@0x36 ]
+	4       (0000000c) if-ge                v2, v0, +15
+
+hasVisibleItems-BB@0x10 : [ hasVisibleItems-BB@0x2c hasVisibleItems-BB@0x30 ]
+	5       (00000010) iget-object          v3, v4, La/a/a/c/c/a/e;->g Ljava/util/ArrayList;
+	6       (00000014) invoke-virtual       v3, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	7       (0000001a) move-result-object   v3
+	8       (0000001c) check-cast           v3, La/a/a/c/c/a/f;
+	9       (00000020) invoke-virtual       v3, La/a/a/c/c/a/f;->k()Z
+	10      (00000026) move-result          v3
+	11      (00000028) if-eqz               v3, +4
+
+hasVisibleItems-BB@0x2c : 
+	12      (0000002c) const/4              v0, 1
+	13      (0000002e) return               v0
+
+hasVisibleItems-BB@0x30 : [ hasVisibleItems-BB@0xc ]
+	14      (00000030) add-int/lit8         v2, v2, 1
+	15      (00000034) goto                 -14
+
+hasVisibleItems-BB@0x36 : 
+	16      (00000036) return               v1
+

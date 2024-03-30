@@ -1,0 +1,34 @@
+# Landroid/support/v4/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.io.FileOutputStream
+#
+# - return:void
+
+failWrite-BB@0x0 : [ failWrite-BB@0x4 failWrite-BB@0x28 ]
+	0       (00000000) if-eqz               v4, +14
+
+failWrite-BB@0x4 : [ failWrite-BB@0xa ]
+	1       (00000004) invoke-static        v4, Landroid/support/v4/util/AtomicFile;->sync(Ljava/io/FileOutputStream;)Z
+
+failWrite-BB@0xa : [ failWrite-BB@0x28 ]
+	2       (0000000a) invoke-virtual       v4, Ljava/io/FileOutputStream;->close()V
+	3       (00000010) iget-object          v1, v3, Landroid/support/v4/util/AtomicFile;->mBaseName Ljava/io/File;
+	4       (00000014) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	5       (0000001a) iget-object          v1, v3, Landroid/support/v4/util/AtomicFile;->mBackupName Ljava/io/File;
+	6       (0000001e) iget-object          v2, v3, Landroid/support/v4/util/AtomicFile;->mBaseName Ljava/io/File;
+	7       (00000022) invoke-virtual       v1, v2, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+	a:27
+	(Ljava/io/IOException; -> 2a failWrite-BB@0x2a)
+
+failWrite-BB@0x28 : 
+	8       (00000028) return-void          
+
+failWrite-BB@0x2a : [ failWrite-BB@0x28 ]
+	9       (0000002a) move-exception       v0
+	10      (0000002c) const-string         v1, 'AtomicFile'
+	11      (00000030) const-string         v2, 'failWrite: Got exception:'
+	12      (00000034) invoke-static        v1, v2, v0, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	13      (0000003a) goto                 -9
+

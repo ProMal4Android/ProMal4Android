@@ -1,0 +1,47 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->dispatchContextItemSelected(Landroid/view/MenuItem;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.view.MenuItem
+#
+# - return:boolean
+
+dispatchContextItemSelected-BB@0x0 : [ dispatchContextItemSelected-BB@0x8 dispatchContextItemSelected-BB@0x44 ]
+	0       (00000000) iget-object          v2, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	1       (00000004) if-eqz               v2, +20
+
+dispatchContextItemSelected-BB@0x8 : [ dispatchContextItemSelected-BB@0xa ]
+	2       (00000008) const/4              v1, 0
+
+dispatchContextItemSelected-BB@0xa : [ dispatchContextItemSelected-BB@0x1a dispatchContextItemSelected-BB@0x44 ]
+	3       (0000000a) iget-object          v2, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	4       (0000000e) invoke-virtual       v2, Ljava/util/ArrayList;->size()I
+	5       (00000014) move-result          v2
+	6       (00000016) if-ge                v1, v2, +17
+
+dispatchContextItemSelected-BB@0x1a : [ dispatchContextItemSelected-BB@0x2e dispatchContextItemSelected-BB@0x3e ]
+	7       (0000001a) iget-object          v2, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	8       (0000001e) invoke-virtual       v2, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	9       (00000024) move-result-object   v0
+	10      (00000026) check-cast           v0, Landroid/support/v4/app/Fragment;
+	11      (0000002a) if-eqz               v0, +a
+
+dispatchContextItemSelected-BB@0x2e : [ dispatchContextItemSelected-BB@0x3a dispatchContextItemSelected-BB@0x3e ]
+	12      (0000002e) invoke-virtual       v0, v4, Landroid/support/v4/app/Fragment;->performContextItemSelected(Landroid/view/MenuItem;)Z
+	13      (00000034) move-result          v2
+	14      (00000036) if-eqz               v2, +4
+
+dispatchContextItemSelected-BB@0x3a : [ dispatchContextItemSelected-BB@0x3c ]
+	15      (0000003a) const/4              v2, 1
+
+dispatchContextItemSelected-BB@0x3c : 
+	16      (0000003c) return               v2
+
+dispatchContextItemSelected-BB@0x3e : [ dispatchContextItemSelected-BB@0xa ]
+	17      (0000003e) add-int/lit8         v1, v1, 1
+	18      (00000042) goto                 -1c
+
+dispatchContextItemSelected-BB@0x44 : [ dispatchContextItemSelected-BB@0x3c ]
+	19      (00000044) const/4              v2, 0
+	20      (00000046) goto                 -5
+

@@ -1,0 +1,113 @@
+# Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->getFocusableViewAfter(I I)Landroid/view/View; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:int
+# - v10:int
+#
+# - return:android.view.View
+
+getFocusableViewAfter-BB@0x0 : [ getFocusableViewAfter-BB@0xc getFocusableViewAfter-BB@0x68 ]
+	0       (00000000) const/4              v5, 1
+	1       (00000002) const/4              v6, 0
+	2       (00000004) const/4              v0, 0
+	3       (00000006) const/4              v4, -1
+	4       (00000008) if-ne                v10, v4, +30
+
+getFocusableViewAfter-BB@0xc : [ getFocusableViewAfter-BB@0x1a ]
+	5       (0000000c) iget-object          v4, v8, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	6       (00000010) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	7       (00000016) move-result          v2
+	8       (00000018) const/4              v1, 0
+
+getFocusableViewAfter-BB@0x1a : [ getFocusableViewAfter-BB@0x1e getFocusableViewAfter-BB@0xd0 ]
+	9       (0000001a) if-ge                v1, v2, +5b
+
+getFocusableViewAfter-BB@0x1e : [ getFocusableViewAfter-BB@0x3a getFocusableViewAfter-BB@0xd0 ]
+	10      (0000001e) iget-object          v4, v8, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	11      (00000022) invoke-virtual       v4, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	12      (00000028) move-result-object   v3
+	13      (0000002a) check-cast           v3, Landroid/view/View;
+	14      (0000002e) invoke-virtual       v3, Landroid/view/View;->isFocusable()Z
+	15      (00000034) move-result          v4
+	16      (00000036) if-eqz               v4, +4d
+
+getFocusableViewAfter-BB@0x3a : [ getFocusableViewAfter-BB@0x4a getFocusableViewAfter-BB@0x64 ]
+	17      (0000003a) iget-object          v4, v8, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->this$0 Landroid/support/v7/widget/StaggeredGridLayoutManager;
+	18      (0000003e) invoke-virtual       v4, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager;->getPosition(Landroid/view/View;)I
+	19      (00000044) move-result          v4
+	20      (00000046) if-le                v4, v9, +f
+
+getFocusableViewAfter-BB@0x4a : [ getFocusableViewAfter-BB@0x4c ]
+	21      (0000004a) move                 v4, v5
+
+getFocusableViewAfter-BB@0x4c : [ getFocusableViewAfter-BB@0x5c getFocusableViewAfter-BB@0xd0 ]
+	22      (0000004c) iget-object          v7, v8, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->this$0 Landroid/support/v7/widget/StaggeredGridLayoutManager;
+	23      (00000050) invoke-static        v7, Landroid/support/v7/widget/StaggeredGridLayoutManager;->access$600(Landroid/support/v7/widget/StaggeredGridLayoutManager;)Z
+	24      (00000056) move-result          v7
+	25      (00000058) if-ne                v4, v7, +3c
+
+getFocusableViewAfter-BB@0x5c : [ getFocusableViewAfter-BB@0x1a ]
+	26      (0000005c) move-object          v0, v3
+	27      (0000005e) add-int/lit8         v1, v1, 1
+	28      (00000062) goto                 -24
+
+getFocusableViewAfter-BB@0x64 : [ getFocusableViewAfter-BB@0x4c ]
+	29      (00000064) move                 v4, v6
+	30      (00000066) goto                 -d
+
+getFocusableViewAfter-BB@0x68 : [ getFocusableViewAfter-BB@0x78 ]
+	31      (00000068) iget-object          v4, v8, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	32      (0000006c) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	33      (00000072) move-result          v4
+	34      (00000074) add-int/lit8         v1, v4, -1
+
+getFocusableViewAfter-BB@0x78 : [ getFocusableViewAfter-BB@0x7c getFocusableViewAfter-BB@0xd0 ]
+	35      (00000078) if-ltz               v1, +2c
+
+getFocusableViewAfter-BB@0x7c : [ getFocusableViewAfter-BB@0x98 getFocusableViewAfter-BB@0xd0 ]
+	36      (0000007c) iget-object          v4, v8, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	37      (00000080) invoke-virtual       v4, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	38      (00000086) move-result-object   v3
+	39      (00000088) check-cast           v3, Landroid/view/View;
+	40      (0000008c) invoke-virtual       v3, Landroid/view/View;->isFocusable()Z
+	41      (00000092) move-result          v4
+	42      (00000094) if-eqz               v4, +1e
+
+getFocusableViewAfter-BB@0x98 : [ getFocusableViewAfter-BB@0xa8 getFocusableViewAfter-BB@0xc8 ]
+	43      (00000098) iget-object          v4, v8, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->this$0 Landroid/support/v7/widget/StaggeredGridLayoutManager;
+	44      (0000009c) invoke-virtual       v4, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager;->getPosition(Landroid/view/View;)I
+	45      (000000a2) move-result          v4
+	46      (000000a4) if-le                v4, v9, +12
+
+getFocusableViewAfter-BB@0xa8 : [ getFocusableViewAfter-BB@0xaa ]
+	47      (000000a8) move                 v4, v5
+
+getFocusableViewAfter-BB@0xaa : [ getFocusableViewAfter-BB@0xba getFocusableViewAfter-BB@0xcc ]
+	48      (000000aa) iget-object          v7, v8, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->this$0 Landroid/support/v7/widget/StaggeredGridLayoutManager;
+	49      (000000ae) invoke-static        v7, Landroid/support/v7/widget/StaggeredGridLayoutManager;->access$600(Landroid/support/v7/widget/StaggeredGridLayoutManager;)Z
+	50      (000000b4) move-result          v7
+	51      (000000b6) if-nez               v7, +b
+
+getFocusableViewAfter-BB@0xba : [ getFocusableViewAfter-BB@0xbc ]
+	52      (000000ba) move                 v7, v5
+
+getFocusableViewAfter-BB@0xbc : [ getFocusableViewAfter-BB@0xc0 getFocusableViewAfter-BB@0xd0 ]
+	53      (000000bc) if-ne                v4, v7, +a
+
+getFocusableViewAfter-BB@0xc0 : [ getFocusableViewAfter-BB@0x78 ]
+	54      (000000c0) move-object          v0, v3
+	55      (000000c2) add-int/lit8         v1, v1, -1
+	56      (000000c6) goto                 -27
+
+getFocusableViewAfter-BB@0xc8 : [ getFocusableViewAfter-BB@0xaa ]
+	57      (000000c8) move                 v4, v6
+	58      (000000ca) goto                 -10
+
+getFocusableViewAfter-BB@0xcc : [ getFocusableViewAfter-BB@0xbc ]
+	59      (000000cc) move                 v7, v6
+	60      (000000ce) goto                 -9
+
+getFocusableViewAfter-BB@0xd0 : 
+	61      (000000d0) return-object        v0
+

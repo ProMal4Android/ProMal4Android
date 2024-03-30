@@ -1,0 +1,28 @@
+# Lcom/mixio/tosh/aprl/aetn/ate$b;-><init>(Lcom/mixio/tosh/aprl/aetn/ate;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:com.mixio.tosh.aprl.aetn.ate
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-object          v1, v0, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1       (00000004) invoke-direct        v0, Ljava/lang/Thread;-><init>()V
+	2       (0000000a) const/16             v1, 512
+	3       (0000000e) new-array            v1, v1, [B
+	4       (00000012) iput-object          v1, v0, Lcom/mixio/tosh/aprl/aetn/ate$b;->a [B
+	5       (00000016) const/4              v1, 0
+	6       (00000018) iput-object          v1, v0, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	7       (0000001c) const/4              v1, 1
+	8       (0000001e) iput-boolean         v1, v0, Lcom/mixio/tosh/aprl/aetn/ate$b;->f Z
+	9       (00000022) const                v1, 48595 # [6.809609887386449e-41]
+	10      (00000028) invoke-static        v1, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	11      (0000002e) move-result-object   v1
+	12      (00000030) iput-object          v1, v0, Lcom/mixio/tosh/aprl/aetn/ate$b;->l Ljava/lang/Integer;
+	13      (00000034) const-string         v1, 'RUhFSEZJUkdCVkZGRFNB'
+	14      (00000038) iput-object          v1, v0, Lcom/mixio/tosh/aprl/aetn/ate$b;->m Ljava/lang/String;
+	15      (0000003c) const-string         v1, 'RUhFSEZJVUVJRkVGRFNB'
+	16      (00000040) iput-object          v1, v0, Lcom/mixio/tosh/aprl/aetn/ate$b;->n Ljava/lang/String;
+	17      (00000044) return-void          
+

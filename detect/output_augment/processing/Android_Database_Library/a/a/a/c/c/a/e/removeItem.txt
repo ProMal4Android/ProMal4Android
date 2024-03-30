@@ -1,0 +1,39 @@
+# La/a/a/c/c/a/e;->removeItem(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:int
+#
+# - return:void
+
+removeItem-BB@0x0 : [ removeItem-BB@0xa ]
+	0       (00000000) invoke-virtual       v3, La/a/a/c/c/a/e;->size()I
+	1       (00000006) move-result          v0
+	2       (00000008) const/4              v1, 0
+
+removeItem-BB@0xa : [ removeItem-BB@0xe removeItem-BB@0x2e ]
+	3       (0000000a) if-ge                v1, v0, +12
+
+removeItem-BB@0xe : [ removeItem-BB@0x26 removeItem-BB@0x28 ]
+	4       (0000000e) iget-object          v2, v3, La/a/a/c/c/a/e;->g Ljava/util/ArrayList;
+	5       (00000012) invoke-virtual       v2, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	6       (00000018) move-result-object   v2
+	7       (0000001a) check-cast           v2, La/a/a/c/c/a/f;
+	8       (0000001e) iget                 v2, v2, La/a/a/c/c/a/f;->e I
+	9       (00000022) if-ne                v2, v4, +3
+
+removeItem-BB@0x26 : [ removeItem-BB@0x30 ]
+	10      (00000026) goto                 +5
+
+removeItem-BB@0x28 : [ removeItem-BB@0xa ]
+	11      (00000028) add-int/lit8         v1, v1, 1
+	12      (0000002c) goto                 -11
+
+removeItem-BB@0x2e : [ removeItem-BB@0x30 ]
+	13      (0000002e) const/4              v1, -1
+
+removeItem-BB@0x30 : 
+	14      (00000030) const/4              v4, 1
+	15      (00000032) invoke-virtual       v3, v1, v4, La/a/a/c/c/a/e;->a(I Z)V
+	16      (00000038) return-void          
+

@@ -1,0 +1,101 @@
+# Landroid/support/v7/widget/ToolbarWidgetWrapper;->setNavigationMode(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:int
+#
+# - return:void
+
+setNavigationMode-BB@0x0 : [ setNavigationMode-BB@0xc setNavigationMode-BB@0xba ]
+	0       (00000000) const/4              v5, 0
+	1       (00000002) const/4              v4, -2
+	2       (00000004) iget                 v1, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mNavigationMode I
+	3       (00000008) if-eq                v7, v1, +59
+
+setNavigationMode-BB@0xc : [ D:setNavigationMode-BB@0x12 1:setNavigationMode-BB@0x4e 2:setNavigationMode-BB@0x7a ]
+	4       (0000000c) packed-switch        v1, +76 (0xf8)
+
+setNavigationMode-BB@0x12 : [ D:setNavigationMode-BB@0x1c 0:setNavigationMode-BB@0xba 1:setNavigationMode-BB@0xa6 2:setNavigationMode-BB@0xbc ]
+	5       (00000012) iput                 v7, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mNavigationMode I
+	6       (00000016) packed-switch        v7, +79 (0x108)
+
+setNavigationMode-BB@0x1c : 
+	7       (0000001c) new-instance         v2, Ljava/lang/IllegalArgumentException;
+	8       (00000020) new-instance         v3, Ljava/lang/StringBuilder;
+	9       (00000024) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	10      (0000002a) const-string         v4, 'Invalid navigation mode '
+	11      (0000002e) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	12      (00000034) move-result-object   v3
+	13      (00000036) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	14      (0000003c) move-result-object   v3
+	15      (0000003e) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	16      (00000044) move-result-object   v3
+	17      (00000046) invoke-direct        v2, v3, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	18      (0000004c) throw                v2
+
+setNavigationMode-BB@0x4e : [ setNavigationMode-BB@0x56 setNavigationMode-BB@0x12 ]
+	19      (0000004e) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mSpinner Landroid/widget/Spinner;
+	20      (00000052) if-eqz               v2, -20
+
+setNavigationMode-BB@0x56 : [ setNavigationMode-BB@0x6a setNavigationMode-BB@0x12 ]
+	21      (00000056) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mSpinner Landroid/widget/Spinner;
+	22      (0000005a) invoke-virtual       v2, Landroid/widget/Spinner;->getParent()Landroid/view/ViewParent;
+	23      (00000060) move-result-object   v2
+	24      (00000062) iget-object          v3, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mToolbar Landroid/support/v7/widget/Toolbar;
+	25      (00000066) if-ne                v2, v3, -2a
+
+setNavigationMode-BB@0x6a : [ setNavigationMode-BB@0x12 ]
+	26      (0000006a) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mToolbar Landroid/support/v7/widget/Toolbar;
+	27      (0000006e) iget-object          v3, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mSpinner Landroid/widget/Spinner;
+	28      (00000072) invoke-virtual       v2, v3, Landroid/support/v7/widget/Toolbar;->removeView(Landroid/view/View;)V
+	29      (00000078) goto                 -33
+
+setNavigationMode-BB@0x7a : [ setNavigationMode-BB@0x82 setNavigationMode-BB@0x12 ]
+	30      (0000007a) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mTabView Landroid/view/View;
+	31      (0000007e) if-eqz               v2, -36
+
+setNavigationMode-BB@0x82 : [ setNavigationMode-BB@0x96 setNavigationMode-BB@0x12 ]
+	32      (00000082) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mTabView Landroid/view/View;
+	33      (00000086) invoke-virtual       v2, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+	34      (0000008c) move-result-object   v2
+	35      (0000008e) iget-object          v3, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mToolbar Landroid/support/v7/widget/Toolbar;
+	36      (00000092) if-ne                v2, v3, -40
+
+setNavigationMode-BB@0x96 : [ setNavigationMode-BB@0x12 ]
+	37      (00000096) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mToolbar Landroid/support/v7/widget/Toolbar;
+	38      (0000009a) iget-object          v3, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mTabView Landroid/view/View;
+	39      (0000009e) invoke-virtual       v2, v3, Landroid/support/v7/widget/Toolbar;->removeView(Landroid/view/View;)V
+	40      (000000a4) goto                 -49
+
+setNavigationMode-BB@0xa6 : [ setNavigationMode-BB@0xba ]
+	41      (000000a6) invoke-direct        v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->ensureSpinner()V
+	42      (000000ac) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mToolbar Landroid/support/v7/widget/Toolbar;
+	43      (000000b0) iget-object          v3, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mSpinner Landroid/widget/Spinner;
+	44      (000000b4) invoke-virtual       v2, v3, v5, Landroid/support/v7/widget/Toolbar;->addView(Landroid/view/View; I)V
+
+setNavigationMode-BB@0xba : 
+	45      (000000ba) return-void          
+
+setNavigationMode-BB@0xbc : [ setNavigationMode-BB@0xc4 setNavigationMode-BB@0xba ]
+	46      (000000bc) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mTabView Landroid/view/View;
+	47      (000000c0) if-eqz               v2, -3
+
+setNavigationMode-BB@0xc4 : [ setNavigationMode-BB@0xba ]
+	48      (000000c4) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mToolbar Landroid/support/v7/widget/Toolbar;
+	49      (000000c8) iget-object          v3, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mTabView Landroid/view/View;
+	50      (000000cc) invoke-virtual       v2, v3, v5, Landroid/support/v7/widget/Toolbar;->addView(Landroid/view/View; I)V
+	51      (000000d2) iget-object          v2, v6, Landroid/support/v7/widget/ToolbarWidgetWrapper;->mTabView Landroid/view/View;
+	52      (000000d6) invoke-virtual       v2, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	53      (000000dc) move-result-object   v0
+	54      (000000de) check-cast           v0, Landroid/support/v7/widget/Toolbar$LayoutParams;
+	55      (000000e2) iput                 v4, v0, Landroid/support/v7/widget/Toolbar$LayoutParams;->width I
+	56      (000000e6) iput                 v4, v0, Landroid/support/v7/widget/Toolbar$LayoutParams;->height I
+	57      (000000ea) const                v2, 8388691 # [1.1755059815995414e-38]
+	58      (000000f0) iput                 v2, v0, Landroid/support/v7/widget/Toolbar$LayoutParams;->gravity I
+	59      (000000f4) goto                 -1d
+
+setNavigationMode-BB@0xf6 : 
+	60      (000000f6) nop                  
+	61      (000000f8) packed-switch-payload 1 2
+	62      (00000108) packed-switch-payload 0 1 2
+

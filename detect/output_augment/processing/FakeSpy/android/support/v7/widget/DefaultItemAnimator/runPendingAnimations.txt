@@ -1,0 +1,289 @@
+# Landroid/support/v7/widget/DefaultItemAnimator;->runPendingAnimations()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v28
+#
+# - return:void
+
+runPendingAnimations-BB@0x0 : [ runPendingAnimations-BB@0x18 runPendingAnimations-BB@0x7e ]
+	0       (00000000) move-object/from16   v0, v28
+	1       (00000004) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingRemovals Ljava/util/ArrayList;
+	2       (00000008) move-object/from16   v25, v0
+	3       (0000000c) invoke-virtual/range v25, Ljava/util/ArrayList;->isEmpty()Z
+	4       (00000012) move-result          v25
+	5       (00000014) if-nez               v25, +35
+
+runPendingAnimations-BB@0x18 : [ runPendingAnimations-BB@0x1c ]
+	6       (00000018) const/16             v19, 1
+
+runPendingAnimations-BB@0x1c : [ runPendingAnimations-BB@0x34 runPendingAnimations-BB@0x84 ]
+	7       (0000001c) move-object/from16   v0, v28
+	8       (00000020) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingMoves Ljava/util/ArrayList;
+	9       (00000024) move-object/from16   v25, v0
+	10      (00000028) invoke-virtual/range v25, Ljava/util/ArrayList;->isEmpty()Z
+	11      (0000002e) move-result          v25
+	12      (00000030) if-nez               v25, +2a
+
+runPendingAnimations-BB@0x34 : [ runPendingAnimations-BB@0x38 ]
+	13      (00000034) const/16             v18, 1
+
+runPendingAnimations-BB@0x38 : [ runPendingAnimations-BB@0x50 runPendingAnimations-BB@0x8a ]
+	14      (00000038) move-object/from16   v0, v28
+	15      (0000003c) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingChanges Ljava/util/ArrayList;
+	16      (00000040) move-object/from16   v25, v0
+	17      (00000044) invoke-virtual/range v25, Ljava/util/ArrayList;->isEmpty()Z
+	18      (0000004a) move-result          v25
+	19      (0000004c) if-nez               v25, +1f
+
+runPendingAnimations-BB@0x50 : [ runPendingAnimations-BB@0x52 ]
+	20      (00000050) const/4              v11, 1
+
+runPendingAnimations-BB@0x52 : [ runPendingAnimations-BB@0x6a runPendingAnimations-BB@0x8e ]
+	21      (00000052) move-object/from16   v0, v28
+	22      (00000056) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingAdditions Ljava/util/ArrayList;
+	23      (0000005a) move-object/from16   v25, v0
+	24      (0000005e) invoke-virtual/range v25, Ljava/util/ArrayList;->isEmpty()Z
+	25      (00000064) move-result          v25
+	26      (00000066) if-nez               v25, +14
+
+runPendingAnimations-BB@0x6a : [ runPendingAnimations-BB@0x6c ]
+	27      (0000006a) const/4              v6, 1
+
+runPendingAnimations-BB@0x6c : [ runPendingAnimations-BB@0x70 runPendingAnimations-BB@0x92 ]
+	28      (0000006c) if-nez               v19, +13
+
+runPendingAnimations-BB@0x70 : [ runPendingAnimations-BB@0x74 runPendingAnimations-BB@0x92 ]
+	29      (00000070) if-nez               v18, +11
+
+runPendingAnimations-BB@0x74 : [ runPendingAnimations-BB@0x78 runPendingAnimations-BB@0x92 ]
+	30      (00000074) if-nez               v6, +f
+
+runPendingAnimations-BB@0x78 : [ runPendingAnimations-BB@0x7c runPendingAnimations-BB@0x92 ]
+	31      (00000078) if-nez               v11, +d
+
+runPendingAnimations-BB@0x7c : 
+	32      (0000007c) return-void          
+
+runPendingAnimations-BB@0x7e : [ runPendingAnimations-BB@0x1c ]
+	33      (0000007e) const/16             v19, 0
+	34      (00000082) goto                 -33
+
+runPendingAnimations-BB@0x84 : [ runPendingAnimations-BB@0x38 ]
+	35      (00000084) const/16             v18, 0
+	36      (00000088) goto                 -28
+
+runPendingAnimations-BB@0x8a : [ runPendingAnimations-BB@0x52 ]
+	37      (0000008a) const/4              v11, 0
+	38      (0000008c) goto                 -1d
+
+runPendingAnimations-BB@0x8e : [ runPendingAnimations-BB@0x6c ]
+	39      (0000008e) const/4              v6, 0
+	40      (00000090) goto                 -12
+
+runPendingAnimations-BB@0x92 : [ runPendingAnimations-BB@0xa6 ]
+	41      (00000092) move-object/from16   v0, v28
+	42      (00000096) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingRemovals Ljava/util/ArrayList;
+	43      (0000009a) move-object/from16   v25, v0
+	44      (0000009e) invoke-virtual/range v25, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+	45      (000000a4) move-result-object   v13
+
+runPendingAnimations-BB@0xa6 : [ runPendingAnimations-BB@0xb2 runPendingAnimations-BB@0xca ]
+	46      (000000a6) invoke-interface     v13, Ljava/util/Iterator;->hasNext()Z
+	47      (000000ac) move-result          v25
+	48      (000000ae) if-eqz               v25, +e
+
+runPendingAnimations-BB@0xb2 : [ runPendingAnimations-BB@0xa6 ]
+	49      (000000b2) invoke-interface     v13, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	50      (000000b8) move-result-object   v12
+	51      (000000ba) check-cast           v12, Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	52      (000000be) move-object/from16   v0, v28
+	53      (000000c2) invoke-direct        v0, v12, Landroid/support/v7/widget/DefaultItemAnimator;->animateRemoveImpl(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	54      (000000c8) goto                 -11
+
+runPendingAnimations-BB@0xca : [ runPendingAnimations-BB@0xe0 runPendingAnimations-BB@0x194 ]
+	55      (000000ca) move-object/from16   v0, v28
+	56      (000000ce) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingRemovals Ljava/util/ArrayList;
+	57      (000000d2) move-object/from16   v25, v0
+	58      (000000d6) invoke-virtual/range v25, Ljava/util/ArrayList;->clear()V
+	59      (000000dc) if-eqz               v18, +5c
+
+runPendingAnimations-BB@0xe0 : [ runPendingAnimations-BB@0x14a runPendingAnimations-BB@0x2f4 ]
+	60      (000000e0) new-instance         v17, Ljava/util/ArrayList;
+	61      (000000e4) invoke-direct/range  v17, Ljava/util/ArrayList;-><init>()V
+	62      (000000ea) move-object/from16   v0, v28
+	63      (000000ee) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingMoves Ljava/util/ArrayList;
+	64      (000000f2) move-object/from16   v25, v0
+	65      (000000f6) move-object/from16   v0, v17
+	66      (000000fa) move-object/from16   v1, v25
+	67      (000000fe) invoke-virtual       v0, v1, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+	68      (00000104) move-object/from16   v0, v28
+	69      (00000108) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mMovesList Ljava/util/ArrayList;
+	70      (0000010c) move-object/from16   v25, v0
+	71      (00000110) move-object/from16   v0, v25
+	72      (00000114) move-object/from16   v1, v17
+	73      (00000118) invoke-virtual       v0, v1, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	74      (0000011e) move-object/from16   v0, v28
+	75      (00000122) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingMoves Ljava/util/ArrayList;
+	76      (00000126) move-object/from16   v25, v0
+	77      (0000012a) invoke-virtual/range v25, Ljava/util/ArrayList;->clear()V
+	78      (00000130) new-instance         v16, Landroid/support/v7/widget/DefaultItemAnimator$1;
+	79      (00000134) move-object/from16   v0, v16
+	80      (00000138) move-object/from16   v1, v28
+	81      (0000013c) move-object/from16   v2, v17
+	82      (00000140) invoke-direct        v0, v1, v2, Landroid/support/v7/widget/DefaultItemAnimator$1;-><init>(Landroid/support/v7/widget/DefaultItemAnimator; Ljava/util/ArrayList;)V
+	83      (00000146) if-eqz               v19, +d7
+
+runPendingAnimations-BB@0x14a : [ runPendingAnimations-BB@0x194 ]
+	84      (0000014a) const/16             v25, 0
+	85      (0000014e) move-object/from16   v0, v17
+	86      (00000152) move/from16          v1, v25
+	87      (00000156) invoke-virtual       v0, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	88      (0000015c) move-result-object   v25
+	89      (0000015e) check-cast           v25, Landroid/support/v7/widget/DefaultItemAnimator$MoveInfo;
+	90      (00000162) move-object/from16   v0, v25
+	91      (00000166) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator$MoveInfo;->holder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	92      (0000016a) move-object/from16   v25, v0
+	93      (0000016e) move-object/from16   v0, v25
+	94      (00000172) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	95      (00000176) move-object/from16   v24, v0
+	96      (0000017a) invoke-virtual/range v28, Landroid/support/v7/widget/DefaultItemAnimator;->getRemoveDuration()J
+	97      (00000180) move-result-wide     v26
+	98      (00000182) move-object/from16   v0, v24
+	99      (00000186) move-object/from16   v1, v16
+	100     (0000018a) move-wide/from16     v2, v26
+	101     (0000018e) invoke-static        v0, v1, v2, v3, Landroid/support/v4/view/ViewCompat;->postOnAnimationDelayed(Landroid/view/View; Ljava/lang/Runnable; J)V
+
+runPendingAnimations-BB@0x194 : [ runPendingAnimations-BB@0x198 runPendingAnimations-BB@0x22c ]
+	102     (00000194) if-eqz               v11, +4c
+
+runPendingAnimations-BB@0x198 : [ runPendingAnimations-BB@0x1f2 runPendingAnimations-BB@0x2fe ]
+	103     (00000198) new-instance         v10, Ljava/util/ArrayList;
+	104     (0000019c) invoke-direct        v10, Ljava/util/ArrayList;-><init>()V
+	105     (000001a2) move-object/from16   v0, v28
+	106     (000001a6) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingChanges Ljava/util/ArrayList;
+	107     (000001aa) move-object/from16   v25, v0
+	108     (000001ae) move-object/from16   v0, v25
+	109     (000001b2) invoke-virtual       v10, v0, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+	110     (000001b8) move-object/from16   v0, v28
+	111     (000001bc) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mChangesList Ljava/util/ArrayList;
+	112     (000001c0) move-object/from16   v25, v0
+	113     (000001c4) move-object/from16   v0, v25
+	114     (000001c8) invoke-virtual       v0, v10, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	115     (000001ce) move-object/from16   v0, v28
+	116     (000001d2) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingChanges Ljava/util/ArrayList;
+	117     (000001d6) move-object/from16   v25, v0
+	118     (000001da) invoke-virtual/range v25, Ljava/util/ArrayList;->clear()V
+	119     (000001e0) new-instance         v7, Landroid/support/v7/widget/DefaultItemAnimator$2;
+	120     (000001e4) move-object/from16   v0, v28
+	121     (000001e8) invoke-direct        v7, v0, v10, Landroid/support/v7/widget/DefaultItemAnimator$2;-><init>(Landroid/support/v7/widget/DefaultItemAnimator; Ljava/util/ArrayList;)V
+	122     (000001ee) if-eqz               v19, +88
+
+runPendingAnimations-BB@0x1f2 : [ runPendingAnimations-BB@0x22c ]
+	123     (000001f2) const/16             v25, 0
+	124     (000001f6) move/from16          v0, v25
+	125     (000001fa) invoke-virtual       v10, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	126     (00000200) move-result-object   v25
+	127     (00000202) check-cast           v25, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;
+	128     (00000206) move-object/from16   v0, v25
+	129     (0000020a) iget-object          v12, v0, Landroid/support/v7/widget/DefaultItemAnimator$ChangeInfo;->oldHolder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	130     (0000020e) iget-object          v0, v12, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	131     (00000212) move-object/from16   v25, v0
+	132     (00000216) invoke-virtual/range v28, Landroid/support/v7/widget/DefaultItemAnimator;->getRemoveDuration()J
+	133     (0000021c) move-result-wide     v26
+	134     (0000021e) move-object/from16   v0, v25
+	135     (00000222) move-wide/from16     v1, v26
+	136     (00000226) invoke-static        v0, v7, v1, v2, Landroid/support/v4/view/ViewCompat;->postOnAnimationDelayed(Landroid/view/View; Ljava/lang/Runnable; J)V
+
+runPendingAnimations-BB@0x22c : [ runPendingAnimations-BB@0x230 runPendingAnimations-BB@0x7c ]
+	137     (0000022c) if-eqz               v6, -d8
+
+runPendingAnimations-BB@0x230 : [ runPendingAnimations-BB@0x28a runPendingAnimations-BB@0x292 ]
+	138     (00000230) new-instance         v5, Ljava/util/ArrayList;
+	139     (00000234) invoke-direct        v5, Ljava/util/ArrayList;-><init>()V
+	140     (0000023a) move-object/from16   v0, v28
+	141     (0000023e) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingAdditions Ljava/util/ArrayList;
+	142     (00000242) move-object/from16   v25, v0
+	143     (00000246) move-object/from16   v0, v25
+	144     (0000024a) invoke-virtual       v5, v0, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+	145     (00000250) move-object/from16   v0, v28
+	146     (00000254) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mAdditionsList Ljava/util/ArrayList;
+	147     (00000258) move-object/from16   v25, v0
+	148     (0000025c) move-object/from16   v0, v25
+	149     (00000260) invoke-virtual       v0, v5, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	150     (00000266) move-object/from16   v0, v28
+	151     (0000026a) iget-object          v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingAdditions Ljava/util/ArrayList;
+	152     (0000026e) move-object/from16   v25, v0
+	153     (00000272) invoke-virtual/range v25, Ljava/util/ArrayList;->clear()V
+	154     (00000278) new-instance         v4, Landroid/support/v7/widget/DefaultItemAnimator$3;
+	155     (0000027c) move-object/from16   v0, v28
+	156     (00000280) invoke-direct        v4, v0, v5, Landroid/support/v7/widget/DefaultItemAnimator$3;-><init>(Landroid/support/v7/widget/DefaultItemAnimator; Ljava/util/ArrayList;)V
+	157     (00000286) if-nez               v19, +6
+
+runPendingAnimations-BB@0x28a : [ runPendingAnimations-BB@0x28e runPendingAnimations-BB@0x292 ]
+	158     (0000028a) if-nez               v18, +4
+
+runPendingAnimations-BB@0x28e : [ runPendingAnimations-BB@0x292 runPendingAnimations-BB@0x318 ]
+	159     (0000028e) if-eqz               v11, +45
+
+runPendingAnimations-BB@0x292 : [ runPendingAnimations-BB@0x296 runPendingAnimations-BB@0x306 ]
+	160     (00000292) if-eqz               v19, +3a
+
+runPendingAnimations-BB@0x296 : [ runPendingAnimations-BB@0x29e ]
+	161     (00000296) invoke-virtual/range v28, Landroid/support/v7/widget/DefaultItemAnimator;->getRemoveDuration()J
+	162     (0000029c) move-result-wide     v20
+
+runPendingAnimations-BB@0x29e : [ runPendingAnimations-BB@0x2a2 runPendingAnimations-BB@0x30c ]
+	163     (0000029e) if-eqz               v18, +37
+
+runPendingAnimations-BB@0x2a2 : [ runPendingAnimations-BB@0x2aa ]
+	164     (000002a2) invoke-virtual/range v28, Landroid/support/v7/widget/DefaultItemAnimator;->getMoveDuration()J
+	165     (000002a8) move-result-wide     v14
+
+runPendingAnimations-BB@0x2aa : [ runPendingAnimations-BB@0x2ae runPendingAnimations-BB@0x312 ]
+	166     (000002aa) if-eqz               v11, +34
+
+runPendingAnimations-BB@0x2ae : [ runPendingAnimations-BB@0x2b6 ]
+	167     (000002ae) invoke-virtual/range v28, Landroid/support/v7/widget/DefaultItemAnimator;->getChangeDuration()J
+	168     (000002b4) move-result-wide     v8
+
+runPendingAnimations-BB@0x2b6 : [ runPendingAnimations-BB@0x7c ]
+	169     (000002b6) invoke-static        v14, v15, v8, v9, Ljava/lang/Math;->max(J J)J
+	170     (000002bc) move-result-wide     v26
+	171     (000002be) add-long             v22, v20, v26
+	172     (000002c2) const/16             v25, 0
+	173     (000002c6) move/from16          v0, v25
+	174     (000002ca) invoke-virtual       v5, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	175     (000002d0) move-result-object   v25
+	176     (000002d2) check-cast           v25, Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	177     (000002d6) move-object/from16   v0, v25
+	178     (000002da) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	179     (000002de) move-object/from16   v24, v0
+	180     (000002e2) move-object/from16   v0, v24
+	181     (000002e6) move-wide/from16     v1, v22
+	182     (000002ea) invoke-static        v0, v4, v1, v2, Landroid/support/v4/view/ViewCompat;->postOnAnimationDelayed(Landroid/view/View; Ljava/lang/Runnable; J)V
+	183     (000002f0) goto/16              -13a
+
+runPendingAnimations-BB@0x2f4 : [ runPendingAnimations-BB@0x194 ]
+	184     (000002f4) invoke-interface/range v16, Ljava/lang/Runnable;->run()V
+	185     (000002fa) goto/16              -b3
+
+runPendingAnimations-BB@0x2fe : [ runPendingAnimations-BB@0x22c ]
+	186     (000002fe) invoke-interface     v7, Ljava/lang/Runnable;->run()V
+	187     (00000304) goto                 -6c
+
+runPendingAnimations-BB@0x306 : [ runPendingAnimations-BB@0x29e ]
+	188     (00000306) const-wide/16        v20, 0 # [0.0]
+	189     (0000030a) goto                 -36
+
+runPendingAnimations-BB@0x30c : [ runPendingAnimations-BB@0x2aa ]
+	190     (0000030c) const-wide/16        v14, 0 # [0.0]
+	191     (00000310) goto                 -33
+
+runPendingAnimations-BB@0x312 : [ runPendingAnimations-BB@0x2b6 ]
+	192     (00000312) const-wide/16        v8, 0 # [0.0]
+	193     (00000316) goto                 -30
+
+runPendingAnimations-BB@0x318 : [ runPendingAnimations-BB@0x7c ]
+	194     (00000318) invoke-interface     v4, Ljava/lang/Runnable;->run()V
+	195     (0000031e) goto/16              -151
+

@@ -1,0 +1,43 @@
+# Landroid/support/v4/widget/MaterialProgressDrawable;->isRunning()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:boolean
+
+isRunning-BB@0x0 : [ isRunning-BB@0xe ]
+	0       (00000000) iget-object          v2, v5, Landroid/support/v4/widget/MaterialProgressDrawable;->mAnimators Ljava/util/ArrayList;
+	1       (00000004) invoke-virtual       v2, Ljava/util/ArrayList;->size()I
+	2       (0000000a) move-result          v0
+	3       (0000000c) const/4              v3, 0
+
+isRunning-BB@0xe : [ isRunning-BB@0x12 isRunning-BB@0x40 ]
+	4       (0000000e) if-ge                v3, v0, +19
+
+isRunning-BB@0x12 : [ isRunning-BB@0x2a isRunning-BB@0x3a ]
+	5       (00000012) invoke-virtual       v2, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	6       (00000018) move-result-object   v1
+	7       (0000001a) check-cast           v1, Landroid/view/animation/Animation;
+	8       (0000001e) invoke-virtual       v1, Landroid/view/animation/Animation;->hasStarted()Z
+	9       (00000024) move-result          v4
+	10      (00000026) if-eqz               v4, +a
+
+isRunning-BB@0x2a : [ isRunning-BB@0x36 isRunning-BB@0x3a ]
+	11      (0000002a) invoke-virtual       v1, Landroid/view/animation/Animation;->hasEnded()Z
+	12      (00000030) move-result          v4
+	13      (00000032) if-nez               v4, +4
+
+isRunning-BB@0x36 : [ isRunning-BB@0x38 ]
+	14      (00000036) const/4              v4, 1
+
+isRunning-BB@0x38 : 
+	15      (00000038) return               v4
+
+isRunning-BB@0x3a : [ isRunning-BB@0xe ]
+	16      (0000003a) add-int/lit8         v3, v3, 1
+	17      (0000003e) goto                 -18
+
+isRunning-BB@0x40 : [ isRunning-BB@0x38 ]
+	18      (00000040) const/4              v4, 0
+	19      (00000042) goto                 -5
+

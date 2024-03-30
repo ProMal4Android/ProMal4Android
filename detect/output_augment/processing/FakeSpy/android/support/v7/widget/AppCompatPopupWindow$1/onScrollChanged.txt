@@ -1,0 +1,38 @@
+# Landroid/support/v7/widget/AppCompatPopupWindow$1;->onScrollChanged()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+onScrollChanged-BB@0x0 : [ onScrollChanged-BB@0x18 onScrollChanged-BB@0x24 ]
+	0       (00000000) iget-object          v1, v3, Landroid/support/v7/widget/AppCompatPopupWindow$1;->val$fieldAnchor Ljava/lang/reflect/Field;
+	1       (00000004) iget-object          v2, v3, Landroid/support/v7/widget/AppCompatPopupWindow$1;->val$popup Landroid/widget/PopupWindow;
+	2       (00000008) invoke-virtual       v1, v2, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) check-cast           v0, Ljava/lang/ref/WeakReference;
+	5       (00000014) if-eqz               v0, +8
+	0:2f
+	(Ljava/lang/IllegalAccessException; -> 32 onScrollChanged-BB@0x32)
+
+onScrollChanged-BB@0x18 : [ onScrollChanged-BB@0x24 onScrollChanged-BB@0x26 ]
+	6       (00000018) invoke-virtual       v0, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+	7       (0000001e) move-result-object   v1
+	8       (00000020) if-nez               v1, +3
+	0:2f
+	(Ljava/lang/IllegalAccessException; -> 32 onScrollChanged-BB@0x32)
+
+onScrollChanged-BB@0x24 : 
+	9       (00000024) return-void          
+	0:2f
+	(Ljava/lang/IllegalAccessException; -> 32 onScrollChanged-BB@0x32)
+
+onScrollChanged-BB@0x26 : [ onScrollChanged-BB@0x24 ]
+	10      (00000026) iget-object          v1, v3, Landroid/support/v7/widget/AppCompatPopupWindow$1;->val$originalListener Landroid/view/ViewTreeObserver$OnScrollChangedListener;
+	11      (0000002a) invoke-interface     v1, Landroid/view/ViewTreeObserver$OnScrollChangedListener;->onScrollChanged()V
+	12      (00000030) goto                 -6
+
+onScrollChanged-BB@0x32 : [ onScrollChanged-BB@0x24 ]
+	13      (00000032) move-exception       v1
+	14      (00000034) goto                 -8
+

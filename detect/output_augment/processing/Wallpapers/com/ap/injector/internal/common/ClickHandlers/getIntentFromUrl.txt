@@ -1,0 +1,124 @@
+# Lcom/ap/injector/internal/common/ClickHandlers;->getIntentFromUrl(Landroid/content/Context; Ljava/lang/String;)Landroid/content/Intent; [access_flags=private static final]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:android.content.Context
+# - v12:java.lang.String
+#
+# - return:android.content.Intent
+
+getIntentFromUrl-BB@0x0 : [ getIntentFromUrl-BB@0x20 getIntentFromUrl-BB@0x30 ]
+	0       (00000000) invoke-static        v12, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	1       (00000006) move-result-object   v8
+	2       (00000008) invoke-virtual       v8, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+	3       (0000000e) move-result-object   v7
+	4       (00000010) sget-object          v8, Lcom/ap/injector/internal/common/ClickHandlers;->HTTP2 Ljava/lang/String;
+	5       (00000014) invoke-virtual       v7, v8, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	6       (0000001a) move-result          v8
+	7       (0000001c) if-nez               v8, +a
+
+getIntentFromUrl-BB@0x20 : [ getIntentFromUrl-BB@0x30 getIntentFromUrl-BB@0x8a ]
+	8       (00000020) sget-object          v8, Lcom/ap/injector/internal/common/ClickHandlers;->HTTPS2 Ljava/lang/String;
+	9       (00000024) invoke-virtual       v7, v8, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	10      (0000002a) move-result          v8
+	11      (0000002c) if-eqz               v8, +2f
+
+getIntentFromUrl-BB@0x30 : [ getIntentFromUrl-BB@0x46 ]
+	12      (00000030) new-instance         v4, Landroid/content/Intent;
+	13      (00000034) sget-object          v8, Lcom/ap/injector/internal/common/ClickHandlers;->ANDROID_INTENT_ACTION_VIEW Ljava/lang/String;
+	14      (00000038) invoke-static        v12, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	15      (0000003e) move-result-object   v9
+	16      (00000040) invoke-direct        v4, v8, v9, Landroid/content/Intent;-><init>(Ljava/lang/String; Landroid/net/Uri;)V
+	30:45
+	(Ljava/lang/Throwable; -> 48 getIntentFromUrl-BB@0x48)
+
+getIntentFromUrl-BB@0x46 : 
+	17      (00000046) return-object        v4
+
+getIntentFromUrl-BB@0x48 : [ getIntentFromUrl-BB@0x50 ]
+	18      (00000048) move-exception       v1
+	19      (0000004a) invoke-static        v1, Lcom/ap/injector/internal/common/Logger;->logInternalError(Ljava/lang/Throwable;)V
+
+getIntentFromUrl-BB@0x50 : [ getIntentFromUrl-BB@0x46 ]
+	20      (00000050) new-instance         v0, Landroid/content/Intent;
+	21      (00000054) sget-object          v8, Lcom/ap/injector/internal/common/ClickHandlers;->ANDROID_INTENT_ACTION_VIEW Ljava/lang/String;
+	22      (00000058) invoke-direct        v0, v8, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+	23      (0000005e) sget-object          v8, Lcom/ap/injector/internal/common/ClickHandlers;->COM_ANDROID_CHROME_COM_GOOGLE_ANDROID_APPS_CHROME_MAIN Ljava/lang/String;
+	24      (00000062) invoke-static        v8, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+	25      (00000068) move-result-object   v8
+	26      (0000006a) invoke-virtual       v0, v8, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+	27      (00000070) invoke-static        v12, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	28      (00000076) move-result-object   v8
+	29      (00000078) invoke-virtual       v0, v8, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+	30      (0000007e) move-object          v4, v0
+	31      (00000080) goto                 -1d
+	50:7d
+	(Ljava/lang/Throwable; -> 82 getIntentFromUrl-BB@0x82)
+
+getIntentFromUrl-BB@0x82 : [ getIntentFromUrl-BB@0x8a ]
+	32      (00000082) move-exception       v2
+	33      (00000084) invoke-static        v2, Lcom/ap/injector/internal/common/Logger;->logInternalError(Ljava/lang/Throwable;)V
+
+getIntentFromUrl-BB@0x8a : [ getIntentFromUrl-BB@0xa2 getIntentFromUrl-BB@0x11c ]
+	34      (0000008a) invoke-virtual       v11, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+	35      (00000090) move-result-object   v6
+	36      (00000092) sget-object          v8, Lcom/ap/injector/internal/common/ClickHandlers;->INTENT2 Ljava/lang/String;
+	37      (00000096) invoke-virtual       v7, v8, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	38      (0000009c) move-result          v8
+	39      (0000009e) if-eqz               v8, +3f
+
+getIntentFromUrl-BB@0xa2 : [ getIntentFromUrl-BB@0xa4 ]
+	40      (000000a2) const/4              v8, 1
+
+getIntentFromUrl-BB@0xa4 : [ getIntentFromUrl-BB@0xb8 getIntentFromUrl-BB@0x46 ]
+	41      (000000a4) invoke-static        v12, v8, Landroid/content/Intent;->parseUri(Ljava/lang/String; I)Landroid/content/Intent;
+	42      (000000aa) move-result-object   v4
+	43      (000000ac) invoke-virtual       v4, v6, Landroid/content/Intent;->resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;
+	44      (000000b2) move-result-object   v8
+	45      (000000b4) if-nez               v8, -37
+	a4:109
+	(Ljava/lang/Throwable; -> 114 getIntentFromUrl-BB@0x114)
+
+getIntentFromUrl-BB@0xb8 : [ getIntentFromUrl-BB@0x110 getIntentFromUrl-BB@0x11c ]
+	46      (000000b8) new-instance         v8, Landroid/content/Intent;
+	47      (000000bc) sget-object          v9, Lcom/ap/injector/internal/common/ClickHandlers;->ANDROID_INTENT_ACTION_VIEW Ljava/lang/String;
+	48      (000000c0) invoke-direct        v8, v9, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+	49      (000000c6) new-instance         v9, Ljava/lang/StringBuilder;
+	50      (000000ca) sget-object          v10, Lcom/ap/injector/internal/common/ClickHandlers;->MARKET_DETAILS_ID Ljava/lang/String;
+	51      (000000ce) invoke-static        v10, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+	52      (000000d4) move-result-object   v10
+	53      (000000d6) invoke-direct        v9, v10, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+	54      (000000dc) invoke-virtual       v4, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+	55      (000000e2) move-result-object   v10
+	56      (000000e4) invoke-virtual       v9, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	57      (000000ea) move-result-object   v9
+	58      (000000ec) invoke-virtual       v9, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	59      (000000f2) move-result-object   v9
+	60      (000000f4) invoke-static        v9, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	61      (000000fa) move-result-object   v9
+	62      (000000fc) invoke-virtual       v8, v9, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+	63      (00000102) move-result-object   v5
+	64      (00000104) invoke-virtual       v5, v6, Landroid/content/Intent;->resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;
+	65      (0000010a) move-result-object   v8
+	66      (0000010c) if-eqz               v8, +8
+
+getIntentFromUrl-BB@0x110 : [ getIntentFromUrl-BB@0x46 ]
+	67      (00000110) move-object          v4, v5
+	68      (00000112) goto                 -66
+
+getIntentFromUrl-BB@0x114 : [ getIntentFromUrl-BB@0x11c ]
+	69      (00000114) move-exception       v3
+	70      (00000116) invoke-static        v3, Lcom/ap/injector/internal/common/Logger;->logInternalError(Ljava/lang/Throwable;)V
+
+getIntentFromUrl-BB@0x11c : [ getIntentFromUrl-BB@0x46 ]
+	71      (0000011c) new-instance         v4, Landroid/content/Intent;
+	72      (00000120) sget-object          v8, Lcom/ap/injector/internal/common/ClickHandlers;->ANDROID_INTENT_ACTION_VIEW Ljava/lang/String;
+	73      (00000124) invoke-static        v12, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	74      (0000012a) move-result-object   v9
+	75      (0000012c) invoke-direct        v4, v8, v9, Landroid/content/Intent;-><init>(Ljava/lang/String; Landroid/net/Uri;)V
+	76      (00000132) const/high16         v8, 4096 # [2.524354896707238e-29]
+	77      (00000136) invoke-virtual       v4, v8, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+	78      (0000013c) const/high16         v8, 128 # [1.1754943508222875e-38]
+	79      (00000140) invoke-virtual       v4, v8, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+	80      (00000146) goto                 -80
+

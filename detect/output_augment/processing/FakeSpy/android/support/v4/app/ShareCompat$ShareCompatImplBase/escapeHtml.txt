@@ -1,0 +1,19 @@
+# Landroid/support/v4/app/ShareCompat$ShareCompatImplBase;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.CharSequence
+#
+# - return:java.lang.String
+
+escapeHtml-BB@0x0 : 
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuilder;
+	1       (00000004) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	2       (0000000a) const/4              v1, 0
+	3       (0000000c) invoke-interface     v4, Ljava/lang/CharSequence;->length()I
+	4       (00000012) move-result          v2
+	5       (00000014) invoke-static        v0, v4, v1, v2, Landroid/support/v4/app/ShareCompat$ShareCompatImplBase;->withinStyle(Ljava/lang/StringBuilder; Ljava/lang/CharSequence; I I)V
+	6       (0000001a) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	7       (00000020) move-result-object   v1
+	8       (00000022) return-object        v1
+

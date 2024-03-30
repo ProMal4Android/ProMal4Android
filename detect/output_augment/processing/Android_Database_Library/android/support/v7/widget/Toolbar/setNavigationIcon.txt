@@ -1,0 +1,48 @@
+# Landroid/support/v7/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.graphics.drawable.Drawable
+#
+# - return:void
+
+setNavigationIcon-BB@0x0 : [ setNavigationIcon-BB@0x4 setNavigationIcon-BB@0x30 ]
+	0       (00000000) if-eqz               v2, +18
+
+setNavigationIcon-BB@0x4 : [ setNavigationIcon-BB@0x1a setNavigationIcon-BB@0x4e ]
+	1       (00000004) invoke-virtual       v1, Landroid/support/v7/widget/Toolbar;->b()V
+	2       (0000000a) iget-object          v0, v1, Landroid/support/v7/widget/Toolbar;->d Landroid/widget/ImageButton;
+	3       (0000000e) invoke-virtual       v0, Landroid/widget/ImageButton;->getParent()Landroid/view/ViewParent;
+	4       (00000014) move-result-object   v0
+	5       (00000016) if-nez               v0, +1c
+
+setNavigationIcon-BB@0x1a : [ setNavigationIcon-BB@0x4e ]
+	6       (0000001a) iget-object          v0, v1, Landroid/support/v7/widget/Toolbar;->d Landroid/widget/ImageButton;
+	7       (0000001e) invoke-virtual       v1, v0, Landroid/support/v7/widget/Toolbar;->a(Landroid/view/View;)V
+	8       (00000024) iget-object          v0, v1, Landroid/support/v7/widget/Toolbar;->d Landroid/widget/ImageButton;
+	9       (00000028) invoke-virtual       v1, v0, Landroid/support/v7/widget/Toolbar;->e(Landroid/view/View;)V
+	10      (0000002e) goto                 +10
+
+setNavigationIcon-BB@0x30 : [ setNavigationIcon-BB@0x38 setNavigationIcon-BB@0x4e ]
+	11      (00000030) iget-object          v0, v1, Landroid/support/v7/widget/Toolbar;->d Landroid/widget/ImageButton;
+	12      (00000034) if-eqz               v0, +d
+
+setNavigationIcon-BB@0x38 : [ setNavigationIcon-BB@0x44 setNavigationIcon-BB@0x4e ]
+	13      (00000038) invoke-virtual       v0, Landroid/widget/ImageButton;->getParent()Landroid/view/ViewParent;
+	14      (0000003e) move-result-object   v0
+	15      (00000040) if-eqz               v0, +7
+
+setNavigationIcon-BB@0x44 : [ setNavigationIcon-BB@0x4e ]
+	16      (00000044) iget-object          v0, v1, Landroid/support/v7/widget/Toolbar;->d Landroid/widget/ImageButton;
+	17      (00000048) invoke-virtual       v1, v0, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+setNavigationIcon-BB@0x4e : [ setNavigationIcon-BB@0x56 setNavigationIcon-BB@0x5c ]
+	18      (0000004e) iget-object          v0, v1, Landroid/support/v7/widget/Toolbar;->d Landroid/widget/ImageButton;
+	19      (00000052) if-eqz               v0, +5
+
+setNavigationIcon-BB@0x56 : [ setNavigationIcon-BB@0x5c ]
+	20      (00000056) invoke-virtual       v0, v2, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+setNavigationIcon-BB@0x5c : 
+	21      (0000005c) return-void          
+

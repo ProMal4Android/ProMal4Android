@@ -1,0 +1,111 @@
+# Landroid/support/v4/view/ViewPager;->infoForCurrentScrollPosition()Landroid/support/v4/view/ViewPager$ItemInfo; [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v15
+#
+# - return:android.support.v4.view.ViewPager$ItemInfo
+
+infoForCurrentScrollPosition-BB@0x0 : [ infoForCurrentScrollPosition-BB@0xe infoForCurrentScrollPosition-BB@0xd4 ]
+	0       (00000000) const/4              v8, 0
+	1       (00000002) invoke-direct        v15, Landroid/support/v4/view/ViewPager;->getClientWidth()I
+	2       (00000008) move-result          v12
+	3       (0000000a) if-lez               v12, +65
+
+infoForCurrentScrollPosition-BB@0xe : [ infoForCurrentScrollPosition-BB@0x1e ]
+	4       (0000000e) invoke-virtual       v15, Landroid/support/v4/view/ViewPager;->getScrollX()I
+	5       (00000014) move-result          v13
+	6       (00000016) int-to-float         v13, v13
+	7       (00000018) int-to-float         v14, v12
+	8       (0000001a) div-float            v11, v13, v14
+
+infoForCurrentScrollPosition-BB@0x1e : [ infoForCurrentScrollPosition-BB@0x22 infoForCurrentScrollPosition-BB@0x2e ]
+	9       (0000001e) if-lez               v12, +8
+
+infoForCurrentScrollPosition-BB@0x22 : [ infoForCurrentScrollPosition-BB@0x2e ]
+	10      (00000022) iget                 v13, v15, Landroid/support/v4/view/ViewPager;->mPageMargin I
+	11      (00000026) int-to-float         v13, v13
+	12      (00000028) int-to-float         v14, v12
+	13      (0000002a) div-float            v8, v13, v14
+
+infoForCurrentScrollPosition-BB@0x2e : [ infoForCurrentScrollPosition-BB@0x3a ]
+	14      (0000002e) const/4              v5, -1
+	15      (00000030) const/4              v4, 0
+	16      (00000032) const/4              v6, 0
+	17      (00000034) const/4              v0, 1
+	18      (00000036) const/4              v3, 0
+	19      (00000038) const/4              v1, 0
+
+infoForCurrentScrollPosition-BB@0x3a : [ infoForCurrentScrollPosition-BB@0x4a infoForCurrentScrollPosition-BB@0xd2 ]
+	20      (0000003a) iget-object          v13, v15, Landroid/support/v4/view/ViewPager;->mItems Ljava/util/ArrayList;
+	21      (0000003e) invoke-virtual       v13, Ljava/util/ArrayList;->size()I
+	22      (00000044) move-result          v13
+	23      (00000046) if-ge                v1, v13, +46
+
+infoForCurrentScrollPosition-BB@0x4a : [ infoForCurrentScrollPosition-BB@0x5e infoForCurrentScrollPosition-BB@0x98 ]
+	24      (0000004a) iget-object          v13, v15, Landroid/support/v4/view/ViewPager;->mItems Ljava/util/ArrayList;
+	25      (0000004e) invoke-virtual       v13, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	26      (00000054) move-result-object   v2
+	27      (00000056) check-cast           v2, Landroid/support/v4/view/ViewPager$ItemInfo;
+	28      (0000005a) if-nez               v0, +1f
+
+infoForCurrentScrollPosition-BB@0x5e : [ infoForCurrentScrollPosition-BB@0x6a infoForCurrentScrollPosition-BB@0x98 ]
+	29      (0000005e) iget                 v13, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->position I
+	30      (00000062) add-int/lit8         v14, v5, 1
+	31      (00000066) if-eq                v13, v14, +19
+
+infoForCurrentScrollPosition-BB@0x6a : [ infoForCurrentScrollPosition-BB@0x98 ]
+	32      (0000006a) iget-object          v2, v15, Landroid/support/v4/view/ViewPager;->mTempItem Landroid/support/v4/view/ViewPager$ItemInfo;
+	33      (0000006e) add-float            v13, v4, v6
+	34      (00000072) add-float/2addr      v13, v8
+	35      (00000074) iput                 v13, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->offset F
+	36      (00000078) add-int/lit8         v13, v5, 1
+	37      (0000007c) iput                 v13, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->position I
+	38      (00000080) iget-object          v13, v15, Landroid/support/v4/view/ViewPager;->mAdapter Landroid/support/v4/view/PagerAdapter;
+	39      (00000084) iget                 v14, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->position I
+	40      (00000088) invoke-virtual       v13, v14, Landroid/support/v4/view/PagerAdapter;->getPageWidth(I)F
+	41      (0000008e) move-result          v13
+	42      (00000090) iput                 v13, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->widthFactor F
+	43      (00000094) add-int/lit8         v1, v1, -1
+
+infoForCurrentScrollPosition-BB@0x98 : [ infoForCurrentScrollPosition-BB@0xac infoForCurrentScrollPosition-BB@0xb4 ]
+	44      (00000098) iget                 v9, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->offset F
+	45      (0000009c) move                 v7, v9
+	46      (0000009e) iget                 v13, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->widthFactor F
+	47      (000000a2) add-float/2addr      v13, v9
+	48      (000000a4) add-float            v10, v13, v8
+	49      (000000a8) if-nez               v0, +6
+
+infoForCurrentScrollPosition-BB@0xac : [ infoForCurrentScrollPosition-BB@0xb4 infoForCurrentScrollPosition-BB@0xd2 ]
+	50      (000000ac) cmpl-float           v13, v11, v7
+	51      (000000b0) if-ltz               v13, +11
+
+infoForCurrentScrollPosition-BB@0xb4 : [ infoForCurrentScrollPosition-BB@0xbc infoForCurrentScrollPosition-BB@0xd0 ]
+	52      (000000b4) cmpg-float           v13, v11, v10
+	53      (000000b8) if-ltz               v13, +c
+
+infoForCurrentScrollPosition-BB@0xbc : [ infoForCurrentScrollPosition-BB@0xd0 infoForCurrentScrollPosition-BB@0xd8 ]
+	54      (000000bc) iget-object          v13, v15, Landroid/support/v4/view/ViewPager;->mItems Ljava/util/ArrayList;
+	55      (000000c0) invoke-virtual       v13, Ljava/util/ArrayList;->size()I
+	56      (000000c6) move-result          v13
+	57      (000000c8) add-int/lit8         v13, v13, -1
+	58      (000000cc) if-ne                v1, v13, +6
+
+infoForCurrentScrollPosition-BB@0xd0 : [ infoForCurrentScrollPosition-BB@0xd2 ]
+	59      (000000d0) move-object          v3, v2
+
+infoForCurrentScrollPosition-BB@0xd2 : 
+	60      (000000d2) return-object        v3
+
+infoForCurrentScrollPosition-BB@0xd4 : [ infoForCurrentScrollPosition-BB@0x1e ]
+	61      (000000d4) move                 v11, v8
+	62      (000000d6) goto                 -5c
+
+infoForCurrentScrollPosition-BB@0xd8 : [ infoForCurrentScrollPosition-BB@0x3a ]
+	63      (000000d8) const/4              v0, 0
+	64      (000000da) iget                 v5, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->position I
+	65      (000000de) move                 v4, v9
+	66      (000000e0) iget                 v6, v2, Landroid/support/v4/view/ViewPager$ItemInfo;->widthFactor F
+	67      (000000e4) move-object          v3, v2
+	68      (000000e6) add-int/lit8         v1, v1, 1
+	69      (000000ea) goto                 -58
+

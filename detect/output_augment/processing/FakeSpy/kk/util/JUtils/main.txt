@@ -1,0 +1,48 @@
+# Lkk/util/JUtils;->main([Ljava/lang/String;)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String[]
+#
+# - return:void
+
+main-BB@0x0 : [ main-BB@0x7c ]
+	0       (00000000) new-instance         v0, Lkk/util/JUtils;
+	1       (00000004) const-string         v2, 'TEST'
+	2       (00000008) invoke-direct        v0, v2, Lkk/util/JUtils;-><init>(Ljava/lang/String;)V
+	3       (0000000e) sget-object          v2, Ljava/lang/System;->out Ljava/io/PrintStream;
+	4       (00000012) const-string         v3, 'http://36.227.130.2/'
+	5       (00000016) invoke-virtual       v0, v3, Lkk/util/JUtils;->encrypt(Ljava/lang/String;)Ljava/lang/String;
+	6       (0000001c) move-result-object   v3
+	7       (0000001e) invoke-virtual       v2, v3, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+	8       (00000024) sget-object          v2, Ljava/lang/System;->out Ljava/io/PrintStream;
+	9       (00000028) const-string         v3, '41518645563848958d4c950ef10d294549ed82e7c7c29e599d0d2eaeeb04e572'
+	10      (0000002c) invoke-virtual       v0, v3, Lkk/util/JUtils;->decrypt(Ljava/lang/String;)Ljava/lang/String;
+	11      (00000032) move-result-object   v3
+	12      (00000034) invoke-virtual       v2, v3, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+	13      (0000003a) sget-object          v2, Ljava/lang/System;->out Ljava/io/PrintStream;
+	14      (0000003e) const-string         v3, '41518645563848958d4c950ef10d2945d085220f9b327dff4e185e668de7a11f'
+	15      (00000042) invoke-virtual       v0, v3, Lkk/util/JUtils;->decrypt(Ljava/lang/String;)Ljava/lang/String;
+	16      (00000048) move-result-object   v3
+	17      (0000004a) invoke-virtual       v2, v3, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+	18      (00000050) sget-object          v2, Ljava/lang/System;->out Ljava/io/PrintStream;
+	19      (00000054) const-string         v3, 'e01a9ca43a0ee1bcb0fe87a2c7bab6dc'
+	20      (00000058) invoke-virtual       v0, v3, Lkk/util/JUtils;->decrypt(Ljava/lang/String;)Ljava/lang/String;
+	21      (0000005e) move-result-object   v3
+	22      (00000060) invoke-virtual       v2, v3, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+	23      (00000066) sget-object          v2, Ljava/lang/System;->out Ljava/io/PrintStream;
+	24      (0000006a) const-string         v3, '769b974306b596cb8747b13ed9fdcedf7a75c8a702f5150a'
+	25      (0000006e) invoke-virtual       v0, v3, Lkk/util/JUtils;->decrypt(Ljava/lang/String;)Ljava/lang/String;
+	26      (00000074) move-result-object   v3
+	27      (00000076) invoke-virtual       v2, v3, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+	0:7b
+	(Ljava/lang/Exception; -> 7e main-BB@0x7e)
+
+main-BB@0x7c : 
+	28      (0000007c) return-void          
+
+main-BB@0x7e : [ main-BB@0x7c ]
+	29      (0000007e) move-exception       v1
+	30      (00000080) invoke-virtual       v1, Ljava/lang/Exception;->printStackTrace()V
+	31      (00000086) goto                 -5
+

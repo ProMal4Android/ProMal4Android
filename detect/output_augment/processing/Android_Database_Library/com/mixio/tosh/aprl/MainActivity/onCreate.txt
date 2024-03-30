@@ -1,0 +1,75 @@
+# Lcom/mixio/tosh/aprl/MainActivity;->onCreate(Landroid/os/Bundle;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.os.Bundle
+#
+# - return:void
+
+onCreate-BB@0x0 : [ onCreate-BB@0xc ]
+	0       (00000000) invoke-super         v2, v3, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+	1       (00000006) const                v3, 2131296278 # [1.8210468163554475e+38]
+
+onCreate-BB@0xc : [ onCreate-BB@0x12 ]
+	2       (0000000c) invoke-virtual       v2, v3, Landroid/app/Activity;->setContentView(I)V
+	c:11
+	(Ljava/lang/Exception; -> a4 onCreate-BB@0xa4)
+
+onCreate-BB@0x12 : [ onCreate-BB@0x26 onCreate-BB@0x9c ]
+	3       (00000012) invoke-virtual       v2, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+	4       (00000018) move-result-object   v3
+	5       (0000001a) invoke-virtual       v2, v3, Lcom/mixio/tosh/aprl/MainActivity;->a(Landroid/content/Context;)Z
+	6       (00000020) move-result          v3
+	7       (00000022) if-nez               v3, +3d
+	12:a1
+	(Ljava/lang/Exception; -> d4 onCreate-BB@0xd4)
+
+onCreate-BB@0x26 : [ onCreate-BB@0xd4 ]
+	8       (00000026) new-instance         v3, Landroid/app/AlertDialog$Builder;
+	9       (0000002a) invoke-direct        v3, v2, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+	10      (00000030) new-instance         v0, Ljava/lang/StringBuilder;
+	11      (00000034) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	12      (0000003a) const-string         v1, "Please enable 'Accessibility' for '"
+	13      (0000003e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (00000044) const                v1, 2131427344 # [1.8476301593265696e+38]
+	15      (0000004a) invoke-virtual       v2, v1, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+	16      (00000050) move-result-object   v1
+	17      (00000052) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	18      (00000058) const-string         v1, "' to get this working. Tap on 'Ok' to go to Accessibility Settings."
+	19      (0000005c) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (00000062) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	21      (00000068) move-result-object   v0
+	22      (0000006a) invoke-virtual       v3, v0, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+	23      (00000070) const/4              v0, 0
+	24      (00000072) invoke-virtual       v3, v0, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+	25      (00000078) const-string         v0, 'Ok'
+	26      (0000007c) new-instance         v1, Lb/b/a/a/a;
+	27      (00000080) invoke-direct        v1, v2, Lb/b/a/a/a;-><init>(Lcom/mixio/tosh/aprl/MainActivity;)V
+	28      (00000086) invoke-virtual       v3, v0, v1, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence; Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+	29      (0000008c) invoke-virtual       v3, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+	30      (00000092) move-result-object   v3
+	31      (00000094) invoke-virtual       v3, Landroid/app/AlertDialog;->show()V
+	32      (0000009a) goto                 +1d
+	12:a1
+	(Ljava/lang/Exception; -> d4 onCreate-BB@0xd4)
+
+onCreate-BB@0x9c : [ onCreate-BB@0xd4 ]
+	33      (0000009c) invoke-virtual       v2, Lcom/mixio/tosh/aprl/MainActivity;->b()V
+	34      (000000a2) goto                 +19
+
+onCreate-BB@0xa4 : [ onCreate-BB@0xd4 ]
+	35      (000000a4) move-exception       v3
+	36      (000000a6) const-string         v0, 'Main '
+	37      (000000aa) invoke-static        v0, Lb/a/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	38      (000000b0) move-result-object   v0
+	39      (000000b2) invoke-virtual       v3, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	40      (000000b8) move-result-object   v1
+	41      (000000ba) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	42      (000000c0) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	43      (000000c6) move-result-object   v0
+	44      (000000c8) invoke-static        v0, Lcom/mixio/tosh/aprl/aetn/ate;->b(Ljava/lang/String;)V
+	45      (000000ce) invoke-virtual       v3, Ljava/lang/Exception;->printStackTrace()V
+
+onCreate-BB@0xd4 : 
+	46      (000000d4) return-void          
+

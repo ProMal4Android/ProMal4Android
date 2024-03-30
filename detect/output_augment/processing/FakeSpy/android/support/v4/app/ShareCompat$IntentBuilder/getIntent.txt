@@ -1,0 +1,132 @@
+# Landroid/support/v4/app/ShareCompat$IntentBuilder;->getIntent()Landroid/content/Intent; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v7
+#
+# - return:android.content.Intent
+
+getIntent-BB@0x0 : [ getIntent-BB@0xe getIntent-BB@0x20 ]
+	0       (00000000) const/4              v1, 1
+	1       (00000002) const/4              v2, 0
+	2       (00000004) const/4              v6, 0
+	3       (00000006) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mToAddresses Ljava/util/ArrayList;
+	4       (0000000a) if-eqz               v3, +b
+
+getIntent-BB@0xe : [ getIntent-BB@0x20 ]
+	5       (0000000e) const-string         v3, 'android.intent.extra.EMAIL'
+	6       (00000012) iget-object          v4, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mToAddresses Ljava/util/ArrayList;
+	7       (00000016) invoke-direct        v7, v3, v4, Landroid/support/v4/app/ShareCompat$IntentBuilder;->combineArrayExtra(Ljava/lang/String; Ljava/util/ArrayList;)V
+	8       (0000001c) iput-object          v6, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mToAddresses Ljava/util/ArrayList;
+
+getIntent-BB@0x20 : [ getIntent-BB@0x28 getIntent-BB@0x3a ]
+	9       (00000020) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mCcAddresses Ljava/util/ArrayList;
+	10      (00000024) if-eqz               v3, +b
+
+getIntent-BB@0x28 : [ getIntent-BB@0x3a ]
+	11      (00000028) const-string         v3, 'android.intent.extra.CC'
+	12      (0000002c) iget-object          v4, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mCcAddresses Ljava/util/ArrayList;
+	13      (00000030) invoke-direct        v7, v3, v4, Landroid/support/v4/app/ShareCompat$IntentBuilder;->combineArrayExtra(Ljava/lang/String; Ljava/util/ArrayList;)V
+	14      (00000036) iput-object          v6, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mCcAddresses Ljava/util/ArrayList;
+
+getIntent-BB@0x3a : [ getIntent-BB@0x42 getIntent-BB@0x54 ]
+	15      (0000003a) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mBccAddresses Ljava/util/ArrayList;
+	16      (0000003e) if-eqz               v3, +b
+
+getIntent-BB@0x42 : [ getIntent-BB@0x54 ]
+	17      (00000042) const-string         v3, 'android.intent.extra.BCC'
+	18      (00000046) iget-object          v4, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mBccAddresses Ljava/util/ArrayList;
+	19      (0000004a) invoke-direct        v7, v3, v4, Landroid/support/v4/app/ShareCompat$IntentBuilder;->combineArrayExtra(Ljava/lang/String; Ljava/util/ArrayList;)V
+	20      (00000050) iput-object          v6, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mBccAddresses Ljava/util/ArrayList;
+
+getIntent-BB@0x54 : [ getIntent-BB@0x5c getIntent-BB@0x11a ]
+	21      (00000054) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+	22      (00000058) if-eqz               v3, +61
+
+getIntent-BB@0x5c : [ getIntent-BB@0x6c getIntent-BB@0x11a ]
+	23      (0000005c) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+	24      (00000060) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	25      (00000066) move-result          v3
+	26      (00000068) if-le                v3, v1, +59
+
+getIntent-BB@0x6c : [ getIntent-BB@0x88 getIntent-BB@0xd4 ]
+	27      (0000006c) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	28      (00000070) invoke-virtual       v3, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	29      (00000076) move-result-object   v3
+	30      (00000078) const-string         v4, 'android.intent.action.SEND_MULTIPLE'
+	31      (0000007c) invoke-virtual       v3, v4, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	32      (00000082) move-result          v0
+	33      (00000084) if-nez               v1, +28
+
+getIntent-BB@0x88 : [ getIntent-BB@0x8c getIntent-BB@0xd4 ]
+	34      (00000088) if-eqz               v0, +26
+
+getIntent-BB@0x8c : [ getIntent-BB@0xa2 getIntent-BB@0x11e ]
+	35      (0000008c) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	36      (00000090) const-string         v4, 'android.intent.action.SEND'
+	37      (00000094) invoke-virtual       v3, v4, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+	38      (0000009a) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+	39      (0000009e) if-eqz               v3, +40
+
+getIntent-BB@0xa2 : [ getIntent-BB@0xb2 getIntent-BB@0x11e ]
+	40      (000000a2) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+	41      (000000a6) invoke-virtual       v3, Ljava/util/ArrayList;->isEmpty()Z
+	42      (000000ac) move-result          v3
+	43      (000000ae) if-nez               v3, +38
+
+getIntent-BB@0xb2 : [ getIntent-BB@0xd0 ]
+	44      (000000b2) iget-object          v3, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	45      (000000b6) const-string         v4, 'android.intent.extra.STREAM'
+	46      (000000ba) iget-object          v5, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+	47      (000000be) invoke-virtual       v5, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	48      (000000c4) move-result-object   v2
+	49      (000000c6) check-cast           v2, Landroid/os/Parcelable;
+	50      (000000ca) invoke-virtual       v3, v4, v2, Landroid/content/Intent;->putExtra(Ljava/lang/String; Landroid/os/Parcelable;)Landroid/content/Intent;
+
+getIntent-BB@0xd0 : [ getIntent-BB@0xd4 ]
+	51      (000000d0) iput-object          v6, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+
+getIntent-BB@0xd4 : [ getIntent-BB@0xd8 getIntent-BB@0x114 ]
+	52      (000000d4) if-eqz               v1, +20
+
+getIntent-BB@0xd8 : [ getIntent-BB@0xdc getIntent-BB@0x114 ]
+	53      (000000d8) if-nez               v0, +1e
+
+getIntent-BB@0xdc : [ getIntent-BB@0xf2 getIntent-BB@0x12e ]
+	54      (000000dc) iget-object          v2, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	55      (000000e0) const-string         v3, 'android.intent.action.SEND_MULTIPLE'
+	56      (000000e4) invoke-virtual       v2, v3, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+	57      (000000ea) iget-object          v2, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+	58      (000000ee) if-eqz               v2, +20
+
+getIntent-BB@0xf2 : [ getIntent-BB@0x102 getIntent-BB@0x12e ]
+	59      (000000f2) iget-object          v2, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+	60      (000000f6) invoke-virtual       v2, Ljava/util/ArrayList;->isEmpty()Z
+	61      (000000fc) move-result          v2
+	62      (000000fe) if-nez               v2, +18
+
+getIntent-BB@0x102 : [ getIntent-BB@0x114 ]
+	63      (00000102) iget-object          v2, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	64      (00000106) const-string         v3, 'android.intent.extra.STREAM'
+	65      (0000010a) iget-object          v4, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mStreams Ljava/util/ArrayList;
+	66      (0000010e) invoke-virtual       v2, v3, v4, Landroid/content/Intent;->putParcelableArrayListExtra(Ljava/lang/String; Ljava/util/ArrayList;)Landroid/content/Intent;
+
+getIntent-BB@0x114 : 
+	67      (00000114) iget-object          v2, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	68      (00000118) return-object        v2
+
+getIntent-BB@0x11a : [ getIntent-BB@0x6c ]
+	69      (0000011a) move                 v1, v2
+	70      (0000011c) goto                 -58
+
+getIntent-BB@0x11e : [ getIntent-BB@0xd0 ]
+	71      (0000011e) iget-object          v2, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	72      (00000122) const-string         v3, 'android.intent.extra.STREAM'
+	73      (00000126) invoke-virtual       v2, v3, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
+	74      (0000012c) goto                 -2e
+
+getIntent-BB@0x12e : [ getIntent-BB@0x114 ]
+	75      (0000012e) iget-object          v2, v7, Landroid/support/v4/app/ShareCompat$IntentBuilder;->mIntent Landroid/content/Intent;
+	76      (00000132) const-string         v3, 'android.intent.extra.STREAM'
+	77      (00000136) invoke-virtual       v2, v3, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
+	78      (0000013c) goto                 -14
+

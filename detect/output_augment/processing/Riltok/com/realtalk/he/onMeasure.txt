@@ -1,0 +1,42 @@
+# Lcom/realtalk/he;->onMeasure(I I)V [access_flags=protected final]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:int
+# - v5:int
+#
+# - return:void
+
+onMeasure-BB@0x0 : [ onMeasure-BB@0xe onMeasure-BB@0x64 ]
+	0       (00000000) invoke-super         v3, v4, v5, Landroid/widget/Spinner;->onMeasure(I I)V
+	1       (00000006) iget-object          v0, v3, Lcom/realtalk/he;->g Lcom/realtalk/he$b;
+	2       (0000000a) if-eqz               v0, +2d
+
+onMeasure-BB@0xe : [ onMeasure-BB@0x1e onMeasure-BB@0x64 ]
+	3       (0000000e) invoke-static        v4, Landroid/view/View$MeasureSpec;->getMode(I)I
+	4       (00000014) move-result          v0
+	5       (00000016) const/high16         v1, -32768 # [-0.0]
+	6       (0000001a) if-ne                v0, v1, +25
+
+onMeasure-BB@0x1e : [ onMeasure-BB@0x64 ]
+	7       (0000001e) invoke-virtual       v3, Lcom/realtalk/he;->getMeasuredWidth()I
+	8       (00000024) move-result          v0
+	9       (00000026) invoke-virtual       v3, Lcom/realtalk/he;->getAdapter()Landroid/widget/SpinnerAdapter;
+	10      (0000002c) move-result-object   v1
+	11      (0000002e) invoke-virtual       v3, Lcom/realtalk/he;->getBackground()Landroid/graphics/drawable/Drawable;
+	12      (00000034) move-result-object   v2
+	13      (00000036) invoke-virtual       v3, v1, v2, Lcom/realtalk/he;->a(Landroid/widget/SpinnerAdapter; Landroid/graphics/drawable/Drawable;)I
+	14      (0000003c) move-result          v1
+	15      (0000003e) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	16      (00000044) move-result          v0
+	17      (00000046) invoke-static        v4, Landroid/view/View$MeasureSpec;->getSize(I)I
+	18      (0000004c) move-result          v1
+	19      (0000004e) invoke-static        v0, v1, Ljava/lang/Math;->min(I I)I
+	20      (00000054) move-result          v0
+	21      (00000056) invoke-virtual       v3, Lcom/realtalk/he;->getMeasuredHeight()I
+	22      (0000005c) move-result          v1
+	23      (0000005e) invoke-virtual       v3, v0, v1, Lcom/realtalk/he;->setMeasuredDimension(I I)V
+
+onMeasure-BB@0x64 : 
+	24      (00000064) return-void          
+

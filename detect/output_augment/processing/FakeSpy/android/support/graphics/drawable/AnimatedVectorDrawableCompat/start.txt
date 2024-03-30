@@ -1,0 +1,46 @@
+# Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->start()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:void
+
+start-BB@0x0 : [ start-BB@0x8 start-BB@0x18 ]
+	0       (00000000) iget-object          v4, v5, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable Landroid/graphics/drawable/Drawable;
+	1       (00000004) if-eqz               v4, +a
+
+start-BB@0x8 : [ start-BB@0x16 ]
+	2       (00000008) iget-object          v4, v5, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable Landroid/graphics/drawable/Drawable;
+	3       (0000000c) check-cast           v4, Landroid/graphics/drawable/AnimatedVectorDrawable;
+	4       (00000010) invoke-virtual       v4, Landroid/graphics/drawable/AnimatedVectorDrawable;->start()V
+
+start-BB@0x16 : 
+	5       (00000016) return-void          
+
+start-BB@0x18 : [ start-BB@0x24 start-BB@0x16 ]
+	6       (00000018) invoke-direct        v5, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->isStarted()Z
+	7       (0000001e) move-result          v4
+	8       (00000020) if-nez               v4, -5
+
+start-BB@0x24 : [ start-BB@0x36 ]
+	9       (00000024) iget-object          v4, v5, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	10      (00000028) iget-object          v1, v4, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mAnimators Ljava/util/ArrayList;
+	11      (0000002c) invoke-virtual       v1, Ljava/util/ArrayList;->size()I
+	12      (00000032) move-result          v3
+	13      (00000034) const/4              v2, 0
+
+start-BB@0x36 : [ start-BB@0x3a start-BB@0x52 ]
+	14      (00000036) if-ge                v2, v3, +e
+
+start-BB@0x3a : [ start-BB@0x36 ]
+	15      (0000003a) invoke-virtual       v1, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	16      (00000040) move-result-object   v0
+	17      (00000042) check-cast           v0, Landroid/animation/Animator;
+	18      (00000046) invoke-virtual       v0, Landroid/animation/Animator;->start()V
+	19      (0000004c) add-int/lit8         v2, v2, 1
+	20      (00000050) goto                 -d
+
+start-BB@0x52 : [ start-BB@0x16 ]
+	21      (00000052) invoke-virtual       v5, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->invalidateSelf()V
+	22      (00000058) goto                 -21
+

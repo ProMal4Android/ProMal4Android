@@ -1,0 +1,44 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->dispatchPrepareOptionsMenu(Landroid/view/Menu;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.view.Menu
+#
+# - return:boolean
+
+dispatchPrepareOptionsMenu-BB@0x0 : [ dispatchPrepareOptionsMenu-BB@0xa dispatchPrepareOptionsMenu-BB@0x44 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) iget-object          v3, v4, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	2       (00000006) if-eqz               v3, +1f
+
+dispatchPrepareOptionsMenu-BB@0xa : [ dispatchPrepareOptionsMenu-BB@0xc ]
+	3       (0000000a) const/4              v1, 0
+
+dispatchPrepareOptionsMenu-BB@0xc : [ dispatchPrepareOptionsMenu-BB@0x1c dispatchPrepareOptionsMenu-BB@0x44 ]
+	4       (0000000c) iget-object          v3, v4, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	5       (00000010) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	6       (00000016) move-result          v3
+	7       (00000018) if-ge                v1, v3, +16
+
+dispatchPrepareOptionsMenu-BB@0x1c : [ dispatchPrepareOptionsMenu-BB@0x30 dispatchPrepareOptionsMenu-BB@0x3e ]
+	8       (0000001c) iget-object          v3, v4, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	9       (00000020) invoke-virtual       v3, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	10      (00000026) move-result-object   v0
+	11      (00000028) check-cast           v0, Landroid/support/v4/app/Fragment;
+	12      (0000002c) if-eqz               v0, +9
+
+dispatchPrepareOptionsMenu-BB@0x30 : [ dispatchPrepareOptionsMenu-BB@0x3c dispatchPrepareOptionsMenu-BB@0x3e ]
+	13      (00000030) invoke-virtual       v0, v5, Landroid/support/v4/app/Fragment;->performPrepareOptionsMenu(Landroid/view/Menu;)Z
+	14      (00000036) move-result          v3
+	15      (00000038) if-eqz               v3, +3
+
+dispatchPrepareOptionsMenu-BB@0x3c : [ dispatchPrepareOptionsMenu-BB@0x3e ]
+	16      (0000003c) const/4              v2, 1
+
+dispatchPrepareOptionsMenu-BB@0x3e : [ dispatchPrepareOptionsMenu-BB@0xc ]
+	17      (0000003e) add-int/lit8         v1, v1, 1
+	18      (00000042) goto                 -1b
+
+dispatchPrepareOptionsMenu-BB@0x44 : 
+	19      (00000044) return               v2
+

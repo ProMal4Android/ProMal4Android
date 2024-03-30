@@ -1,0 +1,15 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$1;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21; Landroid/support/v4/media/session/MediaSessionCompat$Token;)V [access_flags=constructor]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:android.support.v4.media.MediaBrowserServiceCompat$MediaBrowserServiceImplApi21
+# - v2:android.support.v4.media.session.MediaSessionCompat$Token
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) iput-object          v1, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$1;->this$1 Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;
+	1       (00000004) iput-object          v2, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$1;->val$token Landroid/support/v4/media/session/MediaSessionCompat$Token;
+	2       (00000008) invoke-direct        v0, Ljava/lang/Object;-><init>()V
+	3       (0000000e) return-void          
+

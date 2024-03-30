@@ -1,0 +1,87 @@
+# Landroid/support/v4/widget/SwipeRefreshLayout;-><init>(Landroid/content/Context; Landroid/util/AttributeSet;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.content.Context
+# - v10:android.util.AttributeSet
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v7, 2
+	1       (00000002) const/4              v3, -1
+	2       (00000004) const/high16         v6, 16928 # [40.0]
+	3       (00000008) const/4              v5, 1
+	4       (0000000a) const/4              v4, 0
+	5       (0000000c) invoke-direct        v8, v9, v10, Landroid/view/ViewGroup;-><init>(Landroid/content/Context; Landroid/util/AttributeSet;)V
+	6       (00000012) iput-boolean         v4, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mRefreshing Z
+	7       (00000016) const/high16         v2, -16512 # [-1.0]
+	8       (0000001a) iput                 v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mTotalDragDistance F
+	9       (0000001e) new-array            v2, v7, [I
+	10      (00000022) iput-object          v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mParentScrollConsumed [I
+	11      (00000026) new-array            v2, v7, [I
+	12      (0000002a) iput-object          v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mParentOffsetInWindow [I
+	13      (0000002e) iput-boolean         v4, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mOriginalOffsetCalculated Z
+	14      (00000032) iput                 v3, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mActivePointerId I
+	15      (00000036) iput                 v3, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mCircleViewIndex I
+	16      (0000003a) new-instance         v2, Landroid/support/v4/widget/SwipeRefreshLayout$1;
+	17      (0000003e) invoke-direct        v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout$1;-><init>(Landroid/support/v4/widget/SwipeRefreshLayout;)V
+	18      (00000044) iput-object          v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mRefreshListener Landroid/view/animation/Animation$AnimationListener;
+	19      (00000048) new-instance         v2, Landroid/support/v4/widget/SwipeRefreshLayout$6;
+	20      (0000004c) invoke-direct        v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout$6;-><init>(Landroid/support/v4/widget/SwipeRefreshLayout;)V
+	21      (00000052) iput-object          v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mAnimateToCorrectPosition Landroid/view/animation/Animation;
+	22      (00000056) new-instance         v2, Landroid/support/v4/widget/SwipeRefreshLayout$7;
+	23      (0000005a) invoke-direct        v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout$7;-><init>(Landroid/support/v4/widget/SwipeRefreshLayout;)V
+	24      (00000060) iput-object          v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mAnimateToStartPosition Landroid/view/animation/Animation;
+	25      (00000064) invoke-static        v9, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+	26      (0000006a) move-result-object   v2
+	27      (0000006c) invoke-virtual       v2, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+	28      (00000072) move-result          v2
+	29      (00000074) iput                 v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mTouchSlop I
+	30      (00000078) invoke-virtual       v8, Landroid/support/v4/widget/SwipeRefreshLayout;->getResources()Landroid/content/res/Resources;
+	31      (0000007e) move-result-object   v2
+	32      (00000080) const                v3, 17694721 # [2.6081283711466433e-38]
+	33      (00000086) invoke-virtual       v2, v3, Landroid/content/res/Resources;->getInteger(I)I
+	34      (0000008c) move-result          v2
+	35      (0000008e) iput                 v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mMediumAnimationDuration I
+	36      (00000092) invoke-virtual       v8, v4, Landroid/support/v4/widget/SwipeRefreshLayout;->setWillNotDraw(Z)V
+	37      (00000098) new-instance         v2, Landroid/view/animation/DecelerateInterpolator;
+	38      (0000009c) const/high16         v3, 16384 # [2.0]
+	39      (000000a0) invoke-direct        v2, v3, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
+	40      (000000a6) iput-object          v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mDecelerateInterpolator Landroid/view/animation/DecelerateInterpolator;
+	41      (000000aa) sget-object          v2, Landroid/support/v4/widget/SwipeRefreshLayout;->LAYOUT_ATTRS [I
+	42      (000000ae) invoke-virtual       v9, v10, v2, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I)Landroid/content/res/TypedArray;
+	43      (000000b4) move-result-object   v0
+	44      (000000b6) invoke-virtual       v0, v4, v5, Landroid/content/res/TypedArray;->getBoolean(I Z)Z
+	45      (000000bc) move-result          v2
+	46      (000000be) invoke-virtual       v8, v2, Landroid/support/v4/widget/SwipeRefreshLayout;->setEnabled(Z)V
+	47      (000000c4) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+	48      (000000ca) invoke-virtual       v8, Landroid/support/v4/widget/SwipeRefreshLayout;->getResources()Landroid/content/res/Resources;
+	49      (000000d0) move-result-object   v2
+	50      (000000d2) invoke-virtual       v2, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	51      (000000d8) move-result-object   v1
+	52      (000000da) iget                 v2, v1, Landroid/util/DisplayMetrics;->density F
+	53      (000000de) mul-float/2addr      v2, v6
+	54      (000000e0) float-to-int         v2, v2
+	55      (000000e2) iput                 v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mCircleWidth I
+	56      (000000e6) iget                 v2, v1, Landroid/util/DisplayMetrics;->density F
+	57      (000000ea) mul-float/2addr      v2, v6
+	58      (000000ec) float-to-int         v2, v2
+	59      (000000ee) iput                 v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mCircleHeight I
+	60      (000000f2) invoke-direct        v8, Landroid/support/v4/widget/SwipeRefreshLayout;->createProgressView()V
+	61      (000000f8) invoke-static        v8, v5, Landroid/support/v4/view/ViewCompat;->setChildrenDrawingOrderEnabled(Landroid/view/ViewGroup; Z)V
+	62      (000000fe) const/high16         v2, 17024 # [64.0]
+	63      (00000102) iget                 v3, v1, Landroid/util/DisplayMetrics;->density F
+	64      (00000106) mul-float/2addr      v2, v3
+	65      (00000108) iput                 v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mSpinnerFinalOffset F
+	66      (0000010c) iget                 v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mSpinnerFinalOffset F
+	67      (00000110) iput                 v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mTotalDragDistance F
+	68      (00000114) new-instance         v2, Landroid/support/v4/view/NestedScrollingParentHelper;
+	69      (00000118) invoke-direct        v2, v8, Landroid/support/v4/view/NestedScrollingParentHelper;-><init>(Landroid/view/ViewGroup;)V
+	70      (0000011e) iput-object          v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mNestedScrollingParentHelper Landroid/support/v4/view/NestedScrollingParentHelper;
+	71      (00000122) new-instance         v2, Landroid/support/v4/view/NestedScrollingChildHelper;
+	72      (00000126) invoke-direct        v2, v8, Landroid/support/v4/view/NestedScrollingChildHelper;-><init>(Landroid/view/View;)V
+	73      (0000012c) iput-object          v2, v8, Landroid/support/v4/widget/SwipeRefreshLayout;->mNestedScrollingChildHelper Landroid/support/v4/view/NestedScrollingChildHelper;
+	74      (00000130) invoke-virtual       v8, v5, Landroid/support/v4/widget/SwipeRefreshLayout;->setNestedScrollingEnabled(Z)V
+	75      (00000136) return-void          
+

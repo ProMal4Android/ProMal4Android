@@ -1,0 +1,22 @@
+# Landroid/support/v7/view/menu/MenuItemImpl;->setActionView(I)Landroid/support/v4/internal/view/SupportMenuItem; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:int
+#
+# - return:android.support.v4.internal.view.SupportMenuItem
+
+setActionView-BB@0x0 : 
+	0       (00000000) iget-object          v2, v4, Landroid/support/v7/view/menu/MenuItemImpl;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	1       (00000004) invoke-virtual       v2, Landroid/support/v7/view/menu/MenuBuilder;->getContext()Landroid/content/Context;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) invoke-static        v0, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+	4       (00000012) move-result-object   v1
+	5       (00000014) new-instance         v2, Landroid/widget/LinearLayout;
+	6       (00000018) invoke-direct        v2, v0, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+	7       (0000001e) const/4              v3, 0
+	8       (00000020) invoke-virtual       v1, v5, v2, v3, Landroid/view/LayoutInflater;->inflate(I Landroid/view/ViewGroup; Z)Landroid/view/View;
+	9       (00000026) move-result-object   v2
+	10      (00000028) invoke-virtual       v4, v2, Landroid/support/v7/view/menu/MenuItemImpl;->setActionView(Landroid/view/View;)Landroid/support/v4/internal/view/SupportMenuItem;
+	11      (0000002e) return-object        v4
+

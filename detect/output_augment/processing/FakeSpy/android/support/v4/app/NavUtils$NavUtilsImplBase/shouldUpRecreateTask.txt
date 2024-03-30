@@ -1,0 +1,32 @@
+# Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->shouldUpRecreateTask(Landroid/app/Activity; Landroid/content/Intent;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.app.Activity
+# - v4:android.content.Intent
+#
+# - return:boolean
+
+shouldUpRecreateTask-BB@0x0 : [ shouldUpRecreateTask-BB@0x14 shouldUpRecreateTask-BB@0x28 ]
+	0       (00000000) invoke-virtual       v3, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+	1       (00000006) move-result-object   v1
+	2       (00000008) invoke-virtual       v1, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) if-eqz               v0, +c
+
+shouldUpRecreateTask-BB@0x14 : [ shouldUpRecreateTask-BB@0x24 shouldUpRecreateTask-BB@0x28 ]
+	5       (00000014) const-string         v1, 'android.intent.action.MAIN'
+	6       (00000018) invoke-virtual       v0, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	7       (0000001e) move-result          v1
+	8       (00000020) if-nez               v1, +4
+
+shouldUpRecreateTask-BB@0x24 : [ shouldUpRecreateTask-BB@0x26 ]
+	9       (00000024) const/4              v1, 1
+
+shouldUpRecreateTask-BB@0x26 : 
+	10      (00000026) return               v1
+
+shouldUpRecreateTask-BB@0x28 : [ shouldUpRecreateTask-BB@0x26 ]
+	11      (00000028) const/4              v1, 0
+	12      (0000002a) goto                 -2
+

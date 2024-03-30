@@ -1,0 +1,75 @@
+# Landroid/support/v7/util/MessageThreadUtil$1$1;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0x14 ]
+	0       (00000000) iget-object          v1, v4, Landroid/support/v7/util/MessageThreadUtil$1$1;->this$1 Landroid/support/v7/util/MessageThreadUtil$1;
+	1       (00000004) invoke-static        v1, Landroid/support/v7/util/MessageThreadUtil$1;->access$000(Landroid/support/v7/util/MessageThreadUtil$1;)Landroid/support/v7/util/MessageThreadUtil$MessageQueue;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) invoke-virtual       v1, Landroid/support/v7/util/MessageThreadUtil$MessageQueue;->next()Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;
+	4       (00000012) move-result-object   v0
+
+run-BB@0x14 : [ run-BB@0x18 run-BB@0xb8 ]
+	5       (00000014) if-eqz               v0, +52
+
+run-BB@0x18 : [ D:run-BB@0x22 1:run-BB@0x6c 2:run-BB@0x84 3:run-BB@0xa0 ]
+	6       (00000018) iget                 v1, v0, Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;->what I
+	7       (0000001c) packed-switch        v1, +50 (0xbc)
+
+run-BB@0x22 : [ run-BB@0x56 ]
+	8       (00000022) const-string         v1, 'ThreadUtil'
+	9       (00000026) new-instance         v2, Ljava/lang/StringBuilder;
+	10      (0000002a) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	11      (00000030) const-string         v3, 'Unsupported message, what='
+	12      (00000034) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (0000003a) move-result-object   v2
+	14      (0000003c) iget                 v3, v0, Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;->what I
+	15      (00000040) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	16      (00000046) move-result-object   v2
+	17      (00000048) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	18      (0000004e) move-result-object   v2
+	19      (00000050) invoke-static        v1, v2, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+
+run-BB@0x56 : [ run-BB@0x14 ]
+	20      (00000056) iget-object          v1, v4, Landroid/support/v7/util/MessageThreadUtil$1$1;->this$1 Landroid/support/v7/util/MessageThreadUtil$1;
+	21      (0000005a) invoke-static        v1, Landroid/support/v7/util/MessageThreadUtil$1;->access$000(Landroid/support/v7/util/MessageThreadUtil$1;)Landroid/support/v7/util/MessageThreadUtil$MessageQueue;
+	22      (00000060) move-result-object   v1
+	23      (00000062) invoke-virtual       v1, Landroid/support/v7/util/MessageThreadUtil$MessageQueue;->next()Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;
+	24      (00000068) move-result-object   v0
+	25      (0000006a) goto                 -2b
+
+run-BB@0x6c : [ run-BB@0x56 ]
+	26      (0000006c) iget-object          v1, v4, Landroid/support/v7/util/MessageThreadUtil$1$1;->this$1 Landroid/support/v7/util/MessageThreadUtil$1;
+	27      (00000070) iget-object          v1, v1, Landroid/support/v7/util/MessageThreadUtil$1;->val$callback Landroid/support/v7/util/ThreadUtil$MainThreadCallback;
+	28      (00000074) iget                 v2, v0, Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;->arg1 I
+	29      (00000078) iget                 v3, v0, Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;->arg2 I
+	30      (0000007c) invoke-interface     v1, v2, v3, Landroid/support/v7/util/ThreadUtil$MainThreadCallback;->updateItemCount(I I)V
+	31      (00000082) goto                 -16
+
+run-BB@0x84 : [ run-BB@0x56 ]
+	32      (00000084) iget-object          v1, v4, Landroid/support/v7/util/MessageThreadUtil$1$1;->this$1 Landroid/support/v7/util/MessageThreadUtil$1;
+	33      (00000088) iget-object          v2, v1, Landroid/support/v7/util/MessageThreadUtil$1;->val$callback Landroid/support/v7/util/ThreadUtil$MainThreadCallback;
+	34      (0000008c) iget                 v3, v0, Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;->arg1 I
+	35      (00000090) iget-object          v1, v0, Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;->data Ljava/lang/Object;
+	36      (00000094) check-cast           v1, Landroid/support/v7/util/TileList$Tile;
+	37      (00000098) invoke-interface     v2, v3, v1, Landroid/support/v7/util/ThreadUtil$MainThreadCallback;->addTile(I Landroid/support/v7/util/TileList$Tile;)V
+	38      (0000009e) goto                 -24
+
+run-BB@0xa0 : [ run-BB@0x56 ]
+	39      (000000a0) iget-object          v1, v4, Landroid/support/v7/util/MessageThreadUtil$1$1;->this$1 Landroid/support/v7/util/MessageThreadUtil$1;
+	40      (000000a4) iget-object          v1, v1, Landroid/support/v7/util/MessageThreadUtil$1;->val$callback Landroid/support/v7/util/ThreadUtil$MainThreadCallback;
+	41      (000000a8) iget                 v2, v0, Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;->arg1 I
+	42      (000000ac) iget                 v3, v0, Landroid/support/v7/util/MessageThreadUtil$SyncQueueItem;->arg2 I
+	43      (000000b0) invoke-interface     v1, v2, v3, Landroid/support/v7/util/ThreadUtil$MainThreadCallback;->removeTile(I I)V
+	44      (000000b6) goto                 -30
+
+run-BB@0xb8 : 
+	45      (000000b8) return-void          
+
+run-BB@0xba : 
+	46      (000000ba) nop                  
+	47      (000000bc) packed-switch-payload 1 2 3
+

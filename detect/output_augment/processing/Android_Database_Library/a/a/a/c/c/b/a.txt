@@ -1,0 +1,247 @@
+# La/a/a/c/c/b;->a(Lorg/xmlpull/v1/XmlPullParser; Landroid/util/AttributeSet; Landroid/view/Menu;)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v16
+# - v17:org.xmlpull.v1.XmlPullParser
+# - v18:android.util.AttributeSet
+# - v19:android.view.Menu
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x1e ]
+	0       (00000000) move-object/from16   v0, v16
+	1       (00000004) move-object/from16   v1, v18
+	2       (00000008) new-instance         v2, La/a/a/c/c/b$b;
+	3       (0000000c) move-object/from16   v3, v19
+	4       (00000010) invoke-direct        v2, v0, v3, La/a/a/c/c/b$b;-><init>(La/a/a/c/c/b; Landroid/view/Menu;)V
+	5       (00000016) invoke-interface/range v17, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+	6       (0000001c) move-result          v3
+
+a-BB@0x1e : [ a-BB@0x2a a-BB@0x76 ]
+	7       (0000001e) const/4              v4, 2
+	8       (00000020) const-string         v5, 'menu'
+	9       (00000024) const/4              v6, 1
+	10      (00000026) if-ne                v3, v4, +28
+
+a-BB@0x2a : [ a-BB@0x3e a-BB@0x48 ]
+	11      (0000002a) invoke-interface/range v17, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	12      (00000030) move-result-object   v3
+	13      (00000032) invoke-virtual       v3, v5, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	14      (00000038) move-result          v7
+	15      (0000003a) if-eqz               v7, +7
+
+a-BB@0x3e : [ a-BB@0x82 ]
+	16      (0000003e) invoke-interface/range v17, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	17      (00000044) move-result          v3
+	18      (00000046) goto                 +1e
+
+a-BB@0x48 : 
+	19      (00000048) new-instance         v1, Ljava/lang/RuntimeException;
+	20      (0000004c) new-instance         v2, Ljava/lang/StringBuilder;
+	21      (00000050) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	22      (00000056) const-string         v4, 'Expecting menu, got '
+	23      (0000005a) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (00000060) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (00000066) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	26      (0000006c) move-result-object   v2
+	27      (0000006e) invoke-direct        v1, v2, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	28      (00000074) throw                v1
+
+a-BB@0x76 : [ a-BB@0x82 a-BB@0x25a ]
+	29      (00000076) invoke-interface/range v17, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	30      (0000007c) move-result          v3
+	31      (0000007e) if-ne                v3, v6, +ee
+
+a-BB@0x82 : [ a-BB@0x8e ]
+	32      (00000082) const/4              v7, 0
+	33      (00000084) const/4              v8, 0
+	34      (00000086) move                 v9, v3
+	35      (00000088) move-object          v11, v7
+	36      (0000008a) const/4              v3, 0
+	37      (0000008c) const/4              v10, 0
+
+a-BB@0x8e : [ a-BB@0x92 a-BB@0x258 ]
+	38      (0000008e) if-nez               v3, +e5
+
+a-BB@0x92 : [ a-BB@0x96 a-BB@0x248 ]
+	39      (00000092) if-eq                v9, v6, +db
+
+a-BB@0x96 : [ a-BB@0xa2 a-BB@0x166 ]
+	40      (00000096) const-string         v12, 'item'
+	41      (0000009a) const-string         v13, 'group'
+	42      (0000009e) if-eq                v9, v4, +64
+
+a-BB@0xa2 : [ a-BB@0xa8 a-BB@0xac ]
+	43      (000000a2) const/4              v14, 3
+	44      (000000a4) if-eq                v9, v14, +4
+
+a-BB@0xa8 : [ a-BB@0x20e ]
+	45      (000000a8) goto/16              +b3
+
+a-BB@0xac : [ a-BB@0xb8 a-BB@0xd0 ]
+	46      (000000ac) invoke-interface/range v17, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	47      (000000b2) move-result-object   v9
+	48      (000000b4) if-eqz               v10, +e
+
+a-BB@0xb8 : [ a-BB@0xc4 a-BB@0xd0 ]
+	49      (000000b8) invoke-virtual       v9, v11, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	50      (000000be) move-result          v14
+	51      (000000c0) if-eqz               v14, +8
+
+a-BB@0xc4 : [ a-BB@0x23c ]
+	52      (000000c4) move-object/from16   v12, v17
+	53      (000000c8) move-object          v11, v7
+	54      (000000ca) const/4              v10, 0
+	55      (000000cc) goto/16              +b8
+
+a-BB@0xd0 : [ a-BB@0xdc a-BB@0xf8 ]
+	56      (000000d0) invoke-virtual       v9, v13, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	57      (000000d6) move-result          v13
+	58      (000000d8) if-eqz               v13, +10
+
+a-BB@0xdc : [ a-BB@0x20e ]
+	59      (000000dc) iput                 v8, v2, La/a/a/c/c/b$b;->b I
+	60      (000000e0) iput                 v8, v2, La/a/a/c/c/b$b;->c I
+	61      (000000e4) iput                 v8, v2, La/a/a/c/c/b$b;->d I
+	62      (000000e8) iput                 v8, v2, La/a/a/c/c/b$b;->e I
+	63      (000000ec) iput-boolean         v6, v2, La/a/a/c/c/b$b;->f Z
+	64      (000000f0) iput-boolean         v6, v2, La/a/a/c/c/b$b;->g Z
+	65      (000000f4) goto/16              +8d
+
+a-BB@0xf8 : [ a-BB@0x104 a-BB@0x152 ]
+	66      (000000f8) invoke-virtual       v9, v12, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	67      (000000fe) move-result          v12
+	68      (00000100) if-eqz               v12, +29
+
+a-BB@0x104 : [ a-BB@0x10c a-BB@0x20e ]
+	69      (00000104) iget-boolean         v9, v2, La/a/a/c/c/b$b;->h Z
+	70      (00000108) if-nez               v9, +83
+
+a-BB@0x10c : [ a-BB@0x114 a-BB@0x12a ]
+	71      (0000010c) iget-object          v9, v2, La/a/a/c/c/b$b;->y Landroid/support/v4/view/ActionProvider;
+	72      (00000110) if-eqz               v9, +d
+
+a-BB@0x114 : [ a-BB@0x120 a-BB@0x12a ]
+	73      (00000114) invoke-virtual       v9, Landroid/support/v4/view/ActionProvider;->hasSubMenu()Z
+	74      (0000011a) move-result          v9
+	75      (0000011c) if-eqz               v9, +7
+
+a-BB@0x120 : [ a-BB@0x20e ]
+	76      (00000120) invoke-virtual       v2, La/a/a/c/c/b$b;->a()Landroid/view/SubMenu;
+	77      (00000126) goto/16              +74
+
+a-BB@0x12a : [ a-BB@0x20e ]
+	78      (0000012a) iput-boolean         v6, v2, La/a/a/c/c/b$b;->h Z
+	79      (0000012e) iget-object          v9, v2, La/a/a/c/c/b$b;->a Landroid/view/Menu;
+	80      (00000132) iget                 v12, v2, La/a/a/c/c/b$b;->b I
+	81      (00000136) iget                 v13, v2, La/a/a/c/c/b$b;->i I
+	82      (0000013a) iget                 v14, v2, La/a/a/c/c/b$b;->j I
+	83      (0000013e) iget-object          v15, v2, La/a/a/c/c/b$b;->k Ljava/lang/CharSequence;
+	84      (00000142) invoke-interface     v9, v12, v13, v14, v15, Landroid/view/Menu;->add(I I I Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+	85      (00000148) move-result-object   v9
+	86      (0000014a) invoke-virtual       v2, v9, La/a/a/c/c/b$b;->a(Landroid/view/MenuItem;)V
+	87      (00000150) goto                 +5f
+
+a-BB@0x152 : [ a-BB@0x15e a-BB@0x20e ]
+	88      (00000152) invoke-virtual       v9, v5, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	89      (00000158) move-result          v9
+	90      (0000015a) if-eqz               v9, +5a
+
+a-BB@0x15e : [ a-BB@0x23c ]
+	91      (0000015e) move-object/from16   v12, v17
+	92      (00000162) const/4              v3, 1
+	93      (00000164) goto                 +6c
+
+a-BB@0x166 : [ a-BB@0x16a a-BB@0x16c ]
+	94      (00000166) if-eqz               v10, +3
+
+a-BB@0x16a : [ a-BB@0x20e ]
+	95      (0000016a) goto                 +52
+
+a-BB@0x16c : [ a-BB@0x180 a-BB@0x1fc ]
+	96      (0000016c) invoke-interface/range v17, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	97      (00000172) move-result-object   v9
+	98      (00000174) invoke-virtual       v9, v13, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	99      (0000017a) move-result          v13
+	100     (0000017c) if-eqz               v13, +40
+
+a-BB@0x180 : [ a-BB@0x20e ]
+	101     (00000180) iget-object          v9, v2, La/a/a/c/c/b$b;->z La/a/a/c/c/b;
+	102     (00000184) iget-object          v9, v9, La/a/a/c/c/b;->e Landroid/content/Context;
+	103     (00000188) sget-object          v12, La/a/a/b/i;->MenuGroup [I
+	104     (0000018c) invoke-virtual       v9, v1, v12, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I)Landroid/content/res/TypedArray;
+	105     (00000192) move-result-object   v9
+	106     (00000194) sget                 v12, La/a/a/b/i;->MenuGroup_android_id I
+	107     (00000198) invoke-virtual       v9, v12, v8, Landroid/content/res/TypedArray;->getResourceId(I I)I
+	108     (0000019e) move-result          v12
+	109     (000001a0) iput                 v12, v2, La/a/a/c/c/b$b;->b I
+	110     (000001a4) sget                 v12, La/a/a/b/i;->MenuGroup_android_menuCategory I
+	111     (000001a8) invoke-virtual       v9, v12, v8, Landroid/content/res/TypedArray;->getInt(I I)I
+	112     (000001ae) move-result          v12
+	113     (000001b0) iput                 v12, v2, La/a/a/c/c/b$b;->c I
+	114     (000001b4) sget                 v12, La/a/a/b/i;->MenuGroup_android_orderInCategory I
+	115     (000001b8) invoke-virtual       v9, v12, v8, Landroid/content/res/TypedArray;->getInt(I I)I
+	116     (000001be) move-result          v12
+	117     (000001c0) iput                 v12, v2, La/a/a/c/c/b$b;->d I
+	118     (000001c4) sget                 v12, La/a/a/b/i;->MenuGroup_android_checkableBehavior I
+	119     (000001c8) invoke-virtual       v9, v12, v8, Landroid/content/res/TypedArray;->getInt(I I)I
+	120     (000001ce) move-result          v12
+	121     (000001d0) iput                 v12, v2, La/a/a/c/c/b$b;->e I
+	122     (000001d4) sget                 v12, La/a/a/b/i;->MenuGroup_android_visible I
+	123     (000001d8) invoke-virtual       v9, v12, v6, Landroid/content/res/TypedArray;->getBoolean(I Z)Z
+	124     (000001de) move-result          v12
+	125     (000001e0) iput-boolean         v12, v2, La/a/a/c/c/b$b;->f Z
+	126     (000001e4) sget                 v12, La/a/a/b/i;->MenuGroup_android_enabled I
+	127     (000001e8) invoke-virtual       v9, v12, v6, Landroid/content/res/TypedArray;->getBoolean(I Z)Z
+	128     (000001ee) move-result          v12
+	129     (000001f0) iput-boolean         v12, v2, La/a/a/c/c/b$b;->g Z
+	130     (000001f4) invoke-virtual       v9, Landroid/content/res/TypedArray;->recycle()V
+	131     (000001fa) goto                 +a
+
+a-BB@0x1fc : [ a-BB@0x208 a-BB@0x214 ]
+	132     (000001fc) invoke-virtual       v9, v12, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	133     (00000202) move-result          v12
+	134     (00000204) if-eqz               v12, +8
+
+a-BB@0x208 : [ a-BB@0x20e ]
+	135     (00000208) invoke-virtual       v2, v1, La/a/a/c/c/b$b;->a(Landroid/util/AttributeSet;)V
+
+a-BB@0x20e : [ a-BB@0x23c ]
+	136     (0000020e) move-object/from16   v12, v17
+	137     (00000212) goto                 +15
+
+a-BB@0x214 : [ a-BB@0x220 a-BB@0x234 ]
+	138     (00000214) invoke-virtual       v9, v5, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	139     (0000021a) move-result          v12
+	140     (0000021c) if-eqz               v12, +c
+
+a-BB@0x220 : [ a-BB@0x23c ]
+	141     (00000220) invoke-virtual       v2, La/a/a/c/c/b$b;->a()Landroid/view/SubMenu;
+	142     (00000226) move-result-object   v9
+	143     (00000228) move-object/from16   v12, v17
+	144     (0000022c) invoke-virtual       v0, v12, v1, v9, La/a/a/c/c/b;->a(Lorg/xmlpull/v1/XmlPullParser; Landroid/util/AttributeSet; Landroid/view/Menu;)V
+	145     (00000232) goto                 +5
+
+a-BB@0x234 : [ a-BB@0x23c ]
+	146     (00000234) move-object/from16   v12, v17
+	147     (00000238) move-object          v11, v9
+	148     (0000023a) const/4              v10, 1
+
+a-BB@0x23c : [ a-BB@0x8e ]
+	149     (0000023c) invoke-interface/range v17, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	150     (00000242) move-result          v9
+	151     (00000244) goto/16              -db
+
+a-BB@0x248 : 
+	152     (00000248) new-instance         v1, Ljava/lang/RuntimeException;
+	153     (0000024c) const-string         v2, 'Unexpected end of document'
+	154     (00000250) invoke-direct        v1, v2, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	155     (00000256) throw                v1
+
+a-BB@0x258 : 
+	156     (00000258) return-void          
+
+a-BB@0x25a : [ a-BB@0x1e ]
+	157     (0000025a) move-object/from16   v12, v17
+	158     (0000025e) goto/16              -120
+

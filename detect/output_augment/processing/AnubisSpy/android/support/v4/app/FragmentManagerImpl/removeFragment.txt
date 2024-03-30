@@ -1,0 +1,95 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->removeFragment(Landroid/support/v4/app/Fragment; I I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.support.v4.app.Fragment
+# - v9:int
+# - v10:int
+#
+# - return:void
+
+removeFragment-BB@0x0 : [ removeFragment-BB@0xc removeFragment-BB@0x54 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) const/4              v5, 0
+	2       (00000004) sget-boolean         v1, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG Z
+	3       (00000008) if-eqz               v1, +26
+
+removeFragment-BB@0xc : [ removeFragment-BB@0x54 ]
+	4       (0000000c) const-string         v1, 'FragmentManager'
+	5       (00000010) new-instance         v2, Ljava/lang/StringBuilder;
+	6       (00000014) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	7       (0000001a) const-string         v3, 'remove: '
+	8       (0000001e) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000024) move-result-object   v2
+	10      (00000026) invoke-virtual       v2, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	11      (0000002c) move-result-object   v2
+	12      (0000002e) const-string         v3, ' nesting='
+	13      (00000032) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (00000038) move-result-object   v2
+	15      (0000003a) iget                 v3, v8, Landroid/support/v4/app/Fragment;->mBackStackNesting I
+	16      (0000003e) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	17      (00000044) move-result-object   v2
+	18      (00000046) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	19      (0000004c) move-result-object   v2
+	20      (0000004e) invoke-static        v1, v2, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+removeFragment-BB@0x54 : [ removeFragment-BB@0x60 removeFragment-BB@0xb2 ]
+	21      (00000054) invoke-virtual       v8, Landroid/support/v4/app/Fragment;->isInBackStack()Z
+	22      (0000005a) move-result          v1
+	23      (0000005c) if-nez               v1, +2b
+
+removeFragment-BB@0x60 : [ removeFragment-BB@0x62 ]
+	24      (00000060) move                 v6, v0
+
+removeFragment-BB@0x62 : [ removeFragment-BB@0x6a removeFragment-BB@0x6e ]
+	25      (00000062) iget-boolean         v1, v8, Landroid/support/v4/app/Fragment;->mDetached Z
+	26      (00000066) if-eqz               v1, +4
+
+removeFragment-BB@0x6a : [ removeFragment-BB@0x6e removeFragment-BB@0xb0 ]
+	27      (0000006a) if-eqz               v6, +23
+
+removeFragment-BB@0x6e : [ removeFragment-BB@0x76 removeFragment-BB@0x80 ]
+	28      (0000006e) iget-object          v1, v7, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	29      (00000072) if-eqz               v1, +7
+
+removeFragment-BB@0x76 : [ removeFragment-BB@0x80 ]
+	30      (00000076) iget-object          v1, v7, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	31      (0000007a) invoke-virtual       v1, v8, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+removeFragment-BB@0x80 : [ removeFragment-BB@0x88 removeFragment-BB@0x94 ]
+	32      (00000080) iget-boolean         v1, v8, Landroid/support/v4/app/Fragment;->mHasMenu Z
+	33      (00000084) if-eqz               v1, +8
+
+removeFragment-BB@0x88 : [ removeFragment-BB@0x90 removeFragment-BB@0x94 ]
+	34      (00000088) iget-boolean         v1, v8, Landroid/support/v4/app/Fragment;->mMenuVisible Z
+	35      (0000008c) if-eqz               v1, +4
+
+removeFragment-BB@0x90 : [ removeFragment-BB@0x94 ]
+	36      (00000090) iput-boolean         v0, v7, Landroid/support/v4/app/FragmentManagerImpl;->mNeedMenuInvalidate Z
+
+removeFragment-BB@0x94 : [ removeFragment-BB@0xa0 removeFragment-BB@0xb6 ]
+	37      (00000094) iput-boolean         v5, v8, Landroid/support/v4/app/Fragment;->mAdded Z
+	38      (00000098) iput-boolean         v0, v8, Landroid/support/v4/app/Fragment;->mRemoving Z
+	39      (0000009c) if-eqz               v6, +d
+
+removeFragment-BB@0xa0 : [ removeFragment-BB@0xa2 ]
+	40      (000000a0) move                 v2, v5
+
+removeFragment-BB@0xa2 : [ removeFragment-BB@0xb0 ]
+	41      (000000a2) move-object          v0, v7
+	42      (000000a4) move-object          v1, v8
+	43      (000000a6) move                 v3, v9
+	44      (000000a8) move                 v4, v10
+	45      (000000aa) invoke-virtual/range v0 ... v5, Landroid/support/v4/app/FragmentManagerImpl;->moveToState(Landroid/support/v4/app/Fragment; I I I Z)V
+
+removeFragment-BB@0xb0 : 
+	46      (000000b0) return-void          
+
+removeFragment-BB@0xb2 : [ removeFragment-BB@0x62 ]
+	47      (000000b2) move                 v6, v5
+	48      (000000b4) goto                 -29
+
+removeFragment-BB@0xb6 : [ removeFragment-BB@0xa2 ]
+	49      (000000b6) move                 v2, v0
+	50      (000000b8) goto                 -b
+

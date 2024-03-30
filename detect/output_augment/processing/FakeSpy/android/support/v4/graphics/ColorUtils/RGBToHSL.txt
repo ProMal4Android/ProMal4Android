@@ -1,0 +1,114 @@
+# Landroid/support/v4/graphics/ColorUtils;->RGBToHSL(I I I [F)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:int
+# - v13:int
+# - v14:int
+# - v15:float[]
+#
+# - return:void
+
+RGBToHSL-BB@0x0 : [ RGBToHSL-BB@0x56 RGBToHSL-BB@0xb6 ]
+	0       (00000000) int-to-float         v9, v12
+	1       (00000002) const/high16         v10, 17279 # [255.0]
+	2       (00000006) div-float            v7, v9, v10
+	3       (0000000a) int-to-float         v9, v13
+	4       (0000000c) const/high16         v10, 17279 # [255.0]
+	5       (00000010) div-float            v2, v9, v10
+	6       (00000014) int-to-float         v9, v14
+	7       (00000016) const/high16         v10, 17279 # [255.0]
+	8       (0000001a) div-float            v0, v9, v10
+	9       (0000001e) invoke-static        v2, v0, Ljava/lang/Math;->max(F F)F
+	10      (00000024) move-result          v9
+	11      (00000026) invoke-static        v7, v9, Ljava/lang/Math;->max(F F)F
+	12      (0000002c) move-result          v5
+	13      (0000002e) invoke-static        v2, v0, Ljava/lang/Math;->min(F F)F
+	14      (00000034) move-result          v9
+	15      (00000036) invoke-static        v7, v9, Ljava/lang/Math;->min(F F)F
+	16      (0000003c) move-result          v6
+	17      (0000003e) sub-float            v1, v5, v6
+	18      (00000042) add-float            v9, v5, v6
+	19      (00000046) const/high16         v10, 16384 # [2.0]
+	20      (0000004a) div-float            v4, v9, v10
+	21      (0000004e) cmpl-float           v9, v5, v6
+	22      (00000052) if-nez               v9, +32
+
+RGBToHSL-BB@0x56 : [ RGBToHSL-BB@0x5a ]
+	23      (00000056) const/4              v8, 0
+	24      (00000058) move                 v3, v8
+
+RGBToHSL-BB@0x5a : [ RGBToHSL-BB@0x72 RGBToHSL-BB@0x78 ]
+	25      (0000005a) const/high16         v9, 17008 # [60.0]
+	26      (0000005e) mul-float/2addr      v9, v3
+	27      (00000060) const/high16         v10, 17332 # [360.0]
+	28      (00000064) rem-float            v3, v9, v10
+	29      (00000068) const/4              v9, 0
+	30      (0000006a) cmpg-float           v9, v3, v9
+	31      (0000006e) if-gez               v9, +5
+
+RGBToHSL-BB@0x72 : [ RGBToHSL-BB@0x78 ]
+	32      (00000072) const/high16         v9, 17332 # [360.0]
+	33      (00000076) add-float/2addr      v3, v9
+
+RGBToHSL-BB@0x78 : 
+	34      (00000078) const/4              v9, 0
+	35      (0000007a) const/4              v10, 0
+	36      (0000007c) const/high16         v11, 17332 # [360.0]
+	37      (00000080) invoke-static        v3, v10, v11, Landroid/support/v4/graphics/ColorUtils;->constrain(F F F)F
+	38      (00000086) move-result          v10
+	39      (00000088) aput                 v10, v15, v9
+	40      (0000008c) const/4              v9, 1
+	41      (0000008e) const/4              v10, 0
+	42      (00000090) const/high16         v11, 16256 # [1.0]
+	43      (00000094) invoke-static        v8, v10, v11, Landroid/support/v4/graphics/ColorUtils;->constrain(F F F)F
+	44      (0000009a) move-result          v10
+	45      (0000009c) aput                 v10, v15, v9
+	46      (000000a0) const/4              v9, 2
+	47      (000000a2) const/4              v10, 0
+	48      (000000a4) const/high16         v11, 16256 # [1.0]
+	49      (000000a8) invoke-static        v4, v10, v11, Landroid/support/v4/graphics/ColorUtils;->constrain(F F F)F
+	50      (000000ae) move-result          v10
+	51      (000000b0) aput                 v10, v15, v9
+	52      (000000b4) return-void          
+
+RGBToHSL-BB@0xb6 : [ RGBToHSL-BB@0xbe RGBToHSL-BB@0xec ]
+	53      (000000b6) cmpl-float           v9, v5, v7
+	54      (000000ba) if-nez               v9, +19
+
+RGBToHSL-BB@0xbe : [ RGBToHSL-BB@0xcc ]
+	55      (000000be) sub-float            v9, v2, v0
+	56      (000000c2) div-float/2addr      v9, v1
+	57      (000000c4) const/high16         v10, 16576 # [6.0]
+	58      (000000c8) rem-float            v3, v9, v10
+
+RGBToHSL-BB@0xcc : [ RGBToHSL-BB@0x5a ]
+	59      (000000cc) const/high16         v9, 16256 # [1.0]
+	60      (000000d0) const/high16         v10, 16384 # [2.0]
+	61      (000000d4) mul-float/2addr      v10, v4
+	62      (000000d6) const/high16         v11, 16256 # [1.0]
+	63      (000000da) sub-float/2addr      v10, v11
+	64      (000000dc) invoke-static        v10, Ljava/lang/Math;->abs(F)F
+	65      (000000e2) move-result          v10
+	66      (000000e4) sub-float/2addr      v9, v10
+	67      (000000e6) div-float            v8, v1, v9
+	68      (000000ea) goto                 -48
+
+RGBToHSL-BB@0xec : [ RGBToHSL-BB@0xf4 RGBToHSL-BB@0x104 ]
+	69      (000000ec) cmpl-float           v9, v5, v2
+	70      (000000f0) if-nez               v9, +a
+
+RGBToHSL-BB@0xf4 : [ RGBToHSL-BB@0xcc ]
+	71      (000000f4) sub-float            v9, v0, v7
+	72      (000000f8) div-float/2addr      v9, v1
+	73      (000000fa) const/high16         v10, 16384 # [2.0]
+	74      (000000fe) add-float            v3, v9, v10
+	75      (00000102) goto                 -1b
+
+RGBToHSL-BB@0x104 : [ RGBToHSL-BB@0xcc ]
+	76      (00000104) sub-float            v9, v7, v2
+	77      (00000108) div-float/2addr      v9, v1
+	78      (0000010a) const/high16         v10, 16512 # [4.0]
+	79      (0000010e) add-float            v3, v9, v10
+	80      (00000112) goto                 -23
+

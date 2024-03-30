@@ -1,0 +1,48 @@
+# Landroid/support/v4/media/MediaMetadataCompat;->getRating(Ljava/lang/String;)Landroid/support/v4/media/RatingCompat; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:java.lang.String
+#
+# - return:android.support.v4.media.RatingCompat
+
+getRating-BB@0x0 : [ getRating-BB@0x2 ]
+	0       (00000000) const/4              v2, 0
+
+getRating-BB@0x2 : [ getRating-BB@0xe getRating-BB@0x24 ]
+	1       (00000002) sget                 v3, Landroid/os/Build$VERSION;->SDK_INT I
+	2       (00000006) const/16             v4, 21
+	3       (0000000a) if-lt                v3, v4, +d
+	2:37
+	(Ljava/lang/Exception; -> 3a getRating-BB@0x3a)
+
+getRating-BB@0xe : [ getRating-BB@0x22 ]
+	4       (0000000e) iget-object          v3, v5, Landroid/support/v4/media/MediaMetadataCompat;->mBundle Landroid/os/Bundle;
+	5       (00000012) invoke-virtual       v3, v6, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+	6       (00000018) move-result-object   v3
+	7       (0000001a) invoke-static        v3, Landroid/support/v4/media/RatingCompat;->fromRating(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
+	8       (00000020) move-result-object   v2
+	2:37
+	(Ljava/lang/Exception; -> 3a getRating-BB@0x3a)
+
+getRating-BB@0x22 : 
+	9       (00000022) return-object        v2
+	2:37
+	(Ljava/lang/Exception; -> 3a getRating-BB@0x3a)
+
+getRating-BB@0x24 : [ getRating-BB@0x22 ]
+	10      (00000024) iget-object          v3, v5, Landroid/support/v4/media/MediaMetadataCompat;->mBundle Landroid/os/Bundle;
+	11      (00000028) invoke-virtual       v3, v6, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+	12      (0000002e) move-result-object   v3
+	13      (00000030) move-object          v0, v3
+	14      (00000032) check-cast           v0, Landroid/support/v4/media/RatingCompat;
+	15      (00000036) move-object          v2, v0
+	16      (00000038) goto                 -b
+
+getRating-BB@0x3a : [ getRating-BB@0x22 ]
+	17      (0000003a) move-exception       v1
+	18      (0000003c) const-string         v3, 'MediaMetadata'
+	19      (00000040) const-string         v4, 'Failed to retrieve a key as Rating.'
+	20      (00000044) invoke-static        v3, v4, v1, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	21      (0000004a) goto                 -14
+

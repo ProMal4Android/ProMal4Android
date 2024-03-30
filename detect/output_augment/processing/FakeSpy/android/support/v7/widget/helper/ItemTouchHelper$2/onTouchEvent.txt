@@ -1,0 +1,137 @@
+# Landroid/support/v7/widget/helper/ItemTouchHelper$2;->onTouchEvent(Landroid/support/v7/widget/RecyclerView; Landroid/view/MotionEvent;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.support.v7.widget.RecyclerView
+# - v11:android.view.MotionEvent
+#
+# - return:void
+
+onTouchEvent-BB@0x0 : [ onTouchEvent-BB@0x26 onTouchEvent-BB@0x38 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) const/4              v8, -1
+	2       (00000004) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	3       (00000008) invoke-static        v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$400(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v4/view/GestureDetectorCompat;
+	4       (0000000e) move-result-object   v6
+	5       (00000010) invoke-virtual       v6, v11, Landroid/support/v4/view/GestureDetectorCompat;->onTouchEvent(Landroid/view/MotionEvent;)Z
+	6       (00000016) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	7       (0000001a) invoke-static        v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$1100(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/view/VelocityTracker;
+	8       (00000020) move-result-object   v6
+	9       (00000022) if-eqz               v6, +b
+
+onTouchEvent-BB@0x26 : [ onTouchEvent-BB@0x38 ]
+	10      (00000026) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	11      (0000002a) invoke-static        v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$1100(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/view/VelocityTracker;
+	12      (00000030) move-result-object   v6
+	13      (00000032) invoke-virtual       v6, v11, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+
+onTouchEvent-BB@0x38 : [ onTouchEvent-BB@0x44 onTouchEvent-BB@0x46 ]
+	14      (00000038) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	15      (0000003c) iget                 v6, v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->mActivePointerId I
+	16      (00000040) if-ne                v6, v8, +3
+
+onTouchEvent-BB@0x44 : 
+	17      (00000044) return-void          
+
+onTouchEvent-BB@0x46 : [ onTouchEvent-BB@0x62 onTouchEvent-BB@0x6c ]
+	18      (00000046) invoke-static        v11, Landroid/support/v4/view/MotionEventCompat;->getActionMasked(Landroid/view/MotionEvent;)I
+	19      (0000004c) move-result          v0
+	20      (0000004e) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	21      (00000052) iget                 v6, v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->mActivePointerId I
+	22      (00000056) invoke-static        v11, v6, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent; I)I
+	23      (0000005c) move-result          v1
+	24      (0000005e) if-ltz               v1, +7
+
+onTouchEvent-BB@0x62 : [ onTouchEvent-BB@0x6c ]
+	25      (00000062) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	26      (00000066) invoke-static        v6, v0, v11, v1, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$1000(Landroid/support/v7/widget/helper/ItemTouchHelper; I Landroid/view/MotionEvent; I)Z
+
+onTouchEvent-BB@0x6c : [ onTouchEvent-BB@0x78 onTouchEvent-BB@0x44 ]
+	27      (0000006c) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	28      (00000070) iget-object          v5, v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSelected Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	29      (00000074) if-eqz               v5, -18
+
+onTouchEvent-BB@0x78 : [ D:onTouchEvent-BB@0x7e 1:onTouchEvent-BB@0x80 2:onTouchEvent-BB@0x96 3:onTouchEvent-BB@0xfa 4:onTouchEvent-BB@0x7e 5:onTouchEvent-BB@0x7e 6:onTouchEvent-BB@0x11e ]
+	30      (00000078) packed-switch        v0, +78 (0x168)
+
+onTouchEvent-BB@0x7e : [ onTouchEvent-BB@0x44 ]
+	31      (0000007e) goto                 -1d
+
+onTouchEvent-BB@0x80 : [ onTouchEvent-BB@0x44 ]
+	32      (00000080) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	33      (00000084) const/4              v7, 0
+	34      (00000086) invoke-static        v6, v7, v2, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$800(Landroid/support/v7/widget/helper/ItemTouchHelper; Landroid/support/v7/widget/RecyclerView$ViewHolder; I)V
+	35      (0000008c) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	36      (00000090) iput                 v8, v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->mActivePointerId I
+	37      (00000094) goto                 -28
+
+onTouchEvent-BB@0x96 : [ onTouchEvent-BB@0x9a onTouchEvent-BB@0x44 ]
+	38      (00000096) if-ltz               v1, -29
+
+onTouchEvent-BB@0x9a : [ onTouchEvent-BB@0x44 ]
+	39      (0000009a) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	40      (0000009e) iget-object          v7, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	41      (000000a2) iget                 v7, v7, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSelectedFlags I
+	42      (000000a6) invoke-static        v6, v11, v7, v1, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$900(Landroid/support/v7/widget/helper/ItemTouchHelper; Landroid/view/MotionEvent; I I)V
+	43      (000000ac) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	44      (000000b0) invoke-static        v6, v5, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$100(Landroid/support/v7/widget/helper/ItemTouchHelper; Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	45      (000000b6) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	46      (000000ba) invoke-static        v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$300(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v7/widget/RecyclerView;
+	47      (000000c0) move-result-object   v6
+	48      (000000c2) iget-object          v7, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	49      (000000c6) invoke-static        v7, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$200(Landroid/support/v7/widget/helper/ItemTouchHelper;)Ljava/lang/Runnable;
+	50      (000000cc) move-result-object   v7
+	51      (000000ce) invoke-virtual       v6, v7, Landroid/support/v7/widget/RecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
+	52      (000000d4) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	53      (000000d8) invoke-static        v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$200(Landroid/support/v7/widget/helper/ItemTouchHelper;)Ljava/lang/Runnable;
+	54      (000000de) move-result-object   v6
+	55      (000000e0) invoke-interface     v6, Ljava/lang/Runnable;->run()V
+	56      (000000e6) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	57      (000000ea) invoke-static        v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$300(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v7/widget/RecyclerView;
+	58      (000000f0) move-result-object   v6
+	59      (000000f2) invoke-virtual       v6, Landroid/support/v7/widget/RecyclerView;->invalidate()V
+	60      (000000f8) goto                 -5a
+
+onTouchEvent-BB@0xfa : [ onTouchEvent-BB@0x10a onTouchEvent-BB@0x80 ]
+	61      (000000fa) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	62      (000000fe) invoke-static        v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$1100(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/view/VelocityTracker;
+	63      (00000104) move-result-object   v6
+	64      (00000106) if-eqz               v6, -43
+
+onTouchEvent-BB@0x10a : [ onTouchEvent-BB@0x80 ]
+	65      (0000010a) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	66      (0000010e) invoke-static        v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$1100(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/view/VelocityTracker;
+	67      (00000114) move-result-object   v6
+	68      (00000116) invoke-virtual       v6, Landroid/view/VelocityTracker;->clear()V
+	69      (0000011c) goto                 -4e
+
+onTouchEvent-BB@0x11e : [ onTouchEvent-BB@0x13a onTouchEvent-BB@0x44 ]
+	70      (0000011e) invoke-static        v11, Landroid/support/v4/view/MotionEventCompat;->getActionIndex(Landroid/view/MotionEvent;)I
+	71      (00000124) move-result          v4
+	72      (00000126) invoke-static        v11, v4, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent; I)I
+	73      (0000012c) move-result          v3
+	74      (0000012e) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	75      (00000132) iget                 v6, v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->mActivePointerId I
+	76      (00000136) if-ne                v3, v6, -79
+
+onTouchEvent-BB@0x13a : [ onTouchEvent-BB@0x13e onTouchEvent-BB@0x140 ]
+	77      (0000013a) if-nez               v4, +3
+
+onTouchEvent-BB@0x13e : [ onTouchEvent-BB@0x140 ]
+	78      (0000013e) const/4              v2, 1
+
+onTouchEvent-BB@0x140 : [ onTouchEvent-BB@0x44 ]
+	79      (00000140) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	80      (00000144) invoke-static        v11, v2, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent; I)I
+	81      (0000014a) move-result          v7
+	82      (0000014c) iput                 v7, v6, Landroid/support/v7/widget/helper/ItemTouchHelper;->mActivePointerId I
+	83      (00000150) iget-object          v6, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	84      (00000154) iget-object          v7, v9, Landroid/support/v7/widget/helper/ItemTouchHelper$2;->this$0 Landroid/support/v7/widget/helper/ItemTouchHelper;
+	85      (00000158) iget                 v7, v7, Landroid/support/v7/widget/helper/ItemTouchHelper;->mSelectedFlags I
+	86      (0000015c) invoke-static        v6, v11, v7, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->access$900(Landroid/support/v7/widget/helper/ItemTouchHelper; Landroid/view/MotionEvent; I I)V
+	87      (00000162) goto/16              -8f
+
+onTouchEvent-BB@0x166 : 
+	88      (00000166) nop                  
+	89      (00000168) packed-switch-payload 1 2 3 4 5 6
+

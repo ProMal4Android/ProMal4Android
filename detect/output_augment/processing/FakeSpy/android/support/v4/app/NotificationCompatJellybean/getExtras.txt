@@ -1,0 +1,137 @@
+# Landroid/support/v4/app/NotificationCompatJellybean;->getExtras(Landroid/app/Notification;)Landroid/os/Bundle; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.app.Notification
+#
+# - return:android.os.Bundle
+
+getExtras-BB@0x0 : [ getExtras-BB@0x8 ]
+	0       (00000000) const/4              v3, 0
+	1       (00000002) sget-object          v4, Landroid/support/v4/app/NotificationCompatJellybean;->sExtrasLock Ljava/lang/Object;
+	2       (00000006) monitor-enter        v4
+
+getExtras-BB@0x8 : [ getExtras-BB@0x10 getExtras-BB@0x16 ]
+	3       (00000008) sget-boolean         v5, Landroid/support/v4/app/NotificationCompatJellybean;->sExtrasFieldAccessFailed Z
+	4       (0000000c) if-eqz               v5, +5
+	8:11
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+
+getExtras-BB@0x10 : [ getExtras-BB@0x14 ]
+	5       (00000010) monitor-exit         v4
+	6       (00000012) move-object          v1, v3
+
+getExtras-BB@0x14 : 
+	7       (00000014) return-object        v1
+
+getExtras-BB@0x16 : [ getExtras-BB@0x1e getExtras-BB@0x6c ]
+	8       (00000016) sget-object          v5, Landroid/support/v4/app/NotificationCompatJellybean;->sExtrasField Ljava/lang/reflect/Field;
+	9       (0000001a) if-nez               v5, +29
+	16:59
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+	(Ljava/lang/IllegalAccessException; -> 9e getExtras-BB@0x9e)
+	(Ljava/lang/NoSuchFieldException; -> ba getExtras-BB@0xba)
+
+getExtras-BB@0x1e : [ getExtras-BB@0x46 getExtras-BB@0x60 ]
+	10      (0000001e) const-class          v5, Landroid/app/Notification;
+	11      (00000022) const-string         v6, 'extras'
+	12      (00000026) invoke-virtual       v5, v6, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+	13      (0000002c) move-result-object   v2
+	14      (0000002e) const-class          v5, Landroid/os/Bundle;
+	15      (00000032) invoke-virtual       v2, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
+	16      (00000038) move-result-object   v6
+	17      (0000003a) invoke-virtual       v5, v6, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+	18      (00000040) move-result          v5
+	19      (00000042) if-nez               v5, +f
+	16:59
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+	(Ljava/lang/IllegalAccessException; -> 9e getExtras-BB@0x9e)
+	(Ljava/lang/NoSuchFieldException; -> ba getExtras-BB@0xba)
+
+getExtras-BB@0x46 : [ getExtras-BB@0x5a ]
+	20      (00000046) const-string         v5, 'NotificationCompat'
+	21      (0000004a) const-string         v6, 'Notification.extras field is not of type Bundle'
+	22      (0000004e) invoke-static        v5, v6, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	23      (00000054) const/4              v5, 1
+	24      (00000056) sput-boolean         v5, Landroid/support/v4/app/NotificationCompatJellybean;->sExtrasFieldAccessFailed Z
+	16:59
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+	(Ljava/lang/IllegalAccessException; -> 9e getExtras-BB@0x9e)
+	(Ljava/lang/NoSuchFieldException; -> ba getExtras-BB@0xba)
+
+getExtras-BB@0x5a : [ getExtras-BB@0x14 ]
+	25      (0000005a) monitor-exit         v4
+	26      (0000005c) move-object          v1, v3
+	27      (0000005e) goto                 -25
+	5a:5b
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+
+getExtras-BB@0x60 : [ getExtras-BB@0x62 ]
+	28      (00000060) const/4              v5, 1
+
+getExtras-BB@0x62 : [ getExtras-BB@0x6c ]
+	29      (00000062) invoke-virtual       v2, v5, Ljava/lang/reflect/Field;->setAccessible(Z)V
+	30      (00000068) sput-object          v2, Landroid/support/v4/app/NotificationCompatJellybean;->sExtrasField Ljava/lang/reflect/Field;
+	62:93
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+	(Ljava/lang/IllegalAccessException; -> 9e getExtras-BB@0x9e)
+	(Ljava/lang/NoSuchFieldException; -> ba getExtras-BB@0xba)
+
+getExtras-BB@0x6c : [ getExtras-BB@0x80 getExtras-BB@0x94 ]
+	31      (0000006c) sget-object          v5, Landroid/support/v4/app/NotificationCompatJellybean;->sExtrasField Ljava/lang/reflect/Field;
+	32      (00000070) invoke-virtual       v5, v7, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	33      (00000076) move-result-object   v1
+	34      (00000078) check-cast           v1, Landroid/os/Bundle;
+	35      (0000007c) if-nez               v1, +c
+	62:93
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+	(Ljava/lang/IllegalAccessException; -> 9e getExtras-BB@0x9e)
+	(Ljava/lang/NoSuchFieldException; -> ba getExtras-BB@0xba)
+
+getExtras-BB@0x80 : [ getExtras-BB@0x94 ]
+	36      (00000080) new-instance         v1, Landroid/os/Bundle;
+	37      (00000084) invoke-direct        v1, Landroid/os/Bundle;-><init>()V
+	38      (0000008a) sget-object          v5, Landroid/support/v4/app/NotificationCompatJellybean;->sExtrasField Ljava/lang/reflect/Field;
+	39      (0000008e) invoke-virtual       v5, v7, v1, Ljava/lang/reflect/Field;->set(Ljava/lang/Object; Ljava/lang/Object;)V
+	62:93
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+	(Ljava/lang/IllegalAccessException; -> 9e getExtras-BB@0x9e)
+	(Ljava/lang/NoSuchFieldException; -> ba getExtras-BB@0xba)
+
+getExtras-BB@0x94 : [ getExtras-BB@0x14 ]
+	40      (00000094) monitor-exit         v4
+	41      (00000096) goto                 -41
+	94:9b
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+
+getExtras-BB@0x98 : 
+	42      (00000098) move-exception       v3
+	43      (0000009a) monitor-exit         v4
+	44      (0000009c) throw                v3
+
+getExtras-BB@0x9e : [ getExtras-BB@0xa0 ]
+	45      (0000009e) move-exception       v0
+
+getExtras-BB@0xa0 : [ getExtras-BB@0xae ]
+	46      (000000a0) const-string         v5, 'NotificationCompat'
+	47      (000000a4) const-string         v6, 'Unable to access notification extras'
+	48      (000000a8) invoke-static        v5, v6, v0, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	a0:c9
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+
+getExtras-BB@0xae : [ getExtras-BB@0x14 ]
+	49      (000000ae) const/4              v5, 1
+	50      (000000b0) sput-boolean         v5, Landroid/support/v4/app/NotificationCompatJellybean;->sExtrasFieldAccessFailed Z
+	51      (000000b4) monitor-exit         v4
+	52      (000000b6) move-object          v1, v3
+	53      (000000b8) goto                 -52
+	a0:c9
+	(Ljava/lang/Throwable; -> 98 getExtras-BB@0x98)
+
+getExtras-BB@0xba : [ getExtras-BB@0xae ]
+	54      (000000ba) move-exception       v0
+	55      (000000bc) const-string         v5, 'NotificationCompat'
+	56      (000000c0) const-string         v6, 'Unable to access notification extras'
+	57      (000000c4) invoke-static        v5, v6, v0, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	58      (000000ca) goto                 -e
+

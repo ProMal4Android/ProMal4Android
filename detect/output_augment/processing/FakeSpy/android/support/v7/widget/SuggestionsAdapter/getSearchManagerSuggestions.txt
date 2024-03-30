@@ -1,0 +1,81 @@
+# Landroid/support/v7/widget/SuggestionsAdapter;->getSearchManagerSuggestions(Landroid/app/SearchableInfo; Ljava/lang/String; I)Landroid/database/Cursor; [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.app.SearchableInfo
+# - v11:java.lang.String
+# - v12:int
+#
+# - return:android.database.Cursor
+
+getSearchManagerSuggestions-BB@0x0 : [ getSearchManagerSuggestions-BB@0x6 getSearchManagerSuggestions-BB@0x8 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) if-nez               v10, +3
+
+getSearchManagerSuggestions-BB@0x6 : 
+	2       (00000006) return-object        v2
+
+getSearchManagerSuggestions-BB@0x8 : [ getSearchManagerSuggestions-BB@0x14 getSearchManagerSuggestions-BB@0x6 ]
+	3       (00000008) invoke-virtual       v10, Landroid/app/SearchableInfo;->getSuggestAuthority()Ljava/lang/String;
+	4       (0000000e) move-result-object   v6
+	5       (00000010) if-eqz               v6, -5
+
+getSearchManagerSuggestions-BB@0x14 : [ getSearchManagerSuggestions-BB@0x56 getSearchManagerSuggestions-BB@0x5c ]
+	6       (00000014) new-instance         v0, Landroid/net/Uri$Builder;
+	7       (00000018) invoke-direct        v0, Landroid/net/Uri$Builder;-><init>()V
+	8       (0000001e) const-string         v5, 'content'
+	9       (00000022) invoke-virtual       v0, v5, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	10      (00000028) move-result-object   v0
+	11      (0000002a) invoke-virtual       v0, v6, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	12      (00000030) move-result-object   v0
+	13      (00000032) const-string         v5, ''
+	14      (00000036) invoke-virtual       v0, v5, Landroid/net/Uri$Builder;->query(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	15      (0000003c) move-result-object   v0
+	16      (0000003e) const-string         v5, ''
+	17      (00000042) invoke-virtual       v0, v5, Landroid/net/Uri$Builder;->fragment(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	18      (00000048) move-result-object   v8
+	19      (0000004a) invoke-virtual       v10, Landroid/app/SearchableInfo;->getSuggestPath()Ljava/lang/String;
+	20      (00000050) move-result-object   v7
+	21      (00000052) if-eqz               v7, +5
+
+getSearchManagerSuggestions-BB@0x56 : [ getSearchManagerSuggestions-BB@0x5c ]
+	22      (00000056) invoke-virtual       v8, v7, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+getSearchManagerSuggestions-BB@0x5c : [ getSearchManagerSuggestions-BB@0x74 getSearchManagerSuggestions-BB@0xb6 ]
+	23      (0000005c) const-string         v0, 'search_suggest_query'
+	24      (00000060) invoke-virtual       v8, v0, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	25      (00000066) invoke-virtual       v10, Landroid/app/SearchableInfo;->getSuggestSelection()Ljava/lang/String;
+	26      (0000006c) move-result-object   v3
+	27      (0000006e) const/4              v4, 0
+	28      (00000070) if-eqz               v3, +23
+
+getSearchManagerSuggestions-BB@0x74 : [ getSearchManagerSuggestions-BB@0x80 ]
+	29      (00000074) const/4              v0, 1
+	30      (00000076) new-array            v4, v0, [Ljava/lang/String;
+	31      (0000007a) const/4              v0, 0
+	32      (0000007c) aput-object          v11, v4, v0
+
+getSearchManagerSuggestions-BB@0x80 : [ getSearchManagerSuggestions-BB@0x84 getSearchManagerSuggestions-BB@0x96 ]
+	33      (00000080) if-lez               v12, +b
+
+getSearchManagerSuggestions-BB@0x84 : [ getSearchManagerSuggestions-BB@0x96 ]
+	34      (00000084) const-string         v0, 'limit'
+	35      (00000088) invoke-static        v12, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+	36      (0000008e) move-result-object   v5
+	37      (00000090) invoke-virtual       v8, v0, v5, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String; Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+getSearchManagerSuggestions-BB@0x96 : [ getSearchManagerSuggestions-BB@0x6 ]
+	38      (00000096) invoke-virtual       v8, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+	39      (0000009c) move-result-object   v1
+	40      (0000009e) iget-object          v0, v9, Landroid/support/v7/widget/SuggestionsAdapter;->mContext Landroid/content/Context;
+	41      (000000a2) invoke-virtual       v0, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+	42      (000000a8) move-result-object   v0
+	43      (000000aa) move-object          v5, v2
+	44      (000000ac) invoke-virtual/range v0 ... v5, Landroid/content/ContentResolver;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor;
+	45      (000000b2) move-result-object   v2
+	46      (000000b4) goto                 -57
+
+getSearchManagerSuggestions-BB@0xb6 : [ getSearchManagerSuggestions-BB@0x80 ]
+	47      (000000b6) invoke-virtual       v8, v11, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+	48      (000000bc) goto                 -1e
+

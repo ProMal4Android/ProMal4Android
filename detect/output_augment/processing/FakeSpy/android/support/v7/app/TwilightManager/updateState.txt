@@ -1,0 +1,105 @@
+# Landroid/support/v7/app/TwilightManager;->updateState(Landroid/location/Location;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v24
+# - v25:android.location.Location
+#
+# - return:void
+
+updateState-BB@0x0 : [ updateState-BB@0x5e updateState-BB@0xe6 ]
+	0       (00000000) sget-object          v14, Landroid/support/v7/app/TwilightManager;->sTwilightState Landroid/support/v7/app/TwilightManager$TwilightState;
+	1       (00000004) invoke-static        Ljava/lang/System;->currentTimeMillis()J
+	2       (0000000a) move-result-wide     v12
+	3       (0000000c) invoke-static        Landroid/support/v7/app/TwilightCalculator;->getInstance()Landroid/support/v7/app/TwilightCalculator;
+	4       (00000012) move-result-object   v3
+	5       (00000014) const-wide/32        v4, 86400000 # [86400000.0]
+	6       (0000001a) sub-long             v4, v12, v4
+	7       (0000001e) invoke-virtual/range v25, Landroid/location/Location;->getLatitude()D
+	8       (00000024) move-result-wide     v6
+	9       (00000026) invoke-virtual/range v25, Landroid/location/Location;->getLongitude()D
+	10      (0000002c) move-result-wide     v8
+	11      (0000002e) invoke-virtual/range v3 ... v9, Landroid/support/v7/app/TwilightCalculator;->calculateTwilight(J D D)V
+	12      (00000034) iget-wide            v0, v3, Landroid/support/v7/app/TwilightCalculator;->sunset J
+	13      (00000038) move-wide/from16     v22, v0
+	14      (0000003c) invoke-virtual/range v25, Landroid/location/Location;->getLatitude()D
+	15      (00000042) move-result-wide     v6
+	16      (00000044) invoke-virtual/range v25, Landroid/location/Location;->getLongitude()D
+	17      (0000004a) move-result-wide     v8
+	18      (0000004c) move-wide            v4, v12
+	19      (0000004e) invoke-virtual/range v3 ... v9, Landroid/support/v7/app/TwilightCalculator;->calculateTwilight(J D D)V
+	20      (00000054) iget                 v4, v3, Landroid/support/v7/app/TwilightCalculator;->state I
+	21      (00000058) const/4              v5, 1
+	22      (0000005a) if-ne                v4, v5, +46
+
+updateState-BB@0x5e : [ updateState-BB@0x60 ]
+	23      (0000005e) const/4              v2, 1
+
+updateState-BB@0x60 : [ updateState-BB@0xa6 updateState-BB@0xb2 ]
+	24      (00000060) iget-wide            v0, v3, Landroid/support/v7/app/TwilightCalculator;->sunrise J
+	25      (00000064) move-wide/from16     v16, v0
+	26      (00000068) iget-wide            v0, v3, Landroid/support/v7/app/TwilightCalculator;->sunset J
+	27      (0000006c) move-wide/from16     v18, v0
+	28      (00000070) const-wide/32        v4, 86400000 # [86400000.0]
+	29      (00000076) add-long/2addr       v4, v12
+	30      (00000078) invoke-virtual/range v25, Landroid/location/Location;->getLatitude()D
+	31      (0000007e) move-result-wide     v6
+	32      (00000080) invoke-virtual/range v25, Landroid/location/Location;->getLongitude()D
+	33      (00000086) move-result-wide     v8
+	34      (00000088) invoke-virtual/range v3 ... v9, Landroid/support/v7/app/TwilightCalculator;->calculateTwilight(J D D)V
+	35      (0000008e) iget-wide            v0, v3, Landroid/support/v7/app/TwilightCalculator;->sunrise J
+	36      (00000092) move-wide/from16     v20, v0
+	37      (00000096) const-wide/16        v10, 0 # [0.0]
+	38      (0000009a) const-wide/16        v4, -1 # [-1.0]
+	39      (0000009e) cmp-long             v4, v16, v4
+	40      (000000a2) if-eqz               v4, +8
+
+updateState-BB@0xa6 : [ updateState-BB@0xb2 updateState-BB@0xea ]
+	41      (000000a6) const-wide/16        v4, -1 # [-1.0]
+	42      (000000aa) cmp-long             v4, v18, v4
+	43      (000000ae) if-nez               v4, +1e
+
+updateState-BB@0xb2 : [ updateState-BB@0xbc ]
+	44      (000000b2) const-wide/32        v4, 43200000 # [43200000.0]
+	45      (000000b8) add-long             v10, v12, v4
+
+updateState-BB@0xbc : 
+	46      (000000bc) iput-boolean         v2, v14, Landroid/support/v7/app/TwilightManager$TwilightState;->isNight Z
+	47      (000000c0) move-wide/from16     v0, v22
+	48      (000000c4) iput-wide            v0, v14, Landroid/support/v7/app/TwilightManager$TwilightState;->yesterdaySunset J
+	49      (000000c8) move-wide/from16     v0, v16
+	50      (000000cc) iput-wide            v0, v14, Landroid/support/v7/app/TwilightManager$TwilightState;->todaySunrise J
+	51      (000000d0) move-wide/from16     v0, v18
+	52      (000000d4) iput-wide            v0, v14, Landroid/support/v7/app/TwilightManager$TwilightState;->todaySunset J
+	53      (000000d8) move-wide/from16     v0, v20
+	54      (000000dc) iput-wide            v0, v14, Landroid/support/v7/app/TwilightManager$TwilightState;->tomorrowSunrise J
+	55      (000000e0) iput-wide            v10, v14, Landroid/support/v7/app/TwilightManager$TwilightState;->nextUpdate J
+	56      (000000e4) return-void          
+
+updateState-BB@0xe6 : [ updateState-BB@0x60 ]
+	57      (000000e6) const/4              v2, 0
+	58      (000000e8) goto                 -44
+
+updateState-BB@0xea : [ updateState-BB@0xf2 updateState-BB@0x100 ]
+	59      (000000ea) cmp-long             v4, v12, v18
+	60      (000000ee) if-lez               v4, +9
+
+updateState-BB@0xf2 : [ updateState-BB@0xf6 ]
+	61      (000000f2) add-long             v10, v10, v20
+
+updateState-BB@0xf6 : [ updateState-BB@0xbc ]
+	62      (000000f6) const-wide/32        v4, 60000 # [60000.0]
+	63      (000000fc) add-long/2addr       v10, v4
+	64      (000000fe) goto                 -21
+
+updateState-BB@0x100 : [ updateState-BB@0x108 updateState-BB@0x10e ]
+	65      (00000100) cmp-long             v4, v12, v16
+	66      (00000104) if-lez               v4, +5
+
+updateState-BB@0x108 : [ updateState-BB@0xf6 ]
+	67      (00000108) add-long             v10, v10, v18
+	68      (0000010c) goto                 -b
+
+updateState-BB@0x10e : [ updateState-BB@0xf6 ]
+	69      (0000010e) add-long             v10, v10, v16
+	70      (00000112) goto                 -e
+

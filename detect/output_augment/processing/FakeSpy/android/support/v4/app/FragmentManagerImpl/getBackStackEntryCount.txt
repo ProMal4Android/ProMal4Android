@@ -1,0 +1,23 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->getBackStackEntryCount()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:int
+
+getBackStackEntryCount-BB@0x0 : [ getBackStackEntryCount-BB@0x8 getBackStackEntryCount-BB@0x16 ]
+	0       (00000000) iget-object          v0, v1, Landroid/support/v4/app/FragmentManagerImpl;->mBackStack Ljava/util/ArrayList;
+	1       (00000004) if-eqz               v0, +9
+
+getBackStackEntryCount-BB@0x8 : [ getBackStackEntryCount-BB@0x14 ]
+	2       (00000008) iget-object          v0, v1, Landroid/support/v4/app/FragmentManagerImpl;->mBackStack Ljava/util/ArrayList;
+	3       (0000000c) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	4       (00000012) move-result          v0
+
+getBackStackEntryCount-BB@0x14 : 
+	5       (00000014) return               v0
+
+getBackStackEntryCount-BB@0x16 : [ getBackStackEntryCount-BB@0x14 ]
+	6       (00000016) const/4              v0, 0
+	7       (00000018) goto                 -2
+

@@ -1,0 +1,119 @@
+# Lcom/ap/injector/internal/common/api/AdsCommunicator;->requestAd(Lcom/ap/injector/internal/skeleton/IAdRequest;)Lcom/ap/injector/internal/common/api/CommunicatorResponse; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v11
+# - v12:com.ap.injector.internal.skeleton.IAdRequest
+#
+# - return:com.ap.injector.internal.common.api.CommunicatorResponse
+
+requestAd-BB@0x0 : [ requestAd-BB@0x2c ]
+	0       (00000000) const/16             v10, 10000
+	1       (00000004) invoke-interface     v12, Lcom/ap/injector/internal/skeleton/IAdRequest;->getUrl()Ljava/net/URL;
+	2       (0000000a) move-result-object   v7
+	3       (0000000c) invoke-virtual       v7, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+	4       (00000012) move-result-object   v1
+	5       (00000014) invoke-interface     v12, Lcom/ap/injector/internal/skeleton/IAdRequest;->getHeaders()Ljava/util/HashMap;
+	6       (0000001a) move-result-object   v7
+	7       (0000001c) invoke-virtual       v7, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+	8       (00000022) move-result-object   v7
+	9       (00000024) invoke-interface     v7, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+	10      (0000002a) move-result-object   v9
+
+requestAd-BB@0x2c : [ requestAd-BB@0x38 requestAd-BB@0xfe ]
+	11      (0000002c) invoke-interface     v9, Ljava/util/Iterator;->hasNext()Z
+	12      (00000032) move-result          v7
+	13      (00000034) if-nez               v7, +65
+
+requestAd-BB@0x38 : [ requestAd-BB@0xc4 ]
+	14      (00000038) move-object          v7, v1
+	15      (0000003a) check-cast           v7, Ljava/net/HttpURLConnection;
+	16      (0000003e) invoke-interface     v12, Lcom/ap/injector/internal/skeleton/IAdRequest;->getMethod()Ljava/lang/String;
+	17      (00000044) move-result-object   v8
+	18      (00000046) invoke-virtual       v7, v8, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+	19      (0000004c) const/4              v7, 0
+	20      (0000004e) invoke-virtual       v1, v7, Ljava/net/URLConnection;->setUseCaches(Z)V
+	21      (00000054) const/4              v7, 1
+	22      (00000056) invoke-virtual       v1, v7, Ljava/net/URLConnection;->setDoOutput(Z)V
+	23      (0000005c) invoke-virtual       v1, v10, Ljava/net/URLConnection;->setConnectTimeout(I)V
+	24      (00000062) invoke-virtual       v1, v10, Ljava/net/URLConnection;->setReadTimeout(I)V
+	25      (00000068) invoke-virtual       v1, Ljava/net/URLConnection;->getOutputStream()Ljava/io/OutputStream;
+	26      (0000006e) move-result-object   v7
+	27      (00000070) invoke-interface     v12, Lcom/ap/injector/internal/skeleton/IAdRequest;->getRequestBody()[B
+	28      (00000076) move-result-object   v8
+	29      (00000078) invoke-interface     v12, v8, Lcom/ap/injector/internal/skeleton/IAdRequest;->compress([B)[B
+	30      (0000007e) move-result-object   v8
+	31      (00000080) invoke-virtual       v7, v8, Ljava/io/OutputStream;->write([B)V
+	32      (00000086) invoke-virtual       v1, Ljava/net/URLConnection;->getOutputStream()Ljava/io/OutputStream;
+	33      (0000008c) move-result-object   v7
+	34      (0000008e) invoke-virtual       v7, Ljava/io/OutputStream;->close()V
+	35      (00000094) move-object          v7, v1
+	36      (00000096) check-cast           v7, Ljava/net/HttpURLConnection;
+	37      (0000009a) invoke-virtual       v7, Ljava/net/HttpURLConnection;->getResponseCode()I
+	38      (000000a0) move-result          v6
+	39      (000000a2) new-instance         v4, Ljava/util/HashMap;
+	40      (000000a6) invoke-direct        v4, Ljava/util/HashMap;-><init>()V
+	41      (000000ac) invoke-virtual       v1, Ljava/net/URLConnection;->getHeaderFields()Ljava/util/Map;
+	42      (000000b2) move-result-object   v7
+	43      (000000b4) invoke-interface     v7, Ljava/util/Map;->keySet()Ljava/util/Set;
+	44      (000000ba) move-result-object   v7
+	45      (000000bc) invoke-interface     v7, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+	46      (000000c2) move-result-object   v7
+
+requestAd-BB@0xc4 : [ requestAd-BB@0xd0 requestAd-BB@0x12a ]
+	47      (000000c4) invoke-interface     v7, Ljava/util/Iterator;->hasNext()Z
+	48      (000000ca) move-result          v8
+	49      (000000cc) if-nez               v8, +2f
+
+requestAd-BB@0xd0 : [ requestAd-BB@0xd8 ]
+	50      (000000d0) invoke-virtual       v1, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
+	51      (000000d6) move-result-object   v5
+
+requestAd-BB@0xd8 : [ requestAd-BB@0xf6 requestAd-BB@0xfc ]
+	52      (000000d8) invoke-direct        v11, v5, Lcom/ap/injector/internal/common/api/AdsCommunicator;->read(Ljava/io/InputStream;)[B
+	53      (000000de) move-result-object   v7
+	54      (000000e0) invoke-interface     v12, v7, Lcom/ap/injector/internal/skeleton/IAdRequest;->decompress([B)[B
+	55      (000000e6) move-result-object   v0
+	56      (000000e8) new-instance         v7, Lcom/ap/injector/internal/common/api/CommunicatorResponse;
+	57      (000000ec) invoke-direct        v7, v0, v6, v4, Lcom/ap/injector/internal/common/api/CommunicatorResponse;-><init>([B I Ljava/util/HashMap;)V
+	58      (000000f2) if-eqz               v5, +5
+	d8:f1
+	(Ljava/lang/Throwable; -> 146 requestAd-BB@0x146)
+
+requestAd-BB@0xf6 : [ requestAd-BB@0xfc ]
+	59      (000000f6) invoke-virtual       v5, Ljava/io/InputStream;->close()V
+
+requestAd-BB@0xfc : 
+	60      (000000fc) return-object        v7
+
+requestAd-BB@0xfe : [ requestAd-BB@0x2c ]
+	61      (000000fe) invoke-interface     v9, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	62      (00000104) move-result-object   v2
+	63      (00000106) check-cast           v2, Ljava/util/Map$Entry;
+	64      (0000010a) invoke-interface     v2, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+	65      (00000110) move-result-object   v7
+	66      (00000112) check-cast           v7, Ljava/lang/String;
+	67      (00000116) invoke-interface     v2, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	68      (0000011c) move-result-object   v8
+	69      (0000011e) check-cast           v8, Ljava/lang/String;
+	70      (00000122) invoke-virtual       v1, v7, v8, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+	71      (00000128) goto                 -7e
+
+requestAd-BB@0x12a : [ requestAd-BB@0xc4 ]
+	72      (0000012a) invoke-interface     v7, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	73      (00000130) move-result-object   v3
+	74      (00000132) check-cast           v3, Ljava/lang/String;
+	75      (00000136) invoke-virtual       v1, v3, Ljava/net/URLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
+	76      (0000013c) move-result-object   v8
+	77      (0000013e) invoke-virtual       v4, v3, v8, Ljava/util/HashMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	78      (00000144) goto                 -40
+
+requestAd-BB@0x146 : [ requestAd-BB@0x14c requestAd-BB@0x152 ]
+	79      (00000146) move-exception       v7
+	80      (00000148) if-eqz               v5, +5
+
+requestAd-BB@0x14c : [ requestAd-BB@0x152 ]
+	81      (0000014c) invoke-virtual       v5, Ljava/io/InputStream;->close()V
+
+requestAd-BB@0x152 : 
+	82      (00000152) throw                v7
+

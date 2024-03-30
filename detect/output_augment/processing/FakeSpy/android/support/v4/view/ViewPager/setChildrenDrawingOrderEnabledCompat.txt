@@ -1,0 +1,60 @@
+# Landroid/support/v4/view/ViewPager;->setChildrenDrawingOrderEnabledCompat(Z)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:boolean
+#
+# - return:void
+
+setChildrenDrawingOrderEnabledCompat-BB@0x0 : [ setChildrenDrawingOrderEnabledCompat-BB@0xa setChildrenDrawingOrderEnabledCompat-BB@0x54 ]
+	0       (00000000) sget                 v1, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) const/4              v2, 7
+	2       (00000006) if-lt                v1, v2, +27
+
+setChildrenDrawingOrderEnabledCompat-BB@0xa : [ setChildrenDrawingOrderEnabledCompat-BB@0x12 setChildrenDrawingOrderEnabledCompat-BB@0x36 ]
+	3       (0000000a) iget-object          v1, v6, Landroid/support/v4/view/ViewPager;->mSetChildrenDrawingOrderEnabled Ljava/lang/reflect/Method;
+	4       (0000000e) if-nez               v1, +14
+
+setChildrenDrawingOrderEnabledCompat-BB@0x12 : [ setChildrenDrawingOrderEnabledCompat-BB@0x36 ]
+	5       (00000012) const-class          v1, Landroid/view/ViewGroup;
+	6       (00000016) const-string         v2, 'setChildrenDrawingOrderEnabled'
+	7       (0000001a) const/4              v3, 1
+	8       (0000001c) new-array            v3, v3, [Ljava/lang/Class;
+	9       (00000020) const/4              v4, 0
+	10      (00000022) sget-object          v5, Ljava/lang/Boolean;->TYPE Ljava/lang/Class;
+	11      (00000026) aput-object          v5, v3, v4
+	12      (0000002a) invoke-virtual       v1, v2, v3, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	13      (00000030) move-result-object   v1
+	14      (00000032) iput-object          v1, v6, Landroid/support/v4/view/ViewPager;->mSetChildrenDrawingOrderEnabled Ljava/lang/reflect/Method;
+	12:35
+	(Ljava/lang/NoSuchMethodException; -> 56 setChildrenDrawingOrderEnabledCompat-BB@0x56)
+
+setChildrenDrawingOrderEnabledCompat-BB@0x36 : [ setChildrenDrawingOrderEnabledCompat-BB@0x54 ]
+	15      (00000036) iget-object          v1, v6, Landroid/support/v4/view/ViewPager;->mSetChildrenDrawingOrderEnabled Ljava/lang/reflect/Method;
+	16      (0000003a) const/4              v2, 1
+	17      (0000003c) new-array            v2, v2, [Ljava/lang/Object;
+	18      (00000040) const/4              v3, 0
+	19      (00000042) invoke-static        v7, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	20      (00000048) move-result-object   v4
+	21      (0000004a) aput-object          v4, v2, v3
+	22      (0000004e) invoke-virtual       v1, v6, v2, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	36:53
+	(Ljava/lang/Exception; -> 68 setChildrenDrawingOrderEnabledCompat-BB@0x68)
+
+setChildrenDrawingOrderEnabledCompat-BB@0x54 : 
+	23      (00000054) return-void          
+
+setChildrenDrawingOrderEnabledCompat-BB@0x56 : [ setChildrenDrawingOrderEnabledCompat-BB@0x36 ]
+	24      (00000056) move-exception       v0
+	25      (00000058) const-string         v1, 'ViewPager'
+	26      (0000005c) const-string         v2, "Can't find setChildrenDrawingOrderEnabled"
+	27      (00000060) invoke-static        v1, v2, v0, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	28      (00000066) goto                 -18
+
+setChildrenDrawingOrderEnabledCompat-BB@0x68 : [ setChildrenDrawingOrderEnabledCompat-BB@0x54 ]
+	29      (00000068) move-exception       v0
+	30      (0000006a) const-string         v1, 'ViewPager'
+	31      (0000006e) const-string         v2, 'Error changing children drawing order'
+	32      (00000072) invoke-static        v1, v2, v0, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	33      (00000078) goto                 -12
+

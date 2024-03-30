@@ -1,0 +1,23 @@
+# Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->connect(Landroid/content/Context; Landroid/os/Bundle; Landroid/os/Messenger;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.content.Context
+# - v5:android.os.Bundle
+# - v6:android.os.Messenger
+#
+# - return:void
+
+connect-BB@0x0 : 
+	0       (00000000) new-instance         v0, Landroid/os/Bundle;
+	1       (00000004) invoke-direct        v0, Landroid/os/Bundle;-><init>()V
+	2       (0000000a) const-string         v1, 'data_package_name'
+	3       (0000000e) invoke-virtual       v4, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	4       (00000014) move-result-object   v2
+	5       (00000016) invoke-virtual       v0, v1, v2, Landroid/os/Bundle;->putString(Ljava/lang/String; Ljava/lang/String;)V
+	6       (0000001c) const-string         v1, 'data_root_hints'
+	7       (00000020) invoke-virtual       v0, v1, v5, Landroid/os/Bundle;->putBundle(Ljava/lang/String; Landroid/os/Bundle;)V
+	8       (00000026) const/4              v1, 1
+	9       (00000028) invoke-direct        v3, v1, v0, v6, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(I Landroid/os/Bundle; Landroid/os/Messenger;)V
+	10      (0000002e) return-void          
+

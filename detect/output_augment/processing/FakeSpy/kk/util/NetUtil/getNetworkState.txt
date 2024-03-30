@@ -1,0 +1,48 @@
+# Lkk/util/NetUtil;->getNetworkState(Landroid/content/Context;)I [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.content.Context
+#
+# - return:int
+
+getNetworkState-BB@0x0 : [ getNetworkState-BB@0x2c getNetworkState-BB@0x34 ]
+	0       (00000000) const/4              v3, 1
+	1       (00000002) const/4              v2, 0
+	2       (00000004) const-string         v4, 'connectivity'
+	3       (00000008) invoke-virtual       v5, v4, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+	4       (0000000e) move-result-object   v0
+	5       (00000010) check-cast           v0, Landroid/net/ConnectivityManager;
+	6       (00000014) invoke-virtual       v0, v3, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
+	7       (0000001a) move-result-object   v4
+	8       (0000001c) invoke-virtual       v4, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
+	9       (00000022) move-result-object   v1
+	10      (00000024) sget-object          v4, Landroid/net/NetworkInfo$State;->CONNECTED Landroid/net/NetworkInfo$State;
+	11      (00000028) if-eq                v1, v4, +6
+
+getNetworkState-BB@0x2c : [ getNetworkState-BB@0x34 getNetworkState-BB@0x38 ]
+	12      (0000002c) sget-object          v4, Landroid/net/NetworkInfo$State;->CONNECTING Landroid/net/NetworkInfo$State;
+	13      (00000030) if-ne                v1, v4, +4
+
+getNetworkState-BB@0x34 : [ getNetworkState-BB@0x36 ]
+	14      (00000034) move                 v2, v3
+
+getNetworkState-BB@0x36 : 
+	15      (00000036) return               v2
+
+getNetworkState-BB@0x38 : [ getNetworkState-BB@0x50 getNetworkState-BB@0x58 ]
+	16      (00000038) invoke-virtual       v0, v2, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
+	17      (0000003e) move-result-object   v3
+	18      (00000040) invoke-virtual       v3, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
+	19      (00000046) move-result-object   v1
+	20      (00000048) sget-object          v3, Landroid/net/NetworkInfo$State;->CONNECTED Landroid/net/NetworkInfo$State;
+	21      (0000004c) if-eq                v1, v3, +6
+
+getNetworkState-BB@0x50 : [ getNetworkState-BB@0x58 getNetworkState-BB@0x36 ]
+	22      (00000050) sget-object          v3, Landroid/net/NetworkInfo$State;->CONNECTING Landroid/net/NetworkInfo$State;
+	23      (00000054) if-ne                v1, v3, -f
+
+getNetworkState-BB@0x58 : [ getNetworkState-BB@0x36 ]
+	24      (00000058) const/4              v2, 2
+	25      (0000005a) goto                 -12
+

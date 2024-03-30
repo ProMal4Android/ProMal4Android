@@ -1,0 +1,29 @@
+# Landroid/support/v4/app/DialogFragment;->setupDialog(Landroid/app/Dialog; I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.app.Dialog
+# - v4:int
+#
+# - return:void
+
+setupDialog-BB@0x0 : [ D:setupDialog-BB@0x6 1:setupDialog-BB@0x1a 2:setupDialog-BB@0x1a 3:setupDialog-BB@0x8 ]
+	0       (00000000) packed-switch        v4, +12 (0x24)
+
+setupDialog-BB@0x6 : 
+	1       (00000006) return-void          
+
+setupDialog-BB@0x8 : [ setupDialog-BB@0x1a ]
+	2       (00000008) invoke-virtual       v3, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) const/16             v1, 24
+	5       (00000014) invoke-virtual       v0, v1, Landroid/view/Window;->addFlags(I)V
+
+setupDialog-BB@0x1a : [ setupDialog-BB@0x6 ]
+	6       (0000001a) const/4              v0, 1
+	7       (0000001c) invoke-virtual       v3, v0, Landroid/app/Dialog;->requestWindowFeature(I)Z
+	8       (00000022) goto                 -e
+
+setupDialog-BB@0x24 : 
+	9       (00000024) packed-switch-payload 1 2 3
+

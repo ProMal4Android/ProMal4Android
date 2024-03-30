@@ -1,0 +1,47 @@
+# Landroid/support/v7/widget/RecyclerView$Recycler;->viewRangeUpdate(I I)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:int
+# - v8:int
+#
+# - return:void
+
+viewRangeUpdate-BB@0x0 : [ viewRangeUpdate-BB@0x14 ]
+	0       (00000000) add-int              v4, v7, v8
+	1       (00000004) iget-object          v5, v6, Landroid/support/v7/widget/RecyclerView$Recycler;->mCachedViews Ljava/util/ArrayList;
+	2       (00000008) invoke-virtual       v5, Ljava/util/ArrayList;->size()I
+	3       (0000000e) move-result          v0
+	4       (00000010) add-int/lit8         v2, v0, -1
+
+viewRangeUpdate-BB@0x14 : [ viewRangeUpdate-BB@0x18 viewRangeUpdate-BB@0x52 ]
+	5       (00000014) if-ltz               v2, +1f
+
+viewRangeUpdate-BB@0x18 : [ viewRangeUpdate-BB@0x2c viewRangeUpdate-BB@0x32 ]
+	6       (00000018) iget-object          v5, v6, Landroid/support/v7/widget/RecyclerView$Recycler;->mCachedViews Ljava/util/ArrayList;
+	7       (0000001c) invoke-virtual       v5, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	8       (00000022) move-result-object   v1
+	9       (00000024) check-cast           v1, Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	10      (00000028) if-nez               v1, +5
+
+viewRangeUpdate-BB@0x2c : [ viewRangeUpdate-BB@0x14 ]
+	11      (0000002c) add-int/lit8         v2, v2, -1
+	12      (00000030) goto                 -e
+
+viewRangeUpdate-BB@0x32 : [ viewRangeUpdate-BB@0x3e viewRangeUpdate-BB@0x2c ]
+	13      (00000032) invoke-virtual       v1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->getLayoutPosition()I
+	14      (00000038) move-result          v3
+	15      (0000003a) if-lt                v3, v7, -7
+
+viewRangeUpdate-BB@0x3e : [ viewRangeUpdate-BB@0x42 viewRangeUpdate-BB@0x2c ]
+	16      (0000003e) if-ge                v3, v4, -9
+
+viewRangeUpdate-BB@0x42 : [ viewRangeUpdate-BB@0x2c ]
+	17      (00000042) const/4              v5, 2
+	18      (00000044) invoke-virtual       v1, v5, Landroid/support/v7/widget/RecyclerView$ViewHolder;->addFlags(I)V
+	19      (0000004a) invoke-virtual       v6, v2, Landroid/support/v7/widget/RecyclerView$Recycler;->recycleCachedViewAt(I)V
+	20      (00000050) goto                 -12
+
+viewRangeUpdate-BB@0x52 : 
+	21      (00000052) return-void          
+

@@ -1,0 +1,107 @@
+# Landroid/support/v7/app/AlertController;->setupTitle(Landroid/view/ViewGroup;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.view.ViewGroup
+#
+# - return:void
+
+setupTitle-BB@0x0 : [ setupTitle-BB@0xe setupTitle-BB@0x3e ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) const/16             v8, 8
+	2       (00000006) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mCustomTitleView Landroid/view/View;
+	3       (0000000a) if-eqz               v3, +1a
+
+setupTitle-BB@0xe : [ setupTitle-BB@0x3c ]
+	4       (0000000e) new-instance         v1, Landroid/view/ViewGroup$LayoutParams;
+	5       (00000012) const/4              v3, -1
+	6       (00000014) const/4              v4, -2
+	7       (00000016) invoke-direct        v1, v3, v4, Landroid/view/ViewGroup$LayoutParams;-><init>(I I)V
+	8       (0000001c) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mCustomTitleView Landroid/view/View;
+	9       (00000020) invoke-virtual       v10, v3, v0, v1, Landroid/view/ViewGroup;->addView(Landroid/view/View; I Landroid/view/ViewGroup$LayoutParams;)V
+	10      (00000026) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mWindow Landroid/view/Window;
+	11      (0000002a) sget                 v4, Landroid/support/v7/appcompat/R$id;->title_template I
+	12      (0000002e) invoke-virtual       v3, v4, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+	13      (00000034) move-result-object   v2
+	14      (00000036) invoke-virtual       v2, v8, Landroid/view/View;->setVisibility(I)V
+
+setupTitle-BB@0x3c : 
+	15      (0000003c) return-void          
+
+setupTitle-BB@0x3e : [ setupTitle-BB@0x68 setupTitle-BB@0x6a ]
+	16      (0000003e) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mWindow Landroid/view/Window;
+	17      (00000042) const                v4, 16908294 # [2.3877245816659287e-38]
+	18      (00000048) invoke-virtual       v3, v4, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+	19      (0000004e) move-result-object   v3
+	20      (00000050) check-cast           v3, Landroid/widget/ImageView;
+	21      (00000054) iput-object          v3, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	22      (00000058) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mTitle Ljava/lang/CharSequence;
+	23      (0000005c) invoke-static        v3, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	24      (00000062) move-result          v3
+	25      (00000064) if-nez               v3, +3
+
+setupTitle-BB@0x68 : [ setupTitle-BB@0x6a ]
+	26      (00000068) const/4              v0, 1
+
+setupTitle-BB@0x6a : [ setupTitle-BB@0x6e setupTitle-BB@0x10a ]
+	27      (0000006a) if-eqz               v0, +50
+
+setupTitle-BB@0x6e : [ setupTitle-BB@0x9c setupTitle-BB@0xac ]
+	28      (0000006e) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mWindow Landroid/view/Window;
+	29      (00000072) sget                 v4, Landroid/support/v7/appcompat/R$id;->alertTitle I
+	30      (00000076) invoke-virtual       v3, v4, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+	31      (0000007c) move-result-object   v3
+	32      (0000007e) check-cast           v3, Landroid/widget/TextView;
+	33      (00000082) iput-object          v3, v9, Landroid/support/v7/app/AlertController;->mTitleView Landroid/widget/TextView;
+	34      (00000086) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mTitleView Landroid/widget/TextView;
+	35      (0000008a) iget-object          v4, v9, Landroid/support/v7/app/AlertController;->mTitle Ljava/lang/CharSequence;
+	36      (0000008e) invoke-virtual       v3, v4, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	37      (00000094) iget                 v3, v9, Landroid/support/v7/app/AlertController;->mIconId I
+	38      (00000098) if-eqz               v3, +a
+
+setupTitle-BB@0x9c : [ setupTitle-BB@0x3c ]
+	39      (0000009c) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	40      (000000a0) iget                 v4, v9, Landroid/support/v7/app/AlertController;->mIconId I
+	41      (000000a4) invoke-virtual       v3, v4, Landroid/widget/ImageView;->setImageResource(I)V
+	42      (000000aa) goto                 -37
+
+setupTitle-BB@0xac : [ setupTitle-BB@0xb4 setupTitle-BB@0xc4 ]
+	43      (000000ac) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mIcon Landroid/graphics/drawable/Drawable;
+	44      (000000b0) if-eqz               v3, +a
+
+setupTitle-BB@0xb4 : [ setupTitle-BB@0x3c ]
+	45      (000000b4) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	46      (000000b8) iget-object          v4, v9, Landroid/support/v7/app/AlertController;->mIcon Landroid/graphics/drawable/Drawable;
+	47      (000000bc) invoke-virtual       v3, v4, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	48      (000000c2) goto                 -43
+
+setupTitle-BB@0xc4 : [ setupTitle-BB@0x3c ]
+	49      (000000c4) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mTitleView Landroid/widget/TextView;
+	50      (000000c8) iget-object          v4, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	51      (000000cc) invoke-virtual       v4, Landroid/widget/ImageView;->getPaddingLeft()I
+	52      (000000d2) move-result          v4
+	53      (000000d4) iget-object          v5, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	54      (000000d8) invoke-virtual       v5, Landroid/widget/ImageView;->getPaddingTop()I
+	55      (000000de) move-result          v5
+	56      (000000e0) iget-object          v6, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	57      (000000e4) invoke-virtual       v6, Landroid/widget/ImageView;->getPaddingRight()I
+	58      (000000ea) move-result          v6
+	59      (000000ec) iget-object          v7, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	60      (000000f0) invoke-virtual       v7, Landroid/widget/ImageView;->getPaddingBottom()I
+	61      (000000f6) move-result          v7
+	62      (000000f8) invoke-virtual       v3, v4, v5, v6, v7, Landroid/widget/TextView;->setPadding(I I I I)V
+	63      (000000fe) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	64      (00000102) invoke-virtual       v3, v8, Landroid/widget/ImageView;->setVisibility(I)V
+	65      (00000108) goto                 -66
+
+setupTitle-BB@0x10a : [ setupTitle-BB@0x3c ]
+	66      (0000010a) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mWindow Landroid/view/Window;
+	67      (0000010e) sget                 v4, Landroid/support/v7/appcompat/R$id;->title_template I
+	68      (00000112) invoke-virtual       v3, v4, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+	69      (00000118) move-result-object   v2
+	70      (0000011a) invoke-virtual       v2, v8, Landroid/view/View;->setVisibility(I)V
+	71      (00000120) iget-object          v3, v9, Landroid/support/v7/app/AlertController;->mIconView Landroid/widget/ImageView;
+	72      (00000124) invoke-virtual       v3, v8, Landroid/widget/ImageView;->setVisibility(I)V
+	73      (0000012a) invoke-virtual       v10, v8, Landroid/view/ViewGroup;->setVisibility(I)V
+	74      (00000130) goto                 -7a
+

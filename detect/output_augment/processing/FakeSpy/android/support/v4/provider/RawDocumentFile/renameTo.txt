@@ -1,0 +1,30 @@
+# Landroid/support/v4/provider/RawDocumentFile;->renameTo(Ljava/lang/String;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.String
+#
+# - return:boolean
+
+renameTo-BB@0x0 : [ renameTo-BB@0x26 renameTo-BB@0x2e ]
+	0       (00000000) new-instance         v0, Ljava/io/File;
+	1       (00000004) iget-object          v1, v2, Landroid/support/v4/provider/RawDocumentFile;->mFile Ljava/io/File;
+	2       (00000008) invoke-virtual       v1, Ljava/io/File;->getParentFile()Ljava/io/File;
+	3       (0000000e) move-result-object   v1
+	4       (00000010) invoke-direct        v0, v1, v3, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	5       (00000016) iget-object          v1, v2, Landroid/support/v4/provider/RawDocumentFile;->mFile Ljava/io/File;
+	6       (0000001a) invoke-virtual       v1, v0, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+	7       (00000020) move-result          v1
+	8       (00000022) if-eqz               v1, +6
+
+renameTo-BB@0x26 : [ renameTo-BB@0x2c ]
+	9       (00000026) iput-object          v0, v2, Landroid/support/v4/provider/RawDocumentFile;->mFile Ljava/io/File;
+	10      (0000002a) const/4              v1, 1
+
+renameTo-BB@0x2c : 
+	11      (0000002c) return               v1
+
+renameTo-BB@0x2e : [ renameTo-BB@0x2c ]
+	12      (0000002e) const/4              v1, 0
+	13      (00000030) goto                 -2
+

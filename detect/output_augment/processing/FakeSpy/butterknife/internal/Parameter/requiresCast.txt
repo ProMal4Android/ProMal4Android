@@ -1,0 +1,24 @@
+# Lbutterknife/internal/Parameter;->requiresCast(Ljava/lang/String;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+#
+# - return:boolean
+
+requiresCast-BB@0x0 : [ requiresCast-BB@0x10 requiresCast-BB@0x14 ]
+	0       (00000000) iget-object          v0, v1, Lbutterknife/internal/Parameter;->type Ljava/lang/String;
+	1       (00000004) invoke-virtual       v0, v2, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	2       (0000000a) move-result          v0
+	3       (0000000c) if-nez               v0, +4
+
+requiresCast-BB@0x10 : [ requiresCast-BB@0x12 ]
+	4       (00000010) const/4              v0, 1
+
+requiresCast-BB@0x12 : 
+	5       (00000012) return               v0
+
+requiresCast-BB@0x14 : [ requiresCast-BB@0x12 ]
+	6       (00000014) const/4              v0, 0
+	7       (00000016) goto                 -2
+

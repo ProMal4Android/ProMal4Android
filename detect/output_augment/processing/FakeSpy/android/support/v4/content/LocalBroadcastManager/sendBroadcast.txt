@@ -1,0 +1,358 @@
+# Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v17
+# - v18:android.content.Intent
+#
+# - return:boolean
+
+sendBroadcast-BB@0x0 : [ sendBroadcast-BB@0xa ]
+	0       (00000000) move-object/from16   v0, v17
+	1       (00000004) iget-object          v15, v0, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers Ljava/util/HashMap;
+	2       (00000008) monitor-enter        v15
+
+sendBroadcast-BB@0xa : [ sendBroadcast-BB@0x56 sendBroadcast-BB@0x19c ]
+	3       (0000000a) invoke-virtual/range v18, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	4       (00000010) move-result-object   v2
+	5       (00000012) move-object/from16   v0, v17
+	6       (00000016) iget-object          v1, v0, Landroid/support/v4/content/LocalBroadcastManager;->mAppContext Landroid/content/Context;
+	7       (0000001a) invoke-virtual       v1, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+	8       (00000020) move-result-object   v1
+	9       (00000022) move-object/from16   v0, v18
+	10      (00000026) invoke-virtual       v0, v1, Landroid/content/Intent;->resolveTypeIfNeeded(Landroid/content/ContentResolver;)Ljava/lang/String;
+	11      (0000002c) move-result-object   v3
+	12      (0000002e) invoke-virtual/range v18, Landroid/content/Intent;->getData()Landroid/net/Uri;
+	13      (00000034) move-result-object   v5
+	14      (00000036) invoke-virtual/range v18, Landroid/content/Intent;->getScheme()Ljava/lang/String;
+	15      (0000003c) move-result-object   v4
+	16      (0000003e) invoke-virtual/range v18, Landroid/content/Intent;->getCategories()Ljava/util/Set;
+	17      (00000044) move-result-object   v6
+	18      (00000046) invoke-virtual/range v18, Landroid/content/Intent;->getFlags()I
+	19      (0000004c) move-result          v1
+	20      (0000004e) and-int/lit8         v1, v1, 8
+	21      (00000052) if-eqz               v1, +a5
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x56 : [ sendBroadcast-BB@0x58 ]
+	22      (00000056) const/4              v8, 1
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x58 : [ sendBroadcast-BB@0x5c sendBroadcast-BB@0xc4 ]
+	23      (00000058) if-eqz               v8, +36
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x5c : [ sendBroadcast-BB@0xc4 ]
+	24      (0000005c) const-string         v1, 'LocalBroadcastManager'
+	25      (00000060) new-instance         v7, Ljava/lang/StringBuilder;
+	26      (00000064) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	27      (0000006a) const-string         v16, 'Resolving type '
+	28      (0000006e) move-object/from16   v0, v16
+	29      (00000072) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	30      (00000078) move-result-object   v7
+	31      (0000007a) invoke-virtual       v7, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	32      (00000080) move-result-object   v7
+	33      (00000082) const-string         v16, ' scheme '
+	34      (00000086) move-object/from16   v0, v16
+	35      (0000008a) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	36      (00000090) move-result-object   v7
+	37      (00000092) invoke-virtual       v7, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	38      (00000098) move-result-object   v7
+	39      (0000009a) const-string         v16, ' of intent '
+	40      (0000009e) move-object/from16   v0, v16
+	41      (000000a2) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	42      (000000a8) move-result-object   v7
+	43      (000000aa) move-object/from16   v0, v18
+	44      (000000ae) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	45      (000000b4) move-result-object   v7
+	46      (000000b6) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	47      (000000bc) move-result-object   v7
+	48      (000000be) invoke-static        v1, v7, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0xc4 : [ sendBroadcast-BB@0xe4 sendBroadcast-BB@0x2ea ]
+	49      (000000c4) move-object/from16   v0, v17
+	50      (000000c8) iget-object          v1, v0, Landroid/support/v4/content/LocalBroadcastManager;->mActions Ljava/util/HashMap;
+	51      (000000cc) invoke-virtual/range v18, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	52      (000000d2) move-result-object   v7
+	53      (000000d4) invoke-virtual       v1, v7, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	54      (000000da) move-result-object   v9
+	55      (000000dc) check-cast           v9, Ljava/util/ArrayList;
+	56      (000000e0) if-eqz               v9, +105
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0xe4 : [ sendBroadcast-BB@0xe8 sendBroadcast-BB@0x11c ]
+	57      (000000e4) if-eqz               v8, +1c
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0xe8 : [ sendBroadcast-BB@0x11c ]
+	58      (000000e8) const-string         v1, 'LocalBroadcastManager'
+	59      (000000ec) new-instance         v7, Ljava/lang/StringBuilder;
+	60      (000000f0) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	61      (000000f6) const-string         v16, 'Action list: '
+	62      (000000fa) move-object/from16   v0, v16
+	63      (000000fe) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	64      (00000104) move-result-object   v7
+	65      (00000106) invoke-virtual       v7, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	66      (0000010c) move-result-object   v7
+	67      (0000010e) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	68      (00000114) move-result-object   v7
+	69      (00000116) invoke-static        v1, v7, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x11c : [ sendBroadcast-BB@0x120 ]
+	70      (0000011c) const/4              v14, 0
+	71      (0000011e) const/4              v10, 0
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x120 : [ sendBroadcast-BB@0x12c sendBroadcast-BB@0x278 ]
+	72      (00000120) invoke-virtual       v9, Ljava/util/ArrayList;->size()I
+	73      (00000126) move-result          v1
+	74      (00000128) if-ge                v10, v1, +a8
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x12c : [ sendBroadcast-BB@0x13c sendBroadcast-BB@0x17c ]
+	75      (0000012c) invoke-virtual       v9, v10, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	76      (00000132) move-result-object   v13
+	77      (00000134) check-cast           v13, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;
+	78      (00000138) if-eqz               v8, +22
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x13c : [ sendBroadcast-BB@0x17c ]
+	79      (0000013c) const-string         v1, 'LocalBroadcastManager'
+	80      (00000140) new-instance         v7, Ljava/lang/StringBuilder;
+	81      (00000144) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	82      (0000014a) const-string         v16, 'Matching against filter '
+	83      (0000014e) move-object/from16   v0, v16
+	84      (00000152) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	85      (00000158) move-result-object   v7
+	86      (0000015a) iget-object          v0, v13, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->filter Landroid/content/IntentFilter;
+	87      (0000015e) move-object/from16   v16, v0
+	88      (00000162) move-object/from16   v0, v16
+	89      (00000166) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	90      (0000016c) move-result-object   v7
+	91      (0000016e) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	92      (00000174) move-result-object   v7
+	93      (00000176) invoke-static        v1, v7, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x17c : [ sendBroadcast-BB@0x184 sendBroadcast-BB@0x1a2 ]
+	94      (0000017c) iget-boolean         v1, v13, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->broadcasting Z
+	95      (00000180) if-eqz               v1, +11
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x184 : [ sendBroadcast-BB@0x188 sendBroadcast-BB@0x196 ]
+	96      (00000184) if-eqz               v8, +9
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x188 : [ sendBroadcast-BB@0x196 ]
+	97      (00000188) const-string         v1, 'LocalBroadcastManager'
+	98      (0000018c) const-string         v7, "  Filter's target already added"
+	99      (00000190) invoke-static        v1, v7, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x196 : [ sendBroadcast-BB@0x120 ]
+	100     (00000196) add-int/lit8         v10, v10, 1
+	101     (0000019a) goto                 -3d
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x19c : [ sendBroadcast-BB@0x58 ]
+	102     (0000019c) const/4              v8, 0
+	103     (0000019e) goto/16              -a3
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x1a2 : [ sendBroadcast-BB@0x1b6 sendBroadcast-BB@0x21c ]
+	104     (000001a2) iget-object          v1, v13, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->filter Landroid/content/IntentFilter;
+	105     (000001a6) const-string         v7, 'LocalBroadcastManager'
+	106     (000001aa) invoke-virtual/range v1 ... v7, Landroid/content/IntentFilter;->match(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Landroid/net/Uri; Ljava/util/Set; Ljava/lang/String;)I
+	107     (000001b0) move-result          v11
+	108     (000001b2) if-ltz               v11, +35
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x1b6 : [ sendBroadcast-BB@0x1ba sendBroadcast-BB@0x1fa ]
+	109     (000001b6) if-eqz               v8, +22
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x1ba : [ sendBroadcast-BB@0x1fa ]
+	110     (000001ba) const-string         v1, 'LocalBroadcastManager'
+	111     (000001be) new-instance         v7, Ljava/lang/StringBuilder;
+	112     (000001c2) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	113     (000001c8) const-string         v16, '  Filter matched!  match=0x'
+	114     (000001cc) move-object/from16   v0, v16
+	115     (000001d0) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	116     (000001d6) move-result-object   v7
+	117     (000001d8) invoke-static        v11, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+	118     (000001de) move-result-object   v16
+	119     (000001e0) move-object/from16   v0, v16
+	120     (000001e4) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	121     (000001ea) move-result-object   v7
+	122     (000001ec) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	123     (000001f2) move-result-object   v7
+	124     (000001f4) invoke-static        v1, v7, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x1fa : [ sendBroadcast-BB@0x1fe sendBroadcast-BB@0x208 ]
+	125     (000001fa) if-nez               v14, +7
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x1fe : [ sendBroadcast-BB@0x208 ]
+	126     (000001fe) new-instance         v14, Ljava/util/ArrayList;
+	127     (00000202) invoke-direct        v14, Ljava/util/ArrayList;-><init>()V
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x208 : [ sendBroadcast-BB@0x196 ]
+	128     (00000208) invoke-virtual       v14, v13, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	129     (0000020e) const/4              v1, 1
+	130     (00000210) iput-boolean         v1, v13, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->broadcasting Z
+	131     (00000214) goto                 -3f
+	a:219
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x216 : 
+	132     (00000216) move-exception       v1
+	133     (00000218) monitor-exit         v15
+	134     (0000021a) throw                v1
+
+sendBroadcast-BB@0x21c : [ sendBroadcast-BB@0x220 sendBroadcast-BB@0x196 ]
+	135     (0000021c) if-eqz               v8, -43
+
+sendBroadcast-BB@0x220 : [ D:sendBroadcast-BB@0x226 -4:sendBroadcast-BB@0x266 -3:sendBroadcast-BB@0x260 -2:sendBroadcast-BB@0x26c -1:sendBroadcast-BB@0x272 ]
+	136     (00000220) packed-switch        v11, +68 (0x2f0)
+
+sendBroadcast-BB@0x226 : [ sendBroadcast-BB@0x22a ]
+	137     (00000226) const-string         v12, 'unknown reason'
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x22a : [ sendBroadcast-BB@0x196 ]
+	138     (0000022a) const-string         v1, 'LocalBroadcastManager'
+	139     (0000022e) new-instance         v7, Ljava/lang/StringBuilder;
+	140     (00000232) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	141     (00000238) const-string         v16, '  Filter did not match: '
+	142     (0000023c) move-object/from16   v0, v16
+	143     (00000240) invoke-virtual       v7, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	144     (00000246) move-result-object   v7
+	145     (00000248) invoke-virtual       v7, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	146     (0000024e) move-result-object   v7
+	147     (00000250) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	148     (00000256) move-result-object   v7
+	149     (00000258) invoke-static        v1, v7, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	150     (0000025e) goto                 -64
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x260 : [ sendBroadcast-BB@0x22a ]
+	151     (00000260) const-string         v12, 'action'
+	152     (00000264) goto                 -1d
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x266 : [ sendBroadcast-BB@0x22a ]
+	153     (00000266) const-string         v12, 'category'
+	154     (0000026a) goto                 -20
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x26c : [ sendBroadcast-BB@0x22a ]
+	155     (0000026c) const-string         v12, 'data'
+	156     (00000270) goto                 -23
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x272 : [ sendBroadcast-BB@0x22a ]
+	157     (00000272) const-string         v12, 'type'
+	158     (00000276) goto                 -26
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x278 : [ sendBroadcast-BB@0x27c sendBroadcast-BB@0x2ea ]
+	159     (00000278) if-eqz               v14, +39
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x27c : [ sendBroadcast-BB@0x27e ]
+	160     (0000027c) const/4              v10, 0
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x27e : [ sendBroadcast-BB@0x28a sendBroadcast-BB@0x2a2 ]
+	161     (0000027e) invoke-virtual       v14, Ljava/util/ArrayList;->size()I
+	162     (00000284) move-result          v1
+	163     (00000286) if-ge                v10, v1, +e
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x28a : [ sendBroadcast-BB@0x27e ]
+	164     (0000028a) invoke-virtual       v14, v10, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	165     (00000290) move-result-object   v1
+	166     (00000292) check-cast           v1, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;
+	167     (00000296) const/4              v7, 0
+	168     (00000298) iput-boolean         v7, v1, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->broadcasting Z
+	169     (0000029c) add-int/lit8         v10, v10, 1
+	170     (000002a0) goto                 -11
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x2a2 : [ sendBroadcast-BB@0x2d4 sendBroadcast-BB@0x2e4 ]
+	171     (000002a2) move-object/from16   v0, v17
+	172     (000002a6) iget-object          v1, v0, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts Ljava/util/ArrayList;
+	173     (000002aa) new-instance         v7, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;
+	174     (000002ae) move-object/from16   v0, v18
+	175     (000002b2) invoke-direct        v7, v0, v14, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;-><init>(Landroid/content/Intent; Ljava/util/ArrayList;)V
+	176     (000002b8) invoke-virtual       v1, v7, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	177     (000002be) move-object/from16   v0, v17
+	178     (000002c2) iget-object          v1, v0, Landroid/support/v4/content/LocalBroadcastManager;->mHandler Landroid/os/Handler;
+	179     (000002c6) const/4              v7, 1
+	180     (000002c8) invoke-virtual       v1, v7, Landroid/os/Handler;->hasMessages(I)Z
+	181     (000002ce) move-result          v1
+	182     (000002d0) if-nez               v1, +a
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x2d4 : [ sendBroadcast-BB@0x2e4 ]
+	183     (000002d4) move-object/from16   v0, v17
+	184     (000002d8) iget-object          v1, v0, Landroid/support/v4/content/LocalBroadcastManager;->mHandler Landroid/os/Handler;
+	185     (000002dc) const/4              v7, 1
+	186     (000002de) invoke-virtual       v1, v7, Landroid/os/Handler;->sendEmptyMessage(I)Z
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x2e4 : [ sendBroadcast-BB@0x2e8 ]
+	187     (000002e4) const/4              v1, 1
+	188     (000002e6) monitor-exit         v15
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x2e8 : 
+	189     (000002e8) return               v1
+	226:2eb
+	(Ljava/lang/Throwable; -> 216 sendBroadcast-BB@0x216)
+
+sendBroadcast-BB@0x2ea : [ sendBroadcast-BB@0x2e8 ]
+	190     (000002ea) monitor-exit         v15
+	191     (000002ec) const/4              v1, 0
+	192     (000002ee) goto                 -3
+
+sendBroadcast-BB@0x2f0 : 
+	193     (000002f0) packed-switch-payload -4 -3 -2 -1
+

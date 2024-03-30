@@ -1,0 +1,62 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$1;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0x1c ]
+	0       (00000000) iget-object          v0, v6, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$1;->this$1 Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
+	1       (00000004) iget-object          v0, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0 Landroid/support/v4/media/MediaBrowserServiceCompat;
+	2       (00000008) iget-object          v0, v0, Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections Landroid/support/v4/util/ArrayMap;
+	3       (0000000c) invoke-virtual       v0, Landroid/support/v4/util/ArrayMap;->values()Ljava/util/Collection;
+	4       (00000012) move-result-object   v0
+	5       (00000014) invoke-interface     v0, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+	6       (0000001a) move-result-object   v0
+
+run-BB@0x1c : [ run-BB@0x28 run-BB@0xa0 ]
+	7       (0000001c) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	8       (00000022) move-result          v1
+	9       (00000024) if-eqz               v1, +3e
+
+run-BB@0x28 : [ run-BB@0x34 ]
+	10      (00000028) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	11      (0000002e) move-result-object   v1
+	12      (00000030) check-cast           v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
+
+run-BB@0x34 : [ run-BB@0x9e ]
+	13      (00000034) iget-object          v2, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->callbacks Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
+	14      (00000038) iget-object          v3, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->root Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;
+	15      (0000003c) invoke-virtual       v3, Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->getRootId()Ljava/lang/String;
+	16      (00000042) move-result-object   v3
+	17      (00000044) iget-object          v4, v6, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$1;->val$token Landroid/support/v4/media/session/MediaSessionCompat$Token;
+	18      (00000048) iget-object          v5, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->root Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;
+	19      (0000004c) invoke-virtual       v5, Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->getExtras()Landroid/os/Bundle;
+	20      (00000052) move-result-object   v5
+	21      (00000054) invoke-interface     v2, v3, v4, v5, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;->onConnect(Ljava/lang/String; Landroid/support/v4/media/session/MediaSessionCompat$Token; Landroid/os/Bundle;)V
+	22      (0000005a) goto                 +22
+	34:59
+	(Landroid/os/RemoteException; -> 5c run-BB@0x5c)
+
+run-BB@0x5c : [ run-BB@0x9e ]
+	23      (0000005c) move-exception       v2
+	24      (0000005e) const-string         v3, 'MBServiceCompat'
+	25      (00000062) new-instance         v4, Ljava/lang/StringBuilder;
+	26      (00000066) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	27      (0000006c) const-string         v5, 'Connection for '
+	28      (00000070) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	29      (00000076) iget-object          v5, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->pkg Ljava/lang/String;
+	30      (0000007a) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	31      (00000080) const-string         v5, ' is no longer valid.'
+	32      (00000084) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	33      (0000008a) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	34      (00000090) move-result-object   v4
+	35      (00000092) invoke-static        v3, v4, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	36      (00000098) invoke-interface     v0, Ljava/util/Iterator;->remove()V
+
+run-BB@0x9e : [ run-BB@0x1c ]
+	37      (0000009e) goto                 -41
+
+run-BB@0xa0 : 
+	38      (000000a0) return-void          
+

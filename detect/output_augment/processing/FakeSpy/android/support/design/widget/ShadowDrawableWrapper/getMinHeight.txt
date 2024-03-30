@@ -1,0 +1,25 @@
+# Landroid/support/design/widget/ShadowDrawableWrapper;->getMinHeight()F [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:float
+
+getMinHeight-BB@0x0 : 
+	0       (00000000) const/high16         v5, 16320 # [1.5]
+	1       (00000004) const/high16         v4, 16384 # [2.0]
+	2       (00000008) iget                 v1, v6, Landroid/support/design/widget/ShadowDrawableWrapper;->mRawMaxShadowSize F
+	3       (0000000c) iget                 v2, v6, Landroid/support/design/widget/ShadowDrawableWrapper;->mCornerRadius F
+	4       (00000010) iget                 v3, v6, Landroid/support/design/widget/ShadowDrawableWrapper;->mRawMaxShadowSize F
+	5       (00000014) mul-float/2addr      v3, v5
+	6       (00000016) div-float/2addr      v3, v4
+	7       (00000018) add-float/2addr      v2, v3
+	8       (0000001a) invoke-static        v1, v2, Ljava/lang/Math;->max(F F)F
+	9       (00000020) move-result          v1
+	10      (00000022) mul-float            v0, v4, v1
+	11      (00000026) iget                 v1, v6, Landroid/support/design/widget/ShadowDrawableWrapper;->mRawMaxShadowSize F
+	12      (0000002a) mul-float/2addr      v1, v5
+	13      (0000002c) mul-float/2addr      v1, v4
+	14      (0000002e) add-float/2addr      v1, v0
+	15      (00000030) return               v1
+

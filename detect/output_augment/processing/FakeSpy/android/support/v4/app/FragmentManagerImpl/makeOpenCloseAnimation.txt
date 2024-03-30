@@ -1,0 +1,40 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->makeOpenCloseAnimation(Landroid/content/Context; F F F F)Landroid/view/animation/Animation; [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:android.content.Context
+# - v12:float
+# - v13:float
+# - v14:float
+# - v15:float
+#
+# - return:android.view.animation.Animation
+
+makeOpenCloseAnimation-BB@0x0 : 
+	0       (00000000) new-instance         v10, Landroid/view/animation/AnimationSet;
+	1       (00000004) const/4              v1, 0
+	2       (00000006) invoke-direct        v10, v1, Landroid/view/animation/AnimationSet;-><init>(Z)V
+	3       (0000000c) new-instance         v0, Landroid/view/animation/ScaleAnimation;
+	4       (00000010) const/4              v5, 1
+	5       (00000012) const/high16         v6, 16128 # [0.5]
+	6       (00000016) const/4              v7, 1
+	7       (00000018) const/high16         v8, 16128 # [0.5]
+	8       (0000001c) move                 v1, v12
+	9       (0000001e) move                 v2, v13
+	10      (00000020) move                 v3, v12
+	11      (00000022) move                 v4, v13
+	12      (00000024) invoke-direct/range  v0 ... v8, Landroid/view/animation/ScaleAnimation;-><init>(F F F F I F I F)V
+	13      (0000002a) sget-object          v1, Landroid/support/v4/app/FragmentManagerImpl;->DECELERATE_QUINT Landroid/view/animation/Interpolator;
+	14      (0000002e) invoke-virtual       v0, v1, Landroid/view/animation/ScaleAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+	15      (00000034) const-wide/16        v2, 220 # [220.0]
+	16      (00000038) invoke-virtual       v0, v2, v3, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
+	17      (0000003e) invoke-virtual       v10, v0, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
+	18      (00000044) new-instance         v9, Landroid/view/animation/AlphaAnimation;
+	19      (00000048) invoke-direct        v9, v14, v15, Landroid/view/animation/AlphaAnimation;-><init>(F F)V
+	20      (0000004e) sget-object          v1, Landroid/support/v4/app/FragmentManagerImpl;->DECELERATE_CUBIC Landroid/view/animation/Interpolator;
+	21      (00000052) invoke-virtual       v9, v1, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+	22      (00000058) const-wide/16        v2, 220 # [220.0]
+	23      (0000005c) invoke-virtual       v9, v2, v3, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+	24      (00000062) invoke-virtual       v10, v9, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
+	25      (00000068) return-object        v10
+

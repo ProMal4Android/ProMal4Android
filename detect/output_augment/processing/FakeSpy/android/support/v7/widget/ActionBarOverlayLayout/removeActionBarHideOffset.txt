@@ -1,0 +1,13 @@
+# Landroid/support/v7/widget/ActionBarOverlayLayout;->removeActionBarHideOffset()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:void
+
+removeActionBarHideOffset-BB@0x0 : 
+	0       (00000000) invoke-direct        v1, Landroid/support/v7/widget/ActionBarOverlayLayout;->haltActionBarHideOffsetAnimations()V
+	1       (00000006) iget-object          v0, v1, Landroid/support/v7/widget/ActionBarOverlayLayout;->mRemoveActionBarHideOffset Ljava/lang/Runnable;
+	2       (0000000a) invoke-interface     v0, Ljava/lang/Runnable;->run()V
+	3       (00000010) return-void          
+

@@ -1,0 +1,48 @@
+# Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;-><init>(Ljava/lang/String; Ljava/lang/CharSequence; I)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.String
+# - v4:java.lang.CharSequence
+# - v5:int
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x12 <init>-BB@0x22 ]
+	0       (00000000) invoke-direct        v2, Ljava/lang/Object;-><init>()V
+	1       (00000006) invoke-static        v3, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	2       (0000000c) move-result          v0
+	3       (0000000e) if-eqz               v0, +a
+
+<init>-BB@0x12 : 
+	4       (00000012) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	5       (00000016) const-string         v1, 'You must specify an action to build a CustomAction.'
+	6       (0000001a) invoke-direct        v0, v1, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	7       (00000020) throw                v0
+
+<init>-BB@0x22 : [ <init>-BB@0x2e <init>-BB@0x3e ]
+	8       (00000022) invoke-static        v4, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	9       (00000028) move-result          v0
+	10      (0000002a) if-eqz               v0, +a
+
+<init>-BB@0x2e : 
+	11      (0000002e) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	12      (00000032) const-string         v1, 'You must specify a name to build a CustomAction.'
+	13      (00000036) invoke-direct        v0, v1, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	14      (0000003c) throw                v0
+
+<init>-BB@0x3e : [ <init>-BB@0x42 <init>-BB@0x52 ]
+	15      (0000003e) if-nez               v5, +a
+
+<init>-BB@0x42 : 
+	16      (00000042) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	17      (00000046) const-string         v1, 'You must specify an icon resource id to build a CustomAction.'
+	18      (0000004a) invoke-direct        v0, v1, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	19      (00000050) throw                v0
+
+<init>-BB@0x52 : 
+	20      (00000052) iput-object          v3, v2, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;->mAction Ljava/lang/String;
+	21      (00000056) iput-object          v4, v2, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;->mName Ljava/lang/CharSequence;
+	22      (0000005a) iput                 v5, v2, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction$Builder;->mIcon I
+	23      (0000005e) return-void          
+

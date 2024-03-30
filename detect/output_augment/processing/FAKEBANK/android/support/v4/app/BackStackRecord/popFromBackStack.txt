@@ -1,0 +1,201 @@
+# Landroid/support/v4/app/BackStackRecord;->popFromBackStack(Z)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:boolean
+#
+# - return:void
+
+popFromBackStack-BB@0x0 : [ popFromBackStack-BB@0xe popFromBackStack-BB@0x60 ]
+	0       (00000000) const/4              v10, 0
+	1       (00000002) const/4              v9, 0
+	2       (00000004) const/4              v11, -1
+	3       (00000006) sget-boolean         v6, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG Z
+	4       (0000000a) if-eqz               v6, +2b
+
+popFromBackStack-BB@0xe : [ popFromBackStack-BB@0x60 ]
+	5       (0000000e) const-string         v6, 'FragmentManager'
+	6       (00000012) new-instance         v7, Ljava/lang/StringBuilder;
+	7       (00000016) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	8       (0000001c) const-string         v8, 'popFromBackStack: '
+	9       (00000020) invoke-virtual       v7, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	10      (00000026) move-result-object   v7
+	11      (00000028) invoke-virtual       v7, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	12      (0000002e) move-result-object   v7
+	13      (00000030) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	14      (00000036) move-result-object   v7
+	15      (00000038) invoke-static        v6, v7, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	16      (0000003e) new-instance         v2, Landroid/support/v4/util/LogWriter;
+	17      (00000042) const-string         v6, 'FragmentManager'
+	18      (00000046) invoke-direct        v2, v6, Landroid/support/v4/util/LogWriter;-><init>(Ljava/lang/String;)V
+	19      (0000004c) new-instance         v5, Ljava/io/PrintWriter;
+	20      (00000050) invoke-direct        v5, v2, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
+	21      (00000056) const-string         v6, '  '
+	22      (0000005a) invoke-virtual       v12, v6, v10, v5, v10, Landroid/support/v4/app/BackStackRecord;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V
+
+popFromBackStack-BB@0x60 : [ popFromBackStack-BB@0x6a ]
+	23      (00000060) invoke-virtual       v12, v11, Landroid/support/v4/app/BackStackRecord;->bumpBackStackNesting(I)V
+	24      (00000066) iget-object          v4, v12, Landroid/support/v4/app/BackStackRecord;->mTail Landroid/support/v4/app/BackStackRecord$Op;
+
+popFromBackStack-BB@0x6a : [ popFromBackStack-BB@0x6e popFromBackStack-BB@0x200 ]
+	25      (0000006a) if-eqz               v4, +cb
+
+popFromBackStack-BB@0x6e : [ D:popFromBackStack-BB@0x78 1:popFromBackStack-BB@0xae 2:popFromBackStack-BB@0xda 3:popFromBackStack-BB@0x146 4:popFromBackStack-BB@0x15e 5:popFromBackStack-BB@0x186 6:popFromBackStack-BB@0x1ae 7:popFromBackStack-BB@0x1d6 ]
+	26      (0000006e) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->cmd I
+	27      (00000072) packed-switch        v6, +e9 (0x244)
+
+popFromBackStack-BB@0x78 : 
+	28      (00000078) new-instance         v6, Ljava/lang/IllegalArgumentException;
+	29      (0000007c) new-instance         v7, Ljava/lang/StringBuilder;
+	30      (00000080) invoke-direct        v7, Ljava/lang/StringBuilder;-><init>()V
+	31      (00000086) const-string         v8, 'Unknown cmd: '
+	32      (0000008a) invoke-virtual       v7, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	33      (00000090) move-result-object   v7
+	34      (00000092) iget                 v8, v4, Landroid/support/v4/app/BackStackRecord$Op;->cmd I
+	35      (00000096) invoke-virtual       v7, v8, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	36      (0000009c) move-result-object   v7
+	37      (0000009e) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	38      (000000a4) move-result-object   v7
+	39      (000000a6) invoke-direct        v6, v7, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	40      (000000ac) throw                v6
+
+popFromBackStack-BB@0xae : [ popFromBackStack-BB@0xd4 ]
+	41      (000000ae) iget-object          v0, v4, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	42      (000000b2) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->popExitAnim I
+	43      (000000b6) iput                 v6, v0, Landroid/support/v4/app/Fragment;->mNextAnim I
+	44      (000000ba) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	45      (000000be) iget                 v7, v12, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	46      (000000c2) invoke-static        v7, Landroid/support/v4/app/FragmentManagerImpl;->reverseTransit(I)I
+	47      (000000c8) move-result          v7
+	48      (000000ca) iget                 v8, v12, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	49      (000000ce) invoke-virtual       v6, v0, v7, v8, Landroid/support/v4/app/FragmentManagerImpl;->removeFragment(Landroid/support/v4/app/Fragment; I I)V
+
+popFromBackStack-BB@0xd4 : [ popFromBackStack-BB@0x6a ]
+	50      (000000d4) iget-object          v4, v4, Landroid/support/v4/app/BackStackRecord$Op;->prev Landroid/support/v4/app/BackStackRecord$Op;
+	51      (000000d8) goto                 -37
+
+popFromBackStack-BB@0xda : [ popFromBackStack-BB@0xe2 popFromBackStack-BB@0x104 ]
+	52      (000000da) iget-object          v0, v4, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	53      (000000de) if-eqz               v0, +13
+
+popFromBackStack-BB@0xe2 : [ popFromBackStack-BB@0x104 ]
+	54      (000000e2) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->popExitAnim I
+	55      (000000e6) iput                 v6, v0, Landroid/support/v4/app/Fragment;->mNextAnim I
+	56      (000000ea) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	57      (000000ee) iget                 v7, v12, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	58      (000000f2) invoke-static        v7, Landroid/support/v4/app/FragmentManagerImpl;->reverseTransit(I)I
+	59      (000000f8) move-result          v7
+	60      (000000fa) iget                 v8, v12, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	61      (000000fe) invoke-virtual       v6, v0, v7, v8, Landroid/support/v4/app/FragmentManagerImpl;->removeFragment(Landroid/support/v4/app/Fragment; I I)V
+
+popFromBackStack-BB@0x104 : [ popFromBackStack-BB@0x10c popFromBackStack-BB@0xd4 ]
+	62      (00000104) iget-object          v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	63      (00000108) if-eqz               v6, -1a
+
+popFromBackStack-BB@0x10c : [ popFromBackStack-BB@0x10e ]
+	64      (0000010c) const/4              v1, 0
+
+popFromBackStack-BB@0x10e : [ popFromBackStack-BB@0x11e popFromBackStack-BB@0xd4 ]
+	65      (0000010e) iget-object          v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	66      (00000112) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	67      (00000118) move-result          v6
+	68      (0000011a) if-ge                v1, v6, -23
+
+popFromBackStack-BB@0x11e : [ popFromBackStack-BB@0x10e ]
+	69      (0000011e) iget-object          v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	70      (00000122) invoke-virtual       v6, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	71      (00000128) move-result-object   v3
+	72      (0000012a) check-cast           v3, Landroid/support/v4/app/Fragment;
+	73      (0000012e) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->popEnterAnim I
+	74      (00000132) iput                 v6, v3, Landroid/support/v4/app/Fragment;->mNextAnim I
+	75      (00000136) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	76      (0000013a) invoke-virtual       v6, v3, v9, Landroid/support/v4/app/FragmentManagerImpl;->addFragment(Landroid/support/v4/app/Fragment; Z)V
+	77      (00000140) add-int/lit8         v1, v1, 1
+	78      (00000144) goto                 -1b
+
+popFromBackStack-BB@0x146 : [ popFromBackStack-BB@0xd4 ]
+	79      (00000146) iget-object          v0, v4, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	80      (0000014a) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->popEnterAnim I
+	81      (0000014e) iput                 v6, v0, Landroid/support/v4/app/Fragment;->mNextAnim I
+	82      (00000152) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	83      (00000156) invoke-virtual       v6, v0, v9, Landroid/support/v4/app/FragmentManagerImpl;->addFragment(Landroid/support/v4/app/Fragment; Z)V
+	84      (0000015c) goto                 -44
+
+popFromBackStack-BB@0x15e : [ popFromBackStack-BB@0xd4 ]
+	85      (0000015e) iget-object          v0, v4, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	86      (00000162) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->popEnterAnim I
+	87      (00000166) iput                 v6, v0, Landroid/support/v4/app/Fragment;->mNextAnim I
+	88      (0000016a) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	89      (0000016e) iget                 v7, v12, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	90      (00000172) invoke-static        v7, Landroid/support/v4/app/FragmentManagerImpl;->reverseTransit(I)I
+	91      (00000178) move-result          v7
+	92      (0000017a) iget                 v8, v12, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	93      (0000017e) invoke-virtual       v6, v0, v7, v8, Landroid/support/v4/app/FragmentManagerImpl;->showFragment(Landroid/support/v4/app/Fragment; I I)V
+	94      (00000184) goto                 -58
+
+popFromBackStack-BB@0x186 : [ popFromBackStack-BB@0xd4 ]
+	95      (00000186) iget-object          v0, v4, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	96      (0000018a) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->popExitAnim I
+	97      (0000018e) iput                 v6, v0, Landroid/support/v4/app/Fragment;->mNextAnim I
+	98      (00000192) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	99      (00000196) iget                 v7, v12, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	100     (0000019a) invoke-static        v7, Landroid/support/v4/app/FragmentManagerImpl;->reverseTransit(I)I
+	101     (000001a0) move-result          v7
+	102     (000001a2) iget                 v8, v12, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	103     (000001a6) invoke-virtual       v6, v0, v7, v8, Landroid/support/v4/app/FragmentManagerImpl;->hideFragment(Landroid/support/v4/app/Fragment; I I)V
+	104     (000001ac) goto                 -6c
+
+popFromBackStack-BB@0x1ae : [ popFromBackStack-BB@0xd4 ]
+	105     (000001ae) iget-object          v0, v4, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	106     (000001b2) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->popEnterAnim I
+	107     (000001b6) iput                 v6, v0, Landroid/support/v4/app/Fragment;->mNextAnim I
+	108     (000001ba) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	109     (000001be) iget                 v7, v12, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	110     (000001c2) invoke-static        v7, Landroid/support/v4/app/FragmentManagerImpl;->reverseTransit(I)I
+	111     (000001c8) move-result          v7
+	112     (000001ca) iget                 v8, v12, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	113     (000001ce) invoke-virtual       v6, v0, v7, v8, Landroid/support/v4/app/FragmentManagerImpl;->attachFragment(Landroid/support/v4/app/Fragment; I I)V
+	114     (000001d4) goto                 -80
+
+popFromBackStack-BB@0x1d6 : [ popFromBackStack-BB@0xd4 ]
+	115     (000001d6) iget-object          v0, v4, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	116     (000001da) iget                 v6, v4, Landroid/support/v4/app/BackStackRecord$Op;->popEnterAnim I
+	117     (000001de) iput                 v6, v0, Landroid/support/v4/app/Fragment;->mNextAnim I
+	118     (000001e2) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	119     (000001e6) iget                 v7, v12, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	120     (000001ea) invoke-static        v7, Landroid/support/v4/app/FragmentManagerImpl;->reverseTransit(I)I
+	121     (000001f0) move-result          v7
+	122     (000001f2) iget                 v8, v12, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	123     (000001f6) invoke-virtual       v6, v0, v7, v8, Landroid/support/v4/app/FragmentManagerImpl;->detachFragment(Landroid/support/v4/app/Fragment; I I)V
+	124     (000001fc) goto/16              -94
+
+popFromBackStack-BB@0x200 : [ popFromBackStack-BB@0x204 popFromBackStack-BB@0x228 ]
+	125     (00000200) if-eqz               v13, +14
+
+popFromBackStack-BB@0x204 : [ popFromBackStack-BB@0x228 ]
+	126     (00000204) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	127     (00000208) iget-object          v7, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	128     (0000020c) iget                 v7, v7, Landroid/support/v4/app/FragmentManagerImpl;->mCurState I
+	129     (00000210) iget                 v8, v12, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	130     (00000214) invoke-static        v8, Landroid/support/v4/app/FragmentManagerImpl;->reverseTransit(I)I
+	131     (0000021a) move-result          v8
+	132     (0000021c) iget                 v9, v12, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	133     (00000220) const/4              v10, 1
+	134     (00000222) invoke-virtual       v6, v7, v8, v9, v10, Landroid/support/v4/app/FragmentManagerImpl;->moveToState(I I I Z)V
+
+popFromBackStack-BB@0x228 : [ popFromBackStack-BB@0x230 popFromBackStack-BB@0x242 ]
+	135     (00000228) iget                 v6, v12, Landroid/support/v4/app/BackStackRecord;->mIndex I
+	136     (0000022c) if-ltz               v6, +b
+
+popFromBackStack-BB@0x230 : [ popFromBackStack-BB@0x242 ]
+	137     (00000230) iget-object          v6, v12, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	138     (00000234) iget                 v7, v12, Landroid/support/v4/app/BackStackRecord;->mIndex I
+	139     (00000238) invoke-virtual       v6, v7, Landroid/support/v4/app/FragmentManagerImpl;->freeBackStackIndex(I)V
+	140     (0000023e) iput                 v11, v12, Landroid/support/v4/app/BackStackRecord;->mIndex I
+
+popFromBackStack-BB@0x242 : 
+	141     (00000242) return-void          
+
+popFromBackStack-BB@0x244 : 
+	142     (00000244) packed-switch-payload 1 2 3 4 5 6 7
+

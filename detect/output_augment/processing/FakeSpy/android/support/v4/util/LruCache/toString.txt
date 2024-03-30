@@ -1,0 +1,59 @@
+# Landroid/support/v4/util/LruCache;->toString()Ljava/lang/String; [access_flags=public final synchronized]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : [ toString-BB@0x4 ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) monitor-enter        v6
+
+toString-BB@0x4 : [ toString-BB@0x14 toString-BB@0x20 ]
+	2       (00000004) iget                 v2, v6, Landroid/support/v4/util/LruCache;->hitCount I
+	3       (00000008) iget                 v3, v6, Landroid/support/v4/util/LruCache;->missCount I
+	4       (0000000c) add-int              v0, v2, v3
+	5       (00000010) if-eqz               v0, +8
+	4:73
+	(Ljava/lang/Throwable; -> 7a toString-BB@0x7a)
+
+toString-BB@0x14 : [ toString-BB@0x20 ]
+	6       (00000014) iget                 v2, v6, Landroid/support/v4/util/LruCache;->hitCount I
+	7       (00000018) mul-int/lit8         v2, v2, 100
+	8       (0000001c) div-int              v1, v2, v0
+	4:73
+	(Ljava/lang/Throwable; -> 7a toString-BB@0x7a)
+
+toString-BB@0x20 : 
+	9       (00000020) const-string         v2, 'LruCache[maxSize=%d,hits=%d,misses=%d,hitRate=%d%%]'
+	10      (00000024) const/4              v3, 4
+	11      (00000026) new-array            v3, v3, [Ljava/lang/Object;
+	12      (0000002a) const/4              v4, 0
+	13      (0000002c) iget                 v5, v6, Landroid/support/v4/util/LruCache;->maxSize I
+	14      (00000030) invoke-static        v5, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	15      (00000036) move-result-object   v5
+	16      (00000038) aput-object          v5, v3, v4
+	17      (0000003c) const/4              v4, 1
+	18      (0000003e) iget                 v5, v6, Landroid/support/v4/util/LruCache;->hitCount I
+	19      (00000042) invoke-static        v5, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	20      (00000048) move-result-object   v5
+	21      (0000004a) aput-object          v5, v3, v4
+	22      (0000004e) const/4              v4, 2
+	23      (00000050) iget                 v5, v6, Landroid/support/v4/util/LruCache;->missCount I
+	24      (00000054) invoke-static        v5, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	25      (0000005a) move-result-object   v5
+	26      (0000005c) aput-object          v5, v3, v4
+	27      (00000060) const/4              v4, 3
+	28      (00000062) invoke-static        v1, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	29      (00000068) move-result-object   v5
+	30      (0000006a) aput-object          v5, v3, v4
+	31      (0000006e) invoke-static        v2, v3, Ljava/lang/String;->format(Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;
+	32      (00000074) move-result-object   v2
+	33      (00000076) monitor-exit         v6
+	34      (00000078) return-object        v2
+
+toString-BB@0x7a : 
+	35      (0000007a) move-exception       v2
+	36      (0000007c) monitor-exit         v6
+	37      (0000007e) throw                v2
+

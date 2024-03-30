@@ -1,0 +1,581 @@
+# Landroid/support/v7/widget/RecyclerView;->onTouchEvent(Landroid/view/MotionEvent;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v23
+# - v24:android.view.MotionEvent
+#
+# - return:boolean
+
+onTouchEvent-BB@0x0 : [ onTouchEvent-BB@0x10 onTouchEvent-BB@0x20 ]
+	0       (00000000) move-object/from16   v0, v23
+	1       (00000004) iget-boolean         v0, v0, Landroid/support/v7/widget/RecyclerView;->mLayoutFrozen Z
+	2       (00000008) move/from16          v18, v0
+	3       (0000000c) if-nez               v18, +a
+
+onTouchEvent-BB@0x10 : [ onTouchEvent-BB@0x20 onTouchEvent-BB@0x26 ]
+	4       (00000010) move-object/from16   v0, v23
+	5       (00000014) iget-boolean         v0, v0, Landroid/support/v7/widget/RecyclerView;->mIgnoreMotionEventTillDown Z
+	6       (00000018) move/from16          v18, v0
+	7       (0000001c) if-eqz               v18, +5
+
+onTouchEvent-BB@0x20 : [ onTouchEvent-BB@0x24 ]
+	8       (00000020) const/16             v18, 0
+
+onTouchEvent-BB@0x24 : 
+	9       (00000024) return               v18
+
+onTouchEvent-BB@0x26 : [ onTouchEvent-BB@0x32 onTouchEvent-BB@0x3e ]
+	10      (00000026) invoke-direct/range  v23 ... v24, Landroid/support/v7/widget/RecyclerView;->dispatchOnItemTouch(Landroid/view/MotionEvent;)Z
+	11      (0000002c) move-result          v18
+	12      (0000002e) if-eqz               v18, +8
+
+onTouchEvent-BB@0x32 : [ onTouchEvent-BB@0x24 ]
+	13      (00000032) invoke-direct/range  v23, Landroid/support/v7/widget/RecyclerView;->cancelTouch()V
+	14      (00000038) const/16             v18, 1
+	15      (0000003c) goto                 -c
+
+onTouchEvent-BB@0x3e : [ onTouchEvent-BB@0x4e onTouchEvent-BB@0x54 ]
+	16      (0000003e) move-object/from16   v0, v23
+	17      (00000042) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	18      (00000046) move-object/from16   v18, v0
+	19      (0000004a) if-nez               v18, +5
+
+onTouchEvent-BB@0x4e : [ onTouchEvent-BB@0x24 ]
+	20      (0000004e) const/16             v18, 0
+	21      (00000052) goto                 -17
+
+onTouchEvent-BB@0x54 : [ onTouchEvent-BB@0x8c onTouchEvent-BB@0xa0 ]
+	22      (00000054) move-object/from16   v0, v23
+	23      (00000058) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	24      (0000005c) move-object/from16   v18, v0
+	25      (00000060) invoke-virtual/range v18, Landroid/support/v7/widget/RecyclerView$LayoutManager;->canScrollHorizontally()Z
+	26      (00000066) move-result          v5
+	27      (00000068) move-object/from16   v0, v23
+	28      (0000006c) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	29      (00000070) move-object/from16   v18, v0
+	30      (00000074) invoke-virtual/range v18, Landroid/support/v7/widget/RecyclerView$LayoutManager;->canScrollVertically()Z
+	31      (0000007a) move-result          v6
+	32      (0000007c) move-object/from16   v0, v23
+	33      (00000080) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mVelocityTracker Landroid/view/VelocityTracker;
+	34      (00000084) move-object/from16   v18, v0
+	35      (00000088) if-nez               v18, +c
+
+onTouchEvent-BB@0x8c : [ onTouchEvent-BB@0xa0 ]
+	36      (0000008c) invoke-static        Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
+	37      (00000092) move-result-object   v18
+	38      (00000094) move-object/from16   v0, v18
+	39      (00000098) move-object/from16   v1, v23
+	40      (0000009c) iput-object          v0, v1, Landroid/support/v7/widget/RecyclerView;->mVelocityTracker Landroid/view/VelocityTracker;
+
+onTouchEvent-BB@0xa0 : [ onTouchEvent-BB@0xbe onTouchEvent-BB@0xea ]
+	41      (000000a0) const/4              v9, 0
+	42      (000000a2) invoke-static/range  v24, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
+	43      (000000a8) move-result-object   v13
+	44      (000000aa) invoke-static/range  v24, Landroid/support/v4/view/MotionEventCompat;->getActionMasked(Landroid/view/MotionEvent;)I
+	45      (000000b0) move-result          v3
+	46      (000000b2) invoke-static/range  v24, Landroid/support/v4/view/MotionEventCompat;->getActionIndex(Landroid/view/MotionEvent;)I
+	47      (000000b8) move-result          v4
+	48      (000000ba) if-nez               v3, +18
+
+onTouchEvent-BB@0xbe : [ onTouchEvent-BB@0xea ]
+	49      (000000be) move-object/from16   v0, v23
+	50      (000000c2) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mNestedOffsets [I
+	51      (000000c6) move-object/from16   v18, v0
+	52      (000000ca) const/16             v19, 0
+	53      (000000ce) move-object/from16   v0, v23
+	54      (000000d2) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mNestedOffsets [I
+	55      (000000d6) move-object/from16   v20, v0
+	56      (000000da) const/16             v21, 1
+	57      (000000de) const/16             v22, 0
+	58      (000000e2) aput                 v22, v20, v21
+	59      (000000e6) aput                 v22, v18, v19
+
+onTouchEvent-BB@0xea : [ D:onTouchEvent-BB@0x13a 0:onTouchEvent-BB@0x162 1:onTouchEvent-BB@0x5ce 2:onTouchEvent-BB@0x28c 3:onTouchEvent-BB@0x6d0 4:onTouchEvent-BB@0x13a 5:onTouchEvent-BB@0x204 6:onTouchEvent-BB@0x5c4 ]
+	60      (000000ea) move-object/from16   v0, v23
+	61      (000000ee) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mNestedOffsets [I
+	62      (000000f2) move-object/from16   v18, v0
+	63      (000000f6) const/16             v19, 0
+	64      (000000fa) aget                 v18, v18, v19
+	65      (000000fe) move/from16          v0, v18
+	66      (00000102) int-to-float         v0, v0
+	67      (00000104) move/from16          v18, v0
+	68      (00000108) move-object/from16   v0, v23
+	69      (0000010c) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mNestedOffsets [I
+	70      (00000110) move-object/from16   v19, v0
+	71      (00000114) const/16             v20, 1
+	72      (00000118) aget                 v19, v19, v20
+	73      (0000011c) move/from16          v0, v19
+	74      (00000120) int-to-float         v0, v0
+	75      (00000122) move/from16          v19, v0
+	76      (00000126) move/from16          v0, v18
+	77      (0000012a) move/from16          v1, v19
+	78      (0000012e) invoke-virtual       v13, v0, v1, Landroid/view/MotionEvent;->offsetLocation(F F)V
+	79      (00000134) packed-switch        v3, +2d4 (0x6dc)
+
+onTouchEvent-BB@0x13a : [ onTouchEvent-BB@0x13e onTouchEvent-BB@0x154 ]
+	80      (0000013a) if-nez               v9, +d
+
+onTouchEvent-BB@0x13e : [ onTouchEvent-BB@0x154 ]
+	81      (0000013e) move-object/from16   v0, v23
+	82      (00000142) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mVelocityTracker Landroid/view/VelocityTracker;
+	83      (00000146) move-object/from16   v18, v0
+	84      (0000014a) move-object/from16   v0, v18
+	85      (0000014e) invoke-virtual       v0, v13, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+
+onTouchEvent-BB@0x154 : [ onTouchEvent-BB@0x24 ]
+	86      (00000154) invoke-virtual       v13, Landroid/view/MotionEvent;->recycle()V
+	87      (0000015a) const/16             v18, 1
+	88      (0000015e) goto/16              -9d
+
+onTouchEvent-BB@0x162 : [ onTouchEvent-BB@0x1ec onTouchEvent-BB@0x1f0 ]
+	89      (00000162) const/16             v18, 0
+	90      (00000166) move-object/from16   v0, v24
+	91      (0000016a) move/from16          v1, v18
+	92      (0000016e) invoke-static        v0, v1, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent; I)I
+	93      (00000174) move-result          v18
+	94      (00000176) move/from16          v0, v18
+	95      (0000017a) move-object/from16   v1, v23
+	96      (0000017e) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mScrollPointerId I
+	97      (00000182) invoke-virtual/range v24, Landroid/view/MotionEvent;->getX()F
+	98      (00000188) move-result          v18
+	99      (0000018a) const/high16         v19, 16128 # [0.5]
+	100     (0000018e) add-float            v18, v18, v19
+	101     (00000192) move/from16          v0, v18
+	102     (00000196) float-to-int         v0, v0
+	103     (00000198) move/from16          v18, v0
+	104     (0000019c) move/from16          v0, v18
+	105     (000001a0) move-object/from16   v1, v23
+	106     (000001a4) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mLastTouchX I
+	107     (000001a8) move/from16          v0, v18
+	108     (000001ac) move-object/from16   v1, v23
+	109     (000001b0) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mInitialTouchX I
+	110     (000001b4) invoke-virtual/range v24, Landroid/view/MotionEvent;->getY()F
+	111     (000001ba) move-result          v18
+	112     (000001bc) const/high16         v19, 16128 # [0.5]
+	113     (000001c0) add-float            v18, v18, v19
+	114     (000001c4) move/from16          v0, v18
+	115     (000001c8) float-to-int         v0, v0
+	116     (000001ca) move/from16          v18, v0
+	117     (000001ce) move/from16          v0, v18
+	118     (000001d2) move-object/from16   v1, v23
+	119     (000001d6) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mLastTouchY I
+	120     (000001da) move/from16          v0, v18
+	121     (000001de) move-object/from16   v1, v23
+	122     (000001e2) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mInitialTouchY I
+	123     (000001e6) const/4              v11, 0
+	124     (000001e8) if-eqz               v5, +4
+
+onTouchEvent-BB@0x1ec : [ onTouchEvent-BB@0x1f0 ]
+	125     (000001ec) or-int/lit8          v11, v11, 1
+
+onTouchEvent-BB@0x1f0 : [ onTouchEvent-BB@0x1f4 onTouchEvent-BB@0x1f8 ]
+	126     (000001f0) if-eqz               v6, +4
+
+onTouchEvent-BB@0x1f4 : [ onTouchEvent-BB@0x1f8 ]
+	127     (000001f4) or-int/lit8          v11, v11, 2
+
+onTouchEvent-BB@0x1f8 : [ onTouchEvent-BB@0x13a ]
+	128     (000001f8) move-object/from16   v0, v23
+	129     (000001fc) invoke-virtual       v0, v11, Landroid/support/v7/widget/RecyclerView;->startNestedScroll(I)Z
+	130     (00000202) goto                 -64
+
+onTouchEvent-BB@0x204 : [ onTouchEvent-BB@0x13a ]
+	131     (00000204) move-object/from16   v0, v24
+	132     (00000208) invoke-static        v0, v4, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent; I)I
+	133     (0000020e) move-result          v18
+	134     (00000210) move/from16          v0, v18
+	135     (00000214) move-object/from16   v1, v23
+	136     (00000218) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mScrollPointerId I
+	137     (0000021c) move-object/from16   v0, v24
+	138     (00000220) invoke-static        v0, v4, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent; I)F
+	139     (00000226) move-result          v18
+	140     (00000228) const/high16         v19, 16128 # [0.5]
+	141     (0000022c) add-float            v18, v18, v19
+	142     (00000230) move/from16          v0, v18
+	143     (00000234) float-to-int         v0, v0
+	144     (00000236) move/from16          v18, v0
+	145     (0000023a) move/from16          v0, v18
+	146     (0000023e) move-object/from16   v1, v23
+	147     (00000242) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mLastTouchX I
+	148     (00000246) move/from16          v0, v18
+	149     (0000024a) move-object/from16   v1, v23
+	150     (0000024e) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mInitialTouchX I
+	151     (00000252) move-object/from16   v0, v24
+	152     (00000256) invoke-static        v0, v4, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent; I)F
+	153     (0000025c) move-result          v18
+	154     (0000025e) const/high16         v19, 16128 # [0.5]
+	155     (00000262) add-float            v18, v18, v19
+	156     (00000266) move/from16          v0, v18
+	157     (0000026a) float-to-int         v0, v0
+	158     (0000026c) move/from16          v18, v0
+	159     (00000270) move/from16          v0, v18
+	160     (00000274) move-object/from16   v1, v23
+	161     (00000278) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mLastTouchY I
+	162     (0000027c) move/from16          v0, v18
+	163     (00000280) move-object/from16   v1, v23
+	164     (00000284) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mInitialTouchY I
+	165     (00000288) goto/16              -a7
+
+onTouchEvent-BB@0x28c : [ onTouchEvent-BB@0x2ac onTouchEvent-BB@0x2fc ]
+	166     (0000028c) move-object/from16   v0, v23
+	167     (00000290) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollPointerId I
+	168     (00000294) move/from16          v18, v0
+	169     (00000298) move-object/from16   v0, v24
+	170     (0000029c) move/from16          v1, v18
+	171     (000002a0) invoke-static        v0, v1, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent; I)I
+	172     (000002a6) move-result          v10
+	173     (000002a8) if-gez               v10, +2a
+
+onTouchEvent-BB@0x2ac : [ onTouchEvent-BB@0x24 ]
+	174     (000002ac) const-string         v18, 'RecyclerView'
+	175     (000002b0) new-instance         v19, Ljava/lang/StringBuilder;
+	176     (000002b4) invoke-direct/range  v19, Ljava/lang/StringBuilder;-><init>()V
+	177     (000002ba) const-string         v20, 'Error processing scroll; pointer index for id '
+	178     (000002be) invoke-virtual/range v19 ... v20, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	179     (000002c4) move-result-object   v19
+	180     (000002c6) move-object/from16   v0, v23
+	181     (000002ca) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollPointerId I
+	182     (000002ce) move/from16          v20, v0
+	183     (000002d2) invoke-virtual/range v19 ... v20, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	184     (000002d8) move-result-object   v19
+	185     (000002da) const-string         v20, ' not found. Did any MotionEvents get skipped?'
+	186     (000002de) invoke-virtual/range v19 ... v20, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	187     (000002e4) move-result-object   v19
+	188     (000002e6) invoke-virtual/range v19, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	189     (000002ec) move-result-object   v19
+	190     (000002ee) invoke-static/range  v18 ... v19, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	191     (000002f4) const/16             v18, 0
+	192     (000002f8) goto/16              -16a
+
+onTouchEvent-BB@0x2fc : [ onTouchEvent-BB@0x384 onTouchEvent-BB@0x45e ]
+	193     (000002fc) move-object/from16   v0, v24
+	194     (00000300) invoke-static        v0, v10, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent; I)F
+	195     (00000306) move-result          v18
+	196     (00000308) const/high16         v19, 16128 # [0.5]
+	197     (0000030c) add-float            v18, v18, v19
+	198     (00000310) move/from16          v0, v18
+	199     (00000314) float-to-int         v14, v0
+	200     (00000316) move-object/from16   v0, v24
+	201     (0000031a) invoke-static        v0, v10, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent; I)F
+	202     (00000320) move-result          v18
+	203     (00000322) const/high16         v19, 16128 # [0.5]
+	204     (00000326) add-float            v18, v18, v19
+	205     (0000032a) move/from16          v0, v18
+	206     (0000032e) float-to-int         v0, v0
+	207     (00000330) move/from16          v16, v0
+	208     (00000334) move-object/from16   v0, v23
+	209     (00000338) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mLastTouchX I
+	210     (0000033c) move/from16          v18, v0
+	211     (00000340) sub-int              v7, v18, v14
+	212     (00000344) move-object/from16   v0, v23
+	213     (00000348) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mLastTouchY I
+	214     (0000034c) move/from16          v18, v0
+	215     (00000350) sub-int              v8, v18, v16
+	216     (00000354) move-object/from16   v0, v23
+	217     (00000358) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollConsumed [I
+	218     (0000035c) move-object/from16   v18, v0
+	219     (00000360) move-object/from16   v0, v23
+	220     (00000364) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollOffset [I
+	221     (00000368) move-object/from16   v19, v0
+	222     (0000036c) move-object/from16   v0, v23
+	223     (00000370) move-object/from16   v1, v18
+	224     (00000374) move-object/from16   v2, v19
+	225     (00000378) invoke-virtual       v0, v7, v8, v1, v2, Landroid/support/v7/widget/RecyclerView;->dispatchNestedPreScroll(I I [I [I)Z
+	226     (0000037e) move-result          v18
+	227     (00000380) if-eqz               v18, +6f
+
+onTouchEvent-BB@0x384 : [ onTouchEvent-BB@0x45e ]
+	228     (00000384) move-object/from16   v0, v23
+	229     (00000388) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollConsumed [I
+	230     (0000038c) move-object/from16   v18, v0
+	231     (00000390) const/16             v19, 0
+	232     (00000394) aget                 v18, v18, v19
+	233     (00000398) sub-int              v7, v7, v18
+	234     (0000039c) move-object/from16   v0, v23
+	235     (000003a0) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollConsumed [I
+	236     (000003a4) move-object/from16   v18, v0
+	237     (000003a8) const/16             v19, 1
+	238     (000003ac) aget                 v18, v18, v19
+	239     (000003b0) sub-int              v8, v8, v18
+	240     (000003b4) move-object/from16   v0, v23
+	241     (000003b8) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollOffset [I
+	242     (000003bc) move-object/from16   v18, v0
+	243     (000003c0) const/16             v19, 0
+	244     (000003c4) aget                 v18, v18, v19
+	245     (000003c8) move/from16          v0, v18
+	246     (000003cc) int-to-float         v0, v0
+	247     (000003ce) move/from16          v18, v0
+	248     (000003d2) move-object/from16   v0, v23
+	249     (000003d6) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollOffset [I
+	250     (000003da) move-object/from16   v19, v0
+	251     (000003de) const/16             v20, 1
+	252     (000003e2) aget                 v19, v19, v20
+	253     (000003e6) move/from16          v0, v19
+	254     (000003ea) int-to-float         v0, v0
+	255     (000003ec) move/from16          v19, v0
+	256     (000003f0) move/from16          v0, v18
+	257     (000003f4) move/from16          v1, v19
+	258     (000003f8) invoke-virtual       v13, v0, v1, Landroid/view/MotionEvent;->offsetLocation(F F)V
+	259     (000003fe) move-object/from16   v0, v23
+	260     (00000402) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mNestedOffsets [I
+	261     (00000406) move-object/from16   v18, v0
+	262     (0000040a) const/16             v19, 0
+	263     (0000040e) aget                 v20, v18, v19
+	264     (00000412) move-object/from16   v0, v23
+	265     (00000416) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollOffset [I
+	266     (0000041a) move-object/from16   v21, v0
+	267     (0000041e) const/16             v22, 0
+	268     (00000422) aget                 v21, v21, v22
+	269     (00000426) add-int              v20, v20, v21
+	270     (0000042a) aput                 v20, v18, v19
+	271     (0000042e) move-object/from16   v0, v23
+	272     (00000432) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mNestedOffsets [I
+	273     (00000436) move-object/from16   v18, v0
+	274     (0000043a) const/16             v19, 1
+	275     (0000043e) aget                 v20, v18, v19
+	276     (00000442) move-object/from16   v0, v23
+	277     (00000446) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollOffset [I
+	278     (0000044a) move-object/from16   v21, v0
+	279     (0000044e) const/16             v22, 1
+	280     (00000452) aget                 v21, v21, v22
+	281     (00000456) add-int              v20, v20, v21
+	282     (0000045a) aput                 v20, v18, v19
+
+onTouchEvent-BB@0x45e : [ onTouchEvent-BB@0x47a onTouchEvent-BB@0x506 ]
+	283     (0000045e) move-object/from16   v0, v23
+	284     (00000462) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollState I
+	285     (00000466) move/from16          v18, v0
+	286     (0000046a) const/16             v19, 1
+	287     (0000046e) move/from16          v0, v18
+	288     (00000472) move/from16          v1, v19
+	289     (00000476) if-eq                v0, v1, +48
+
+onTouchEvent-BB@0x47a : [ onTouchEvent-BB@0x480 onTouchEvent-BB@0x4b6 ]
+	290     (0000047a) const/4              v12, 0
+	291     (0000047c) if-eqz               v5, +1d
+
+onTouchEvent-BB@0x480 : [ onTouchEvent-BB@0x4a0 onTouchEvent-BB@0x4b6 ]
+	292     (00000480) invoke-static        v7, Ljava/lang/Math;->abs(I)I
+	293     (00000486) move-result          v18
+	294     (00000488) move-object/from16   v0, v23
+	295     (0000048c) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mTouchSlop I
+	296     (00000490) move/from16          v19, v0
+	297     (00000494) move/from16          v0, v18
+	298     (00000498) move/from16          v1, v19
+	299     (0000049c) if-le                v0, v1, +d
+
+onTouchEvent-BB@0x4a0 : [ onTouchEvent-BB@0x4a4 onTouchEvent-BB@0x598 ]
+	300     (000004a0) if-lez               v7, +7c
+
+onTouchEvent-BB@0x4a4 : [ onTouchEvent-BB@0x4b4 ]
+	301     (000004a4) move-object/from16   v0, v23
+	302     (000004a8) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mTouchSlop I
+	303     (000004ac) move/from16          v18, v0
+	304     (000004b0) sub-int              v7, v7, v18
+
+onTouchEvent-BB@0x4b4 : [ onTouchEvent-BB@0x4b6 ]
+	305     (000004b4) const/4              v12, 1
+
+onTouchEvent-BB@0x4b6 : [ onTouchEvent-BB@0x4ba onTouchEvent-BB@0x4f0 ]
+	306     (000004b6) if-eqz               v6, +1d
+
+onTouchEvent-BB@0x4ba : [ onTouchEvent-BB@0x4da onTouchEvent-BB@0x4f0 ]
+	307     (000004ba) invoke-static        v8, Ljava/lang/Math;->abs(I)I
+	308     (000004c0) move-result          v18
+	309     (000004c2) move-object/from16   v0, v23
+	310     (000004c6) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mTouchSlop I
+	311     (000004ca) move/from16          v19, v0
+	312     (000004ce) move/from16          v0, v18
+	313     (000004d2) move/from16          v1, v19
+	314     (000004d6) if-le                v0, v1, +d
+
+onTouchEvent-BB@0x4da : [ onTouchEvent-BB@0x4de onTouchEvent-BB@0x5aa ]
+	315     (000004da) if-lez               v8, +68
+
+onTouchEvent-BB@0x4de : [ onTouchEvent-BB@0x4ee ]
+	316     (000004de) move-object/from16   v0, v23
+	317     (000004e2) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mTouchSlop I
+	318     (000004e6) move/from16          v18, v0
+	319     (000004ea) sub-int              v8, v8, v18
+
+onTouchEvent-BB@0x4ee : [ onTouchEvent-BB@0x4f0 ]
+	320     (000004ee) const/4              v12, 1
+
+onTouchEvent-BB@0x4f0 : [ onTouchEvent-BB@0x4f4 onTouchEvent-BB@0x506 ]
+	321     (000004f0) if-eqz               v12, +b
+
+onTouchEvent-BB@0x4f4 : [ onTouchEvent-BB@0x506 ]
+	322     (000004f4) const/16             v18, 1
+	323     (000004f8) move-object/from16   v0, v23
+	324     (000004fc) move/from16          v1, v18
+	325     (00000500) invoke-direct        v0, v1, Landroid/support/v7/widget/RecyclerView;->setScrollState(I)V
+
+onTouchEvent-BB@0x506 : [ onTouchEvent-BB@0x522 onTouchEvent-BB@0x13a ]
+	326     (00000506) move-object/from16   v0, v23
+	327     (0000050a) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollState I
+	328     (0000050e) move/from16          v18, v0
+	329     (00000512) const/16             v19, 1
+	330     (00000516) move/from16          v0, v18
+	331     (0000051a) move/from16          v1, v19
+	332     (0000051e) if-ne                v0, v1, -1f2
+
+onTouchEvent-BB@0x522 : [ onTouchEvent-BB@0x56e onTouchEvent-BB@0x5bc ]
+	333     (00000522) move-object/from16   v0, v23
+	334     (00000526) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollOffset [I
+	335     (0000052a) move-object/from16   v18, v0
+	336     (0000052e) const/16             v19, 0
+	337     (00000532) aget                 v18, v18, v19
+	338     (00000536) sub-int              v18, v14, v18
+	339     (0000053a) move/from16          v0, v18
+	340     (0000053e) move-object/from16   v1, v23
+	341     (00000542) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mLastTouchX I
+	342     (00000546) move-object/from16   v0, v23
+	343     (0000054a) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollOffset [I
+	344     (0000054e) move-object/from16   v18, v0
+	345     (00000552) const/16             v19, 1
+	346     (00000556) aget                 v18, v18, v19
+	347     (0000055a) sub-int              v18, v16, v18
+	348     (0000055e) move/from16          v0, v18
+	349     (00000562) move-object/from16   v1, v23
+	350     (00000566) iput                 v0, v1, Landroid/support/v7/widget/RecyclerView;->mLastTouchY I
+	351     (0000056a) if-eqz               v5, +29
+
+onTouchEvent-BB@0x56e : [ onTouchEvent-BB@0x572 onTouchEvent-BB@0x5c0 ]
+	352     (0000056e) if-eqz               v6, +29
+
+onTouchEvent-BB@0x572 : [ onTouchEvent-BB@0x582 onTouchEvent-BB@0x13a ]
+	353     (00000572) move-object/from16   v0, v23
+	354     (00000576) invoke-virtual       v0, v7, v8, v13, Landroid/support/v7/widget/RecyclerView;->scrollByInternal(I I Landroid/view/MotionEvent;)Z
+	355     (0000057c) move-result          v18
+	356     (0000057e) if-eqz               v18, -222
+
+onTouchEvent-BB@0x582 : [ onTouchEvent-BB@0x13a ]
+	357     (00000582) invoke-virtual/range v23, Landroid/support/v7/widget/RecyclerView;->getParent()Landroid/view/ViewParent;
+	358     (00000588) move-result-object   v18
+	359     (0000058a) const/16             v19, 1
+	360     (0000058e) invoke-interface/range v18 ... v19, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+	361     (00000594) goto/16              -22d
+
+onTouchEvent-BB@0x598 : [ onTouchEvent-BB@0x4b4 ]
+	362     (00000598) move-object/from16   v0, v23
+	363     (0000059c) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mTouchSlop I
+	364     (000005a0) move/from16          v18, v0
+	365     (000005a4) add-int              v7, v7, v18
+	366     (000005a8) goto                 -7a
+
+onTouchEvent-BB@0x5aa : [ onTouchEvent-BB@0x4ee ]
+	367     (000005aa) move-object/from16   v0, v23
+	368     (000005ae) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mTouchSlop I
+	369     (000005b2) move/from16          v18, v0
+	370     (000005b6) add-int              v8, v8, v18
+	371     (000005ba) goto                 -66
+
+onTouchEvent-BB@0x5bc : [ onTouchEvent-BB@0x56e ]
+	372     (000005bc) const/4              v7, 0
+	373     (000005be) goto                 -28
+
+onTouchEvent-BB@0x5c0 : [ onTouchEvent-BB@0x572 ]
+	374     (000005c0) const/4              v8, 0
+	375     (000005c2) goto                 -28
+
+onTouchEvent-BB@0x5c4 : [ onTouchEvent-BB@0x13a ]
+	376     (000005c4) invoke-direct/range  v23 ... v24, Landroid/support/v7/widget/RecyclerView;->onPointerUp(Landroid/view/MotionEvent;)V
+	377     (000005ca) goto/16              -248
+
+onTouchEvent-BB@0x5ce : [ onTouchEvent-BB@0x616 onTouchEvent-BB@0x6c6 ]
+	378     (000005ce) move-object/from16   v0, v23
+	379     (000005d2) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mVelocityTracker Landroid/view/VelocityTracker;
+	380     (000005d6) move-object/from16   v18, v0
+	381     (000005da) move-object/from16   v0, v18
+	382     (000005de) invoke-virtual       v0, v13, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+	383     (000005e4) const/4              v9, 1
+	384     (000005e6) move-object/from16   v0, v23
+	385     (000005ea) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mVelocityTracker Landroid/view/VelocityTracker;
+	386     (000005ee) move-object/from16   v18, v0
+	387     (000005f2) const/16             v19, 1000
+	388     (000005f6) move-object/from16   v0, v23
+	389     (000005fa) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mMaxFlingVelocity I
+	390     (000005fe) move/from16          v20, v0
+	391     (00000602) move/from16          v0, v20
+	392     (00000606) int-to-float         v0, v0
+	393     (00000608) move/from16          v20, v0
+	394     (0000060c) invoke-virtual/range v18 ... v20, Landroid/view/VelocityTracker;->computeCurrentVelocity(I F)V
+	395     (00000612) if-eqz               v5, +5a
+
+onTouchEvent-BB@0x616 : [ onTouchEvent-BB@0x63c ]
+	396     (00000616) move-object/from16   v0, v23
+	397     (0000061a) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mVelocityTracker Landroid/view/VelocityTracker;
+	398     (0000061e) move-object/from16   v18, v0
+	399     (00000622) move-object/from16   v0, v23
+	400     (00000626) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollPointerId I
+	401     (0000062a) move/from16          v19, v0
+	402     (0000062e) invoke-static/range  v18 ... v19, Landroid/support/v4/view/VelocityTrackerCompat;->getXVelocity(Landroid/view/VelocityTracker; I)F
+	403     (00000634) move-result          v18
+	404     (00000636) move/from16          v0, v18
+	405     (0000063a) neg-float            v15, v0
+
+onTouchEvent-BB@0x63c : [ onTouchEvent-BB@0x640 onTouchEvent-BB@0x6ca ]
+	406     (0000063c) if-eqz               v6, +47
+
+onTouchEvent-BB@0x640 : [ onTouchEvent-BB@0x66a ]
+	407     (00000640) move-object/from16   v0, v23
+	408     (00000644) iget-object          v0, v0, Landroid/support/v7/widget/RecyclerView;->mVelocityTracker Landroid/view/VelocityTracker;
+	409     (00000648) move-object/from16   v18, v0
+	410     (0000064c) move-object/from16   v0, v23
+	411     (00000650) iget                 v0, v0, Landroid/support/v7/widget/RecyclerView;->mScrollPointerId I
+	412     (00000654) move/from16          v19, v0
+	413     (00000658) invoke-static/range  v18 ... v19, Landroid/support/v4/view/VelocityTrackerCompat;->getYVelocity(Landroid/view/VelocityTracker; I)F
+	414     (0000065e) move-result          v18
+	415     (00000660) move/from16          v0, v18
+	416     (00000664) neg-float            v0, v0
+	417     (00000666) move/from16          v17, v0
+
+onTouchEvent-BB@0x66a : [ onTouchEvent-BB@0x676 onTouchEvent-BB@0x682 ]
+	418     (0000066a) const/16             v18, 0
+	419     (0000066e) cmpl-float           v18, v15, v18
+	420     (00000672) if-nez               v18, +8
+
+onTouchEvent-BB@0x676 : [ onTouchEvent-BB@0x682 onTouchEvent-BB@0x6aa ]
+	421     (00000676) const/16             v18, 0
+	422     (0000067a) cmpl-float           v18, v17, v18
+	423     (0000067e) if-eqz               v18, +16
+
+onTouchEvent-BB@0x682 : [ onTouchEvent-BB@0x6aa onTouchEvent-BB@0x6bc ]
+	424     (00000682) float-to-int         v0, v15
+	425     (00000684) move/from16          v18, v0
+	426     (00000688) move/from16          v0, v17
+	427     (0000068c) float-to-int         v0, v0
+	428     (0000068e) move/from16          v19, v0
+	429     (00000692) move-object/from16   v0, v23
+	430     (00000696) move/from16          v1, v18
+	431     (0000069a) move/from16          v2, v19
+	432     (0000069e) invoke-virtual       v0, v1, v2, Landroid/support/v7/widget/RecyclerView;->fling(I I)Z
+	433     (000006a4) move-result          v18
+	434     (000006a6) if-nez               v18, +b
+
+onTouchEvent-BB@0x6aa : [ onTouchEvent-BB@0x6bc ]
+	435     (000006aa) const/16             v18, 0
+	436     (000006ae) move-object/from16   v0, v23
+	437     (000006b2) move/from16          v1, v18
+	438     (000006b6) invoke-direct        v0, v1, Landroid/support/v7/widget/RecyclerView;->setScrollState(I)V
+
+onTouchEvent-BB@0x6bc : [ onTouchEvent-BB@0x13a ]
+	439     (000006bc) invoke-direct/range  v23, Landroid/support/v7/widget/RecyclerView;->resetTouch()V
+	440     (000006c2) goto/16              -2c4
+
+onTouchEvent-BB@0x6c6 : [ onTouchEvent-BB@0x63c ]
+	441     (000006c6) const/4              v15, 0
+	442     (000006c8) goto                 -46
+
+onTouchEvent-BB@0x6ca : [ onTouchEvent-BB@0x66a ]
+	443     (000006ca) const/16             v17, 0
+	444     (000006ce) goto                 -32
+
+onTouchEvent-BB@0x6d0 : [ onTouchEvent-BB@0x13a ]
+	445     (000006d0) invoke-direct/range  v23, Landroid/support/v7/widget/RecyclerView;->cancelTouch()V
+	446     (000006d6) goto/16              -2ce
+
+onTouchEvent-BB@0x6da : 
+	447     (000006da) nop                  
+	448     (000006dc) packed-switch-payload 0 1 2 3 4 5 6
+

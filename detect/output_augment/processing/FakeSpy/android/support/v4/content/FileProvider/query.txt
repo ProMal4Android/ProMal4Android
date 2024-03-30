@@ -1,0 +1,87 @@
+# Landroid/support/v4/content/FileProvider;->query(Landroid/net/Uri; [Ljava/lang/String; Ljava/lang/String; [Ljava/lang/String; Ljava/lang/String;)Landroid/database/Cursor; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:android.net.Uri
+# - v14:java.lang.String[]
+# - v15:java.lang.String
+# - v16:java.lang.String[]
+# - v17:java.lang.String
+#
+# - return:android.database.Cursor
+
+query-BB@0x0 : [ query-BB@0x10 query-BB@0x14 ]
+	0       (00000000) iget-object          v10, v12, Landroid/support/v4/content/FileProvider;->mStrategy Landroid/support/v4/content/FileProvider$PathStrategy;
+	1       (00000004) invoke-interface     v10, v13, Landroid/support/v4/content/FileProvider$PathStrategy;->getFileForUri(Landroid/net/Uri;)Ljava/io/File;
+	2       (0000000a) move-result-object   v4
+	3       (0000000c) if-nez               v14, +4
+
+query-BB@0x10 : [ query-BB@0x14 ]
+	4       (00000010) sget-object          v14, Landroid/support/v4/content/FileProvider;->COLUMNS [Ljava/lang/String;
+
+query-BB@0x14 : [ query-BB@0x2a ]
+	5       (00000014) array-length         v10, v14
+	6       (00000016) new-array            v2, v10, [Ljava/lang/String;
+	7       (0000001a) array-length         v10, v14
+	8       (0000001c) new-array            v9, v10, [Ljava/lang/Object;
+	9       (00000020) const/4              v5, 0
+	10      (00000022) move-object          v0, v14
+	11      (00000024) array-length         v8, v0
+	12      (00000026) const/4              v7, 0
+	13      (00000028) move                 v6, v5
+
+query-BB@0x2a : [ query-BB@0x2e query-BB@0x94 ]
+	14      (0000002a) if-ge                v7, v8, +35
+
+query-BB@0x2e : [ query-BB@0x42 query-BB@0x62 ]
+	15      (0000002e) aget-object          v1, v0, v7
+	16      (00000032) const-string         v10, '_display_name'
+	17      (00000036) invoke-virtual       v10, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	18      (0000003c) move-result          v10
+	19      (0000003e) if-eqz               v10, +12
+
+query-BB@0x42 : [ query-BB@0x5a ]
+	20      (00000042) const-string         v10, '_display_name'
+	21      (00000046) aput-object          v10, v2, v6
+	22      (0000004a) add-int/lit8         v5, v6, 1
+	23      (0000004e) invoke-virtual       v4, Ljava/io/File;->getName()Ljava/lang/String;
+	24      (00000054) move-result-object   v10
+	25      (00000056) aput-object          v10, v9, v6
+
+query-BB@0x5a : [ query-BB@0x2a ]
+	26      (0000005a) add-int/lit8         v7, v7, 1
+	27      (0000005e) move                 v6, v5
+	28      (00000060) goto                 -1b
+
+query-BB@0x62 : [ query-BB@0x72 query-BB@0xb8 ]
+	29      (00000062) const-string         v10, '_size'
+	30      (00000066) invoke-virtual       v10, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	31      (0000006c) move-result          v10
+	32      (0000006e) if-eqz               v10, +25
+
+query-BB@0x72 : [ query-BB@0x5a ]
+	33      (00000072) const-string         v10, '_size'
+	34      (00000076) aput-object          v10, v2, v6
+	35      (0000007a) add-int/lit8         v5, v6, 1
+	36      (0000007e) invoke-virtual       v4, Ljava/io/File;->length()J
+	37      (00000084) move-result-wide     v10
+	38      (00000086) invoke-static        v10, v11, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+	39      (0000008c) move-result-object   v10
+	40      (0000008e) aput-object          v10, v9, v6
+	41      (00000092) goto                 -1c
+
+query-BB@0x94 : 
+	42      (00000094) invoke-static        v2, v6, Landroid/support/v4/content/FileProvider;->copyOf([Ljava/lang/String; I)[Ljava/lang/String;
+	43      (0000009a) move-result-object   v2
+	44      (0000009c) invoke-static        v9, v6, Landroid/support/v4/content/FileProvider;->copyOf([Ljava/lang/Object; I)[Ljava/lang/Object;
+	45      (000000a2) move-result-object   v9
+	46      (000000a4) new-instance         v3, Landroid/database/MatrixCursor;
+	47      (000000a8) const/4              v10, 1
+	48      (000000aa) invoke-direct        v3, v2, v10, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String; I)V
+	49      (000000b0) invoke-virtual       v3, v9, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
+	50      (000000b6) return-object        v3
+
+query-BB@0xb8 : [ query-BB@0x5a ]
+	51      (000000b8) move                 v5, v6
+	52      (000000ba) goto                 -30
+

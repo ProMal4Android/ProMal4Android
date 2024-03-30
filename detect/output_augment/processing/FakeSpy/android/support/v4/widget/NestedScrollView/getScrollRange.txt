@@ -1,0 +1,34 @@
+# Landroid/support/v4/widget/NestedScrollView;->getScrollRange()I [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:int
+
+getScrollRange-BB@0x0 : [ getScrollRange-BB@0x10 getScrollRange-BB@0x46 ]
+	0       (00000000) const/4              v5, 0
+	1       (00000002) const/4              v1, 0
+	2       (00000004) invoke-virtual       v6, Landroid/support/v4/widget/NestedScrollView;->getChildCount()I
+	3       (0000000a) move-result          v2
+	4       (0000000c) if-lez               v2, +1d
+
+getScrollRange-BB@0x10 : [ getScrollRange-BB@0x46 ]
+	5       (00000010) invoke-virtual       v6, v5, Landroid/support/v4/widget/NestedScrollView;->getChildAt(I)Landroid/view/View;
+	6       (00000016) move-result-object   v0
+	7       (00000018) invoke-virtual       v0, Landroid/view/View;->getHeight()I
+	8       (0000001e) move-result          v2
+	9       (00000020) invoke-virtual       v6, Landroid/support/v4/widget/NestedScrollView;->getHeight()I
+	10      (00000026) move-result          v3
+	11      (00000028) invoke-virtual       v6, Landroid/support/v4/widget/NestedScrollView;->getPaddingBottom()I
+	12      (0000002e) move-result          v4
+	13      (00000030) sub-int/2addr        v3, v4
+	14      (00000032) invoke-virtual       v6, Landroid/support/v4/widget/NestedScrollView;->getPaddingTop()I
+	15      (00000038) move-result          v4
+	16      (0000003a) sub-int/2addr        v3, v4
+	17      (0000003c) sub-int/2addr        v2, v3
+	18      (0000003e) invoke-static        v5, v2, Ljava/lang/Math;->max(I I)I
+	19      (00000044) move-result          v1
+
+getScrollRange-BB@0x46 : 
+	20      (00000046) return               v1
+

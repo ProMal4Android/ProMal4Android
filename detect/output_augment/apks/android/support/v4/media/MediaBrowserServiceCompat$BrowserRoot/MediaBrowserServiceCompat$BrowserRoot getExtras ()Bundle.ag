@@ -1,0 +1,11 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->getExtras()Landroid/os/Bundle; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:android.os.Bundle
+
+getExtras-BB@0x0 : 
+	0       (00000000) iget-object          v0, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->mExtras Landroid/os/Bundle;
+	1       (00000004) return-object        v0
+

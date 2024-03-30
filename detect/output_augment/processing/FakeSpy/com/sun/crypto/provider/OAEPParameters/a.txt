@@ -1,0 +1,50 @@
+# Lcom/sun/crypto/provider/OAEPParameters;->a(Ljava/lang/String;)Ljava/lang/String; [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v0
+# - v1:java.lang.String
+#
+# - return:java.lang.String
+
+a-BB@0x0 : [ a-BB@0x10 a-BB@0x16 ]
+	0       (00000000) const-string         v0, 'SHA'
+	1       (00000004) invoke-virtual       v1, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	2       (0000000a) move-result          v0
+	3       (0000000c) if-eqz               v0, +5
+
+a-BB@0x10 : [ a-BB@0x14 ]
+	4       (00000010) const-string         v1, 'SHA-1'
+
+a-BB@0x14 : 
+	5       (00000014) return-object        v1
+
+a-BB@0x16 : [ a-BB@0x26 a-BB@0x2c ]
+	6       (00000016) const-string         v0, 'SHA256'
+	7       (0000001a) invoke-virtual       v1, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	8       (00000020) move-result          v0
+	9       (00000022) if-eqz               v0, +5
+
+a-BB@0x26 : [ a-BB@0x14 ]
+	10      (00000026) const-string         v1, 'SHA-256'
+	11      (0000002a) goto                 -b
+
+a-BB@0x2c : [ a-BB@0x3c a-BB@0x42 ]
+	12      (0000002c) const-string         v0, 'SHA384'
+	13      (00000030) invoke-virtual       v1, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	14      (00000036) move-result          v0
+	15      (00000038) if-eqz               v0, +5
+
+a-BB@0x3c : [ a-BB@0x14 ]
+	16      (0000003c) const-string         v1, 'SHA-384'
+	17      (00000040) goto                 -16
+
+a-BB@0x42 : [ a-BB@0x52 a-BB@0x14 ]
+	18      (00000042) const-string         v0, 'SHA512'
+	19      (00000046) invoke-virtual       v1, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	20      (0000004c) move-result          v0
+	21      (0000004e) if-eqz               v0, -1d
+
+a-BB@0x52 : [ a-BB@0x14 ]
+	22      (00000052) const-string         v1, 'SHA-512'
+	23      (00000056) goto                 -21
+

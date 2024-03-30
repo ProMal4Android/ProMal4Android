@@ -1,0 +1,30 @@
+# Landroid/support/v7/widget/Toolbar;->getCurrentContentInsetStart()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:int
+
+getCurrentContentInsetStart-BB@0x0 : [ getCurrentContentInsetStart-BB@0xc getCurrentContentInsetStart-BB@0x2c ]
+	0       (00000000) invoke-virtual       v3, Landroid/support/v7/widget/Toolbar;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
+	1       (00000006) move-result-object   v0
+	2       (00000008) if-eqz               v0, +12
+
+getCurrentContentInsetStart-BB@0xc : [ getCurrentContentInsetStart-BB@0x2a ]
+	3       (0000000c) invoke-virtual       v3, Landroid/support/v7/widget/Toolbar;->getContentInsetStart()I
+	4       (00000012) move-result          v0
+	5       (00000014) iget                 v1, v3, Landroid/support/v7/widget/Toolbar;->A I
+	6       (00000018) const/4              v2, 0
+	7       (0000001a) invoke-static        v1, v2, Ljava/lang/Math;->max(I I)I
+	8       (00000020) move-result          v1
+	9       (00000022) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	10      (00000028) move-result          v0
+
+getCurrentContentInsetStart-BB@0x2a : 
+	11      (0000002a) return               v0
+
+getCurrentContentInsetStart-BB@0x2c : [ getCurrentContentInsetStart-BB@0x2a ]
+	12      (0000002c) invoke-virtual       v3, Landroid/support/v7/widget/Toolbar;->getContentInsetStart()I
+	13      (00000032) move-result          v0
+	14      (00000034) goto                 -5
+

@@ -1,0 +1,27 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->postOrRun(Ljava/lang/Runnable;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.Runnable
+#
+# - return:void
+
+postOrRun-BB@0x0 : [ postOrRun-BB@0x1c postOrRun-BB@0x24 ]
+	0       (00000000) invoke-static        Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-virtual       v2, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->getLooper()Landroid/os/Looper;
+	3       (0000000e) move-result-object   v1
+	4       (00000010) invoke-virtual       v1, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+	5       (00000016) move-result-object   v1
+	6       (00000018) if-ne                v0, v1, +6
+
+postOrRun-BB@0x1c : [ postOrRun-BB@0x22 ]
+	7       (0000001c) invoke-interface     v3, Ljava/lang/Runnable;->run()V
+
+postOrRun-BB@0x22 : 
+	8       (00000022) return-void          
+
+postOrRun-BB@0x24 : [ postOrRun-BB@0x22 ]
+	9       (00000024) invoke-virtual       v2, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->post(Ljava/lang/Runnable;)Z
+	10      (0000002a) goto                 -4
+

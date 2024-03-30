@@ -1,0 +1,41 @@
+# Landroid/support/v7/widget/Toolbar;->b(Landroid/view/View; I [I I)I [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.view.View
+# - v8:int
+# - v9:int[]
+# - v10:int
+#
+# - return:int
+
+b-BB@0x0 : 
+	0       (00000000) const/4              v4, 1
+	1       (00000002) const/4              v3, 0
+	2       (00000004) invoke-virtual       v7, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	3       (0000000a) move-result-object   v0
+	4       (0000000c) check-cast           v0, Landroid/support/v7/widget/Toolbar$b;
+	5       (00000010) iget                 v1, v0, Landroid/support/v7/widget/Toolbar$b;->rightMargin I
+	6       (00000014) aget                 v2, v9, v4
+	7       (00000018) sub-int/2addr        v1, v2
+	8       (0000001a) invoke-static        v3, v1, Ljava/lang/Math;->max(I I)I
+	9       (00000020) move-result          v2
+	10      (00000022) sub-int              v2, v8, v2
+	11      (00000026) neg-int              v1, v1
+	12      (00000028) invoke-static        v3, v1, Ljava/lang/Math;->max(I I)I
+	13      (0000002e) move-result          v1
+	14      (00000030) aput                 v1, v9, v4
+	15      (00000034) invoke-direct        v6, v7, v10, Landroid/support/v7/widget/Toolbar;->a(Landroid/view/View; I)I
+	16      (0000003a) move-result          v1
+	17      (0000003c) invoke-virtual       v7, Landroid/view/View;->getMeasuredWidth()I
+	18      (00000042) move-result          v3
+	19      (00000044) sub-int              v4, v2, v3
+	20      (00000048) invoke-virtual       v7, Landroid/view/View;->getMeasuredHeight()I
+	21      (0000004e) move-result          v5
+	22      (00000050) add-int/2addr        v5, v1
+	23      (00000052) invoke-virtual       v7, v4, v1, v2, v5, Landroid/view/View;->layout(I I I I)V
+	24      (00000058) iget                 v0, v0, Landroid/support/v7/widget/Toolbar$b;->leftMargin I
+	25      (0000005c) add-int/2addr        v0, v3
+	26      (0000005e) sub-int              v0, v2, v0
+	27      (00000062) return               v0
+

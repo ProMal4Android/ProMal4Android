@@ -1,0 +1,48 @@
+# Landroid/support/v7/view/menu/ListMenuItemView;->setShortcut(Z C)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:boolean
+# - v5:char
+#
+# - return:void
+
+setShortcut-BB@0x0 : [ setShortcut-BB@0x4 setShortcut-BB@0x4c ]
+	0       (00000000) if-eqz               v4, +26
+
+setShortcut-BB@0x4 : [ setShortcut-BB@0x14 setShortcut-BB@0x4c ]
+	1       (00000004) iget-object          v1, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mItemData Landroid/support/v7/view/menu/MenuItemImpl;
+	2       (00000008) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->shouldShowShortcut()Z
+	3       (0000000e) move-result          v1
+	4       (00000010) if-eqz               v1, +1e
+
+setShortcut-BB@0x14 : [ setShortcut-BB@0x16 ]
+	5       (00000014) const/4              v0, 0
+
+setShortcut-BB@0x16 : [ setShortcut-BB@0x1a setShortcut-BB@0x30 ]
+	6       (00000016) if-nez               v0, +d
+
+setShortcut-BB@0x1a : [ setShortcut-BB@0x30 ]
+	7       (0000001a) iget-object          v1, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mShortcutView Landroid/widget/TextView;
+	8       (0000001e) iget-object          v2, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mItemData Landroid/support/v7/view/menu/MenuItemImpl;
+	9       (00000022) invoke-virtual       v2, Landroid/support/v7/view/menu/MenuItemImpl;->getShortcutLabel()Ljava/lang/String;
+	10      (00000028) move-result-object   v2
+	11      (0000002a) invoke-virtual       v1, v2, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+setShortcut-BB@0x30 : [ setShortcut-BB@0x40 setShortcut-BB@0x4a ]
+	12      (00000030) iget-object          v1, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mShortcutView Landroid/widget/TextView;
+	13      (00000034) invoke-virtual       v1, Landroid/widget/TextView;->getVisibility()I
+	14      (0000003a) move-result          v1
+	15      (0000003c) if-eq                v1, v0, +7
+
+setShortcut-BB@0x40 : [ setShortcut-BB@0x4a ]
+	16      (00000040) iget-object          v1, v3, Landroid/support/v7/view/menu/ListMenuItemView;->mShortcutView Landroid/widget/TextView;
+	17      (00000044) invoke-virtual       v1, v0, Landroid/widget/TextView;->setVisibility(I)V
+
+setShortcut-BB@0x4a : 
+	18      (0000004a) return-void          
+
+setShortcut-BB@0x4c : [ setShortcut-BB@0x16 ]
+	19      (0000004c) const/16             v0, 8
+	20      (00000050) goto                 -1d
+

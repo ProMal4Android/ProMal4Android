@@ -1,0 +1,42 @@
+# Landroid/support/v7/widget/TintContextWrapper;->shouldWrap(Landroid/content/Context;)Z [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Context
+#
+# - return:boolean
+
+shouldWrap-BB@0x0 : [ shouldWrap-BB@0xa shouldWrap-BB@0x2a ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) instance-of          v1, v3, Landroid/support/v7/widget/TintContextWrapper;
+	2       (00000006) if-nez               v1, +12
+
+shouldWrap-BB@0xa : [ shouldWrap-BB@0x1a shouldWrap-BB@0x2a ]
+	3       (0000000a) invoke-virtual       v3, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	4       (00000010) move-result-object   v1
+	5       (00000012) instance-of          v1, v1, Landroid/support/v7/widget/TintResources;
+	6       (00000016) if-nez               v1, +a
+
+shouldWrap-BB@0x1a : [ shouldWrap-BB@0x2a shouldWrap-BB@0x2c ]
+	7       (0000001a) invoke-virtual       v3, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	8       (00000020) move-result-object   v1
+	9       (00000022) instance-of          v1, v1, Landroid/support/v7/widget/VectorEnabledTintResources;
+	10      (00000026) if-eqz               v1, +3
+
+shouldWrap-BB@0x2a : 
+	11      (0000002a) return               v0
+
+shouldWrap-BB@0x2c : [ shouldWrap-BB@0x38 shouldWrap-BB@0x44 ]
+	12      (0000002c) invoke-static        Landroid/support/v7/app/AppCompatDelegate;->isCompatVectorFromResourcesEnabled()Z
+	13      (00000032) move-result          v1
+	14      (00000034) if-eqz               v1, +8
+
+shouldWrap-BB@0x38 : [ shouldWrap-BB@0x44 shouldWrap-BB@0x2a ]
+	15      (00000038) sget                 v1, Landroid/os/Build$VERSION;->SDK_INT I
+	16      (0000003c) const/16             v2, 20
+	17      (00000040) if-gt                v1, v2, -b
+
+shouldWrap-BB@0x44 : [ shouldWrap-BB@0x2a ]
+	18      (00000044) const/4              v0, 1
+	19      (00000046) goto                 -e
+

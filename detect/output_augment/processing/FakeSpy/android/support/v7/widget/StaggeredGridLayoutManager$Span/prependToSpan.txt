@@ -1,0 +1,48 @@
+# Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->prependToSpan(Landroid/view/View;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.view.View
+#
+# - return:void
+
+prependToSpan-BB@0x0 : [ prependToSpan-BB@0x32 prependToSpan-BB@0x36 ]
+	0       (00000000) const/high16         v3, -32768 # [-0.0]
+	1       (00000004) invoke-virtual       v4, v5, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->getLayoutParams(Landroid/view/View;)Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) iput-object          v4, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+	4       (00000010) iget-object          v1, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	5       (00000014) const/4              v2, 0
+	6       (00000016) invoke-virtual       v1, v2, v5, Ljava/util/ArrayList;->add(I Ljava/lang/Object;)V
+	7       (0000001c) iput                 v3, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mCachedStart I
+	8       (00000020) iget-object          v1, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	9       (00000024) invoke-virtual       v1, Ljava/util/ArrayList;->size()I
+	10      (0000002a) move-result          v1
+	11      (0000002c) const/4              v2, 1
+	12      (0000002e) if-ne                v1, v2, +4
+
+prependToSpan-BB@0x32 : [ prependToSpan-BB@0x36 ]
+	13      (00000032) iput                 v3, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mCachedEnd I
+
+prependToSpan-BB@0x36 : [ prependToSpan-BB@0x42 prependToSpan-BB@0x4e ]
+	14      (00000036) invoke-virtual       v0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->isItemRemoved()Z
+	15      (0000003c) move-result          v1
+	16      (0000003e) if-nez               v1, +8
+
+prependToSpan-BB@0x42 : [ prependToSpan-BB@0x4e prependToSpan-BB@0x68 ]
+	17      (00000042) invoke-virtual       v0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->isItemChanged()Z
+	18      (00000048) move-result          v1
+	19      (0000004a) if-eqz               v1, +f
+
+prependToSpan-BB@0x4e : [ prependToSpan-BB@0x68 ]
+	20      (0000004e) iget                 v1, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mDeletedSize I
+	21      (00000052) iget-object          v2, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->this$0 Landroid/support/v7/widget/StaggeredGridLayoutManager;
+	22      (00000056) iget-object          v2, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager;->mPrimaryOrientation Landroid/support/v7/widget/OrientationHelper;
+	23      (0000005a) invoke-virtual       v2, v5, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
+	24      (00000060) move-result          v2
+	25      (00000062) add-int/2addr        v1, v2
+	26      (00000064) iput                 v1, v4, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mDeletedSize I
+
+prependToSpan-BB@0x68 : 
+	27      (00000068) return-void          
+

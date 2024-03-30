@@ -1,0 +1,59 @@
+# Landroid/support/v7/util/SortedList;->get(I)Ljava/lang/Object; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:int
+#
+# - return:java.lang.Object
+
+get-BB@0x0 : [ get-BB@0x8 get-BB@0xc ]
+	0       (00000000) iget                 v0, v3, Landroid/support/v7/util/SortedList;->mSize I
+	1       (00000004) if-ge                v4, v0, +4
+
+get-BB@0x8 : [ get-BB@0xc get-BB@0x56 ]
+	2       (00000008) if-gez               v4, +27
+
+get-BB@0xc : 
+	3       (0000000c) new-instance         v0, Ljava/lang/IndexOutOfBoundsException;
+	4       (00000010) new-instance         v1, Ljava/lang/StringBuilder;
+	5       (00000014) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	6       (0000001a) const-string         v2, 'Asked to get item at '
+	7       (0000001e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000024) move-result-object   v1
+	9       (00000026) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	10      (0000002c) move-result-object   v1
+	11      (0000002e) const-string         v2, ' but size is '
+	12      (00000032) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) iget                 v2, v3, Landroid/support/v7/util/SortedList;->mSize I
+	15      (0000003e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	16      (00000044) move-result-object   v1
+	17      (00000046) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	18      (0000004c) move-result-object   v1
+	19      (0000004e) invoke-direct        v0, v1, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+	20      (00000054) throw                v0
+
+get-BB@0x56 : [ get-BB@0x5e get-BB@0x7e ]
+	21      (00000056) iget-object          v0, v3, Landroid/support/v7/util/SortedList;->mOldData [Ljava/lang/Object;
+	22      (0000005a) if-eqz               v0, +12
+
+get-BB@0x5e : [ get-BB@0x66 get-BB@0x7e ]
+	23      (0000005e) iget                 v0, v3, Landroid/support/v7/util/SortedList;->mMergedSize I
+	24      (00000062) if-lt                v4, v0, +e
+
+get-BB@0x66 : [ get-BB@0x7c ]
+	25      (00000066) iget-object          v0, v3, Landroid/support/v7/util/SortedList;->mOldData [Ljava/lang/Object;
+	26      (0000006a) iget                 v1, v3, Landroid/support/v7/util/SortedList;->mMergedSize I
+	27      (0000006e) sub-int              v1, v4, v1
+	28      (00000072) iget                 v2, v3, Landroid/support/v7/util/SortedList;->mOldDataStart I
+	29      (00000076) add-int/2addr        v1, v2
+	30      (00000078) aget-object          v0, v0, v1
+
+get-BB@0x7c : 
+	31      (0000007c) return-object        v0
+
+get-BB@0x7e : [ get-BB@0x7c ]
+	32      (0000007e) iget-object          v0, v3, Landroid/support/v7/util/SortedList;->mData [Ljava/lang/Object;
+	33      (00000082) aget-object          v0, v0, v4
+	34      (00000086) goto                 -5
+

@@ -1,0 +1,64 @@
+# Lorg/ceremony/perfect/Drill;->onAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.view.accessibility.AccessibilityEvent
+#
+# - return:void
+
+onAccessibilityEvent-BB@0x0 : [ onAccessibilityEvent-BB@0x4 onAccessibilityEvent-BB@0x6 ]
+	0       (00000000) if-nez               v3, +3
+
+onAccessibilityEvent-BB@0x4 : 
+	1       (00000004) return-void          
+
+onAccessibilityEvent-BB@0x6 : [ onAccessibilityEvent-BB@0xe onAccessibilityEvent-BB@0x2a ]
+	2       (00000006) sget-boolean         v0, Lorg/ceremony/perfect/Drill;->b Z
+	3       (0000000a) if-eqz               v0, +10
+
+onAccessibilityEvent-BB@0xe : [ onAccessibilityEvent-BB@0x22 onAccessibilityEvent-BB@0x2a ]
+	4       (0000000e) invoke-virtual       v3, Landroid/view/accessibility/AccessibilityEvent;->getSource()Landroid/view/accessibility/AccessibilityNodeInfo;
+	5       (00000014) move-result-object   v0
+	6       (00000016) invoke-direct        v2, v0, Lorg/ceremony/perfect/Drill;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
+	7       (0000001c) move-result          v0
+	8       (0000001e) if-eqz               v0, +6
+
+onAccessibilityEvent-BB@0x22 : [ onAccessibilityEvent-BB@0x4 ]
+	9       (00000022) const/4              v0, 0
+	10      (00000024) sput-boolean         v0, Lorg/ceremony/perfect/Drill;->b Z
+	11      (00000028) goto                 -12
+
+onAccessibilityEvent-BB@0x2a : [ onAccessibilityEvent-BB@0x36 onAccessibilityEvent-BB@0x6c ]
+	12      (0000002a) invoke-virtual       v3, Landroid/view/accessibility/AccessibilityEvent;->getPackageName()Ljava/lang/CharSequence;
+	13      (00000030) move-result-object   v0
+	14      (00000032) if-nez               v0, +1d
+
+onAccessibilityEvent-BB@0x36 : [ onAccessibilityEvent-BB@0x3a ]
+	15      (00000036) const-string         v0, ''
+
+onAccessibilityEvent-BB@0x3a : [ onAccessibilityEvent-BB@0x46 onAccessibilityEvent-BB@0x4 ]
+	16      (0000003a) invoke-virtual       v0, Ljava/lang/String;->isEmpty()Z
+	17      (00000040) move-result          v1
+	18      (00000042) if-nez               v1, -1f
+
+onAccessibilityEvent-BB@0x46 : [ onAccessibilityEvent-BB@0x62 onAccessibilityEvent-BB@0x4 ]
+	19      (00000046) invoke-virtual       v2, Lorg/ceremony/perfect/Drill;->getApplicationContext()Landroid/content/Context;
+	20      (0000004c) move-result-object   v1
+	21      (0000004e) invoke-static        v1, Lorg/ceremony/perfect/d;->a(Landroid/content/Context;)Lorg/ceremony/perfect/d;
+	22      (00000054) move-result-object   v1
+	23      (00000056) invoke-virtual       v1, v0, Lorg/ceremony/perfect/d;->b(Ljava/lang/String;)Z
+	24      (0000005c) move-result          v0
+	25      (0000005e) if-eqz               v0, -2d
+
+onAccessibilityEvent-BB@0x62 : [ onAccessibilityEvent-BB@0x4 ]
+	26      (00000062) const/4              v0, 2
+	27      (00000064) invoke-virtual       v2, v0, Lorg/ceremony/perfect/Drill;->performGlobalAction(I)Z
+	28      (0000006a) goto                 -33
+
+onAccessibilityEvent-BB@0x6c : [ onAccessibilityEvent-BB@0x3a ]
+	29      (0000006c) invoke-virtual       v3, Landroid/view/accessibility/AccessibilityEvent;->getPackageName()Ljava/lang/CharSequence;
+	30      (00000072) move-result-object   v0
+	31      (00000074) invoke-interface     v0, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+	32      (0000007a) move-result-object   v0
+	33      (0000007c) goto                 -21
+

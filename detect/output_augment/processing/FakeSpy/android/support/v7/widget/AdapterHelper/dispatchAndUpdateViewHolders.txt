@@ -1,0 +1,150 @@
+# Landroid/support/v7/widget/AdapterHelper;->dispatchAndUpdateViewHolders(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v14
+# - v15:android.support.v7.widget.AdapterHelper$UpdateOp
+#
+# - return:void
+
+dispatchAndUpdateViewHolders-BB@0x0 : [ dispatchAndUpdateViewHolders-BB@0xc dispatchAndUpdateViewHolders-BB@0x18 ]
+	0       (00000000) const/4              v11, 0
+	1       (00000002) const/4              v10, 1
+	2       (00000004) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	3       (00000008) if-eq                v12, v10, +8
+
+dispatchAndUpdateViewHolders-BB@0xc : [ dispatchAndUpdateViewHolders-BB@0x18 dispatchAndUpdateViewHolders-BB@0x28 ]
+	4       (0000000c) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	5       (00000010) const/16             v13, 8
+	6       (00000014) if-ne                v12, v13, +a
+
+dispatchAndUpdateViewHolders-BB@0x18 : 
+	7       (00000018) new-instance         v10, Ljava/lang/IllegalArgumentException;
+	8       (0000001c) const-string         v11, 'should not dispatch add or move for pre layout'
+	9       (00000020) invoke-direct        v10, v11, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	10      (00000026) throw                v10
+
+dispatchAndUpdateViewHolders-BB@0x28 : [ D:dispatchAndUpdateViewHolders-BB@0x48 2:dispatchAndUpdateViewHolders-BB@0xb8 3:dispatchAndUpdateViewHolders-BB@0x48 4:dispatchAndUpdateViewHolders-BB@0x7a ]
+	11      (00000028) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	12      (0000002c) iget                 v13, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	13      (00000030) invoke-direct        v14, v12, v13, Landroid/support/v7/widget/AdapterHelper;->updatePositionWithPostponed(I I)I
+	14      (00000036) move-result          v8
+	15      (00000038) const/4              v7, 1
+	16      (0000003a) iget                 v1, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	17      (0000003e) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	18      (00000042) packed-switch        v12, +77 (0x130)
+
+dispatchAndUpdateViewHolders-BB@0x48 : 
+	19      (00000048) new-instance         v10, Ljava/lang/IllegalArgumentException;
+	20      (0000004c) new-instance         v11, Ljava/lang/StringBuilder;
+	21      (00000050) invoke-direct        v11, Ljava/lang/StringBuilder;-><init>()V
+	22      (00000056) const-string         v12, 'op should be remove or update.'
+	23      (0000005a) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (00000060) move-result-object   v11
+	25      (00000062) invoke-virtual       v11, v15, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	26      (00000068) move-result-object   v11
+	27      (0000006a) invoke-virtual       v11, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	28      (00000070) move-result-object   v11
+	29      (00000072) invoke-direct        v10, v11, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	30      (00000078) throw                v10
+
+dispatchAndUpdateViewHolders-BB@0x7a : [ dispatchAndUpdateViewHolders-BB@0x7c ]
+	31      (0000007a) const/4              v5, 1
+
+dispatchAndUpdateViewHolders-BB@0x7c : [ dispatchAndUpdateViewHolders-BB@0x7e ]
+	32      (0000007c) const/4              v2, 1
+
+dispatchAndUpdateViewHolders-BB@0x7e : [ dispatchAndUpdateViewHolders-BB@0x86 dispatchAndUpdateViewHolders-BB@0x106 ]
+	33      (0000007e) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	34      (00000082) if-ge                v2, v12, +42
+
+dispatchAndUpdateViewHolders-BB@0x86 : [ D:dispatchAndUpdateViewHolders-BB@0xaa 2:dispatchAndUpdateViewHolders-BB@0xcc 3:dispatchAndUpdateViewHolders-BB@0xaa 4:dispatchAndUpdateViewHolders-BB@0xbc ]
+	35      (00000086) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	36      (0000008a) mul-int              v13, v5, v2
+	37      (0000008e) add-int              v4, v12, v13
+	38      (00000092) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	39      (00000096) invoke-direct        v14, v4, v12, Landroid/support/v7/widget/AdapterHelper;->updatePositionWithPostponed(I I)I
+	40      (0000009c) move-result          v9
+	41      (0000009e) const/4              v0, 0
+	42      (000000a0) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	43      (000000a4) packed-switch        v12, +50 (0x144)
+
+dispatchAndUpdateViewHolders-BB@0xaa : [ dispatchAndUpdateViewHolders-BB@0xae dispatchAndUpdateViewHolders-BB@0xd8 ]
+	44      (000000aa) if-eqz               v0, +17
+
+dispatchAndUpdateViewHolders-BB@0xae : [ dispatchAndUpdateViewHolders-BB@0xb2 ]
+	45      (000000ae) add-int/lit8         v7, v7, 1
+
+dispatchAndUpdateViewHolders-BB@0xb2 : [ dispatchAndUpdateViewHolders-BB@0x7e ]
+	46      (000000b2) add-int/lit8         v2, v2, 1
+	47      (000000b6) goto                 -1c
+
+dispatchAndUpdateViewHolders-BB@0xb8 : [ dispatchAndUpdateViewHolders-BB@0x7c ]
+	48      (000000b8) const/4              v5, 0
+	49      (000000ba) goto                 -1f
+
+dispatchAndUpdateViewHolders-BB@0xbc : [ dispatchAndUpdateViewHolders-BB@0xc4 dispatchAndUpdateViewHolders-BB@0xc8 ]
+	50      (000000bc) add-int/lit8         v12, v8, 1
+	51      (000000c0) if-ne                v9, v12, +4
+
+dispatchAndUpdateViewHolders-BB@0xc4 : [ dispatchAndUpdateViewHolders-BB@0xc6 ]
+	52      (000000c4) move                 v0, v10
+
+dispatchAndUpdateViewHolders-BB@0xc6 : [ dispatchAndUpdateViewHolders-BB@0xaa ]
+	53      (000000c6) goto                 -e
+
+dispatchAndUpdateViewHolders-BB@0xc8 : [ dispatchAndUpdateViewHolders-BB@0xc6 ]
+	54      (000000c8) move                 v0, v11
+	55      (000000ca) goto                 -2
+
+dispatchAndUpdateViewHolders-BB@0xcc : [ dispatchAndUpdateViewHolders-BB@0xd0 dispatchAndUpdateViewHolders-BB@0xd4 ]
+	56      (000000cc) if-ne                v9, v8, +4
+
+dispatchAndUpdateViewHolders-BB@0xd0 : [ dispatchAndUpdateViewHolders-BB@0xd2 ]
+	57      (000000d0) move                 v0, v10
+
+dispatchAndUpdateViewHolders-BB@0xd2 : [ dispatchAndUpdateViewHolders-BB@0xaa ]
+	58      (000000d2) goto                 -14
+
+dispatchAndUpdateViewHolders-BB@0xd4 : [ dispatchAndUpdateViewHolders-BB@0xd2 ]
+	59      (000000d4) move                 v0, v11
+	60      (000000d6) goto                 -2
+
+dispatchAndUpdateViewHolders-BB@0xd8 : [ dispatchAndUpdateViewHolders-BB@0xfe dispatchAndUpdateViewHolders-BB@0x100 ]
+	61      (000000d8) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	62      (000000dc) iget-object          v13, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	63      (000000e0) invoke-virtual       v14, v12, v8, v7, v13, Landroid/support/v7/widget/AdapterHelper;->obtainUpdateOp(I I I Ljava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+	64      (000000e6) move-result-object   v6
+	65      (000000e8) invoke-virtual       v14, v6, v1, Landroid/support/v7/widget/AdapterHelper;->dispatchFirstPassAndUpdateViewHolders(Landroid/support/v7/widget/AdapterHelper$UpdateOp; I)V
+	66      (000000ee) invoke-virtual       v14, v6, Landroid/support/v7/widget/AdapterHelper;->recycleUpdateOp(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+	67      (000000f4) iget                 v12, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	68      (000000f8) const/4              v13, 4
+	69      (000000fa) if-ne                v12, v13, +3
+
+dispatchAndUpdateViewHolders-BB@0xfe : [ dispatchAndUpdateViewHolders-BB@0x100 ]
+	70      (000000fe) add-int/2addr        v1, v7
+
+dispatchAndUpdateViewHolders-BB@0x100 : [ dispatchAndUpdateViewHolders-BB@0xb2 ]
+	71      (00000100) move                 v8, v9
+	72      (00000102) const/4              v7, 1
+	73      (00000104) goto                 -29
+
+dispatchAndUpdateViewHolders-BB@0x106 : [ dispatchAndUpdateViewHolders-BB@0x114 dispatchAndUpdateViewHolders-BB@0x12c ]
+	74      (00000106) iget-object          v3, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	75      (0000010a) invoke-virtual       v14, v15, Landroid/support/v7/widget/AdapterHelper;->recycleUpdateOp(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+	76      (00000110) if-lez               v7, +e
+
+dispatchAndUpdateViewHolders-BB@0x114 : [ dispatchAndUpdateViewHolders-BB@0x12c ]
+	77      (00000114) iget                 v10, v15, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	78      (00000118) invoke-virtual       v14, v10, v8, v7, v3, Landroid/support/v7/widget/AdapterHelper;->obtainUpdateOp(I I I Ljava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+	79      (0000011e) move-result-object   v6
+	80      (00000120) invoke-virtual       v14, v6, v1, Landroid/support/v7/widget/AdapterHelper;->dispatchFirstPassAndUpdateViewHolders(Landroid/support/v7/widget/AdapterHelper$UpdateOp; I)V
+	81      (00000126) invoke-virtual       v14, v6, Landroid/support/v7/widget/AdapterHelper;->recycleUpdateOp(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+
+dispatchAndUpdateViewHolders-BB@0x12c : 
+	82      (0000012c) return-void          
+
+dispatchAndUpdateViewHolders-BB@0x12e : 
+	83      (0000012e) nop                  
+	84      (00000130) packed-switch-payload 2 3 4
+	85      (00000144) packed-switch-payload 2 3 4
+

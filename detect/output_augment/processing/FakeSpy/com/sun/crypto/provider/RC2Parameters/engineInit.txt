@@ -1,0 +1,126 @@
+# Lcom/sun/crypto/provider/RC2Parameters;->engineInit([B)V [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:byte[]
+#
+# - return:void
+
+engineInit-BB@0x0 : [ engineInit-BB@0x18 engineInit-BB@0x10a ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) new-instance         v1, Lsun/security/util/DerValue;
+	2       (00000006) invoke-direct        v1, v5, Lsun/security/util/DerValue;-><init>([B)V
+	3       (0000000c) iget-byte            v2, v1, Lsun/security/util/DerValue;->tag B
+	4       (00000010) const/16             v3, 48
+	5       (00000014) if-ne                v2, v3, +7b
+
+engineInit-BB@0x18 : [ engineInit-BB@0x3a engineInit-BB@0x46 ]
+	6       (00000018) iget-object          v2, v1, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	7       (0000001c) invoke-virtual       v2, Lsun/security/util/DerInputStream;->reset()V
+	8       (00000022) iget-object          v2, v1, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	9       (00000026) invoke-virtual       v2, Lsun/security/util/DerInputStream;->getInteger()I
+	10      (0000002c) move-result          v2
+	11      (0000002e) iput                 v2, v4, Lcom/sun/crypto/provider/RC2Parameters;->c I
+	12      (00000032) iget                 v2, v4, Lcom/sun/crypto/provider/RC2Parameters;->c I
+	13      (00000036) if-ltz               v2, +8
+
+engineInit-BB@0x3a : [ engineInit-BB@0x46 engineInit-BB@0x7c ]
+	14      (0000003a) iget                 v2, v4, Lcom/sun/crypto/provider/RC2Parameters;->c I
+	15      (0000003e) const/16             v3, 1024
+	16      (00000042) if-le                v2, v3, +1d
+
+engineInit-BB@0x46 : 
+	17      (00000046) new-instance         v0, Ljava/io/IOException;
+	18      (0000004a) new-instance         v1, Ljava/lang/StringBuilder;
+	19      (0000004e) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	20      (00000054) const-string         v2, 'RC2 parameter parsing error: version number out of legal range (0-1024): '
+	21      (00000058) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	22      (0000005e) move-result-object   v1
+	23      (00000060) iget                 v2, v4, Lcom/sun/crypto/provider/RC2Parameters;->c I
+	24      (00000064) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	25      (0000006a) move-result-object   v1
+	26      (0000006c) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	27      (00000072) move-result-object   v1
+	28      (00000074) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	29      (0000007a) throw                v0
+
+engineInit-BB@0x7c : [ engineInit-BB@0x88 engineInit-BB@0xea ]
+	30      (0000007c) iget                 v2, v4, Lcom/sun/crypto/provider/RC2Parameters;->c I
+	31      (00000080) const/16             v3, 255
+	32      (00000084) if-le                v2, v3, +33
+
+engineInit-BB@0x88 : [ engineInit-BB@0x90 ]
+	33      (00000088) iget                 v0, v4, Lcom/sun/crypto/provider/RC2Parameters;->c I
+	34      (0000008c) iput                 v0, v4, Lcom/sun/crypto/provider/RC2Parameters;->d I
+
+engineInit-BB@0x90 : [ engineInit-BB@0xa0 ]
+	35      (00000090) iget-object          v0, v1, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	36      (00000094) invoke-virtual       v0, Lsun/security/util/DerInputStream;->getOctetString()[B
+	37      (0000009a) move-result-object   v0
+	38      (0000009c) iput-object          v0, v4, Lcom/sun/crypto/provider/RC2Parameters;->b [B
+
+engineInit-BB@0xa0 : [ engineInit-BB@0xae engineInit-BB@0x12a ]
+	39      (000000a0) iget-object          v0, v4, Lcom/sun/crypto/provider/RC2Parameters;->b [B
+	40      (000000a4) array-length         v0, v0
+	41      (000000a6) const/16             v2, 8
+	42      (000000aa) if-eq                v0, v2, +40
+
+engineInit-BB@0xae : 
+	43      (000000ae) new-instance         v0, Ljava/io/IOException;
+	44      (000000b2) new-instance         v1, Ljava/lang/StringBuilder;
+	45      (000000b6) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	46      (000000bc) const-string         v2, 'RC2 parameter parsing error: iv length must be 8 bits, actual: '
+	47      (000000c0) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	48      (000000c6) move-result-object   v1
+	49      (000000c8) iget-object          v2, v4, Lcom/sun/crypto/provider/RC2Parameters;->b [B
+	50      (000000cc) array-length         v2, v2
+	51      (000000ce) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	52      (000000d4) move-result-object   v1
+	53      (000000d6) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	54      (000000dc) move-result-object   v1
+	55      (000000de) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	56      (000000e4) throw                v0
+
+engineInit-BB@0xe6 : [ engineInit-BB@0xea ]
+	57      (000000e6) add-int/lit8         v0, v0, 1
+
+engineInit-BB@0xea : [ engineInit-BB@0xf4 engineInit-BB@0x90 ]
+	58      (000000ea) sget-object          v2, Lcom/sun/crypto/provider/RC2Parameters;->a [I
+	59      (000000ee) array-length         v2, v2
+	60      (000000f0) if-ge                v0, v2, -30
+
+engineInit-BB@0xf4 : [ engineInit-BB@0x104 engineInit-BB@0xe6 ]
+	61      (000000f4) iget                 v2, v4, Lcom/sun/crypto/provider/RC2Parameters;->c I
+	62      (000000f8) sget-object          v3, Lcom/sun/crypto/provider/RC2Parameters;->a [I
+	63      (000000fc) aget                 v3, v3, v0
+	64      (00000100) if-ne                v2, v3, -d
+
+engineInit-BB@0x104 : [ engineInit-BB@0x90 ]
+	65      (00000104) iput                 v0, v4, Lcom/sun/crypto/provider/RC2Parameters;->d I
+	66      (00000108) goto                 -3c
+
+engineInit-BB@0x10a : [ engineInit-BB@0xa0 ]
+	67      (0000010a) iget-object          v2, v1, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	68      (0000010e) invoke-virtual       v2, Lsun/security/util/DerInputStream;->reset()V
+	69      (00000114) invoke-virtual       v1, Lsun/security/util/DerValue;->getOctetString()[B
+	70      (0000011a) move-result-object   v2
+	71      (0000011c) iput-object          v2, v4, Lcom/sun/crypto/provider/RC2Parameters;->b [B
+	72      (00000120) iput                 v0, v4, Lcom/sun/crypto/provider/RC2Parameters;->c I
+	73      (00000124) iput                 v0, v4, Lcom/sun/crypto/provider/RC2Parameters;->d I
+	74      (00000128) goto                 -44
+
+engineInit-BB@0x12a : [ engineInit-BB@0x13a engineInit-BB@0x14a ]
+	75      (0000012a) iget-object          v0, v1, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	76      (0000012e) invoke-virtual       v0, Lsun/security/util/DerInputStream;->available()I
+	77      (00000134) move-result          v0
+	78      (00000136) if-eqz               v0, +a
+
+engineInit-BB@0x13a : 
+	79      (0000013a) new-instance         v0, Ljava/io/IOException;
+	80      (0000013e) const-string         v1, 'RC2 parameter parsing error: extra data'
+	81      (00000142) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	82      (00000148) throw                v0
+
+engineInit-BB@0x14a : 
+	83      (0000014a) return-void          
+

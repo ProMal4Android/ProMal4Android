@@ -1,0 +1,52 @@
+# Lcom/google/android/gms/internal/zzfj;->onFailedToReceiveAd(Lcom/google/ads/mediation/MediationBannerAdapter; Lcom/google/ads/AdRequest$ErrorCode;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:com.google.ads.mediation.MediationBannerAdapter
+# - v4:com.google.ads.AdRequest$ErrorCode
+#
+# - return:void
+
+onFailedToReceiveAd-BB@0x0 : [ onFailedToReceiveAd-BB@0x40 onFailedToReceiveAd-BB@0x60 ]
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuilder;
+	1       (00000004) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	2       (0000000a) const-string         v1, 'Adapter called onFailedToReceiveAd with error. '
+	3       (0000000e) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	4       (00000014) move-result-object   v0
+	5       (00000016) invoke-virtual       v0, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	6       (0000001c) move-result-object   v0
+	7       (0000001e) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	8       (00000024) move-result-object   v0
+	9       (00000026) invoke-static        v0, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaF(Ljava/lang/String;)V
+	10      (0000002c) invoke-static        Lcom/google/android/gms/ads/internal/client/zzl;->zzcN()Lcom/google/android/gms/ads/internal/util/client/zza;
+	11      (00000032) move-result-object   v0
+	12      (00000034) invoke-virtual       v0, Lcom/google/android/gms/ads/internal/util/client/zza;->zzhr()Z
+	13      (0000003a) move-result          v0
+	14      (0000003c) if-nez               v0, +12
+
+onFailedToReceiveAd-BB@0x40 : [ onFailedToReceiveAd-BB@0x5e ]
+	15      (00000040) const-string         v0, 'onFailedToReceiveAd must be called on the main UI thread.'
+	16      (00000044) invoke-static        v0, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaH(Ljava/lang/String;)V
+	17      (0000004a) sget-object          v0, Lcom/google/android/gms/ads/internal/util/client/zza;->zzLE Landroid/os/Handler;
+	18      (0000004e) new-instance         v1, Lcom/google/android/gms/internal/zzfj$5;
+	19      (00000052) invoke-direct        v1, v2, v4, Lcom/google/android/gms/internal/zzfj$5;-><init>(Lcom/google/android/gms/internal/zzfj; Lcom/google/ads/AdRequest$ErrorCode;)V
+	20      (00000058) invoke-virtual       v0, v1, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+onFailedToReceiveAd-BB@0x5e : 
+	21      (0000005e) return-void          
+
+onFailedToReceiveAd-BB@0x60 : [ onFailedToReceiveAd-BB@0x5e ]
+	22      (00000060) iget-object          v0, v2, Lcom/google/android/gms/internal/zzfj;->zzBK Lcom/google/android/gms/internal/zzey;
+	23      (00000064) invoke-static        v4, Lcom/google/android/gms/internal/zzfk;->zza(Lcom/google/ads/AdRequest$ErrorCode;)I
+	24      (0000006a) move-result          v1
+	25      (0000006c) invoke-interface     v0, v1, Lcom/google/android/gms/internal/zzey;->onAdFailedToLoad(I)V
+	26      (00000072) goto                 -a
+	60:71
+	(Landroid/os/RemoteException; -> 74 onFailedToReceiveAd-BB@0x74)
+
+onFailedToReceiveAd-BB@0x74 : [ onFailedToReceiveAd-BB@0x5e ]
+	27      (00000074) move-exception       v0
+	28      (00000076) const-string         v1, 'Could not call onAdFailedToLoad.'
+	29      (0000007a) invoke-static        v1, v0, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzd(Ljava/lang/String; Ljava/lang/Throwable;)V
+	30      (00000080) goto                 -11
+

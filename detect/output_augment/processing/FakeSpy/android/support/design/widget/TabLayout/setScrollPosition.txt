@@ -1,0 +1,59 @@
+# Landroid/support/design/widget/TabLayout;->setScrollPosition(I F Z Z)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:int
+# - v5:float
+# - v6:boolean
+# - v7:boolean
+#
+# - return:void
+
+setScrollPosition-BB@0x0 : [ setScrollPosition-BB@0x10 setScrollPosition-BB@0x20 ]
+	0       (00000000) int-to-float         v1, v4
+	1       (00000002) add-float/2addr      v1, v5
+	2       (00000004) invoke-static        v1, Ljava/lang/Math;->round(F)I
+	3       (0000000a) move-result          v0
+	4       (0000000c) if-ltz               v0, +a
+
+setScrollPosition-BB@0x10 : [ setScrollPosition-BB@0x20 setScrollPosition-BB@0x22 ]
+	5       (00000010) iget-object          v1, v3, Landroid/support/design/widget/TabLayout;->mTabStrip Landroid/support/design/widget/TabLayout$SlidingTabStrip;
+	6       (00000014) invoke-virtual       v1, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildCount()I
+	7       (0000001a) move-result          v1
+	8       (0000001c) if-lt                v0, v1, +3
+
+setScrollPosition-BB@0x20 : 
+	9       (00000020) return-void          
+
+setScrollPosition-BB@0x22 : [ setScrollPosition-BB@0x26 setScrollPosition-BB@0x30 ]
+	10      (00000022) if-eqz               v7, +7
+
+setScrollPosition-BB@0x26 : [ setScrollPosition-BB@0x30 ]
+	11      (00000026) iget-object          v1, v3, Landroid/support/design/widget/TabLayout;->mTabStrip Landroid/support/design/widget/TabLayout$SlidingTabStrip;
+	12      (0000002a) invoke-virtual       v1, v4, v5, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->setIndicatorPositionFromTabPosition(I F)V
+
+setScrollPosition-BB@0x30 : [ setScrollPosition-BB@0x38 setScrollPosition-BB@0x52 ]
+	13      (00000030) iget-object          v1, v3, Landroid/support/design/widget/TabLayout;->mScrollAnimator Landroid/support/design/widget/ValueAnimatorCompat;
+	14      (00000034) if-eqz               v1, +f
+
+setScrollPosition-BB@0x38 : [ setScrollPosition-BB@0x48 setScrollPosition-BB@0x52 ]
+	15      (00000038) iget-object          v1, v3, Landroid/support/design/widget/TabLayout;->mScrollAnimator Landroid/support/design/widget/ValueAnimatorCompat;
+	16      (0000003c) invoke-virtual       v1, Landroid/support/design/widget/ValueAnimatorCompat;->isRunning()Z
+	17      (00000042) move-result          v1
+	18      (00000044) if-eqz               v1, +7
+
+setScrollPosition-BB@0x48 : [ setScrollPosition-BB@0x52 ]
+	19      (00000048) iget-object          v1, v3, Landroid/support/design/widget/TabLayout;->mScrollAnimator Landroid/support/design/widget/ValueAnimatorCompat;
+	20      (0000004c) invoke-virtual       v1, Landroid/support/design/widget/ValueAnimatorCompat;->cancel()V
+
+setScrollPosition-BB@0x52 : [ setScrollPosition-BB@0x66 setScrollPosition-BB@0x20 ]
+	21      (00000052) invoke-direct        v3, v4, v5, Landroid/support/design/widget/TabLayout;->calculateScrollXForTab(I F)I
+	22      (00000058) move-result          v1
+	23      (0000005a) const/4              v2, 0
+	24      (0000005c) invoke-virtual       v3, v1, v2, Landroid/support/design/widget/TabLayout;->scrollTo(I I)V
+	25      (00000062) if-eqz               v6, -21
+
+setScrollPosition-BB@0x66 : [ setScrollPosition-BB@0x20 ]
+	26      (00000066) invoke-direct        v3, v0, Landroid/support/design/widget/TabLayout;->setSelectedTabView(I)V
+	27      (0000006c) goto                 -26
+

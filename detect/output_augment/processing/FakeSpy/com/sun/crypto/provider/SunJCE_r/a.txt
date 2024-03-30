@@ -1,0 +1,38 @@
+# Lcom/sun/crypto/provider/SunJCE_r;->a(Ljava/lang/String; I)V [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+# - v3:int
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x10 a-BB@0x20 ]
+	0       (00000000) const-string         v0, 'RC2'
+	1       (00000004) invoke-virtual       v2, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	2       (0000000a) move-result          v0
+	3       (0000000c) if-nez               v0, +a
+
+a-BB@0x10 : 
+	4       (00000010) new-instance         v0, Ljava/security/InvalidKeyException;
+	5       (00000014) const-string         v1, 'Key algorithm must be RC2'
+	6       (00000018) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	7       (0000001e) throw                v0
+
+a-BB@0x20 : [ a-BB@0x26 a-BB@0x2e ]
+	8       (00000020) const/4              v0, 5
+	9       (00000022) if-lt                v3, v0, +6
+
+a-BB@0x26 : [ a-BB@0x2e a-BB@0x3e ]
+	10      (00000026) const/16             v0, 128
+	11      (0000002a) if-le                v3, v0, +a
+
+a-BB@0x2e : 
+	12      (0000002e) new-instance         v0, Ljava/security/InvalidKeyException;
+	13      (00000032) const-string         v1, 'RC2 key length must be between 40 and 1024 bit'
+	14      (00000036) invoke-direct        v0, v1, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	15      (0000003c) throw                v0
+
+a-BB@0x3e : 
+	16      (0000003e) return-void          
+

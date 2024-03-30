@@ -1,0 +1,87 @@
+# Landroid/support/v7/widget/ActivityChooserView$Callbacks;->onItemClick(Landroid/widget/AdapterView; Landroid/view/View; I J)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.widget.AdapterView
+# - v8:android.view.View
+# - v9:int
+# - v10:long
+#
+# - return:void
+
+onItemClick-BB@0x0 : [ D:onItemClick-BB@0x1a 0:onItemClick-BB@0x38 1:onItemClick-BB@0x26 ]
+	0       (00000000) invoke-virtual       v6, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
+	1       (00000006) move-result-object   v0
+	2       (00000008) check-cast           v0, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;
+	3       (0000000c) invoke-virtual       v0, v8, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->getItemViewType(I)I
+	4       (00000012) move-result          v1
+	5       (00000014) packed-switch        v1, +5e (0xd0)
+
+onItemClick-BB@0x1a : 
+	6       (0000001a) new-instance         v3, Ljava/lang/IllegalArgumentException;
+	7       (0000001e) invoke-direct        v3, Ljava/lang/IllegalArgumentException;-><init>()V
+	8       (00000024) throw                v3
+
+onItemClick-BB@0x26 : [ onItemClick-BB@0x36 ]
+	9       (00000026) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserView$Callbacks;->this$0 Landroid/support/v7/widget/ActivityChooserView;
+	10      (0000002a) const                v4, 2147483647 # [nan]
+	11      (00000030) invoke-static        v3, v4, Landroid/support/v7/widget/ActivityChooserView;->access$500(Landroid/support/v7/widget/ActivityChooserView; I)V
+
+onItemClick-BB@0x36 : 
+	12      (00000036) return-void          
+
+onItemClick-BB@0x38 : [ onItemClick-BB@0x52 onItemClick-BB@0x72 ]
+	13      (00000038) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserView$Callbacks;->this$0 Landroid/support/v7/widget/ActivityChooserView;
+	14      (0000003c) invoke-virtual       v3, Landroid/support/v7/widget/ActivityChooserView;->dismissPopup()Z
+	15      (00000042) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserView$Callbacks;->this$0 Landroid/support/v7/widget/ActivityChooserView;
+	16      (00000046) invoke-static        v3, Landroid/support/v7/widget/ActivityChooserView;->access$600(Landroid/support/v7/widget/ActivityChooserView;)Z
+	17      (0000004c) move-result          v3
+	18      (0000004e) if-eqz               v3, +12
+
+onItemClick-BB@0x52 : [ onItemClick-BB@0x56 onItemClick-BB@0x36 ]
+	19      (00000052) if-lez               v8, -e
+
+onItemClick-BB@0x56 : [ onItemClick-BB@0x36 ]
+	20      (00000056) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserView$Callbacks;->this$0 Landroid/support/v7/widget/ActivityChooserView;
+	21      (0000005a) invoke-static        v3, Landroid/support/v7/widget/ActivityChooserView;->access$000(Landroid/support/v7/widget/ActivityChooserView;)Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;
+	22      (00000060) move-result-object   v3
+	23      (00000062) invoke-virtual       v3, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->getDataModel()Landroid/support/v7/widget/ActivityChooserModel;
+	24      (00000068) move-result-object   v3
+	25      (0000006a) invoke-virtual       v3, v8, Landroid/support/v7/widget/ActivityChooserModel;->setDefaultActivity(I)V
+	26      (00000070) goto                 -1d
+
+onItemClick-BB@0x72 : [ onItemClick-BB@0x8a onItemClick-BB@0xc8 ]
+	27      (00000072) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserView$Callbacks;->this$0 Landroid/support/v7/widget/ActivityChooserView;
+	28      (00000076) invoke-static        v3, Landroid/support/v7/widget/ActivityChooserView;->access$000(Landroid/support/v7/widget/ActivityChooserView;)Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;
+	29      (0000007c) move-result-object   v3
+	30      (0000007e) invoke-virtual       v3, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->getShowDefaultActivity()Z
+	31      (00000084) move-result          v3
+	32      (00000086) if-eqz               v3, +21
+
+onItemClick-BB@0x8a : [ onItemClick-BB@0xaa onItemClick-BB@0x36 ]
+	33      (0000008a) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserView$Callbacks;->this$0 Landroid/support/v7/widget/ActivityChooserView;
+	34      (0000008e) invoke-static        v3, Landroid/support/v7/widget/ActivityChooserView;->access$000(Landroid/support/v7/widget/ActivityChooserView;)Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;
+	35      (00000094) move-result-object   v3
+	36      (00000096) invoke-virtual       v3, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->getDataModel()Landroid/support/v7/widget/ActivityChooserModel;
+	37      (0000009c) move-result-object   v3
+	38      (0000009e) invoke-virtual       v3, v8, Landroid/support/v7/widget/ActivityChooserModel;->chooseActivity(I)Landroid/content/Intent;
+	39      (000000a4) move-result-object   v2
+	40      (000000a6) if-eqz               v2, -38
+
+onItemClick-BB@0xaa : [ onItemClick-BB@0x36 ]
+	41      (000000aa) const/high16         v3, 8 # [7.346839692639297e-40]
+	42      (000000ae) invoke-virtual       v2, v3, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+	43      (000000b4) iget-object          v3, v5, Landroid/support/v7/widget/ActivityChooserView$Callbacks;->this$0 Landroid/support/v7/widget/ActivityChooserView;
+	44      (000000b8) invoke-virtual       v3, Landroid/support/v7/widget/ActivityChooserView;->getContext()Landroid/content/Context;
+	45      (000000be) move-result-object   v3
+	46      (000000c0) invoke-virtual       v3, v2, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+	47      (000000c6) goto                 -48
+
+onItemClick-BB@0xc8 : [ onItemClick-BB@0x8a ]
+	48      (000000c8) add-int/lit8         v8, v8, 1
+	49      (000000cc) goto                 -21
+
+onItemClick-BB@0xce : 
+	50      (000000ce) nop                  
+	51      (000000d0) packed-switch-payload 0 1
+

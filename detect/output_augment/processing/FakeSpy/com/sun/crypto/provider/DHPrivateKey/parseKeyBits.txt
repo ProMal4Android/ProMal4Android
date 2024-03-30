@@ -1,0 +1,36 @@
+# Lcom/sun/crypto/provider/DHPrivateKey;->parseKeyBits()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:void
+
+parseKeyBits-BB@0x0 : 
+	0       (00000000) new-instance         v0, Lsun/security/util/DerInputStream;
+	1       (00000004) iget-object          v1, v4, Lcom/sun/crypto/provider/DHPrivateKey;->key [B
+	2       (00000008) invoke-direct        v0, v1, Lsun/security/util/DerInputStream;-><init>([B)V
+	3       (0000000e) invoke-virtual       v0, Lsun/security/util/DerInputStream;->getBigInteger()Ljava/math/BigInteger;
+	4       (00000014) move-result-object   v0
+	5       (00000016) iput-object          v0, v4, Lcom/sun/crypto/provider/DHPrivateKey;->x Ljava/math/BigInteger;
+	6       (0000001a) return-void          
+	0:19
+	(Ljava/io/IOException; -> 1c parseKeyBits-BB@0x1c)
+
+parseKeyBits-BB@0x1c : 
+	7       (0000001c) move-exception       v0
+	8       (0000001e) new-instance         v1, Ljava/security/InvalidKeyException;
+	9       (00000022) new-instance         v2, Ljava/lang/StringBuilder;
+	10      (00000026) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	11      (0000002c) const-string         v3, 'Error parsing key encoding: '
+	12      (00000030) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (00000036) move-result-object   v2
+	14      (00000038) invoke-virtual       v0, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+	15      (0000003e) move-result-object   v3
+	16      (00000040) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000046) move-result-object   v2
+	18      (00000048) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	19      (0000004e) move-result-object   v2
+	20      (00000050) invoke-direct        v1, v2, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
+	21      (00000056) invoke-virtual       v1, v0, Ljava/security/InvalidKeyException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+	22      (0000005c) throw                v1
+

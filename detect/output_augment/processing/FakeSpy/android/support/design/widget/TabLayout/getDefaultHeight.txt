@@ -1,0 +1,56 @@
+# Landroid/support/design/widget/TabLayout;->getDefaultHeight()I [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:int
+
+getDefaultHeight-BB@0x0 : [ getDefaultHeight-BB@0x10 ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) const/4              v2, 0
+	2       (00000004) iget-object          v4, v5, Landroid/support/design/widget/TabLayout;->mTabs Ljava/util/ArrayList;
+	3       (00000008) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	4       (0000000e) move-result          v0
+
+getDefaultHeight-BB@0x10 : [ getDefaultHeight-BB@0x14 getDefaultHeight-BB@0x4a ]
+	5       (00000010) if-ge                v2, v0, +1d
+
+getDefaultHeight-BB@0x14 : [ getDefaultHeight-BB@0x28 getDefaultHeight-BB@0x54 ]
+	6       (00000014) iget-object          v4, v5, Landroid/support/design/widget/TabLayout;->mTabs Ljava/util/ArrayList;
+	7       (00000018) invoke-virtual       v4, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	8       (0000001e) move-result-object   v3
+	9       (00000020) check-cast           v3, Landroid/support/design/widget/TabLayout$Tab;
+	10      (00000024) if-eqz               v3, +18
+
+getDefaultHeight-BB@0x28 : [ getDefaultHeight-BB@0x34 getDefaultHeight-BB@0x54 ]
+	11      (00000028) invoke-virtual       v3, Landroid/support/design/widget/TabLayout$Tab;->getIcon()Landroid/graphics/drawable/Drawable;
+	12      (0000002e) move-result-object   v4
+	13      (00000030) if-eqz               v4, +12
+
+getDefaultHeight-BB@0x34 : [ getDefaultHeight-BB@0x48 getDefaultHeight-BB@0x54 ]
+	14      (00000034) invoke-virtual       v3, Landroid/support/design/widget/TabLayout$Tab;->getText()Ljava/lang/CharSequence;
+	15      (0000003a) move-result-object   v4
+	16      (0000003c) invoke-static        v4, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	17      (00000042) move-result          v4
+	18      (00000044) if-nez               v4, +8
+
+getDefaultHeight-BB@0x48 : [ getDefaultHeight-BB@0x4a ]
+	19      (00000048) const/4              v1, 1
+
+getDefaultHeight-BB@0x4a : [ getDefaultHeight-BB@0x4e getDefaultHeight-BB@0x5a ]
+	20      (0000004a) if-eqz               v1, +8
+
+getDefaultHeight-BB@0x4e : [ getDefaultHeight-BB@0x52 ]
+	21      (0000004e) const/16             v4, 72
+
+getDefaultHeight-BB@0x52 : 
+	22      (00000052) return               v4
+
+getDefaultHeight-BB@0x54 : [ getDefaultHeight-BB@0x10 ]
+	23      (00000054) add-int/lit8         v2, v2, 1
+	24      (00000058) goto                 -24
+
+getDefaultHeight-BB@0x5a : [ getDefaultHeight-BB@0x52 ]
+	25      (0000005a) const/16             v4, 48
+	26      (0000005e) goto                 -6
+

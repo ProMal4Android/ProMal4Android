@@ -1,0 +1,117 @@
+# Landroid/support/v4/app/BackStackRecord;->calculateFragments(Landroid/util/SparseArray; Landroid/util/SparseArray;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.util.SparseArray
+# - v8:android.util.SparseArray
+#
+# - return:void
+
+calculateFragments-BB@0x0 : [ calculateFragments-BB@0x14 calculateFragments-BB@0x16 ]
+	0       (00000000) iget-object          v4, v6, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	1       (00000004) iget-object          v4, v4, Landroid/support/v4/app/FragmentManagerImpl;->mContainer Landroid/support/v4/app/FragmentContainer;
+	2       (00000008) invoke-virtual       v4, Landroid/support/v4/app/FragmentContainer;->onHasView()Z
+	3       (0000000e) move-result          v4
+	4       (00000010) if-nez               v4, +3
+
+calculateFragments-BB@0x14 : 
+	5       (00000014) return-void          
+
+calculateFragments-BB@0x16 : [ calculateFragments-BB@0x1a ]
+	6       (00000016) iget-object          v3, v6, Landroid/support/v4/app/BackStackRecord;->mHead Landroid/support/v4/app/BackStackRecord$Op;
+
+calculateFragments-BB@0x1a : [ calculateFragments-BB@0x1e calculateFragments-BB@0x14 ]
+	7       (0000001a) if-eqz               v3, -3
+
+calculateFragments-BB@0x1e : [ D:calculateFragments-BB@0x28 1:calculateFragments-BB@0x2e 2:calculateFragments-BB@0x3a 3:calculateFragments-BB@0xae 4:calculateFragments-BB@0xba 5:calculateFragments-BB@0xc6 6:calculateFragments-BB@0xd2 7:calculateFragments-BB@0xde ]
+	8       (0000001e) iget                 v4, v3, Landroid/support/v4/app/BackStackRecord$Op;->cmd I
+	9       (00000022) packed-switch        v4, +65 (0xec)
+
+calculateFragments-BB@0x28 : [ calculateFragments-BB@0x1a ]
+	10      (00000028) iget-object          v3, v3, Landroid/support/v4/app/BackStackRecord$Op;->next Landroid/support/v4/app/BackStackRecord$Op;
+	11      (0000002c) goto                 -9
+
+calculateFragments-BB@0x2e : [ calculateFragments-BB@0x28 ]
+	12      (0000002e) iget-object          v4, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	13      (00000032) invoke-direct        v6, v7, v8, v4, Landroid/support/v4/app/BackStackRecord;->setLastIn(Landroid/util/SparseArray; Landroid/util/SparseArray; Landroid/support/v4/app/Fragment;)V
+	14      (00000038) goto                 -8
+
+calculateFragments-BB@0x3a : [ calculateFragments-BB@0x4a calculateFragments-BB@0xa2 ]
+	15      (0000003a) iget-object          v0, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	16      (0000003e) iget-object          v4, v6, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	17      (00000042) iget-object          v4, v4, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	18      (00000046) if-eqz               v4, +2e
+
+calculateFragments-BB@0x4a : [ calculateFragments-BB@0x4c ]
+	19      (0000004a) const/4              v1, 0
+
+calculateFragments-BB@0x4c : [ calculateFragments-BB@0x60 calculateFragments-BB@0xa2 ]
+	20      (0000004c) iget-object          v4, v6, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	21      (00000050) iget-object          v4, v4, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	22      (00000054) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	23      (0000005a) move-result          v4
+	24      (0000005c) if-ge                v1, v4, +23
+
+calculateFragments-BB@0x60 : [ calculateFragments-BB@0x78 calculateFragments-BB@0x84 ]
+	25      (00000060) iget-object          v4, v6, Landroid/support/v4/app/BackStackRecord;->mManager Landroid/support/v4/app/FragmentManagerImpl;
+	26      (00000064) iget-object          v4, v4, Landroid/support/v4/app/FragmentManagerImpl;->mAdded Ljava/util/ArrayList;
+	27      (00000068) invoke-virtual       v4, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	28      (0000006e) move-result-object   v2
+	29      (00000070) check-cast           v2, Landroid/support/v4/app/Fragment;
+	30      (00000074) if-eqz               v0, +8
+
+calculateFragments-BB@0x78 : [ calculateFragments-BB@0x84 calculateFragments-BB@0x94 ]
+	31      (00000078) iget                 v4, v2, Landroid/support/v4/app/Fragment;->mContainerId I
+	32      (0000007c) iget                 v5, v0, Landroid/support/v4/app/Fragment;->mContainerId I
+	33      (00000080) if-ne                v4, v5, +a
+
+calculateFragments-BB@0x84 : [ calculateFragments-BB@0x88 calculateFragments-BB@0x9a ]
+	34      (00000084) if-ne                v2, v0, +b
+
+calculateFragments-BB@0x88 : [ calculateFragments-BB@0x94 ]
+	35      (00000088) const/4              v0, 0
+	36      (0000008a) iget                 v4, v2, Landroid/support/v4/app/Fragment;->mContainerId I
+	37      (0000008e) invoke-virtual       v8, v4, Landroid/util/SparseArray;->remove(I)V
+
+calculateFragments-BB@0x94 : [ calculateFragments-BB@0x4c ]
+	38      (00000094) add-int/lit8         v1, v1, 1
+	39      (00000098) goto                 -26
+
+calculateFragments-BB@0x9a : [ calculateFragments-BB@0x94 ]
+	40      (0000009a) invoke-static        v7, v8, v2, Landroid/support/v4/app/BackStackRecord;->setFirstOut(Landroid/util/SparseArray; Landroid/util/SparseArray; Landroid/support/v4/app/Fragment;)V
+	41      (000000a0) goto                 -6
+
+calculateFragments-BB@0xa2 : [ calculateFragments-BB@0x28 ]
+	42      (000000a2) iget-object          v4, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	43      (000000a6) invoke-direct        v6, v7, v8, v4, Landroid/support/v4/app/BackStackRecord;->setLastIn(Landroid/util/SparseArray; Landroid/util/SparseArray; Landroid/support/v4/app/Fragment;)V
+	44      (000000ac) goto                 -42
+
+calculateFragments-BB@0xae : [ calculateFragments-BB@0x28 ]
+	45      (000000ae) iget-object          v4, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	46      (000000b2) invoke-static        v7, v8, v4, Landroid/support/v4/app/BackStackRecord;->setFirstOut(Landroid/util/SparseArray; Landroid/util/SparseArray; Landroid/support/v4/app/Fragment;)V
+	47      (000000b8) goto                 -48
+
+calculateFragments-BB@0xba : [ calculateFragments-BB@0x28 ]
+	48      (000000ba) iget-object          v4, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	49      (000000be) invoke-static        v7, v8, v4, Landroid/support/v4/app/BackStackRecord;->setFirstOut(Landroid/util/SparseArray; Landroid/util/SparseArray; Landroid/support/v4/app/Fragment;)V
+	50      (000000c4) goto                 -4e
+
+calculateFragments-BB@0xc6 : [ calculateFragments-BB@0x28 ]
+	51      (000000c6) iget-object          v4, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	52      (000000ca) invoke-direct        v6, v7, v8, v4, Landroid/support/v4/app/BackStackRecord;->setLastIn(Landroid/util/SparseArray; Landroid/util/SparseArray; Landroid/support/v4/app/Fragment;)V
+	53      (000000d0) goto                 -54
+
+calculateFragments-BB@0xd2 : [ calculateFragments-BB@0x28 ]
+	54      (000000d2) iget-object          v4, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	55      (000000d6) invoke-static        v7, v8, v4, Landroid/support/v4/app/BackStackRecord;->setFirstOut(Landroid/util/SparseArray; Landroid/util/SparseArray; Landroid/support/v4/app/Fragment;)V
+	56      (000000dc) goto                 -5a
+
+calculateFragments-BB@0xde : [ calculateFragments-BB@0x28 ]
+	57      (000000de) iget-object          v4, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	58      (000000e2) invoke-direct        v6, v7, v8, v4, Landroid/support/v4/app/BackStackRecord;->setLastIn(Landroid/util/SparseArray; Landroid/util/SparseArray; Landroid/support/v4/app/Fragment;)V
+	59      (000000e8) goto                 -60
+
+calculateFragments-BB@0xea : 
+	60      (000000ea) nop                  
+	61      (000000ec) packed-switch-payload 1 2 3 4 5 6 7
+

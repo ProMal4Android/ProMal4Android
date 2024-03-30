@@ -1,0 +1,39 @@
+# Lcom/sun/crypto/provider/JceKeyStore;->engineGetCertificateChain(Ljava/lang/String;)[Ljava/security/cert/Certificate; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+#
+# - return:java.security.cert.Certificate[]
+
+engineGetCertificateChain-BB@0x0 : [ engineGetCertificateChain-BB@0x1e engineGetCertificateChain-BB@0x46 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) iget-object          v0, v3, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	2       (00000006) invoke-virtual       v4, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+	3       (0000000c) move-result-object   v1
+	4       (0000000e) invoke-virtual       v0, v1, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	5       (00000014) move-result-object   v1
+	6       (00000016) instance-of          v0, v1, Lcom/sun/crypto/provider/JceKeyStore$ai;
+	7       (0000001a) if-eqz               v0, +16
+
+engineGetCertificateChain-BB@0x1e : [ engineGetCertificateChain-BB@0x2c engineGetCertificateChain-BB@0x46 ]
+	8       (0000001e) move-object          v0, v1
+	9       (00000020) check-cast           v0, Lcom/sun/crypto/provider/JceKeyStore$ai;
+	10      (00000024) iget-object          v0, v0, Lcom/sun/crypto/provider/JceKeyStore$ai;->c [Ljava/security/cert/Certificate;
+	11      (00000028) if-eqz               v0, +f
+
+engineGetCertificateChain-BB@0x2c : [ engineGetCertificateChain-BB@0x44 ]
+	12      (0000002c) check-cast           v1, Lcom/sun/crypto/provider/JceKeyStore$ai;
+	13      (00000030) iget-object          v0, v1, Lcom/sun/crypto/provider/JceKeyStore$ai;->c [Ljava/security/cert/Certificate;
+	14      (00000034) invoke-virtual       v0, Ljava/lang/Object;->clone()Ljava/lang/Object;
+	15      (0000003a) move-result-object   v0
+	16      (0000003c) check-cast           v0, [Ljava/security/cert/Certificate;
+	17      (00000040) check-cast           v0, [Ljava/security/cert/Certificate;
+
+engineGetCertificateChain-BB@0x44 : 
+	18      (00000044) return-object        v0
+
+engineGetCertificateChain-BB@0x46 : [ engineGetCertificateChain-BB@0x44 ]
+	19      (00000046) move-object          v0, v2
+	20      (00000048) goto                 -2
+

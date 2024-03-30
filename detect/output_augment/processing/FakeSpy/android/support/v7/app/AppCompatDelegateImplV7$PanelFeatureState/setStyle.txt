@@ -1,0 +1,65 @@
+# Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;->setStyle(Landroid/content/Context;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:android.content.Context
+#
+# - return:void
+
+setStyle-BB@0x0 : [ setStyle-BB@0x3e setStyle-BB@0x48 ]
+	0       (00000000) const/4              v6, 0
+	1       (00000002) const/4              v5, 1
+	2       (00000004) new-instance         v2, Landroid/util/TypedValue;
+	3       (00000008) invoke-direct        v2, Landroid/util/TypedValue;-><init>()V
+	4       (0000000e) invoke-virtual       v8, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	5       (00000014) move-result-object   v4
+	6       (00000016) invoke-virtual       v4, Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+	7       (0000001c) move-result-object   v3
+	8       (0000001e) invoke-virtual       v8, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+	9       (00000024) move-result-object   v4
+	10      (00000026) invoke-virtual       v3, v4, Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+	11      (0000002c) sget                 v4, Landroid/support/v7/appcompat/R$attr;->actionBarPopupTheme I
+	12      (00000030) invoke-virtual       v3, v4, v2, v5, Landroid/content/res/Resources$Theme;->resolveAttribute(I Landroid/util/TypedValue; Z)Z
+	13      (00000036) iget                 v4, v2, Landroid/util/TypedValue;->resourceId I
+	14      (0000003a) if-eqz               v4, +7
+
+setStyle-BB@0x3e : [ setStyle-BB@0x48 ]
+	15      (0000003e) iget                 v4, v2, Landroid/util/TypedValue;->resourceId I
+	16      (00000042) invoke-virtual       v3, v4, v5, Landroid/content/res/Resources$Theme;->applyStyle(I Z)V
+
+setStyle-BB@0x48 : [ setStyle-BB@0x5a setStyle-BB@0xb4 ]
+	17      (00000048) sget                 v4, Landroid/support/v7/appcompat/R$attr;->panelMenuListTheme I
+	18      (0000004c) invoke-virtual       v3, v4, v2, v5, Landroid/content/res/Resources$Theme;->resolveAttribute(I Landroid/util/TypedValue; Z)Z
+	19      (00000052) iget                 v4, v2, Landroid/util/TypedValue;->resourceId I
+	20      (00000056) if-eqz               v4, +2f
+
+setStyle-BB@0x5a : [ setStyle-BB@0x64 ]
+	21      (0000005a) iget                 v4, v2, Landroid/util/TypedValue;->resourceId I
+	22      (0000005e) invoke-virtual       v3, v4, v5, Landroid/content/res/Resources$Theme;->applyStyle(I Z)V
+
+setStyle-BB@0x64 : 
+	23      (00000064) new-instance         v1, Landroid/support/v7/view/ContextThemeWrapper;
+	24      (00000068) invoke-direct        v1, v8, v6, Landroid/support/v7/view/ContextThemeWrapper;-><init>(Landroid/content/Context; I)V
+	25      (0000006e) invoke-virtual       v1, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+	26      (00000074) move-result-object   v4
+	27      (00000076) invoke-virtual       v4, v3, Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+	28      (0000007c) iput-object          v1, v7, Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;->listPresenterContext Landroid/content/Context;
+	29      (00000080) sget-object          v4, Landroid/support/v7/appcompat/R$styleable;->AppCompatTheme [I
+	30      (00000084) invoke-virtual       v1, v4, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+	31      (0000008a) move-result-object   v0
+	32      (0000008c) sget                 v4, Landroid/support/v7/appcompat/R$styleable;->AppCompatTheme_panelBackground I
+	33      (00000090) invoke-virtual       v0, v4, v6, Landroid/content/res/TypedArray;->getResourceId(I I)I
+	34      (00000096) move-result          v4
+	35      (00000098) iput                 v4, v7, Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;->background I
+	36      (0000009c) sget                 v4, Landroid/support/v7/appcompat/R$styleable;->AppCompatTheme_android_windowAnimationStyle I
+	37      (000000a0) invoke-virtual       v0, v4, v6, Landroid/content/res/TypedArray;->getResourceId(I I)I
+	38      (000000a6) move-result          v4
+	39      (000000a8) iput                 v4, v7, Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;->windowAnimations I
+	40      (000000ac) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+	41      (000000b2) return-void          
+
+setStyle-BB@0xb4 : [ setStyle-BB@0x64 ]
+	42      (000000b4) sget                 v4, Landroid/support/v7/appcompat/R$style;->Theme_AppCompat_CompactMenu I
+	43      (000000b8) invoke-virtual       v3, v4, v5, Landroid/content/res/Resources$Theme;->applyStyle(I Z)V
+	44      (000000be) goto                 -2d
+

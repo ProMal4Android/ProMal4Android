@@ -1,0 +1,50 @@
+# Lkk/util/StUtil;->divedString(Ljava/lang/String;)Ljava/lang/String; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+#
+# - return:java.lang.String
+
+divedString-BB@0x0 : [ divedString-BB@0xe divedString-BB@0x3e ]
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuffer;
+	1       (00000004) invoke-direct        v0, Ljava/lang/StringBuffer;-><init>()V
+	2       (0000000a) if-eqz               v2, +1a
+
+divedString-BB@0xe : [ divedString-BB@0x1e divedString-BB@0x3e ]
+	3       (0000000e) const-string         v1, ''
+	4       (00000012) invoke-virtual       v2, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	5       (00000018) move-result          v1
+	6       (0000001a) if-nez               v1, +12
+
+divedString-BB@0x1e : [ divedString-BB@0x2e divedString-BB@0x48 ]
+	7       (0000001e) const-string         v1, '+'
+	8       (00000022) invoke-virtual       v2, v1, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	9       (00000028) move-result          v1
+	10      (0000002a) if-eqz               v1, +f
+
+divedString-BB@0x2e : [ divedString-BB@0x38 ]
+	11      (0000002e) const/4              v1, 1
+	12      (00000030) invoke-virtual       v2, v1, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	13      (00000036) move-result-object   v2
+
+divedString-BB@0x38 : [ divedString-BB@0x3e ]
+	14      (00000038) invoke-virtual       v0, v2, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+divedString-BB@0x3e : 
+	15      (0000003e) invoke-virtual       v0, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+	16      (00000044) move-result-object   v1
+	17      (00000046) return-object        v1
+
+divedString-BB@0x48 : [ divedString-BB@0x58 divedString-BB@0x38 ]
+	18      (00000048) const-string         v1, '86'
+	19      (0000004c) invoke-virtual       v2, v1, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	20      (00000052) move-result          v1
+	21      (00000054) if-eqz               v1, -e
+
+divedString-BB@0x58 : [ divedString-BB@0x38 ]
+	22      (00000058) const/4              v1, 2
+	23      (0000005a) invoke-virtual       v2, v1, Ljava/lang/String;->substring(I)Ljava/lang/String;
+	24      (00000060) move-result-object   v2
+	25      (00000062) goto                 -15
+

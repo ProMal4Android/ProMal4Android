@@ -1,0 +1,89 @@
+# Lcom/sun/crypto/provider/SunJCE_ab;->c()Ljava/security/AlgorithmParameters; [access_flags=]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:java.security.AlgorithmParameters
+
+c-BB@0x0 : [ c-BB@0x8 c-BB@0x22 ]
+	0       (00000000) iget-object          v0, v4, Lcom/sun/crypto/provider/SunJCE_ab;->e [B
+	1       (00000004) if-nez               v0, +f
+
+c-BB@0x8 : [ c-BB@0x22 ]
+	2       (00000008) const/16             v0, 8
+	3       (0000000c) new-array            v0, v0, [B
+	4       (00000010) iput-object          v0, v4, Lcom/sun/crypto/provider/SunJCE_ab;->e [B
+	5       (00000014) sget-object          v0, Lcom/sun/crypto/provider/SunJCE;->h Ljava/security/SecureRandom;
+	6       (00000018) iget-object          v1, v4, Lcom/sun/crypto/provider/SunJCE_ab;->e [B
+	7       (0000001c) invoke-virtual       v0, v1, Ljava/security/SecureRandom;->nextBytes([B)V
+
+c-BB@0x22 : [ c-BB@0x34 ]
+	8       (00000022) new-instance         v1, Ljavax/crypto/spec/PBEParameterSpec;
+	9       (00000026) iget-object          v0, v4, Lcom/sun/crypto/provider/SunJCE_ab;->e [B
+	10      (0000002a) iget                 v2, v4, Lcom/sun/crypto/provider/SunJCE_ab;->f I
+	11      (0000002e) invoke-direct        v1, v0, v2, Ljavax/crypto/spec/PBEParameterSpec;-><init>([B I)V
+
+c-BB@0x34 : [ c-BB@0x5e c-BB@0x86 ]
+	12      (00000034) new-instance         v0, Ljava/lang/StringBuilder;
+	13      (00000038) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	14      (0000003e) const-string         v2, 'PBEWithMD5And'
+	15      (00000042) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (00000048) move-result-object   v2
+	17      (0000004a) iget-object          v0, v4, Lcom/sun/crypto/provider/SunJCE_ab;->d Ljava/lang/String;
+	18      (0000004e) const-string         v3, 'DES'
+	19      (00000052) invoke-virtual       v0, v3, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	20      (00000058) move-result          v0
+	21      (0000005a) if-eqz               v0, +16
+	34:7b
+	(Ljava/security/NoSuchAlgorithmException; -> 8c c-BB@0x8c)
+	(Ljava/security/NoSuchProviderException; -> 9e c-BB@0x9e)
+
+c-BB@0x5e : [ c-BB@0x62 ]
+	22      (0000005e) const-string         v0, 'DES'
+	34:7b
+	(Ljava/security/NoSuchAlgorithmException; -> 8c c-BB@0x8c)
+	(Ljava/security/NoSuchProviderException; -> 9e c-BB@0x9e)
+
+c-BB@0x62 : [ c-BB@0x7e ]
+	23      (00000062) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (00000068) move-result-object   v0
+	25      (0000006a) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	26      (00000070) move-result-object   v0
+	27      (00000072) const-string         v2, 'SunJCE'
+	28      (00000076) invoke-static        v0, v2, Ljava/security/AlgorithmParameters;->getInstance(Ljava/lang/String; Ljava/lang/String;)Ljava/security/AlgorithmParameters;
+	29      (0000007c) move-result-object   v0
+
+c-BB@0x7e : 
+	30      (0000007e) invoke-virtual       v0, v1, Ljava/security/AlgorithmParameters;->init(Ljava/security/spec/AlgorithmParameterSpec;)V
+	31      (00000084) return-object        v0
+	7e:83
+	(Ljava/security/spec/InvalidParameterSpecException; -> b0 c-BB@0xb0)
+
+c-BB@0x86 : [ c-BB@0x62 ]
+	32      (00000086) const-string         v0, 'TripleDES'
+	33      (0000008a) goto                 -14
+	86:89
+	(Ljava/security/NoSuchAlgorithmException; -> 8c c-BB@0x8c)
+	(Ljava/security/NoSuchProviderException; -> 9e c-BB@0x9e)
+
+c-BB@0x8c : 
+	34      (0000008c) move-exception       v0
+	35      (0000008e) new-instance         v0, Ljava/lang/RuntimeException;
+	36      (00000092) const-string         v1, 'SunJCE called, but not configured'
+	37      (00000096) invoke-direct        v0, v1, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	38      (0000009c) throw                v0
+
+c-BB@0x9e : 
+	39      (0000009e) move-exception       v0
+	40      (000000a0) new-instance         v0, Ljava/lang/RuntimeException;
+	41      (000000a4) const-string         v1, 'SunJCE called, but not configured'
+	42      (000000a8) invoke-direct        v0, v1, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	43      (000000ae) throw                v0
+
+c-BB@0xb0 : 
+	44      (000000b0) move-exception       v0
+	45      (000000b2) new-instance         v0, Ljava/lang/RuntimeException;
+	46      (000000b6) const-string         v1, 'PBEParameterSpec not supported'
+	47      (000000ba) invoke-direct        v0, v1, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	48      (000000c0) throw                v0
+

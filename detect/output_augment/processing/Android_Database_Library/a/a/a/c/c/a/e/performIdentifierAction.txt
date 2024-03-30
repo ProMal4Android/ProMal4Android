@@ -1,0 +1,54 @@
+# La/a/a/c/c/a/e;->performIdentifierAction(I I)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:int
+# - v6:int
+#
+# - return:boolean
+
+performIdentifierAction-BB@0x0 : [ performIdentifierAction-BB@0xa ]
+	0       (00000000) invoke-virtual       v4, La/a/a/c/c/a/e;->size()I
+	1       (00000006) move-result          v0
+	2       (00000008) const/4              v1, 0
+
+performIdentifierAction-BB@0xa : [ performIdentifierAction-BB@0xe performIdentifierAction-BB@0x4c ]
+	3       (0000000a) if-ge                v1, v0, +21
+
+performIdentifierAction-BB@0xe : [ performIdentifierAction-BB@0x26 performIdentifierAction-BB@0x28 ]
+	4       (0000000e) iget-object          v2, v4, La/a/a/c/c/a/e;->g Ljava/util/ArrayList;
+	5       (00000012) invoke-virtual       v2, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	6       (00000018) move-result-object   v2
+	7       (0000001a) check-cast           v2, La/a/a/c/c/a/f;
+	8       (0000001e) iget                 v3, v2, La/a/a/c/c/a/f;->e I
+	9       (00000022) if-ne                v3, v5, +3
+
+performIdentifierAction-BB@0x26 : [ performIdentifierAction-BB@0x4e ]
+	10      (00000026) goto                 +14
+
+performIdentifierAction-BB@0x28 : [ performIdentifierAction-BB@0x34 performIdentifierAction-BB@0x46 ]
+	11      (00000028) invoke-virtual       v2, La/a/a/c/c/a/f;->g()Z
+	12      (0000002e) move-result          v3
+	13      (00000030) if-eqz               v3, +b
+
+performIdentifierAction-BB@0x34 : [ performIdentifierAction-BB@0x44 performIdentifierAction-BB@0x46 ]
+	14      (00000034) iget-object          v2, v2, La/a/a/c/c/a/f;->p La/a/a/c/c/a/m;
+	15      (00000038) invoke-interface     v2, v5, Landroid/view/SubMenu;->findItem(I)Landroid/view/MenuItem;
+	16      (0000003e) move-result-object   v2
+	17      (00000040) if-eqz               v2, +3
+
+performIdentifierAction-BB@0x44 : [ performIdentifierAction-BB@0x4e ]
+	18      (00000044) goto                 +5
+
+performIdentifierAction-BB@0x46 : [ performIdentifierAction-BB@0xa ]
+	19      (00000046) add-int/lit8         v1, v1, 1
+	20      (0000004a) goto                 -20
+
+performIdentifierAction-BB@0x4c : [ performIdentifierAction-BB@0x4e ]
+	21      (0000004c) const/4              v2, 0
+
+performIdentifierAction-BB@0x4e : 
+	22      (0000004e) invoke-virtual       v4, v2, v6, La/a/a/c/c/a/e;->a(Landroid/view/MenuItem; I)Z
+	23      (00000054) move-result          v5
+	24      (00000056) return               v5
+

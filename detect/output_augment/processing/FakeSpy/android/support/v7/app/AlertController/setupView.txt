@@ -1,0 +1,240 @@
+# Landroid/support/v7/app/AlertController;->setupView()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v24
+#
+# - return:void
+
+setupView-BB@0x0 : [ setupView-BB@0xf0 setupView-BB@0x25a ]
+	0       (00000000) move-object/from16   v0, v24
+	1       (00000004) iget-object          v0, v0, Landroid/support/v7/app/AlertController;->mWindow Landroid/view/Window;
+	2       (00000008) move-object/from16   v22, v0
+	3       (0000000c) sget                 v23, Landroid/support/v7/appcompat/R$id;->parentPanel I
+	4       (00000010) invoke-virtual/range v22 ... v23, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+	5       (00000016) move-result-object   v19
+	6       (00000018) sget                 v22, Landroid/support/v7/appcompat/R$id;->topPanel I
+	7       (0000001c) move-object/from16   v0, v19
+	8       (00000020) move/from16          v1, v22
+	9       (00000024) invoke-virtual       v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	10      (0000002a) move-result-object   v13
+	11      (0000002c) sget                 v22, Landroid/support/v7/appcompat/R$id;->contentPanel I
+	12      (00000030) move-object/from16   v0, v19
+	13      (00000034) move/from16          v1, v22
+	14      (00000038) invoke-virtual       v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	15      (0000003e) move-result-object   v12
+	16      (00000040) sget                 v22, Landroid/support/v7/appcompat/R$id;->buttonPanel I
+	17      (00000044) move-object/from16   v0, v19
+	18      (00000048) move/from16          v1, v22
+	19      (0000004c) invoke-virtual       v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	20      (00000052) move-result-object   v11
+	21      (00000054) sget                 v22, Landroid/support/v7/appcompat/R$id;->customPanel I
+	22      (00000058) move-object/from16   v0, v19
+	23      (0000005c) move/from16          v1, v22
+	24      (00000060) invoke-virtual       v0, v1, Landroid/view/View;->findViewById(I)Landroid/view/View;
+	25      (00000066) move-result-object   v9
+	26      (00000068) check-cast           v9, Landroid/view/ViewGroup;
+	27      (0000006c) move-object/from16   v0, v24
+	28      (00000070) invoke-direct        v0, v9, Landroid/support/v7/app/AlertController;->setupCustomContent(Landroid/view/ViewGroup;)V
+	29      (00000076) sget                 v22, Landroid/support/v7/appcompat/R$id;->topPanel I
+	30      (0000007a) move/from16          v0, v22
+	31      (0000007e) invoke-virtual       v9, v0, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+	32      (00000084) move-result-object   v10
+	33      (00000086) sget                 v22, Landroid/support/v7/appcompat/R$id;->contentPanel I
+	34      (0000008a) move/from16          v0, v22
+	35      (0000008e) invoke-virtual       v9, v0, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+	36      (00000094) move-result-object   v8
+	37      (00000096) sget                 v22, Landroid/support/v7/appcompat/R$id;->buttonPanel I
+	38      (0000009a) move/from16          v0, v22
+	39      (0000009e) invoke-virtual       v9, v0, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+	40      (000000a4) move-result-object   v7
+	41      (000000a6) move-object/from16   v0, v24
+	42      (000000aa) invoke-direct        v0, v10, v13, Landroid/support/v7/app/AlertController;->resolvePanel(Landroid/view/View; Landroid/view/View;)Landroid/view/ViewGroup;
+	43      (000000b0) move-result-object   v21
+	44      (000000b2) move-object/from16   v0, v24
+	45      (000000b6) invoke-direct        v0, v8, v12, Landroid/support/v7/app/AlertController;->resolvePanel(Landroid/view/View; Landroid/view/View;)Landroid/view/ViewGroup;
+	46      (000000bc) move-result-object   v6
+	47      (000000be) move-object/from16   v0, v24
+	48      (000000c2) invoke-direct        v0, v7, v11, Landroid/support/v7/app/AlertController;->resolvePanel(Landroid/view/View; Landroid/view/View;)Landroid/view/ViewGroup;
+	49      (000000c8) move-result-object   v3
+	50      (000000ca) move-object/from16   v0, v24
+	51      (000000ce) invoke-direct        v0, v6, Landroid/support/v7/app/AlertController;->setupContent(Landroid/view/ViewGroup;)V
+	52      (000000d4) move-object/from16   v0, v24
+	53      (000000d8) invoke-direct        v0, v3, Landroid/support/v7/app/AlertController;->setupButtons(Landroid/view/ViewGroup;)V
+	54      (000000de) move-object/from16   v0, v24
+	55      (000000e2) move-object/from16   v1, v21
+	56      (000000e6) invoke-direct        v0, v1, Landroid/support/v7/app/AlertController;->setupTitle(Landroid/view/ViewGroup;)V
+	57      (000000ec) if-eqz               v9, +b7
+
+setupView-BB@0xf0 : [ setupView-BB@0x108 setupView-BB@0x25a ]
+	58      (000000f0) invoke-virtual       v9, Landroid/view/ViewGroup;->getVisibility()I
+	59      (000000f6) move-result          v22
+	60      (000000f8) const/16             v23, 8
+	61      (000000fc) move/from16          v0, v22
+	62      (00000100) move/from16          v1, v23
+	63      (00000104) if-eq                v0, v1, +ab
+
+setupView-BB@0x108 : [ setupView-BB@0x10a ]
+	64      (00000108) const/4              v15, 1
+
+setupView-BB@0x10a : [ setupView-BB@0x10e setupView-BB@0x260 ]
+	65      (0000010a) if-eqz               v21, +ab
+
+setupView-BB@0x10e : [ setupView-BB@0x126 setupView-BB@0x260 ]
+	66      (0000010e) invoke-virtual/range v21, Landroid/view/ViewGroup;->getVisibility()I
+	67      (00000114) move-result          v22
+	68      (00000116) const/16             v23, 8
+	69      (0000011a) move/from16          v0, v22
+	70      (0000011e) move/from16          v1, v23
+	71      (00000122) if-eq                v0, v1, +9f
+
+setupView-BB@0x126 : [ setupView-BB@0x12a ]
+	72      (00000126) const/16             v16, 1
+
+setupView-BB@0x12a : [ setupView-BB@0x12e setupView-BB@0x268 ]
+	73      (0000012a) if-eqz               v3, +9f
+
+setupView-BB@0x12e : [ setupView-BB@0x146 setupView-BB@0x268 ]
+	74      (0000012e) invoke-virtual       v3, Landroid/view/ViewGroup;->getVisibility()I
+	75      (00000134) move-result          v22
+	76      (00000136) const/16             v23, 8
+	77      (0000013a) move/from16          v0, v22
+	78      (0000013e) move/from16          v1, v23
+	79      (00000142) if-eq                v0, v1, +93
+
+setupView-BB@0x146 : [ setupView-BB@0x148 ]
+	80      (00000146) const/4              v14, 1
+
+setupView-BB@0x148 : [ setupView-BB@0x14c setupView-BB@0x176 ]
+	81      (00000148) if-nez               v14, +17
+
+setupView-BB@0x14c : [ setupView-BB@0x150 setupView-BB@0x176 ]
+	82      (0000014c) if-eqz               v6, +15
+
+setupView-BB@0x150 : [ setupView-BB@0x164 setupView-BB@0x176 ]
+	83      (00000150) sget                 v22, Landroid/support/v7/appcompat/R$id;->textSpacerNoButtons I
+	84      (00000154) move/from16          v0, v22
+	85      (00000158) invoke-virtual       v6, v0, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+	86      (0000015e) move-result-object   v20
+	87      (00000160) if-eqz               v20, +b
+
+setupView-BB@0x164 : [ setupView-BB@0x176 ]
+	88      (00000164) const/16             v22, 0
+	89      (00000168) move-object/from16   v0, v20
+	90      (0000016c) move/from16          v1, v22
+	91      (00000170) invoke-virtual       v0, v1, Landroid/view/View;->setVisibility(I)V
+
+setupView-BB@0x176 : [ setupView-BB@0x17a setupView-BB@0x1a0 ]
+	92      (00000176) if-eqz               v16, +15
+
+setupView-BB@0x17a : [ setupView-BB@0x18a setupView-BB@0x1a0 ]
+	93      (0000017a) move-object/from16   v0, v24
+	94      (0000017e) iget-object          v0, v0, Landroid/support/v7/app/AlertController;->mScrollView Landroid/support/v4/widget/NestedScrollView;
+	95      (00000182) move-object/from16   v22, v0
+	96      (00000186) if-eqz               v22, +d
+
+setupView-BB@0x18a : [ setupView-BB@0x1a0 ]
+	97      (0000018a) move-object/from16   v0, v24
+	98      (0000018e) iget-object          v0, v0, Landroid/support/v7/app/AlertController;->mScrollView Landroid/support/v4/widget/NestedScrollView;
+	99      (00000192) move-object/from16   v22, v0
+	100     (00000196) const/16             v23, 1
+	101     (0000019a) invoke-virtual/range v22 ... v23, Landroid/support/v4/widget/NestedScrollView;->setClipToPadding(Z)V
+
+setupView-BB@0x1a0 : [ setupView-BB@0x1a4 setupView-BB@0x1ee ]
+	102     (000001a0) if-nez               v15, +27
+
+setupView-BB@0x1a4 : [ setupView-BB@0x1b4 setupView-BB@0x26e ]
+	103     (000001a4) move-object/from16   v0, v24
+	104     (000001a8) iget-object          v0, v0, Landroid/support/v7/app/AlertController;->mListView Landroid/widget/ListView;
+	105     (000001ac) move-object/from16   v22, v0
+	106     (000001b0) if-eqz               v22, +5f
+
+setupView-BB@0x1b4 : [ setupView-BB@0x1bc ]
+	107     (000001b4) move-object/from16   v0, v24
+	108     (000001b8) iget-object          v5, v0, Landroid/support/v7/app/AlertController;->mListView Landroid/widget/ListView;
+
+setupView-BB@0x1bc : [ setupView-BB@0x1c0 setupView-BB@0x1ee ]
+	109     (000001bc) if-eqz               v5, +19
+
+setupView-BB@0x1c0 : [ setupView-BB@0x1c4 setupView-BB@0x278 ]
+	110     (000001c0) if-eqz               v16, +5c
+
+setupView-BB@0x1c4 : [ setupView-BB@0x1cc ]
+	111     (000001c4) const/16             v22, 1
+	112     (000001c8) move/from16          v23, v22
+
+setupView-BB@0x1cc : [ setupView-BB@0x1d0 setupView-BB@0x282 ]
+	113     (000001cc) if-eqz               v14, +5b
+
+setupView-BB@0x1d0 : [ setupView-BB@0x1d4 ]
+	114     (000001d0) const/16             v22, 2
+
+setupView-BB@0x1d4 : [ setupView-BB@0x1ee ]
+	115     (000001d4) or-int               v17, v23, v22
+	116     (000001d8) const/16             v22, 3
+	117     (000001dc) move-object/from16   v0, v24
+	118     (000001e0) move/from16          v1, v17
+	119     (000001e4) move/from16          v2, v22
+	120     (000001e8) invoke-direct        v0, v6, v5, v1, v2, Landroid/support/v7/app/AlertController;->setScrollIndicators(Landroid/view/ViewGroup; Landroid/view/View; I I)V
+
+setupView-BB@0x1ee : [ setupView-BB@0x1fe setupView-BB@0x258 ]
+	121     (000001ee) move-object/from16   v0, v24
+	122     (000001f2) iget-object          v0, v0, Landroid/support/v7/app/AlertController;->mListView Landroid/widget/ListView;
+	123     (000001f6) move-object/from16   v18, v0
+	124     (000001fa) if-eqz               v18, +2f
+
+setupView-BB@0x1fe : [ setupView-BB@0x20e setupView-BB@0x258 ]
+	125     (000001fe) move-object/from16   v0, v24
+	126     (00000202) iget-object          v0, v0, Landroid/support/v7/app/AlertController;->mAdapter Landroid/widget/ListAdapter;
+	127     (00000206) move-object/from16   v22, v0
+	128     (0000020a) if-eqz               v22, +27
+
+setupView-BB@0x20e : [ setupView-BB@0x23c setupView-BB@0x258 ]
+	129     (0000020e) move-object/from16   v0, v24
+	130     (00000212) iget-object          v0, v0, Landroid/support/v7/app/AlertController;->mAdapter Landroid/widget/ListAdapter;
+	131     (00000216) move-object/from16   v22, v0
+	132     (0000021a) move-object/from16   v0, v18
+	133     (0000021e) move-object/from16   v1, v22
+	134     (00000222) invoke-virtual       v0, v1, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+	135     (00000228) move-object/from16   v0, v24
+	136     (0000022c) iget                 v4, v0, Landroid/support/v7/app/AlertController;->mCheckedItem I
+	137     (00000230) const/16             v22, -1
+	138     (00000234) move/from16          v0, v22
+	139     (00000238) if-le                v4, v0, +10
+
+setupView-BB@0x23c : [ setupView-BB@0x258 ]
+	140     (0000023c) const/16             v22, 1
+	141     (00000240) move-object/from16   v0, v18
+	142     (00000244) move/from16          v1, v22
+	143     (00000248) invoke-virtual       v0, v4, v1, Landroid/widget/ListView;->setItemChecked(I Z)V
+	144     (0000024e) move-object/from16   v0, v18
+	145     (00000252) invoke-virtual       v0, v4, Landroid/widget/ListView;->setSelection(I)V
+
+setupView-BB@0x258 : 
+	146     (00000258) return-void          
+
+setupView-BB@0x25a : [ setupView-BB@0x10a ]
+	147     (0000025a) const/4              v15, 0
+	148     (0000025c) goto/16              -a9
+
+setupView-BB@0x260 : [ setupView-BB@0x12a ]
+	149     (00000260) const/16             v16, 0
+	150     (00000264) goto/16              -9d
+
+setupView-BB@0x268 : [ setupView-BB@0x148 ]
+	151     (00000268) const/4              v14, 0
+	152     (0000026a) goto/16              -91
+
+setupView-BB@0x26e : [ setupView-BB@0x1bc ]
+	153     (0000026e) move-object/from16   v0, v24
+	154     (00000272) iget-object          v5, v0, Landroid/support/v7/app/AlertController;->mScrollView Landroid/support/v4/widget/NestedScrollView;
+	155     (00000276) goto                 -5d
+
+setupView-BB@0x278 : [ setupView-BB@0x1cc ]
+	156     (00000278) const/16             v22, 0
+	157     (0000027c) move/from16          v23, v22
+	158     (00000280) goto                 -5a
+
+setupView-BB@0x282 : [ setupView-BB@0x1d4 ]
+	159     (00000282) const/16             v22, 0
+	160     (00000286) goto                 -59
+

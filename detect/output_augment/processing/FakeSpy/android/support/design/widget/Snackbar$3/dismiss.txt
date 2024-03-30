@@ -1,0 +1,21 @@
+# Landroid/support/design/widget/Snackbar$3;->dismiss(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:int
+#
+# - return:void
+
+dismiss-BB@0x0 : 
+	0       (00000000) invoke-static        Landroid/support/design/widget/Snackbar;->access$100()Landroid/os/Handler;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-static        Landroid/support/design/widget/Snackbar;->access$100()Landroid/os/Handler;
+	3       (0000000e) move-result-object   v1
+	4       (00000010) const/4              v2, 1
+	5       (00000012) const/4              v3, 0
+	6       (00000014) iget-object          v4, v5, Landroid/support/design/widget/Snackbar$3;->this$0 Landroid/support/design/widget/Snackbar;
+	7       (00000018) invoke-virtual       v1, v2, v6, v3, v4, Landroid/os/Handler;->obtainMessage(I I I Ljava/lang/Object;)Landroid/os/Message;
+	8       (0000001e) move-result-object   v1
+	9       (00000020) invoke-virtual       v0, v1, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+	10      (00000026) return-void          
+

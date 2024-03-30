@@ -1,0 +1,42 @@
+# Landroid/support/v4/media/ParceledListSliceAdapterApi21;->newInstance(Ljava/util/List;)Ljava/lang/Object; [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.util.List
+#
+# - return:java.lang.Object
+
+newInstance-BB@0x0 : [ newInstance-BB@0x2 ]
+	0       (00000000) const/4              v1, 0
+
+newInstance-BB@0x2 : [ newInstance-BB@0x1a ]
+	1       (00000002) sget-object          v2, Landroid/support/v4/media/ParceledListSliceAdapterApi21;->sConstructor Ljava/lang/reflect/Constructor;
+	2       (00000006) const/4              v3, 1
+	3       (00000008) new-array            v3, v3, [Ljava/lang/Object;
+	4       (0000000c) const/4              v4, 0
+	5       (0000000e) aput-object          v5, v3, v4
+	6       (00000012) invoke-virtual       v2, v3, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+	7       (00000018) move-result-object   v1
+	2:17
+	(Ljava/lang/InstantiationException; -> 1c newInstance-BB@0x1c)
+	(Ljava/lang/IllegalAccessException; -> 26 newInstance-BB@0x26)
+	(Ljava/lang/reflect/InvocationTargetException; -> 2a newInstance-BB@0x2a)
+
+newInstance-BB@0x1a : 
+	8       (0000001a) return-object        v1
+
+newInstance-BB@0x1c : [ newInstance-BB@0x1e ]
+	9       (0000001c) move-exception       v0
+
+newInstance-BB@0x1e : [ newInstance-BB@0x1a ]
+	10      (0000001e) invoke-virtual       v0, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
+	11      (00000024) goto                 -5
+
+newInstance-BB@0x26 : [ newInstance-BB@0x1e ]
+	12      (00000026) move-exception       v0
+	13      (00000028) goto                 -5
+
+newInstance-BB@0x2a : [ newInstance-BB@0x1e ]
+	14      (0000002a) move-exception       v0
+	15      (0000002c) goto                 -7
+

@@ -1,0 +1,25 @@
+# La/a/a/c/d/a;->a(Landroid/view/View; I I I)I [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.view.View
+# - v3:int
+# - v4:int
+# - v5:int
+#
+# - return:int
+
+a-BB@0x0 : 
+	0       (00000000) const/high16         v0, -32768 # [-0.0]
+	1       (00000004) invoke-static        v3, v0, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	2       (0000000a) move-result          v0
+	3       (0000000c) invoke-virtual       v2, v0, v4, Landroid/view/View;->measure(I I)V
+	4       (00000012) invoke-virtual       v2, Landroid/view/View;->getMeasuredWidth()I
+	5       (00000018) move-result          v2
+	6       (0000001a) sub-int/2addr        v3, v2
+	7       (0000001c) sub-int/2addr        v3, v5
+	8       (0000001e) const/4              v2, 0
+	9       (00000020) invoke-static        v2, v3, Ljava/lang/Math;->max(I I)I
+	10      (00000026) move-result          v2
+	11      (00000028) return               v2
+

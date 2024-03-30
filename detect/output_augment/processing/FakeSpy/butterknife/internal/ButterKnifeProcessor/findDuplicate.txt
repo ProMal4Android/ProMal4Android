@@ -1,0 +1,40 @@
+# Lbutterknife/internal/ButterKnifeProcessor;->findDuplicate([I)Ljava/lang/Integer; [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:int[]
+#
+# - return:java.lang.Integer
+
+findDuplicate-BB@0x0 : [ findDuplicate-BB@0xe ]
+	0       (00000000) new-instance         v1, Ljava/util/LinkedHashSet;
+	1       (00000004) invoke-direct        v1, Ljava/util/LinkedHashSet;-><init>()V
+	2       (0000000a) array-length         v3, v5
+	3       (0000000c) const/4              v2, 0
+
+findDuplicate-BB@0xe : [ findDuplicate-BB@0x12 findDuplicate-BB@0x3a ]
+	4       (0000000e) if-ge                v2, v3, +16
+
+findDuplicate-BB@0x12 : [ findDuplicate-BB@0x2a findDuplicate-BB@0x34 ]
+	5       (00000012) aget                 v0, v5, v2
+	6       (00000016) invoke-static        v0, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	7       (0000001c) move-result-object   v4
+	8       (0000001e) invoke-interface     v1, v4, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+	9       (00000024) move-result          v4
+	10      (00000026) if-nez               v4, +7
+
+findDuplicate-BB@0x2a : [ findDuplicate-BB@0x32 ]
+	11      (0000002a) invoke-static        v0, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	12      (00000030) move-result-object   v2
+
+findDuplicate-BB@0x32 : 
+	13      (00000032) return-object        v2
+
+findDuplicate-BB@0x34 : [ findDuplicate-BB@0xe ]
+	14      (00000034) add-int/lit8         v2, v2, 1
+	15      (00000038) goto                 -15
+
+findDuplicate-BB@0x3a : [ findDuplicate-BB@0x32 ]
+	16      (0000003a) const/4              v2, 0
+	17      (0000003c) goto                 -5
+

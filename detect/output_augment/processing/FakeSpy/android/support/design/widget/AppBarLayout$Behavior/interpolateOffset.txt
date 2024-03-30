@@ -1,0 +1,102 @@
+# Landroid/support/design/widget/AppBarLayout$Behavior;->interpolateOffset(Landroid/support/design/widget/AppBarLayout; I)I [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v13
+# - v14:android.support.design.widget.AppBarLayout
+# - v15:int
+#
+# - return:int
+
+interpolateOffset-BB@0x0 : [ interpolateOffset-BB@0x12 ]
+	0       (00000000) invoke-static        v15, Ljava/lang/Math;->abs(I)I
+	1       (00000006) move-result          v0
+	2       (00000008) const/4              v5, 0
+	3       (0000000a) invoke-virtual       v14, Landroid/support/design/widget/AppBarLayout;->getChildCount()I
+	4       (00000010) move-result          v9
+
+interpolateOffset-BB@0x12 : [ interpolateOffset-BB@0x16 interpolateOffset-BB@0xde ]
+	5       (00000012) if-ge                v5, v9, +66
+
+interpolateOffset-BB@0x16 : [ interpolateOffset-BB@0x3e interpolateOffset-BB@0xe0 ]
+	6       (00000016) invoke-virtual       v14, v5, Landroid/support/design/widget/AppBarLayout;->getChildAt(I)Landroid/view/View;
+	7       (0000001c) move-result-object   v1
+	8       (0000001e) invoke-virtual       v1, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	9       (00000024) move-result-object   v2
+	10      (00000026) check-cast           v2, Landroid/support/design/widget/AppBarLayout$LayoutParams;
+	11      (0000002a) invoke-virtual       v2, Landroid/support/design/widget/AppBarLayout$LayoutParams;->getScrollInterpolator()Landroid/view/animation/Interpolator;
+	12      (00000030) move-result-object   v7
+	13      (00000032) invoke-virtual       v1, Landroid/view/View;->getTop()I
+	14      (00000038) move-result          v10
+	15      (0000003a) if-lt                v0, v10, +53
+
+interpolateOffset-BB@0x3e : [ interpolateOffset-BB@0x4a interpolateOffset-BB@0xe0 ]
+	16      (0000003e) invoke-virtual       v1, Landroid/view/View;->getBottom()I
+	17      (00000044) move-result          v10
+	18      (00000046) if-gt                v0, v10, +4d
+
+interpolateOffset-BB@0x4a : [ interpolateOffset-BB@0x4e interpolateOffset-BB@0xde ]
+	19      (0000004a) if-eqz               v7, +4a
+
+interpolateOffset-BB@0x4e : [ interpolateOffset-BB@0x60 interpolateOffset-BB@0x88 ]
+	20      (0000004e) const/4              v3, 0
+	21      (00000050) invoke-virtual       v2, Landroid/support/design/widget/AppBarLayout$LayoutParams;->getScrollFlags()I
+	22      (00000056) move-result          v4
+	23      (00000058) and-int/lit8         v10, v4, 1
+	24      (0000005c) if-eqz               v10, +16
+
+interpolateOffset-BB@0x60 : [ interpolateOffset-BB@0x7e interpolateOffset-BB@0x88 ]
+	25      (00000060) invoke-virtual       v1, Landroid/view/View;->getHeight()I
+	26      (00000066) move-result          v10
+	27      (00000068) iget                 v11, v2, Landroid/support/design/widget/AppBarLayout$LayoutParams;->topMargin I
+	28      (0000006c) add-int/2addr        v10, v11
+	29      (0000006e) iget                 v11, v2, Landroid/support/design/widget/AppBarLayout$LayoutParams;->bottomMargin I
+	30      (00000072) add-int/2addr        v10, v11
+	31      (00000074) add-int/2addr        v3, v10
+	32      (00000076) and-int/lit8         v10, v4, 2
+	33      (0000007a) if-eqz               v10, +7
+
+interpolateOffset-BB@0x7e : [ interpolateOffset-BB@0x88 ]
+	34      (0000007e) invoke-static        v1, Landroid/support/v4/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
+	35      (00000084) move-result          v10
+	36      (00000086) sub-int/2addr        v3, v10
+
+interpolateOffset-BB@0x88 : [ interpolateOffset-BB@0x94 interpolateOffset-BB@0x9e ]
+	37      (00000088) invoke-static        v1, Landroid/support/v4/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+	38      (0000008e) move-result          v10
+	39      (00000090) if-eqz               v10, +7
+
+interpolateOffset-BB@0x94 : [ interpolateOffset-BB@0x9e ]
+	40      (00000094) invoke-static        v14, Landroid/support/design/widget/AppBarLayout;->access$500(Landroid/support/design/widget/AppBarLayout;)I
+	41      (0000009a) move-result          v10
+	42      (0000009c) sub-int/2addr        v3, v10
+
+interpolateOffset-BB@0x9e : [ interpolateOffset-BB@0xa2 interpolateOffset-BB@0xde ]
+	43      (0000009e) if-lez               v3, +20
+
+interpolateOffset-BB@0xa2 : [ interpolateOffset-BB@0xde ]
+	44      (000000a2) invoke-virtual       v1, Landroid/view/View;->getTop()I
+	45      (000000a8) move-result          v10
+	46      (000000aa) sub-int              v8, v0, v10
+	47      (000000ae) int-to-float         v10, v3
+	48      (000000b0) int-to-float         v11, v8
+	49      (000000b2) int-to-float         v12, v3
+	50      (000000b4) div-float/2addr      v11, v12
+	51      (000000b6) invoke-interface     v7, v11, Landroid/view/animation/Interpolator;->getInterpolation(F)F
+	52      (000000bc) move-result          v11
+	53      (000000be) mul-float/2addr      v10, v11
+	54      (000000c0) invoke-static        v10, Ljava/lang/Math;->round(F)I
+	55      (000000c6) move-result          v6
+	56      (000000c8) invoke-static        v15, Ljava/lang/Integer;->signum(I)I
+	57      (000000ce) move-result          v10
+	58      (000000d0) invoke-virtual       v1, Landroid/view/View;->getTop()I
+	59      (000000d6) move-result          v11
+	60      (000000d8) add-int/2addr        v11, v6
+	61      (000000da) mul-int              v15, v10, v11
+
+interpolateOffset-BB@0xde : 
+	62      (000000de) return               v15
+
+interpolateOffset-BB@0xe0 : [ interpolateOffset-BB@0x12 ]
+	63      (000000e0) add-int/lit8         v5, v5, 1
+	64      (000000e4) goto                 -69
+

@@ -1,0 +1,385 @@
+# Lcom/mixio/tosh/aprl/aetn/ate;->onStartCommand(Landroid/content/Intent; I I)I [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.Intent
+# - v7:int
+# - v8:int
+#
+# - return:int
+
+onStartCommand-BB@0x0 : [ onStartCommand-BB@0xe onStartCommand-BB@0x10 ]
+	0       (00000000) const-string         v6, 'GPTIME'
+	1       (00000004) iget-boolean         v7, v5, Lcom/mixio/tosh/aprl/aetn/ate;->R Z
+	2       (00000008) const/4              v8, 1
+	3       (0000000a) if-eqz               v7, +3
+
+onStartCommand-BB@0xe : 
+	4       (0000000e) return               v8
+
+onStartCommand-BB@0x10 : [ onStartCommand-BB@0x4a onStartCommand-BB@0x56 ]
+	5       (00000010) iput-boolean         v8, v5, Lcom/mixio/tosh/aprl/aetn/ate;->R Z
+	6       (00000014) invoke-virtual       v5, Landroid/app/IntentService;->getApplicationContext()Landroid/content/Context;
+	7       (0000001a) move-result-object   v7
+	8       (0000001c) sput-object          v7, Lcom/mixio/tosh/aprl/aetn/ate;->b Landroid/content/Context;
+	9       (00000020) const-string         v7, 'AES/CBC/PKCS5Padding'
+	10      (00000024) invoke-static        v7, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+	11      (0000002a) move-result-object   v7
+	12      (0000002c) sput-object          v7, Lcom/mixio/tosh/aprl/aetn/ate;->s Ljavax/crypto/Cipher;
+	13      (00000030) new-instance         v7, Ljava/io/File;
+	14      (00000034) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->l Ljava/lang/String;
+	15      (00000038) invoke-direct        v7, v0, Ljava/io/File;-><init>(Ljava/lang/String;)V
+	16      (0000003e) invoke-virtual       v7, Ljava/io/File;->exists()Z
+	17      (00000044) move-result          v0
+	18      (00000046) if-eqz               v0, +8
+	10:6b
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x4a : [ onStartCommand-BB@0x56 onStartCommand-BB@0x5c ]
+	19      (0000004a) invoke-virtual       v7, Ljava/io/File;->isDirectory()Z
+	20      (00000050) move-result          v0
+	21      (00000052) if-nez               v0, +5
+	10:6b
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x56 : [ onStartCommand-BB@0x5c ]
+	22      (00000056) invoke-virtual       v7, Ljava/io/File;->mkdirs()Z
+	10:6b
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x5c : [ onStartCommand-BB@0x6e ]
+	23      (0000005c) sget-object          v7, Lcom/mixio/tosh/aprl/aetn/ate;->b Landroid/content/Context;
+	24      (00000060) invoke-virtual       v7, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+	25      (00000066) move-result-object   v7
+	26      (00000068) sput-object          v7, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	27      (0000006c) const/4              v7, 0
+
+onStartCommand-BB@0x6e : [ onStartCommand-BB@0xd6 ]
+	28      (0000006e) new-instance         v0, Lb/b/a/a/f/a;
+	29      (00000072) const-string         v1, 'Dname'
+	30      (00000076) const/4              v2, 0
+	31      (00000078) invoke-virtual       v5, v1, v7, v2, Landroid/app/IntentService;->openOrCreateDatabase(Ljava/lang/String; I Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+	32      (0000007e) move-result-object   v1
+	33      (00000080) invoke-direct        v0, v1, Lb/b/a/a/f/a;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
+	34      (00000086) sput-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->g Lb/b/a/a/f/a;
+	35      (0000008a) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->g Lb/b/a/a/f/a;
+	36      (0000008e) iget-object          v1, v0, Lb/b/a/a/f/a;->d Landroid/database/sqlite/SQLiteDatabase;
+	37      (00000092) const-string         v2, 'create table if not exists Wapp ( md5id primary key, Map text, Data text, Sent text)'
+	38      (00000096) invoke-virtual       v1, v2, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+	39      (0000009c) iget-object          v0, v0, Lb/b/a/a/f/a;->d Landroid/database/sqlite/SQLiteDatabase;
+	40      (000000a0) const-string         v1, 'create table if not exists WappMap ( Map primary key, NHolder text )'
+	41      (000000a4) invoke-virtual       v0, v1, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+	42      (000000aa) goto                 +16
+	6e:a9
+	(Ljava/lang/Exception; -> ac onStartCommand-BB@0xac)
+
+onStartCommand-BB@0xac : [ onStartCommand-BB@0xae ]
+	43      (000000ac) move-exception       v0
+
+onStartCommand-BB@0xae : [ onStartCommand-BB@0xd6 ]
+	44      (000000ae) new-instance         v1, Ljava/lang/StringBuilder;
+	45      (000000b2) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	46      (000000b8) const-string         v2, 'Sql Error '
+	47      (000000bc) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	48      (000000c2) invoke-virtual       v0, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	49      (000000c8) move-result-object   v0
+	50      (000000ca) invoke-virtual       v1, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	51      (000000d0) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0xd6 : [ onStartCommand-BB@0x11a ]
+	52      (000000d6) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->b Landroid/content/Context;
+	53      (000000da) invoke-static        v0, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+	54      (000000e0) move-result-object   v0
+	55      (000000e2) sput-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	56      (000000e6) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	57      (000000ea) invoke-interface     v0, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+	58      (000000f0) move-result-object   v0
+	59      (000000f2) sput-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->f Landroid/content/SharedPreferences$Editor;
+	60      (000000f6) invoke-virtual       v5, Lcom/mixio/tosh/aprl/aetn/ate;->d()V
+	61      (000000fc) iget-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->O Lb/b/a/a/a/a;
+	62      (00000100) iget-object          v0, v0, Lb/b/a/a/a/a;->a Ljava/util/List;
+	63      (00000104) invoke-interface     v0, Ljava/util/List;->size()I
+	64      (0000010a) move-result          v0
+	65      (0000010c) invoke-static        v0, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+	66      (00000112) const/4              v0, 4
+	67      (00000114) iput                 v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->D I
+	68      (00000118) const/4              v0, 0
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x11a : [ onStartCommand-BB@0x130 onStartCommand-BB@0x1d6 ]
+	69      (0000011a) iget-object          v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->O Lb/b/a/a/a/a;
+	70      (0000011e) iget-object          v1, v1, Lb/b/a/a/a/a;->a Ljava/util/List;
+	71      (00000122) invoke-interface     v1, Ljava/util/List;->size()I
+	72      (00000128) move-result          v1
+	73      (0000012a) sub-int/2addr        v1, v8
+	74      (0000012c) if-gt                v0, v1, +55
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x130 : [ onStartCommand-BB@0x11a ]
+	75      (00000130) iget-object          v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->O Lb/b/a/a/a/a;
+	76      (00000134) iget-object          v1, v1, Lb/b/a/a/a/a;->a Ljava/util/List;
+	77      (00000138) invoke-interface     v1, v0, Ljava/util/List;->get(I)Ljava/lang/Object;
+	78      (0000013e) move-result-object   v1
+	79      (00000140) check-cast           v1, Lb/b/a/a/a/b;
+	80      (00000144) iget-object          v1, v1, Lb/b/a/a/a/b;->a Ljava/lang/Integer;
+	81      (00000148) invoke-virtual       v1, Ljava/lang/Integer;->intValue()I
+	82      (0000014e) move-result          v1
+	83      (00000150) iput                 v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->w I
+	84      (00000154) iget-object          v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->O Lb/b/a/a/a/a;
+	85      (00000158) iget-object          v1, v1, Lb/b/a/a/a/a;->a Ljava/util/List;
+	86      (0000015c) invoke-interface     v1, v0, Ljava/util/List;->get(I)Ljava/lang/Object;
+	87      (00000162) move-result-object   v1
+	88      (00000164) check-cast           v1, Lb/b/a/a/a/b;
+	89      (00000168) iget-object          v1, v1, Lb/b/a/a/a/b;->b Ljava/lang/Integer;
+	90      (0000016c) invoke-virtual       v1, Ljava/lang/Integer;->intValue()I
+	91      (00000172) move-result          v1
+	92      (00000174) iput                 v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->x I
+	93      (00000178) iget-object          v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->O Lb/b/a/a/a/a;
+	94      (0000017c) iget-object          v1, v1, Lb/b/a/a/a/a;->a Ljava/util/List;
+	95      (00000180) invoke-interface     v1, v0, Ljava/util/List;->get(I)Ljava/lang/Object;
+	96      (00000186) move-result-object   v1
+	97      (00000188) check-cast           v1, Lb/b/a/a/a/b;
+	98      (0000018c) iget-object          v1, v1, Lb/b/a/a/a/b;->c Ljava/lang/Integer;
+	99      (00000190) invoke-virtual       v1, Ljava/lang/Integer;->intValue()I
+	100     (00000196) move-result          v1
+	101     (00000198) iput                 v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->y I
+	102     (0000019c) iget-object          v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->O Lb/b/a/a/a/a;
+	103     (000001a0) iget-object          v1, v1, Lb/b/a/a/a/a;->a Ljava/util/List;
+	104     (000001a4) invoke-interface     v1, v0, Ljava/util/List;->get(I)Ljava/lang/Object;
+	105     (000001aa) move-result-object   v1
+	106     (000001ac) check-cast           v1, Lb/b/a/a/a/b;
+	107     (000001b0) iget-object          v1, v1, Lb/b/a/a/a/b;->d Ljava/lang/Integer;
+	108     (000001b4) invoke-virtual       v1, Ljava/lang/Integer;->intValue()I
+	109     (000001ba) move-result          v1
+	110     (000001bc) iput                 v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->z I
+	111     (000001c0) invoke-virtual       v5, v8, Lcom/mixio/tosh/aprl/aetn/ate;->a(Z)V
+	112     (000001c6) iget                 v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->D I
+	113     (000001ca) add-int/2addr        v1, v8
+	114     (000001cc) iput                 v1, v5, Lcom/mixio/tosh/aprl/aetn/ate;->D I
+	115     (000001d0) add-int/lit8         v0, v0, 1
+	116     (000001d4) goto                 -5d
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x1d6 : [ onStartCommand-BB@0x222 onStartCommand-BB@0x22c ]
+	117     (000001d6) invoke-virtual       v5, Lcom/mixio/tosh/aprl/aetn/ate;->i()V
+	118     (000001dc) new-instance         v0, Lb/b/a/a/b;
+	119     (000001e0) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	120     (000001e6) move-result-object   v1
+	121     (000001e8) invoke-direct        v0, v1, Lb/b/a/a/b;-><init>(Landroid/content/Context;)V
+	122     (000001ee) iput-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->H Lb/b/a/a/b;
+	123     (000001f2) iget-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->H Lb/b/a/a/b;
+	124     (000001f6) invoke-virtual       v0, Lb/b/a/a/b;->a()V
+	125     (000001fc) new-instance         v0, Lb/b/a/a/k/a;
+	126     (00000200) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	127     (00000206) move-result-object   v1
+	128     (00000208) invoke-direct        v0, v1, Lb/b/a/a/k/a;-><init>(Landroid/content/Context;)V
+	129     (0000020e) iput-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->I Lb/b/a/a/k/a;
+	130     (00000212) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	131     (00000216) iget-object          v0, v0, Lb/b/a/a/g/a;->f Lb/b/a/a/g/b;
+	132     (0000021a) iget-boolean         v0, v0, Lb/b/a/a/g/b;->c Z
+	133     (0000021e) if-ne                v0, v8, +7
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x222 : [ onStartCommand-BB@0x22c ]
+	134     (00000222) iget-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->I Lb/b/a/a/k/a;
+	135     (00000226) invoke-virtual       v0, Lb/b/a/a/k/a;->a()V
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x22c : [ onStartCommand-BB@0x252 onStartCommand-BB@0x25c ]
+	136     (0000022c) new-instance         v0, Lb/b/a/a/j/a;
+	137     (00000230) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	138     (00000236) move-result-object   v1
+	139     (00000238) invoke-direct        v0, v1, Lb/b/a/a/j/a;-><init>(Landroid/content/Context;)V
+	140     (0000023e) iput-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->J Lb/b/a/a/j/a;
+	141     (00000242) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	142     (00000246) iget-object          v0, v0, Lb/b/a/a/g/a;->b Lb/b/a/a/g/b;
+	143     (0000024a) iget-boolean         v0, v0, Lb/b/a/a/g/b;->c Z
+	144     (0000024e) if-ne                v0, v8, +7
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x252 : [ onStartCommand-BB@0x25c ]
+	145     (00000252) iget-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->J Lb/b/a/a/j/a;
+	146     (00000256) invoke-virtual       v0, Lb/b/a/a/j/a;->a()V
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x25c : [ onStartCommand-BB@0x2a2 onStartCommand-BB@0x2ac ]
+	147     (0000025c) new-instance         v0, Lb/b/a/a/d/a;
+	148     (00000260) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	149     (00000266) move-result-object   v1
+	150     (00000268) invoke-direct        v0, v1, Lb/b/a/a/d/a;-><init>(Landroid/content/Context;)V
+	151     (0000026e) iput-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->K Lb/b/a/a/d/a;
+	152     (00000272) iget-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->K Lb/b/a/a/d/a;
+	153     (00000276) invoke-virtual       v0, Lb/b/a/a/d/a;->a()V
+	154     (0000027c) new-instance         v0, Lb/b/a/a/c/a;
+	155     (00000280) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	156     (00000286) move-result-object   v1
+	157     (00000288) invoke-direct        v0, v1, Lb/b/a/a/c/a;-><init>(Landroid/content/Context;)V
+	158     (0000028e) iput-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->L Lb/b/a/a/c/a;
+	159     (00000292) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	160     (00000296) iget-object          v0, v0, Lb/b/a/a/g/a;->g Lb/b/a/a/g/b;
+	161     (0000029a) iget-boolean         v0, v0, Lb/b/a/a/g/b;->c Z
+	162     (0000029e) if-ne                v0, v8, +7
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x2a2 : [ onStartCommand-BB@0x2ac ]
+	163     (000002a2) iget-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->L Lb/b/a/a/c/a;
+	164     (000002a6) invoke-virtual       v0, Lb/b/a/a/c/a;->a()V
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x2ac : [ onStartCommand-BB@0x2d8 onStartCommand-BB@0x2e2 ]
+	165     (000002ac) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	166     (000002b2) new-instance         v0, Lb/b/a/a/b/a;
+	167     (000002b6) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	168     (000002bc) move-result-object   v1
+	169     (000002be) invoke-direct        v0, v1, Lb/b/a/a/b/a;-><init>(Landroid/content/Context;)V
+	170     (000002c4) iput-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->M Lb/b/a/a/b/a;
+	171     (000002c8) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	172     (000002cc) iget-object          v0, v0, Lb/b/a/a/g/a;->e Lb/b/a/a/g/b;
+	173     (000002d0) iget-boolean         v0, v0, Lb/b/a/a/g/b;->c Z
+	174     (000002d4) if-ne                v0, v8, +7
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x2d8 : [ onStartCommand-BB@0x2e2 ]
+	175     (000002d8) iget-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->M Lb/b/a/a/b/a;
+	176     (000002dc) invoke-virtual       v0, Lb/b/a/a/b/a;->a()V
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x2e2 : [ onStartCommand-BB@0x334 onStartCommand-BB@0x33e ]
+	177     (000002e2) new-instance         v0, Lb/b/a/a/i/b;
+	178     (000002e6) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	179     (000002ec) move-result-object   v1
+	180     (000002ee) invoke-direct        v0, v1, Lb/b/a/a/i/b;-><init>(Landroid/content/Context;)V
+	181     (000002f4) iput-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->N Lb/b/a/a/i/b;
+	182     (000002f8) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	183     (000002fc) const-wide/16        v1, 2 # [2.0]
+	184     (00000300) invoke-interface     v0, v6, v1, v2, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String; J)J
+	185     (00000306) move-result-wide     v3
+	186     (00000308) invoke-static        v3, v4, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+	187     (0000030e) iget-object          v0, v5, Lcom/mixio/tosh/aprl/aetn/ate;->N Lb/b/a/a/i/b;
+	188     (00000312) sget-object          v3, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	189     (00000316) invoke-interface     v3, v6, v1, v2, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String; J)J
+	190     (0000031c) move-result-wide     v1
+	191     (0000031e) invoke-virtual       v0, v1, v2, Lb/b/a/a/i/b;->a(J)V
+	192     (00000324) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	193     (00000328) iget-object          v6, v6, Lb/b/a/a/g/a;->k Lb/b/a/a/g/b;
+	194     (0000032c) iget-boolean         v6, v6, Lb/b/a/a/g/b;->c Z
+	195     (00000330) if-ne                v6, v8, +7
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x334 : [ onStartCommand-BB@0x33e ]
+	196     (00000334) iget-object          v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->N Lb/b/a/a/i/b;
+	197     (00000338) invoke-virtual       v6, Lb/b/a/a/i/b;->b()V
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x33e : [ onStartCommand-BB@0x3ba onStartCommand-BB@0x3c4 ]
+	198     (0000033e) invoke-virtual       v5, Lcom/mixio/tosh/aprl/aetn/ate;->j()V
+	199     (00000344) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	200     (00000348) const-string         v0, 'qllr'
+	201     (0000034c) invoke-interface     v6, v0, v7, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	202     (00000352) move-result          v6
+	203     (00000354) iput                 v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->w I
+	204     (00000358) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	205     (0000035c) const-string         v0, 'wllr'
+	206     (00000360) invoke-interface     v6, v0, v7, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	207     (00000366) move-result          v6
+	208     (00000368) iput                 v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->x I
+	209     (0000036c) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	210     (00000370) const-string         v0, 'ellr'
+	211     (00000374) invoke-interface     v6, v0, v7, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	212     (0000037a) move-result          v6
+	213     (0000037c) iput                 v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->y I
+	214     (00000380) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	215     (00000384) const-string         v0, 'rllr'
+	216     (00000388) invoke-interface     v6, v0, v7, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	217     (0000038e) move-result          v6
+	218     (00000390) iput                 v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->z I
+	219     (00000394) new-instance         v6, Lb/b/a/a/l/a;
+	220     (00000398) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	221     (0000039e) move-result-object   v7
+	222     (000003a0) invoke-direct        v6, v7, Lb/b/a/a/l/a;-><init>(Landroid/content/Context;)V
+	223     (000003a6) iput-object          v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->P Lb/b/a/a/l/a;
+	224     (000003aa) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	225     (000003ae) iget-object          v6, v6, Lb/b/a/a/g/a;->l Lb/b/a/a/g/b;
+	226     (000003b2) iget-boolean         v6, v6, Lb/b/a/a/g/b;->c Z
+	227     (000003b6) if-ne                v6, v8, +7
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x3ba : [ onStartCommand-BB@0x3c4 ]
+	228     (000003ba) iget-object          v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->P Lb/b/a/a/l/a;
+	229     (000003be) invoke-virtual       v6, Lb/b/a/a/l/a;->a()V
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x3c4 : [ onStartCommand-BB@0x3ea onStartCommand-BB@0x3f4 ]
+	230     (000003c4) new-instance         v6, Lb/b/a/a/h/a;
+	231     (000003c8) invoke-virtual       v5, Landroid/app/IntentService;->getBaseContext()Landroid/content/Context;
+	232     (000003ce) move-result-object   v7
+	233     (000003d0) invoke-direct        v6, v7, Lb/b/a/a/h/a;-><init>(Landroid/content/Context;)V
+	234     (000003d6) iput-object          v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->Q Lb/b/a/a/h/a;
+	235     (000003da) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	236     (000003de) iget-object          v6, v6, Lb/b/a/a/g/a;->m Lb/b/a/a/g/b;
+	237     (000003e2) iget-boolean         v6, v6, Lb/b/a/a/g/b;->c Z
+	238     (000003e6) if-ne                v6, v8, +7
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x3ea : [ onStartCommand-BB@0x3f4 ]
+	239     (000003ea) iget-object          v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->Q Lb/b/a/a/h/a;
+	240     (000003ee) invoke-virtual       v6, Lb/b/a/a/h/a;->a()V
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x3f4 : [ onStartCommand-BB@0x416 onStartCommand-BB@0x420 ]
+	241     (000003f4) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->j Lb/b/a/a/g/a;
+	242     (000003f8) iget-object          v6, v6, Lb/b/a/a/g/a;->n Lb/b/a/a/g/b;
+	243     (000003fc) iget-boolean         v6, v6, Lb/b/a/a/g/b;->c Z
+	244     (00000400) new-instance         v6, Lcom/mixio/tosh/aprl/aetn/ate$b;
+	245     (00000404) invoke-direct        v6, v5, Lcom/mixio/tosh/aprl/aetn/ate$b;-><init>(Lcom/mixio/tosh/aprl/aetn/ate;)V
+	246     (0000040a) iput-object          v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->u Lcom/mixio/tosh/aprl/aetn/ate$b;
+	247     (0000040e) iget-boolean         v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->t Z
+	248     (00000412) if-ne                v6, v8, +7
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x416 : [ onStartCommand-BB@0x420 ]
+	249     (00000416) iget-object          v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->u Lcom/mixio/tosh/aprl/aetn/ate$b;
+	250     (0000041a) invoke-virtual       v6, Lcom/mixio/tosh/aprl/aetn/ate$b;->c()V
+	ae:429
+	(Ljava/lang/Exception; -> 42c onStartCommand-BB@0x42c)
+
+onStartCommand-BB@0x420 : [ onStartCommand-BB@0x456 ]
+	251     (00000420) iget-object          v6, v5, Lcom/mixio/tosh/aprl/aetn/ate;->u Lcom/mixio/tosh/aprl/aetn/ate$b;
+	252     (00000424) invoke-virtual       v6, Ljava/lang/Thread;->start()V
+	253     (0000042a) goto                 +16
+
+onStartCommand-BB@0x42c : [ onStartCommand-BB@0x456 ]
+	254     (0000042c) move-exception       v6
+	255     (0000042e) const-string         v7, 'Ten '
+	256     (00000432) invoke-static        v7, Lb/a/a/a/a;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	257     (00000438) move-result-object   v7
+	258     (0000043a) invoke-virtual       v6, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	259     (00000440) move-result-object   v6
+	260     (00000442) invoke-virtual       v7, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	261     (00000448) invoke-virtual       v7, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	262     (0000044e) move-result-object   v6
+	263     (00000450) invoke-static        v6, Lcom/mixio/tosh/aprl/aetn/ate;->b(Ljava/lang/String;)V
+
+onStartCommand-BB@0x456 : 
+	264     (00000456) return               v8
+

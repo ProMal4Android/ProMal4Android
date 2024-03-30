@@ -1,0 +1,146 @@
+# Landroid/support/v4/media/MediaMetadataCompat;->getDescription()Landroid/support/v4/media/MediaDescriptionCompat; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v14
+#
+# - return:android.support.v4.media.MediaDescriptionCompat
+
+getDescription-BB@0x0 : [ getDescription-BB@0x8 getDescription-BB@0xe ]
+	0       (00000000) iget-object          v12, v14, Landroid/support/v4/media/MediaMetadataCompat;->mDescription Landroid/support/v4/media/MediaDescriptionCompat;
+	1       (00000004) if-eqz               v12, +5
+
+getDescription-BB@0x8 : [ getDescription-BB@0xc ]
+	2       (00000008) iget-object          v12, v14, Landroid/support/v4/media/MediaMetadataCompat;->mDescription Landroid/support/v4/media/MediaDescriptionCompat;
+
+getDescription-BB@0xc : 
+	3       (0000000c) return-object        v12
+
+getDescription-BB@0xe : [ getDescription-BB@0x3c getDescription-BB@0x10a ]
+	4       (0000000e) const-string         v12, 'android.media.metadata.MEDIA_ID'
+	5       (00000012) invoke-virtual       v14, v12, Landroid/support/v4/media/MediaMetadataCompat;->getString(Ljava/lang/String;)Ljava/lang/String;
+	6       (00000018) move-result-object   v7
+	7       (0000001a) const/4              v12, 3
+	8       (0000001c) new-array            v9, v12, [Ljava/lang/CharSequence;
+	9       (00000020) const/4              v3, 0
+	10      (00000022) const/4              v4, 0
+	11      (00000024) const-string         v12, 'android.media.metadata.DISPLAY_TITLE'
+	12      (00000028) invoke-virtual       v14, v12, Landroid/support/v4/media/MediaMetadataCompat;->getText(Ljava/lang/String;)Ljava/lang/CharSequence;
+	13      (0000002e) move-result-object   v1
+	14      (00000030) invoke-static        v1, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	15      (00000036) move-result          v12
+	16      (00000038) if-nez               v12, +69
+
+getDescription-BB@0x3c : [ getDescription-BB@0x66 ]
+	17      (0000003c) const/4              v12, 0
+	18      (0000003e) aput-object          v1, v9, v12
+	19      (00000042) const/4              v12, 1
+	20      (00000044) const-string         v13, 'android.media.metadata.DISPLAY_SUBTITLE'
+	21      (00000048) invoke-virtual       v14, v13, Landroid/support/v4/media/MediaMetadataCompat;->getText(Ljava/lang/String;)Ljava/lang/CharSequence;
+	22      (0000004e) move-result-object   v13
+	23      (00000050) aput-object          v13, v9, v12
+	24      (00000054) const/4              v12, 2
+	25      (00000056) const-string         v13, 'android.media.metadata.DISPLAY_DESCRIPTION'
+	26      (0000005a) invoke-virtual       v14, v13, Landroid/support/v4/media/MediaMetadataCompat;->getText(Ljava/lang/String;)Ljava/lang/CharSequence;
+	27      (00000060) move-result-object   v13
+	28      (00000062) aput-object          v13, v9, v12
+
+getDescription-BB@0x66 : [ getDescription-BB@0x68 ]
+	29      (00000066) const/4              v2, 0
+
+getDescription-BB@0x68 : [ getDescription-BB@0x72 getDescription-BB@0x88 ]
+	30      (00000068) sget-object          v12, Landroid/support/v4/media/MediaMetadataCompat;->PREFERRED_BITMAP_ORDER [Ljava/lang/String;
+	31      (0000006c) array-length         v12, v12
+	32      (0000006e) if-ge                v2, v12, +d
+
+getDescription-BB@0x72 : [ getDescription-BB@0x86 getDescription-BB@0x14c ]
+	33      (00000072) sget-object          v12, Landroid/support/v4/media/MediaMetadataCompat;->PREFERRED_BITMAP_ORDER [Ljava/lang/String;
+	34      (00000076) aget-object          v12, v12, v2
+	35      (0000007a) invoke-virtual       v14, v12, Landroid/support/v4/media/MediaMetadataCompat;->getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
+	36      (00000080) move-result-object   v8
+	37      (00000082) if-eqz               v8, +65
+
+getDescription-BB@0x86 : [ getDescription-BB@0x88 ]
+	38      (00000086) move-object          v3, v8
+
+getDescription-BB@0x88 : [ getDescription-BB@0x8a ]
+	39      (00000088) const/4              v2, 0
+
+getDescription-BB@0x8a : [ getDescription-BB@0x94 getDescription-BB@0xb8 ]
+	40      (0000008a) sget-object          v12, Landroid/support/v4/media/MediaMetadataCompat;->PREFERRED_URI_ORDER [Ljava/lang/String;
+	41      (0000008e) array-length         v12, v12
+	42      (00000090) if-ge                v2, v12, +14
+
+getDescription-BB@0x94 : [ getDescription-BB@0xb0 getDescription-BB@0x152 ]
+	43      (00000094) sget-object          v12, Landroid/support/v4/media/MediaMetadataCompat;->PREFERRED_URI_ORDER [Ljava/lang/String;
+	44      (00000098) aget-object          v12, v12, v2
+	45      (0000009c) invoke-virtual       v14, v12, Landroid/support/v4/media/MediaMetadataCompat;->getString(Ljava/lang/String;)Ljava/lang/String;
+	46      (000000a2) move-result-object   v8
+	47      (000000a4) invoke-static        v8, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	48      (000000aa) move-result          v12
+	49      (000000ac) if-nez               v12, +53
+
+getDescription-BB@0xb0 : [ getDescription-BB@0xb8 ]
+	50      (000000b0) invoke-static        v8, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	51      (000000b6) move-result-object   v4
+
+getDescription-BB@0xb8 : [ getDescription-BB@0xc ]
+	52      (000000b8) new-instance         v0, Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+	53      (000000bc) invoke-direct        v0, Landroid/support/v4/media/MediaDescriptionCompat$Builder;-><init>()V
+	54      (000000c2) invoke-virtual       v0, v7, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setMediaId(Ljava/lang/String;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+	55      (000000c8) const/4              v12, 0
+	56      (000000ca) aget-object          v12, v9, v12
+	57      (000000ce) invoke-virtual       v0, v12, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+	58      (000000d4) const/4              v12, 1
+	59      (000000d6) aget-object          v12, v9, v12
+	60      (000000da) invoke-virtual       v0, v12, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setSubtitle(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+	61      (000000e0) const/4              v12, 2
+	62      (000000e2) aget-object          v12, v9, v12
+	63      (000000e6) invoke-virtual       v0, v12, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setDescription(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+	64      (000000ec) invoke-virtual       v0, v3, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setIconBitmap(Landroid/graphics/Bitmap;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+	65      (000000f2) invoke-virtual       v0, v4, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setIconUri(Landroid/net/Uri;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+	66      (000000f8) invoke-virtual       v0, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->build()Landroid/support/v4/media/MediaDescriptionCompat;
+	67      (000000fe) move-result-object   v12
+	68      (00000100) iput-object          v12, v14, Landroid/support/v4/media/MediaMetadataCompat;->mDescription Landroid/support/v4/media/MediaDescriptionCompat;
+	69      (00000104) iget-object          v12, v14, Landroid/support/v4/media/MediaMetadataCompat;->mDescription Landroid/support/v4/media/MediaDescriptionCompat;
+	70      (00000108) goto                 -7e
+
+getDescription-BB@0x10a : [ getDescription-BB@0x10e ]
+	71      (0000010a) const/4              v10, 0
+	72      (0000010c) const/4              v5, 0
+
+getDescription-BB@0x10e : [ getDescription-BB@0x114 getDescription-BB@0x66 ]
+	73      (0000010e) array-length         v12, v9
+	74      (00000110) if-ge                v10, v12, -55
+
+getDescription-BB@0x114 : [ getDescription-BB@0x11e getDescription-BB@0x66 ]
+	75      (00000114) sget-object          v12, Landroid/support/v4/media/MediaMetadataCompat;->PREFERRED_DESCRIPTION_ORDER [Ljava/lang/String;
+	76      (00000118) array-length         v12, v12
+	77      (0000011a) if-ge                v5, v12, -5a
+
+getDescription-BB@0x11e : [ getDescription-BB@0x13e getDescription-BB@0x148 ]
+	78      (0000011e) sget-object          v12, Landroid/support/v4/media/MediaMetadataCompat;->PREFERRED_DESCRIPTION_ORDER [Ljava/lang/String;
+	79      (00000122) add-int/lit8         v6, v5, 1
+	80      (00000126) aget-object          v12, v12, v5
+	81      (0000012a) invoke-virtual       v14, v12, Landroid/support/v4/media/MediaMetadataCompat;->getText(Ljava/lang/String;)Ljava/lang/CharSequence;
+	82      (00000130) move-result-object   v8
+	83      (00000132) invoke-static        v8, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	84      (00000138) move-result          v12
+	85      (0000013a) if-nez               v12, +7
+
+getDescription-BB@0x13e : [ getDescription-BB@0x148 ]
+	86      (0000013e) add-int/lit8         v11, v10, 1
+	87      (00000142) aput-object          v8, v9, v10
+	88      (00000146) move                 v10, v11
+
+getDescription-BB@0x148 : [ getDescription-BB@0x10e ]
+	89      (00000148) move                 v5, v6
+	90      (0000014a) goto                 -1e
+
+getDescription-BB@0x14c : [ getDescription-BB@0x68 ]
+	91      (0000014c) add-int/lit8         v2, v2, 1
+	92      (00000150) goto                 -74
+
+getDescription-BB@0x152 : [ getDescription-BB@0x8a ]
+	93      (00000152) add-int/lit8         v2, v2, 1
+	94      (00000156) goto                 -66
+

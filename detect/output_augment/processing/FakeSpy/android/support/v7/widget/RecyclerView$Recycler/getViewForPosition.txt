@@ -1,0 +1,409 @@
+# Landroid/support/v7/widget/RecyclerView$Recycler;->getViewForPosition(I Z)Landroid/view/View; [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v13
+# - v14:int
+# - v15:boolean
+#
+# - return:android.view.View
+
+getViewForPosition-BB@0x0 : [ getViewForPosition-BB@0x4 getViewForPosition-BB@0x18 ]
+	0       (00000000) if-ltz               v14, +c
+
+getViewForPosition-BB@0x4 : [ getViewForPosition-BB@0x18 getViewForPosition-BB@0x82 ]
+	1       (00000004) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	2       (00000008) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	3       (0000000c) invoke-virtual       v10, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
+	4       (00000012) move-result          v10
+	5       (00000014) if-lt                v14, v10, +37
+
+getViewForPosition-BB@0x18 : 
+	6       (00000018) new-instance         v10, Ljava/lang/IndexOutOfBoundsException;
+	7       (0000001c) new-instance         v11, Ljava/lang/StringBuilder;
+	8       (00000020) invoke-direct        v11, Ljava/lang/StringBuilder;-><init>()V
+	9       (00000026) const-string         v12, 'Invalid item position '
+	10      (0000002a) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	11      (00000030) move-result-object   v11
+	12      (00000032) invoke-virtual       v11, v14, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	13      (00000038) move-result-object   v11
+	14      (0000003a) const-string         v12, '('
+	15      (0000003e) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (00000044) move-result-object   v11
+	17      (00000046) invoke-virtual       v11, v14, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	18      (0000004c) move-result-object   v11
+	19      (0000004e) const-string         v12, '). Item count:'
+	20      (00000052) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	21      (00000058) move-result-object   v11
+	22      (0000005a) iget-object          v12, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	23      (0000005e) iget-object          v12, v12, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	24      (00000062) invoke-virtual       v12, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
+	25      (00000068) move-result          v12
+	26      (0000006a) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	27      (00000070) move-result-object   v11
+	28      (00000072) invoke-virtual       v11, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	29      (00000078) move-result-object   v11
+	30      (0000007a) invoke-direct        v10, v11, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+	31      (00000080) throw                v10
+
+getViewForPosition-BB@0x82 : [ getViewForPosition-BB@0x9a getViewForPosition-BB@0xa8 ]
+	32      (00000082) const/4              v2, 0
+	33      (00000084) const/4              v3, 0
+	34      (00000086) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	35      (0000008a) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	36      (0000008e) invoke-virtual       v10, Landroid/support/v7/widget/RecyclerView$State;->isPreLayout()Z
+	37      (00000094) move-result          v10
+	38      (00000096) if-eqz               v10, +9
+
+getViewForPosition-BB@0x9a : [ getViewForPosition-BB@0xa6 getViewForPosition-BB@0x1a2 ]
+	39      (0000009a) invoke-virtual       v13, v14, Landroid/support/v7/widget/RecyclerView$Recycler;->getChangedScrapViewForPosition(I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	40      (000000a0) move-result-object   v3
+	41      (000000a2) if-eqz               v3, +80
+
+getViewForPosition-BB@0xa6 : [ getViewForPosition-BB@0xa8 ]
+	42      (000000a6) const/4              v2, 1
+
+getViewForPosition-BB@0xa8 : [ getViewForPosition-BB@0xac getViewForPosition-BB@0xfc ]
+	43      (000000a8) if-nez               v3, +2a
+
+getViewForPosition-BB@0xac : [ getViewForPosition-BB@0xba getViewForPosition-BB@0xfc ]
+	44      (000000ac) const/4              v10, -1
+	45      (000000ae) invoke-virtual       v13, v14, v10, v15, Landroid/support/v7/widget/RecyclerView$Recycler;->getScrapViewForPosition(I I Z)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	46      (000000b4) move-result-object   v3
+	47      (000000b6) if-eqz               v3, +23
+
+getViewForPosition-BB@0xba : [ getViewForPosition-BB@0xc6 getViewForPosition-BB@0x1ba ]
+	48      (000000ba) invoke-virtual       v13, v3, Landroid/support/v7/widget/RecyclerView$Recycler;->validateViewHolderForOffsetPosition(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z
+	49      (000000c0) move-result          v10
+	50      (000000c2) if-nez               v10, +7c
+
+getViewForPosition-BB@0xc6 : [ getViewForPosition-BB@0xca getViewForPosition-BB@0xfa ]
+	51      (000000c6) if-nez               v15, +1a
+
+getViewForPosition-BB@0xca : [ getViewForPosition-BB@0xde getViewForPosition-BB@0x1a6 ]
+	52      (000000ca) const/4              v10, 4
+	53      (000000cc) invoke-virtual       v3, v10, Landroid/support/v7/widget/RecyclerView$ViewHolder;->addFlags(I)V
+	54      (000000d2) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isScrap()Z
+	55      (000000d8) move-result          v10
+	56      (000000da) if-eqz               v10, +66
+
+getViewForPosition-BB@0xde : [ getViewForPosition-BB@0xf4 ]
+	57      (000000de) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	58      (000000e2) iget-object          v11, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	59      (000000e6) const/4              v12, 0
+	60      (000000e8) invoke-virtual       v10, v11, v12, Landroid/support/v7/widget/RecyclerView;->removeDetachedView(Landroid/view/View; Z)V
+	61      (000000ee) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->unScrap()V
+
+getViewForPosition-BB@0xf4 : [ getViewForPosition-BB@0xfa ]
+	62      (000000f4) invoke-virtual       v13, v3, Landroid/support/v7/widget/RecyclerView$Recycler;->recycleViewHolderInternal(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+
+getViewForPosition-BB@0xfa : [ getViewForPosition-BB@0xfc ]
+	63      (000000fa) const/4              v3, 0
+
+getViewForPosition-BB@0xfc : [ getViewForPosition-BB@0x100 getViewForPosition-BB@0x2b4 ]
+	64      (000000fc) if-nez               v3, +dc
+
+getViewForPosition-BB@0x100 : [ getViewForPosition-BB@0x114 getViewForPosition-BB@0x12c ]
+	65      (00000100) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	66      (00000104) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mAdapterHelper Landroid/support/v7/widget/AdapterHelper;
+	67      (00000108) invoke-virtual       v10, v14, Landroid/support/v7/widget/AdapterHelper;->findPositionOffset(I)I
+	68      (0000010e) move-result          v6
+	69      (00000110) if-ltz               v6, +e
+
+getViewForPosition-BB@0x114 : [ getViewForPosition-BB@0x12c getViewForPosition-BB@0x1be ]
+	70      (00000114) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	71      (00000118) invoke-static        v10, Landroid/support/v7/widget/RecyclerView;->access$3100(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$Adapter;
+	72      (0000011e) move-result-object   v10
+	73      (00000120) invoke-virtual       v10, Landroid/support/v7/widget/RecyclerView$Adapter;->getItemCount()I
+	74      (00000126) move-result          v10
+	75      (00000128) if-lt                v6, v10, +4b
+
+getViewForPosition-BB@0x12c : 
+	76      (0000012c) new-instance         v10, Ljava/lang/IndexOutOfBoundsException;
+	77      (00000130) new-instance         v11, Ljava/lang/StringBuilder;
+	78      (00000134) invoke-direct        v11, Ljava/lang/StringBuilder;-><init>()V
+	79      (0000013a) const-string         v12, 'Inconsistency detected. Invalid item position '
+	80      (0000013e) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	81      (00000144) move-result-object   v11
+	82      (00000146) invoke-virtual       v11, v14, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	83      (0000014c) move-result-object   v11
+	84      (0000014e) const-string         v12, '(offset:'
+	85      (00000152) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	86      (00000158) move-result-object   v11
+	87      (0000015a) invoke-virtual       v11, v6, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	88      (00000160) move-result-object   v11
+	89      (00000162) const-string         v12, ').'
+	90      (00000166) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	91      (0000016c) move-result-object   v11
+	92      (0000016e) const-string         v12, 'state:'
+	93      (00000172) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	94      (00000178) move-result-object   v11
+	95      (0000017a) iget-object          v12, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	96      (0000017e) iget-object          v12, v12, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	97      (00000182) invoke-virtual       v12, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
+	98      (00000188) move-result          v12
+	99      (0000018a) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	100     (00000190) move-result-object   v11
+	101     (00000192) invoke-virtual       v11, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	102     (00000198) move-result-object   v11
+	103     (0000019a) invoke-direct        v10, v11, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+	104     (000001a0) throw                v10
+
+getViewForPosition-BB@0x1a2 : [ getViewForPosition-BB@0xa8 ]
+	105     (000001a2) const/4              v2, 0
+	106     (000001a4) goto                 -7e
+
+getViewForPosition-BB@0x1a6 : [ getViewForPosition-BB@0x1b2 getViewForPosition-BB@0xf4 ]
+	107     (000001a6) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->wasReturnedFromScrap()Z
+	108     (000001ac) move-result          v10
+	109     (000001ae) if-eqz               v10, -5d
+
+getViewForPosition-BB@0x1b2 : [ getViewForPosition-BB@0xf4 ]
+	110     (000001b2) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->clearReturnedFromScrapFlag()V
+	111     (000001b8) goto                 -62
+
+getViewForPosition-BB@0x1ba : [ getViewForPosition-BB@0xfc ]
+	112     (000001ba) const/4              v2, 1
+	113     (000001bc) goto                 -60
+
+getViewForPosition-BB@0x1be : [ getViewForPosition-BB@0x1ea getViewForPosition-BB@0x210 ]
+	114     (000001be) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	115     (000001c2) invoke-static        v10, Landroid/support/v7/widget/RecyclerView;->access$3100(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$Adapter;
+	116     (000001c8) move-result-object   v10
+	117     (000001ca) invoke-virtual       v10, v6, Landroid/support/v7/widget/RecyclerView$Adapter;->getItemViewType(I)I
+	118     (000001d0) move-result          v8
+	119     (000001d2) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	120     (000001d6) invoke-static        v10, Landroid/support/v7/widget/RecyclerView;->access$3100(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$Adapter;
+	121     (000001dc) move-result-object   v10
+	122     (000001de) invoke-virtual       v10, Landroid/support/v7/widget/RecyclerView$Adapter;->hasStableIds()Z
+	123     (000001e4) move-result          v10
+	124     (000001e6) if-eqz               v10, +15
+
+getViewForPosition-BB@0x1ea : [ getViewForPosition-BB@0x20a getViewForPosition-BB@0x210 ]
+	125     (000001ea) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	126     (000001ee) invoke-static        v10, Landroid/support/v7/widget/RecyclerView;->access$3100(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$Adapter;
+	127     (000001f4) move-result-object   v10
+	128     (000001f6) invoke-virtual       v10, v6, Landroid/support/v7/widget/RecyclerView$Adapter;->getItemId(I)J
+	129     (000001fc) move-result-wide     v10
+	130     (000001fe) invoke-virtual       v13, v10, v11, v8, v15, Landroid/support/v7/widget/RecyclerView$Recycler;->getScrapViewForId(J I Z)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	131     (00000204) move-result-object   v3
+	132     (00000206) if-eqz               v3, +5
+
+getViewForPosition-BB@0x20a : [ getViewForPosition-BB@0x210 ]
+	133     (0000020a) iput                 v6, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->mPosition I
+	134     (0000020e) const/4              v2, 1
+
+getViewForPosition-BB@0x210 : [ getViewForPosition-BB@0x214 getViewForPosition-BB@0x268 ]
+	135     (00000210) if-nez               v3, +2c
+
+getViewForPosition-BB@0x214 : [ getViewForPosition-BB@0x21c getViewForPosition-BB@0x268 ]
+	136     (00000214) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->mViewCacheExtension Landroid/support/v7/widget/RecyclerView$ViewCacheExtension;
+	137     (00000218) if-eqz               v10, +28
+
+getViewForPosition-BB@0x21c : [ getViewForPosition-BB@0x22c getViewForPosition-BB@0x268 ]
+	138     (0000021c) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->mViewCacheExtension Landroid/support/v7/widget/RecyclerView$ViewCacheExtension;
+	139     (00000220) invoke-virtual       v10, v13, v14, v8, Landroid/support/v7/widget/RecyclerView$ViewCacheExtension;->getViewForPositionAndType(Landroid/support/v7/widget/RecyclerView$Recycler; I I)Landroid/view/View;
+	140     (00000226) move-result-object   v9
+	141     (00000228) if-eqz               v9, +20
+
+getViewForPosition-BB@0x22c : [ getViewForPosition-BB@0x23c getViewForPosition-BB@0x24c ]
+	142     (0000022c) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	143     (00000230) invoke-virtual       v10, v9, Landroid/support/v7/widget/RecyclerView;->getChildViewHolder(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	144     (00000236) move-result-object   v3
+	145     (00000238) if-nez               v3, +a
+
+getViewForPosition-BB@0x23c : 
+	146     (0000023c) new-instance         v10, Ljava/lang/IllegalArgumentException;
+	147     (00000240) const-string         v11, 'getViewForPositionAndType returned a view which does not have a ViewHolder'
+	148     (00000244) invoke-direct        v10, v11, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	149     (0000024a) throw                v10
+
+getViewForPosition-BB@0x24c : [ getViewForPosition-BB@0x258 getViewForPosition-BB@0x268 ]
+	150     (0000024c) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->shouldIgnore()Z
+	151     (00000252) move-result          v10
+	152     (00000254) if-eqz               v10, +a
+
+getViewForPosition-BB@0x258 : 
+	153     (00000258) new-instance         v10, Ljava/lang/IllegalArgumentException;
+	154     (0000025c) const-string         v11, 'getViewForPositionAndType returned a view that is ignored. You must call stopIgnoring before returning this view.'
+	155     (00000260) invoke-direct        v10, v11, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	156     (00000266) throw                v10
+
+getViewForPosition-BB@0x268 : [ getViewForPosition-BB@0x26c getViewForPosition-BB@0x298 ]
+	157     (00000268) if-nez               v3, +18
+
+getViewForPosition-BB@0x26c : [ getViewForPosition-BB@0x280 getViewForPosition-BB@0x298 ]
+	158     (0000026c) invoke-virtual       v13, Landroid/support/v7/widget/RecyclerView$Recycler;->getRecycledViewPool()Landroid/support/v7/widget/RecyclerView$RecycledViewPool;
+	159     (00000272) move-result-object   v10
+	160     (00000274) invoke-virtual       v10, v8, Landroid/support/v7/widget/RecyclerView$RecycledViewPool;->getRecycledView(I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	161     (0000027a) move-result-object   v3
+	162     (0000027c) if-eqz               v3, +e
+
+getViewForPosition-BB@0x280 : [ getViewForPosition-BB@0x292 getViewForPosition-BB@0x298 ]
+	163     (00000280) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->resetInternal()V
+	164     (00000286) invoke-static        Landroid/support/v7/widget/RecyclerView;->access$4600()Z
+	165     (0000028c) move-result          v10
+	166     (0000028e) if-eqz               v10, +5
+
+getViewForPosition-BB@0x292 : [ getViewForPosition-BB@0x298 ]
+	167     (00000292) invoke-direct        v13, v3, Landroid/support/v7/widget/RecyclerView$Recycler;->invalidateDisplayListInt(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+
+getViewForPosition-BB@0x298 : [ getViewForPosition-BB@0x29c getViewForPosition-BB@0x2b4 ]
+	168     (00000298) if-nez               v3, +e
+
+getViewForPosition-BB@0x29c : [ getViewForPosition-BB@0x2b4 ]
+	169     (0000029c) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	170     (000002a0) invoke-static        v10, Landroid/support/v7/widget/RecyclerView;->access$3100(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$Adapter;
+	171     (000002a6) move-result-object   v10
+	172     (000002a8) iget-object          v11, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	173     (000002ac) invoke-virtual       v10, v11, v8, Landroid/support/v7/widget/RecyclerView$Adapter;->createViewHolder(Landroid/view/ViewGroup; I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	174     (000002b2) move-result-object   v3
+
+getViewForPosition-BB@0x2b4 : [ getViewForPosition-BB@0x2b8 getViewForPosition-BB@0x332 ]
+	175     (000002b4) if-eqz               v2, +3f
+
+getViewForPosition-BB@0x2b8 : [ getViewForPosition-BB@0x2cc getViewForPosition-BB@0x332 ]
+	176     (000002b8) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	177     (000002bc) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	178     (000002c0) invoke-virtual       v10, Landroid/support/v7/widget/RecyclerView$State;->isPreLayout()Z
+	179     (000002c6) move-result          v10
+	180     (000002c8) if-nez               v10, +35
+
+getViewForPosition-BB@0x2cc : [ getViewForPosition-BB@0x2dc getViewForPosition-BB@0x332 ]
+	181     (000002cc) const/16             v10, 8192
+	182     (000002d0) invoke-virtual       v3, v10, Landroid/support/v7/widget/RecyclerView$ViewHolder;->hasAnyOfTheFlags(I)Z
+	183     (000002d6) move-result          v10
+	184     (000002d8) if-eqz               v10, +2d
+
+getViewForPosition-BB@0x2dc : [ getViewForPosition-BB@0x2fc getViewForPosition-BB@0x332 ]
+	185     (000002dc) const/4              v10, 0
+	186     (000002de) const/16             v11, 8192
+	187     (000002e2) invoke-virtual       v3, v10, v11, Landroid/support/v7/widget/RecyclerView$ViewHolder;->setFlags(I I)V
+	188     (000002e8) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	189     (000002ec) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	190     (000002f0) invoke-static        v10, Landroid/support/v7/widget/RecyclerView$State;->access$2500(Landroid/support/v7/widget/RecyclerView$State;)Z
+	191     (000002f6) move-result          v10
+	192     (000002f8) if-eqz               v10, +1d
+
+getViewForPosition-BB@0x2fc : [ getViewForPosition-BB@0x332 ]
+	193     (000002fc) invoke-static        v3, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->buildAdapterChangeFlagsForAnimations(Landroid/support/v7/widget/RecyclerView$ViewHolder;)I
+	194     (00000302) move-result          v1
+	195     (00000304) or-int/lit16         v1, v1, 4096
+	196     (00000308) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	197     (0000030c) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mItemAnimator Landroid/support/v7/widget/RecyclerView$ItemAnimator;
+	198     (00000310) iget-object          v11, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	199     (00000314) iget-object          v11, v11, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	200     (00000318) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->getUnmodifiedPayloads()Ljava/util/List;
+	201     (0000031e) move-result-object   v12
+	202     (00000320) invoke-virtual       v10, v11, v3, v1, v12, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->recordPreLayoutInformation(Landroid/support/v7/widget/RecyclerView$State; Landroid/support/v7/widget/RecyclerView$ViewHolder; I Ljava/util/List;)Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+	203     (00000326) move-result-object   v4
+	204     (00000328) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	205     (0000032c) invoke-static        v10, v3, v4, Landroid/support/v7/widget/RecyclerView;->access$4700(Landroid/support/v7/widget/RecyclerView; Landroid/support/v7/widget/RecyclerView$ViewHolder; Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)V
+
+getViewForPosition-BB@0x332 : [ getViewForPosition-BB@0x348 getViewForPosition-BB@0x39a ]
+	206     (00000332) const/4              v0, 0
+	207     (00000334) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	208     (00000338) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	209     (0000033c) invoke-virtual       v10, Landroid/support/v7/widget/RecyclerView$State;->isPreLayout()Z
+	210     (00000342) move-result          v10
+	211     (00000344) if-eqz               v10, +2b
+
+getViewForPosition-BB@0x348 : [ getViewForPosition-BB@0x354 getViewForPosition-BB@0x39a ]
+	212     (00000348) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isBound()Z
+	213     (0000034e) move-result          v10
+	214     (00000350) if-eqz               v10, +25
+
+getViewForPosition-BB@0x354 : [ getViewForPosition-BB@0x358 ]
+	215     (00000354) iput                 v14, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->mPreLayoutPosition I
+
+getViewForPosition-BB@0x358 : [ getViewForPosition-BB@0x368 getViewForPosition-BB@0x40e ]
+	216     (00000358) iget-object          v10, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	217     (0000035c) invoke-virtual       v10, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	218     (00000362) move-result-object   v5
+	219     (00000364) if-nez               v5, +55
+
+getViewForPosition-BB@0x368 : [ getViewForPosition-BB@0x382 ]
+	220     (00000368) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	221     (0000036c) invoke-virtual       v10, Landroid/support/v7/widget/RecyclerView;->generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	222     (00000372) move-result-object   v7
+	223     (00000374) check-cast           v7, Landroid/support/v7/widget/RecyclerView$LayoutParams;
+	224     (00000378) iget-object          v10, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	225     (0000037c) invoke-virtual       v10, v7, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+getViewForPosition-BB@0x382 : [ getViewForPosition-BB@0x38a getViewForPosition-BB@0x442 ]
+	226     (00000382) iput-object          v3, v7, Landroid/support/v7/widget/RecyclerView$LayoutParams;->mViewHolder Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	227     (00000386) if-eqz               v2, +5e
+
+getViewForPosition-BB@0x38a : [ getViewForPosition-BB@0x38e getViewForPosition-BB@0x442 ]
+	228     (0000038a) if-eqz               v0, +5c
+
+getViewForPosition-BB@0x38e : [ getViewForPosition-BB@0x390 ]
+	229     (0000038e) const/4              v10, 1
+
+getViewForPosition-BB@0x390 : 
+	230     (00000390) iput-boolean         v10, v7, Landroid/support/v7/widget/RecyclerView$LayoutParams;->mPendingInvalidate Z
+	231     (00000394) iget-object          v10, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	232     (00000398) return-object        v10
+
+getViewForPosition-BB@0x39a : [ getViewForPosition-BB@0x3a6 getViewForPosition-BB@0x3be ]
+	233     (0000039a) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isBound()Z
+	234     (000003a0) move-result          v10
+	235     (000003a2) if-eqz               v10, +e
+
+getViewForPosition-BB@0x3a6 : [ getViewForPosition-BB@0x3b2 getViewForPosition-BB@0x3be ]
+	236     (000003a6) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->needsUpdate()Z
+	237     (000003ac) move-result          v10
+	238     (000003ae) if-nez               v10, +8
+
+getViewForPosition-BB@0x3b2 : [ getViewForPosition-BB@0x3be getViewForPosition-BB@0x358 ]
+	239     (000003b2) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isInvalid()Z
+	240     (000003b8) move-result          v10
+	241     (000003ba) if-eqz               v10, -31
+
+getViewForPosition-BB@0x3be : [ getViewForPosition-BB@0x408 getViewForPosition-BB@0x358 ]
+	242     (000003be) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	243     (000003c2) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mAdapterHelper Landroid/support/v7/widget/AdapterHelper;
+	244     (000003c6) invoke-virtual       v10, v14, Landroid/support/v7/widget/AdapterHelper;->findPositionOffset(I)I
+	245     (000003cc) move-result          v6
+	246     (000003ce) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	247     (000003d2) iput-object          v10, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->mOwnerRecyclerView Landroid/support/v7/widget/RecyclerView;
+	248     (000003d6) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	249     (000003da) invoke-static        v10, Landroid/support/v7/widget/RecyclerView;->access$3100(Landroid/support/v7/widget/RecyclerView;)Landroid/support/v7/widget/RecyclerView$Adapter;
+	250     (000003e0) move-result-object   v10
+	251     (000003e2) invoke-virtual       v10, v3, v6, Landroid/support/v7/widget/RecyclerView$Adapter;->bindViewHolder(Landroid/support/v7/widget/RecyclerView$ViewHolder; I)V
+	252     (000003e8) iget-object          v10, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	253     (000003ec) invoke-direct        v13, v10, Landroid/support/v7/widget/RecyclerView$Recycler;->attachAccessibilityDelegate(Landroid/view/View;)V
+	254     (000003f2) const/4              v0, 1
+	255     (000003f4) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	256     (000003f8) iget-object          v10, v10, Landroid/support/v7/widget/RecyclerView;->mState Landroid/support/v7/widget/RecyclerView$State;
+	257     (000003fc) invoke-virtual       v10, Landroid/support/v7/widget/RecyclerView$State;->isPreLayout()Z
+	258     (00000402) move-result          v10
+	259     (00000404) if-eqz               v10, -56
+
+getViewForPosition-BB@0x408 : [ getViewForPosition-BB@0x358 ]
+	260     (00000408) iput                 v14, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->mPreLayoutPosition I
+	261     (0000040c) goto                 -5a
+
+getViewForPosition-BB@0x40e : [ getViewForPosition-BB@0x41e getViewForPosition-BB@0x43a ]
+	262     (0000040e) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	263     (00000412) invoke-virtual       v10, v5, Landroid/support/v7/widget/RecyclerView;->checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
+	264     (00000418) move-result          v10
+	265     (0000041a) if-nez               v10, +10
+
+getViewForPosition-BB@0x41e : [ getViewForPosition-BB@0x382 ]
+	266     (0000041e) iget-object          v10, v13, Landroid/support/v7/widget/RecyclerView$Recycler;->this$0 Landroid/support/v7/widget/RecyclerView;
+	267     (00000422) invoke-virtual       v10, v5, Landroid/support/v7/widget/RecyclerView;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
+	268     (00000428) move-result-object   v7
+	269     (0000042a) check-cast           v7, Landroid/support/v7/widget/RecyclerView$LayoutParams;
+	270     (0000042e) iget-object          v10, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	271     (00000432) invoke-virtual       v10, v7, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+	272     (00000438) goto                 -5b
+
+getViewForPosition-BB@0x43a : [ getViewForPosition-BB@0x382 ]
+	273     (0000043a) move-object          v7, v5
+	274     (0000043c) check-cast           v7, Landroid/support/v7/widget/RecyclerView$LayoutParams;
+	275     (00000440) goto                 -5f
+
+getViewForPosition-BB@0x442 : [ getViewForPosition-BB@0x390 ]
+	276     (00000442) const/4              v10, 0
+	277     (00000444) goto                 -5a
+

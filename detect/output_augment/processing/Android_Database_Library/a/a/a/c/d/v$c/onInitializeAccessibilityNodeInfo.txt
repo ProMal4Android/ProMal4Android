@@ -1,0 +1,17 @@
+# La/a/a/c/d/v$c;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.view.accessibility.AccessibilityNodeInfo
+#
+# - return:void
+
+onInitializeAccessibilityNodeInfo-BB@0x0 : 
+	0       (00000000) invoke-super         v1, v2, La/a/a/e/e;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+	1       (00000006) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	2       (0000000a) const-class          v0, La/a/a/a/b;
+	3       (0000000e) invoke-virtual       v0, Ljava/lang/Class;->getName()Ljava/lang/String;
+	4       (00000014) move-result-object   v0
+	5       (00000016) invoke-virtual       v2, v0, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
+	6       (0000001c) return-void          
+

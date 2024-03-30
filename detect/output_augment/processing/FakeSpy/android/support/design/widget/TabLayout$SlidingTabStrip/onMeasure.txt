@@ -1,0 +1,120 @@
+# Landroid/support/design/widget/TabLayout$SlidingTabStrip;->onMeasure(I I)V [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v13
+# - v14:int
+# - v15:int
+#
+# - return:void
+
+onMeasure-BB@0x0 : [ onMeasure-BB@0x1c onMeasure-BB@0x1e ]
+	0       (00000000) const/4              v10, 1
+	1       (00000002) const/4              v12, 0
+	2       (00000004) const/4              v11, 0
+	3       (00000006) invoke-super         v13, v14, v15, Landroid/widget/LinearLayout;->onMeasure(I I)V
+	4       (0000000c) invoke-static        v14, Landroid/view/View$MeasureSpec;->getMode(I)I
+	5       (00000012) move-result          v8
+	6       (00000014) const/high16         v9, 16384 # [2.0]
+	7       (00000018) if-eq                v8, v9, +3
+
+onMeasure-BB@0x1c : 
+	8       (0000001c) return-void          
+
+onMeasure-BB@0x1e : [ onMeasure-BB@0x2e onMeasure-BB@0x1c ]
+	9       (0000001e) iget-object          v8, v13, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->this$0 Landroid/support/design/widget/TabLayout;
+	10      (00000022) invoke-static        v8, Landroid/support/design/widget/TabLayout;->access$1800(Landroid/support/design/widget/TabLayout;)I
+	11      (00000028) move-result          v8
+	12      (0000002a) if-ne                v8, v10, -7
+
+onMeasure-BB@0x2e : [ onMeasure-BB@0x3e onMeasure-BB@0x1c ]
+	13      (0000002e) iget-object          v8, v13, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->this$0 Landroid/support/design/widget/TabLayout;
+	14      (00000032) invoke-static        v8, Landroid/support/design/widget/TabLayout;->access$2200(Landroid/support/design/widget/TabLayout;)I
+	15      (00000038) move-result          v8
+	16      (0000003a) if-ne                v8, v10, -f
+
+onMeasure-BB@0x3e : [ onMeasure-BB@0x4c ]
+	17      (0000003e) invoke-virtual       v13, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildCount()I
+	18      (00000044) move-result          v1
+	19      (00000046) const/4              v4, 0
+	20      (00000048) const/4              v3, 0
+	21      (0000004a) move                 v7, v1
+
+onMeasure-BB@0x4c : [ onMeasure-BB@0x50 onMeasure-BB@0x7a ]
+	22      (0000004c) if-ge                v3, v7, +17
+
+onMeasure-BB@0x50 : [ onMeasure-BB@0x64 onMeasure-BB@0x74 ]
+	23      (00000050) invoke-virtual       v13, v3, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildAt(I)Landroid/view/View;
+	24      (00000056) move-result-object   v0
+	25      (00000058) invoke-virtual       v0, Landroid/view/View;->getVisibility()I
+	26      (0000005e) move-result          v8
+	27      (00000060) if-nez               v8, +a
+
+onMeasure-BB@0x64 : [ onMeasure-BB@0x74 ]
+	28      (00000064) invoke-virtual       v0, Landroid/view/View;->getMeasuredWidth()I
+	29      (0000006a) move-result          v8
+	30      (0000006c) invoke-static        v4, v8, Ljava/lang/Math;->max(I I)I
+	31      (00000072) move-result          v4
+
+onMeasure-BB@0x74 : [ onMeasure-BB@0x4c ]
+	32      (00000074) add-int/lit8         v3, v3, 1
+	33      (00000078) goto                 -16
+
+onMeasure-BB@0x7a : [ onMeasure-BB@0x7e onMeasure-BB@0x1c ]
+	34      (0000007a) if-lez               v4, -2f
+
+onMeasure-BB@0x7e : [ onMeasure-BB@0xa6 onMeasure-BB@0xe4 ]
+	35      (0000007e) iget-object          v8, v13, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->this$0 Landroid/support/design/widget/TabLayout;
+	36      (00000082) const/16             v9, 16
+	37      (00000086) invoke-static        v8, v9, Landroid/support/design/widget/TabLayout;->access$2100(Landroid/support/design/widget/TabLayout; I)I
+	38      (0000008c) move-result          v2
+	39      (0000008e) const/4              v6, 0
+	40      (00000090) mul-int              v8, v4, v1
+	41      (00000094) invoke-virtual       v13, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getMeasuredWidth()I
+	42      (0000009a) move-result          v9
+	43      (0000009c) mul-int/lit8         v10, v2, 2
+	44      (000000a0) sub-int/2addr        v9, v10
+	45      (000000a2) if-gt                v8, v9, +21
+
+onMeasure-BB@0xa6 : [ onMeasure-BB@0xa8 ]
+	46      (000000a6) const/4              v3, 0
+
+onMeasure-BB@0xa8 : [ onMeasure-BB@0xac onMeasure-BB@0xfa ]
+	47      (000000a8) if-ge                v3, v1, +29
+
+onMeasure-BB@0xac : [ onMeasure-BB@0xc8 onMeasure-BB@0xd4 ]
+	48      (000000ac) invoke-virtual       v13, v3, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildAt(I)Landroid/view/View;
+	49      (000000b2) move-result-object   v8
+	50      (000000b4) invoke-virtual       v8, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	51      (000000ba) move-result-object   v5
+	52      (000000bc) check-cast           v5, Landroid/widget/LinearLayout$LayoutParams;
+	53      (000000c0) iget                 v8, v5, Landroid/widget/LinearLayout$LayoutParams;->width I
+	54      (000000c4) if-ne                v8, v4, +8
+
+onMeasure-BB@0xc8 : [ onMeasure-BB@0xd4 onMeasure-BB@0xde ]
+	55      (000000c8) iget                 v8, v5, Landroid/widget/LinearLayout$LayoutParams;->weight F
+	56      (000000cc) cmpl-float           v8, v8, v11
+	57      (000000d0) if-eqz               v8, +7
+
+onMeasure-BB@0xd4 : [ onMeasure-BB@0xde ]
+	58      (000000d4) iput                 v4, v5, Landroid/widget/LinearLayout$LayoutParams;->width I
+	59      (000000d8) iput                 v11, v5, Landroid/widget/LinearLayout$LayoutParams;->weight F
+	60      (000000dc) const/4              v6, 1
+
+onMeasure-BB@0xde : [ onMeasure-BB@0xa8 ]
+	61      (000000de) add-int/lit8         v3, v3, 1
+	62      (000000e2) goto                 -1d
+
+onMeasure-BB@0xe4 : [ onMeasure-BB@0xfa ]
+	63      (000000e4) iget-object          v8, v13, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->this$0 Landroid/support/design/widget/TabLayout;
+	64      (000000e8) invoke-static        v8, v12, Landroid/support/design/widget/TabLayout;->access$2202(Landroid/support/design/widget/TabLayout; I)I
+	65      (000000ee) iget-object          v8, v13, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->this$0 Landroid/support/design/widget/TabLayout;
+	66      (000000f2) invoke-static        v8, v12, Landroid/support/design/widget/TabLayout;->access$2300(Landroid/support/design/widget/TabLayout; Z)V
+	67      (000000f8) const/4              v6, 1
+
+onMeasure-BB@0xfa : [ onMeasure-BB@0xfe onMeasure-BB@0x1c ]
+	68      (000000fa) if-eqz               v6, -6f
+
+onMeasure-BB@0xfe : [ onMeasure-BB@0x1c ]
+	69      (000000fe) invoke-super         v13, v14, v15, Landroid/widget/LinearLayout;->onMeasure(I I)V
+	70      (00000104) goto                 -74
+

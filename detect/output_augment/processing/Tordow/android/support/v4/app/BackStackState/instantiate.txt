@@ -1,0 +1,169 @@
+# Landroid/support/v4/app/BackStackState;->instantiate(Landroid/support/v4/app/FragmentManagerImpl;)Landroid/support/v4/app/BackStackRecord; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v14
+# - v15:android.support.v4.app.FragmentManagerImpl
+#
+# - return:android.support.v4.app.BackStackRecord
+
+instantiate-BB@0x0 : [ instantiate-BB@0x10 ]
+	0       (00000000) const/4              v13, 1
+	1       (00000002) new-instance         v1, Landroid/support/v4/app/BackStackRecord;
+	2       (00000006) invoke-direct        v1, v15, Landroid/support/v4/app/BackStackRecord;-><init>(Landroid/support/v4/app/FragmentManagerImpl;)V
+	3       (0000000c) const/4              v7, 0
+	4       (0000000e) const/4              v5, 0
+
+instantiate-BB@0x10 : [ instantiate-BB@0x1a instantiate-BB@0x1be ]
+	5       (00000010) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	6       (00000014) array-length         v10, v10
+	7       (00000016) if-ge                v7, v10, +d4
+
+instantiate-BB@0x1a : [ instantiate-BB@0x3c instantiate-BB@0x9c ]
+	8       (0000001a) new-instance         v6, Landroid/support/v4/app/BackStackRecord$Op;
+	9       (0000001e) invoke-direct        v6, Landroid/support/v4/app/BackStackRecord$Op;-><init>()V
+	10      (00000024) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	11      (00000028) add-int/lit8         v8, v7, 1
+	12      (0000002c) aget                 v10, v10, v7
+	13      (00000030) iput                 v10, v6, Landroid/support/v4/app/BackStackRecord$Op;->cmd I
+	14      (00000034) sget-boolean         v10, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG Z
+	15      (00000038) if-eqz               v10, +32
+
+instantiate-BB@0x3c : [ instantiate-BB@0x9c ]
+	16      (0000003c) const-string         v10, 'FragmentManager'
+	17      (00000040) new-instance         v11, Ljava/lang/StringBuilder;
+	18      (00000044) invoke-direct        v11, Ljava/lang/StringBuilder;-><init>()V
+	19      (0000004a) const-string         v12, 'Instantiate '
+	20      (0000004e) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	21      (00000054) move-result-object   v11
+	22      (00000056) invoke-virtual       v11, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	23      (0000005c) move-result-object   v11
+	24      (0000005e) const-string         v12, ' op #'
+	25      (00000062) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	26      (00000068) move-result-object   v11
+	27      (0000006a) invoke-virtual       v11, v5, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	28      (00000070) move-result-object   v11
+	29      (00000072) const-string         v12, ' base fragment #'
+	30      (00000076) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	31      (0000007c) move-result-object   v11
+	32      (0000007e) iget-object          v12, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	33      (00000082) aget                 v12, v12, v8
+	34      (00000086) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	35      (0000008c) move-result-object   v11
+	36      (0000008e) invoke-virtual       v11, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	37      (00000094) move-result-object   v11
+	38      (00000096) invoke-static        v10, v11, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+instantiate-BB@0x9c : [ instantiate-BB@0xac instantiate-BB@0x1a6 ]
+	39      (0000009c) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	40      (000000a0) add-int/lit8         v7, v8, 1
+	41      (000000a4) aget                 v3, v10, v8
+	42      (000000a8) if-ltz               v3, +7f
+
+instantiate-BB@0xac : [ instantiate-BB@0xc0 ]
+	43      (000000ac) iget-object          v10, v15, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	44      (000000b0) invoke-virtual       v10, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	45      (000000b6) move-result-object   v2
+	46      (000000b8) check-cast           v2, Landroid/support/v4/app/Fragment;
+	47      (000000bc) iput-object          v2, v6, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+
+instantiate-BB@0xc0 : [ instantiate-BB@0x110 instantiate-BB@0x1ae ]
+	48      (000000c0) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	49      (000000c4) add-int/lit8         v8, v7, 1
+	50      (000000c8) aget                 v10, v10, v7
+	51      (000000cc) iput                 v10, v6, Landroid/support/v4/app/BackStackRecord$Op;->enterAnim I
+	52      (000000d0) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	53      (000000d4) add-int/lit8         v7, v8, 1
+	54      (000000d8) aget                 v10, v10, v8
+	55      (000000dc) iput                 v10, v6, Landroid/support/v4/app/BackStackRecord$Op;->exitAnim I
+	56      (000000e0) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	57      (000000e4) add-int/lit8         v8, v7, 1
+	58      (000000e8) aget                 v10, v10, v7
+	59      (000000ec) iput                 v10, v6, Landroid/support/v4/app/BackStackRecord$Op;->popEnterAnim I
+	60      (000000f0) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	61      (000000f4) add-int/lit8         v7, v8, 1
+	62      (000000f8) aget                 v10, v10, v8
+	63      (000000fc) iput                 v10, v6, Landroid/support/v4/app/BackStackRecord$Op;->popExitAnim I
+	64      (00000100) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	65      (00000104) add-int/lit8         v8, v7, 1
+	66      (00000108) aget                 v0, v10, v7
+	67      (0000010c) if-lez               v0, +51
+
+instantiate-BB@0x110 : [ instantiate-BB@0x120 ]
+	68      (00000110) new-instance         v10, Ljava/util/ArrayList;
+	69      (00000114) invoke-direct        v10, v0, Ljava/util/ArrayList;-><init>(I)V
+	70      (0000011a) iput-object          v10, v6, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	71      (0000011e) const/4              v4, 0
+
+instantiate-BB@0x120 : [ instantiate-BB@0x124 instantiate-BB@0x1ae ]
+	72      (00000120) if-ge                v4, v0, +47
+
+instantiate-BB@0x124 : [ instantiate-BB@0x12c instantiate-BB@0x178 ]
+	73      (00000124) sget-boolean         v10, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG Z
+	74      (00000128) if-eqz               v10, +28
+
+instantiate-BB@0x12c : [ instantiate-BB@0x178 ]
+	75      (0000012c) const-string         v10, 'FragmentManager'
+	76      (00000130) new-instance         v11, Ljava/lang/StringBuilder;
+	77      (00000134) invoke-direct        v11, Ljava/lang/StringBuilder;-><init>()V
+	78      (0000013a) const-string         v12, 'Instantiate '
+	79      (0000013e) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	80      (00000144) move-result-object   v11
+	81      (00000146) invoke-virtual       v11, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	82      (0000014c) move-result-object   v11
+	83      (0000014e) const-string         v12, ' set remove fragment #'
+	84      (00000152) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	85      (00000158) move-result-object   v11
+	86      (0000015a) iget-object          v12, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	87      (0000015e) aget                 v12, v12, v8
+	88      (00000162) invoke-virtual       v11, v12, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	89      (00000168) move-result-object   v11
+	90      (0000016a) invoke-virtual       v11, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	91      (00000170) move-result-object   v11
+	92      (00000172) invoke-static        v10, v11, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+instantiate-BB@0x178 : [ instantiate-BB@0x120 ]
+	93      (00000178) iget-object          v10, v15, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	94      (0000017c) iget-object          v11, v14, Landroid/support/v4/app/BackStackState;->mOps [I
+	95      (00000180) add-int/lit8         v7, v8, 1
+	96      (00000184) aget                 v11, v11, v8
+	97      (00000188) invoke-virtual       v10, v11, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	98      (0000018e) move-result-object   v9
+	99      (00000190) check-cast           v9, Landroid/support/v4/app/Fragment;
+	100     (00000194) iget-object          v10, v6, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	101     (00000198) invoke-virtual       v10, v9, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	102     (0000019e) add-int/lit8         v4, v4, 1
+	103     (000001a2) move                 v8, v7
+	104     (000001a4) goto                 -42
+
+instantiate-BB@0x1a6 : [ instantiate-BB@0xc0 ]
+	105     (000001a6) const/4              v10, 0
+	106     (000001a8) iput-object          v10, v6, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	107     (000001ac) goto                 -76
+
+instantiate-BB@0x1ae : [ instantiate-BB@0x10 ]
+	108     (000001ae) move                 v7, v8
+	109     (000001b0) invoke-virtual       v1, v6, Landroid/support/v4/app/BackStackRecord;->addOp(Landroid/support/v4/app/BackStackRecord$Op;)V
+	110     (000001b6) add-int/lit8         v5, v5, 1
+	111     (000001ba) goto/16              -d5
+
+instantiate-BB@0x1be : 
+	112     (000001be) iget                 v10, v14, Landroid/support/v4/app/BackStackState;->mTransition I
+	113     (000001c2) iput                 v10, v1, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	114     (000001c6) iget                 v10, v14, Landroid/support/v4/app/BackStackState;->mTransitionStyle I
+	115     (000001ca) iput                 v10, v1, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	116     (000001ce) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mName Ljava/lang/String;
+	117     (000001d2) iput-object          v10, v1, Landroid/support/v4/app/BackStackRecord;->mName Ljava/lang/String;
+	118     (000001d6) iget                 v10, v14, Landroid/support/v4/app/BackStackState;->mIndex I
+	119     (000001da) iput                 v10, v1, Landroid/support/v4/app/BackStackRecord;->mIndex I
+	120     (000001de) iput-boolean         v13, v1, Landroid/support/v4/app/BackStackRecord;->mAddToBackStack Z
+	121     (000001e2) iget                 v10, v14, Landroid/support/v4/app/BackStackState;->mBreadCrumbTitleRes I
+	122     (000001e6) iput                 v10, v1, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbTitleRes I
+	123     (000001ea) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mBreadCrumbTitleText Ljava/lang/CharSequence;
+	124     (000001ee) iput-object          v10, v1, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbTitleText Ljava/lang/CharSequence;
+	125     (000001f2) iget                 v10, v14, Landroid/support/v4/app/BackStackState;->mBreadCrumbShortTitleRes I
+	126     (000001f6) iput                 v10, v1, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbShortTitleRes I
+	127     (000001fa) iget-object          v10, v14, Landroid/support/v4/app/BackStackState;->mBreadCrumbShortTitleText Ljava/lang/CharSequence;
+	128     (000001fe) iput-object          v10, v1, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbShortTitleText Ljava/lang/CharSequence;
+	129     (00000202) invoke-virtual       v1, v13, Landroid/support/v4/app/BackStackRecord;->bumpBackStackNesting(I)V
+	130     (00000208) return-object        v1
+

@@ -1,0 +1,39 @@
+# Landroid/support/v7/view/menu/MenuBuilder;->findInsertIndex(Ljava/util/ArrayList; I)I [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.util.ArrayList
+# - v4:int
+#
+# - return:int
+
+findInsertIndex-BB@0x0 : [ findInsertIndex-BB@0xc ]
+	0       (00000000) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	1       (00000006) move-result          v2
+	2       (00000008) add-int/lit8         v0, v2, -1
+
+findInsertIndex-BB@0xc : [ findInsertIndex-BB@0x10 findInsertIndex-BB@0x34 ]
+	3       (0000000c) if-ltz               v0, +14
+
+findInsertIndex-BB@0x10 : [ findInsertIndex-BB@0x28 findInsertIndex-BB@0x2e ]
+	4       (00000010) invoke-virtual       v3, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	5       (00000016) move-result-object   v1
+	6       (00000018) check-cast           v1, Landroid/support/v7/view/menu/MenuItemImpl;
+	7       (0000001c) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->getOrdering()I
+	8       (00000022) move-result          v2
+	9       (00000024) if-gt                v2, v4, +5
+
+findInsertIndex-BB@0x28 : [ findInsertIndex-BB@0x2c ]
+	10      (00000028) add-int/lit8         v2, v0, 1
+
+findInsertIndex-BB@0x2c : 
+	11      (0000002c) return               v2
+
+findInsertIndex-BB@0x2e : [ findInsertIndex-BB@0xc ]
+	12      (0000002e) add-int/lit8         v0, v0, -1
+	13      (00000032) goto                 -13
+
+findInsertIndex-BB@0x34 : [ findInsertIndex-BB@0x2c ]
+	14      (00000034) const/4              v2, 0
+	15      (00000036) goto                 -5
+

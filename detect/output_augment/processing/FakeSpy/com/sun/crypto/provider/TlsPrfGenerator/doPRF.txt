@@ -1,0 +1,26 @@
+# Lcom/sun/crypto/provider/TlsPrfGenerator;->doPRF([B [B [B I)[B [access_flags=static final]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:byte[]
+# - v7:byte[]
+# - v8:byte[]
+# - v9:int
+#
+# - return:byte[]
+
+doPRF-BB@0x0 : 
+	0       (00000000) const-string         v0, 'MD5'
+	1       (00000004) invoke-static        v0, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+	2       (0000000a) move-result-object   v4
+	3       (0000000c) const-string         v0, 'SHA1'
+	4       (00000010) invoke-static        v0, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+	5       (00000016) move-result-object   v5
+	6       (00000018) move-object          v0, v6
+	7       (0000001a) move-object          v1, v7
+	8       (0000001c) move-object          v2, v8
+	9       (0000001e) move                 v3, v9
+	10      (00000020) invoke-static/range  v0 ... v5, Lcom/sun/crypto/provider/TlsPrfGenerator;->doPRF([B [B [B I Ljava/security/MessageDigest; Ljava/security/MessageDigest;)[B
+	11      (00000026) move-result-object   v0
+	12      (00000028) return-object        v0
+

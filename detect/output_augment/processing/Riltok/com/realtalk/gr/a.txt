@@ -1,0 +1,128 @@
+# Lcom/realtalk/gr;->a(Landroid/content/Context; I Z)Landroid/graphics/drawable/Drawable; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.content.Context
+# - v10:int
+# - v11:boolean
+#
+# - return:android.graphics.drawable.Drawable
+
+a-BB@0x0 : [ a-BB@0xc a-BB@0x66 ]
+	0       (00000000) const/4              v2, 1
+	1       (00000002) const/4              v1, 0
+	2       (00000004) iget-boolean         v0, v8, Lcom/realtalk/gr;->p Z
+	3       (00000008) if-nez               v0, +2f
+
+a-BB@0xc : [ a-BB@0x20 a-BB@0x4e ]
+	4       (0000000c) iput-boolean         v2, v8, Lcom/realtalk/gr;->p Z
+	5       (00000010) sget                 v0, Lcom/realtalk/eu$e;->abc_vector_test I
+	6       (00000014) invoke-virtual       v8, v9, v0, v1, Lcom/realtalk/gr;->a(Landroid/content/Context; I Z)Landroid/graphics/drawable/Drawable;
+	7       (0000001a) move-result-object   v0
+	8       (0000001c) if-eqz               v0, +19
+
+a-BB@0x20 : [ a-BB@0x28 a-BB@0x48 ]
+	9       (00000020) instance-of          v3, v0, Lcom/realtalk/ah;
+	10      (00000024) if-nez               v3, +12
+
+a-BB@0x28 : [ a-BB@0x48 a-BB@0x62 ]
+	11      (00000028) const-string         v3, 'android.graphics.drawable.VectorDrawable'
+	12      (0000002c) invoke-virtual       v0, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	13      (00000032) move-result-object   v0
+	14      (00000034) invoke-virtual       v0, Ljava/lang/Class;->getName()Ljava/lang/String;
+	15      (0000003a) move-result-object   v0
+	16      (0000003c) invoke-virtual       v3, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	17      (00000042) move-result          v0
+	18      (00000044) if-eqz               v0, +f
+
+a-BB@0x48 : [ a-BB@0x4a ]
+	19      (00000048) move                 v0, v2
+
+a-BB@0x4a : [ a-BB@0x4e a-BB@0x66 ]
+	20      (0000004a) if-nez               v0, +e
+
+a-BB@0x4e : 
+	21      (0000004e) iput-boolean         v1, v8, Lcom/realtalk/gr;->p Z
+	22      (00000052) new-instance         v0, Ljava/lang/IllegalStateException;
+	23      (00000056) const-string         v1, 'This app has been built with an incorrect configuration. Please configure your build for VectorDrawableCompat.'
+	24      (0000005a) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	25      (00000060) throw                v0
+
+a-BB@0x62 : [ a-BB@0x4a ]
+	26      (00000062) move                 v0, v1
+	27      (00000064) goto                 -d
+
+a-BB@0x66 : [ a-BB@0x72 a-BB@0xfa ]
+	28      (00000066) invoke-virtual       v8, v9, v10, Lcom/realtalk/gr;->a(Landroid/content/Context; I)Landroid/graphics/drawable/Drawable;
+	29      (0000006c) move-result-object   v0
+	30      (0000006e) if-nez               v0, +46
+
+a-BB@0x72 : [ a-BB@0x7a a-BB@0x88 ]
+	31      (00000072) iget-object          v0, v8, Lcom/realtalk/gr;->o Landroid/util/TypedValue;
+	32      (00000076) if-nez               v0, +9
+
+a-BB@0x7a : [ a-BB@0x88 ]
+	33      (0000007a) new-instance         v0, Landroid/util/TypedValue;
+	34      (0000007e) invoke-direct        v0, Landroid/util/TypedValue;-><init>()V
+	35      (00000084) iput-object          v0, v8, Lcom/realtalk/gr;->o Landroid/util/TypedValue;
+
+a-BB@0x88 : [ a-BB@0xae a-BB@0xfa ]
+	36      (00000088) iget-object          v3, v8, Lcom/realtalk/gr;->o Landroid/util/TypedValue;
+	37      (0000008c) invoke-virtual       v9, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	38      (00000092) move-result-object   v0
+	39      (00000094) invoke-virtual       v0, v10, v3, v2, Landroid/content/res/Resources;->getValue(I Landroid/util/TypedValue; Z)V
+	40      (0000009a) invoke-static        v3, Lcom/realtalk/gr;->a(Landroid/util/TypedValue;)J
+	41      (000000a0) move-result-wide     v4
+	42      (000000a2) invoke-direct        v8, v9, v4, v5, Lcom/realtalk/gr;->a(Landroid/content/Context; J)Landroid/graphics/drawable/Drawable;
+	43      (000000a8) move-result-object   v0
+	44      (000000aa) if-nez               v0, +28
+
+a-BB@0xae : [ a-BB@0xb6 a-BB@0xe6 ]
+	45      (000000ae) sget                 v6, Lcom/realtalk/eu$e;->abc_cab_background_top_material I
+	46      (000000b2) if-ne                v10, v6, +1a
+
+a-BB@0xb6 : [ a-BB@0xe6 ]
+	47      (000000b6) new-instance         v0, Landroid/graphics/drawable/LayerDrawable;
+	48      (000000ba) const/4              v6, 2
+	49      (000000bc) new-array            v6, v6, [Landroid/graphics/drawable/Drawable;
+	50      (000000c0) sget                 v7, Lcom/realtalk/eu$e;->abc_cab_background_internal_bg I
+	51      (000000c4) invoke-virtual       v8, v9, v7, v1, Lcom/realtalk/gr;->a(Landroid/content/Context; I Z)Landroid/graphics/drawable/Drawable;
+	52      (000000ca) move-result-object   v7
+	53      (000000cc) aput-object          v7, v6, v1
+	54      (000000d0) sget                 v7, Lcom/realtalk/eu$e;->abc_cab_background_top_mtrl_alpha I
+	55      (000000d4) invoke-virtual       v8, v9, v7, v1, Lcom/realtalk/gr;->a(Landroid/content/Context; I Z)Landroid/graphics/drawable/Drawable;
+	56      (000000da) move-result-object   v1
+	57      (000000dc) aput-object          v1, v6, v2
+	58      (000000e0) invoke-direct        v0, v6, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+a-BB@0xe6 : [ a-BB@0xea a-BB@0xfa ]
+	59      (000000e6) if-eqz               v0, +a
+
+a-BB@0xea : [ a-BB@0xfa ]
+	60      (000000ea) iget                 v1, v3, Landroid/util/TypedValue;->changingConfigurations I
+	61      (000000ee) invoke-virtual       v0, v1, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
+	62      (000000f4) invoke-direct        v8, v9, v4, v5, v0, Lcom/realtalk/gr;->a(Landroid/content/Context; J Landroid/graphics/drawable/Drawable;)Z
+
+a-BB@0xfa : [ a-BB@0xfe a-BB@0x106 ]
+	63      (000000fa) if-nez               v0, +6
+
+a-BB@0xfe : [ a-BB@0x106 ]
+	64      (000000fe) invoke-static        v9, v10, Lcom/realtalk/aq;->a(Landroid/content/Context; I)Landroid/graphics/drawable/Drawable;
+	65      (00000104) move-result-object   v0
+
+a-BB@0x106 : [ a-BB@0x10a a-BB@0x112 ]
+	66      (00000106) if-eqz               v0, +6
+
+a-BB@0x10a : [ a-BB@0x112 ]
+	67      (0000010a) invoke-virtual       v8, v9, v10, v11, v0, Lcom/realtalk/gr;->a(Landroid/content/Context; I Z Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+	68      (00000110) move-result-object   v0
+
+a-BB@0x112 : [ a-BB@0x116 a-BB@0x11c ]
+	69      (00000112) if-eqz               v0, +5
+
+a-BB@0x116 : [ a-BB@0x11c ]
+	70      (00000116) invoke-static        v0, Lcom/realtalk/hn;->a(Landroid/graphics/drawable/Drawable;)V
+
+a-BB@0x11c : 
+	71      (0000011c) return-object        v0
+

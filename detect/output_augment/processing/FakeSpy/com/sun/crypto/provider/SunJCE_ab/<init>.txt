@@ -1,0 +1,73 @@
+# Lcom/sun/crypto/provider/SunJCE_ab;-><init>(Ljava/lang/String;)V [access_flags=constructor]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x34 <init>-BB@0x7a ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) const/16             v2, 8
+	2       (00000006) invoke-direct        v3, Ljava/lang/Object;-><init>()V
+	3       (0000000c) iput-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->d Ljava/lang/String;
+	4       (00000010) iput-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->e [B
+	5       (00000014) const/16             v0, 10
+	6       (00000018) iput                 v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->f I
+	7       (0000001c) iput-object          v4, v3, Lcom/sun/crypto/provider/SunJCE_ab;->d Ljava/lang/String;
+	8       (00000020) iget-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->d Ljava/lang/String;
+	9       (00000024) const-string         v1, 'DES'
+	10      (00000028) invoke-virtual       v0, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	11      (0000002e) move-result          v0
+	12      (00000030) if-eqz               v0, +25
+
+<init>-BB@0x34 : [ <init>-BB@0x4c ]
+	13      (00000034) new-instance         v0, Lcom/sun/crypto/provider/SunJCE_f;
+	14      (00000038) new-instance         v1, Lcom/sun/crypto/provider/SunJCE_w;
+	15      (0000003c) invoke-direct        v1, Lcom/sun/crypto/provider/SunJCE_w;-><init>()V
+	16      (00000042) invoke-direct        v0, v1, v2, Lcom/sun/crypto/provider/SunJCE_f;-><init>(Lcom/sun/crypto/provider/SunJCE_e; I)V
+	17      (00000048) iput-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->a Lcom/sun/crypto/provider/SunJCE_f;
+
+<init>-BB@0x4c : 
+	18      (0000004c) iget-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->a Lcom/sun/crypto/provider/SunJCE_f;
+	19      (00000050) const-string         v1, 'CBC'
+	20      (00000054) invoke-virtual       v0, v1, Lcom/sun/crypto/provider/SunJCE_f;->a(Ljava/lang/String;)V
+	21      (0000005a) iget-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->a Lcom/sun/crypto/provider/SunJCE_f;
+	22      (0000005e) const-string         v1, 'PKCS5Padding'
+	23      (00000062) invoke-virtual       v0, v1, Lcom/sun/crypto/provider/SunJCE_f;->b(Ljava/lang/String;)V
+	24      (00000068) const-string         v0, 'MD5'
+	25      (0000006c) invoke-static        v0, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+	26      (00000072) move-result-object   v0
+	27      (00000074) iput-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->b Ljava/security/MessageDigest;
+	28      (00000078) return-void          
+
+<init>-BB@0x7a : [ <init>-BB@0x8e <init>-BB@0xa8 ]
+	29      (0000007a) iget-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->d Ljava/lang/String;
+	30      (0000007e) const-string         v1, 'DESede'
+	31      (00000082) invoke-virtual       v0, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	32      (00000088) move-result          v0
+	33      (0000008a) if-eqz               v0, +f
+
+<init>-BB@0x8e : [ <init>-BB@0x4c ]
+	34      (0000008e) new-instance         v0, Lcom/sun/crypto/provider/SunJCE_f;
+	35      (00000092) new-instance         v1, Lcom/sun/crypto/provider/SunJCE_y;
+	36      (00000096) invoke-direct        v1, Lcom/sun/crypto/provider/SunJCE_y;-><init>()V
+	37      (0000009c) invoke-direct        v0, v1, v2, Lcom/sun/crypto/provider/SunJCE_f;-><init>(Lcom/sun/crypto/provider/SunJCE_e; I)V
+	38      (000000a2) iput-object          v0, v3, Lcom/sun/crypto/provider/SunJCE_ab;->a Lcom/sun/crypto/provider/SunJCE_f;
+	39      (000000a6) goto                 -2d
+
+<init>-BB@0xa8 : 
+	40      (000000a8) new-instance         v0, Ljava/security/NoSuchAlgorithmException;
+	41      (000000ac) new-instance         v1, Ljava/lang/StringBuilder;
+	42      (000000b0) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	43      (000000b6) const-string         v2, 'No Cipher implementation for PBEWithMD5And'
+	44      (000000ba) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	45      (000000c0) move-result-object   v1
+	46      (000000c2) iget-object          v2, v3, Lcom/sun/crypto/provider/SunJCE_ab;->d Ljava/lang/String;
+	47      (000000c6) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	48      (000000cc) move-result-object   v1
+	49      (000000ce) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	50      (000000d4) move-result-object   v1
+	51      (000000d6) invoke-direct        v0, v1, Ljava/security/NoSuchAlgorithmException;-><init>(Ljava/lang/String;)V
+	52      (000000dc) throw                v0
+

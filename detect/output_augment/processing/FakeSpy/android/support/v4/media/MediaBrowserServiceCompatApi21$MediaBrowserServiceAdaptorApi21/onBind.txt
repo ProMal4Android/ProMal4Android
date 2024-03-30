@@ -1,0 +1,26 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21;->onBind(Landroid/content/Intent;)Landroid/os/IBinder; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Intent
+#
+# - return:android.os.IBinder
+
+onBind-BB@0x0 : [ onBind-BB@0x18 onBind-BB@0x1e ]
+	0       (00000000) const-string         v0, 'android.media.browse.MediaBrowserService'
+	1       (00000004) invoke-virtual       v3, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) invoke-virtual       v0, v1, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	4       (00000012) move-result          v0
+	5       (00000014) if-eqz               v0, +5
+
+onBind-BB@0x18 : [ onBind-BB@0x1c ]
+	6       (00000018) iget-object          v0, v2, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21;->mBinder Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21$ServiceBinderProxyApi21;
+
+onBind-BB@0x1c : 
+	7       (0000001c) return-object        v0
+
+onBind-BB@0x1e : [ onBind-BB@0x1c ]
+	8       (0000001e) const/4              v0, 0
+	9       (00000020) goto                 -2
+

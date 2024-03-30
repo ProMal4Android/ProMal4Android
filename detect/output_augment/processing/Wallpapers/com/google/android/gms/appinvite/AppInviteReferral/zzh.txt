@@ -1,0 +1,97 @@
+# Lcom/google/android/gms/appinvite/AppInviteReferral;->zzh(Landroid/content/Intent;)Landroid/os/Bundle; [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.content.Intent
+#
+# - return:android.os.Bundle
+
+zzh-BB@0x0 : [ zzh-BB@0x6 zzh-BB@0x2e ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) if-eqz               v5, +16
+
+zzh-BB@0x6 : [ zzh-BB@0x1e zzh-BB@0x2e ]
+	2       (00000006) invoke-virtual       v5, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	3       (0000000c) move-result-object   v1
+	4       (0000000e) const-string         v2, 'com.android.vending.INSTALL_REFERRER'
+	5       (00000012) invoke-virtual       v1, v2, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	6       (00000018) move-result          v1
+	7       (0000001a) if-eqz               v1, +a
+
+zzh-BB@0x1e : [ zzh-BB@0x2e zzh-BB@0x30 ]
+	8       (0000001e) const-string         v1, 'referrer'
+	9       (00000022) invoke-virtual       v5, v1, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	10      (00000028) move-result-object   v1
+	11      (0000002a) if-nez               v1, +3
+
+zzh-BB@0x2e : 
+	12      (0000002e) return-object        v0
+
+zzh-BB@0x30 : [ zzh-BB@0x3c ]
+	13      (00000030) const-string         v1, 'referrer'
+	14      (00000034) invoke-virtual       v5, v1, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	15      (0000003a) move-result-object   v1
+
+zzh-BB@0x3c : [ zzh-BB@0x92 zzh-BB@0xfc ]
+	16      (0000003c) const-string         v2, 'UTF-8'
+	17      (00000040) invoke-static        v1, v2, Ljava/net/URLDecoder;->decode(Ljava/lang/String; Ljava/lang/String;)Ljava/lang/String;
+	18      (00000046) move-result-object   v1
+	19      (00000048) new-instance         v2, Ljava/lang/StringBuilder;
+	20      (0000004c) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	21      (00000052) const-string         v3, 's://a.b.c?'
+	22      (00000056) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	23      (0000005c) move-result-object   v2
+	24      (0000005e) invoke-virtual       v2, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (00000064) move-result-object   v2
+	26      (00000066) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	27      (0000006c) move-result-object   v2
+	28      (0000006e) invoke-static        v2, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+	29      (00000074) move-result-object   v2
+	30      (00000076) const-string         v3, 'invitation_id'
+	31      (0000007a) invoke-virtual       v2, v3, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+	32      (00000080) move-result-object   v3
+	33      (00000082) const-string         v4, 'deep_link_id'
+	34      (00000086) invoke-virtual       v2, v4, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+	35      (0000008c) move-result-object   v2
+	36      (0000008e) if-nez               v3, +37
+	3c:45
+	(Ljava/io/UnsupportedEncodingException; -> c8 zzh-BB@0xc8)
+
+zzh-BB@0x92 : [ zzh-BB@0x96 zzh-BB@0xfc ]
+	37      (00000092) if-nez               v2, +35
+
+zzh-BB@0x96 : [ zzh-BB@0x2e ]
+	38      (00000096) const-string         v2, 'AppInviteRef'
+	39      (0000009a) new-instance         v3, Ljava/lang/StringBuilder;
+	40      (0000009e) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	41      (000000a4) const-string         v4, 'Missing  Referrer query params: '
+	42      (000000a8) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	43      (000000ae) move-result-object   v3
+	44      (000000b0) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	45      (000000b6) move-result-object   v1
+	46      (000000b8) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	47      (000000be) move-result-object   v1
+	48      (000000c0) invoke-static        v2, v1, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+	49      (000000c6) goto                 -4c
+
+zzh-BB@0xc8 : [ zzh-BB@0x2e ]
+	50      (000000c8) move-exception       v2
+	51      (000000ca) const-string         v2, 'AppInviteRef'
+	52      (000000ce) new-instance         v3, Ljava/lang/StringBuilder;
+	53      (000000d2) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	54      (000000d8) const-string         v4, 'Error parsing Play Store referrer URL: '
+	55      (000000dc) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	56      (000000e2) move-result-object   v3
+	57      (000000e4) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	58      (000000ea) move-result-object   v1
+	59      (000000ec) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	60      (000000f2) move-result-object   v1
+	61      (000000f4) invoke-static        v2, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	62      (000000fa) goto                 -66
+
+zzh-BB@0xfc : [ zzh-BB@0x2e ]
+	63      (000000fc) const/4              v0, 1
+	64      (000000fe) invoke-static        v3, v2, v0, Lcom/google/android/gms/appinvite/AppInviteReferral;->zza(Ljava/lang/String; Ljava/lang/String; Z)Landroid/os/Bundle;
+	65      (00000104) move-result-object   v0
+	66      (00000106) goto                 -6c
+

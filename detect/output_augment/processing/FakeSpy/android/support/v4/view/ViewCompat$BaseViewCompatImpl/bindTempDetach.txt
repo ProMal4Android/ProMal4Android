@@ -1,0 +1,37 @@
+# Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->bindTempDetach()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:void
+
+bindTempDetach-BB@0x0 : [ bindTempDetach-BB@0x34 ]
+	0       (00000000) const-class          v1, Landroid/view/View;
+	1       (00000004) const-string         v2, 'dispatchStartTemporaryDetach'
+	2       (00000008) const/4              v3, 0
+	3       (0000000a) new-array            v3, v3, [Ljava/lang/Class;
+	4       (0000000e) invoke-virtual       v1, v2, v3, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	5       (00000014) move-result-object   v1
+	6       (00000016) iput-object          v1, v4, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mDispatchStartTemporaryDetach Ljava/lang/reflect/Method;
+	7       (0000001a) const-class          v1, Landroid/view/View;
+	8       (0000001e) const-string         v2, 'dispatchFinishTemporaryDetach'
+	9       (00000022) const/4              v3, 0
+	10      (00000024) new-array            v3, v3, [Ljava/lang/Class;
+	11      (00000028) invoke-virtual       v1, v2, v3, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	12      (0000002e) move-result-object   v1
+	13      (00000030) iput-object          v1, v4, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mDispatchFinishTemporaryDetach Ljava/lang/reflect/Method;
+	0:33
+	(Ljava/lang/NoSuchMethodException; -> 3c bindTempDetach-BB@0x3c)
+
+bindTempDetach-BB@0x34 : 
+	14      (00000034) const/4              v1, 1
+	15      (00000036) iput-boolean         v1, v4, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mTempDetachBound Z
+	16      (0000003a) return-void          
+
+bindTempDetach-BB@0x3c : [ bindTempDetach-BB@0x34 ]
+	17      (0000003c) move-exception       v0
+	18      (0000003e) const-string         v1, 'ViewCompat'
+	19      (00000042) const-string         v2, "Couldn't find method"
+	20      (00000046) invoke-static        v1, v2, v0, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	21      (0000004c) goto                 -c
+

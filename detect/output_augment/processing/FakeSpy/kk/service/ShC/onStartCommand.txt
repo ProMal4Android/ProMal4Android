@@ -1,0 +1,65 @@
+# Lkk/service/ShC;->onStartCommand(Landroid/content/Intent; I I)I [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Intent
+# - v4:int
+# - v5:int
+#
+# - return:int
+
+onStartCommand-BB@0x0 : [ onStartCommand-BB@0x2a onStartCommand-BB@0x5a ]
+	0       (00000000) new-instance         v0, Lkk/util/SPUtil;
+	1       (00000004) const-string         v1, 'mybank'
+	2       (00000008) invoke-direct        v0, v2, v1, Lkk/util/SPUtil;-><init>(Landroid/content/Context; Ljava/lang/String;)V
+	3       (0000000e) iput-object          v0, v2, Lkk/service/ShC;->sp Lkk/util/SPUtil;
+	4       (00000012) const-string         v0, 'sender'
+	5       (00000016) invoke-virtual       v3, v0, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	6       (0000001c) move-result-object   v0
+	7       (0000001e) invoke-static        v0, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	8       (00000024) move-result          v0
+	9       (00000026) if-nez               v0, +1a
+
+onStartCommand-BB@0x2a : [ onStartCommand-BB@0x42 onStartCommand-BB@0x5a ]
+	10      (0000002a) const-string         v0, 'content'
+	11      (0000002e) invoke-virtual       v3, v0, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	12      (00000034) move-result-object   v0
+	13      (00000036) invoke-static        v0, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	14      (0000003c) move-result          v0
+	15      (0000003e) if-nez               v0, +e
+
+onStartCommand-BB@0x42 : [ onStartCommand-BB@0x5a onStartCommand-BB@0x64 ]
+	16      (00000042) const-string         v0, 'content'
+	17      (00000046) invoke-virtual       v3, v0, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	18      (0000004c) move-result-object   v0
+	19      (0000004e) invoke-static        v0, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	20      (00000054) move-result          v0
+	21      (00000056) if-eqz               v0, +7
+
+onStartCommand-BB@0x5a : [ onStartCommand-BB@0x62 ]
+	22      (0000005a) invoke-super         v2, v3, v4, v5, Landroid/app/Service;->onStartCommand(Landroid/content/Intent; I I)I
+	23      (00000060) move-result          v0
+
+onStartCommand-BB@0x62 : 
+	24      (00000062) return               v0
+
+onStartCommand-BB@0x64 : [ onStartCommand-BB@0x62 ]
+	25      (00000064) const-string         v0, 'sender'
+	26      (00000068) invoke-virtual       v3, v0, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	27      (0000006e) move-result-object   v0
+	28      (00000070) iput-object          v0, v2, Lkk/service/ShC;->sender Ljava/lang/String;
+	29      (00000074) const-string         v0, 'content'
+	30      (00000078) invoke-virtual       v3, v0, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	31      (0000007e) move-result-object   v0
+	32      (00000080) iput-object          v0, v2, Lkk/service/ShC;->content Ljava/lang/String;
+	33      (00000084) const-string         v0, 'time'
+	34      (00000088) invoke-virtual       v3, v0, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	35      (0000008e) move-result-object   v0
+	36      (00000090) iput-object          v0, v2, Lkk/service/ShC;->time Ljava/lang/String;
+	37      (00000094) new-instance         v0, Lkk/service/ShC$1;
+	38      (00000098) invoke-direct        v0, v2, Lkk/service/ShC$1;-><init>(Lkk/service/ShC;)V
+	39      (0000009e) invoke-virtual       v0, Lkk/service/ShC$1;->start()V
+	40      (000000a4) invoke-super         v2, v3, v4, v5, Landroid/app/Service;->onStartCommand(Landroid/content/Intent; I I)I
+	41      (000000aa) move-result          v0
+	42      (000000ac) goto                 -25
+

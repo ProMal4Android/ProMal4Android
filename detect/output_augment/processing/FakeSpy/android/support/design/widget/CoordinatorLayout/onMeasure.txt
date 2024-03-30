@@ -1,0 +1,256 @@
+# Landroid/support/design/widget/CoordinatorLayout;->onMeasure(I I)V [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v34
+# - v35:int
+# - v36:int
+#
+# - return:void
+
+onMeasure-BB@0x0 : [ onMeasure-BB@0x3e onMeasure-BB@0x25e ]
+	0       (00000000) invoke-direct/range  v34, Landroid/support/design/widget/CoordinatorLayout;->prepareChildren()V
+	1       (00000006) invoke-virtual/range v34, Landroid/support/design/widget/CoordinatorLayout;->ensurePreDrawListener()V
+	2       (0000000c) invoke-virtual/range v34, Landroid/support/design/widget/CoordinatorLayout;->getPaddingLeft()I
+	3       (00000012) move-result          v25
+	4       (00000014) invoke-virtual/range v34, Landroid/support/design/widget/CoordinatorLayout;->getPaddingTop()I
+	5       (0000001a) move-result          v27
+	6       (0000001c) invoke-virtual/range v34, Landroid/support/design/widget/CoordinatorLayout;->getPaddingRight()I
+	7       (00000022) move-result          v26
+	8       (00000024) invoke-virtual/range v34, Landroid/support/design/widget/CoordinatorLayout;->getPaddingBottom()I
+	9       (0000002a) move-result          v24
+	10      (0000002c) invoke-static/range  v34, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
+	11      (00000032) move-result          v22
+	12      (00000034) const/4              v3, 1
+	13      (00000036) move/from16          v0, v22
+	14      (0000003a) if-ne                v0, v3, +112
+
+onMeasure-BB@0x3e : [ onMeasure-BB@0x42 ]
+	15      (0000003e) const/16             v19, 1
+
+onMeasure-BB@0x42 : [ onMeasure-BB@0x88 onMeasure-BB@0x266 ]
+	16      (00000042) invoke-static/range  v35, Landroid/view/View$MeasureSpec;->getMode(I)I
+	17      (00000048) move-result          v30
+	18      (0000004a) invoke-static/range  v35, Landroid/view/View$MeasureSpec;->getSize(I)I
+	19      (00000050) move-result          v32
+	20      (00000052) invoke-static/range  v36, Landroid/view/View$MeasureSpec;->getMode(I)I
+	21      (00000058) move-result          v13
+	22      (0000005a) invoke-static/range  v36, Landroid/view/View$MeasureSpec;->getSize(I)I
+	23      (00000060) move-result          v15
+	24      (00000062) add-int              v31, v25, v26
+	25      (00000066) add-int              v14, v27, v24
+	26      (0000006a) invoke-virtual/range v34, Landroid/support/design/widget/CoordinatorLayout;->getSuggestedMinimumWidth()I
+	27      (00000070) move-result          v33
+	28      (00000072) invoke-virtual/range v34, Landroid/support/design/widget/CoordinatorLayout;->getSuggestedMinimumHeight()I
+	29      (00000078) move-result          v16
+	30      (0000007a) const/4              v11, 0
+	31      (0000007c) move-object/from16   v0, v34
+	32      (00000080) iget-object          v3, v0, Landroid/support/design/widget/CoordinatorLayout;->mLastInsets Landroid/support/v4/view/WindowInsetsCompat;
+	33      (00000084) if-eqz               v3, +f1
+
+onMeasure-BB@0x88 : [ onMeasure-BB@0x94 onMeasure-BB@0x266 ]
+	34      (00000088) invoke-static/range  v34, Landroid/support/v4/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+	35      (0000008e) move-result          v3
+	36      (00000090) if-eqz               v3, +eb
+
+onMeasure-BB@0x94 : [ onMeasure-BB@0x96 ]
+	37      (00000094) const/4              v9, 1
+
+onMeasure-BB@0x96 : [ onMeasure-BB@0xaa ]
+	38      (00000096) move-object/from16   v0, v34
+	39      (0000009a) iget-object          v3, v0, Landroid/support/design/widget/CoordinatorLayout;->mDependencySortedChildren Ljava/util/List;
+	40      (0000009e) invoke-interface     v3, Ljava/util/List;->size()I
+	41      (000000a4) move-result          v10
+	42      (000000a6) const/16             v18, 0
+
+onMeasure-BB@0xaa : [ onMeasure-BB@0xb2 onMeasure-BB@0x29a ]
+	43      (000000aa) move/from16          v0, v18
+	44      (000000ae) if-ge                v0, v10, +f6
+
+onMeasure-BB@0xb2 : [ onMeasure-BB@0xe4 onMeasure-BB@0x14a ]
+	45      (000000b2) move-object/from16   v0, v34
+	46      (000000b6) iget-object          v3, v0, Landroid/support/design/widget/CoordinatorLayout;->mDependencySortedChildren Ljava/util/List;
+	47      (000000ba) move/from16          v0, v18
+	48      (000000be) invoke-interface     v3, v0, Ljava/util/List;->get(I)Ljava/lang/Object;
+	49      (000000c4) move-result-object   v4
+	50      (000000c6) check-cast           v4, Landroid/view/View;
+	51      (000000ca) invoke-virtual       v4, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	52      (000000d0) move-result-object   v23
+	53      (000000d2) check-cast           v23, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;
+	54      (000000d6) const/4              v6, 0
+	55      (000000d8) move-object/from16   v0, v23
+	56      (000000dc) iget                 v3, v0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->keyline I
+	57      (000000e0) if-ltz               v3, +35
+
+onMeasure-BB@0xe4 : [ onMeasure-BB@0xe8 onMeasure-BB@0x14a ]
+	58      (000000e4) if-eqz               v30, +33
+
+onMeasure-BB@0xe8 : [ onMeasure-BB@0x126 onMeasure-BB@0x12a ]
+	59      (000000e8) move-object/from16   v0, v23
+	60      (000000ec) iget                 v3, v0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->keyline I
+	61      (000000f0) move-object/from16   v0, v34
+	62      (000000f4) invoke-direct        v0, v3, Landroid/support/design/widget/CoordinatorLayout;->getKeyline(I)I
+	63      (000000fa) move-result          v21
+	64      (000000fc) move-object/from16   v0, v23
+	65      (00000100) iget                 v3, v0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->gravity I
+	66      (00000104) invoke-static        v3, Landroid/support/design/widget/CoordinatorLayout;->resolveKeylineGravity(I)I
+	67      (0000010a) move-result          v3
+	68      (0000010c) move/from16          v0, v22
+	69      (00000110) invoke-static        v3, v0, Landroid/support/v4/view/GravityCompat;->getAbsoluteGravity(I I)I
+	70      (00000116) move-result          v3
+	71      (00000118) and-int/lit8         v20, v3, 7
+	72      (0000011c) const/4              v3, 3
+	73      (0000011e) move/from16          v0, v20
+	74      (00000122) if-ne                v0, v3, +4
+
+onMeasure-BB@0x126 : [ onMeasure-BB@0x12a onMeasure-BB@0x138 ]
+	75      (00000126) if-eqz               v19, +9
+
+onMeasure-BB@0x12a : [ onMeasure-BB@0x134 onMeasure-BB@0x26c ]
+	76      (0000012a) const/4              v3, 5
+	77      (0000012c) move/from16          v0, v20
+	78      (00000130) if-ne                v0, v3, +9e
+
+onMeasure-BB@0x134 : [ onMeasure-BB@0x138 onMeasure-BB@0x26c ]
+	79      (00000134) if-eqz               v19, +9c
+
+onMeasure-BB@0x138 : [ onMeasure-BB@0x14a ]
+	80      (00000138) const/4              v3, 0
+	81      (0000013a) sub-int              v8, v32, v26
+	82      (0000013e) sub-int              v8, v8, v21
+	83      (00000142) invoke-static        v3, v8, Ljava/lang/Math;->max(I I)I
+	84      (00000148) move-result          v6
+
+onMeasure-BB@0x14a : [ onMeasure-BB@0x156 onMeasure-BB@0x1c6 ]
+	85      (0000014a) move/from16          v5, v35
+	86      (0000014e) move/from16          v7, v36
+	87      (00000152) if-eqz               v9, +3a
+
+onMeasure-BB@0x156 : [ onMeasure-BB@0x162 onMeasure-BB@0x1c6 ]
+	88      (00000156) invoke-static        v4, Landroid/support/v4/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
+	89      (0000015c) move-result          v3
+	90      (0000015e) if-nez               v3, +34
+
+onMeasure-BB@0x162 : [ onMeasure-BB@0x1c6 ]
+	91      (00000162) move-object/from16   v0, v34
+	92      (00000166) iget-object          v3, v0, Landroid/support/design/widget/CoordinatorLayout;->mLastInsets Landroid/support/v4/view/WindowInsetsCompat;
+	93      (0000016a) invoke-virtual       v3, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetLeft()I
+	94      (00000170) move-result          v3
+	95      (00000172) move-object/from16   v0, v34
+	96      (00000176) iget-object          v8, v0, Landroid/support/design/widget/CoordinatorLayout;->mLastInsets Landroid/support/v4/view/WindowInsetsCompat;
+	97      (0000017a) invoke-virtual       v8, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetRight()I
+	98      (00000180) move-result          v8
+	99      (00000182) add-int              v17, v3, v8
+	100     (00000186) move-object/from16   v0, v34
+	101     (0000018a) iget-object          v3, v0, Landroid/support/design/widget/CoordinatorLayout;->mLastInsets Landroid/support/v4/view/WindowInsetsCompat;
+	102     (0000018e) invoke-virtual       v3, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetTop()I
+	103     (00000194) move-result          v3
+	104     (00000196) move-object/from16   v0, v34
+	105     (0000019a) iget-object          v8, v0, Landroid/support/design/widget/CoordinatorLayout;->mLastInsets Landroid/support/v4/view/WindowInsetsCompat;
+	106     (0000019e) invoke-virtual       v8, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetBottom()I
+	107     (000001a4) move-result          v8
+	108     (000001a6) add-int              v28, v3, v8
+	109     (000001aa) sub-int              v3, v32, v17
+	110     (000001ae) move/from16          v0, v30
+	111     (000001b2) invoke-static        v3, v0, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	112     (000001b8) move-result          v5
+	113     (000001ba) sub-int              v3, v15, v28
+	114     (000001be) invoke-static        v3, v13, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	115     (000001c4) move-result          v7
+
+onMeasure-BB@0x1c6 : [ onMeasure-BB@0x1d2 onMeasure-BB@0x1e4 ]
+	116     (000001c6) invoke-virtual/range v23, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->getBehavior()Landroid/support/design/widget/CoordinatorLayout$Behavior;
+	117     (000001cc) move-result-object   v2
+	118     (000001ce) if-eqz               v2, +b
+
+onMeasure-BB@0x1d2 : [ onMeasure-BB@0x1e4 onMeasure-BB@0x1f0 ]
+	119     (000001d2) const/4              v8, 0
+	120     (000001d4) move-object/from16   v3, v34
+	121     (000001d8) invoke-virtual/range v2 ... v8, Landroid/support/design/widget/CoordinatorLayout$Behavior;->onMeasureChild(Landroid/support/design/widget/CoordinatorLayout; Landroid/view/View; I I I I)Z
+	122     (000001de) move-result          v3
+	123     (000001e0) if-nez               v3, +8
+
+onMeasure-BB@0x1e4 : [ onMeasure-BB@0x1f0 ]
+	124     (000001e4) const/4              v8, 0
+	125     (000001e6) move-object/from16   v3, v34
+	126     (000001ea) invoke-virtual/range v3 ... v8, Landroid/support/design/widget/CoordinatorLayout;->onMeasureChild(Landroid/view/View; I I I I)V
+
+onMeasure-BB@0x1f0 : [ onMeasure-BB@0xaa ]
+	127     (000001f0) invoke-virtual       v4, Landroid/view/View;->getMeasuredWidth()I
+	128     (000001f6) move-result          v3
+	129     (000001f8) add-int              v3, v3, v31
+	130     (000001fc) move-object/from16   v0, v23
+	131     (00000200) iget                 v8, v0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->leftMargin I
+	132     (00000204) add-int/2addr        v3, v8
+	133     (00000206) move-object/from16   v0, v23
+	134     (0000020a) iget                 v8, v0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->rightMargin I
+	135     (0000020e) add-int/2addr        v3, v8
+	136     (00000210) move/from16          v0, v33
+	137     (00000214) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	138     (0000021a) move-result          v33
+	139     (0000021c) invoke-virtual       v4, Landroid/view/View;->getMeasuredHeight()I
+	140     (00000222) move-result          v3
+	141     (00000224) add-int/2addr        v3, v14
+	142     (00000226) move-object/from16   v0, v23
+	143     (0000022a) iget                 v8, v0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->topMargin I
+	144     (0000022e) add-int/2addr        v3, v8
+	145     (00000230) move-object/from16   v0, v23
+	146     (00000234) iget                 v8, v0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->bottomMargin I
+	147     (00000238) add-int/2addr        v3, v8
+	148     (0000023a) move/from16          v0, v16
+	149     (0000023e) invoke-static        v0, v3, Ljava/lang/Math;->max(I I)I
+	150     (00000244) move-result          v16
+	151     (00000246) invoke-static        v4, Landroid/support/v4/view/ViewCompat;->getMeasuredState(Landroid/view/View;)I
+	152     (0000024c) move-result          v3
+	153     (0000024e) invoke-static        v11, v3, Landroid/support/v4/view/ViewCompat;->combineMeasuredStates(I I)I
+	154     (00000254) move-result          v11
+	155     (00000256) add-int/lit8         v18, v18, 1
+	156     (0000025a) goto/16              -d8
+
+onMeasure-BB@0x25e : [ onMeasure-BB@0x42 ]
+	157     (0000025e) const/16             v19, 0
+	158     (00000262) goto/16              -110
+
+onMeasure-BB@0x266 : [ onMeasure-BB@0x96 ]
+	159     (00000266) const/4              v9, 0
+	160     (00000268) goto/16              -e9
+
+onMeasure-BB@0x26c : [ onMeasure-BB@0x276 onMeasure-BB@0x27a ]
+	161     (0000026c) const/4              v3, 5
+	162     (0000026e) move/from16          v0, v20
+	163     (00000272) if-ne                v0, v3, +4
+
+onMeasure-BB@0x276 : [ onMeasure-BB@0x27a onMeasure-BB@0x288 ]
+	164     (00000276) if-eqz               v19, +9
+
+onMeasure-BB@0x27a : [ onMeasure-BB@0x284 onMeasure-BB@0x14a ]
+	165     (0000027a) const/4              v3, 3
+	166     (0000027c) move/from16          v0, v20
+	167     (00000280) if-ne                v0, v3, -9b
+
+onMeasure-BB@0x284 : [ onMeasure-BB@0x288 onMeasure-BB@0x14a ]
+	168     (00000284) if-eqz               v19, -9d
+
+onMeasure-BB@0x288 : [ onMeasure-BB@0x14a ]
+	169     (00000288) const/4              v3, 0
+	170     (0000028a) sub-int              v8, v21, v25
+	171     (0000028e) invoke-static        v3, v8, Ljava/lang/Math;->max(I I)I
+	172     (00000294) move-result          v6
+	173     (00000296) goto/16              -a6
+
+onMeasure-BB@0x29a : 
+	174     (0000029a) const/high16         v3, -256 # [-1.7014118346046923e+38]
+	175     (0000029e) and-int/2addr        v3, v11
+	176     (000002a0) move/from16          v0, v33
+	177     (000002a4) move/from16          v1, v35
+	178     (000002a8) invoke-static        v0, v1, v3, Landroid/support/v4/view/ViewCompat;->resolveSizeAndState(I I I)I
+	179     (000002ae) move-result          v29
+	180     (000002b0) shl-int/lit8         v3, v11, 16
+	181     (000002b4) move/from16          v0, v16
+	182     (000002b8) move/from16          v1, v36
+	183     (000002bc) invoke-static        v0, v1, v3, Landroid/support/v4/view/ViewCompat;->resolveSizeAndState(I I I)I
+	184     (000002c2) move-result          v12
+	185     (000002c4) move-object/from16   v0, v34
+	186     (000002c8) move/from16          v1, v29
+	187     (000002cc) invoke-virtual       v0, v1, v12, Landroid/support/design/widget/CoordinatorLayout;->setMeasuredDimension(I I)V
+	188     (000002d2) return-void          
+

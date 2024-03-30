@@ -1,0 +1,88 @@
+# Lcom/sun/crypto/provider/SunJCE_aa;-><init>([B)V [access_flags=constructor]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:byte[]
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x4a <init>-BB@0x88 ]
+	0       (00000000) const/4              v4, 1
+	1       (00000002) const/4              v3, 0
+	2       (00000004) invoke-direct        v5, Ljava/lang/Object;-><init>()V
+	3       (0000000a) new-instance         v0, Lsun/security/util/DerValue;
+	4       (0000000e) invoke-direct        v0, v6, Lsun/security/util/DerValue;-><init>([B)V
+	5       (00000014) const/4              v1, 2
+	6       (00000016) new-array            v1, v1, [Lsun/security/util/DerValue;
+	7       (0000001a) iget-object          v2, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	8       (0000001e) invoke-virtual       v2, Lsun/security/util/DerInputStream;->getDerValue()Lsun/security/util/DerValue;
+	9       (00000024) move-result-object   v2
+	10      (00000026) aput-object          v2, v1, v3
+	11      (0000002a) iget-object          v2, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	12      (0000002e) invoke-virtual       v2, Lsun/security/util/DerInputStream;->getDerValue()Lsun/security/util/DerValue;
+	13      (00000034) move-result-object   v2
+	14      (00000036) aput-object          v2, v1, v4
+	15      (0000003a) iget-object          v2, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	16      (0000003e) invoke-virtual       v2, Lsun/security/util/DerInputStream;->available()I
+	17      (00000044) move-result          v2
+	18      (00000046) if-eqz               v2, +21
+
+<init>-BB@0x4a : 
+	19      (0000004a) new-instance         v1, Ljava/io/IOException;
+	20      (0000004e) new-instance         v2, Ljava/lang/StringBuilder;
+	21      (00000052) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	22      (00000058) const-string         v3, 'overrun, bytes = '
+	23      (0000005c) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (00000062) move-result-object   v2
+	25      (00000064) iget-object          v0, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	26      (00000068) invoke-virtual       v0, Lsun/security/util/DerInputStream;->available()I
+	27      (0000006e) move-result          v0
+	28      (00000070) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	29      (00000076) move-result-object   v0
+	30      (00000078) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	31      (0000007e) move-result-object   v0
+	32      (00000080) invoke-direct        v1, v0, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	33      (00000086) throw                v1
+
+<init>-BB@0x88 : [ <init>-BB@0xac <init>-BB@0xbc ]
+	34      (00000088) aget-object          v0, v1, v3
+	35      (0000008c) invoke-static        v0, Lsun/security/x509/AlgorithmId;->parse(Lsun/security/util/DerValue;)Lsun/security/x509/AlgorithmId;
+	36      (00000092) move-result-object   v0
+	37      (00000094) iput-object          v0, v5, Lcom/sun/crypto/provider/SunJCE_aa;->a Lsun/security/x509/AlgorithmId;
+	38      (00000098) aget-object          v0, v1, v3
+	39      (0000009c) iget-object          v0, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	40      (000000a0) invoke-virtual       v0, Lsun/security/util/DerInputStream;->available()I
+	41      (000000a6) move-result          v0
+	42      (000000a8) if-eqz               v0, +a
+
+<init>-BB@0xac : 
+	43      (000000ac) new-instance         v0, Ljava/io/IOException;
+	44      (000000b0) const-string         v1, 'encryptionAlgorithm field overrun'
+	45      (000000b4) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	46      (000000ba) throw                v0
+
+<init>-BB@0xbc : [ <init>-BB@0xe0 <init>-BB@0xf0 ]
+	47      (000000bc) aget-object          v0, v1, v4
+	48      (000000c0) invoke-virtual       v0, Lsun/security/util/DerValue;->getOctetString()[B
+	49      (000000c6) move-result-object   v0
+	50      (000000c8) iput-object          v0, v5, Lcom/sun/crypto/provider/SunJCE_aa;->b [B
+	51      (000000cc) aget-object          v0, v1, v4
+	52      (000000d0) iget-object          v0, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	53      (000000d4) invoke-virtual       v0, Lsun/security/util/DerInputStream;->available()I
+	54      (000000da) move-result          v0
+	55      (000000dc) if-eqz               v0, +a
+
+<init>-BB@0xe0 : 
+	56      (000000e0) new-instance         v0, Ljava/io/IOException;
+	57      (000000e4) const-string         v1, 'encryptedData field overrun'
+	58      (000000e8) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	59      (000000ee) throw                v0
+
+<init>-BB@0xf0 : 
+	60      (000000f0) invoke-virtual       v6, Ljava/lang/Object;->clone()Ljava/lang/Object;
+	61      (000000f6) move-result-object   v0
+	62      (000000f8) check-cast           v0, [B
+	63      (000000fc) check-cast           v0, [B
+	64      (00000100) iput-object          v0, v5, Lcom/sun/crypto/provider/SunJCE_aa;->c [B
+	65      (00000104) return-void          
+

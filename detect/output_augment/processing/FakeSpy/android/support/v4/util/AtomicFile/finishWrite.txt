@@ -1,0 +1,31 @@
+# Landroid/support/v4/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.io.FileOutputStream
+#
+# - return:void
+
+finishWrite-BB@0x0 : [ finishWrite-BB@0x4 finishWrite-BB@0x1a ]
+	0       (00000000) if-eqz               v4, +d
+
+finishWrite-BB@0x4 : [ finishWrite-BB@0xa ]
+	1       (00000004) invoke-static        v4, Landroid/support/v4/util/AtomicFile;->sync(Ljava/io/FileOutputStream;)Z
+
+finishWrite-BB@0xa : [ finishWrite-BB@0x1a ]
+	2       (0000000a) invoke-virtual       v4, Ljava/io/FileOutputStream;->close()V
+	3       (00000010) iget-object          v1, v3, Landroid/support/v4/util/AtomicFile;->mBackupName Ljava/io/File;
+	4       (00000014) invoke-virtual       v1, Ljava/io/File;->delete()Z
+	a:19
+	(Ljava/io/IOException; -> 1c finishWrite-BB@0x1c)
+
+finishWrite-BB@0x1a : 
+	5       (0000001a) return-void          
+
+finishWrite-BB@0x1c : [ finishWrite-BB@0x1a ]
+	6       (0000001c) move-exception       v0
+	7       (0000001e) const-string         v1, 'AtomicFile'
+	8       (00000022) const-string         v2, 'finishWrite: Got exception:'
+	9       (00000026) invoke-static        v1, v2, v0, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	10      (0000002c) goto                 -9
+

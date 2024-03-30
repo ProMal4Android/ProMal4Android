@@ -1,0 +1,25 @@
+# Landroid/support/v7/widget/ShareActionProvider;->updateIntent(Landroid/content/Intent;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Intent
+#
+# - return:void
+
+updateIntent-BB@0x0 : [ updateIntent-BB@0xc updateIntent-BB@0x18 ]
+	0       (00000000) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) const/16             v1, 21
+	2       (00000008) if-lt                v0, v1, +8
+
+updateIntent-BB@0xc : [ updateIntent-BB@0x16 ]
+	3       (0000000c) const/high16         v0, 2056 # [4.092601131822876e-34]
+	4       (00000010) invoke-virtual       v3, v0, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+updateIntent-BB@0x16 : 
+	5       (00000016) return-void          
+
+updateIntent-BB@0x18 : [ updateIntent-BB@0x16 ]
+	6       (00000018) const/high16         v0, 8 # [7.346839692639297e-40]
+	7       (0000001c) invoke-virtual       v3, v0, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+	8       (00000022) goto                 -6
+

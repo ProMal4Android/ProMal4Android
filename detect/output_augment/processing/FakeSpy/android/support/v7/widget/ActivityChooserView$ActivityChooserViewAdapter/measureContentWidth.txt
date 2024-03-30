@@ -1,0 +1,41 @@
+# Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->measureContentWidth()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v9
+#
+# - return:int
+
+measureContentWidth-BB@0x0 : [ measureContentWidth-BB@0x2e ]
+	0       (00000000) const/4              v8, 0
+	1       (00000002) iget                 v5, v9, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->mMaxActivityCount I
+	2       (00000006) const                v7, 2147483647 # [nan]
+	3       (0000000c) iput                 v7, v9, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->mMaxActivityCount I
+	4       (00000010) const/4              v0, 0
+	5       (00000012) const/4              v4, 0
+	6       (00000014) invoke-static        v8, v8, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	7       (0000001a) move-result          v6
+	8       (0000001c) invoke-static        v8, v8, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	9       (00000022) move-result          v2
+	10      (00000024) invoke-virtual       v9, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->getCount()I
+	11      (0000002a) move-result          v1
+	12      (0000002c) const/4              v3, 0
+
+measureContentWidth-BB@0x2e : [ measureContentWidth-BB@0x32 measureContentWidth-BB@0x58 ]
+	13      (0000002e) if-ge                v3, v1, +15
+
+measureContentWidth-BB@0x32 : [ measureContentWidth-BB@0x2e ]
+	14      (00000032) const/4              v7, 0
+	15      (00000034) invoke-virtual       v9, v3, v4, v7, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->getView(I Landroid/view/View; Landroid/view/ViewGroup;)Landroid/view/View;
+	16      (0000003a) move-result-object   v4
+	17      (0000003c) invoke-virtual       v4, v6, v2, Landroid/view/View;->measure(I I)V
+	18      (00000042) invoke-virtual       v4, Landroid/view/View;->getMeasuredWidth()I
+	19      (00000048) move-result          v7
+	20      (0000004a) invoke-static        v0, v7, Ljava/lang/Math;->max(I I)I
+	21      (00000050) move-result          v0
+	22      (00000052) add-int/lit8         v3, v3, 1
+	23      (00000056) goto                 -14
+
+measureContentWidth-BB@0x58 : 
+	24      (00000058) iput                 v5, v9, Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;->mMaxActivityCount I
+	25      (0000005c) return               v0
+

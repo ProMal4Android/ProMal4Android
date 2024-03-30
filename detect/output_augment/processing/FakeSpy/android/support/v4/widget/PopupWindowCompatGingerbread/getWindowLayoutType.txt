@@ -1,0 +1,61 @@
+# Landroid/support/v4/widget/PopupWindowCompatGingerbread;->getWindowLayoutType(Landroid/widget/PopupWindow;)I [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.widget.PopupWindow
+#
+# - return:int
+
+getWindowLayoutType-BB@0x0 : [ getWindowLayoutType-BB@0xc getWindowLayoutType-BB@0x36 ]
+	0       (00000000) const/4              v4, 1
+	1       (00000002) const/4              v1, 0
+	2       (00000004) sget-boolean         v0, Landroid/support/v4/widget/PopupWindowCompatGingerbread;->sGetWindowLayoutTypeMethodAttempted Z
+	3       (00000008) if-nez               v0, +17
+
+getWindowLayoutType-BB@0xc : [ getWindowLayoutType-BB@0x32 ]
+	4       (0000000c) const-class          v0, Landroid/widget/PopupWindow;
+	5       (00000010) const-string         v2, 'getWindowLayoutType'
+	6       (00000014) const/4              v3, 0
+	7       (00000016) new-array            v3, v3, [Ljava/lang/Class;
+	8       (0000001a) invoke-virtual       v0, v2, v3, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	9       (00000020) move-result-object   v0
+	10      (00000022) sput-object          v0, Landroid/support/v4/widget/PopupWindowCompatGingerbread;->sGetWindowLayoutTypeMethod Ljava/lang/reflect/Method;
+	11      (00000026) sget-object          v0, Landroid/support/v4/widget/PopupWindowCompatGingerbread;->sGetWindowLayoutTypeMethod Ljava/lang/reflect/Method;
+	12      (0000002a) const/4              v2, 1
+	13      (0000002c) invoke-virtual       v0, v2, Ljava/lang/reflect/Method;->setAccessible(Z)V
+	c:31
+	(Ljava/lang/Exception; -> 64 getWindowLayoutType-BB@0x64)
+
+getWindowLayoutType-BB@0x32 : [ getWindowLayoutType-BB@0x36 ]
+	14      (00000032) sput-boolean         v4, Landroid/support/v4/widget/PopupWindowCompatGingerbread;->sGetWindowLayoutTypeMethodAttempted Z
+
+getWindowLayoutType-BB@0x36 : [ getWindowLayoutType-BB@0x3e getWindowLayoutType-BB@0x60 ]
+	15      (00000036) sget-object          v0, Landroid/support/v4/widget/PopupWindowCompatGingerbread;->sGetWindowLayoutTypeMethod Ljava/lang/reflect/Method;
+	16      (0000003a) if-eqz               v0, +13
+
+getWindowLayoutType-BB@0x3e : [ getWindowLayoutType-BB@0x5c ]
+	17      (0000003e) sget-object          v0, Landroid/support/v4/widget/PopupWindowCompatGingerbread;->sGetWindowLayoutTypeMethod Ljava/lang/reflect/Method;
+	18      (00000042) const/4              v2, 0
+	19      (00000044) new-array            v2, v2, [Ljava/lang/Object;
+	20      (00000048) invoke-virtual       v0, v5, v2, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	21      (0000004e) move-result-object   v0
+	22      (00000050) check-cast           v0, Ljava/lang/Integer;
+	23      (00000054) invoke-virtual       v0, Ljava/lang/Integer;->intValue()I
+	24      (0000005a) move-result          v0
+	3e:59
+	(Ljava/lang/Exception; -> 5e getWindowLayoutType-BB@0x5e)
+
+getWindowLayoutType-BB@0x5c : 
+	25      (0000005c) return               v0
+
+getWindowLayoutType-BB@0x5e : [ getWindowLayoutType-BB@0x60 ]
+	26      (0000005e) move-exception       v0
+
+getWindowLayoutType-BB@0x60 : [ getWindowLayoutType-BB@0x5c ]
+	27      (00000060) move                 v0, v1
+	28      (00000062) goto                 -3
+
+getWindowLayoutType-BB@0x64 : [ getWindowLayoutType-BB@0x32 ]
+	29      (00000064) move-exception       v0
+	30      (00000066) goto                 -1a
+

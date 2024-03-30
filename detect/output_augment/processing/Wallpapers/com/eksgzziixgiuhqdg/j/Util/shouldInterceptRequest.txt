@@ -1,0 +1,110 @@
+# Lcom/eksgzziixgiuhqdg/j/Util;->shouldInterceptRequest(Ljava/lang/String; Ljava/util/Map;)Landroid/webkit/WebResourceResponse; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:java.lang.String
+# - v11:java.util.Map
+#
+# - return:android.webkit.WebResourceResponse
+
+shouldInterceptRequest-BB@0x0 : [ shouldInterceptRequest-BB@0x2 ]
+	0       (00000000) const/4              v7, 0
+
+shouldInterceptRequest-BB@0x2 : [ shouldInterceptRequest-BB@0x12 shouldInterceptRequest-BB@0x16 ]
+	1       (00000002) sget-object          v5, Lcom/eksgzziixgiuhqdg/j/Util;->ABOUT_BLANK Ljava/lang/String;
+	2       (00000006) invoke-virtual       v5, v10, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	3       (0000000c) move-result          v5
+	4       (0000000e) if-eqz               v5, +4
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0x12 : [ shouldInterceptRequest-BB@0x14 ]
+	5       (00000012) move-object          v5, v7
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0x14 : 
+	6       (00000014) return-object        v5
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0x16 : [ shouldInterceptRequest-BB@0x26 shouldInterceptRequest-BB@0x2a ]
+	7       (00000016) sget-object          v5, Lcom/eksgzziixgiuhqdg/j/Util;->RSS_DATA Ljava/lang/String;
+	8       (0000001a) invoke-virtual       v5, v10, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	9       (00000020) move-result          v5
+	10      (00000022) if-eqz               v5, +4
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0x26 : [ shouldInterceptRequest-BB@0x14 ]
+	11      (00000026) move-object          v5, v7
+	12      (00000028) goto                 -a
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0x2a : [ shouldInterceptRequest-BB@0x7a ]
+	13      (0000002a) new-instance         v4, Ljava/net/URL;
+	14      (0000002e) invoke-direct        v4, v10, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+	15      (00000034) invoke-virtual       v4, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+	16      (0000003a) move-result-object   v0
+	17      (0000003c) check-cast           v0, Ljava/net/HttpURLConnection;
+	18      (00000040) sget-object          v5, Lcom/eksgzziixgiuhqdg/j/Util;->PROXY_CONNECTION Ljava/lang/String;
+	19      (00000044) sget-object          v6, Lcom/eksgzziixgiuhqdg/j/Util;->KEEP_ALIVE Ljava/lang/String;
+	20      (00000048) invoke-virtual       v0, v5, v6, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+	21      (0000004e) sget-object          v5, Lcom/eksgzziixgiuhqdg/j/Util;->PRAGMA Ljava/lang/String;
+	22      (00000052) sget-object          v6, Lcom/eksgzziixgiuhqdg/j/Util;->NO_CACHE Ljava/lang/String;
+	23      (00000056) invoke-virtual       v0, v5, v6, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+	24      (0000005c) sget-object          v5, Lcom/eksgzziixgiuhqdg/j/Util;->CACHE_CONTROL Ljava/lang/String;
+	25      (00000060) sget-object          v6, Lcom/eksgzziixgiuhqdg/j/Util;->NO_CACHE Ljava/lang/String;
+	26      (00000064) invoke-virtual       v0, v5, v6, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+	27      (0000006a) invoke-interface     v11, Ljava/util/Map;->entrySet()Ljava/util/Set;
+	28      (00000070) move-result-object   v5
+	29      (00000072) invoke-interface     v5, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+	30      (00000078) move-result-object   v8
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0x7a : [ shouldInterceptRequest-BB@0x86 shouldInterceptRequest-BB@0xbc ]
+	31      (0000007a) invoke-interface     v8, Ljava/util/Iterator;->hasNext()Z
+	32      (00000080) move-result          v5
+	33      (00000082) if-nez               v5, +1d
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0x86 : [ shouldInterceptRequest-BB@0x14 ]
+	34      (00000086) invoke-virtual       v0, Ljava/net/HttpURLConnection;->getContentType()Ljava/lang/String;
+	35      (0000008c) move-result-object   v5
+	36      (0000008e) invoke-static        v5, Lcom/eksgzziixgiuhqdg/j/Util;->parseContentHeader(Ljava/lang/String;)[Ljava/lang/String;
+	37      (00000094) move-result-object   v3
+	38      (00000096) new-instance         v5, Landroid/webkit/WebResourceResponse;
+	39      (0000009a) const/4              v6, 0
+	40      (0000009c) aget-object          v6, v3, v6
+	41      (000000a0) const/4              v8, 1
+	42      (000000a2) aget-object          v8, v3, v8
+	43      (000000a6) invoke-virtual       v0, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
+	44      (000000ac) move-result-object   v9
+	45      (000000ae) invoke-direct        v5, v6, v8, v9, Landroid/webkit/WebResourceResponse;-><init>(Ljava/lang/String; Ljava/lang/String; Ljava/io/InputStream;)V
+	46      (000000b4) goto                 -50
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0xb6 : [ shouldInterceptRequest-BB@0x14 ]
+	47      (000000b6) move-exception       v2
+	48      (000000b8) move-object          v5, v7
+	49      (000000ba) goto                 -53
+	2:e5
+	(Ljava/lang/Throwable; -> b6 shouldInterceptRequest-BB@0xb6)
+
+shouldInterceptRequest-BB@0xbc : [ shouldInterceptRequest-BB@0x7a ]
+	50      (000000bc) invoke-interface     v8, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	51      (000000c2) move-result-object   v1
+	52      (000000c4) check-cast           v1, Ljava/util/Map$Entry;
+	53      (000000c8) invoke-interface     v1, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+	54      (000000ce) move-result-object   v5
+	55      (000000d0) check-cast           v5, Ljava/lang/String;
+	56      (000000d4) invoke-interface     v1, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	57      (000000da) move-result-object   v6
+	58      (000000dc) check-cast           v6, Ljava/lang/String;
+	59      (000000e0) invoke-virtual       v0, v5, v6, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+	60      (000000e6) goto                 -36
+

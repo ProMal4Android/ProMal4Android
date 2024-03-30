@@ -1,0 +1,53 @@
+# Lcom/mixio/tosh/aprl/ase/PhonecallReceiver;->a()V [access_flags=public final]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x16 a-BB@0x96 ]
+	0       (00000000) sget-object          v0, Lcom/mixio/tosh/aprl/aetn/ate;->e Landroid/content/SharedPreferences;
+	1       (00000004) const-string         v1, 'Callfi'
+	2       (00000008) const/4              v2, 0
+	3       (0000000a) invoke-interface     v0, v1, v2, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String; I)I
+	4       (00000010) move-result          v0
+	5       (00000012) if-nez               v0, +42
+	0:8b
+	(Ljava/lang/Exception; -> 8e a-BB@0x8e)
+
+a-BB@0x16 : [ a-BB@0x96 ]
+	6       (00000016) new-instance         v0, Ljava/io/File;
+	7       (0000001a) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	8       (0000001e) const-string         v2, 'CallLogs.txt'
+	9       (00000022) invoke-direct        v0, v1, v2, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	10      (00000028) new-instance         v1, Ljava/io/FileOutputStream;
+	11      (0000002c) const/4              v2, 1
+	12      (0000002e) invoke-direct        v1, v0, v2, Ljava/io/FileOutputStream;-><init>(Ljava/io/File; Z)V
+	13      (00000034) new-instance         v0, Ljava/lang/StringBuilder;
+	14      (00000038) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	15      (0000003e) iget-object          v2, v3, Lcom/mixio/tosh/aprl/ase/PhonecallReceiver;->i Lorg/json/JSONArray;
+	16      (00000042) invoke-virtual       v2, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+	17      (00000048) move-result-object   v2
+	18      (0000004a) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	19      (00000050) const/16             v2, 10
+	20      (00000054) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	21      (0000005a) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	22      (00000060) move-result-object   v0
+	23      (00000062) invoke-static        v0, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+	24      (00000068) move-result-object   v0
+	25      (0000006a) invoke-virtual       v0, Ljava/lang/String;->getBytes()[B
+	26      (00000070) move-result-object   v0
+	27      (00000072) invoke-virtual       v1, v0, Ljava/io/FileOutputStream;->write([B)V
+	28      (00000078) new-instance         v0, Lorg/json/JSONArray;
+	29      (0000007c) invoke-direct        v0, Lorg/json/JSONArray;-><init>()V
+	30      (00000082) iput-object          v0, v3, Lcom/mixio/tosh/aprl/ase/PhonecallReceiver;->i Lorg/json/JSONArray;
+	31      (00000086) invoke-virtual       v1, Ljava/io/FileOutputStream;->close()V
+	32      (0000008c) goto                 +5
+
+a-BB@0x8e : [ a-BB@0x96 ]
+	33      (0000008e) move-exception       v0
+	34      (00000090) invoke-virtual       v0, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+a-BB@0x96 : 
+	35      (00000096) return-void          
+

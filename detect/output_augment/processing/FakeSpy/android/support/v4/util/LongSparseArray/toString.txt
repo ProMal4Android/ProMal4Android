@@ -1,0 +1,67 @@
+# Landroid/support/v4/util/LongSparseArray;->toString()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:java.lang.String
+
+toString-BB@0x0 : [ toString-BB@0xc toString-BB@0x12 ]
+	0       (00000000) invoke-virtual       v6, Landroid/support/v4/util/LongSparseArray;->size()I
+	1       (00000006) move-result          v5
+	2       (00000008) if-gtz               v5, +5
+
+toString-BB@0xc : [ toString-BB@0x10 ]
+	3       (0000000c) const-string         v5, '{}'
+
+toString-BB@0x10 : 
+	4       (00000010) return-object        v5
+
+toString-BB@0x12 : [ toString-BB@0x30 ]
+	5       (00000012) new-instance         v0, Ljava/lang/StringBuilder;
+	6       (00000016) iget                 v5, v6, Landroid/support/v4/util/LongSparseArray;->mSize I
+	7       (0000001a) mul-int/lit8         v5, v5, 28
+	8       (0000001e) invoke-direct        v0, v5, Ljava/lang/StringBuilder;-><init>(I)V
+	9       (00000024) const/16             v5, 123
+	10      (00000028) invoke-virtual       v0, v5, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	11      (0000002e) const/4              v1, 0
+
+toString-BB@0x30 : [ toString-BB@0x38 toString-BB@0x82 ]
+	12      (00000030) iget                 v5, v6, Landroid/support/v4/util/LongSparseArray;->mSize I
+	13      (00000034) if-ge                v1, v5, +27
+
+toString-BB@0x38 : [ toString-BB@0x3c toString-BB@0x46 ]
+	14      (00000038) if-lez               v1, +7
+
+toString-BB@0x3c : [ toString-BB@0x46 ]
+	15      (0000003c) const-string         v5, ', '
+	16      (00000040) invoke-virtual       v0, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+toString-BB@0x46 : [ toString-BB@0x6a toString-BB@0x76 ]
+	17      (00000046) invoke-virtual       v6, v1, Landroid/support/v4/util/LongSparseArray;->keyAt(I)J
+	18      (0000004c) move-result-wide     v2
+	19      (0000004e) invoke-virtual       v0, v2, v3, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	20      (00000054) const/16             v5, 61
+	21      (00000058) invoke-virtual       v0, v5, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	22      (0000005e) invoke-virtual       v6, v1, Landroid/support/v4/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
+	23      (00000064) move-result-object   v4
+	24      (00000066) if-eq                v4, v6, +8
+
+toString-BB@0x6a : [ toString-BB@0x70 ]
+	25      (0000006a) invoke-virtual       v0, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+toString-BB@0x70 : [ toString-BB@0x30 ]
+	26      (00000070) add-int/lit8         v1, v1, 1
+	27      (00000074) goto                 -22
+
+toString-BB@0x76 : [ toString-BB@0x70 ]
+	28      (00000076) const-string         v5, '(this Map)'
+	29      (0000007a) invoke-virtual       v0, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	30      (00000080) goto                 -8
+
+toString-BB@0x82 : [ toString-BB@0x10 ]
+	31      (00000082) const/16             v5, 125
+	32      (00000086) invoke-virtual       v0, v5, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	33      (0000008c) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	34      (00000092) move-result-object   v5
+	35      (00000094) goto                 -42
+

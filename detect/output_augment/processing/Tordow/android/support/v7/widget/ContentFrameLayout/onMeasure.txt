@@ -1,0 +1,259 @@
+# Landroid/support/v7/widget/ContentFrameLayout;->onMeasure(I I)V [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v12
+# - v13:int
+# - v14:int
+#
+# - return:void
+
+onMeasure-BB@0x0 : [ onMeasure-BB@0x32 onMeasure-BB@0x170 ]
+	0       (00000000) const/4              v11, 5
+	1       (00000002) const/4              v1, 1
+	2       (00000004) const/high16         v10, -32768 # [-0.0]
+	3       (00000008) const/high16         v9, 16384 # [2.0]
+	4       (0000000c) const/4              v2, 0
+	5       (0000000e) invoke-virtual       v12, Landroid/support/v7/widget/ContentFrameLayout;->getContext()Landroid/content/Context;
+	6       (00000014) move-result-object   v0
+	7       (00000016) invoke-virtual       v0, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	8       (0000001c) move-result-object   v0
+	9       (0000001e) invoke-virtual       v0, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	10      (00000024) move-result-object   v5
+	11      (00000026) iget                 v0, v5, Landroid/util/DisplayMetrics;->widthPixels I
+	12      (0000002a) iget                 v3, v5, Landroid/util/DisplayMetrics;->heightPixels I
+	13      (0000002e) if-ge                v0, v3, +a1
+
+onMeasure-BB@0x32 : [ onMeasure-BB@0x34 ]
+	14      (00000032) move                 v0, v1
+
+onMeasure-BB@0x34 : [ onMeasure-BB@0x48 onMeasure-BB@0x200 ]
+	15      (00000034) invoke-static        v13, Landroid/view/View$MeasureSpec;->getMode(I)I
+	16      (0000003a) move-result          v6
+	17      (0000003c) invoke-static        v14, Landroid/view/View$MeasureSpec;->getMode(I)I
+	18      (00000042) move-result          v7
+	19      (00000044) if-ne                v6, v10, +de
+
+onMeasure-BB@0x48 : [ onMeasure-BB@0x4c onMeasure-BB@0x176 ]
+	20      (00000048) if-eqz               v0, +97
+
+onMeasure-BB@0x4c : [ onMeasure-BB@0x50 ]
+	21      (0000004c) iget-object          v3, v12, Landroid/support/v7/widget/ContentFrameLayout;->d Landroid/util/TypedValue;
+
+onMeasure-BB@0x50 : [ onMeasure-BB@0x54 onMeasure-BB@0x200 ]
+	22      (00000050) if-eqz               v3, +d8
+
+onMeasure-BB@0x54 : [ onMeasure-BB@0x5c onMeasure-BB@0x200 ]
+	23      (00000054) iget                 v4, v3, Landroid/util/TypedValue;->type I
+	24      (00000058) if-eqz               v4, +d4
+
+onMeasure-BB@0x5c : [ onMeasure-BB@0x64 onMeasure-BB@0x17e ]
+	25      (0000005c) iget                 v4, v3, Landroid/util/TypedValue;->type I
+	26      (00000060) if-ne                v4, v11, +8f
+
+onMeasure-BB@0x64 : [ onMeasure-BB@0x6e ]
+	27      (00000064) invoke-virtual       v3, v5, Landroid/util/TypedValue;->getDimension(Landroid/util/DisplayMetrics;)F
+	28      (0000006a) move-result          v3
+	29      (0000006c) float-to-int         v3, v3
+
+onMeasure-BB@0x6e : [ onMeasure-BB@0x72 onMeasure-BB@0x200 ]
+	30      (0000006e) if-lez               v3, +c9
+
+onMeasure-BB@0x72 : [ onMeasure-BB@0xa0 ]
+	31      (00000072) iget-object          v4, v12, Landroid/support/v7/widget/ContentFrameLayout;->g Landroid/graphics/Rect;
+	32      (00000076) iget                 v4, v4, Landroid/graphics/Rect;->left I
+	33      (0000007a) iget-object          v8, v12, Landroid/support/v7/widget/ContentFrameLayout;->g Landroid/graphics/Rect;
+	34      (0000007e) iget                 v8, v8, Landroid/graphics/Rect;->right I
+	35      (00000082) add-int/2addr        v4, v8
+	36      (00000084) sub-int/2addr        v3, v4
+	37      (00000086) invoke-static        v13, Landroid/view/View$MeasureSpec;->getSize(I)I
+	38      (0000008c) move-result          v4
+	39      (0000008e) invoke-static        v3, v4, Ljava/lang/Math;->min(I I)I
+	40      (00000094) move-result          v3
+	41      (00000096) invoke-static        v3, v9, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	42      (0000009c) move-result          v13
+	43      (0000009e) move                 v4, v1
+
+onMeasure-BB@0xa0 : [ onMeasure-BB@0xa4 onMeasure-BB@0xfa ]
+	44      (000000a0) if-ne                v7, v10, +2d
+
+onMeasure-BB@0xa4 : [ onMeasure-BB@0xa8 onMeasure-BB@0x1a2 ]
+	45      (000000a4) if-eqz               v0, +7f
+
+onMeasure-BB@0xa8 : [ onMeasure-BB@0xac ]
+	46      (000000a8) iget-object          v3, v12, Landroid/support/v7/widget/ContentFrameLayout;->e Landroid/util/TypedValue;
+
+onMeasure-BB@0xac : [ onMeasure-BB@0xb0 onMeasure-BB@0xfa ]
+	47      (000000ac) if-eqz               v3, +27
+
+onMeasure-BB@0xb0 : [ onMeasure-BB@0xb8 onMeasure-BB@0xfa ]
+	48      (000000b0) iget                 v7, v3, Landroid/util/TypedValue;->type I
+	49      (000000b4) if-eqz               v7, +23
+
+onMeasure-BB@0xb8 : [ onMeasure-BB@0xc0 onMeasure-BB@0x1a8 ]
+	50      (000000b8) iget                 v7, v3, Landroid/util/TypedValue;->type I
+	51      (000000bc) if-ne                v7, v11, +76
+
+onMeasure-BB@0xc0 : [ onMeasure-BB@0xca ]
+	52      (000000c0) invoke-virtual       v3, v5, Landroid/util/TypedValue;->getDimension(Landroid/util/DisplayMetrics;)F
+	53      (000000c6) move-result          v3
+	54      (000000c8) float-to-int         v3, v3
+
+onMeasure-BB@0xca : [ onMeasure-BB@0xce onMeasure-BB@0xfa ]
+	55      (000000ca) if-lez               v3, +18
+
+onMeasure-BB@0xce : [ onMeasure-BB@0xfa ]
+	56      (000000ce) iget-object          v7, v12, Landroid/support/v7/widget/ContentFrameLayout;->g Landroid/graphics/Rect;
+	57      (000000d2) iget                 v7, v7, Landroid/graphics/Rect;->top I
+	58      (000000d6) iget-object          v8, v12, Landroid/support/v7/widget/ContentFrameLayout;->g Landroid/graphics/Rect;
+	59      (000000da) iget                 v8, v8, Landroid/graphics/Rect;->bottom I
+	60      (000000de) add-int/2addr        v7, v8
+	61      (000000e0) sub-int/2addr        v3, v7
+	62      (000000e2) invoke-static        v14, Landroid/view/View$MeasureSpec;->getSize(I)I
+	63      (000000e8) move-result          v7
+	64      (000000ea) invoke-static        v3, v7, Ljava/lang/Math;->min(I I)I
+	65      (000000f0) move-result          v3
+	66      (000000f2) invoke-static        v3, v9, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	67      (000000f8) move-result          v14
+
+onMeasure-BB@0xfa : [ onMeasure-BB@0x114 onMeasure-BB@0x1f2 ]
+	68      (000000fa) invoke-super         v12, v13, v14, Landroid/widget/FrameLayout;->onMeasure(I I)V
+	69      (00000100) invoke-virtual       v12, Landroid/support/v7/widget/ContentFrameLayout;->getMeasuredWidth()I
+	70      (00000106) move-result          v7
+	71      (00000108) invoke-static        v7, v9, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	72      (0000010e) move-result          v3
+	73      (00000110) if-nez               v4, +71
+
+onMeasure-BB@0x114 : [ onMeasure-BB@0x118 onMeasure-BB@0x1f2 ]
+	74      (00000114) if-ne                v6, v10, +6f
+
+onMeasure-BB@0x118 : [ onMeasure-BB@0x11c onMeasure-BB@0x1ca ]
+	75      (00000118) if-eqz               v0, +59
+
+onMeasure-BB@0x11c : [ onMeasure-BB@0x120 ]
+	76      (0000011c) iget-object          v0, v12, Landroid/support/v7/widget/ContentFrameLayout;->b Landroid/util/TypedValue;
+
+onMeasure-BB@0x120 : [ onMeasure-BB@0x124 onMeasure-BB@0x1f2 ]
+	77      (00000120) if-eqz               v0, +69
+
+onMeasure-BB@0x124 : [ onMeasure-BB@0x12c onMeasure-BB@0x1f2 ]
+	78      (00000124) iget                 v4, v0, Landroid/util/TypedValue;->type I
+	79      (00000128) if-eqz               v4, +65
+
+onMeasure-BB@0x12c : [ onMeasure-BB@0x134 onMeasure-BB@0x1d0 ]
+	80      (0000012c) iget                 v4, v0, Landroid/util/TypedValue;->type I
+	81      (00000130) if-ne                v4, v11, +50
+
+onMeasure-BB@0x134 : [ onMeasure-BB@0x13e ]
+	82      (00000134) invoke-virtual       v0, v5, Landroid/util/TypedValue;->getDimension(Landroid/util/DisplayMetrics;)F
+	83      (0000013a) move-result          v0
+	84      (0000013c) float-to-int         v0, v0
+
+onMeasure-BB@0x13e : [ onMeasure-BB@0x142 onMeasure-BB@0x156 ]
+	85      (0000013e) if-lez               v0, +c
+
+onMeasure-BB@0x142 : [ onMeasure-BB@0x156 ]
+	86      (00000142) iget-object          v4, v12, Landroid/support/v7/widget/ContentFrameLayout;->g Landroid/graphics/Rect;
+	87      (00000146) iget                 v4, v4, Landroid/graphics/Rect;->left I
+	88      (0000014a) iget-object          v5, v12, Landroid/support/v7/widget/ContentFrameLayout;->g Landroid/graphics/Rect;
+	89      (0000014e) iget                 v5, v5, Landroid/graphics/Rect;->right I
+	90      (00000152) add-int/2addr        v4, v5
+	91      (00000154) sub-int/2addr        v0, v4
+
+onMeasure-BB@0x156 : [ onMeasure-BB@0x15a onMeasure-BB@0x1f2 ]
+	92      (00000156) if-ge                v7, v0, +4e
+
+onMeasure-BB@0x15a : [ onMeasure-BB@0x164 ]
+	93      (0000015a) invoke-static        v0, v9, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	94      (00000160) move-result          v0
+	95      (00000162) move                 v2, v1
+
+onMeasure-BB@0x164 : [ onMeasure-BB@0x168 onMeasure-BB@0x16e ]
+	96      (00000164) if-eqz               v2, +5
+
+onMeasure-BB@0x168 : [ onMeasure-BB@0x16e ]
+	97      (00000168) invoke-super         v12, v0, v14, Landroid/widget/FrameLayout;->onMeasure(I I)V
+
+onMeasure-BB@0x16e : 
+	98      (0000016e) return-void          
+
+onMeasure-BB@0x170 : [ onMeasure-BB@0x34 ]
+	99      (00000170) move                 v0, v2
+	100     (00000172) goto/16              -9f
+
+onMeasure-BB@0x176 : [ onMeasure-BB@0x50 ]
+	101     (00000176) iget-object          v3, v12, Landroid/support/v7/widget/ContentFrameLayout;->c Landroid/util/TypedValue;
+	102     (0000017a) goto/16              -95
+
+onMeasure-BB@0x17e : [ onMeasure-BB@0x188 onMeasure-BB@0x206 ]
+	103     (0000017e) iget                 v4, v3, Landroid/util/TypedValue;->type I
+	104     (00000182) const/4              v8, 6
+	105     (00000184) if-ne                v4, v8, +41
+
+onMeasure-BB@0x188 : [ onMeasure-BB@0x6e ]
+	106     (00000188) iget                 v4, v5, Landroid/util/DisplayMetrics;->widthPixels I
+	107     (0000018c) int-to-float         v4, v4
+	108     (0000018e) iget                 v8, v5, Landroid/util/DisplayMetrics;->widthPixels I
+	109     (00000192) int-to-float         v8, v8
+	110     (00000194) invoke-virtual       v3, v4, v8, Landroid/util/TypedValue;->getFraction(F F)F
+	111     (0000019a) move-result          v3
+	112     (0000019c) float-to-int         v3, v3
+	113     (0000019e) goto/16              -98
+
+onMeasure-BB@0x1a2 : [ onMeasure-BB@0xac ]
+	114     (000001a2) iget-object          v3, v12, Landroid/support/v7/widget/ContentFrameLayout;->f Landroid/util/TypedValue;
+	115     (000001a6) goto                 -7d
+
+onMeasure-BB@0x1a8 : [ onMeasure-BB@0x1b2 onMeasure-BB@0x1fa ]
+	116     (000001a8) iget                 v7, v3, Landroid/util/TypedValue;->type I
+	117     (000001ac) const/4              v8, 6
+	118     (000001ae) if-ne                v7, v8, +26
+
+onMeasure-BB@0x1b2 : [ onMeasure-BB@0xca ]
+	119     (000001b2) iget                 v7, v5, Landroid/util/DisplayMetrics;->heightPixels I
+	120     (000001b6) int-to-float         v7, v7
+	121     (000001b8) iget                 v8, v5, Landroid/util/DisplayMetrics;->heightPixels I
+	122     (000001bc) int-to-float         v8, v8
+	123     (000001be) invoke-virtual       v3, v7, v8, Landroid/util/TypedValue;->getFraction(F F)F
+	124     (000001c4) move-result          v3
+	125     (000001c6) float-to-int         v3, v3
+	126     (000001c8) goto                 -7f
+
+onMeasure-BB@0x1ca : [ onMeasure-BB@0x120 ]
+	127     (000001ca) iget-object          v0, v12, Landroid/support/v7/widget/ContentFrameLayout;->a Landroid/util/TypedValue;
+	128     (000001ce) goto                 -57
+
+onMeasure-BB@0x1d0 : [ onMeasure-BB@0x1da onMeasure-BB@0x1f6 ]
+	129     (000001d0) iget                 v4, v0, Landroid/util/TypedValue;->type I
+	130     (000001d4) const/4              v6, 6
+	131     (000001d6) if-ne                v4, v6, +10
+
+onMeasure-BB@0x1da : [ onMeasure-BB@0x13e ]
+	132     (000001da) iget                 v4, v5, Landroid/util/DisplayMetrics;->widthPixels I
+	133     (000001de) int-to-float         v4, v4
+	134     (000001e0) iget                 v5, v5, Landroid/util/DisplayMetrics;->widthPixels I
+	135     (000001e4) int-to-float         v5, v5
+	136     (000001e6) invoke-virtual       v0, v4, v5, Landroid/util/TypedValue;->getFraction(F F)F
+	137     (000001ec) move-result          v0
+	138     (000001ee) float-to-int         v0, v0
+	139     (000001f0) goto                 -59
+
+onMeasure-BB@0x1f2 : [ onMeasure-BB@0x164 ]
+	140     (000001f2) move                 v0, v3
+	141     (000001f4) goto                 -48
+
+onMeasure-BB@0x1f6 : [ onMeasure-BB@0x13e ]
+	142     (000001f6) move                 v0, v2
+	143     (000001f8) goto                 -5d
+
+onMeasure-BB@0x1fa : [ onMeasure-BB@0xca ]
+	144     (000001fa) move                 v3, v2
+	145     (000001fc) goto/16              -99
+
+onMeasure-BB@0x200 : [ onMeasure-BB@0xa0 ]
+	146     (00000200) move                 v4, v2
+	147     (00000202) goto/16              -b1
+
+onMeasure-BB@0x206 : [ onMeasure-BB@0x6e ]
+	148     (00000206) move                 v3, v2
+	149     (00000208) goto/16              -cd
+

@@ -1,0 +1,34 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat;->performLoadItem(Ljava/lang/String; Landroid/support/v4/os/ResultReceiver;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.String
+# - v6:android.support.v4.os.ResultReceiver
+#
+# - return:void
+
+performLoadItem-BB@0x0 : [ performLoadItem-BB@0x1c performLoadItem-BB@0x4e ]
+	0       (00000000) new-instance         v0, Landroid/support/v4/media/MediaBrowserServiceCompat$4;
+	1       (00000004) invoke-direct        v0, v4, v5, v6, Landroid/support/v4/media/MediaBrowserServiceCompat$4;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat; Ljava/lang/Object; Landroid/support/v4/os/ResultReceiver;)V
+	2       (0000000a) invoke-virtual       v4, v5, v0, Landroid/support/v4/media/MediaBrowserServiceCompat;->onLoadItem(Ljava/lang/String; Landroid/support/v4/media/MediaBrowserServiceCompat$Result;)V
+	3       (00000010) invoke-virtual       v0, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->isDone()Z
+	4       (00000016) move-result          v1
+	5       (00000018) if-nez               v1, +1b
+
+performLoadItem-BB@0x1c : 
+	6       (0000001c) new-instance         v1, Ljava/lang/IllegalStateException;
+	7       (00000020) new-instance         v2, Ljava/lang/StringBuilder;
+	8       (00000024) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	9       (0000002a) const-string         v3, 'onLoadItem must call detach() or sendResult() before returning for id='
+	10      (0000002e) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	11      (00000034) move-result-object   v2
+	12      (00000036) invoke-virtual       v2, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (0000003c) move-result-object   v2
+	14      (0000003e) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	15      (00000044) move-result-object   v2
+	16      (00000046) invoke-direct        v1, v2, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	17      (0000004c) throw                v1
+
+performLoadItem-BB@0x4e : 
+	18      (0000004e) return-void          
+

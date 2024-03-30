@@ -1,0 +1,15 @@
+# Landroid/support/v4/app/Fragment;->getText(I)Ljava/lang/CharSequence; [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:int
+#
+# - return:java.lang.CharSequence
+
+getText-BB@0x0 : 
+	0       (00000000) invoke-virtual       v1, Landroid/support/v4/app/Fragment;->getResources()Landroid/content/res/Resources;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-virtual       v0, v2, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) return-object        v0
+

@@ -1,0 +1,55 @@
+# Lcom/google/android/gms/tagmanager/zzh;->zzI(Ljava/util/Map;)Lcom/google/android/gms/internal/zzag$zza; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.util.Map
+#
+# - return:com.google.android.gms.internal.zzag$zza
+
+zzI-BB@0x0 : [ zzI-BB@0x36 ]
+	0       (00000000) iget-object          v0, v3, Lcom/google/android/gms/tagmanager/zzh;->mContext Landroid/content/Context;
+	1       (00000004) invoke-virtual       v0, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) iget-object          v1, v3, Lcom/google/android/gms/tagmanager/zzh;->mContext Landroid/content/Context;
+	4       (00000010) invoke-virtual       v1, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	5       (00000016) move-result-object   v1
+	6       (00000018) const/4              v2, 0
+	7       (0000001a) invoke-virtual       v0, v1, v2, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String; I)Landroid/content/pm/PackageInfo;
+	8       (00000020) move-result-object   v0
+	9       (00000022) iget                 v0, v0, Landroid/content/pm/PackageInfo;->versionCode I
+	10      (00000026) invoke-static        v0, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+	11      (0000002c) move-result-object   v0
+	12      (0000002e) invoke-static        v0, Lcom/google/android/gms/tagmanager/zzdf;->zzR(Ljava/lang/Object;)Lcom/google/android/gms/internal/zzag$zza;
+	13      (00000034) move-result-object   v0
+	0:33
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> 38 zzI-BB@0x38)
+
+zzI-BB@0x36 : 
+	14      (00000036) return-object        v0
+
+zzI-BB@0x38 : [ zzI-BB@0x36 ]
+	15      (00000038) move-exception       v0
+	16      (0000003a) new-instance         v1, Ljava/lang/StringBuilder;
+	17      (0000003e) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	18      (00000044) const-string         v2, 'Package name '
+	19      (00000048) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (0000004e) move-result-object   v1
+	21      (00000050) iget-object          v2, v3, Lcom/google/android/gms/tagmanager/zzh;->mContext Landroid/content/Context;
+	22      (00000054) invoke-virtual       v2, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	23      (0000005a) move-result-object   v2
+	24      (0000005c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (00000062) move-result-object   v1
+	26      (00000064) const-string         v2, ' not found. '
+	27      (00000068) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	28      (0000006e) move-result-object   v1
+	29      (00000070) invoke-virtual       v0, Landroid/content/pm/PackageManager$NameNotFoundException;->getMessage()Ljava/lang/String;
+	30      (00000076) move-result-object   v0
+	31      (00000078) invoke-virtual       v1, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	32      (0000007e) move-result-object   v0
+	33      (00000080) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	34      (00000086) move-result-object   v0
+	35      (00000088) invoke-static        v0, Lcom/google/android/gms/tagmanager/zzbg;->e(Ljava/lang/String;)V
+	36      (0000008e) invoke-static        Lcom/google/android/gms/tagmanager/zzdf;->zzFJ()Lcom/google/android/gms/internal/zzag$zza;
+	37      (00000094) move-result-object   v0
+	38      (00000096) goto                 -30
+

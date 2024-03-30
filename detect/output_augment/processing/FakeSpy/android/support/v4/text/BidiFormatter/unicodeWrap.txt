@@ -1,0 +1,96 @@
+# Landroid/support/v4/text/BidiFormatter;->unicodeWrap(Ljava/lang/String; Landroid/support/v4/text/TextDirectionHeuristicCompat; Z)Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.String
+# - v6:android.support.v4.text.TextDirectionHeuristicCompat
+# - v7:boolean
+#
+# - return:java.lang.String
+
+unicodeWrap-BB@0x0 : [ unicodeWrap-BB@0x4 unicodeWrap-BB@0x8 ]
+	0       (00000000) if-nez               v5, +4
+
+unicodeWrap-BB@0x4 : [ unicodeWrap-BB@0x6 ]
+	1       (00000004) const/4              v2, 0
+
+unicodeWrap-BB@0x6 : 
+	2       (00000006) return-object        v2
+
+unicodeWrap-BB@0x8 : [ unicodeWrap-BB@0x30 unicodeWrap-BB@0x4a ]
+	3       (00000008) const/4              v2, 0
+	4       (0000000a) invoke-virtual       v5, Ljava/lang/String;->length()I
+	5       (00000010) move-result          v3
+	6       (00000012) invoke-interface     v6, v5, v2, v3, Landroid/support/v4/text/TextDirectionHeuristicCompat;->isRtl(Ljava/lang/CharSequence; I I)Z
+	7       (00000018) move-result          v0
+	8       (0000001a) new-instance         v1, Ljava/lang/StringBuilder;
+	9       (0000001e) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	10      (00000024) invoke-virtual       v4, Landroid/support/v4/text/BidiFormatter;->getStereoReset()Z
+	11      (0000002a) move-result          v2
+	12      (0000002c) if-eqz               v2, +f
+
+unicodeWrap-BB@0x30 : [ unicodeWrap-BB@0x34 unicodeWrap-BB@0x4a ]
+	13      (00000030) if-eqz               v7, +d
+
+unicodeWrap-BB@0x34 : [ unicodeWrap-BB@0x38 unicodeWrap-BB@0x94 ]
+	14      (00000034) if-eqz               v0, +30
+
+unicodeWrap-BB@0x38 : [ unicodeWrap-BB@0x3c ]
+	15      (00000038) sget-object          v2, Landroid/support/v4/text/TextDirectionHeuristicsCompat;->RTL Landroid/support/v4/text/TextDirectionHeuristicCompat;
+
+unicodeWrap-BB@0x3c : [ unicodeWrap-BB@0x4a ]
+	16      (0000003c) invoke-direct        v4, v5, v2, Landroid/support/v4/text/BidiFormatter;->markBefore(Ljava/lang/String; Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;
+	17      (00000042) move-result-object   v2
+	18      (00000044) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+unicodeWrap-BB@0x4a : [ unicodeWrap-BB@0x52 unicodeWrap-BB@0xa0 ]
+	19      (0000004a) iget-boolean         v2, v4, Landroid/support/v4/text/BidiFormatter;->mIsRtlContext Z
+	20      (0000004e) if-eq                v0, v2, +29
+
+unicodeWrap-BB@0x52 : [ unicodeWrap-BB@0x56 unicodeWrap-BB@0x9a ]
+	21      (00000052) if-eqz               v0, +24
+
+unicodeWrap-BB@0x56 : [ unicodeWrap-BB@0x5a ]
+	22      (00000056) const/16             v2, 8235
+
+unicodeWrap-BB@0x5a : [ unicodeWrap-BB@0x70 ]
+	23      (0000005a) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	24      (00000060) invoke-virtual       v1, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (00000066) const/16             v2, 8236
+	26      (0000006a) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+unicodeWrap-BB@0x70 : [ unicodeWrap-BB@0x74 unicodeWrap-BB@0x8a ]
+	27      (00000070) if-eqz               v7, +d
+
+unicodeWrap-BB@0x74 : [ unicodeWrap-BB@0x78 unicodeWrap-BB@0xa8 ]
+	28      (00000074) if-eqz               v0, +1a
+
+unicodeWrap-BB@0x78 : [ unicodeWrap-BB@0x7c ]
+	29      (00000078) sget-object          v2, Landroid/support/v4/text/TextDirectionHeuristicsCompat;->RTL Landroid/support/v4/text/TextDirectionHeuristicCompat;
+
+unicodeWrap-BB@0x7c : [ unicodeWrap-BB@0x8a ]
+	30      (0000007c) invoke-direct        v4, v5, v2, Landroid/support/v4/text/BidiFormatter;->markAfter(Ljava/lang/String; Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;
+	31      (00000082) move-result-object   v2
+	32      (00000084) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+unicodeWrap-BB@0x8a : [ unicodeWrap-BB@0x6 ]
+	33      (0000008a) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	34      (00000090) move-result-object   v2
+	35      (00000092) goto                 -46
+
+unicodeWrap-BB@0x94 : [ unicodeWrap-BB@0x3c ]
+	36      (00000094) sget-object          v2, Landroid/support/v4/text/TextDirectionHeuristicsCompat;->LTR Landroid/support/v4/text/TextDirectionHeuristicCompat;
+	37      (00000098) goto                 -2e
+
+unicodeWrap-BB@0x9a : [ unicodeWrap-BB@0x5a ]
+	38      (0000009a) const/16             v2, 8234
+	39      (0000009e) goto                 -22
+
+unicodeWrap-BB@0xa0 : [ unicodeWrap-BB@0x70 ]
+	40      (000000a0) invoke-virtual       v1, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	41      (000000a6) goto                 -1b
+
+unicodeWrap-BB@0xa8 : [ unicodeWrap-BB@0x7c ]
+	42      (000000a8) sget-object          v2, Landroid/support/v4/text/TextDirectionHeuristicsCompat;->LTR Landroid/support/v4/text/TextDirectionHeuristicCompat;
+	43      (000000ac) goto                 -18
+

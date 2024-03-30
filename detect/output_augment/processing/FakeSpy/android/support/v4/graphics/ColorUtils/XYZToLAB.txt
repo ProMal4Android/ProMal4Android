@@ -1,0 +1,56 @@
+# Landroid/support/v4/graphics/ColorUtils;->XYZToLAB(D D D [D)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:double
+# - v12:double
+# - v13:double
+# - v14:double[]
+#
+# - return:void
+
+XYZToLAB-BB@0x0 : [ XYZToLAB-BB@0x8 XYZToLAB-BB@0x18 ]
+	0       (00000000) array-length         v0, v14
+	1       (00000002) const/4              v1, 3
+	2       (00000004) if-eq                v0, v1, +a
+
+XYZToLAB-BB@0x8 : 
+	3       (00000008) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	4       (0000000c) const-string         v1, 'outLab must have a length of 3.'
+	5       (00000010) invoke-direct        v0, v1, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	6       (00000016) throw                v0
+
+XYZToLAB-BB@0x18 : 
+	7       (00000018) const-wide           v0, 4636388754964724318 # [95.047]
+	8       (00000022) div-double           v0, v8, v0
+	9       (00000026) invoke-static        v0, v1, Landroid/support/v4/graphics/ColorUtils;->pivotXyzComponent(D)D
+	10      (0000002c) move-result-wide     v8
+	11      (0000002e) const-wide/high16    v0, 16473 # [100.0]
+	12      (00000032) div-double           v0, v10, v0
+	13      (00000036) invoke-static        v0, v1, Landroid/support/v4/graphics/ColorUtils;->pivotXyzComponent(D)D
+	14      (0000003c) move-result-wide     v10
+	15      (0000003e) const-wide           v0, 4637362376909166477 # [108.883]
+	16      (00000048) div-double           v0, v12, v0
+	17      (0000004c) invoke-static        v0, v1, Landroid/support/v4/graphics/ColorUtils;->pivotXyzComponent(D)D
+	18      (00000052) move-result-wide     v12
+	19      (00000054) const/4              v0, 0
+	20      (00000056) const-wide/16        v2, 0 # [0.0]
+	21      (0000005a) const-wide/high16    v4, 16477 # [116.0]
+	22      (0000005e) mul-double/2addr     v4, v10
+	23      (00000060) const-wide/high16    v6, 16432 # [16.0]
+	24      (00000064) sub-double/2addr     v4, v6
+	25      (00000066) invoke-static        v2, v3, v4, v5, Ljava/lang/Math;->max(D D)D
+	26      (0000006c) move-result-wide     v2
+	27      (0000006e) aput-wide            v2, v14, v0
+	28      (00000072) const/4              v0, 1
+	29      (00000074) const-wide           v2, 4647503709213818880 # [500.0]
+	30      (0000007e) sub-double           v4, v8, v10
+	31      (00000082) mul-double/2addr     v2, v4
+	32      (00000084) aput-wide            v2, v14, v0
+	33      (00000088) const/4              v0, 2
+	34      (0000008a) const-wide/high16    v2, 16489 # [200.0]
+	35      (0000008e) sub-double           v4, v10, v12
+	36      (00000092) mul-double/2addr     v2, v4
+	37      (00000094) aput-wide            v2, v14, v0
+	38      (00000098) return-void          
+

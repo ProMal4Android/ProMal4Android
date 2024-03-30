@@ -1,0 +1,42 @@
+# Landroid/support/design/widget/StateListAnimator;->clearTarget()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:void
+
+clearTarget-BB@0x0 : [ clearTarget-BB@0x18 ]
+	0       (00000000) const/4              v5, 0
+	1       (00000002) invoke-virtual       v6, Landroid/support/design/widget/StateListAnimator;->getTarget()Landroid/view/View;
+	2       (00000008) move-result-object   v3
+	3       (0000000a) iget-object          v4, v6, Landroid/support/design/widget/StateListAnimator;->mTuples Ljava/util/ArrayList;
+	4       (0000000e) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	5       (00000014) move-result          v2
+	6       (00000016) const/4              v1, 0
+
+clearTarget-BB@0x18 : [ clearTarget-BB@0x1c clearTarget-BB@0x48 ]
+	7       (00000018) if-ge                v1, v2, +18
+
+clearTarget-BB@0x1c : [ clearTarget-BB@0x3c clearTarget-BB@0x42 ]
+	8       (0000001c) iget-object          v4, v6, Landroid/support/design/widget/StateListAnimator;->mTuples Ljava/util/ArrayList;
+	9       (00000020) invoke-virtual       v4, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	10      (00000026) move-result-object   v4
+	11      (00000028) check-cast           v4, Landroid/support/design/widget/StateListAnimator$Tuple;
+	12      (0000002c) iget-object          v0, v4, Landroid/support/design/widget/StateListAnimator$Tuple;->mAnimation Landroid/view/animation/Animation;
+	13      (00000030) invoke-virtual       v3, Landroid/view/View;->getAnimation()Landroid/view/animation/Animation;
+	14      (00000036) move-result-object   v4
+	15      (00000038) if-ne                v4, v0, +5
+
+clearTarget-BB@0x3c : [ clearTarget-BB@0x42 ]
+	16      (0000003c) invoke-virtual       v3, Landroid/view/View;->clearAnimation()V
+
+clearTarget-BB@0x42 : [ clearTarget-BB@0x18 ]
+	17      (00000042) add-int/lit8         v1, v1, 1
+	18      (00000046) goto                 -17
+
+clearTarget-BB@0x48 : 
+	19      (00000048) iput-object          v5, v6, Landroid/support/design/widget/StateListAnimator;->mViewRef Ljava/lang/ref/WeakReference;
+	20      (0000004c) iput-object          v5, v6, Landroid/support/design/widget/StateListAnimator;->mLastMatch Landroid/support/design/widget/StateListAnimator$Tuple;
+	21      (00000050) iput-object          v5, v6, Landroid/support/design/widget/StateListAnimator;->mRunningAnimation Landroid/view/animation/Animation;
+	22      (00000054) return-void          
+

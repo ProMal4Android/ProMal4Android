@@ -1,0 +1,51 @@
+# Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.util.Locale
+#
+# - return:int
+
+getLayoutDirectionFromLocale-BB@0x0 : [ getLayoutDirectionFromLocale-BB@0x4 getLayoutDirectionFromLocale-BB@0x56 ]
+	0       (00000000) if-eqz               v3, +2b
+
+getLayoutDirectionFromLocale-BB@0x4 : [ getLayoutDirectionFromLocale-BB@0x14 getLayoutDirectionFromLocale-BB@0x56 ]
+	1       (00000004) sget-object          v1, Landroid/support/v4/text/TextUtilsCompat;->ROOT Ljava/util/Locale;
+	2       (00000008) invoke-virtual       v3, v1, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
+	3       (0000000e) move-result          v1
+	4       (00000010) if-nez               v1, +23
+
+getLayoutDirectionFromLocale-BB@0x14 : [ getLayoutDirectionFromLocale-BB@0x20 getLayoutDirectionFromLocale-BB@0x2a ]
+	5       (00000014) invoke-static        v3, Landroid/support/v4/text/ICUCompat;->maximizeAndGetScript(Ljava/util/Locale;)Ljava/lang/String;
+	6       (0000001a) move-result-object   v0
+	7       (0000001c) if-nez               v0, +7
+
+getLayoutDirectionFromLocale-BB@0x20 : [ getLayoutDirectionFromLocale-BB@0x28 ]
+	8       (00000020) invoke-static        v3, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;->getLayoutDirectionFromFirstChar(Ljava/util/Locale;)I
+	9       (00000026) move-result          v1
+
+getLayoutDirectionFromLocale-BB@0x28 : 
+	10      (00000028) return               v1
+
+getLayoutDirectionFromLocale-BB@0x2a : [ getLayoutDirectionFromLocale-BB@0x3e getLayoutDirectionFromLocale-BB@0x52 ]
+	11      (0000002a) invoke-static        Landroid/support/v4/text/TextUtilsCompat;->access$000()Ljava/lang/String;
+	12      (00000030) move-result-object   v1
+	13      (00000032) invoke-virtual       v0, v1, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	14      (00000038) move-result          v1
+	15      (0000003a) if-nez               v1, +c
+
+getLayoutDirectionFromLocale-BB@0x3e : [ getLayoutDirectionFromLocale-BB@0x52 getLayoutDirectionFromLocale-BB@0x56 ]
+	16      (0000003e) invoke-static        Landroid/support/v4/text/TextUtilsCompat;->access$100()Ljava/lang/String;
+	17      (00000044) move-result-object   v1
+	18      (00000046) invoke-virtual       v0, v1, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	19      (0000004c) move-result          v1
+	20      (0000004e) if-eqz               v1, +4
+
+getLayoutDirectionFromLocale-BB@0x52 : [ getLayoutDirectionFromLocale-BB@0x28 ]
+	21      (00000052) const/4              v1, 1
+	22      (00000054) goto                 -16
+
+getLayoutDirectionFromLocale-BB@0x56 : [ getLayoutDirectionFromLocale-BB@0x28 ]
+	23      (00000056) const/4              v1, 0
+	24      (00000058) goto                 -18
+

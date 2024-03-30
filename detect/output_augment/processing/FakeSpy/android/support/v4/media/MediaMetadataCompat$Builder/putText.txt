@@ -1,0 +1,49 @@
+# Landroid/support/v4/media/MediaMetadataCompat$Builder;->putText(Ljava/lang/String; Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+# - v5:java.lang.CharSequence
+#
+# - return:android.support.v4.media.MediaMetadataCompat$Builder
+
+putText-BB@0x0 : [ putText-BB@0x14 putText-BB@0x74 ]
+	0       (00000000) invoke-static        Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
+	1       (00000006) move-result-object   v0
+	2       (00000008) invoke-virtual       v0, v4, Landroid/support/v4/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
+	3       (0000000e) move-result          v0
+	4       (00000010) if-eqz               v0, +32
+
+putText-BB@0x14 : [ putText-BB@0x36 putText-BB@0x74 ]
+	5       (00000014) invoke-static        Landroid/support/v4/media/MediaMetadataCompat;->access$200()Landroid/support/v4/util/ArrayMap;
+	6       (0000001a) move-result-object   v0
+	7       (0000001c) invoke-virtual       v0, v4, Landroid/support/v4/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	8       (00000022) move-result-object   v0
+	9       (00000024) check-cast           v0, Ljava/lang/Integer;
+	10      (00000028) invoke-virtual       v0, Ljava/lang/Integer;->intValue()I
+	11      (0000002e) move-result          v0
+	12      (00000030) const/4              v1, 1
+	13      (00000032) if-eq                v0, v1, +21
+
+putText-BB@0x36 : 
+	14      (00000036) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	15      (0000003a) new-instance         v1, Ljava/lang/StringBuilder;
+	16      (0000003e) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	17      (00000044) const-string         v2, 'The '
+	18      (00000048) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	19      (0000004e) move-result-object   v1
+	20      (00000050) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	21      (00000056) move-result-object   v1
+	22      (00000058) const-string         v2, ' key cannot be used to put a CharSequence'
+	23      (0000005c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (00000062) move-result-object   v1
+	25      (00000064) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	26      (0000006a) move-result-object   v1
+	27      (0000006c) invoke-direct        v0, v1, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	28      (00000072) throw                v0
+
+putText-BB@0x74 : 
+	29      (00000074) iget-object          v0, v3, Landroid/support/v4/media/MediaMetadataCompat$Builder;->mBundle Landroid/os/Bundle;
+	30      (00000078) invoke-virtual       v0, v4, v5, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String; Ljava/lang/CharSequence;)V
+	31      (0000007e) return-object        v3
+

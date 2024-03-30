@@ -1,0 +1,281 @@
+# Lcom/google/android/gms/internal/zzds$zza;->zzbp()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v8
+#
+# - return:void
+
+zzbp-BB@0x0 : [ zzbp-BB@0x6 ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) iget-object          v2, v8, Lcom/google/android/gms/internal/zzds$zza;->zzF Ljava/lang/String;
+
+zzbp-BB@0x6 : [ zzbp-BB@0xe zzbp-BB@0x232 ]
+	2       (00000006) const/16             v1, 10
+	3       (0000000a) if-ge                v0, v1, +114
+
+zzbp-BB@0xe : [ zzbp-BB@0x12 ]
+	4       (0000000e) add-int/lit8         v4, v0, 1
+
+zzbp-BB@0x12 : [ zzbp-BB@0x34 zzbp-BB@0x5a ]
+	5       (00000012) new-instance         v0, Ljava/net/URL;
+	6       (00000016) invoke-direct        v0, v2, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+	7       (0000001c) const-string         v1, 'play.google.com'
+	8       (00000020) invoke-virtual       v0, Ljava/net/URL;->getHost()Ljava/lang/String;
+	9       (00000026) move-result-object   v3
+	10      (00000028) invoke-virtual       v1, v3, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	11      (0000002e) move-result          v1
+	12      (00000030) if-eqz               v1, +15
+	12:2d
+	(Ljava/lang/IndexOutOfBoundsException; -> 16c zzbp-BB@0x16c)
+	(Ljava/io/IOException; -> 1a2 zzbp-BB@0x1a2)
+	(Ljava/lang/RuntimeException; -> 1d8 zzbp-BB@0x1d8)
+
+zzbp-BB@0x34 : [ zzbp-BB@0x36 ]
+	13      (00000034) move-object          v0, v2
+
+zzbp-BB@0x36 : 
+	14      (00000036) invoke-virtual       v8, v0, Lcom/google/android/gms/internal/zzds$zza;->zzY(Ljava/lang/String;)Landroid/content/Intent;
+	15      (0000003c) move-result-object   v0
+	16      (0000003e) invoke-static        Lcom/google/android/gms/ads/internal/zzp;->zzbx()Lcom/google/android/gms/internal/zzip;
+	17      (00000044) move-result-object   v1
+	18      (00000046) iget-object          v2, v8, Lcom/google/android/gms/internal/zzds$zza;->zzps Lcom/google/android/gms/internal/zzjn;
+	19      (0000004a) invoke-interface     v2, Lcom/google/android/gms/internal/zzjn;->getContext()Landroid/content/Context;
+	20      (00000050) move-result-object   v2
+	21      (00000052) invoke-virtual       v1, v2, v0, Lcom/google/android/gms/internal/zzip;->zzb(Landroid/content/Context; Landroid/content/Intent;)V
+	22      (00000058) return-void          
+
+zzbp-BB@0x5a : [ zzbp-BB@0x72 zzbp-BB@0x76 ]
+	23      (0000005a) const-string         v1, 'market'
+	24      (0000005e) invoke-virtual       v0, Ljava/net/URL;->getProtocol()Ljava/lang/String;
+	25      (00000064) move-result-object   v3
+	26      (00000066) invoke-virtual       v1, v3, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+	27      (0000006c) move-result          v1
+	28      (0000006e) if-eqz               v1, +4
+	5a:81
+	(Ljava/lang/IndexOutOfBoundsException; -> 16c zzbp-BB@0x16c)
+	(Ljava/io/IOException; -> 1a2 zzbp-BB@0x1a2)
+	(Ljava/lang/RuntimeException; -> 1d8 zzbp-BB@0x1d8)
+
+zzbp-BB@0x72 : [ zzbp-BB@0x36 ]
+	29      (00000072) move-object          v0, v2
+	30      (00000074) goto                 -1f
+	5a:81
+	(Ljava/lang/IndexOutOfBoundsException; -> 16c zzbp-BB@0x16c)
+	(Ljava/io/IOException; -> 1a2 zzbp-BB@0x1a2)
+	(Ljava/lang/RuntimeException; -> 1d8 zzbp-BB@0x1d8)
+
+zzbp-BB@0x76 : [ zzbp-BB@0x82 ]
+	31      (00000076) invoke-virtual       v0, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+	32      (0000007c) move-result-object   v0
+	33      (0000007e) check-cast           v0, Ljava/net/HttpURLConnection;
+	5a:81
+	(Ljava/lang/IndexOutOfBoundsException; -> 16c zzbp-BB@0x16c)
+	(Ljava/io/IOException; -> 1a2 zzbp-BB@0x1a2)
+	(Ljava/lang/RuntimeException; -> 1d8 zzbp-BB@0x1d8)
+
+zzbp-BB@0x82 : [ zzbp-BB@0xca zzbp-BB@0x22c ]
+	34      (00000082) invoke-static        Lcom/google/android/gms/ads/internal/zzp;->zzbx()Lcom/google/android/gms/internal/zzip;
+	35      (00000088) move-result-object   v1
+	36      (0000008a) iget-object          v3, v8, Lcom/google/android/gms/internal/zzds$zza;->zzps Lcom/google/android/gms/internal/zzjn;
+	37      (0000008e) invoke-interface     v3, Lcom/google/android/gms/internal/zzjn;->getContext()Landroid/content/Context;
+	38      (00000094) move-result-object   v3
+	39      (00000096) iget-object          v5, v8, Lcom/google/android/gms/internal/zzds$zza;->zzps Lcom/google/android/gms/internal/zzjn;
+	40      (0000009a) invoke-interface     v5, Lcom/google/android/gms/internal/zzjn;->zzhF()Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
+	41      (000000a0) move-result-object   v5
+	42      (000000a2) iget-object          v5, v5, Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;->afmaVersion Ljava/lang/String;
+	43      (000000a6) const/4              v6, 0
+	44      (000000a8) invoke-virtual       v1, v3, v5, v6, v0, Lcom/google/android/gms/internal/zzip;->zza(Landroid/content/Context; Ljava/lang/String; Z Ljava/net/HttpURLConnection;)V
+	45      (000000ae) invoke-virtual       v0, Ljava/net/HttpURLConnection;->getResponseCode()I
+	46      (000000b4) move-result          v1
+	47      (000000b6) invoke-virtual       v0, Ljava/net/HttpURLConnection;->getHeaderFields()Ljava/util/Map;
+	48      (000000bc) move-result-object   v5
+	49      (000000be) const-string         v3, ''
+	50      (000000c2) const/16             v6, 300
+	51      (000000c6) if-lt                v1, v6, +b3
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0xca : [ zzbp-BB@0xd2 zzbp-BB@0x22c ]
+	52      (000000ca) const/16             v6, 399
+	53      (000000ce) if-gt                v1, v6, +af
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0xd2 : [ zzbp-BB@0xe4 zzbp-BB@0x132 ]
+	54      (000000d2) const/4              v1, 0
+	55      (000000d4) const-string         v6, 'Location'
+	56      (000000d8) invoke-interface     v5, v6, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+	57      (000000de) move-result          v6
+	58      (000000e0) if-eqz               v6, +29
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0xe4 : [ zzbp-BB@0xf4 ]
+	59      (000000e4) const-string         v1, 'Location'
+	60      (000000e8) invoke-interface     v5, v1, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	61      (000000ee) move-result-object   v1
+	62      (000000f0) check-cast           v1, Ljava/util/List;
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0xf4 : [ zzbp-BB@0xf8 zzbp-BB@0x22c ]
+	63      (000000f4) if-eqz               v1, +9c
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0xf8 : [ zzbp-BB@0x104 zzbp-BB@0x22c ]
+	64      (000000f8) invoke-interface     v1, Ljava/util/List;->size()I
+	65      (000000fe) move-result          v5
+	66      (00000100) if-lez               v5, +96
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0x104 : [ zzbp-BB@0x112 ]
+	67      (00000104) const/4              v3, 0
+	68      (00000106) invoke-interface     v1, v3, Ljava/util/List;->get(I)Ljava/lang/Object;
+	69      (0000010c) move-result-object   v1
+	70      (0000010e) check-cast           v1, Ljava/lang/String;
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0x112 : [ zzbp-BB@0x11e zzbp-BB@0x154 ]
+	71      (00000112) invoke-static        v1, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	72      (00000118) move-result          v3
+	73      (0000011a) if-eqz               v3, +1d
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0x11e : [ zzbp-BB@0x128 ]
+	74      (0000011e) const-string         v1, 'Arrived at landing page, this ideally should not happen. Will open it in browser.'
+	75      (00000122) invoke-static        v1, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaH(Ljava/lang/String;)V
+	82:127
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0x128 : [ zzbp-BB@0x36 ]
+	76      (00000128) invoke-virtual       v0, Ljava/net/HttpURLConnection;->disconnect()V
+	77      (0000012e) move-object          v0, v2
+	78      (00000130) goto                 -7d
+	128:12d
+	(Ljava/lang/IndexOutOfBoundsException; -> 16c zzbp-BB@0x16c)
+	(Ljava/io/IOException; -> 1a2 zzbp-BB@0x1a2)
+	(Ljava/lang/RuntimeException; -> 1d8 zzbp-BB@0x1d8)
+
+zzbp-BB@0x132 : [ zzbp-BB@0x142 zzbp-BB@0xf4 ]
+	79      (00000132) const-string         v6, 'location'
+	80      (00000136) invoke-interface     v5, v6, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+	81      (0000013c) move-result          v6
+	82      (0000013e) if-eqz               v6, -25
+	132:151
+	(Ljava/lang/Throwable; -> 162 zzbp-BB@0x162)
+
+zzbp-BB@0x142 : [ zzbp-BB@0xf4 ]
+	83      (00000142) const-string         v1, 'location'
+	84      (00000146) invoke-interface     v5, v1, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	85      (0000014c) move-result-object   v1
+	86      (0000014e) check-cast           v1, Ljava/util/List;
+	87      (00000152) goto                 -2f
+
+zzbp-BB@0x154 : [ zzbp-BB@0x6 ]
+	88      (00000154) invoke-virtual       v0, Ljava/net/HttpURLConnection;->disconnect()V
+	89      (0000015a) move                 v0, v4
+	90      (0000015c) move-object          v2, v1
+	91      (0000015e) goto/16              -ac
+	154:159
+	(Ljava/lang/IndexOutOfBoundsException; -> 222 zzbp-BB@0x222)
+	(Ljava/io/IOException; -> 218 zzbp-BB@0x218)
+	(Ljava/lang/RuntimeException; -> 20e zzbp-BB@0x20e)
+
+zzbp-BB@0x162 : [ zzbp-BB@0x164 ]
+	92      (00000162) move-exception       v1
+
+zzbp-BB@0x164 : 
+	93      (00000164) invoke-virtual       v0, Ljava/net/HttpURLConnection;->disconnect()V
+	94      (0000016a) throw                v1
+	164:16b
+	(Ljava/lang/IndexOutOfBoundsException; -> 16c zzbp-BB@0x16c)
+	(Ljava/io/IOException; -> 1a2 zzbp-BB@0x1a2)
+	(Ljava/lang/RuntimeException; -> 1d8 zzbp-BB@0x1d8)
+
+zzbp-BB@0x16c : [ zzbp-BB@0x172 ]
+	95      (0000016c) move-exception       v0
+	96      (0000016e) move-object          v1, v0
+	97      (00000170) move-object          v0, v2
+
+zzbp-BB@0x172 : [ zzbp-BB@0x36 ]
+	98      (00000172) new-instance         v2, Ljava/lang/StringBuilder;
+	99      (00000176) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	100     (0000017c) const-string         v3, 'Error while parsing ping URL: '
+	101     (00000180) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	102     (00000186) move-result-object   v2
+	103     (00000188) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	104     (0000018e) move-result-object   v2
+	105     (00000190) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	106     (00000196) move-result-object   v2
+	107     (00000198) invoke-static        v2, v1, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzd(Ljava/lang/String; Ljava/lang/Throwable;)V
+	108     (0000019e) goto/16              -b4
+
+zzbp-BB@0x1a2 : [ zzbp-BB@0x1a8 ]
+	109     (000001a2) move-exception       v0
+	110     (000001a4) move-object          v1, v0
+	111     (000001a6) move-object          v0, v2
+
+zzbp-BB@0x1a8 : [ zzbp-BB@0x36 ]
+	112     (000001a8) new-instance         v2, Ljava/lang/StringBuilder;
+	113     (000001ac) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	114     (000001b2) const-string         v3, 'Error while pinging URL: '
+	115     (000001b6) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	116     (000001bc) move-result-object   v2
+	117     (000001be) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	118     (000001c4) move-result-object   v2
+	119     (000001c6) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	120     (000001cc) move-result-object   v2
+	121     (000001ce) invoke-static        v2, v1, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzd(Ljava/lang/String; Ljava/lang/Throwable;)V
+	122     (000001d4) goto/16              -cf
+
+zzbp-BB@0x1d8 : [ zzbp-BB@0x1de ]
+	123     (000001d8) move-exception       v0
+	124     (000001da) move-object          v1, v0
+	125     (000001dc) move-object          v0, v2
+
+zzbp-BB@0x1de : [ zzbp-BB@0x36 ]
+	126     (000001de) new-instance         v2, Ljava/lang/StringBuilder;
+	127     (000001e2) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	128     (000001e8) const-string         v3, 'Error while pinging URL: '
+	129     (000001ec) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	130     (000001f2) move-result-object   v2
+	131     (000001f4) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	132     (000001fa) move-result-object   v2
+	133     (000001fc) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	134     (00000202) move-result-object   v2
+	135     (00000204) invoke-static        v2, v1, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzd(Ljava/lang/String; Ljava/lang/Throwable;)V
+	136     (0000020a) goto/16              -ea
+
+zzbp-BB@0x20e : [ zzbp-BB@0x1de ]
+	137     (0000020e) move-exception       v0
+	138     (00000210) move-object          v7, v0
+	139     (00000212) move-object          v0, v1
+	140     (00000214) move-object          v1, v7
+	141     (00000216) goto                 -1c
+
+zzbp-BB@0x218 : [ zzbp-BB@0x1a8 ]
+	142     (00000218) move-exception       v0
+	143     (0000021a) move-object          v7, v0
+	144     (0000021c) move-object          v0, v1
+	145     (0000021e) move-object          v1, v7
+	146     (00000220) goto                 -3c
+
+zzbp-BB@0x222 : [ zzbp-BB@0x172 ]
+	147     (00000222) move-exception       v0
+	148     (00000224) move-object          v7, v0
+	149     (00000226) move-object          v0, v1
+	150     (00000228) move-object          v1, v7
+	151     (0000022a) goto                 -5c
+
+zzbp-BB@0x22c : [ zzbp-BB@0x112 ]
+	152     (0000022c) move-object          v1, v3
+	153     (0000022e) goto/16              -8e
+
+zzbp-BB@0x232 : [ zzbp-BB@0x36 ]
+	154     (00000232) move-object          v0, v2
+	155     (00000234) goto/16              -ff
+

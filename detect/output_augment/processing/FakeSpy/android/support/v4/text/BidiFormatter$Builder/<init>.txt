@@ -1,0 +1,16 @@
+# Landroid/support/v4/text/BidiFormatter$Builder;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-direct        v1, Ljava/lang/Object;-><init>()V
+	1       (00000006) invoke-static        Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) invoke-static        v0, Landroid/support/v4/text/BidiFormatter;->access$000(Ljava/util/Locale;)Z
+	4       (00000014) move-result          v0
+	5       (00000016) invoke-direct        v1, v0, Landroid/support/v4/text/BidiFormatter$Builder;->initialize(Z)V
+	6       (0000001c) return-void          
+

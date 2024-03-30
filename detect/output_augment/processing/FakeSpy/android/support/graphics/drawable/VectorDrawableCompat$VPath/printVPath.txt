@@ -1,0 +1,53 @@
+# Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;->printVPath(I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:int
+#
+# - return:void
+
+printVPath-BB@0x0 : [ printVPath-BB@0x6 ]
+	0       (00000000) const-string         v1, ''
+	1       (00000004) const/4              v0, 0
+
+printVPath-BB@0x6 : [ printVPath-BB@0xa printVPath-BB@0x36 ]
+	2       (00000006) if-ge                v0, v6, +18
+
+printVPath-BB@0xa : [ printVPath-BB@0x6 ]
+	3       (0000000a) new-instance         v2, Ljava/lang/StringBuilder;
+	4       (0000000e) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	5       (00000014) invoke-virtual       v2, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	6       (0000001a) move-result-object   v2
+	7       (0000001c) const-string         v3, '    '
+	8       (00000020) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000026) move-result-object   v2
+	10      (00000028) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	11      (0000002e) move-result-object   v1
+	12      (00000030) add-int/lit8         v0, v0, 1
+	13      (00000034) goto                 -17
+
+printVPath-BB@0x36 : 
+	14      (00000036) const-string         v2, 'VectorDrawableCompat'
+	15      (0000003a) new-instance         v3, Ljava/lang/StringBuilder;
+	16      (0000003e) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	17      (00000044) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	18      (0000004a) move-result-object   v3
+	19      (0000004c) const-string         v4, 'current path is :'
+	20      (00000050) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	21      (00000056) move-result-object   v3
+	22      (00000058) iget-object          v4, v5, Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;->mPathName Ljava/lang/String;
+	23      (0000005c) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (00000062) move-result-object   v3
+	25      (00000064) const-string         v4, ' pathData is '
+	26      (00000068) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	27      (0000006e) move-result-object   v3
+	28      (00000070) iget-object          v4, v5, Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;->mNodes [Landroid/support/graphics/drawable/PathParser$PathDataNode;
+	29      (00000074) invoke-virtual       v5, v4, Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;->NodesToString([Landroid/support/graphics/drawable/PathParser$PathDataNode;)Ljava/lang/String;
+	30      (0000007a) move-result-object   v4
+	31      (0000007c) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	32      (00000082) move-result-object   v3
+	33      (00000084) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	34      (0000008a) move-result-object   v3
+	35      (0000008c) invoke-static        v2, v3, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	36      (00000092) return-void          
+

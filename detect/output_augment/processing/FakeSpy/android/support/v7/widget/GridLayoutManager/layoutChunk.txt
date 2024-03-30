@@ -1,0 +1,751 @@
+# Landroid/support/v7/widget/GridLayoutManager;->layoutChunk(Landroid/support/v7/widget/RecyclerView$Recycler; Landroid/support/v7/widget/RecyclerView$State; Landroid/support/v7/widget/LinearLayoutManager$LayoutState; Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v44
+# - v45:android.support.v7.widget.RecyclerView$Recycler
+# - v46:android.support.v7.widget.RecyclerView$State
+# - v47:android.support.v7.widget.LinearLayoutManager$LayoutState
+# - v48:android.support.v7.widget.LinearLayoutManager$LayoutChunkResult
+#
+# - return:void
+
+layoutChunk-BB@0x0 : [ layoutChunk-BB@0x1c layoutChunk-BB@0x178 ]
+	0       (00000000) move-object/from16   v0, v44
+	1       (00000004) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	2       (00000008) invoke-virtual       v4, Landroid/support/v7/widget/OrientationHelper;->getModeInOther()I
+	3       (0000000e) move-result          v35
+	4       (00000010) const/high16         v4, 16384 # [2.0]
+	5       (00000014) move/from16          v0, v35
+	6       (00000018) if-eq                v0, v4, +b0
+
+layoutChunk-BB@0x1c : [ layoutChunk-BB@0x20 ]
+	7       (0000001c) const/16             v27, 1
+
+layoutChunk-BB@0x20 : [ layoutChunk-BB@0x2c layoutChunk-BB@0x180 ]
+	8       (00000020) invoke-virtual/range v44, Landroid/support/v7/widget/GridLayoutManager;->getChildCount()I
+	9       (00000026) move-result          v4
+	10      (00000028) if-lez               v4, +ac
+
+layoutChunk-BB@0x2c : [ layoutChunk-BB@0x40 ]
+	11      (0000002c) move-object/from16   v0, v44
+	12      (00000030) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	13      (00000034) move-object/from16   v0, v44
+	14      (00000038) iget                 v5, v0, Landroid/support/v7/widget/GridLayoutManager;->mSpanCount I
+	15      (0000003c) aget                 v26, v4, v5
+
+layoutChunk-BB@0x40 : [ layoutChunk-BB@0x44 layoutChunk-BB@0x4a ]
+	16      (00000040) if-eqz               v27, +5
+
+layoutChunk-BB@0x44 : [ layoutChunk-BB@0x4a ]
+	17      (00000044) invoke-direct/range  v44, Landroid/support/v7/widget/GridLayoutManager;->updateMeasurements()V
+
+layoutChunk-BB@0x4a : [ layoutChunk-BB@0x58 layoutChunk-BB@0x188 ]
+	18      (0000004a) move-object/from16   v0, v47
+	19      (0000004e) iget                 v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mItemDirection I
+	20      (00000052) const/4              v5, 1
+	21      (00000054) if-ne                v4, v5, +9a
+
+layoutChunk-BB@0x58 : [ layoutChunk-BB@0x5a ]
+	22      (00000058) const/4              v9, 1
+
+layoutChunk-BB@0x5a : [ layoutChunk-BB@0x6e layoutChunk-BB@0xaa ]
+	23      (0000005a) const/4              v7, 0
+	24      (0000005c) const/4              v8, 0
+	25      (0000005e) move-object/from16   v0, v44
+	26      (00000062) iget                 v0, v0, Landroid/support/v7/widget/GridLayoutManager;->mSpanCount I
+	27      (00000066) move/from16          v39, v0
+	28      (0000006a) if-nez               v9, +20
+
+layoutChunk-BB@0x6e : [ layoutChunk-BB@0xaa ]
+	29      (0000006e) move-object/from16   v0, v47
+	30      (00000072) iget                 v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mCurrentPosition I
+	31      (00000076) move-object/from16   v0, v44
+	32      (0000007a) move-object/from16   v1, v45
+	33      (0000007e) move-object/from16   v2, v46
+	34      (00000082) invoke-direct        v0, v1, v2, v4, Landroid/support/v7/widget/GridLayoutManager;->getSpanIndex(Landroid/support/v7/widget/RecyclerView$Recycler; Landroid/support/v7/widget/RecyclerView$State; I)I
+	35      (00000088) move-result          v29
+	36      (0000008a) move-object/from16   v0, v47
+	37      (0000008e) iget                 v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mCurrentPosition I
+	38      (00000092) move-object/from16   v0, v44
+	39      (00000096) move-object/from16   v1, v45
+	40      (0000009a) move-object/from16   v2, v46
+	41      (0000009e) invoke-direct        v0, v1, v2, v4, Landroid/support/v7/widget/GridLayoutManager;->getSpanSize(Landroid/support/v7/widget/RecyclerView$Recycler; Landroid/support/v7/widget/RecyclerView$State; I)I
+	42      (000000a4) move-result          v30
+	43      (000000a6) add-int              v39, v29, v30
+
+layoutChunk-BB@0xaa : [ layoutChunk-BB@0xb6 layoutChunk-BB@0x196 ]
+	44      (000000aa) move-object/from16   v0, v44
+	45      (000000ae) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mSpanCount I
+	46      (000000b2) if-ge                v7, v4, +72
+
+layoutChunk-BB@0xb6 : [ layoutChunk-BB@0xca layoutChunk-BB@0x196 ]
+	47      (000000b6) move-object/from16   v0, v47
+	48      (000000ba) move-object/from16   v1, v46
+	49      (000000be) invoke-virtual       v0, v1, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->hasMore(Landroid/support/v7/widget/RecyclerView$State;)Z
+	50      (000000c4) move-result          v4
+	51      (000000c6) if-eqz               v4, +68
+
+layoutChunk-BB@0xca : [ layoutChunk-BB@0xce layoutChunk-BB@0x196 ]
+	52      (000000ca) if-lez               v39, +66
+
+layoutChunk-BB@0xce : [ layoutChunk-BB@0x102 layoutChunk-BB@0x18e ]
+	53      (000000ce) move-object/from16   v0, v47
+	54      (000000d2) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mCurrentPosition I
+	55      (000000d6) move/from16          v38, v0
+	56      (000000da) move-object/from16   v0, v44
+	57      (000000de) move-object/from16   v1, v45
+	58      (000000e2) move-object/from16   v2, v46
+	59      (000000e6) move/from16          v3, v38
+	60      (000000ea) invoke-direct        v0, v1, v2, v3, Landroid/support/v7/widget/GridLayoutManager;->getSpanSize(Landroid/support/v7/widget/RecyclerView$Recycler; Landroid/support/v7/widget/RecyclerView$State; I)I
+	61      (000000f0) move-result          v42
+	62      (000000f2) move-object/from16   v0, v44
+	63      (000000f6) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mSpanCount I
+	64      (000000fa) move/from16          v0, v42
+	65      (000000fe) if-le                v0, v4, +48
+
+layoutChunk-BB@0x102 : 
+	66      (00000102) new-instance         v4, Ljava/lang/IllegalArgumentException;
+	67      (00000106) new-instance         v5, Ljava/lang/StringBuilder;
+	68      (0000010a) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	69      (00000110) const-string         v6, 'Item at position '
+	70      (00000114) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	71      (0000011a) move-result-object   v5
+	72      (0000011c) move/from16          v0, v38
+	73      (00000120) invoke-virtual       v5, v0, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	74      (00000126) move-result-object   v5
+	75      (00000128) const-string         v6, ' requires '
+	76      (0000012c) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	77      (00000132) move-result-object   v5
+	78      (00000134) move/from16          v0, v42
+	79      (00000138) invoke-virtual       v5, v0, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	80      (0000013e) move-result-object   v5
+	81      (00000140) const-string         v6, ' spans but GridLayoutManager has only '
+	82      (00000144) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	83      (0000014a) move-result-object   v5
+	84      (0000014c) move-object/from16   v0, v44
+	85      (00000150) iget                 v6, v0, Landroid/support/v7/widget/GridLayoutManager;->mSpanCount I
+	86      (00000154) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	87      (0000015a) move-result-object   v5
+	88      (0000015c) const-string         v6, ' spans.'
+	89      (00000160) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	90      (00000166) move-result-object   v5
+	91      (00000168) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	92      (0000016e) move-result-object   v5
+	93      (00000170) invoke-direct        v4, v5, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	94      (00000176) throw                v4
+
+layoutChunk-BB@0x178 : [ layoutChunk-BB@0x20 ]
+	95      (00000178) const/16             v27, 0
+	96      (0000017c) goto/16              -ae
+
+layoutChunk-BB@0x180 : [ layoutChunk-BB@0x40 ]
+	97      (00000180) const/16             v26, 0
+	98      (00000184) goto/16              -a2
+
+layoutChunk-BB@0x188 : [ layoutChunk-BB@0x5a ]
+	99      (00000188) const/4              v9, 0
+	100     (0000018a) goto/16              -98
+
+layoutChunk-BB@0x18e : [ layoutChunk-BB@0x196 layoutChunk-BB@0x1a6 ]
+	101     (0000018e) sub-int              v39, v39, v42
+	102     (00000192) if-gez               v39, +a
+
+layoutChunk-BB@0x196 : [ layoutChunk-BB@0x19a layoutChunk-BB@0x1d2 ]
+	103     (00000196) if-nez               v7, +1e
+
+layoutChunk-BB@0x19a : [ layoutChunk-BB@0x1a4 ]
+	104     (0000019a) const/4              v4, 1
+	105     (0000019c) move-object/from16   v0, v48
+	106     (000001a0) iput-boolean         v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mFinished Z
+
+layoutChunk-BB@0x1a4 : 
+	107     (000001a4) return-void          
+
+layoutChunk-BB@0x1a6 : [ layoutChunk-BB@0x1ba layoutChunk-BB@0x196 ]
+	108     (000001a6) move-object/from16   v0, v47
+	109     (000001aa) move-object/from16   v1, v45
+	110     (000001ae) invoke-virtual       v0, v1, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->next(Landroid/support/v7/widget/RecyclerView$Recycler;)Landroid/view/View;
+	111     (000001b4) move-result-object   v11
+	112     (000001b6) if-eqz               v11, -10
+
+layoutChunk-BB@0x1ba : [ layoutChunk-BB@0xaa ]
+	113     (000001ba) add-int              v8, v8, v42
+	114     (000001be) move-object/from16   v0, v44
+	115     (000001c2) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mSet [Landroid/view/View;
+	116     (000001c6) aput-object          v11, v4, v7
+	117     (000001ca) add-int/lit8         v7, v7, 1
+	118     (000001ce) goto/16              -92
+
+layoutChunk-BB@0x1d2 : [ layoutChunk-BB@0x1f0 ]
+	119     (000001d2) const/16             v33, 0
+	120     (000001d6) const/16             v34, 0
+	121     (000001da) move-object/from16   v4, v44
+	122     (000001de) move-object/from16   v5, v45
+	123     (000001e2) move-object/from16   v6, v46
+	124     (000001e6) invoke-direct/range  v4 ... v9, Landroid/support/v7/widget/GridLayoutManager;->assignSpans(Landroid/support/v7/widget/RecyclerView$Recycler; Landroid/support/v7/widget/RecyclerView$State; I I Z)V
+	125     (000001ec) const/16             v28, 0
+
+layoutChunk-BB@0x1f0 : [ layoutChunk-BB@0x1f8 layoutChunk-BB@0x3ca ]
+	126     (000001f0) move/from16          v0, v28
+	127     (000001f4) if-ge                v0, v7, +eb
+
+layoutChunk-BB@0x1f8 : [ layoutChunk-BB@0x210 layoutChunk-BB@0x35a ]
+	128     (000001f8) move-object/from16   v0, v44
+	129     (000001fc) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mSet [Landroid/view/View;
+	130     (00000200) aget-object          v11, v4, v28
+	131     (00000204) move-object/from16   v0, v47
+	132     (00000208) iget-object          v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mScrapList Ljava/util/List;
+	133     (0000020c) if-nez               v4, +a7
+
+layoutChunk-BB@0x210 : [ layoutChunk-BB@0x214 layoutChunk-BB@0x34a ]
+	134     (00000210) if-eqz               v9, +9d
+
+layoutChunk-BB@0x214 : [ layoutChunk-BB@0x21e ]
+	135     (00000214) move-object/from16   v0, v44
+	136     (00000218) invoke-virtual       v0, v11, Landroid/support/v7/widget/GridLayoutManager;->addView(Landroid/view/View;)V
+
+layoutChunk-BB@0x21e : [ layoutChunk-BB@0x26e layoutChunk-BB@0x37c ]
+	137     (0000021e) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	138     (00000224) move-result-object   v32
+	139     (00000226) check-cast           v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;
+	140     (0000022a) move-object/from16   v0, v44
+	141     (0000022e) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	142     (00000232) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	143     (00000238) move-result          v5
+	144     (0000023a) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$100(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	145     (00000240) move-result          v6
+	146     (00000242) add-int/2addr        v5, v6
+	147     (00000244) aget                 v4, v4, v5
+	148     (00000248) move-object/from16   v0, v44
+	149     (0000024c) iget-object          v5, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	150     (00000250) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	151     (00000256) move-result          v6
+	152     (00000258) aget                 v5, v5, v6
+	153     (0000025c) sub-int              v5, v4, v5
+	154     (00000260) const/4              v6, 0
+	155     (00000262) move-object/from16   v0, v44
+	156     (00000266) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	157     (0000026a) if-nez               v4, +89
+
+layoutChunk-BB@0x26e : [ layoutChunk-BB@0x276 ]
+	158     (0000026e) move-object/from16   v0, v32
+	159     (00000272) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->height I
+
+layoutChunk-BB@0x276 : [ layoutChunk-BB@0x2b4 layoutChunk-BB@0x388 ]
+	160     (00000276) const/4              v10, 0
+	161     (00000278) move/from16          v0, v35
+	162     (0000027c) invoke-static        v5, v0, v6, v4, v10, Landroid/support/v7/widget/GridLayoutManager;->getChildMeasureSpec(I I I I Z)I
+	163     (00000282) move-result          v12
+	164     (00000284) move-object/from16   v0, v44
+	165     (00000288) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	166     (0000028c) invoke-virtual       v4, Landroid/support/v7/widget/OrientationHelper;->getTotalSpace()I
+	167     (00000292) move-result          v5
+	168     (00000294) move-object/from16   v0, v44
+	169     (00000298) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	170     (0000029c) invoke-virtual       v4, Landroid/support/v7/widget/OrientationHelper;->getMode()I
+	171     (000002a2) move-result          v6
+	172     (000002a4) const/4              v10, 0
+	173     (000002a6) move-object/from16   v0, v44
+	174     (000002aa) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	175     (000002ae) const/4              v15, 1
+	176     (000002b0) if-ne                v4, v15, +6c
+
+layoutChunk-BB@0x2b4 : [ layoutChunk-BB@0x2bc ]
+	177     (000002b4) move-object/from16   v0, v32
+	178     (000002b8) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->height I
+
+layoutChunk-BB@0x2bc : [ layoutChunk-BB@0x2d4 layoutChunk-BB@0x396 ]
+	179     (000002bc) const/4              v15, 1
+	180     (000002be) invoke-static        v5, v6, v10, v4, v15, Landroid/support/v7/widget/GridLayoutManager;->getChildMeasureSpec(I I I I Z)I
+	181     (000002c4) move-result          v13
+	182     (000002c6) move-object/from16   v0, v44
+	183     (000002ca) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	184     (000002ce) const/4              v5, 1
+	185     (000002d0) if-ne                v4, v5, +63
+
+layoutChunk-BB@0x2d4 : [ layoutChunk-BB@0x2e2 layoutChunk-BB@0x392 ]
+	186     (000002d4) move-object/from16   v0, v32
+	187     (000002d8) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->height I
+	188     (000002dc) const/4              v5, -1
+	189     (000002de) if-ne                v4, v5, +5a
+
+layoutChunk-BB@0x2e2 : [ layoutChunk-BB@0x2e4 ]
+	190     (000002e2) const/4              v14, 1
+
+layoutChunk-BB@0x2e4 : [ layoutChunk-BB@0x2f0 ]
+	191     (000002e4) const/4              v15, 0
+	192     (000002e6) move-object/from16   v10, v44
+	193     (000002ea) invoke-direct/range  v10 ... v15, Landroid/support/v7/widget/GridLayoutManager;->measureChildWithDecorationsAndMargin(Landroid/view/View; I I Z Z)V
+
+layoutChunk-BB@0x2f0 : [ layoutChunk-BB@0x30c layoutChunk-BB@0x310 ]
+	194     (000002f0) move-object/from16   v0, v44
+	195     (000002f4) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	196     (000002f8) invoke-virtual       v4, v11, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
+	197     (000002fe) move-result          v41
+	198     (00000300) move/from16          v0, v41
+	199     (00000304) move/from16          v1, v33
+	200     (00000308) if-le                v0, v1, +4
+
+layoutChunk-BB@0x30c : [ layoutChunk-BB@0x310 ]
+	201     (0000030c) move/from16          v33, v41
+
+layoutChunk-BB@0x310 : [ layoutChunk-BB@0x33e layoutChunk-BB@0x342 ]
+	202     (00000310) const/high16         v4, 16256 # [1.0]
+	203     (00000314) move-object/from16   v0, v44
+	204     (00000318) iget-object          v5, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	205     (0000031c) invoke-virtual       v5, v11, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+	206     (00000322) move-result          v5
+	207     (00000324) int-to-float         v5, v5
+	208     (00000326) mul-float/2addr      v4, v5
+	209     (00000328) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$100(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	210     (0000032e) move-result          v5
+	211     (00000330) int-to-float         v5, v5
+	212     (00000332) div-float            v36, v4, v5
+	213     (00000336) cmpl-float           v4, v36, v34
+	214     (0000033a) if-lez               v4, +4
+
+layoutChunk-BB@0x33e : [ layoutChunk-BB@0x342 ]
+	215     (0000033e) move/from16          v34, v36
+
+layoutChunk-BB@0x342 : [ layoutChunk-BB@0x1f0 ]
+	216     (00000342) add-int/lit8         v28, v28, 1
+	217     (00000346) goto/16              -ab
+
+layoutChunk-BB@0x34a : [ layoutChunk-BB@0x21e ]
+	218     (0000034a) const/4              v4, 0
+	219     (0000034c) move-object/from16   v0, v44
+	220     (00000350) invoke-virtual       v0, v11, v4, Landroid/support/v7/widget/GridLayoutManager;->addView(Landroid/view/View; I)V
+	221     (00000356) goto/16              -9c
+
+layoutChunk-BB@0x35a : [ layoutChunk-BB@0x35e layoutChunk-BB@0x36c ]
+	222     (0000035a) if-eqz               v9, +9
+
+layoutChunk-BB@0x35e : [ layoutChunk-BB@0x21e ]
+	223     (0000035e) move-object/from16   v0, v44
+	224     (00000362) invoke-virtual       v0, v11, Landroid/support/v7/widget/GridLayoutManager;->addDisappearingView(Landroid/view/View;)V
+	225     (00000368) goto/16              -a5
+
+layoutChunk-BB@0x36c : [ layoutChunk-BB@0x21e ]
+	226     (0000036c) const/4              v4, 0
+	227     (0000036e) move-object/from16   v0, v44
+	228     (00000372) invoke-virtual       v0, v11, v4, Landroid/support/v7/widget/GridLayoutManager;->addDisappearingView(Landroid/view/View; I)V
+	229     (00000378) goto/16              -ad
+
+layoutChunk-BB@0x37c : [ layoutChunk-BB@0x276 ]
+	230     (0000037c) move-object/from16   v0, v32
+	231     (00000380) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->width I
+	232     (00000384) goto/16              -87
+
+layoutChunk-BB@0x388 : [ layoutChunk-BB@0x2bc ]
+	233     (00000388) move-object/from16   v0, v32
+	234     (0000038c) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->width I
+	235     (00000390) goto                 -6a
+
+layoutChunk-BB@0x392 : [ layoutChunk-BB@0x2e4 ]
+	236     (00000392) const/4              v14, 0
+	237     (00000394) goto                 -58
+
+layoutChunk-BB@0x396 : [ layoutChunk-BB@0x3a4 layoutChunk-BB@0x3c6 ]
+	238     (00000396) move-object/from16   v0, v32
+	239     (0000039a) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->width I
+	240     (0000039e) const/4              v5, -1
+	241     (000003a0) if-ne                v4, v5, +13
+
+layoutChunk-BB@0x3a4 : [ layoutChunk-BB@0x3a6 ]
+	242     (000003a4) const/4              v14, 1
+
+layoutChunk-BB@0x3a6 : [ layoutChunk-BB@0x2f0 ]
+	243     (000003a6) const/16             v20, 0
+	244     (000003aa) move-object/from16   v15, v44
+	245     (000003ae) move-object/from16   v16, v11
+	246     (000003b2) move/from16          v17, v13
+	247     (000003b6) move/from16          v18, v12
+	248     (000003ba) move/from16          v19, v14
+	249     (000003be) invoke-direct/range  v15 ... v20, Landroid/support/v7/widget/GridLayoutManager;->measureChildWithDecorationsAndMargin(Landroid/view/View; I I Z Z)V
+	250     (000003c4) goto                 -6a
+
+layoutChunk-BB@0x3c6 : [ layoutChunk-BB@0x3a6 ]
+	251     (000003c6) const/4              v14, 0
+	252     (000003c8) goto                 -11
+
+layoutChunk-BB@0x3ca : [ layoutChunk-BB@0x3ce layoutChunk-BB@0x52c ]
+	253     (000003ca) if-eqz               v27, +b1
+
+layoutChunk-BB@0x3ce : [ layoutChunk-BB@0x3e8 ]
+	254     (000003ce) move-object/from16   v0, v44
+	255     (000003d2) move/from16          v1, v34
+	256     (000003d6) move/from16          v2, v26
+	257     (000003da) invoke-direct        v0, v1, v2, Landroid/support/v7/widget/GridLayoutManager;->guessMeasurement(F I)V
+	258     (000003e0) const/16             v33, 0
+	259     (000003e4) const/16             v28, 0
+
+layoutChunk-BB@0x3e8 : [ layoutChunk-BB@0x3f0 layoutChunk-BB@0x52c ]
+	260     (000003e8) move/from16          v0, v28
+	261     (000003ec) if-ge                v0, v7, +a0
+
+layoutChunk-BB@0x3f0 : [ layoutChunk-BB@0x450 layoutChunk-BB@0x4f8 ]
+	262     (000003f0) move-object/from16   v0, v44
+	263     (000003f4) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mSet [Landroid/view/View;
+	264     (000003f8) aget-object          v11, v4, v28
+	265     (000003fc) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	266     (00000402) move-result-object   v32
+	267     (00000404) check-cast           v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;
+	268     (00000408) move-object/from16   v0, v44
+	269     (0000040c) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	270     (00000410) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	271     (00000416) move-result          v5
+	272     (00000418) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$100(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	273     (0000041e) move-result          v6
+	274     (00000420) add-int/2addr        v5, v6
+	275     (00000422) aget                 v4, v4, v5
+	276     (00000426) move-object/from16   v0, v44
+	277     (0000042a) iget-object          v5, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	278     (0000042e) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	279     (00000434) move-result          v6
+	280     (00000436) aget                 v5, v5, v6
+	281     (0000043a) sub-int              v5, v4, v5
+	282     (0000043e) const/high16         v6, 16384 # [2.0]
+	283     (00000442) const/4              v10, 0
+	284     (00000444) move-object/from16   v0, v44
+	285     (00000448) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	286     (0000044c) if-nez               v4, +56
+
+layoutChunk-BB@0x450 : [ layoutChunk-BB@0x458 ]
+	287     (00000450) move-object/from16   v0, v32
+	288     (00000454) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->height I
+
+layoutChunk-BB@0x458 : [ layoutChunk-BB@0x492 layoutChunk-BB@0x502 ]
+	289     (00000458) const/4              v15, 0
+	290     (0000045a) invoke-static        v5, v6, v10, v4, v15, Landroid/support/v7/widget/GridLayoutManager;->getChildMeasureSpec(I I I I Z)I
+	291     (00000460) move-result          v12
+	292     (00000462) move-object/from16   v0, v44
+	293     (00000466) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	294     (0000046a) invoke-virtual       v4, Landroid/support/v7/widget/OrientationHelper;->getTotalSpace()I
+	295     (00000470) move-result          v5
+	296     (00000472) move-object/from16   v0, v44
+	297     (00000476) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	298     (0000047a) invoke-virtual       v4, Landroid/support/v7/widget/OrientationHelper;->getMode()I
+	299     (00000480) move-result          v6
+	300     (00000482) const/4              v10, 0
+	301     (00000484) move-object/from16   v0, v44
+	302     (00000488) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	303     (0000048c) const/4              v15, 1
+	304     (0000048e) if-ne                v4, v15, +3a
+
+layoutChunk-BB@0x492 : [ layoutChunk-BB@0x49a ]
+	305     (00000492) move-object/from16   v0, v32
+	306     (00000496) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->height I
+
+layoutChunk-BB@0x49a : [ layoutChunk-BB@0x4b2 layoutChunk-BB@0x50c ]
+	307     (0000049a) const/4              v15, 1
+	308     (0000049c) invoke-static        v5, v6, v10, v4, v15, Landroid/support/v7/widget/GridLayoutManager;->getChildMeasureSpec(I I I I Z)I
+	309     (000004a2) move-result          v13
+	310     (000004a4) move-object/from16   v0, v44
+	311     (000004a8) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	312     (000004ac) const/4              v5, 1
+	313     (000004ae) if-ne                v4, v5, +2f
+
+layoutChunk-BB@0x4b2 : [ layoutChunk-BB@0x4d0 ]
+	314     (000004b2) const/16             v19, 0
+	315     (000004b6) const/16             v20, 1
+	316     (000004ba) move-object/from16   v15, v44
+	317     (000004be) move-object/from16   v16, v11
+	318     (000004c2) move/from16          v17, v12
+	319     (000004c6) move/from16          v18, v13
+	320     (000004ca) invoke-direct/range  v15 ... v20, Landroid/support/v7/widget/GridLayoutManager;->measureChildWithDecorationsAndMargin(Landroid/view/View; I I Z Z)V
+
+layoutChunk-BB@0x4d0 : [ layoutChunk-BB@0x4ec layoutChunk-BB@0x4f0 ]
+	321     (000004d0) move-object/from16   v0, v44
+	322     (000004d4) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	323     (000004d8) invoke-virtual       v4, v11, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
+	324     (000004de) move-result          v41
+	325     (000004e0) move/from16          v0, v41
+	326     (000004e4) move/from16          v1, v33
+	327     (000004e8) if-le                v0, v1, +4
+
+layoutChunk-BB@0x4ec : [ layoutChunk-BB@0x4f0 ]
+	328     (000004ec) move/from16          v33, v41
+
+layoutChunk-BB@0x4f0 : [ layoutChunk-BB@0x3e8 ]
+	329     (000004f0) add-int/lit8         v28, v28, 1
+	330     (000004f4) goto/16              -86
+
+layoutChunk-BB@0x4f8 : [ layoutChunk-BB@0x458 ]
+	331     (000004f8) move-object/from16   v0, v32
+	332     (000004fc) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->width I
+	333     (00000500) goto                 -54
+
+layoutChunk-BB@0x502 : [ layoutChunk-BB@0x49a ]
+	334     (00000502) move-object/from16   v0, v32
+	335     (00000506) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->width I
+	336     (0000050a) goto                 -38
+
+layoutChunk-BB@0x50c : [ layoutChunk-BB@0x4d0 ]
+	337     (0000050c) const/16             v19, 0
+	338     (00000510) const/16             v20, 1
+	339     (00000514) move-object/from16   v15, v44
+	340     (00000518) move-object/from16   v16, v11
+	341     (0000051c) move/from16          v17, v13
+	342     (00000520) move/from16          v18, v12
+	343     (00000524) invoke-direct/range  v15 ... v20, Landroid/support/v7/widget/GridLayoutManager;->measureChildWithDecorationsAndMargin(Landroid/view/View; I I Z Z)V
+	344     (0000052a) goto                 -2d
+
+layoutChunk-BB@0x52c : [ layoutChunk-BB@0x540 ]
+	345     (0000052c) const/high16         v4, 16384 # [2.0]
+	346     (00000530) move/from16          v0, v33
+	347     (00000534) invoke-static        v0, v4, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	348     (0000053a) move-result          v18
+	349     (0000053c) const/16             v28, 0
+
+layoutChunk-BB@0x540 : [ layoutChunk-BB@0x548 layoutChunk-BB@0x626 ]
+	350     (00000540) move/from16          v0, v28
+	351     (00000544) if-ge                v0, v7, +71
+
+layoutChunk-BB@0x548 : [ layoutChunk-BB@0x56c layoutChunk-BB@0x5fa ]
+	352     (00000548) move-object/from16   v0, v44
+	353     (0000054c) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mSet [Landroid/view/View;
+	354     (00000550) aget-object          v11, v4, v28
+	355     (00000554) move-object/from16   v0, v44
+	356     (00000558) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	357     (0000055c) invoke-virtual       v4, v11, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurement(Landroid/view/View;)I
+	358     (00000562) move-result          v4
+	359     (00000564) move/from16          v0, v33
+	360     (00000568) if-eq                v4, v0, +49
+
+layoutChunk-BB@0x56c : [ layoutChunk-BB@0x5c0 layoutChunk-BB@0x600 ]
+	361     (0000056c) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	362     (00000572) move-result-object   v32
+	363     (00000574) check-cast           v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;
+	364     (00000578) move-object/from16   v0, v44
+	365     (0000057c) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	366     (00000580) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	367     (00000586) move-result          v5
+	368     (00000588) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$100(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	369     (0000058e) move-result          v6
+	370     (00000590) add-int/2addr        v5, v6
+	371     (00000592) aget                 v4, v4, v5
+	372     (00000596) move-object/from16   v0, v44
+	373     (0000059a) iget-object          v5, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	374     (0000059e) invoke-static/range  v32, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	375     (000005a4) move-result          v6
+	376     (000005a6) aget                 v5, v5, v6
+	377     (000005aa) sub-int              v5, v4, v5
+	378     (000005ae) const/high16         v6, 16384 # [2.0]
+	379     (000005b2) const/4              v10, 0
+	380     (000005b4) move-object/from16   v0, v44
+	381     (000005b8) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	382     (000005bc) if-nez               v4, +22
+
+layoutChunk-BB@0x5c0 : [ layoutChunk-BB@0x5c8 ]
+	383     (000005c0) move-object/from16   v0, v32
+	384     (000005c4) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->height I
+
+layoutChunk-BB@0x5c8 : [ layoutChunk-BB@0x5e0 layoutChunk-BB@0x60a ]
+	385     (000005c8) const/4              v15, 0
+	386     (000005ca) invoke-static        v5, v6, v10, v4, v15, Landroid/support/v7/widget/GridLayoutManager;->getChildMeasureSpec(I I I I Z)I
+	387     (000005d0) move-result          v12
+	388     (000005d2) move-object/from16   v0, v44
+	389     (000005d6) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	390     (000005da) const/4              v5, 1
+	391     (000005dc) if-ne                v4, v5, +17
+
+layoutChunk-BB@0x5e0 : [ layoutChunk-BB@0x5fa ]
+	392     (000005e0) const/16             v19, 1
+	393     (000005e4) const/16             v20, 1
+	394     (000005e8) move-object/from16   v15, v44
+	395     (000005ec) move-object/from16   v16, v11
+	396     (000005f0) move/from16          v17, v12
+	397     (000005f4) invoke-direct/range  v15 ... v20, Landroid/support/v7/widget/GridLayoutManager;->measureChildWithDecorationsAndMargin(Landroid/view/View; I I Z Z)V
+
+layoutChunk-BB@0x5fa : [ layoutChunk-BB@0x540 ]
+	398     (000005fa) add-int/lit8         v28, v28, 1
+	399     (000005fe) goto                 -5f
+
+layoutChunk-BB@0x600 : [ layoutChunk-BB@0x5c8 ]
+	400     (00000600) move-object/from16   v0, v32
+	401     (00000604) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->width I
+	402     (00000608) goto                 -20
+
+layoutChunk-BB@0x60a : [ layoutChunk-BB@0x5fa ]
+	403     (0000060a) const/16             v20, 1
+	404     (0000060e) const/16             v21, 1
+	405     (00000612) move-object/from16   v16, v44
+	406     (00000616) move-object/from16   v17, v11
+	407     (0000061a) move/from16          v19, v12
+	408     (0000061e) invoke-direct/range  v16 ... v21, Landroid/support/v7/widget/GridLayoutManager;->measureChildWithDecorationsAndMargin(Landroid/view/View; I I Z Z)V
+	409     (00000624) goto                 -15
+
+layoutChunk-BB@0x626 : [ layoutChunk-BB@0x650 layoutChunk-BB@0x77e ]
+	410     (00000626) move/from16          v0, v33
+	411     (0000062a) move-object/from16   v1, v48
+	412     (0000062e) iput                 v0, v1, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mConsumed I
+	413     (00000632) const/16             v31, 0
+	414     (00000636) const/16             v40, 0
+	415     (0000063a) const/16             v43, 0
+	416     (0000063e) const/16             v25, 0
+	417     (00000642) move-object/from16   v0, v44
+	418     (00000646) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	419     (0000064a) const/4              v5, 1
+	420     (0000064c) if-ne                v4, v5, +99
+
+layoutChunk-BB@0x650 : [ layoutChunk-BB@0x65e layoutChunk-BB@0x76a ]
+	421     (00000650) move-object/from16   v0, v47
+	422     (00000654) iget                 v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mLayoutDirection I
+	423     (00000658) const/4              v5, -1
+	424     (0000065a) if-ne                v4, v5, +88
+
+layoutChunk-BB@0x65e : [ layoutChunk-BB@0x66e ]
+	425     (0000065e) move-object/from16   v0, v47
+	426     (00000662) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mOffset I
+	427     (00000666) move/from16          v25, v0
+	428     (0000066a) sub-int              v43, v25, v33
+
+layoutChunk-BB@0x66e : [ layoutChunk-BB@0x672 ]
+	429     (0000066e) const/16             v28, 0
+
+layoutChunk-BB@0x672 : [ layoutChunk-BB@0x67a layoutChunk-BB@0x822 ]
+	430     (00000672) move/from16          v0, v28
+	431     (00000676) if-ge                v0, v7, +d6
+
+layoutChunk-BB@0x67a : [ layoutChunk-BB@0x6a0 layoutChunk-BB@0x7ea ]
+	432     (0000067a) move-object/from16   v0, v44
+	433     (0000067e) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mSet [Landroid/view/View;
+	434     (00000682) aget-object          v11, v4, v28
+	435     (00000686) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	436     (0000068c) move-result-object   v37
+	437     (0000068e) check-cast           v37, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;
+	438     (00000692) move-object/from16   v0, v44
+	439     (00000696) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientation I
+	440     (0000069a) const/4              v5, 1
+	441     (0000069c) if-ne                v4, v5, +a7
+
+layoutChunk-BB@0x6a0 : [ layoutChunk-BB@0x6ac layoutChunk-BB@0x7b4 ]
+	442     (000006a0) invoke-virtual/range v44, Landroid/support/v7/widget/GridLayoutManager;->isLayoutRTL()Z
+	443     (000006a6) move-result          v4
+	444     (000006a8) if-eqz               v4, +86
+
+layoutChunk-BB@0x6ac : [ layoutChunk-BB@0x6ea ]
+	445     (000006ac) invoke-virtual/range v44, Landroid/support/v7/widget/GridLayoutManager;->getPaddingLeft()I
+	446     (000006b2) move-result          v4
+	447     (000006b4) move-object/from16   v0, v44
+	448     (000006b8) iget-object          v5, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	449     (000006bc) invoke-static/range  v37, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	450     (000006c2) move-result          v6
+	451     (000006c4) invoke-static/range  v37, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$100(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	452     (000006ca) move-result          v10
+	453     (000006cc) add-int/2addr        v6, v10
+	454     (000006ce) aget                 v5, v5, v6
+	455     (000006d2) add-int              v40, v4, v5
+	456     (000006d6) move-object/from16   v0, v44
+	457     (000006da) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	458     (000006de) invoke-virtual       v4, v11, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+	459     (000006e4) move-result          v4
+	460     (000006e6) sub-int              v31, v40, v4
+
+layoutChunk-BB@0x6ea : [ layoutChunk-BB@0x734 layoutChunk-BB@0x740 ]
+	461     (000006ea) move-object/from16   v0, v37
+	462     (000006ee) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->leftMargin I
+	463     (000006f2) add-int              v21, v31, v4
+	464     (000006f6) move-object/from16   v0, v37
+	465     (000006fa) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->topMargin I
+	466     (000006fe) add-int              v22, v43, v4
+	467     (00000702) move-object/from16   v0, v37
+	468     (00000706) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->rightMargin I
+	469     (0000070a) sub-int              v23, v40, v4
+	470     (0000070e) move-object/from16   v0, v37
+	471     (00000712) iget                 v4, v0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->bottomMargin I
+	472     (00000716) sub-int              v24, v25, v4
+	473     (0000071a) move-object/from16   v19, v44
+	474     (0000071e) move-object/from16   v20, v11
+	475     (00000722) invoke-virtual/range v19 ... v24, Landroid/support/v7/widget/GridLayoutManager;->layoutDecorated(Landroid/view/View; I I I I)V
+	476     (00000728) invoke-virtual/range v37, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->isItemRemoved()Z
+	477     (0000072e) move-result          v4
+	478     (00000730) if-nez               v4, +8
+
+layoutChunk-BB@0x734 : [ layoutChunk-BB@0x740 layoutChunk-BB@0x74a ]
+	479     (00000734) invoke-virtual/range v37, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->isItemChanged()Z
+	480     (0000073a) move-result          v4
+	481     (0000073c) if-eqz               v4, +7
+
+layoutChunk-BB@0x740 : [ layoutChunk-BB@0x74a ]
+	482     (00000740) const/4              v4, 1
+	483     (00000742) move-object/from16   v0, v48
+	484     (00000746) iput-boolean         v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mIgnoreConsumed Z
+
+layoutChunk-BB@0x74a : [ layoutChunk-BB@0x672 ]
+	485     (0000074a) move-object/from16   v0, v48
+	486     (0000074e) iget-boolean         v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mFocusable Z
+	487     (00000752) invoke-virtual       v11, Landroid/view/View;->isFocusable()Z
+	488     (00000758) move-result          v5
+	489     (0000075a) or-int/2addr         v4, v5
+	490     (0000075c) move-object/from16   v0, v48
+	491     (00000760) iput-boolean         v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutChunkResult;->mFocusable Z
+	492     (00000764) add-int/lit8         v28, v28, 1
+	493     (00000768) goto                 -7b
+
+layoutChunk-BB@0x76a : [ layoutChunk-BB@0x66e ]
+	494     (0000076a) move-object/from16   v0, v47
+	495     (0000076e) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mOffset I
+	496     (00000772) move/from16          v43, v0
+	497     (00000776) add-int              v25, v43, v33
+	498     (0000077a) goto/16              -86
+
+layoutChunk-BB@0x77e : [ layoutChunk-BB@0x78c layoutChunk-BB@0x7a0 ]
+	499     (0000077e) move-object/from16   v0, v47
+	500     (00000782) iget                 v4, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mLayoutDirection I
+	501     (00000786) const/4              v5, -1
+	502     (00000788) if-ne                v4, v5, +c
+
+layoutChunk-BB@0x78c : [ layoutChunk-BB@0x66e ]
+	503     (0000078c) move-object/from16   v0, v47
+	504     (00000790) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mOffset I
+	505     (00000794) move/from16          v40, v0
+	506     (00000798) sub-int              v31, v40, v33
+	507     (0000079c) goto/16              -97
+
+layoutChunk-BB@0x7a0 : [ layoutChunk-BB@0x66e ]
+	508     (000007a0) move-object/from16   v0, v47
+	509     (000007a4) iget                 v0, v0, Landroid/support/v7/widget/LinearLayoutManager$LayoutState;->mOffset I
+	510     (000007a8) move/from16          v31, v0
+	511     (000007ac) add-int              v40, v31, v33
+	512     (000007b0) goto/16              -a1
+
+layoutChunk-BB@0x7b4 : [ layoutChunk-BB@0x6ea ]
+	513     (000007b4) invoke-virtual/range v44, Landroid/support/v7/widget/GridLayoutManager;->getPaddingLeft()I
+	514     (000007ba) move-result          v4
+	515     (000007bc) move-object/from16   v0, v44
+	516     (000007c0) iget-object          v5, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	517     (000007c4) invoke-static/range  v37, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	518     (000007ca) move-result          v6
+	519     (000007cc) aget                 v5, v5, v6
+	520     (000007d0) add-int              v31, v4, v5
+	521     (000007d4) move-object/from16   v0, v44
+	522     (000007d8) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	523     (000007dc) invoke-virtual       v4, v11, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+	524     (000007e2) move-result          v4
+	525     (000007e4) add-int              v40, v31, v4
+	526     (000007e8) goto                 -7f
+
+layoutChunk-BB@0x7ea : [ layoutChunk-BB@0x6ea ]
+	527     (000007ea) invoke-virtual/range v44, Landroid/support/v7/widget/GridLayoutManager;->getPaddingTop()I
+	528     (000007f0) move-result          v4
+	529     (000007f2) move-object/from16   v0, v44
+	530     (000007f6) iget-object          v5, v0, Landroid/support/v7/widget/GridLayoutManager;->mCachedBorders [I
+	531     (000007fa) invoke-static/range  v37, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->access$000(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
+	532     (00000800) move-result          v6
+	533     (00000802) aget                 v5, v5, v6
+	534     (00000806) add-int              v43, v4, v5
+	535     (0000080a) move-object/from16   v0, v44
+	536     (0000080e) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mOrientationHelper Landroid/support/v7/widget/OrientationHelper;
+	537     (00000812) invoke-virtual       v4, v11, Landroid/support/v7/widget/OrientationHelper;->getDecoratedMeasurementInOther(Landroid/view/View;)I
+	538     (00000818) move-result          v4
+	539     (0000081a) add-int              v25, v43, v4
+	540     (0000081e) goto/16              -9a
+
+layoutChunk-BB@0x822 : [ layoutChunk-BB@0x1a4 ]
+	541     (00000822) move-object/from16   v0, v44
+	542     (00000826) iget-object          v4, v0, Landroid/support/v7/widget/GridLayoutManager;->mSet [Landroid/view/View;
+	543     (0000082a) const/4              v5, 0
+	544     (0000082c) invoke-static        v4, v5, Ljava/util/Arrays;->fill([Ljava/lang/Object; Ljava/lang/Object;)V
+	545     (00000832) goto/16              -347
+

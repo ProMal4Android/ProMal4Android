@@ -1,0 +1,45 @@
+# Landroid/support/v7/widget/helper/ItemTouchHelper;->startSwipe(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.support.v7.widget.RecyclerView$ViewHolder
+#
+# - return:void
+
+startSwipe-BB@0x0 : [ startSwipe-BB@0x14 startSwipe-BB@0x24 ]
+	0       (00000000) iget-object          v0, v2, Landroid/support/v7/widget/helper/ItemTouchHelper;->mCallback Landroid/support/v7/widget/helper/ItemTouchHelper$Callback;
+	1       (00000004) iget-object          v1, v2, Landroid/support/v7/widget/helper/ItemTouchHelper;->mRecyclerView Landroid/support/v7/widget/RecyclerView;
+	2       (00000008) invoke-static        v0, v1, v3, Landroid/support/v7/widget/helper/ItemTouchHelper$Callback;->access$2200(Landroid/support/v7/widget/helper/ItemTouchHelper$Callback; Landroid/support/v7/widget/RecyclerView; Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z
+	3       (0000000e) move-result          v0
+	4       (00000010) if-nez               v0, +a
+
+startSwipe-BB@0x14 : [ startSwipe-BB@0x22 ]
+	5       (00000014) const-string         v0, 'ItemTouchHelper'
+	6       (00000018) const-string         v1, 'Start swipe has been called but dragging is not enabled'
+	7       (0000001c) invoke-static        v0, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+
+startSwipe-BB@0x22 : 
+	8       (00000022) return-void          
+
+startSwipe-BB@0x24 : [ startSwipe-BB@0x38 startSwipe-BB@0x48 ]
+	9       (00000024) iget-object          v0, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	10      (00000028) invoke-virtual       v0, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+	11      (0000002e) move-result-object   v0
+	12      (00000030) iget-object          v1, v2, Landroid/support/v7/widget/helper/ItemTouchHelper;->mRecyclerView Landroid/support/v7/widget/RecyclerView;
+	13      (00000034) if-eq                v0, v1, +a
+
+startSwipe-BB@0x38 : [ startSwipe-BB@0x22 ]
+	14      (00000038) const-string         v0, 'ItemTouchHelper'
+	15      (0000003c) const-string         v1, 'Start swipe has been called with a view holder which is not a child of the RecyclerView controlled by this ItemTouchHelper.'
+	16      (00000040) invoke-static        v0, v1, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	17      (00000046) goto                 -12
+
+startSwipe-BB@0x48 : [ startSwipe-BB@0x22 ]
+	18      (00000048) invoke-direct        v2, Landroid/support/v7/widget/helper/ItemTouchHelper;->obtainVelocityTracker()V
+	19      (0000004e) const/4              v0, 0
+	20      (00000050) iput                 v0, v2, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDy F
+	21      (00000054) iput                 v0, v2, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDx F
+	22      (00000058) const/4              v0, 1
+	23      (0000005a) invoke-direct        v2, v3, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->select(Landroid/support/v7/widget/RecyclerView$ViewHolder; I)V
+	24      (00000060) goto                 -1f
+

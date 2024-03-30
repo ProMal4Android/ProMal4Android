@@ -1,0 +1,47 @@
+# Landroid/support/v7/widget/RecyclerView;->getScrollFactor()F [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:float
+
+getScrollFactor-BB@0x0 : [ getScrollFactor-BB@0xe getScrollFactor-BB@0x60 ]
+	0       (00000000) iget                 v0, v4, Landroid/support/v7/widget/RecyclerView;->aa F
+	1       (00000004) const/4              v1, 1
+	2       (00000006) cmpl-float           v0, v0, v1
+	3       (0000000a) if-nez               v0, +2b
+
+getScrollFactor-BB@0xe : [ getScrollFactor-BB@0x3c getScrollFactor-BB@0x66 ]
+	4       (0000000e) new-instance         v0, Landroid/util/TypedValue;
+	5       (00000012) invoke-direct        v0, Landroid/util/TypedValue;-><init>()V
+	6       (00000018) invoke-virtual       v4, Landroid/support/v7/widget/RecyclerView;->getContext()Landroid/content/Context;
+	7       (0000001e) move-result-object   v1
+	8       (00000020) invoke-virtual       v1, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+	9       (00000026) move-result-object   v1
+	10      (00000028) const                v2, 16842829 # [2.369377380872524e-38]
+	11      (0000002e) const/4              v3, 1
+	12      (00000030) invoke-virtual       v1, v2, v0, v3, Landroid/content/res/Resources$Theme;->resolveAttribute(I Landroid/util/TypedValue; Z)Z
+	13      (00000036) move-result          v1
+	14      (00000038) if-eqz               v1, +17
+
+getScrollFactor-BB@0x3c : [ getScrollFactor-BB@0x60 ]
+	15      (0000003c) invoke-virtual       v4, Landroid/support/v7/widget/RecyclerView;->getContext()Landroid/content/Context;
+	16      (00000042) move-result-object   v1
+	17      (00000044) invoke-virtual       v1, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	18      (0000004a) move-result-object   v1
+	19      (0000004c) invoke-virtual       v1, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	20      (00000052) move-result-object   v1
+	21      (00000054) invoke-virtual       v0, v1, Landroid/util/TypedValue;->getDimension(Landroid/util/DisplayMetrics;)F
+	22      (0000005a) move-result          v0
+	23      (0000005c) iput                 v0, v4, Landroid/support/v7/widget/RecyclerView;->aa F
+
+getScrollFactor-BB@0x60 : [ getScrollFactor-BB@0x64 ]
+	24      (00000060) iget                 v0, v4, Landroid/support/v7/widget/RecyclerView;->aa F
+
+getScrollFactor-BB@0x64 : 
+	25      (00000064) return               v0
+
+getScrollFactor-BB@0x66 : [ getScrollFactor-BB@0x64 ]
+	26      (00000066) const/4              v0, 0
+	27      (00000068) goto                 -2
+

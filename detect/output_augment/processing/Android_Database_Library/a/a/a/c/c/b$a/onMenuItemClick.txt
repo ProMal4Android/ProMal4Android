@@ -1,0 +1,47 @@
+# La/a/a/c/c/b$a;->onMenuItemClick(Landroid/view/MenuItem;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.view.MenuItem
+#
+# - return:boolean
+
+onMenuItemClick-BB@0x0 : [ onMenuItemClick-BB@0x18 onMenuItemClick-BB@0x3e ]
+	0       (00000000) iget-object          v0, v5, La/a/a/c/c/b$a;->c Ljava/lang/reflect/Method;
+	1       (00000004) invoke-virtual       v0, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) sget-object          v1, Ljava/lang/Boolean;->TYPE Ljava/lang/Class;
+	4       (00000010) const/4              v2, 0
+	5       (00000012) const/4              v3, 1
+	6       (00000014) if-ne                v0, v1, +15
+	0:53
+	(Ljava/lang/Exception; -> 56 onMenuItemClick-BB@0x56)
+
+onMenuItemClick-BB@0x18 : 
+	7       (00000018) iget-object          v0, v5, La/a/a/c/c/b$a;->c Ljava/lang/reflect/Method;
+	8       (0000001c) iget-object          v1, v5, La/a/a/c/c/b$a;->b Ljava/lang/Object;
+	9       (00000020) new-array            v3, v3, [Ljava/lang/Object;
+	10      (00000024) aput-object          v6, v3, v2
+	11      (00000028) invoke-virtual       v0, v1, v3, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	12      (0000002e) move-result-object   v6
+	13      (00000030) check-cast           v6, Ljava/lang/Boolean;
+	14      (00000034) invoke-virtual       v6, Ljava/lang/Boolean;->booleanValue()Z
+	15      (0000003a) move-result          v6
+	16      (0000003c) return               v6
+	0:53
+	(Ljava/lang/Exception; -> 56 onMenuItemClick-BB@0x56)
+
+onMenuItemClick-BB@0x3e : 
+	17      (0000003e) iget-object          v0, v5, La/a/a/c/c/b$a;->c Ljava/lang/reflect/Method;
+	18      (00000042) iget-object          v1, v5, La/a/a/c/c/b$a;->b Ljava/lang/Object;
+	19      (00000046) new-array            v4, v3, [Ljava/lang/Object;
+	20      (0000004a) aput-object          v6, v4, v2
+	21      (0000004e) invoke-virtual       v0, v1, v4, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	22      (00000054) return               v3
+
+onMenuItemClick-BB@0x56 : 
+	23      (00000056) move-exception       v6
+	24      (00000058) new-instance         v0, Ljava/lang/RuntimeException;
+	25      (0000005c) invoke-direct        v0, v6, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+	26      (00000062) throw                v0
+

@@ -1,0 +1,64 @@
+# La/a/a/c/d/v;->onConfigurationChanged(Landroid/content/res/Configuration;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.res.Configuration
+#
+# - return:void
+
+onConfigurationChanged-BB@0x0 : [ onConfigurationChanged-BB@0x4e onConfigurationChanged-BB@0x5c ]
+	0       (00000000) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) invoke-super         v5, v6, Landroid/widget/HorizontalScrollView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+	2       (0000000a) invoke-virtual       v5, Landroid/widget/HorizontalScrollView;->getContext()Landroid/content/Context;
+	3       (00000010) move-result-object   v6
+	4       (00000012) sget-object          v0, La/a/a/b/i;->ActionBar [I
+	5       (00000016) sget                 v1, La/a/a/b/a;->actionBarStyle I
+	6       (0000001a) const/4              v2, 0
+	7       (0000001c) const/4              v3, 0
+	8       (0000001e) invoke-virtual       v6, v3, v0, v1, v2, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet; [I I I)Landroid/content/res/TypedArray;
+	9       (00000024) move-result-object   v0
+	10      (00000026) sget                 v1, La/a/a/b/i;->ActionBar_height I
+	11      (0000002a) invoke-virtual       v0, v1, v2, Landroid/content/res/TypedArray;->getLayoutDimension(I I)I
+	12      (00000030) move-result          v1
+	13      (00000032) invoke-virtual       v6, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	14      (00000038) move-result-object   v2
+	15      (0000003a) invoke-virtual       v6, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+	16      (00000040) move-result-object   v3
+	17      (00000042) iget                 v3, v3, Landroid/content/pm/ApplicationInfo;->targetSdkVersion I
+	18      (00000046) const/16             v4, 16
+	19      (0000004a) if-lt                v3, v4, +9
+
+onConfigurationChanged-BB@0x4e : [ onConfigurationChanged-BB@0x68 ]
+	20      (0000004e) invoke-virtual       v6, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	21      (00000054) move-result-object   v3
+	22      (00000056) sget                 v4, La/a/a/b/b;->abc_action_bar_embed_tabs I
+	23      (0000005a) goto                 +7
+
+onConfigurationChanged-BB@0x5c : [ onConfigurationChanged-BB@0x68 ]
+	24      (0000005c) invoke-virtual       v6, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	25      (00000062) move-result-object   v3
+	26      (00000064) sget                 v4, La/a/a/b/b;->abc_action_bar_embed_tabs_pre_jb I
+
+onConfigurationChanged-BB@0x68 : [ onConfigurationChanged-BB@0x74 onConfigurationChanged-BB@0x88 ]
+	27      (00000068) invoke-virtual       v3, v4, Landroid/content/res/Resources;->getBoolean(I)Z
+	28      (0000006e) move-result          v3
+	29      (00000070) if-nez               v3, +c
+
+onConfigurationChanged-BB@0x74 : [ onConfigurationChanged-BB@0x88 ]
+	30      (00000074) sget                 v3, La/a/a/b/c;->abc_action_bar_stacked_max_height I
+	31      (00000078) invoke-virtual       v2, v3, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+	32      (0000007e) move-result          v2
+	33      (00000080) invoke-static        v1, v2, Ljava/lang/Math;->min(I I)I
+	34      (00000086) move-result          v1
+
+onConfigurationChanged-BB@0x88 : 
+	35      (00000088) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+	36      (0000008e) invoke-virtual       v5, v1, La/a/a/c/d/v;->setContentHeight(I)V
+	37      (00000094) invoke-virtual       v6, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	38      (0000009a) move-result-object   v6
+	39      (0000009c) sget                 v0, La/a/a/b/c;->abc_action_bar_stacked_tab_max_width I
+	40      (000000a0) invoke-virtual       v6, v0, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+	41      (000000a6) move-result          v6
+	42      (000000a8) iput                 v6, v5, La/a/a/c/d/v;->g I
+	43      (000000ac) return-void          
+

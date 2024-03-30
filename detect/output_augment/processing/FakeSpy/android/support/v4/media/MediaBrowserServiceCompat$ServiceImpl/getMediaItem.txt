@@ -1,0 +1,29 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->getMediaItem(Ljava/lang/String; Landroid/support/v4/os/ResultReceiver;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.String
+# - v4:android.support.v4.os.ResultReceiver
+#
+# - return:void
+
+getMediaItem-BB@0x0 : [ getMediaItem-BB@0xc getMediaItem-BB@0x10 ]
+	0       (00000000) invoke-static        v3, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	1       (00000006) move-result          v0
+	2       (00000008) if-nez               v0, +4
+
+getMediaItem-BB@0xc : [ getMediaItem-BB@0x10 getMediaItem-BB@0x12 ]
+	3       (0000000c) if-nez               v4, +3
+
+getMediaItem-BB@0x10 : 
+	4       (00000010) return-void          
+
+getMediaItem-BB@0x12 : [ getMediaItem-BB@0x10 ]
+	5       (00000012) iget-object          v0, v2, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0 Landroid/support/v4/media/MediaBrowserServiceCompat;
+	6       (00000016) invoke-static        v0, Landroid/support/v4/media/MediaBrowserServiceCompat;->access$100(Landroid/support/v4/media/MediaBrowserServiceCompat;)Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;
+	7       (0000001c) move-result-object   v0
+	8       (0000001e) new-instance         v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$5;
+	9       (00000022) invoke-direct        v1, v2, v3, v4, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$5;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl; Ljava/lang/String; Landroid/support/v4/os/ResultReceiver;)V
+	10      (00000028) invoke-virtual       v0, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->postOrRun(Ljava/lang/Runnable;)V
+	11      (0000002e) goto                 -f
+

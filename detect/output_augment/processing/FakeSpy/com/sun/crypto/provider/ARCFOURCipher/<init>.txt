@@ -1,0 +1,17 @@
+# Lcom/sun/crypto/provider/ARCFOURCipher;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) invoke-direct        v1, Ljavax/crypto/CipherSpi;-><init>()V
+	1       (00000006) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	2       (0000000c) move-result-object   v0
+	3       (0000000e) invoke-static        v0, Lcom/sun/crypto/provider/SunJCE;->a(Ljava/lang/Class;)V
+	4       (00000014) const/16             v0, 256
+	5       (00000018) new-array            v0, v0, [I
+	6       (0000001c) iput-object          v0, v1, Lcom/sun/crypto/provider/ARCFOURCipher;->a [I
+	7       (00000020) return-void          
+

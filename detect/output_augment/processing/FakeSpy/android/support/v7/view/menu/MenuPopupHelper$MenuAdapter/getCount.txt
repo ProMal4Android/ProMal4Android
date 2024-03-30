@@ -1,0 +1,41 @@
+# Landroid/support/v7/view/menu/MenuPopupHelper$MenuAdapter;->getCount()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:int
+
+getCount-BB@0x0 : [ getCount-BB@0x10 getCount-BB@0x2e ]
+	0       (00000000) iget-object          v1, v2, Landroid/support/v7/view/menu/MenuPopupHelper$MenuAdapter;->this$0 Landroid/support/v7/view/menu/MenuPopupHelper;
+	1       (00000004) invoke-static        v1, Landroid/support/v7/view/menu/MenuPopupHelper;->access$100(Landroid/support/v7/view/menu/MenuPopupHelper;)Z
+	2       (0000000a) move-result          v1
+	3       (0000000c) if-eqz               v1, +11
+
+getCount-BB@0x10 : [ getCount-BB@0x1c ]
+	4       (00000010) iget-object          v1, v2, Landroid/support/v7/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu Landroid/support/v7/view/menu/MenuBuilder;
+	5       (00000014) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuBuilder;->getNonActionItems()Ljava/util/ArrayList;
+	6       (0000001a) move-result-object   v0
+
+getCount-BB@0x1c : [ getCount-BB@0x24 getCount-BB@0x3c ]
+	7       (0000001c) iget                 v1, v2, Landroid/support/v7/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex I
+	8       (00000020) if-gez               v1, +e
+
+getCount-BB@0x24 : [ getCount-BB@0x2c ]
+	9       (00000024) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	10      (0000002a) move-result          v1
+
+getCount-BB@0x2c : 
+	11      (0000002c) return               v1
+
+getCount-BB@0x2e : [ getCount-BB@0x1c ]
+	12      (0000002e) iget-object          v1, v2, Landroid/support/v7/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu Landroid/support/v7/view/menu/MenuBuilder;
+	13      (00000032) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
+	14      (00000038) move-result-object   v0
+	15      (0000003a) goto                 -f
+
+getCount-BB@0x3c : [ getCount-BB@0x2c ]
+	16      (0000003c) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	17      (00000042) move-result          v1
+	18      (00000044) add-int/lit8         v1, v1, -1
+	19      (00000048) goto                 -e
+

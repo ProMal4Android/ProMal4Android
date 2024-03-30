@@ -1,0 +1,86 @@
+# Landroid/support/v7/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.CharSequence
+#
+# - return:void
+
+setTitle-BB@0x0 : [ setTitle-BB@0xc setTitle-BB@0xa2 ]
+	0       (00000000) invoke-static        v4, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	1       (00000006) move-result          v1
+	2       (00000008) if-nez               v1, +4d
+
+setTitle-BB@0xc : [ setTitle-BB@0x14 setTitle-BB@0x6e ]
+	3       (0000000c) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	4       (00000010) if-nez               v1, +2f
+
+setTitle-BB@0x14 : [ setTitle-BB@0x4a setTitle-BB@0x58 ]
+	5       (00000014) invoke-virtual       v3, Landroid/support/v7/widget/Toolbar;->getContext()Landroid/content/Context;
+	6       (0000001a) move-result-object   v0
+	7       (0000001c) new-instance         v1, Landroid/widget/TextView;
+	8       (00000020) invoke-direct        v1, v0, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+	9       (00000026) iput-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	10      (0000002a) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	11      (0000002e) invoke-virtual       v1, Landroid/widget/TextView;->setSingleLine()V
+	12      (00000034) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	13      (00000038) sget-object          v2, Landroid/text/TextUtils$TruncateAt;->END Landroid/text/TextUtils$TruncateAt;
+	14      (0000003c) invoke-virtual       v1, v2, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+	15      (00000042) iget                 v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextAppearance I
+	16      (00000046) if-eqz               v1, +9
+
+setTitle-BB@0x4a : [ setTitle-BB@0x58 ]
+	17      (0000004a) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	18      (0000004e) iget                 v2, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextAppearance I
+	19      (00000052) invoke-virtual       v1, v0, v2, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context; I)V
+
+setTitle-BB@0x58 : [ setTitle-BB@0x60 setTitle-BB@0x6e ]
+	20      (00000058) iget                 v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextColor I
+	21      (0000005c) if-eqz               v1, +9
+
+setTitle-BB@0x60 : [ setTitle-BB@0x6e ]
+	22      (00000060) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	23      (00000064) iget                 v2, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextColor I
+	24      (00000068) invoke-virtual       v1, v2, Landroid/widget/TextView;->setTextColor(I)V
+
+setTitle-BB@0x6e : [ setTitle-BB@0x7e setTitle-BB@0x8a ]
+	25      (0000006e) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	26      (00000072) invoke-direct        v3, v1, Landroid/support/v7/widget/Toolbar;->isChildOrHidden(Landroid/view/View;)Z
+	27      (00000078) move-result          v1
+	28      (0000007a) if-nez               v1, +8
+
+setTitle-BB@0x7e : [ setTitle-BB@0x8a ]
+	29      (0000007e) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	30      (00000082) const/4              v2, 1
+	31      (00000084) invoke-direct        v3, v1, v2, Landroid/support/v7/widget/Toolbar;->addSystemView(Landroid/view/View; Z)V
+
+setTitle-BB@0x8a : [ setTitle-BB@0x92 setTitle-BB@0x9c ]
+	32      (0000008a) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	33      (0000008e) if-eqz               v1, +7
+
+setTitle-BB@0x92 : [ setTitle-BB@0x9c ]
+	34      (00000092) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	35      (00000096) invoke-virtual       v1, v4, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+setTitle-BB@0x9c : 
+	36      (0000009c) iput-object          v4, v3, Landroid/support/v7/widget/Toolbar;->mTitleText Ljava/lang/CharSequence;
+	37      (000000a0) return-void          
+
+setTitle-BB@0xa2 : [ setTitle-BB@0xaa setTitle-BB@0x8a ]
+	38      (000000a2) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	39      (000000a6) if-eqz               v1, -e
+
+setTitle-BB@0xaa : [ setTitle-BB@0xba setTitle-BB@0x8a ]
+	40      (000000aa) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	41      (000000ae) invoke-direct        v3, v1, Landroid/support/v7/widget/Toolbar;->isChildOrHidden(Landroid/view/View;)Z
+	42      (000000b4) move-result          v1
+	43      (000000b6) if-eqz               v1, -16
+
+setTitle-BB@0xba : [ setTitle-BB@0x8a ]
+	44      (000000ba) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	45      (000000be) invoke-virtual       v3, v1, Landroid/support/v7/widget/Toolbar;->removeView(Landroid/view/View;)V
+	46      (000000c4) iget-object          v1, v3, Landroid/support/v7/widget/Toolbar;->mHiddenViews Ljava/util/ArrayList;
+	47      (000000c8) iget-object          v2, v3, Landroid/support/v7/widget/Toolbar;->mTitleTextView Landroid/widget/TextView;
+	48      (000000cc) invoke-virtual       v1, v2, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+	49      (000000d2) goto                 -24
+

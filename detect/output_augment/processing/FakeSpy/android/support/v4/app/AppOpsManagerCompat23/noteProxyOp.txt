@@ -1,0 +1,19 @@
+# Landroid/support/v4/app/AppOpsManagerCompat23;->noteProxyOp(Landroid/content/Context; Ljava/lang/String; Ljava/lang/String;)I [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.content.Context
+# - v3:java.lang.String
+# - v4:java.lang.String
+#
+# - return:int
+
+noteProxyOp-BB@0x0 : 
+	0       (00000000) const-class          v1, Landroid/app/AppOpsManager;
+	1       (00000004) invoke-virtual       v2, v1, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) check-cast           v0, Landroid/app/AppOpsManager;
+	4       (00000010) invoke-virtual       v0, v3, v4, Landroid/app/AppOpsManager;->noteProxyOp(Ljava/lang/String; Ljava/lang/String;)I
+	5       (00000016) move-result          v1
+	6       (00000018) return               v1
+

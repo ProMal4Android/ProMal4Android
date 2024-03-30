@@ -1,0 +1,135 @@
+# Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->getStateWithUpdatedPosition()Landroid/support/v4/media/session/PlaybackStateCompat; [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v20
+#
+# - return:android.support.v4.media.session.PlaybackStateCompat
+
+getStateWithUpdatedPosition-BB@0x0 : [ getStateWithUpdatedPosition-BB@0xe ]
+	0       (00000000) const-wide/16        v10, -1 # [-1.0]
+	1       (00000004) move-object/from16   v0, v20
+	2       (00000008) iget-object          v6, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mLock Ljava/lang/Object;
+	3       (0000000c) monitor-enter        v6
+
+getStateWithUpdatedPosition-BB@0xe : [ getStateWithUpdatedPosition-BB@0x22 getStateWithUpdatedPosition-BB@0x4e ]
+	4       (0000000e) move-object/from16   v0, v20
+	5       (00000012) iget-object          v12, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mState Landroid/support/v4/media/session/PlaybackStateCompat;
+	6       (00000016) move-object/from16   v0, v20
+	7       (0000001a) iget-object          v3, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mMetadata Landroid/support/v4/media/MediaMetadataCompat;
+	8       (0000001e) if-eqz               v3, +18
+	e:4f
+	(Ljava/lang/Throwable; -> 106 getStateWithUpdatedPosition-BB@0x106)
+
+getStateWithUpdatedPosition-BB@0x22 : [ getStateWithUpdatedPosition-BB@0x3a getStateWithUpdatedPosition-BB@0x4e ]
+	9       (00000022) move-object/from16   v0, v20
+	10      (00000026) iget-object          v3, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mMetadata Landroid/support/v4/media/MediaMetadataCompat;
+	11      (0000002a) const-string         v13, 'android.media.metadata.DURATION'
+	12      (0000002e) invoke-virtual       v3, v13, Landroid/support/v4/media/MediaMetadataCompat;->containsKey(Ljava/lang/String;)Z
+	13      (00000034) move-result          v3
+	14      (00000036) if-eqz               v3, +c
+	e:4f
+	(Ljava/lang/Throwable; -> 106 getStateWithUpdatedPosition-BB@0x106)
+
+getStateWithUpdatedPosition-BB@0x3a : [ getStateWithUpdatedPosition-BB@0x4e ]
+	15      (0000003a) move-object/from16   v0, v20
+	16      (0000003e) iget-object          v3, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mMetadata Landroid/support/v4/media/MediaMetadataCompat;
+	17      (00000042) const-string         v13, 'android.media.metadata.DURATION'
+	18      (00000046) invoke-virtual       v3, v13, Landroid/support/v4/media/MediaMetadataCompat;->getLong(Ljava/lang/String;)J
+	19      (0000004c) move-result-wide     v10
+	e:4f
+	(Ljava/lang/Throwable; -> 106 getStateWithUpdatedPosition-BB@0x106)
+
+getStateWithUpdatedPosition-BB@0x4e : [ getStateWithUpdatedPosition-BB@0x56 getStateWithUpdatedPosition-BB@0x100 ]
+	20      (0000004e) monitor-exit         v6
+	21      (00000050) const/4              v9, 0
+	22      (00000052) if-eqz               v12, +57
+
+getStateWithUpdatedPosition-BB@0x56 : [ getStateWithUpdatedPosition-BB@0x64 getStateWithUpdatedPosition-BB@0x80 ]
+	23      (00000056) invoke-virtual       v12, Landroid/support/v4/media/session/PlaybackStateCompat;->getState()I
+	24      (0000005c) move-result          v3
+	25      (0000005e) const/4              v6, 3
+	26      (00000060) if-eq                v3, v6, +10
+
+getStateWithUpdatedPosition-BB@0x64 : [ getStateWithUpdatedPosition-BB@0x72 getStateWithUpdatedPosition-BB@0x80 ]
+	27      (00000064) invoke-virtual       v12, Landroid/support/v4/media/session/PlaybackStateCompat;->getState()I
+	28      (0000006a) move-result          v3
+	29      (0000006c) const/4              v6, 4
+	30      (0000006e) if-eq                v3, v6, +9
+
+getStateWithUpdatedPosition-BB@0x72 : [ getStateWithUpdatedPosition-BB@0x80 getStateWithUpdatedPosition-BB@0x100 ]
+	31      (00000072) invoke-virtual       v12, Landroid/support/v4/media/session/PlaybackStateCompat;->getState()I
+	32      (00000078) move-result          v3
+	33      (0000007a) const/4              v6, 5
+	34      (0000007c) if-ne                v3, v6, +42
+
+getStateWithUpdatedPosition-BB@0x80 : [ getStateWithUpdatedPosition-BB@0x9c getStateWithUpdatedPosition-BB@0x100 ]
+	35      (00000080) invoke-virtual       v12, Landroid/support/v4/media/session/PlaybackStateCompat;->getLastPositionUpdateTime()J
+	36      (00000086) move-result-wide     v14
+	37      (00000088) invoke-static        Landroid/os/SystemClock;->elapsedRealtime()J
+	38      (0000008e) move-result-wide     v7
+	39      (00000090) const-wide/16        v16, 0 # [0.0]
+	40      (00000094) cmp-long             v3, v14, v16
+	41      (00000098) if-lez               v3, +34
+
+getStateWithUpdatedPosition-BB@0x9c : [ getStateWithUpdatedPosition-BB@0xce getStateWithUpdatedPosition-BB@0x10c ]
+	42      (0000009c) invoke-virtual       v12, Landroid/support/v4/media/session/PlaybackStateCompat;->getPlaybackSpeed()F
+	43      (000000a2) move-result          v3
+	44      (000000a4) sub-long             v16, v7, v14
+	45      (000000a8) move-wide/from16     v0, v16
+	46      (000000ac) long-to-float        v6, v0
+	47      (000000ae) mul-float/2addr      v3, v6
+	48      (000000b0) float-to-long        v0, v3
+	49      (000000b2) move-wide/from16     v16, v0
+	50      (000000b6) invoke-virtual       v12, Landroid/support/v4/media/session/PlaybackStateCompat;->getPosition()J
+	51      (000000bc) move-result-wide     v18
+	52      (000000be) add-long             v4, v16, v18
+	53      (000000c2) const-wide/16        v16, 0 # [0.0]
+	54      (000000c6) cmp-long             v3, v10, v16
+	55      (000000ca) if-ltz               v3, +21
+
+getStateWithUpdatedPosition-BB@0xce : [ getStateWithUpdatedPosition-BB@0xd6 getStateWithUpdatedPosition-BB@0x10c ]
+	56      (000000ce) cmp-long             v3, v4, v10
+	57      (000000d2) if-lez               v3, +1d
+
+getStateWithUpdatedPosition-BB@0xd6 : [ getStateWithUpdatedPosition-BB@0xd8 ]
+	58      (000000d6) move-wide            v4, v10
+
+getStateWithUpdatedPosition-BB@0xd8 : [ getStateWithUpdatedPosition-BB@0x100 ]
+	59      (000000d8) new-instance         v2, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
+	60      (000000dc) invoke-direct        v2, v12, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;-><init>(Landroid/support/v4/media/session/PlaybackStateCompat;)V
+	61      (000000e2) invoke-virtual       v12, Landroid/support/v4/media/session/PlaybackStateCompat;->getState()I
+	62      (000000e8) move-result          v3
+	63      (000000ea) invoke-virtual       v12, Landroid/support/v4/media/session/PlaybackStateCompat;->getPlaybackSpeed()F
+	64      (000000f0) move-result          v6
+	65      (000000f2) invoke-virtual/range v2 ... v8, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->setState(I J F J)Landroid/support/v4/media/session/PlaybackStateCompat$Builder;
+	66      (000000f8) invoke-virtual       v2, Landroid/support/v4/media/session/PlaybackStateCompat$Builder;->build()Landroid/support/v4/media/session/PlaybackStateCompat;
+	67      (000000fe) move-result-object   v9
+
+getStateWithUpdatedPosition-BB@0x100 : [ getStateWithUpdatedPosition-BB@0x104 getStateWithUpdatedPosition-BB@0x11e ]
+	68      (00000100) if-nez               v9, +f
+
+getStateWithUpdatedPosition-BB@0x104 : 
+	69      (00000104) return-object        v12
+
+getStateWithUpdatedPosition-BB@0x106 : [ getStateWithUpdatedPosition-BB@0x108 ]
+	70      (00000106) move-exception       v3
+
+getStateWithUpdatedPosition-BB@0x108 : 
+	71      (00000108) monitor-exit         v6
+	72      (0000010a) throw                v3
+	108:109
+	(Ljava/lang/Throwable; -> 106 getStateWithUpdatedPosition-BB@0x106)
+
+getStateWithUpdatedPosition-BB@0x10c : [ getStateWithUpdatedPosition-BB@0x118 getStateWithUpdatedPosition-BB@0xd8 ]
+	73      (0000010c) const-wide/16        v16, 0 # [0.0]
+	74      (00000110) cmp-long             v3, v4, v16
+	75      (00000114) if-gez               v3, -1e
+
+getStateWithUpdatedPosition-BB@0x118 : [ getStateWithUpdatedPosition-BB@0xd8 ]
+	76      (00000118) const-wide/16        v4, 0 # [0.0]
+	77      (0000011c) goto                 -22
+
+getStateWithUpdatedPosition-BB@0x11e : [ getStateWithUpdatedPosition-BB@0x104 ]
+	78      (0000011e) move-object          v12, v9
+	79      (00000120) goto                 -e
+

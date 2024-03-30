@@ -1,0 +1,74 @@
+# Landroid/support/v4/content/LocalBroadcastManager;->executePendingBroadcasts()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v8
+#
+# - return:void
+
+executePendingBroadcasts-BB@0x0 : [ executePendingBroadcasts-BB@0x8 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) iget-object          v6, v8, Landroid/support/v4/content/LocalBroadcastManager;->mReceivers Ljava/util/HashMap;
+	2       (00000006) monitor-enter        v6
+
+executePendingBroadcasts-BB@0x8 : [ executePendingBroadcasts-BB@0x18 executePendingBroadcasts-BB@0x1c ]
+	3       (00000008) iget-object          v5, v8, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts Ljava/util/ArrayList;
+	4       (0000000c) invoke-virtual       v5, Ljava/util/ArrayList;->size()I
+	5       (00000012) move-result          v0
+	6       (00000014) if-gtz               v0, +4
+	8:35
+	(Ljava/lang/Throwable; -> 7c executePendingBroadcasts-BB@0x7c)
+
+executePendingBroadcasts-BB@0x18 : 
+	7       (00000018) monitor-exit         v6
+	8       (0000001a) return-void          
+	8:35
+	(Ljava/lang/Throwable; -> 7c executePendingBroadcasts-BB@0x7c)
+
+executePendingBroadcasts-BB@0x1c : [ executePendingBroadcasts-BB@0x38 ]
+	9       (0000001c) new-array            v2, v0, [Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;
+	10      (00000020) iget-object          v5, v8, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts Ljava/util/ArrayList;
+	11      (00000024) invoke-virtual       v5, v2, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+	12      (0000002a) iget-object          v5, v8, Landroid/support/v4/content/LocalBroadcastManager;->mPendingBroadcasts Ljava/util/ArrayList;
+	13      (0000002e) invoke-virtual       v5, Ljava/util/ArrayList;->clear()V
+	14      (00000034) monitor-exit         v6
+	15      (00000036) const/4              v3, 0
+
+executePendingBroadcasts-BB@0x38 : [ executePendingBroadcasts-BB@0x3e executePendingBroadcasts-BB@0x0 ]
+	16      (00000038) array-length         v5, v2
+	17      (0000003a) if-ge                v3, v5, -1d
+
+executePendingBroadcasts-BB@0x3e : [ executePendingBroadcasts-BB@0x44 ]
+	18      (0000003e) aget-object          v1, v2, v3
+	19      (00000042) const/4              v4, 0
+
+executePendingBroadcasts-BB@0x44 : [ executePendingBroadcasts-BB@0x54 executePendingBroadcasts-BB@0x82 ]
+	20      (00000044) iget-object          v5, v1, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;->receivers Ljava/util/ArrayList;
+	21      (00000048) invoke-virtual       v5, Ljava/util/ArrayList;->size()I
+	22      (0000004e) move-result          v5
+	23      (00000050) if-ge                v4, v5, +19
+
+executePendingBroadcasts-BB@0x54 : [ executePendingBroadcasts-BB@0x44 ]
+	24      (00000054) iget-object          v5, v1, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;->receivers Ljava/util/ArrayList;
+	25      (00000058) invoke-virtual       v5, v4, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	26      (0000005e) move-result-object   v5
+	27      (00000060) check-cast           v5, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;
+	28      (00000064) iget-object          v5, v5, Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;->receiver Landroid/content/BroadcastReceiver;
+	29      (00000068) iget-object          v6, v8, Landroid/support/v4/content/LocalBroadcastManager;->mAppContext Landroid/content/Context;
+	30      (0000006c) iget-object          v7, v1, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;->intent Landroid/content/Intent;
+	31      (00000070) invoke-virtual       v5, v6, v7, Landroid/content/BroadcastReceiver;->onReceive(Landroid/content/Context; Landroid/content/Intent;)V
+	32      (00000076) add-int/lit8         v4, v4, 1
+	33      (0000007a) goto                 -1b
+
+executePendingBroadcasts-BB@0x7c : [ executePendingBroadcasts-BB@0x7e ]
+	34      (0000007c) move-exception       v5
+
+executePendingBroadcasts-BB@0x7e : 
+	35      (0000007e) monitor-exit         v6
+	36      (00000080) throw                v5
+	7e:7f
+	(Ljava/lang/Throwable; -> 7c executePendingBroadcasts-BB@0x7c)
+
+executePendingBroadcasts-BB@0x82 : [ executePendingBroadcasts-BB@0x38 ]
+	37      (00000082) add-int/lit8         v3, v3, 1
+	38      (00000086) goto                 -27
+

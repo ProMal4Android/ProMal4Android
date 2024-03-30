@@ -1,0 +1,46 @@
+# Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->setupAnimatorsForTarget(Ljava/lang/String; Landroid/animation/Animator;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+# - v5:android.animation.Animator
+#
+# - return:void
+
+setupAnimatorsForTarget-BB@0x0 : [ setupAnimatorsForTarget-BB@0x22 setupAnimatorsForTarget-BB@0x28 ]
+	0       (00000000) iget-object          v1, v3, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	1       (00000004) iget-object          v1, v1, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mVectorDrawable Landroid/support/graphics/drawable/VectorDrawableCompat;
+	2       (00000008) invoke-virtual       v1, v4, Landroid/support/graphics/drawable/VectorDrawableCompat;->getTargetByName(Ljava/lang/String;)Ljava/lang/Object;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) invoke-virtual       v5, v0, Landroid/animation/Animator;->setTarget(Ljava/lang/Object;)V
+	5       (00000016) sget                 v1, Landroid/os/Build$VERSION;->SDK_INT I
+	6       (0000001a) const/16             v2, 21
+	7       (0000001e) if-ge                v1, v2, +5
+
+setupAnimatorsForTarget-BB@0x22 : [ setupAnimatorsForTarget-BB@0x28 ]
+	8       (00000022) invoke-direct        v3, v5, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->setupColorAnimator(Landroid/animation/Animator;)V
+
+setupAnimatorsForTarget-BB@0x28 : [ setupAnimatorsForTarget-BB@0x34 setupAnimatorsForTarget-BB@0x58 ]
+	9       (00000028) iget-object          v1, v3, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	10      (0000002c) iget-object          v1, v1, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mAnimators Ljava/util/ArrayList;
+	11      (00000030) if-nez               v1, +14
+
+setupAnimatorsForTarget-BB@0x34 : [ setupAnimatorsForTarget-BB@0x58 ]
+	12      (00000034) iget-object          v1, v3, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	13      (00000038) new-instance         v2, Ljava/util/ArrayList;
+	14      (0000003c) invoke-direct        v2, Ljava/util/ArrayList;-><init>()V
+	15      (00000042) iput-object          v2, v1, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mAnimators Ljava/util/ArrayList;
+	16      (00000046) iget-object          v1, v3, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	17      (0000004a) new-instance         v2, Landroid/support/v4/util/ArrayMap;
+	18      (0000004e) invoke-direct        v2, Landroid/support/v4/util/ArrayMap;-><init>()V
+	19      (00000054) iput-object          v2, v1, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mTargetNameMap Landroid/support/v4/util/ArrayMap;
+
+setupAnimatorsForTarget-BB@0x58 : 
+	20      (00000058) iget-object          v1, v3, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	21      (0000005c) iget-object          v1, v1, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mAnimators Ljava/util/ArrayList;
+	22      (00000060) invoke-virtual       v1, v5, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	23      (00000066) iget-object          v1, v3, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	24      (0000006a) iget-object          v1, v1, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mTargetNameMap Landroid/support/v4/util/ArrayMap;
+	25      (0000006e) invoke-virtual       v1, v5, v4, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	26      (00000074) return-void          
+

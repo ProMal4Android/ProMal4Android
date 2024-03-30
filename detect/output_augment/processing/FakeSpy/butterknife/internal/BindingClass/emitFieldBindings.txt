@@ -1,0 +1,68 @@
+# Lbutterknife/internal/BindingClass;->emitFieldBindings(Ljava/lang/StringBuilder; Lbutterknife/internal/ViewBindings;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:java.lang.StringBuilder
+# - v7:butterknife.internal.ViewBindings
+#
+# - return:void
+
+emitFieldBindings-BB@0x0 : [ emitFieldBindings-BB@0x14 emitFieldBindings-BB@0x16 ]
+	0       (00000000) invoke-virtual       v7, Lbutterknife/internal/ViewBindings;->getFieldBindings()Ljava/util/Collection;
+	1       (00000006) move-result-object   v1
+	2       (00000008) invoke-interface     v1, Ljava/util/Collection;->isEmpty()Z
+	3       (0000000e) move-result          v2
+	4       (00000010) if-eqz               v2, +3
+
+emitFieldBindings-BB@0x14 : 
+	5       (00000014) return-void          
+
+emitFieldBindings-BB@0x16 : [ emitFieldBindings-BB@0x1e ]
+	6       (00000016) invoke-interface     v1, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+	7       (0000001c) move-result-object   v2
+
+emitFieldBindings-BB@0x1e : [ emitFieldBindings-BB@0x2a emitFieldBindings-BB@0x14 ]
+	8       (0000001e) invoke-interface     v2, Ljava/util/Iterator;->hasNext()Z
+	9       (00000024) move-result          v3
+	10      (00000026) if-eqz               v3, -9
+
+emitFieldBindings-BB@0x2a : [ emitFieldBindings-BB@0x68 emitFieldBindings-BB@0xac ]
+	11      (0000002a) invoke-interface     v2, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	12      (00000030) move-result-object   v0
+	13      (00000032) check-cast           v0, Lbutterknife/internal/FieldViewBinding;
+	14      (00000036) const-string         v3, '    target.'
+	15      (0000003a) invoke-virtual       v6, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (00000040) move-result-object   v3
+	17      (00000042) invoke-virtual       v0, Lbutterknife/internal/FieldViewBinding;->getName()Ljava/lang/String;
+	18      (00000048) move-result-object   v4
+	19      (0000004a) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (00000050) move-result-object   v3
+	21      (00000052) const-string         v4, ' = '
+	22      (00000056) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	23      (0000005c) invoke-virtual       v0, Lbutterknife/internal/FieldViewBinding;->requiresCast()Z
+	24      (00000062) move-result          v3
+	25      (00000064) if-eqz               v3, +24
+
+emitFieldBindings-BB@0x68 : [ emitFieldBindings-BB@0x1e ]
+	26      (00000068) const-string         v3, 'finder.castView(view'
+	27      (0000006c) invoke-virtual       v6, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	28      (00000072) move-result-object   v3
+	29      (00000074) const-string         v4, ', '
+	30      (00000078) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	31      (0000007e) move-result-object   v3
+	32      (00000080) invoke-virtual       v7, Lbutterknife/internal/ViewBindings;->getId()I
+	33      (00000086) move-result          v4
+	34      (00000088) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	35      (0000008e) move-result-object   v3
+	36      (00000090) const-string         v4, ', "'
+	37      (00000094) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	38      (0000009a) invoke-static        v6, v1, Lbutterknife/internal/BindingClass;->emitHumanDescription(Ljava/lang/StringBuilder; Ljava/util/Collection;)V
+	39      (000000a0) const-string         v3, '");\n'
+	40      (000000a4) invoke-virtual       v6, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	41      (000000aa) goto                 -46
+
+emitFieldBindings-BB@0xac : [ emitFieldBindings-BB@0x1e ]
+	42      (000000ac) const-string         v3, 'view;\n'
+	43      (000000b0) invoke-virtual       v6, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	44      (000000b6) goto                 -4c
+

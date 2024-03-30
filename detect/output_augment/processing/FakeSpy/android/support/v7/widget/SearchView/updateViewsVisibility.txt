@@ -1,0 +1,81 @@
+# Landroid/support/v7/widget/SearchView;->updateViewsVisibility(Z)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:boolean
+#
+# - return:void
+
+updateViewsVisibility-BB@0x0 : [ updateViewsVisibility-BB@0x10 updateViewsVisibility-BB@0x88 ]
+	0       (00000000) const/16             v4, 8
+	1       (00000004) const/4              v5, 1
+	2       (00000006) const/4              v3, 0
+	3       (00000008) iput-boolean         v8, v7, Landroid/support/v7/widget/SearchView;->mIconified Z
+	4       (0000000c) if-eqz               v8, +3e
+
+updateViewsVisibility-BB@0x10 : [ updateViewsVisibility-BB@0x12 ]
+	5       (00000010) move                 v2, v3
+
+updateViewsVisibility-BB@0x12 : [ updateViewsVisibility-BB@0x2a updateViewsVisibility-BB@0x8c ]
+	6       (00000012) iget-object          v6, v7, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	7       (00000016) invoke-virtual       v6, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
+	8       (0000001c) move-result-object   v6
+	9       (0000001e) invoke-static        v6, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	10      (00000024) move-result          v6
+	11      (00000026) if-nez               v6, +33
+
+updateViewsVisibility-BB@0x2a : [ updateViewsVisibility-BB@0x2c ]
+	12      (0000002a) move                 v0, v5
+
+updateViewsVisibility-BB@0x2c : [ updateViewsVisibility-BB@0x44 updateViewsVisibility-BB@0x90 ]
+	13      (0000002c) iget-object          v6, v7, Landroid/support/v7/widget/SearchView;->mSearchButton Landroid/widget/ImageView;
+	14      (00000030) invoke-virtual       v6, v2, Landroid/widget/ImageView;->setVisibility(I)V
+	15      (00000036) invoke-direct        v7, v0, Landroid/support/v7/widget/SearchView;->updateSubmitButton(Z)V
+	16      (0000003c) iget-object          v6, v7, Landroid/support/v7/widget/SearchView;->mSearchEditFrame Landroid/view/View;
+	17      (00000040) if-eqz               v8, +28
+
+updateViewsVisibility-BB@0x44 : [ updateViewsVisibility-BB@0x5a updateViewsVisibility-BB@0x62 ]
+	18      (00000044) invoke-virtual       v6, v4, Landroid/view/View;->setVisibility(I)V
+	19      (0000004a) iget-object          v4, v7, Landroid/support/v7/widget/SearchView;->mCollapsedIcon Landroid/widget/ImageView;
+	20      (0000004e) invoke-virtual       v4, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+	21      (00000054) move-result-object   v4
+	22      (00000056) if-eqz               v4, +6
+
+updateViewsVisibility-BB@0x5a : [ updateViewsVisibility-BB@0x62 updateViewsVisibility-BB@0x94 ]
+	23      (0000005a) iget-boolean         v4, v7, Landroid/support/v7/widget/SearchView;->mIconifiedByDefault Z
+	24      (0000005e) if-eqz               v4, +1b
+
+updateViewsVisibility-BB@0x62 : [ updateViewsVisibility-BB@0x66 ]
+	25      (00000062) const/16             v1, 8
+
+updateViewsVisibility-BB@0x66 : [ updateViewsVisibility-BB@0x7a updateViewsVisibility-BB@0x98 ]
+	26      (00000066) iget-object          v4, v7, Landroid/support/v7/widget/SearchView;->mCollapsedIcon Landroid/widget/ImageView;
+	27      (0000006a) invoke-virtual       v4, v1, Landroid/widget/ImageView;->setVisibility(I)V
+	28      (00000070) invoke-direct        v7, Landroid/support/v7/widget/SearchView;->updateCloseButton()V
+	29      (00000076) if-nez               v0, +11
+
+updateViewsVisibility-BB@0x7a : 
+	30      (0000007a) invoke-direct        v7, v5, Landroid/support/v7/widget/SearchView;->updateVoiceButton(Z)V
+	31      (00000080) invoke-direct        v7, Landroid/support/v7/widget/SearchView;->updateSubmitArea()V
+	32      (00000086) return-void          
+
+updateViewsVisibility-BB@0x88 : [ updateViewsVisibility-BB@0x12 ]
+	33      (00000088) move                 v2, v4
+	34      (0000008a) goto                 -3c
+
+updateViewsVisibility-BB@0x8c : [ updateViewsVisibility-BB@0x2c ]
+	35      (0000008c) move                 v0, v3
+	36      (0000008e) goto                 -31
+
+updateViewsVisibility-BB@0x90 : [ updateViewsVisibility-BB@0x44 ]
+	37      (00000090) move                 v4, v3
+	38      (00000092) goto                 -27
+
+updateViewsVisibility-BB@0x94 : [ updateViewsVisibility-BB@0x66 ]
+	39      (00000094) const/4              v1, 0
+	40      (00000096) goto                 -18
+
+updateViewsVisibility-BB@0x98 : [ updateViewsVisibility-BB@0x7a ]
+	41      (00000098) move                 v5, v3
+	42      (0000009a) goto                 -10
+

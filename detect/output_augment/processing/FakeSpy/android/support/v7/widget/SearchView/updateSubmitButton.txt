@@ -1,0 +1,38 @@
+# Landroid/support/v7/widget/SearchView;->updateSubmitButton(Z)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:boolean
+#
+# - return:void
+
+updateSubmitButton-BB@0x0 : [ updateSubmitButton-BB@0xc updateSubmitButton-BB@0x32 ]
+	0       (00000000) const/16             v0, 8
+	1       (00000004) iget-boolean         v1, v2, Landroid/support/v7/widget/SearchView;->mSubmitButtonEnabled Z
+	2       (00000008) if-eqz               v1, +15
+
+updateSubmitButton-BB@0xc : [ updateSubmitButton-BB@0x18 updateSubmitButton-BB@0x32 ]
+	3       (0000000c) invoke-direct        v2, Landroid/support/v7/widget/SearchView;->isSubmitAreaEnabled()Z
+	4       (00000012) move-result          v1
+	5       (00000014) if-eqz               v1, +f
+
+updateSubmitButton-BB@0x18 : [ updateSubmitButton-BB@0x24 updateSubmitButton-BB@0x32 ]
+	6       (00000018) invoke-virtual       v2, Landroid/support/v7/widget/SearchView;->hasFocus()Z
+	7       (0000001e) move-result          v1
+	8       (00000020) if-eqz               v1, +9
+
+updateSubmitButton-BB@0x24 : [ updateSubmitButton-BB@0x28 updateSubmitButton-BB@0x30 ]
+	9       (00000024) if-nez               v3, +6
+
+updateSubmitButton-BB@0x28 : [ updateSubmitButton-BB@0x30 updateSubmitButton-BB@0x32 ]
+	10      (00000028) iget-boolean         v1, v2, Landroid/support/v7/widget/SearchView;->mVoiceButtonEnabled Z
+	11      (0000002c) if-nez               v1, +3
+
+updateSubmitButton-BB@0x30 : [ updateSubmitButton-BB@0x32 ]
+	12      (00000030) const/4              v0, 0
+
+updateSubmitButton-BB@0x32 : 
+	13      (00000032) iget-object          v1, v2, Landroid/support/v7/widget/SearchView;->mGoButton Landroid/widget/ImageView;
+	14      (00000036) invoke-virtual       v1, v0, Landroid/widget/ImageView;->setVisibility(I)V
+	15      (0000003c) return-void          
+

@@ -1,0 +1,31 @@
+# Landroid/support/v7/widget/ActionMenuView;-><init>(Landroid/content/Context; Landroid/util/AttributeSet;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.content.Context
+# - v4:android.util.AttributeSet
+#
+# - return:void
+
+<init>-BB@0x0 : 
+	0       (00000000) const/4              v0, 0
+	1       (00000002) invoke-direct        v2, v3, v4, v0, La/a/a/e/e;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	2       (00000008) iput-object          v3, v2, Landroid/support/v7/widget/ActionMenuView;->q Landroid/content/Context;
+	3       (0000000c) invoke-virtual       v2, v0, La/a/a/e/e;->setBaselineAligned(Z)V
+	4       (00000012) invoke-virtual       v3, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	5       (00000018) move-result-object   v4
+	6       (0000001a) invoke-virtual       v4, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+	7       (00000020) move-result-object   v4
+	8       (00000022) iget                 v4, v4, Landroid/util/DisplayMetrics;->density F
+	9       (00000026) const/high16         v1, 16992 # [56.0]
+	10      (0000002a) mul-float            v1, v1, v4
+	11      (0000002e) float-to-int         v1, v1
+	12      (00000030) iput                 v1, v2, Landroid/support/v7/widget/ActionMenuView;->y I
+	13      (00000034) const/high16         v1, 16512 # [4.0]
+	14      (00000038) mul-float            v4, v4, v1
+	15      (0000003c) float-to-int         v4, v4
+	16      (0000003e) iput                 v4, v2, Landroid/support/v7/widget/ActionMenuView;->z I
+	17      (00000042) iput-object          v3, v2, Landroid/support/v7/widget/ActionMenuView;->r Landroid/content/Context;
+	18      (00000046) iput                 v0, v2, Landroid/support/v7/widget/ActionMenuView;->s I
+	19      (0000004a) return-void          
+

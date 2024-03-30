@@ -1,0 +1,109 @@
+# Landroid/support/v7/widget/RecyclerView;->fling(I I)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v7
+# - v8:int
+# - v9:int
+#
+# - return:boolean
+
+fling-BB@0x0 : [ fling-BB@0xc fling-BB@0x1c ]
+	0       (00000000) const/4              v4, 1
+	1       (00000002) const/4              v3, 0
+	2       (00000004) iget-object          v5, v7, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	3       (00000008) if-nez               v5, +a
+
+fling-BB@0xc : [ fling-BB@0x1a ]
+	4       (0000000c) const-string         v4, 'RecyclerView'
+	5       (00000010) const-string         v5, 'Cannot fling without a LayoutManager set. Call setLayoutManager with a non-null argument.'
+	6       (00000014) invoke-static        v4, v5, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+
+fling-BB@0x1a : 
+	7       (0000001a) return               v3
+
+fling-BB@0x1c : [ fling-BB@0x24 fling-BB@0x1a ]
+	8       (0000001c) iget-boolean         v5, v7, Landroid/support/v7/widget/RecyclerView;->mLayoutFrozen Z
+	9       (00000020) if-nez               v5, -3
+
+fling-BB@0x24 : [ fling-BB@0x40 fling-BB@0x50 ]
+	10      (00000024) iget-object          v5, v7, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	11      (00000028) invoke-virtual       v5, Landroid/support/v7/widget/RecyclerView$LayoutManager;->canScrollHorizontally()Z
+	12      (0000002e) move-result          v1
+	13      (00000030) iget-object          v5, v7, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	14      (00000034) invoke-virtual       v5, Landroid/support/v7/widget/RecyclerView$LayoutManager;->canScrollVertically()Z
+	15      (0000003a) move-result          v2
+	16      (0000003c) if-eqz               v1, +a
+
+fling-BB@0x40 : [ fling-BB@0x50 fling-BB@0x52 ]
+	17      (00000040) invoke-static        v8, Ljava/lang/Math;->abs(I)I
+	18      (00000046) move-result          v5
+	19      (00000048) iget                 v6, v7, Landroid/support/v7/widget/RecyclerView;->mMinFlingVelocity I
+	20      (0000004c) if-ge                v5, v6, +3
+
+fling-BB@0x50 : [ fling-BB@0x52 ]
+	21      (00000050) const/4              v8, 0
+
+fling-BB@0x52 : [ fling-BB@0x56 fling-BB@0x66 ]
+	22      (00000052) if-eqz               v2, +a
+
+fling-BB@0x56 : [ fling-BB@0x66 fling-BB@0x68 ]
+	23      (00000056) invoke-static        v9, Ljava/lang/Math;->abs(I)I
+	24      (0000005c) move-result          v5
+	25      (0000005e) iget                 v6, v7, Landroid/support/v7/widget/RecyclerView;->mMinFlingVelocity I
+	26      (00000062) if-ge                v5, v6, +3
+
+fling-BB@0x66 : [ fling-BB@0x68 ]
+	27      (00000066) const/4              v9, 0
+
+fling-BB@0x68 : [ fling-BB@0x6c fling-BB@0x70 ]
+	28      (00000068) if-nez               v8, +4
+
+fling-BB@0x6c : [ fling-BB@0x70 fling-BB@0x1a ]
+	29      (0000006c) if-eqz               v9, -29
+
+fling-BB@0x70 : [ fling-BB@0x80 fling-BB@0x1a ]
+	30      (00000070) int-to-float         v5, v8
+	31      (00000072) int-to-float         v6, v9
+	32      (00000074) invoke-virtual       v7, v5, v6, Landroid/support/v7/widget/RecyclerView;->dispatchNestedPreFling(F F)Z
+	33      (0000007a) move-result          v5
+	34      (0000007c) if-nez               v5, -31
+
+fling-BB@0x80 : [ fling-BB@0x84 fling-BB@0x88 ]
+	35      (00000080) if-nez               v1, +4
+
+fling-BB@0x84 : [ fling-BB@0x88 fling-BB@0xda ]
+	36      (00000084) if-eqz               v2, +2b
+
+fling-BB@0x88 : [ fling-BB@0x8a ]
+	37      (00000088) move                 v0, v4
+
+fling-BB@0x8a : [ fling-BB@0x98 fling-BB@0x1a ]
+	38      (0000008a) int-to-float         v5, v8
+	39      (0000008c) int-to-float         v6, v9
+	40      (0000008e) invoke-virtual       v7, v5, v6, v0, Landroid/support/v7/widget/RecyclerView;->dispatchNestedFling(F F Z)Z
+	41      (00000094) if-eqz               v0, -3d
+
+fling-BB@0x98 : [ fling-BB@0x1a ]
+	42      (00000098) iget                 v3, v7, Landroid/support/v7/widget/RecyclerView;->mMaxFlingVelocity I
+	43      (0000009c) neg-int              v3, v3
+	44      (0000009e) iget                 v5, v7, Landroid/support/v7/widget/RecyclerView;->mMaxFlingVelocity I
+	45      (000000a2) invoke-static        v8, v5, Ljava/lang/Math;->min(I I)I
+	46      (000000a8) move-result          v5
+	47      (000000aa) invoke-static        v3, v5, Ljava/lang/Math;->max(I I)I
+	48      (000000b0) move-result          v8
+	49      (000000b2) iget                 v3, v7, Landroid/support/v7/widget/RecyclerView;->mMaxFlingVelocity I
+	50      (000000b6) neg-int              v3, v3
+	51      (000000b8) iget                 v5, v7, Landroid/support/v7/widget/RecyclerView;->mMaxFlingVelocity I
+	52      (000000bc) invoke-static        v9, v5, Ljava/lang/Math;->min(I I)I
+	53      (000000c2) move-result          v5
+	54      (000000c4) invoke-static        v3, v5, Ljava/lang/Math;->max(I I)I
+	55      (000000ca) move-result          v9
+	56      (000000cc) iget-object          v3, v7, Landroid/support/v7/widget/RecyclerView;->mViewFlinger Landroid/support/v7/widget/RecyclerView$ViewFlinger;
+	57      (000000d0) invoke-virtual       v3, v8, v9, Landroid/support/v7/widget/RecyclerView$ViewFlinger;->fling(I I)V
+	58      (000000d6) move                 v3, v4
+	59      (000000d8) goto                 -5f
+
+fling-BB@0xda : [ fling-BB@0x8a ]
+	60      (000000da) move                 v0, v3
+	61      (000000dc) goto                 -29
+

@@ -1,0 +1,16 @@
+# La/a/a/c/d/s;->getIdentifier(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String;)I [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+# - v3:java.lang.String
+# - v4:java.lang.String
+#
+# - return:int
+
+getIdentifier-BB@0x0 : 
+	0       (00000000) iget-object          v0, v1, La/a/a/c/d/s;->a Landroid/content/res/Resources;
+	1       (00000004) invoke-virtual       v0, v2, v3, v4, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String;)I
+	2       (0000000a) move-result          v2
+	3       (0000000c) return               v2
+

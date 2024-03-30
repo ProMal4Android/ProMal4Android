@@ -1,0 +1,48 @@
+# Lkk/util/NetUtil;->readBytes(Ljava/io/InputStream;)[B [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.io.InputStream
+#
+# - return:byte[]
+
+readBytes-BB@0x0 : [ readBytes-BB@0x4 ]
+	0       (00000000) const/16             v4, 1024
+
+readBytes-BB@0x4 : [ readBytes-BB@0x14 ]
+	1       (00000004) new-array            v1, v4, [B
+	2       (00000008) const/4              v3, -1
+	3       (0000000a) new-instance         v0, Ljava/io/ByteArrayOutputStream;
+	4       (0000000e) invoke-direct        v0, Ljava/io/ByteArrayOutputStream;-><init>()V
+	4:29
+	(Ljava/lang/Exception; -> 2c readBytes-BB@0x2c)
+
+readBytes-BB@0x14 : [ readBytes-BB@0x22 readBytes-BB@0x38 ]
+	5       (00000014) invoke-virtual       v5, v1, Ljava/io/InputStream;->read([B)I
+	6       (0000001a) move-result          v3
+	7       (0000001c) const/4              v4, -1
+	8       (0000001e) if-eq                v3, v4, +d
+	4:29
+	(Ljava/lang/Exception; -> 2c readBytes-BB@0x2c)
+
+readBytes-BB@0x22 : [ readBytes-BB@0x14 ]
+	9       (00000022) const/4              v4, 0
+	10      (00000024) invoke-virtual       v0, v1, v4, v3, Ljava/io/ByteArrayOutputStream;->write([B I I)V
+	11      (0000002a) goto                 -b
+
+readBytes-BB@0x2c : [ readBytes-BB@0x36 ]
+	12      (0000002c) move-exception       v2
+	13      (0000002e) invoke-virtual       v2, Ljava/lang/Exception;->printStackTrace()V
+	14      (00000034) const/4              v4, 0
+
+readBytes-BB@0x36 : 
+	15      (00000036) return-object        v4
+
+readBytes-BB@0x38 : [ readBytes-BB@0x36 ]
+	16      (00000038) invoke-virtual       v0, Ljava/io/ByteArrayOutputStream;->close()V
+	17      (0000003e) invoke-virtual       v0, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+	18      (00000044) move-result-object   v4
+	19      (00000046) goto                 -8
+	38:43
+	(Ljava/lang/Exception; -> 2c readBytes-BB@0x2c)
+

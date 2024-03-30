@@ -1,0 +1,23 @@
+# Landroid/support/v7/app/AppCompatDelegateImplV14;->getTwilightManager()Landroid/support/v7/app/TwilightManager; [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:android.support.v7.app.TwilightManager
+
+getTwilightManager-BB@0x0 : [ getTwilightManager-BB@0x8 getTwilightManager-BB@0x22 ]
+	0       (00000000) sget-object          v0, Landroid/support/v7/app/AppCompatDelegateImplV14;->sTwilightManager Landroid/support/v7/app/TwilightManager;
+	1       (00000004) if-nez               v0, +f
+
+getTwilightManager-BB@0x8 : [ getTwilightManager-BB@0x22 ]
+	2       (00000008) new-instance         v0, Landroid/support/v7/app/TwilightManager;
+	3       (0000000c) iget-object          v1, v2, Landroid/support/v7/app/AppCompatDelegateImplV14;->mContext Landroid/content/Context;
+	4       (00000010) invoke-virtual       v1, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+	5       (00000016) move-result-object   v1
+	6       (00000018) invoke-direct        v0, v1, Landroid/support/v7/app/TwilightManager;-><init>(Landroid/content/Context;)V
+	7       (0000001e) sput-object          v0, Landroid/support/v7/app/AppCompatDelegateImplV14;->sTwilightManager Landroid/support/v7/app/TwilightManager;
+
+getTwilightManager-BB@0x22 : 
+	8       (00000022) sget-object          v0, Landroid/support/v7/app/AppCompatDelegateImplV14;->sTwilightManager Landroid/support/v7/app/TwilightManager;
+	9       (00000026) return-object        v0
+

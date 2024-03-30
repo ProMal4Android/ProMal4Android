@@ -1,0 +1,25 @@
+# Landroid/support/design/widget/TabLayout;->getTabScrollRange()I [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:int
+
+getTabScrollRange-BB@0x0 : 
+	0       (00000000) const/4              v0, 0
+	1       (00000002) iget-object          v1, v3, Landroid/support/design/widget/TabLayout;->mTabStrip Landroid/support/design/widget/TabLayout$SlidingTabStrip;
+	2       (00000006) invoke-virtual       v1, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getWidth()I
+	3       (0000000c) move-result          v1
+	4       (0000000e) invoke-virtual       v3, Landroid/support/design/widget/TabLayout;->getWidth()I
+	5       (00000014) move-result          v2
+	6       (00000016) sub-int/2addr        v1, v2
+	7       (00000018) invoke-virtual       v3, Landroid/support/design/widget/TabLayout;->getPaddingLeft()I
+	8       (0000001e) move-result          v2
+	9       (00000020) sub-int/2addr        v1, v2
+	10      (00000022) invoke-virtual       v3, Landroid/support/design/widget/TabLayout;->getPaddingRight()I
+	11      (00000028) move-result          v2
+	12      (0000002a) sub-int/2addr        v1, v2
+	13      (0000002c) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	14      (00000032) move-result          v0
+	15      (00000034) return               v0
+

@@ -1,0 +1,47 @@
+# Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->findExpandedIndex()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:void
+
+findExpandedIndex-BB@0x0 : [ findExpandedIndex-BB@0x14 findExpandedIndex-BB@0x4e ]
+	0       (00000000) iget-object          v5, v6, Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->this$0 Landroid/support/v7/view/menu/ListMenuPresenter;
+	1       (00000004) iget-object          v5, v5, Landroid/support/v7/view/menu/ListMenuPresenter;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	2       (00000008) invoke-virtual       v5, Landroid/support/v7/view/menu/MenuBuilder;->getExpandedItem()Landroid/support/v7/view/menu/MenuItemImpl;
+	3       (0000000e) move-result-object   v1
+	4       (00000010) if-eqz               v1, +1f
+
+findExpandedIndex-BB@0x14 : [ findExpandedIndex-BB@0x2e ]
+	5       (00000014) iget-object          v5, v6, Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->this$0 Landroid/support/v7/view/menu/ListMenuPresenter;
+	6       (00000018) iget-object          v5, v5, Landroid/support/v7/view/menu/ListMenuPresenter;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	7       (0000001c) invoke-virtual       v5, Landroid/support/v7/view/menu/MenuBuilder;->getNonActionItems()Ljava/util/ArrayList;
+	8       (00000022) move-result-object   v4
+	9       (00000024) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	10      (0000002a) move-result          v0
+	11      (0000002c) const/4              v2, 0
+
+findExpandedIndex-BB@0x2e : [ findExpandedIndex-BB@0x32 findExpandedIndex-BB@0x4e ]
+	12      (0000002e) if-ge                v2, v0, +10
+
+findExpandedIndex-BB@0x32 : [ findExpandedIndex-BB@0x42 findExpandedIndex-BB@0x48 ]
+	13      (00000032) invoke-virtual       v4, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	14      (00000038) move-result-object   v3
+	15      (0000003a) check-cast           v3, Landroid/support/v7/view/menu/MenuItemImpl;
+	16      (0000003e) if-ne                v3, v1, +5
+
+findExpandedIndex-BB@0x42 : [ findExpandedIndex-BB@0x46 ]
+	17      (00000042) iput                 v2, v6, Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->mExpandedIndex I
+
+findExpandedIndex-BB@0x46 : 
+	18      (00000046) return-void          
+
+findExpandedIndex-BB@0x48 : [ findExpandedIndex-BB@0x2e ]
+	19      (00000048) add-int/lit8         v2, v2, 1
+	20      (0000004c) goto                 -f
+
+findExpandedIndex-BB@0x4e : [ findExpandedIndex-BB@0x46 ]
+	21      (0000004e) const/4              v5, -1
+	22      (00000050) iput                 v5, v6, Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;->mExpandedIndex I
+	23      (00000054) goto                 -7
+

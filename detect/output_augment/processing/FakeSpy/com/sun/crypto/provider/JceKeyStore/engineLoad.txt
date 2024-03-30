@@ -1,0 +1,533 @@
+# Lcom/sun/crypto/provider/JceKeyStore;->engineLoad(Ljava/io/InputStream; [C)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v19
+# - v20:java.io.InputStream
+# - v21:char[]
+#
+# - return:void
+
+engineLoad-BB@0x0 : [ engineLoad-BB@0x14 engineLoad-BB@0x18 ]
+	0       (00000000) move-object/from16   v0, v19
+	1       (00000004) iget-object          v10, v0, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	2       (00000008) monitor-enter        v10
+	3       (0000000a) const/4              v2, 0
+	4       (0000000c) const/4              v7, 0
+	5       (0000000e) const/4              v6, 0
+	6       (00000010) if-nez               v20, +4
+
+engineLoad-BB@0x14 : [ engineLoad-BB@0x16 ]
+	7       (00000014) monitor-exit         v10
+	14:43
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0x16 : 
+	8       (00000016) return-void          
+	14:43
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0x18 : [ engineLoad-BB@0x1c engineLoad-BB@0x9e ]
+	9       (00000018) if-eqz               v21, +43
+	14:43
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0x1c : [ engineLoad-BB@0x48 ]
+	10      (0000001c) move-object/from16   v0, v19
+	11      (00000020) move-object/from16   v1, v21
+	12      (00000024) invoke-direct        v0, v1, Lcom/sun/crypto/provider/JceKeyStore;->a([C)Ljava/security/MessageDigest;
+	13      (0000002a) move-result-object   v2
+	14      (0000002c) new-instance         v3, Ljava/io/DataInputStream;
+	15      (00000030) new-instance         v4, Ljava/security/DigestInputStream;
+	16      (00000034) move-object/from16   v0, v20
+	17      (00000038) invoke-direct        v4, v0, v2, Ljava/security/DigestInputStream;-><init>(Ljava/io/InputStream; Ljava/security/MessageDigest;)V
+	18      (0000003e) invoke-direct        v3, v4, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+	19      (00000044) move-object          v4, v3
+	20      (00000046) move-object          v3, v2
+
+engineLoad-BB@0x48 : [ engineLoad-BB@0x4a ]
+	21      (00000048) const/4              v5, 0
+
+engineLoad-BB@0x4a : [ engineLoad-BB@0x64 engineLoad-BB@0x6e ]
+	22      (0000004a) invoke-virtual       v4, Ljava/io/DataInputStream;->readInt()I
+	23      (00000050) move-result          v2
+	24      (00000052) invoke-virtual       v4, Ljava/io/DataInputStream;->readInt()I
+	25      (00000058) move-result          v11
+	26      (0000005a) const                v8, -825307442 # [-1734829824.0]
+	27      (00000060) if-eq                v2, v8, +7
+	4a:89
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x64 : [ engineLoad-BB@0x6e engineLoad-BB@0x7a ]
+	28      (00000064) const                v8, -17957139 # [-1.5817534266708449e+38]
+	29      (0000006a) if-ne                v2, v8, +8
+	4a:89
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x6e : [ engineLoad-BB@0x74 engineLoad-BB@0xb2 ]
+	30      (0000006e) const/4              v2, 1
+	31      (00000070) if-eq                v11, v2, +21
+	4a:89
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x74 : [ engineLoad-BB@0x7a engineLoad-BB@0xb2 ]
+	32      (00000074) const/4              v2, 2
+	33      (00000076) if-eq                v11, v2, +1e
+	4a:89
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x7a : 
+	34      (0000007a) new-instance         v2, Ljava/io/IOException;
+	35      (0000007e) const-string         v3, 'Invalid keystore format'
+	36      (00000082) invoke-direct        v2, v3, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	37      (00000088) throw                v2
+	4a:89
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x8a : [ engineLoad-BB@0x8c ]
+	38      (0000008a) move-exception       v2
+
+engineLoad-BB@0x8c : [ engineLoad-BB@0x90 engineLoad-BB@0x3dc ]
+	39      (0000008c) if-eqz               v5, +1a8
+
+engineLoad-BB@0x90 : [ engineLoad-BB@0x96 ]
+	40      (00000090) invoke-virtual       v5, Ljava/io/ObjectInputStream;->close()V
+	90:9b
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0x96 : 
+	41      (00000096) throw                v2
+	90:9b
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0x98 : 
+	42      (00000098) move-exception       v2
+	43      (0000009a) monitor-exit         v10
+	44      (0000009c) throw                v2
+
+engineLoad-BB@0x9e : [ engineLoad-BB@0x48 ]
+	45      (0000009e) new-instance         v3, Ljava/io/DataInputStream;
+	46      (000000a2) move-object/from16   v0, v20
+	47      (000000a6) invoke-direct        v3, v0, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+	48      (000000ac) move-object          v4, v3
+	49      (000000ae) move-object          v3, v2
+	50      (000000b0) goto                 -34
+	9e:ab
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0xb2 : [ engineLoad-BB@0xb8 engineLoad-BB@0x1b8 ]
+	51      (000000b2) const/4              v2, 1
+	52      (000000b4) if-ne                v11, v2, +82
+
+engineLoad-BB@0xb8 : [ engineLoad-BB@0xc6 ]
+	53      (000000b8) const-string         v2, 'X509'
+	54      (000000bc) invoke-static        v2, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
+	55      (000000c2) move-result-object   v7
+	56      (000000c4) move-object          v9, v6
+	b8:11f
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0xc6 : [ engineLoad-BB@0xe0 ]
+	57      (000000c6) move-object/from16   v0, v19
+	58      (000000ca) iget-object          v2, v0, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	59      (000000ce) invoke-virtual       v2, Ljava/util/Hashtable;->clear()V
+	60      (000000d4) invoke-virtual       v4, Ljava/io/DataInputStream;->readInt()I
+	61      (000000da) move-result          v12
+	62      (000000dc) const/4              v2, 0
+	63      (000000de) move                 v8, v2
+	b8:11f
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0xe0 : [ engineLoad-BB@0xe4 engineLoad-BB@0x382 ]
+	64      (000000e0) if-ge                v8, v12, +151
+	b8:11f
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0xe4 : [ engineLoad-BB@0xf2 engineLoad-BB@0x234 ]
+	65      (000000e4) invoke-virtual       v4, Ljava/io/DataInputStream;->readInt()I
+	66      (000000ea) move-result          v2
+	67      (000000ec) const/4              v6, 1
+	68      (000000ee) if-ne                v2, v6, +a3
+	b8:11f
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0xf2 : [ engineLoad-BB@0x120 ]
+	69      (000000f2) new-instance         v13, Lcom/sun/crypto/provider/JceKeyStore$ai;
+	70      (000000f6) const/4              v2, 0
+	71      (000000f8) invoke-direct        v13, v2, Lcom/sun/crypto/provider/JceKeyStore$ai;-><init>(Lcom/sun/crypto/provider/JceKeyStore$1;)V
+	72      (000000fe) invoke-virtual       v4, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+	73      (00000104) move-result-object   v14
+	74      (00000106) new-instance         v2, Ljava/util/Date;
+	75      (0000010a) invoke-virtual       v4, Ljava/io/DataInputStream;->readLong()J
+	76      (00000110) move-result-wide     v16
+	77      (00000112) move-wide/from16     v0, v16
+	78      (00000116) invoke-direct        v2, v0, v1, Ljava/util/Date;-><init>(J)V
+	79      (0000011c) iput-object          v2, v13, Lcom/sun/crypto/provider/JceKeyStore$ai;->a Ljava/util/Date;
+	b8:11f
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x120 : [ engineLoad-BB@0x130 ]
+	80      (00000120) invoke-virtual       v4, Ljava/io/DataInputStream;->readInt()I
+	81      (00000126) move-result          v2
+	82      (00000128) new-array            v2, v2, [B
+	83      (0000012c) iput-object          v2, v13, Lcom/sun/crypto/provider/JceKeyStore$ai;->b [B
+	120:12f
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+	(Ljava/lang/OutOfMemoryError; -> 1c8 engineLoad-BB@0x1c8)
+
+engineLoad-BB@0x130 : [ engineLoad-BB@0x146 engineLoad-BB@0x14e ]
+	84      (00000130) iget-object          v2, v13, Lcom/sun/crypto/provider/JceKeyStore$ai;->b [B
+	85      (00000134) invoke-virtual       v4, v2, Ljava/io/DataInputStream;->readFully([B)V
+	86      (0000013a) invoke-virtual       v4, Ljava/io/DataInputStream;->readInt()I
+	87      (00000140) move-result          v15
+	88      (00000142) if-lez               v15, +6
+	130:13f
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x146 : [ engineLoad-BB@0x14e ]
+	89      (00000146) new-array            v2, v15, [Ljava/security/cert/Certificate;
+	90      (0000014a) iput-object          v2, v13, Lcom/sun/crypto/provider/JceKeyStore$ai;->c [Ljava/security/cert/Certificate;
+	146:14d
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+	(Ljava/lang/OutOfMemoryError; -> 1da engineLoad-BB@0x1da)
+
+engineLoad-BB@0x14e : [ engineLoad-BB@0x154 ]
+	91      (0000014e) const/4              v2, 0
+	92      (00000150) move                 v6, v2
+	93      (00000152) move-object          v2, v7
+
+engineLoad-BB@0x154 : [ engineLoad-BB@0x158 engineLoad-BB@0x20e ]
+	94      (00000154) if-ge                v6, v15, +5d
+
+engineLoad-BB@0x158 : [ engineLoad-BB@0x15e engineLoad-BB@0x17e ]
+	95      (00000158) const/4              v7, 2
+	96      (0000015a) if-ne                v11, v7, +12
+
+engineLoad-BB@0x15e : [ engineLoad-BB@0x172 engineLoad-BB@0x1ec ]
+	97      (0000015e) invoke-virtual       v4, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+	98      (00000164) move-result-object   v7
+	99      (00000166) invoke-virtual       v9, v7, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
+	100     (0000016c) move-result          v2
+	101     (0000016e) if-eqz               v2, +3f
+	15e:17d
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x172 : [ engineLoad-BB@0x17e ]
+	102     (00000172) invoke-virtual       v9, v7, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	103     (00000178) move-result-object   v2
+	104     (0000017a) check-cast           v2, Ljava/security/cert/CertificateFactory;
+	15e:17d
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x17e : [ engineLoad-BB@0x18a ]
+	105     (0000017e) invoke-virtual       v4, Ljava/io/DataInputStream;->readInt()I
+	106     (00000184) move-result          v7
+	107     (00000186) new-array            v7, v7, [B
+	17e:189
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+	(Ljava/lang/OutOfMemoryError; -> 1fc engineLoad-BB@0x1fc)
+
+engineLoad-BB@0x18a : [ engineLoad-BB@0x154 ]
+	108     (0000018a) invoke-virtual       v4, v7, Ljava/io/DataInputStream;->readFully([B)V
+	109     (00000190) new-instance         v16, Ljava/io/ByteArrayInputStream;
+	110     (00000194) move-object/from16   v0, v16
+	111     (00000198) invoke-direct        v0, v7, Ljava/io/ByteArrayInputStream;-><init>([B)V
+	112     (0000019e) iget-object          v7, v13, Lcom/sun/crypto/provider/JceKeyStore$ai;->c [Ljava/security/cert/Certificate;
+	113     (000001a2) move-object/from16   v0, v16
+	114     (000001a6) invoke-virtual       v2, v0, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
+	115     (000001ac) move-result-object   v16
+	116     (000001ae) aput-object          v16, v7, v6
+	117     (000001b2) add-int/lit8         v6, v6, 1
+	118     (000001b6) goto                 -31
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x1b8 : [ engineLoad-BB@0xc6 ]
+	119     (000001b8) new-instance         v2, Ljava/util/Hashtable;
+	120     (000001bc) const/4              v6, 3
+	121     (000001be) invoke-direct        v2, v6, Ljava/util/Hashtable;-><init>(I)V
+	122     (000001c4) move-object          v9, v2
+	123     (000001c6) goto                 -80
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x1c8 : 
+	124     (000001c8) move-exception       v2
+	125     (000001ca) new-instance         v2, Ljava/io/IOException;
+	126     (000001ce) const-string         v3, 'Keysize too big'
+	127     (000001d2) invoke-direct        v2, v3, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	128     (000001d8) throw                v2
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x1da : 
+	129     (000001da) move-exception       v2
+	130     (000001dc) new-instance         v2, Ljava/io/IOException;
+	131     (000001e0) const-string         v3, 'Too many certificates in chain'
+	132     (000001e4) invoke-direct        v2, v3, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	133     (000001ea) throw                v2
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x1ec : [ engineLoad-BB@0x17e ]
+	134     (000001ec) invoke-static        v7, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
+	135     (000001f2) move-result-object   v2
+	136     (000001f4) invoke-virtual       v9, v7, v2, Ljava/util/Hashtable;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	137     (000001fa) goto                 -3e
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x1fc : 
+	138     (000001fc) move-exception       v2
+	139     (000001fe) new-instance         v2, Ljava/io/IOException;
+	140     (00000202) const-string         v3, 'Certificate too big'
+	141     (00000206) invoke-direct        v2, v3, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	142     (0000020c) throw                v2
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x20e : [ engineLoad-BB@0x226 ]
+	143     (0000020e) move-object/from16   v0, v19
+	144     (00000212) iget-object          v6, v0, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	145     (00000216) invoke-virtual       v6, v14, v13, Ljava/util/Hashtable;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	146     (0000021c) move-object/from16   v18, v5
+	147     (00000220) move-object          v5, v2
+	148     (00000222) move-object/from16   v2, v18
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x226 : [ engineLoad-BB@0xe0 ]
+	149     (00000226) add-int/lit8         v6, v8, 1
+	150     (0000022a) move                 v8, v6
+	151     (0000022c) move-object          v7, v5
+	152     (0000022e) move-object          v5, v2
+	153     (00000230) goto/16              -a8
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x234 : [ engineLoad-BB@0x23a engineLoad-BB@0x2ee ]
+	154     (00000234) const/4              v6, 2
+	155     (00000236) if-ne                v2, v6, +5c
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x23a : [ engineLoad-BB@0x26a engineLoad-BB@0x3ea ]
+	156     (0000023a) new-instance         v6, Lcom/sun/crypto/provider/JceKeyStore$ak;
+	157     (0000023e) const/4              v2, 0
+	158     (00000240) invoke-direct        v6, v2, Lcom/sun/crypto/provider/JceKeyStore$ak;-><init>(Lcom/sun/crypto/provider/JceKeyStore$1;)V
+	159     (00000246) invoke-virtual       v4, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+	160     (0000024c) move-result-object   v13
+	161     (0000024e) new-instance         v2, Ljava/util/Date;
+	162     (00000252) invoke-virtual       v4, Ljava/io/DataInputStream;->readLong()J
+	163     (00000258) move-result-wide     v14
+	164     (0000025a) invoke-direct        v2, v14, v15, Ljava/util/Date;-><init>(J)V
+	165     (00000260) iput-object          v2, v6, Lcom/sun/crypto/provider/JceKeyStore$ak;->a Ljava/util/Date;
+	166     (00000264) const/4              v2, 2
+	167     (00000266) if-ne                v11, v2, +c2
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x26a : [ engineLoad-BB@0x27e engineLoad-BB@0x2cc ]
+	168     (0000026a) invoke-virtual       v4, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+	169     (00000270) move-result-object   v7
+	170     (00000272) invoke-virtual       v9, v7, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
+	171     (00000278) move-result          v2
+	172     (0000027a) if-eqz               v2, +29
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x27e : [ engineLoad-BB@0x28a ]
+	173     (0000027e) invoke-virtual       v9, v7, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	174     (00000284) move-result-object   v2
+	175     (00000286) check-cast           v2, Ljava/security/cert/CertificateFactory;
+	18a:289
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x28a : [ engineLoad-BB@0x296 ]
+	176     (0000028a) invoke-virtual       v4, Ljava/io/DataInputStream;->readInt()I
+	177     (00000290) move-result          v7
+	178     (00000292) new-array            v7, v7, [B
+	28a:295
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+	(Ljava/lang/OutOfMemoryError; -> 2dc engineLoad-BB@0x2dc)
+
+engineLoad-BB@0x296 : [ engineLoad-BB@0x226 ]
+	179     (00000296) invoke-virtual       v4, v7, Ljava/io/DataInputStream;->readFully([B)V
+	180     (0000029c) new-instance         v14, Ljava/io/ByteArrayInputStream;
+	181     (000002a0) invoke-direct        v14, v7, Ljava/io/ByteArrayInputStream;-><init>([B)V
+	182     (000002a6) invoke-virtual       v2, v14, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
+	183     (000002ac) move-result-object   v7
+	184     (000002ae) iput-object          v7, v6, Lcom/sun/crypto/provider/JceKeyStore$ak;->b Ljava/security/cert/Certificate;
+	185     (000002b2) move-object/from16   v0, v19
+	186     (000002b6) iget-object          v7, v0, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	187     (000002ba) invoke-virtual       v7, v13, v6, Ljava/util/Hashtable;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	188     (000002c0) move-object/from16   v18, v5
+	189     (000002c4) move-object          v5, v2
+	190     (000002c6) move-object/from16   v2, v18
+	191     (000002ca) goto                 -52
+	296:321
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x2cc : [ engineLoad-BB@0x28a ]
+	192     (000002cc) invoke-static        v7, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
+	193     (000002d2) move-result-object   v2
+	194     (000002d4) invoke-virtual       v9, v7, v2, Ljava/util/Hashtable;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	195     (000002da) goto                 -28
+	296:321
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x2dc : 
+	196     (000002dc) move-exception       v2
+	197     (000002de) new-instance         v2, Ljava/io/IOException;
+	198     (000002e2) const-string         v3, 'Certificate too big'
+	199     (000002e6) invoke-direct        v2, v3, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	200     (000002ec) throw                v2
+	296:321
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x2ee : [ engineLoad-BB@0x2f4 engineLoad-BB@0x372 ]
+	201     (000002ee) const/4              v6, 3
+	202     (000002f0) if-ne                v2, v6, +41
+	296:321
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x2f4 : [ engineLoad-BB@0x322 ]
+	203     (000002f4) new-instance         v13, Lcom/sun/crypto/provider/JceKeyStore$aj;
+	204     (000002f8) const/4              v2, 0
+	205     (000002fa) invoke-direct        v13, v2, Lcom/sun/crypto/provider/JceKeyStore$aj;-><init>(Lcom/sun/crypto/provider/JceKeyStore$1;)V
+	206     (00000300) invoke-virtual       v4, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+	207     (00000306) move-result-object   v14
+	208     (00000308) new-instance         v2, Ljava/util/Date;
+	209     (0000030c) invoke-virtual       v4, Ljava/io/DataInputStream;->readLong()J
+	210     (00000312) move-result-wide     v16
+	211     (00000314) move-wide/from16     v0, v16
+	212     (00000318) invoke-direct        v2, v0, v1, Ljava/util/Date;-><init>(J)V
+	213     (0000031e) iput-object          v2, v13, Lcom/sun/crypto/provider/JceKeyStore$aj;->a Ljava/util/Date;
+	296:321
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x322 : [ engineLoad-BB@0x32c ]
+	214     (00000322) new-instance         v6, Ljava/io/ObjectInputStream;
+	215     (00000326) invoke-direct        v6, v4, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
+	322:32b
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+	(Ljava/lang/ClassNotFoundException; -> 352 engineLoad-BB@0x352)
+
+engineLoad-BB@0x32c : [ engineLoad-BB@0x33c ]
+	216     (0000032c) invoke-virtual       v6, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
+	217     (00000332) move-result-object   v2
+	218     (00000334) check-cast           v2, Ljavax/crypto/SealedObject;
+	219     (00000338) iput-object          v2, v13, Lcom/sun/crypto/provider/JceKeyStore$aj;->b Ljavax/crypto/SealedObject;
+	32c:33b
+	(Ljava/lang/Throwable; -> 36a engineLoad-BB@0x36a)
+	(Ljava/lang/ClassNotFoundException; -> 3e6 engineLoad-BB@0x3e6)
+
+engineLoad-BB@0x33c : [ engineLoad-BB@0x226 ]
+	220     (0000033c) move-object/from16   v0, v19
+	221     (00000340) iget-object          v2, v0, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	222     (00000344) invoke-virtual       v2, v14, v13, Ljava/util/Hashtable;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+	223     (0000034a) move-object          v2, v6
+	224     (0000034c) move-object          v5, v7
+	225     (0000034e) goto/16              -94
+	33c:369
+	(Ljava/lang/Throwable; -> 36a engineLoad-BB@0x36a)
+
+engineLoad-BB@0x352 : [ engineLoad-BB@0x356 ]
+	226     (00000352) move-exception       v2
+	227     (00000354) move-object          v6, v5
+	33c:369
+	(Ljava/lang/Throwable; -> 36a engineLoad-BB@0x36a)
+
+engineLoad-BB@0x356 : 
+	228     (00000356) new-instance         v3, Ljava/io/IOException;
+	229     (0000035a) invoke-virtual       v2, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
+	230     (00000360) move-result-object   v2
+	231     (00000362) invoke-direct        v3, v2, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	232     (00000368) throw                v3
+	33c:369
+	(Ljava/lang/Throwable; -> 36a engineLoad-BB@0x36a)
+
+engineLoad-BB@0x36a : [ engineLoad-BB@0x8c ]
+	233     (0000036a) move-exception       v2
+	234     (0000036c) move-object          v5, v6
+	235     (0000036e) goto/16              -171
+
+engineLoad-BB@0x372 : 
+	236     (00000372) new-instance         v2, Ljava/io/IOException;
+	237     (00000376) const-string         v3, 'Unrecognized keystore entry'
+	238     (0000037a) invoke-direct        v2, v3, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	239     (00000380) throw                v2
+	372:3bd
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x382 : [ engineLoad-BB@0x386 engineLoad-BB@0x3c4 ]
+	240     (00000382) if-eqz               v21, +21
+	372:3bd
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x386 : [ engineLoad-BB@0x39c ]
+	241     (00000386) invoke-virtual       v3, Ljava/security/MessageDigest;->digest()[B
+	242     (0000038c) move-result-object   v3
+	243     (0000038e) array-length         v2, v3
+	244     (00000390) new-array            v6, v2, [B
+	245     (00000394) invoke-virtual       v4, v6, Ljava/io/DataInputStream;->readFully([B)V
+	246     (0000039a) const/4              v2, 0
+	372:3bd
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x39c : [ engineLoad-BB@0x3a2 engineLoad-BB@0x3c4 ]
+	247     (0000039c) array-length         v7, v3
+	248     (0000039e) if-ge                v2, v7, +13
+	372:3bd
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x3a2 : [ engineLoad-BB@0x3ae engineLoad-BB@0x3be ]
+	249     (000003a2) aget-byte            v7, v3, v2
+	250     (000003a6) aget-byte            v8, v6, v2
+	251     (000003aa) if-eq                v7, v8, +a
+	372:3bd
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x3ae : 
+	252     (000003ae) new-instance         v2, Ljava/io/IOException;
+	253     (000003b2) const-string         v3, 'Keystore was tampered with, or password was incorrect'
+	254     (000003b6) invoke-direct        v2, v3, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	255     (000003bc) throw                v2
+	372:3bd
+	(Ljava/lang/Throwable; -> 8a engineLoad-BB@0x8a)
+
+engineLoad-BB@0x3be : [ engineLoad-BB@0x39c ]
+	256     (000003be) add-int/lit8         v2, v2, 1
+	257     (000003c2) goto                 -13
+
+engineLoad-BB@0x3c4 : [ engineLoad-BB@0x3c8 engineLoad-BB@0x3d4 ]
+	258     (000003c4) if-eqz               v5, +8
+
+engineLoad-BB@0x3c8 : [ engineLoad-BB@0x3ce ]
+	259     (000003c8) invoke-virtual       v5, Ljava/io/ObjectInputStream;->close()V
+	3c8:3e1
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0x3ce : [ engineLoad-BB@0x16 ]
+	260     (000003ce) monitor-exit         v10
+	261     (000003d0) goto/16              -1dd
+	3c8:3e1
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0x3d4 : [ engineLoad-BB@0x3ce ]
+	262     (000003d4) invoke-virtual       v4, Ljava/io/DataInputStream;->close()V
+	263     (000003da) goto                 -6
+	3c8:3e1
+	(Ljava/lang/Throwable; -> 98 engineLoad-BB@0x98)
+
+engineLoad-BB@0x3dc : [ engineLoad-BB@0x96 ]
+	264     (000003dc) invoke-virtual       v4, Ljava/io/DataInputStream;->close()V
+	265     (000003e2) goto/16              -1a6
+
+engineLoad-BB@0x3e6 : [ engineLoad-BB@0x356 ]
+	266     (000003e6) move-exception       v2
+	267     (000003e8) goto                 -49
+
+engineLoad-BB@0x3ea : [ engineLoad-BB@0x28a ]
+	268     (000003ea) move-object          v2, v7
+	269     (000003ec) goto/16              -b1
+

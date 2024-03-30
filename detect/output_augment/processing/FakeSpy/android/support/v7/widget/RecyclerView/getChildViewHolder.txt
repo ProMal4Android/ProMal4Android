@@ -1,0 +1,40 @@
+# Landroid/support/v7/widget/RecyclerView;->getChildViewHolder(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.view.View
+#
+# - return:android.support.v7.widget.RecyclerView$ViewHolder
+
+getChildViewHolder-BB@0x0 : [ getChildViewHolder-BB@0xc getChildViewHolder-BB@0x56 ]
+	0       (00000000) invoke-virtual       v5, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+	1       (00000006) move-result-object   v0
+	2       (00000008) if-eqz               v0, +27
+
+getChildViewHolder-BB@0xc : [ getChildViewHolder-BB@0x10 getChildViewHolder-BB@0x56 ]
+	3       (0000000c) if-eq                v0, v4, +25
+
+getChildViewHolder-BB@0x10 : 
+	4       (00000010) new-instance         v1, Ljava/lang/IllegalArgumentException;
+	5       (00000014) new-instance         v2, Ljava/lang/StringBuilder;
+	6       (00000018) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	7       (0000001e) const-string         v3, 'View '
+	8       (00000022) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000028) move-result-object   v2
+	10      (0000002a) invoke-virtual       v2, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	11      (00000030) move-result-object   v2
+	12      (00000032) const-string         v3, ' is not a direct child of '
+	13      (00000036) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (0000003c) move-result-object   v2
+	15      (0000003e) invoke-virtual       v2, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	16      (00000044) move-result-object   v2
+	17      (00000046) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	18      (0000004c) move-result-object   v2
+	19      (0000004e) invoke-direct        v1, v2, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	20      (00000054) throw                v1
+
+getChildViewHolder-BB@0x56 : 
+	21      (00000056) invoke-static        v5, Landroid/support/v7/widget/RecyclerView;->getChildViewHolderInt(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+	22      (0000005c) move-result-object   v1
+	23      (0000005e) return-object        v1
+

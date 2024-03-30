@@ -1,0 +1,26 @@
+# Lcom/sun/crypto/provider/DESKeyGenerator;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x20 <init>-BB@0x30 ]
+	0       (00000000) invoke-direct        v2, Ljavax/crypto/KeyGeneratorSpi;-><init>()V
+	1       (00000006) const/4              v0, 0
+	2       (00000008) iput-object          v0, v2, Lcom/sun/crypto/provider/DESKeyGenerator;->a Ljava/security/SecureRandom;
+	3       (0000000c) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	4       (00000012) move-result-object   v0
+	5       (00000014) invoke-static        v0, Lcom/sun/crypto/provider/SunJCE;->b(Ljava/lang/Class;)Z
+	6       (0000001a) move-result          v0
+	7       (0000001c) if-nez               v0, +a
+
+<init>-BB@0x20 : 
+	8       (00000020) new-instance         v0, Ljava/lang/SecurityException;
+	9       (00000024) const-string         v1, 'The SunJCE provider may have been tampered.'
+	10      (00000028) invoke-direct        v0, v1, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+	11      (0000002e) throw                v0
+
+<init>-BB@0x30 : 
+	12      (00000030) return-void          
+

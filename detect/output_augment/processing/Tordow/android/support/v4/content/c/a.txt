@@ -1,0 +1,28 @@
+# Landroid/support/v4/content/c;->a(Landroid/content/Context; I)Landroid/graphics/drawable/Drawable; [access_flags=public static final]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.content.Context
+# - v3:int
+#
+# - return:android.graphics.drawable.Drawable
+
+a-BB@0x0 : [ a-BB@0xc a-BB@0x16 ]
+	0       (00000000) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) const/16             v1, 21
+	2       (00000008) if-lt                v0, v1, +7
+
+a-BB@0xc : [ a-BB@0x14 ]
+	3       (0000000c) invoke-static        v2, v3, Landroid/support/v4/content/d;->a(Landroid/content/Context; I)Landroid/graphics/drawable/Drawable;
+	4       (00000012) move-result-object   v0
+
+a-BB@0x14 : 
+	5       (00000014) return-object        v0
+
+a-BB@0x16 : [ a-BB@0x14 ]
+	6       (00000016) invoke-virtual       v2, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	7       (0000001c) move-result-object   v0
+	8       (0000001e) invoke-virtual       v0, v3, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+	9       (00000024) move-result-object   v0
+	10      (00000026) goto                 -9
+

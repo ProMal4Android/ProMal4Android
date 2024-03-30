@@ -1,0 +1,274 @@
+# Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/view/View; I)V [access_flags=public final]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:android.view.View
+# - v12:int
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x18 a-BB@0x38 ]
+	0       (00000000) const/4              v3, 1
+	1       (00000002) const/4              v2, 0
+	2       (00000004) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	3       (0000000a) move-result-object   v0
+	4       (0000000c) check-cast           v0, Landroid/support/design/widget/CoordinatorLayout$e;
+	5       (00000010) iget-object          v1, v0, Landroid/support/design/widget/CoordinatorLayout$e;->k Landroid/view/View;
+	6       (00000014) if-nez               v1, +12
+
+a-BB@0x18 : [ a-BB@0x22 a-BB@0x38 ]
+	7       (00000018) iget                 v1, v0, Landroid/support/design/widget/CoordinatorLayout$e;->f I
+	8       (0000001c) const/4              v4, -1
+	9       (0000001e) if-eq                v1, v4, +d
+
+a-BB@0x22 : [ a-BB@0x24 ]
+	10      (00000022) move                 v1, v3
+
+a-BB@0x24 : [ a-BB@0x28 a-BB@0x3c ]
+	11      (00000024) if-eqz               v1, +c
+
+a-BB@0x28 : 
+	12      (00000028) new-instance         v0, Ljava/lang/IllegalStateException;
+	13      (0000002c) const-string         v1, 'An anchor may not be changed after CoordinatorLayout measurement begins before layout is complete.'
+	14      (00000030) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	15      (00000036) throw                v0
+
+a-BB@0x38 : [ a-BB@0x24 ]
+	16      (00000038) move                 v1, v2
+	17      (0000003a) goto                 -b
+
+a-BB@0x3c : [ a-BB@0x44 a-BB@0xc2 ]
+	18      (0000003c) iget-object          v1, v0, Landroid/support/design/widget/CoordinatorLayout$e;->k Landroid/view/View;
+	19      (00000040) if-eqz               v1, +41
+
+a-BB@0x44 : [ a-BB@0x5e ]
+	20      (00000044) iget-object          v0, v0, Landroid/support/design/widget/CoordinatorLayout$e;->k Landroid/view/View;
+	21      (00000048) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	22      (0000004e) invoke-static        Landroid/support/design/widget/CoordinatorLayout;->a()Landroid/graphics/Rect;
+	23      (00000054) move-result-object   v1
+	24      (00000056) invoke-static        Landroid/support/design/widget/CoordinatorLayout;->a()Landroid/graphics/Rect;
+	25      (0000005c) move-result-object   v2
+
+a-BB@0x5e : [ a-BB@0xb0 ]
+	26      (0000005e) invoke-static        v10, v0, v1, Lcom/realtalk/ed;->a(Landroid/view/ViewGroup; Landroid/view/View; Landroid/graphics/Rect;)V
+	27      (00000064) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	28      (0000006a) move-result-object   v3
+	29      (0000006c) check-cast           v3, Landroid/support/design/widget/CoordinatorLayout$e;
+	30      (00000070) invoke-virtual       v11, Landroid/view/View;->getMeasuredWidth()I
+	31      (00000076) move-result          v4
+	32      (00000078) invoke-virtual       v11, Landroid/view/View;->getMeasuredHeight()I
+	33      (0000007e) move-result          v5
+	34      (00000080) move                 v0, v12
+	35      (00000082) invoke-static/range  v0 ... v5, Landroid/support/design/widget/CoordinatorLayout;->a(I Landroid/graphics/Rect; Landroid/graphics/Rect; Landroid/support/design/widget/CoordinatorLayout$e; I I)V
+	36      (00000088) invoke-direct        v10, v3, v2, v4, v5, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/support/design/widget/CoordinatorLayout$e; Landroid/graphics/Rect; I I)V
+	37      (0000008e) iget                 v0, v2, Landroid/graphics/Rect;->left I
+	38      (00000092) iget                 v3, v2, Landroid/graphics/Rect;->top I
+	39      (00000096) iget                 v4, v2, Landroid/graphics/Rect;->right I
+	40      (0000009a) iget                 v5, v2, Landroid/graphics/Rect;->bottom I
+	41      (0000009e) invoke-virtual       v11, v0, v3, v4, v5, Landroid/view/View;->layout(I I I I)V
+	42      (000000a4) invoke-static        v1, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/graphics/Rect;)V
+	43      (000000aa) invoke-static        v2, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/graphics/Rect;)V
+	5e:a3
+	(Ljava/lang/Throwable; -> b2 a-BB@0xb2)
+
+a-BB@0xb0 : 
+	44      (000000b0) return-void          
+
+a-BB@0xb2 : 
+	45      (000000b2) move-exception       v0
+	46      (000000b4) invoke-static        v1, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/graphics/Rect;)V
+	47      (000000ba) invoke-static        v2, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/graphics/Rect;)V
+	48      (000000c0) throw                v0
+
+a-BB@0xc2 : [ a-BB@0xca a-BB@0x1ce ]
+	49      (000000c2) iget                 v1, v0, Landroid/support/design/widget/CoordinatorLayout$e;->e I
+	50      (000000c6) if-ltz               v1, +84
+
+a-BB@0xca : [ a-BB@0x11a a-BB@0x11e ]
+	51      (000000ca) iget                 v1, v0, Landroid/support/design/widget/CoordinatorLayout$e;->e I
+	52      (000000ce) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	53      (000000d4) move-result-object   v0
+	54      (000000d6) check-cast           v0, Landroid/support/design/widget/CoordinatorLayout$e;
+	55      (000000da) iget                 v4, v0, Landroid/support/design/widget/CoordinatorLayout$e;->c I
+	56      (000000de) invoke-static        v4, Landroid/support/design/widget/CoordinatorLayout;->d(I)I
+	57      (000000e4) move-result          v4
+	58      (000000e6) invoke-static        v4, v12, Lcom/realtalk/co;->a(I I)I
+	59      (000000ec) move-result          v4
+	60      (000000ee) and-int/lit8         v5, v4, 7
+	61      (000000f2) and-int/lit8         v4, v4, 112
+	62      (000000f6) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getWidth()I
+	63      (000000fc) move-result          v6
+	64      (000000fe) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getHeight()I
+	65      (00000104) move-result          v7
+	66      (00000106) invoke-virtual       v11, Landroid/view/View;->getMeasuredWidth()I
+	67      (0000010c) move-result          v8
+	68      (0000010e) invoke-virtual       v11, Landroid/view/View;->getMeasuredHeight()I
+	69      (00000114) move-result          v9
+	70      (00000116) if-ne                v12, v3, +4
+
+a-BB@0x11a : [ a-BB@0x11e ]
+	71      (0000011a) sub-int              v1, v6, v1
+
+a-BB@0x11e : [ D:a-BB@0x12e 1:a-BB@0x1b4 5:a-BB@0x1ae ]
+	72      (0000011e) invoke-direct        v10, v1, Landroid/support/design/widget/CoordinatorLayout;->b(I)I
+	73      (00000124) move-result          v1
+	74      (00000126) sub-int/2addr        v1, v8
+	75      (00000128) sparse-switch        v5, +ec (0x300)
+
+a-BB@0x12e : [ a-BB@0x130 ]
+	76      (0000012e) move                 v3, v1
+
+a-BB@0x130 : [ D:a-BB@0x136 16:a-BB@0x1c4 80:a-BB@0x1be ]
+	77      (00000130) sparse-switch        v4, +f2 (0x314)
+
+a-BB@0x136 : [ a-BB@0x138 ]
+	78      (00000136) move                 v1, v2
+
+a-BB@0x138 : [ a-BB@0xb0 ]
+	79      (00000138) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getPaddingLeft()I
+	80      (0000013e) move-result          v2
+	81      (00000140) iget                 v4, v0, Landroid/support/design/widget/CoordinatorLayout$e;->leftMargin I
+	82      (00000144) add-int/2addr        v2, v4
+	83      (00000146) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getPaddingRight()I
+	84      (0000014c) move-result          v4
+	85      (0000014e) sub-int              v4, v6, v4
+	86      (00000152) sub-int/2addr        v4, v8
+	87      (00000154) iget                 v5, v0, Landroid/support/design/widget/CoordinatorLayout$e;->rightMargin I
+	88      (00000158) sub-int/2addr        v4, v5
+	89      (0000015a) invoke-static        v3, v4, Ljava/lang/Math;->min(I I)I
+	90      (00000160) move-result          v3
+	91      (00000162) invoke-static        v2, v3, Ljava/lang/Math;->max(I I)I
+	92      (00000168) move-result          v2
+	93      (0000016a) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getPaddingTop()I
+	94      (00000170) move-result          v3
+	95      (00000172) iget                 v4, v0, Landroid/support/design/widget/CoordinatorLayout$e;->topMargin I
+	96      (00000176) add-int/2addr        v3, v4
+	97      (00000178) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getPaddingBottom()I
+	98      (0000017e) move-result          v4
+	99      (00000180) sub-int              v4, v7, v4
+	100     (00000184) sub-int/2addr        v4, v9
+	101     (00000186) iget                 v0, v0, Landroid/support/design/widget/CoordinatorLayout$e;->bottomMargin I
+	102     (0000018a) sub-int              v0, v4, v0
+	103     (0000018e) invoke-static        v1, v0, Ljava/lang/Math;->min(I I)I
+	104     (00000194) move-result          v0
+	105     (00000196) invoke-static        v3, v0, Ljava/lang/Math;->max(I I)I
+	106     (0000019c) move-result          v0
+	107     (0000019e) add-int              v1, v2, v8
+	108     (000001a2) add-int              v3, v0, v9
+	109     (000001a6) invoke-virtual       v11, v2, v0, v1, v3, Landroid/view/View;->layout(I I I I)V
+	110     (000001ac) goto                 -7e
+
+a-BB@0x1ae : [ a-BB@0x130 ]
+	111     (000001ae) add-int/2addr        v1, v8
+	112     (000001b0) move                 v3, v1
+	113     (000001b2) goto                 -41
+
+a-BB@0x1b4 : [ a-BB@0x130 ]
+	114     (000001b4) div-int/lit8         v3, v8, 2
+	115     (000001b8) add-int/2addr        v1, v3
+	116     (000001ba) move                 v3, v1
+	117     (000001bc) goto                 -46
+
+a-BB@0x1be : [ a-BB@0x138 ]
+	118     (000001be) add-int/lit8         v1, v9, 0
+	119     (000001c2) goto                 -45
+
+a-BB@0x1c4 : [ a-BB@0x138 ]
+	120     (000001c4) div-int/lit8         v1, v9, 2
+	121     (000001c8) add-int/lit8         v1, v1, 0
+	122     (000001cc) goto                 -4a
+
+a-BB@0x1ce : [ a-BB@0x23c a-BB@0x2ac ]
+	123     (000001ce) invoke-virtual       v11, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	124     (000001d4) move-result-object   v0
+	125     (000001d6) check-cast           v0, Landroid/support/design/widget/CoordinatorLayout$e;
+	126     (000001da) invoke-static        Landroid/support/design/widget/CoordinatorLayout;->a()Landroid/graphics/Rect;
+	127     (000001e0) move-result-object   v3
+	128     (000001e2) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getPaddingLeft()I
+	129     (000001e8) move-result          v1
+	130     (000001ea) iget                 v2, v0, Landroid/support/design/widget/CoordinatorLayout$e;->leftMargin I
+	131     (000001ee) add-int/2addr        v1, v2
+	132     (000001f0) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getPaddingTop()I
+	133     (000001f6) move-result          v2
+	134     (000001f8) iget                 v4, v0, Landroid/support/design/widget/CoordinatorLayout$e;->topMargin I
+	135     (000001fc) add-int/2addr        v2, v4
+	136     (000001fe) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getWidth()I
+	137     (00000204) move-result          v4
+	138     (00000206) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getPaddingRight()I
+	139     (0000020c) move-result          v5
+	140     (0000020e) sub-int/2addr        v4, v5
+	141     (00000210) iget                 v5, v0, Landroid/support/design/widget/CoordinatorLayout$e;->rightMargin I
+	142     (00000214) sub-int/2addr        v4, v5
+	143     (00000216) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getHeight()I
+	144     (0000021c) move-result          v5
+	145     (0000021e) invoke-virtual       v10, Landroid/support/design/widget/CoordinatorLayout;->getPaddingBottom()I
+	146     (00000224) move-result          v6
+	147     (00000226) sub-int/2addr        v5, v6
+	148     (00000228) iget                 v6, v0, Landroid/support/design/widget/CoordinatorLayout$e;->bottomMargin I
+	149     (0000022c) sub-int/2addr        v5, v6
+	150     (0000022e) invoke-virtual       v3, v1, v2, v4, v5, Landroid/graphics/Rect;->set(I I I I)V
+	151     (00000234) iget-object          v1, v10, Landroid/support/design/widget/CoordinatorLayout;->g Lcom/realtalk/dg;
+	152     (00000238) if-eqz               v1, +3a
+
+a-BB@0x23c : [ a-BB@0x248 a-BB@0x2ac ]
+	153     (0000023c) invoke-static        v10, Lcom/realtalk/cz;->n(Landroid/view/View;)Z
+	154     (00000242) move-result          v1
+	155     (00000244) if-eqz               v1, +34
+
+a-BB@0x248 : [ a-BB@0x254 a-BB@0x2ac ]
+	156     (00000248) invoke-static        v11, Lcom/realtalk/cz;->n(Landroid/view/View;)Z
+	157     (0000024e) move-result          v1
+	158     (00000250) if-nez               v1, +2e
+
+a-BB@0x254 : [ a-BB@0x2ac ]
+	159     (00000254) iget                 v1, v3, Landroid/graphics/Rect;->left I
+	160     (00000258) iget-object          v2, v10, Landroid/support/design/widget/CoordinatorLayout;->g Lcom/realtalk/dg;
+	161     (0000025c) invoke-virtual       v2, Lcom/realtalk/dg;->a()I
+	162     (00000262) move-result          v2
+	163     (00000264) add-int/2addr        v1, v2
+	164     (00000266) iput                 v1, v3, Landroid/graphics/Rect;->left I
+	165     (0000026a) iget                 v1, v3, Landroid/graphics/Rect;->top I
+	166     (0000026e) iget-object          v2, v10, Landroid/support/design/widget/CoordinatorLayout;->g Lcom/realtalk/dg;
+	167     (00000272) invoke-virtual       v2, Lcom/realtalk/dg;->b()I
+	168     (00000278) move-result          v2
+	169     (0000027a) add-int/2addr        v1, v2
+	170     (0000027c) iput                 v1, v3, Landroid/graphics/Rect;->top I
+	171     (00000280) iget                 v1, v3, Landroid/graphics/Rect;->right I
+	172     (00000284) iget-object          v2, v10, Landroid/support/design/widget/CoordinatorLayout;->g Lcom/realtalk/dg;
+	173     (00000288) invoke-virtual       v2, Lcom/realtalk/dg;->c()I
+	174     (0000028e) move-result          v2
+	175     (00000290) sub-int/2addr        v1, v2
+	176     (00000292) iput                 v1, v3, Landroid/graphics/Rect;->right I
+	177     (00000296) iget                 v1, v3, Landroid/graphics/Rect;->bottom I
+	178     (0000029a) iget-object          v2, v10, Landroid/support/design/widget/CoordinatorLayout;->g Lcom/realtalk/dg;
+	179     (0000029e) invoke-virtual       v2, Lcom/realtalk/dg;->d()I
+	180     (000002a4) move-result          v2
+	181     (000002a6) sub-int/2addr        v1, v2
+	182     (000002a8) iput                 v1, v3, Landroid/graphics/Rect;->bottom I
+
+a-BB@0x2ac : [ a-BB@0xb0 ]
+	183     (000002ac) invoke-static        Landroid/support/design/widget/CoordinatorLayout;->a()Landroid/graphics/Rect;
+	184     (000002b2) move-result-object   v4
+	185     (000002b4) iget                 v0, v0, Landroid/support/design/widget/CoordinatorLayout$e;->c I
+	186     (000002b8) invoke-static        v0, Landroid/support/design/widget/CoordinatorLayout;->c(I)I
+	187     (000002be) move-result          v0
+	188     (000002c0) invoke-virtual       v11, Landroid/view/View;->getMeasuredWidth()I
+	189     (000002c6) move-result          v1
+	190     (000002c8) invoke-virtual       v11, Landroid/view/View;->getMeasuredHeight()I
+	191     (000002ce) move-result          v2
+	192     (000002d0) move                 v5, v12
+	193     (000002d2) invoke-static/range  v0 ... v5, Lcom/realtalk/co;->a(I I I Landroid/graphics/Rect; Landroid/graphics/Rect; I)V
+	194     (000002d8) iget                 v0, v4, Landroid/graphics/Rect;->left I
+	195     (000002dc) iget                 v1, v4, Landroid/graphics/Rect;->top I
+	196     (000002e0) iget                 v2, v4, Landroid/graphics/Rect;->right I
+	197     (000002e4) iget                 v5, v4, Landroid/graphics/Rect;->bottom I
+	198     (000002e8) invoke-virtual       v11, v0, v1, v2, v5, Landroid/view/View;->layout(I I I I)V
+	199     (000002ee) invoke-static        v3, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/graphics/Rect;)V
+	200     (000002f4) invoke-static        v4, Landroid/support/design/widget/CoordinatorLayout;->a(Landroid/graphics/Rect;)V
+	201     (000002fa) goto/16              -125
+
+a-BB@0x2fe : 
+	202     (000002fe) nop                  
+	203     (00000300) sparse-switch-payload 1 5
+	204     (00000314) sparse-switch-payload 10 50
+

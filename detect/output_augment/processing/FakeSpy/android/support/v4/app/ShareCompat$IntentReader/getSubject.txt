@@ -1,0 +1,14 @@
+# Landroid/support/v4/app/ShareCompat$IntentReader;->getSubject()Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:java.lang.String
+
+getSubject-BB@0x0 : 
+	0       (00000000) iget-object          v0, v2, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent Landroid/content/Intent;
+	1       (00000004) const-string         v1, 'android.intent.extra.SUBJECT'
+	2       (00000008) invoke-virtual       v0, v1, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+	3       (0000000e) move-result-object   v0
+	4       (00000010) return-object        v0
+

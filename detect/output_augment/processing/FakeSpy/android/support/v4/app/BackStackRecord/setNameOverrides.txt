@@ -1,0 +1,36 @@
+# Landroid/support/v4/app/BackStackRecord;->setNameOverrides(Landroid/support/v4/app/BackStackRecord$TransitionState; Ljava/util/ArrayList; Ljava/util/ArrayList;)V [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.support.v4.app.BackStackRecord$TransitionState
+# - v5:java.util.ArrayList
+# - v6:java.util.ArrayList
+#
+# - return:void
+
+setNameOverrides-BB@0x0 : [ setNameOverrides-BB@0x4 setNameOverrides-BB@0x3a ]
+	0       (00000000) if-eqz               v5, +1d
+
+setNameOverrides-BB@0x4 : [ setNameOverrides-BB@0x6 ]
+	1       (00000004) const/4              v0, 0
+
+setNameOverrides-BB@0x6 : [ setNameOverrides-BB@0x12 setNameOverrides-BB@0x3a ]
+	2       (00000006) invoke-virtual       v5, Ljava/util/ArrayList;->size()I
+	3       (0000000c) move-result          v3
+	4       (0000000e) if-ge                v0, v3, +16
+
+setNameOverrides-BB@0x12 : [ setNameOverrides-BB@0x6 ]
+	5       (00000012) invoke-virtual       v5, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	6       (00000018) move-result-object   v1
+	7       (0000001a) check-cast           v1, Ljava/lang/String;
+	8       (0000001e) invoke-virtual       v6, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	9       (00000024) move-result-object   v2
+	10      (00000026) check-cast           v2, Ljava/lang/String;
+	11      (0000002a) iget-object          v3, v4, Landroid/support/v4/app/BackStackRecord$TransitionState;->nameOverrides Landroid/support/v4/util/ArrayMap;
+	12      (0000002e) invoke-static        v3, v1, v2, Landroid/support/v4/app/BackStackRecord;->setNameOverride(Landroid/support/v4/util/ArrayMap; Ljava/lang/String; Ljava/lang/String;)V
+	13      (00000034) add-int/lit8         v0, v0, 1
+	14      (00000038) goto                 -19
+
+setNameOverrides-BB@0x3a : 
+	15      (0000003a) return-void          
+

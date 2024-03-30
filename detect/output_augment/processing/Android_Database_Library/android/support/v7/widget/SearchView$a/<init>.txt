@@ -1,0 +1,70 @@
+# Landroid/support/v7/widget/SearchView$a;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0xa ]
+	0       (00000000) invoke-direct        v6, Ljava/lang/Object;-><init>()V
+	1       (00000006) const/4              v0, 0
+	2       (00000008) const/4              v1, 1
+
+<init>-BB@0xa : [ <init>-BB@0x2c ]
+	3       (0000000a) const-class          v2, Landroid/widget/AutoCompleteTextView;
+	4       (0000000e) const-string         v3, 'doBeforeTextChanged'
+	5       (00000012) new-array            v4, v0, [Ljava/lang/Class;
+	6       (00000016) invoke-virtual       v2, v3, v4, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	7       (0000001c) move-result-object   v2
+	8       (0000001e) iput-object          v2, v6, Landroid/support/v7/widget/SearchView$a;->a Ljava/lang/reflect/Method;
+	9       (00000022) iget-object          v2, v6, Landroid/support/v7/widget/SearchView$a;->a Ljava/lang/reflect/Method;
+	10      (00000026) invoke-virtual       v2, v1, Ljava/lang/reflect/Method;->setAccessible(Z)V
+	a:2b
+	(Ljava/lang/NoSuchMethodException; -> 2c <init>-BB@0x2c)
+
+<init>-BB@0x2c : [ <init>-BB@0x4e ]
+	11      (0000002c) const-class          v2, Landroid/widget/AutoCompleteTextView;
+	12      (00000030) const-string         v3, 'doAfterTextChanged'
+	13      (00000034) new-array            v4, v0, [Ljava/lang/Class;
+	14      (00000038) invoke-virtual       v2, v3, v4, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	15      (0000003e) move-result-object   v2
+	16      (00000040) iput-object          v2, v6, Landroid/support/v7/widget/SearchView$a;->b Ljava/lang/reflect/Method;
+	17      (00000044) iget-object          v2, v6, Landroid/support/v7/widget/SearchView$a;->b Ljava/lang/reflect/Method;
+	18      (00000048) invoke-virtual       v2, v1, Ljava/lang/reflect/Method;->setAccessible(Z)V
+	2c:4d
+	(Ljava/lang/NoSuchMethodException; -> 4e <init>-BB@0x4e)
+
+<init>-BB@0x4e : [ <init>-BB@0x78 ]
+	19      (0000004e) const-class          v2, Landroid/widget/AutoCompleteTextView;
+	20      (00000052) const-string         v3, 'ensureImeVisible'
+	21      (00000056) new-array            v4, v1, [Ljava/lang/Class;
+	22      (0000005a) sget-object          v5, Ljava/lang/Boolean;->TYPE Ljava/lang/Class;
+	23      (0000005e) aput-object          v5, v4, v0
+	24      (00000062) invoke-virtual       v2, v3, v4, Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	25      (00000068) move-result-object   v2
+	26      (0000006a) iput-object          v2, v6, Landroid/support/v7/widget/SearchView$a;->c Ljava/lang/reflect/Method;
+	27      (0000006e) iget-object          v2, v6, Landroid/support/v7/widget/SearchView$a;->c Ljava/lang/reflect/Method;
+	28      (00000072) invoke-virtual       v2, v1, Ljava/lang/reflect/Method;->setAccessible(Z)V
+	4e:77
+	(Ljava/lang/NoSuchMethodException; -> 78 <init>-BB@0x78)
+
+<init>-BB@0x78 : [ <init>-BB@0xac ]
+	29      (00000078) const-class          v2, Landroid/view/inputmethod/InputMethodManager;
+	30      (0000007c) const-string         v3, 'showSoftInputUnchecked'
+	31      (00000080) const/4              v4, 2
+	32      (00000082) new-array            v4, v4, [Ljava/lang/Class;
+	33      (00000086) sget-object          v5, Ljava/lang/Integer;->TYPE Ljava/lang/Class;
+	34      (0000008a) aput-object          v5, v4, v0
+	35      (0000008e) const-class          v0, Landroid/os/ResultReceiver;
+	36      (00000092) aput-object          v0, v4, v1
+	37      (00000096) invoke-virtual       v2, v3, v4, Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	38      (0000009c) move-result-object   v0
+	39      (0000009e) iput-object          v0, v6, Landroid/support/v7/widget/SearchView$a;->d Ljava/lang/reflect/Method;
+	40      (000000a2) iget-object          v0, v6, Landroid/support/v7/widget/SearchView$a;->d Ljava/lang/reflect/Method;
+	41      (000000a6) invoke-virtual       v0, v1, Ljava/lang/reflect/Method;->setAccessible(Z)V
+	78:ab
+	(Ljava/lang/NoSuchMethodException; -> ac <init>-BB@0xac)
+
+<init>-BB@0xac : 
+	42      (000000ac) return-void          
+

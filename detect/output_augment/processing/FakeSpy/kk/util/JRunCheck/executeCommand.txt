@@ -1,0 +1,58 @@
+# Lkk/util/JRunCheck;->executeCommand(Lkk/util/JRunCheck$SHELL_CMD;)Ljava/util/ArrayList; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:kk.util.JRunCheck$SHELL_CMD
+#
+# - return:java.util.ArrayList
+
+executeCommand-BB@0x0 : [ executeCommand-BB@0xe ]
+	0       (00000000) const/4              v3, 0
+	1       (00000002) new-instance         v1, Ljava/util/ArrayList;
+	2       (00000006) invoke-direct        v1, Ljava/util/ArrayList;-><init>()V
+	3       (0000000c) const/4              v4, 0
+
+executeCommand-BB@0xe : [ executeCommand-BB@0x5a ]
+	4       (0000000e) invoke-static        Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+	5       (00000014) move-result-object   v6
+	6       (00000016) iget-object          v7, v9, Lkk/util/JRunCheck$SHELL_CMD;->command [Ljava/lang/String;
+	7       (0000001a) invoke-virtual       v6, v7, Ljava/lang/Runtime;->exec([Ljava/lang/String;)Ljava/lang/Process;
+	8       (00000020) move-result-object   v4
+	9       (00000022) new-instance         v5, Ljava/io/BufferedWriter;
+	10      (00000026) new-instance         v6, Ljava/io/OutputStreamWriter;
+	11      (0000002a) invoke-virtual       v4, Ljava/lang/Process;->getOutputStream()Ljava/io/OutputStream;
+	12      (00000030) move-result-object   v7
+	13      (00000032) invoke-direct        v6, v7, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
+	14      (00000038) invoke-direct        v5, v6, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
+	15      (0000003e) new-instance         v2, Ljava/io/BufferedReader;
+	16      (00000042) new-instance         v6, Ljava/io/InputStreamReader;
+	17      (00000046) invoke-virtual       v4, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
+	18      (0000004c) move-result-object   v7
+	19      (0000004e) invoke-direct        v6, v7, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+	20      (00000054) invoke-direct        v2, v6, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+	e:1f
+	(Ljava/lang/Exception; -> 78 executeCommand-BB@0x78)
+
+executeCommand-BB@0x5a : [ executeCommand-BB@0x66 executeCommand-BB@0x76 ]
+	21      (0000005a) invoke-virtual       v2, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+	22      (00000060) move-result-object   v3
+	23      (00000062) if-eqz               v3, +a
+	5a:6b
+	(Ljava/lang/Exception; -> 6e executeCommand-BB@0x6e)
+
+executeCommand-BB@0x66 : [ executeCommand-BB@0x5a ]
+	24      (00000066) invoke-virtual       v1, v3, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	25      (0000006c) goto                 -9
+
+executeCommand-BB@0x6e : [ executeCommand-BB@0x76 ]
+	26      (0000006e) move-exception       v0
+	27      (00000070) invoke-virtual       v0, Ljava/lang/Exception;->printStackTrace()V
+
+executeCommand-BB@0x76 : 
+	28      (00000076) return-object        v1
+
+executeCommand-BB@0x78 : [ executeCommand-BB@0x76 ]
+	29      (00000078) move-exception       v0
+	30      (0000007a) const/4              v1, 0
+	31      (0000007c) goto                 -3
+

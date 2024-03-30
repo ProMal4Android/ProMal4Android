@@ -1,0 +1,51 @@
+# Landroid/support/v4/app/Fragment;->performActivityCreated(Landroid/os/Bundle;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.os.Bundle
+#
+# - return:void
+
+performActivityCreated-BB@0x0 : [ performActivityCreated-BB@0x8 performActivityCreated-BB@0x12 ]
+	0       (00000000) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	1       (00000004) if-eqz               v0, +7
+
+performActivityCreated-BB@0x8 : [ performActivityCreated-BB@0x12 ]
+	2       (00000008) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	3       (0000000c) invoke-virtual       v0, Landroid/support/v4/app/FragmentManagerImpl;->noteStateNotSaved()V
+
+performActivityCreated-BB@0x12 : [ performActivityCreated-BB@0x26 performActivityCreated-BB@0x64 ]
+	4       (00000012) const/4              v0, 0
+	5       (00000014) iput-boolean         v0, v3, Landroid/support/v4/app/Fragment;->mCalled Z
+	6       (00000018) invoke-virtual       v3, v4, Landroid/support/v4/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
+	7       (0000001e) iget-boolean         v0, v3, Landroid/support/v4/app/Fragment;->mCalled Z
+	8       (00000022) if-nez               v0, +21
+
+performActivityCreated-BB@0x26 : 
+	9       (00000026) new-instance         v0, Landroid/support/v4/app/SuperNotCalledException;
+	10      (0000002a) new-instance         v1, Ljava/lang/StringBuilder;
+	11      (0000002e) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	12      (00000034) const-string         v2, 'Fragment '
+	13      (00000038) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (0000003e) move-result-object   v1
+	15      (00000040) invoke-virtual       v1, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	16      (00000046) move-result-object   v1
+	17      (00000048) const-string         v2, ' did not call through to super.onActivityCreated()'
+	18      (0000004c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	19      (00000052) move-result-object   v1
+	20      (00000054) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	21      (0000005a) move-result-object   v1
+	22      (0000005c) invoke-direct        v0, v1, Landroid/support/v4/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
+	23      (00000062) throw                v0
+
+performActivityCreated-BB@0x64 : [ performActivityCreated-BB@0x6c performActivityCreated-BB@0x76 ]
+	24      (00000064) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	25      (00000068) if-eqz               v0, +7
+
+performActivityCreated-BB@0x6c : [ performActivityCreated-BB@0x76 ]
+	26      (0000006c) iget-object          v0, v3, Landroid/support/v4/app/Fragment;->mChildFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	27      (00000070) invoke-virtual       v0, Landroid/support/v4/app/FragmentManagerImpl;->dispatchActivityCreated()V
+
+performActivityCreated-BB@0x76 : 
+	28      (00000076) return-void          
+

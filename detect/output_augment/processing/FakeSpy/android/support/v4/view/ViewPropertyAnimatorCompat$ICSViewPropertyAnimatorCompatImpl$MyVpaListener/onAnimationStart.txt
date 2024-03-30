@@ -1,0 +1,56 @@
+# Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;->onAnimationStart(Landroid/view/View;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.view.View
+#
+# - return:void
+
+onAnimationStart-BB@0x0 : [ onAnimationStart-BB@0x18 onAnimationStart-BB@0x20 ]
+	0       (00000000) const/4              v4, 0
+	1       (00000002) const/4              v3, 0
+	2       (00000004) iput-boolean         v3, v5, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;->mAnimEndCalled Z
+	3       (00000008) iget-object          v3, v5, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;->mVpa Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	4       (0000000c) invoke-static        v3, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->access$400(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)I
+	5       (00000012) move-result          v3
+	6       (00000014) if-ltz               v3, +6
+
+onAnimationStart-BB@0x18 : [ onAnimationStart-BB@0x20 ]
+	7       (00000018) const/4              v3, 2
+	8       (0000001a) invoke-static        v6, v3, v4, Landroid/support/v4/view/ViewCompat;->setLayerType(Landroid/view/View; I Landroid/graphics/Paint;)V
+
+onAnimationStart-BB@0x20 : [ onAnimationStart-BB@0x30 onAnimationStart-BB@0x4c ]
+	9       (00000020) iget-object          v3, v5, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;->mVpa Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	10      (00000024) invoke-static        v3, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->access$100(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)Ljava/lang/Runnable;
+	11      (0000002a) move-result-object   v3
+	12      (0000002c) if-eqz               v3, +10
+
+onAnimationStart-BB@0x30 : [ onAnimationStart-BB@0x4c ]
+	13      (00000030) iget-object          v3, v5, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;->mVpa Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	14      (00000034) invoke-static        v3, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->access$100(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)Ljava/lang/Runnable;
+	15      (0000003a) move-result-object   v2
+	16      (0000003c) iget-object          v3, v5, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;->mVpa Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	17      (00000040) invoke-static        v3, v4, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->access$102(Landroid/support/v4/view/ViewPropertyAnimatorCompat; Ljava/lang/Runnable;)Ljava/lang/Runnable;
+	18      (00000046) invoke-interface     v2, Ljava/lang/Runnable;->run()V
+
+onAnimationStart-BB@0x4c : [ onAnimationStart-BB@0x62 onAnimationStart-BB@0x68 ]
+	19      (0000004c) const/high16         v3, 32256 # [4.253529586511731e+37]
+	20      (00000050) invoke-virtual       v6, v3, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+	21      (00000056) move-result-object   v1
+	22      (00000058) const/4              v0, 0
+	23      (0000005a) instance-of          v3, v1, Landroid/support/v4/view/ViewPropertyAnimatorListener;
+	24      (0000005e) if-eqz               v3, +5
+
+onAnimationStart-BB@0x62 : [ onAnimationStart-BB@0x68 ]
+	25      (00000062) move-object          v0, v1
+	26      (00000064) check-cast           v0, Landroid/support/v4/view/ViewPropertyAnimatorListener;
+
+onAnimationStart-BB@0x68 : [ onAnimationStart-BB@0x6c onAnimationStart-BB@0x72 ]
+	27      (00000068) if-eqz               v0, +5
+
+onAnimationStart-BB@0x6c : [ onAnimationStart-BB@0x72 ]
+	28      (0000006c) invoke-interface     v0, v6, Landroid/support/v4/view/ViewPropertyAnimatorListener;->onAnimationStart(Landroid/view/View;)V
+
+onAnimationStart-BB@0x72 : 
+	29      (00000072) return-void          
+

@@ -1,0 +1,78 @@
+# Landroid/support/v4/app/FragmentStatePagerAdapter;->instantiateItem(Landroid/view/ViewGroup; I)Ljava/lang/Object; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.view.ViewGroup
+# - v8:int
+#
+# - return:java.lang.Object
+
+instantiateItem-BB@0x0 : [ instantiateItem-BB@0x12 instantiateItem-BB@0x28 ]
+	0       (00000000) const/4              v5, 0
+	1       (00000002) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mFragments Ljava/util/ArrayList;
+	2       (00000006) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	3       (0000000c) move-result          v3
+	4       (0000000e) if-le                v3, v8, +d
+
+instantiateItem-BB@0x12 : [ instantiateItem-BB@0x26 instantiateItem-BB@0x28 ]
+	5       (00000012) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mFragments Ljava/util/ArrayList;
+	6       (00000016) invoke-virtual       v3, v8, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	7       (0000001c) move-result-object   v0
+	8       (0000001e) check-cast           v0, Landroid/support/v4/app/Fragment;
+	9       (00000022) if-eqz               v0, +3
+
+instantiateItem-BB@0x26 : 
+	10      (00000026) return-object        v0
+
+instantiateItem-BB@0x28 : [ instantiateItem-BB@0x30 instantiateItem-BB@0x40 ]
+	11      (00000028) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mCurTransaction Landroid/support/v4/app/FragmentTransaction;
+	12      (0000002c) if-nez               v3, +a
+
+instantiateItem-BB@0x30 : [ instantiateItem-BB@0x40 ]
+	13      (00000030) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mFragmentManager Landroid/support/v4/app/FragmentManager;
+	14      (00000034) invoke-virtual       v3, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
+	15      (0000003a) move-result-object   v3
+	16      (0000003c) iput-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mCurTransaction Landroid/support/v4/app/FragmentTransaction;
+
+instantiateItem-BB@0x40 : [ instantiateItem-BB@0x58 instantiateItem-BB@0x72 ]
+	17      (00000040) invoke-virtual       v6, v8, Landroid/support/v4/app/FragmentStatePagerAdapter;->getItem(I)Landroid/support/v4/app/Fragment;
+	18      (00000046) move-result-object   v1
+	19      (00000048) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mSavedState Ljava/util/ArrayList;
+	20      (0000004c) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	21      (00000052) move-result          v3
+	22      (00000054) if-le                v3, v8, +f
+
+instantiateItem-BB@0x58 : [ instantiateItem-BB@0x6c instantiateItem-BB@0x72 ]
+	23      (00000058) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mSavedState Ljava/util/ArrayList;
+	24      (0000005c) invoke-virtual       v3, v8, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	25      (00000062) move-result-object   v2
+	26      (00000064) check-cast           v2, Landroid/support/v4/app/Fragment$SavedState;
+	27      (00000068) if-eqz               v2, +5
+
+instantiateItem-BB@0x6c : [ instantiateItem-BB@0x72 ]
+	28      (0000006c) invoke-virtual       v1, v2, Landroid/support/v4/app/Fragment;->setInitialSavedState(Landroid/support/v4/app/Fragment$SavedState;)V
+
+instantiateItem-BB@0x72 : [ instantiateItem-BB@0x82 instantiateItem-BB@0x90 ]
+	29      (00000072) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mFragments Ljava/util/ArrayList;
+	30      (00000076) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	31      (0000007c) move-result          v3
+	32      (0000007e) if-gt                v3, v8, +9
+
+instantiateItem-BB@0x82 : [ instantiateItem-BB@0x72 ]
+	33      (00000082) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mFragments Ljava/util/ArrayList;
+	34      (00000086) const/4              v4, 0
+	35      (00000088) invoke-virtual       v3, v4, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	36      (0000008e) goto                 -e
+
+instantiateItem-BB@0x90 : [ instantiateItem-BB@0x26 ]
+	37      (00000090) invoke-virtual       v1, v5, Landroid/support/v4/app/Fragment;->setMenuVisibility(Z)V
+	38      (00000096) invoke-virtual       v1, v5, Landroid/support/v4/app/Fragment;->setUserVisibleHint(Z)V
+	39      (0000009c) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mFragments Ljava/util/ArrayList;
+	40      (000000a0) invoke-virtual       v3, v8, v1, Ljava/util/ArrayList;->set(I Ljava/lang/Object;)Ljava/lang/Object;
+	41      (000000a6) iget-object          v3, v6, Landroid/support/v4/app/FragmentStatePagerAdapter;->mCurTransaction Landroid/support/v4/app/FragmentTransaction;
+	42      (000000aa) invoke-virtual       v7, Landroid/view/ViewGroup;->getId()I
+	43      (000000b0) move-result          v4
+	44      (000000b2) invoke-virtual       v3, v4, v1, Landroid/support/v4/app/FragmentTransaction;->add(I Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
+	45      (000000b8) move-object          v0, v1
+	46      (000000ba) goto                 -4a
+

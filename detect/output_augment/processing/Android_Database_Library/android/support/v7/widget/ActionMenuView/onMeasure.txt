@@ -1,0 +1,671 @@
+# Landroid/support/v7/widget/ActionMenuView;->onMeasure(I I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v30
+# - v31:int
+# - v32:int
+#
+# - return:void
+
+onMeasure-BB@0x0 : [ onMeasure-BB@0x1c onMeasure-BB@0x20 ]
+	0       (00000000) move-object/from16   v0, v30
+	1       (00000004) iget-boolean         v1, v0, Landroid/support/v7/widget/ActionMenuView;->w Z
+	2       (00000008) invoke-static/range  v31, Landroid/view/View$MeasureSpec;->getMode(I)I
+	3       (0000000e) move-result          v2
+	4       (00000010) const/high16         v3, 16384 # [2.0]
+	5       (00000014) const/4              v4, 0
+	6       (00000016) const/4              v5, 1
+	7       (00000018) if-ne                v2, v3, +4
+
+onMeasure-BB@0x1c : [ onMeasure-BB@0x22 ]
+	8       (0000001c) const/4              v2, 1
+	9       (0000001e) goto                 +2
+
+onMeasure-BB@0x20 : [ onMeasure-BB@0x22 ]
+	10      (00000020) const/4              v2, 0
+
+onMeasure-BB@0x22 : [ onMeasure-BB@0x2e onMeasure-BB@0x32 ]
+	11      (00000022) iput-boolean         v2, v0, Landroid/support/v7/widget/ActionMenuView;->w Z
+	12      (00000026) iget-boolean         v2, v0, Landroid/support/v7/widget/ActionMenuView;->w Z
+	13      (0000002a) if-eq                v1, v2, +4
+
+onMeasure-BB@0x2e : [ onMeasure-BB@0x32 ]
+	14      (0000002e) iput                 v4, v0, Landroid/support/v7/widget/ActionMenuView;->x I
+
+onMeasure-BB@0x32 : [ onMeasure-BB@0x42 onMeasure-BB@0x5c ]
+	15      (00000032) invoke-static/range  v31, Landroid/view/View$MeasureSpec;->getSize(I)I
+	16      (00000038) move-result          v1
+	17      (0000003a) iget-boolean         v2, v0, Landroid/support/v7/widget/ActionMenuView;->w Z
+	18      (0000003e) if-eqz               v2, +f
+
+onMeasure-BB@0x42 : [ onMeasure-BB@0x4a onMeasure-BB@0x5c ]
+	19      (00000042) iget-object          v2, v0, Landroid/support/v7/widget/ActionMenuView;->p La/a/a/c/c/a/e;
+	20      (00000046) if-eqz               v2, +b
+
+onMeasure-BB@0x4a : [ onMeasure-BB@0x52 onMeasure-BB@0x5c ]
+	21      (0000004a) iget                 v6, v0, Landroid/support/v7/widget/ActionMenuView;->x I
+	22      (0000004e) if-eq                v1, v6, +7
+
+onMeasure-BB@0x52 : [ onMeasure-BB@0x5c ]
+	23      (00000052) iput                 v1, v0, Landroid/support/v7/widget/ActionMenuView;->x I
+	24      (00000056) invoke-virtual       v2, v5, La/a/a/c/c/a/e;->b(Z)V
+
+onMeasure-BB@0x5c : [ onMeasure-BB@0x6c onMeasure-BB@0x558 ]
+	25      (0000005c) invoke-virtual/range v30, Landroid/view/ViewGroup;->getChildCount()I
+	26      (00000062) move-result          v1
+	27      (00000064) iget-boolean         v2, v0, Landroid/support/v7/widget/ActionMenuView;->w Z
+	28      (00000068) if-eqz               v2, +278
+
+onMeasure-BB@0x6c : [ onMeasure-BB@0x70 onMeasure-BB@0x558 ]
+	29      (0000006c) if-lez               v1, +276
+
+onMeasure-BB@0x70 : [ onMeasure-BB@0xcc onMeasure-BB@0xd6 ]
+	30      (00000070) invoke-static/range  v32, Landroid/view/View$MeasureSpec;->getMode(I)I
+	31      (00000076) move-result          v1
+	32      (00000078) invoke-static/range  v31, Landroid/view/View$MeasureSpec;->getSize(I)I
+	33      (0000007e) move-result          v2
+	34      (00000080) invoke-static/range  v32, Landroid/view/View$MeasureSpec;->getSize(I)I
+	35      (00000086) move-result          v6
+	36      (00000088) invoke-virtual/range v30, Landroid/view/ViewGroup;->getPaddingLeft()I
+	37      (0000008e) move-result          v7
+	38      (00000090) invoke-virtual/range v30, Landroid/view/ViewGroup;->getPaddingRight()I
+	39      (00000096) move-result          v8
+	40      (00000098) add-int/2addr        v8, v7
+	41      (0000009a) invoke-virtual/range v30, Landroid/view/ViewGroup;->getPaddingTop()I
+	42      (000000a0) move-result          v7
+	43      (000000a2) invoke-virtual/range v30, Landroid/view/ViewGroup;->getPaddingBottom()I
+	44      (000000a8) move-result          v9
+	45      (000000aa) add-int/2addr        v9, v7
+	46      (000000ac) const/4              v7, -2
+	47      (000000ae) move/from16          v10, v32
+	48      (000000b2) invoke-static        v10, v9, v7, Landroid/view/ViewGroup;->getChildMeasureSpec(I I I)I
+	49      (000000b8) move-result          v7
+	50      (000000ba) sub-int/2addr        v2, v8
+	51      (000000bc) iget                 v8, v0, Landroid/support/v7/widget/ActionMenuView;->y I
+	52      (000000c0) div-int              v10, v2, v8
+	53      (000000c4) rem-int              v11, v2, v8
+	54      (000000c8) if-nez               v10, +7
+
+onMeasure-BB@0xcc : [ onMeasure-BB@0x59e ]
+	55      (000000cc) invoke-virtual       v0, v2, v4, Landroid/view/ViewGroup;->setMeasuredDimension(I I)V
+	56      (000000d2) goto/16              +266
+
+onMeasure-BB@0xd6 : [ onMeasure-BB@0xf8 ]
+	57      (000000d6) div-int/2addr        v11, v10
+	58      (000000d8) add-int/2addr        v11, v8
+	59      (000000da) invoke-virtual/range v30, Landroid/view/ViewGroup;->getChildCount()I
+	60      (000000e0) move-result          v8
+	61      (000000e2) move/from16          v16, v10
+	62      (000000e6) const/4              v3, 0
+	63      (000000e8) const/4              v10, 0
+	64      (000000ea) const/4              v12, 0
+	65      (000000ec) const/4              v14, 0
+	66      (000000ee) const/4              v15, 0
+	67      (000000f0) const/16             v17, 0
+	68      (000000f4) const-wide/16        v18, 0 # [0.0]
+
+onMeasure-BB@0xf8 : [ onMeasure-BB@0xfc onMeasure-BB@0x1ec ]
+	69      (000000f8) if-ge                v10, v8, +7a
+
+onMeasure-BB@0xfc : [ onMeasure-BB@0x114 onMeasure-BB@0x11a ]
+	70      (000000fc) invoke-virtual       v0, v10, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	71      (00000102) move-result-object   v13
+	72      (00000104) invoke-virtual       v13, Landroid/view/View;->getVisibility()I
+	73      (0000010a) move-result          v5
+	74      (0000010c) const/16             v4, 8
+	75      (00000110) if-ne                v5, v4, +5
+
+onMeasure-BB@0x114 : [ onMeasure-BB@0x1de ]
+	76      (00000114) move/from16          v20, v6
+	77      (00000118) goto                 +63
+
+onMeasure-BB@0x11a : [ onMeasure-BB@0x126 onMeasure-BB@0x138 ]
+	78      (0000011a) instance-of          v4, v13, Landroid/support/v7/internal/view/menu/ActionMenuItemView;
+	79      (0000011e) add-int/lit8         v15, v15, 1
+	80      (00000122) if-eqz               v4, +b
+
+onMeasure-BB@0x126 : [ onMeasure-BB@0x13e ]
+	81      (00000126) iget                 v5, v0, Landroid/support/v7/widget/ActionMenuView;->z I
+	82      (0000012a) move/from16          v20, v6
+	83      (0000012e) const/4              v6, 0
+	84      (00000130) invoke-virtual       v13, v5, v6, v5, v6, Landroid/view/View;->setPadding(I I I I)V
+	85      (00000136) goto                 +4
+
+onMeasure-BB@0x138 : [ onMeasure-BB@0x13e ]
+	86      (00000138) move/from16          v20, v6
+	87      (0000013c) const/4              v6, 0
+
+onMeasure-BB@0x13e : [ onMeasure-BB@0x166 onMeasure-BB@0x17c ]
+	88      (0000013e) invoke-virtual       v13, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	89      (00000144) move-result-object   v5
+	90      (00000146) check-cast           v5, Landroid/support/v7/widget/ActionMenuView$c;
+	91      (0000014a) iput-boolean         v6, v5, Landroid/support/v7/widget/ActionMenuView$c;->h Z
+	92      (0000014e) iput                 v6, v5, Landroid/support/v7/widget/ActionMenuView$c;->e I
+	93      (00000152) iput                 v6, v5, Landroid/support/v7/widget/ActionMenuView$c;->d I
+	94      (00000156) iput-boolean         v6, v5, Landroid/support/v7/widget/ActionMenuView$c;->f Z
+	95      (0000015a) iput                 v6, v5, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin I
+	96      (0000015e) iput                 v6, v5, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin I
+	97      (00000162) if-eqz               v4, +d
+
+onMeasure-BB@0x166 : [ onMeasure-BB@0x178 onMeasure-BB@0x17c ]
+	98      (00000166) move-object          v4, v13
+	99      (00000168) check-cast           v4, Landroid/support/v7/internal/view/menu/ActionMenuItemView;
+	100     (0000016c) invoke-virtual       v4, Landroid/support/v7/internal/view/menu/ActionMenuItemView;->d()Z
+	101     (00000172) move-result          v4
+	102     (00000174) if-eqz               v4, +4
+
+onMeasure-BB@0x178 : [ onMeasure-BB@0x17e ]
+	103     (00000178) const/4              v4, 1
+	104     (0000017a) goto                 +2
+
+onMeasure-BB@0x17c : [ onMeasure-BB@0x17e ]
+	105     (0000017c) const/4              v4, 0
+
+onMeasure-BB@0x17e : [ onMeasure-BB@0x18a onMeasure-BB@0x18e ]
+	106     (0000017e) iput-boolean         v4, v5, Landroid/support/v7/widget/ActionMenuView$c;->g Z
+	107     (00000182) iget-boolean         v4, v5, Landroid/support/v7/widget/ActionMenuView$c;->c Z
+	108     (00000186) if-eqz               v4, +4
+
+onMeasure-BB@0x18a : [ onMeasure-BB@0x192 ]
+	109     (0000018a) const/4              v4, 1
+	110     (0000018c) goto                 +3
+
+onMeasure-BB@0x18e : [ onMeasure-BB@0x192 ]
+	111     (0000018e) move/from16          v4, v16
+
+onMeasure-BB@0x192 : [ onMeasure-BB@0x1aa onMeasure-BB@0x1ae ]
+	112     (00000192) invoke-static        v13, v11, v4, v7, v9, Landroid/support/v7/widget/ActionMenuView;->a(Landroid/view/View; I I I I)I
+	113     (00000198) move-result          v4
+	114     (0000019a) invoke-static        v3, v4, Ljava/lang/Math;->max(I I)I
+	115     (000001a0) move-result          v3
+	116     (000001a2) iget-boolean         v6, v5, Landroid/support/v7/widget/ActionMenuView$c;->f Z
+	117     (000001a6) if-eqz               v6, +4
+
+onMeasure-BB@0x1aa : [ onMeasure-BB@0x1ae ]
+	118     (000001aa) add-int/lit8         v17, v17, 1
+
+onMeasure-BB@0x1ae : [ onMeasure-BB@0x1b6 onMeasure-BB@0x1b8 ]
+	119     (000001ae) iget-boolean         v5, v5, Landroid/support/v7/widget/ActionMenuView$c;->c Z
+	120     (000001b2) if-eqz               v5, +3
+
+onMeasure-BB@0x1b6 : [ onMeasure-BB@0x1b8 ]
+	121     (000001b6) const/4              v14, 1
+
+onMeasure-BB@0x1b8 : [ onMeasure-BB@0x1d2 onMeasure-BB@0x1dc ]
+	122     (000001b8) sub-int              v16, v16, v4
+	123     (000001bc) invoke-virtual       v13, Landroid/view/View;->getMeasuredHeight()I
+	124     (000001c2) move-result          v5
+	125     (000001c4) invoke-static        v12, v5, Ljava/lang/Math;->max(I I)I
+	126     (000001ca) move-result          v5
+	127     (000001cc) const/4              v6, 1
+	128     (000001ce) if-ne                v4, v6, +7
+
+onMeasure-BB@0x1d2 : [ onMeasure-BB@0x1dc ]
+	129     (000001d2) shl-int              v4, v6, v10
+	130     (000001d6) int-to-long          v12, v4
+	131     (000001d8) or-long              v18, v18, v12
+
+onMeasure-BB@0x1dc : [ onMeasure-BB@0x1de ]
+	132     (000001dc) move                 v12, v5
+
+onMeasure-BB@0x1de : [ onMeasure-BB@0xf8 ]
+	133     (000001de) add-int/lit8         v10, v10, 1
+	134     (000001e2) move/from16          v6, v20
+	135     (000001e6) const/4              v4, 0
+	136     (000001e8) const/4              v5, 1
+	137     (000001ea) goto                 -79
+
+onMeasure-BB@0x1ec : [ onMeasure-BB@0x1f6 onMeasure-BB@0x1fe ]
+	138     (000001ec) move/from16          v20, v6
+	139     (000001f0) const/4              v4, 2
+	140     (000001f2) if-eqz               v14, +6
+
+onMeasure-BB@0x1f6 : [ onMeasure-BB@0x1fa onMeasure-BB@0x1fe ]
+	141     (000001f6) if-ne                v15, v4, +4
+
+onMeasure-BB@0x1fa : [ onMeasure-BB@0x200 ]
+	142     (000001fa) const/4              v5, 1
+	143     (000001fc) goto                 +2
+
+onMeasure-BB@0x1fe : [ onMeasure-BB@0x200 ]
+	144     (000001fe) const/4              v5, 0
+
+onMeasure-BB@0x200 : [ onMeasure-BB@0x206 ]
+	145     (00000200) move/from16          v6, v16
+	146     (00000204) const/4              v9, 0
+
+onMeasure-BB@0x206 : [ onMeasure-BB@0x20a onMeasure-BB@0x364 ]
+	147     (00000206) if-lez               v17, +af
+
+onMeasure-BB@0x20a : [ onMeasure-BB@0x20e onMeasure-BB@0x364 ]
+	148     (0000020a) if-lez               v6, +ad
+
+onMeasure-BB@0x20e : [ onMeasure-BB@0x222 ]
+	149     (0000020e) const                v10, 2147483647 # [nan]
+	150     (00000214) const                v4, 2147483647 # [nan]
+	151     (0000021a) const/4              v10, 0
+	152     (0000021c) const/4              v13, 0
+	153     (0000021e) const-wide/16        v21, 0 # [0.0]
+
+onMeasure-BB@0x222 : [ onMeasure-BB@0x226 onMeasure-BB@0x2a8 ]
+	154     (00000222) if-ge                v10, v8, +43
+
+onMeasure-BB@0x226 : [ onMeasure-BB@0x24e onMeasure-BB@0x256 ]
+	155     (00000226) invoke-virtual       v0, v10, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	156     (0000022c) move-result-object   v23
+	157     (0000022e) invoke-virtual/range v23, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	158     (00000234) move-result-object   v23
+	159     (00000236) move/from16          v24, v9
+	160     (0000023a) move-object/from16   v9, v23
+	161     (0000023e) check-cast           v9, Landroid/support/v7/widget/ActionMenuView$c;
+	162     (00000242) move/from16          v23, v12
+	163     (00000246) iget-boolean         v12, v9, Landroid/support/v7/widget/ActionMenuView$c;->f Z
+	164     (0000024a) if-nez               v12, +6
+
+onMeasure-BB@0x24e : [ onMeasure-BB@0x294 ]
+	165     (0000024e) move                 v9, v1
+	166     (00000250) move/from16          v25, v2
+	167     (00000254) goto                 +20
+
+onMeasure-BB@0x256 : [ onMeasure-BB@0x25e onMeasure-BB@0x276 ]
+	168     (00000256) iget                 v9, v9, Landroid/support/v7/widget/ActionMenuView$c;->d I
+	169     (0000025a) if-ge                v9, v4, +e
+
+onMeasure-BB@0x25e : [ onMeasure-BB@0x294 ]
+	170     (0000025e) const/4              v12, 1
+	171     (00000260) shl-int              v4, v12, v10
+	172     (00000264) int-to-long          v12, v4
+	173     (00000266) move/from16          v25, v2
+	174     (0000026a) move                 v4, v9
+	175     (0000026c) move-wide/from16     v21, v12
+	176     (00000270) const/4              v13, 1
+	177     (00000272) move                 v9, v1
+	178     (00000274) goto                 +10
+
+onMeasure-BB@0x276 : [ onMeasure-BB@0x27a onMeasure-BB@0x24e ]
+	179     (00000276) if-ne                v9, v4, -14
+
+onMeasure-BB@0x27a : [ onMeasure-BB@0x294 ]
+	180     (0000027a) const/4              v9, 1
+	181     (0000027c) shl-int              v12, v9, v10
+	182     (00000280) move                 v9, v1
+	183     (00000282) move/from16          v25, v2
+	184     (00000286) int-to-long          v1, v12
+	185     (00000288) or-long              v1, v21, v1
+	186     (0000028c) add-int/lit8         v13, v13, 1
+	187     (00000290) move-wide/from16     v21, v1
+
+onMeasure-BB@0x294 : [ onMeasure-BB@0x222 ]
+	188     (00000294) add-int/lit8         v10, v10, 1
+	189     (00000298) move                 v1, v9
+	190     (0000029a) move/from16          v12, v23
+	191     (0000029e) move/from16          v9, v24
+	192     (000002a2) move/from16          v2, v25
+	193     (000002a6) goto                 -42
+
+onMeasure-BB@0x2a8 : [ onMeasure-BB@0x2be onMeasure-BB@0x2c0 ]
+	194     (000002a8) move/from16          v25, v2
+	195     (000002ac) move/from16          v24, v9
+	196     (000002b0) move/from16          v23, v12
+	197     (000002b4) move                 v9, v1
+	198     (000002b6) or-long              v18, v18, v21
+	199     (000002ba) if-le                v13, v6, +3
+
+onMeasure-BB@0x2be : [ onMeasure-BB@0x372 ]
+	200     (000002be) goto                 +5a
+
+onMeasure-BB@0x2c0 : [ onMeasure-BB@0x2c6 ]
+	201     (000002c0) add-int/lit8         v4, v4, 1
+	202     (000002c4) const/4              v1, 0
+
+onMeasure-BB@0x2c6 : [ onMeasure-BB@0x2ca onMeasure-BB@0x352 ]
+	203     (000002c6) if-ge                v1, v8, +46
+
+onMeasure-BB@0x2ca : [ onMeasure-BB@0x2f6 onMeasure-BB@0x308 ]
+	204     (000002ca) invoke-virtual       v0, v1, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	205     (000002d0) move-result-object   v2
+	206     (000002d2) invoke-virtual       v2, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	207     (000002d8) move-result-object   v10
+	208     (000002da) check-cast           v10, Landroid/support/v7/widget/ActionMenuView$c;
+	209     (000002de) const/4              v12, 1
+	210     (000002e0) shl-int              v13, v12, v1
+	211     (000002e4) int-to-long          v12, v13
+	212     (000002e6) and-long             v26, v21, v12
+	213     (000002ea) const-wide/16        v28, 0 # [0.0]
+	214     (000002ee) cmp-long             v24, v26, v28
+	215     (000002f2) if-nez               v24, +b
+
+onMeasure-BB@0x2f6 : [ onMeasure-BB@0x2fe onMeasure-BB@0x302 ]
+	216     (000002f6) iget                 v2, v10, Landroid/support/v7/widget/ActionMenuView$c;->d I
+	217     (000002fa) if-ne                v2, v4, +4
+
+onMeasure-BB@0x2fe : [ onMeasure-BB@0x302 ]
+	218     (000002fe) or-long              v18, v18, v12
+
+onMeasure-BB@0x302 : [ onMeasure-BB@0x348 ]
+	219     (00000302) move/from16          v24, v4
+	220     (00000306) goto                 +21
+
+onMeasure-BB@0x308 : [ onMeasure-BB@0x30c onMeasure-BB@0x330 ]
+	221     (00000308) if-eqz               v5, +14
+
+onMeasure-BB@0x30c : [ onMeasure-BB@0x314 onMeasure-BB@0x330 ]
+	222     (0000030c) iget-boolean         v12, v10, Landroid/support/v7/widget/ActionMenuView$c;->g Z
+	223     (00000310) if-eqz               v12, +10
+
+onMeasure-BB@0x314 : [ onMeasure-BB@0x31a onMeasure-BB@0x330 ]
+	224     (00000314) const/4              v12, 1
+	225     (00000316) if-ne                v6, v12, +d
+
+onMeasure-BB@0x31a : [ onMeasure-BB@0x334 ]
+	226     (0000031a) iget                 v13, v0, Landroid/support/v7/widget/ActionMenuView;->z I
+	227     (0000031e) add-int              v12, v13, v11
+	228     (00000322) move/from16          v24, v4
+	229     (00000326) const/4              v4, 0
+	230     (00000328) invoke-virtual       v2, v12, v4, v13, v4, Landroid/view/View;->setPadding(I I I I)V
+	231     (0000032e) goto                 +3
+
+onMeasure-BB@0x330 : [ onMeasure-BB@0x334 ]
+	232     (00000330) move/from16          v24, v4
+
+onMeasure-BB@0x334 : [ onMeasure-BB@0x348 ]
+	233     (00000334) iget                 v2, v10, Landroid/support/v7/widget/ActionMenuView$c;->d I
+	234     (00000338) const/4              v4, 1
+	235     (0000033a) add-int/2addr        v2, v4
+	236     (0000033c) iput                 v2, v10, Landroid/support/v7/widget/ActionMenuView$c;->d I
+	237     (00000340) iput-boolean         v4, v10, Landroid/support/v7/widget/ActionMenuView$c;->h Z
+	238     (00000344) add-int/lit8         v6, v6, -1
+
+onMeasure-BB@0x348 : [ onMeasure-BB@0x2c6 ]
+	239     (00000348) add-int/lit8         v1, v1, 1
+	240     (0000034c) move/from16          v4, v24
+	241     (00000350) goto                 -45
+
+onMeasure-BB@0x352 : [ onMeasure-BB@0x206 ]
+	242     (00000352) move                 v1, v9
+	243     (00000354) move/from16          v12, v23
+	244     (00000358) move/from16          v2, v25
+	245     (0000035c) const/4              v4, 2
+	246     (0000035e) const/4              v9, 1
+	247     (00000360) goto/16              -ad
+
+onMeasure-BB@0x364 : [ onMeasure-BB@0x372 ]
+	248     (00000364) move/from16          v25, v2
+	249     (00000368) move/from16          v24, v9
+	250     (0000036c) move/from16          v23, v12
+	251     (00000370) move                 v9, v1
+
+onMeasure-BB@0x372 : [ onMeasure-BB@0x376 onMeasure-BB@0x380 ]
+	252     (00000372) if-nez               v14, +7
+
+onMeasure-BB@0x376 : [ onMeasure-BB@0x37c onMeasure-BB@0x382 ]
+	253     (00000376) const/4              v1, 1
+	254     (00000378) if-ne                v15, v1, +5
+
+onMeasure-BB@0x37c : [ onMeasure-BB@0x384 ]
+	255     (0000037c) const/4              v2, 1
+	256     (0000037e) goto                 +3
+
+onMeasure-BB@0x380 : [ onMeasure-BB@0x382 ]
+	257     (00000380) const/4              v1, 1
+
+onMeasure-BB@0x382 : [ onMeasure-BB@0x384 ]
+	258     (00000382) const/4              v2, 0
+
+onMeasure-BB@0x384 : [ onMeasure-BB@0x388 onMeasure-BB@0x4e4 ]
+	259     (00000384) if-lez               v6, +b0
+
+onMeasure-BB@0x388 : [ onMeasure-BB@0x394 onMeasure-BB@0x4e4 ]
+	260     (00000388) const-wide/16        v4, 0 # [0.0]
+	261     (0000038c) cmp-long             v10, v18, v4
+	262     (00000390) if-eqz               v10, +aa
+
+onMeasure-BB@0x394 : [ onMeasure-BB@0x39a onMeasure-BB@0x3a2 ]
+	263     (00000394) sub-int/2addr        v15, v1
+	264     (00000396) if-lt                v6, v15, +6
+
+onMeasure-BB@0x39a : [ onMeasure-BB@0x39e onMeasure-BB@0x3a2 ]
+	265     (0000039a) if-nez               v2, +4
+
+onMeasure-BB@0x39e : [ onMeasure-BB@0x3a2 onMeasure-BB@0x4e4 ]
+	266     (0000039e) if-le                v3, v1, +a3
+
+onMeasure-BB@0x3a2 : [ onMeasure-BB@0x3b0 onMeasure-BB@0x422 ]
+	267     (000003a2) invoke-static/range  v18 ... v19, Ljava/lang/Long;->bitCount(J)I
+	268     (000003a8) move-result          v1
+	269     (000003aa) int-to-float         v1, v1
+	270     (000003ac) if-nez               v2, +3b
+
+onMeasure-BB@0x3b0 : [ onMeasure-BB@0x3c8 onMeasure-BB@0x3e8 ]
+	271     (000003b0) const-wide/16        v2, 1 # [1.0]
+	272     (000003b4) and-long             v2, v18, v2
+	273     (000003b8) const/high16         v4, 16128 # [0.5]
+	274     (000003bc) const-wide/16        v12, 0 # [0.0]
+	275     (000003c0) cmp-long             v5, v2, v12
+	276     (000003c4) if-eqz               v5, +12
+
+onMeasure-BB@0x3c8 : [ onMeasure-BB@0x3e6 onMeasure-BB@0x3e8 ]
+	277     (000003c8) const/4              v2, 0
+	278     (000003ca) invoke-virtual       v0, v2, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	279     (000003d0) move-result-object   v3
+	280     (000003d2) invoke-virtual       v3, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	281     (000003d8) move-result-object   v2
+	282     (000003da) check-cast           v2, Landroid/support/v7/widget/ActionMenuView$c;
+	283     (000003de) iget-boolean         v2, v2, Landroid/support/v7/widget/ActionMenuView$c;->g Z
+	284     (000003e2) if-nez               v2, +3
+
+onMeasure-BB@0x3e6 : [ onMeasure-BB@0x3e8 ]
+	285     (000003e6) sub-float/2addr      v1, v4
+
+onMeasure-BB@0x3e8 : [ onMeasure-BB@0x404 onMeasure-BB@0x422 ]
+	286     (000003e8) add-int/lit8         v2, v8, -1
+	287     (000003ec) const/4              v3, 1
+	288     (000003ee) shl-int              v5, v3, v2
+	289     (000003f2) int-to-long          v12, v5
+	290     (000003f4) and-long             v12, v18, v12
+	291     (000003f8) const-wide/16        v14, 0 # [0.0]
+	292     (000003fc) cmp-long             v3, v12, v14
+	293     (00000400) if-eqz               v3, +11
+
+onMeasure-BB@0x404 : [ onMeasure-BB@0x420 onMeasure-BB@0x422 ]
+	294     (00000404) invoke-virtual       v0, v2, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	295     (0000040a) move-result-object   v2
+	296     (0000040c) invoke-virtual       v2, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	297     (00000412) move-result-object   v2
+	298     (00000414) check-cast           v2, Landroid/support/v7/widget/ActionMenuView$c;
+	299     (00000418) iget-boolean         v2, v2, Landroid/support/v7/widget/ActionMenuView$c;->g Z
+	300     (0000041c) if-nez               v2, +3
+
+onMeasure-BB@0x420 : [ onMeasure-BB@0x422 ]
+	301     (00000420) sub-float/2addr      v1, v4
+
+onMeasure-BB@0x422 : [ onMeasure-BB@0x42c onMeasure-BB@0x438 ]
+	302     (00000422) const/4              v2, 0
+	303     (00000424) cmpl-float           v2, v1, v2
+	304     (00000428) if-lez               v2, +8
+
+onMeasure-BB@0x42c : [ onMeasure-BB@0x43a ]
+	305     (0000042c) mul-int              v6, v6, v11
+	306     (00000430) int-to-float         v2, v6
+	307     (00000432) div-float/2addr      v2, v1
+	308     (00000434) float-to-int         v4, v2
+	309     (00000436) goto                 +2
+
+onMeasure-BB@0x438 : [ onMeasure-BB@0x43a ]
+	310     (00000438) const/4              v4, 0
+
+onMeasure-BB@0x43a : [ onMeasure-BB@0x440 ]
+	311     (0000043a) move/from16          v5, v24
+	312     (0000043e) const/4              v1, 0
+
+onMeasure-BB@0x440 : [ onMeasure-BB@0x444 onMeasure-BB@0x4e8 ]
+	313     (00000440) if-ge                v1, v8, +54
+
+onMeasure-BB@0x444 : [ onMeasure-BB@0x45c onMeasure-BB@0x460 ]
+	314     (00000444) const/4              v2, 1
+	315     (00000446) shl-int              v3, v2, v1
+	316     (0000044a) int-to-long          v2, v3
+	317     (0000044c) and-long             v2, v18, v2
+	318     (00000450) const-wide/16        v12, 0 # [0.0]
+	319     (00000454) cmp-long             v6, v2, v12
+	320     (00000458) if-nez               v6, +4
+
+onMeasure-BB@0x45c : [ onMeasure-BB@0x4de ]
+	321     (0000045c) const/4              v6, 2
+	322     (0000045e) goto                 +40
+
+onMeasure-BB@0x460 : [ onMeasure-BB@0x47c onMeasure-BB@0x4a0 ]
+	323     (00000460) invoke-virtual       v0, v1, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	324     (00000466) move-result-object   v2
+	325     (00000468) invoke-virtual       v2, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	326     (0000046e) move-result-object   v3
+	327     (00000470) check-cast           v3, Landroid/support/v7/widget/ActionMenuView$c;
+	328     (00000474) instance-of          v2, v2, Landroid/support/v7/internal/view/menu/ActionMenuItemView;
+	329     (00000478) if-eqz               v2, +14
+
+onMeasure-BB@0x47c : [ onMeasure-BB@0x48a onMeasure-BB@0x49c ]
+	330     (0000047c) iput                 v4, v3, Landroid/support/v7/widget/ActionMenuView$c;->e I
+	331     (00000480) const/4              v2, 1
+	332     (00000482) iput-boolean         v2, v3, Landroid/support/v7/widget/ActionMenuView$c;->h Z
+	333     (00000486) if-nez               v1, +b
+
+onMeasure-BB@0x48a : [ onMeasure-BB@0x492 onMeasure-BB@0x49c ]
+	334     (0000048a) iget-boolean         v2, v3, Landroid/support/v7/widget/ActionMenuView$c;->g Z
+	335     (0000048e) if-nez               v2, +7
+
+onMeasure-BB@0x492 : [ onMeasure-BB@0x49c ]
+	336     (00000492) neg-int              v2, v4
+	337     (00000494) const/4              v5, 2
+	338     (00000496) div-int/2addr        v2, v5
+	339     (00000498) iput                 v2, v3, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin I
+
+onMeasure-BB@0x49c : [ onMeasure-BB@0x4bc ]
+	340     (0000049c) const/4              v6, 2
+	341     (0000049e) goto                 +f
+
+onMeasure-BB@0x4a0 : [ onMeasure-BB@0x4a8 onMeasure-BB@0x4c0 ]
+	342     (000004a0) iget-boolean         v2, v3, Landroid/support/v7/widget/ActionMenuView$c;->c Z
+	343     (000004a4) if-eqz               v2, +e
+
+onMeasure-BB@0x4a8 : [ onMeasure-BB@0x4bc ]
+	344     (000004a8) iput                 v4, v3, Landroid/support/v7/widget/ActionMenuView$c;->e I
+	345     (000004ac) const/4              v2, 1
+	346     (000004ae) iput-boolean         v2, v3, Landroid/support/v7/widget/ActionMenuView$c;->h Z
+	347     (000004b2) neg-int              v2, v4
+	348     (000004b4) const/4              v6, 2
+	349     (000004b6) div-int/2addr        v2, v6
+	350     (000004b8) iput                 v2, v3, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin I
+
+onMeasure-BB@0x4bc : [ onMeasure-BB@0x4de ]
+	351     (000004bc) const/4              v5, 1
+	352     (000004be) goto                 +10
+
+onMeasure-BB@0x4c0 : [ onMeasure-BB@0x4c6 onMeasure-BB@0x4ce ]
+	353     (000004c0) const/4              v6, 2
+	354     (000004c2) if-eqz               v1, +6
+
+onMeasure-BB@0x4c6 : [ onMeasure-BB@0x4ce ]
+	355     (000004c6) div-int/lit8         v2, v4, 2
+	356     (000004ca) iput                 v2, v3, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin I
+
+onMeasure-BB@0x4ce : [ onMeasure-BB@0x4d6 onMeasure-BB@0x4de ]
+	357     (000004ce) add-int/lit8         v2, v8, -1
+	358     (000004d2) if-eq                v1, v2, +6
+
+onMeasure-BB@0x4d6 : [ onMeasure-BB@0x4de ]
+	359     (000004d6) div-int/lit8         v2, v4, 2
+	360     (000004da) iput                 v2, v3, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin I
+
+onMeasure-BB@0x4de : [ onMeasure-BB@0x440 ]
+	361     (000004de) add-int/lit8         v1, v1, 1
+	362     (000004e2) goto                 -51
+
+onMeasure-BB@0x4e4 : [ onMeasure-BB@0x4e8 ]
+	363     (000004e4) move/from16          v5, v24
+
+onMeasure-BB@0x4e8 : [ onMeasure-BB@0x4ec onMeasure-BB@0x53a ]
+	364     (000004e8) if-eqz               v5, +29
+
+onMeasure-BB@0x4ec : [ onMeasure-BB@0x4ee ]
+	365     (000004ec) const/4              v1, 0
+
+onMeasure-BB@0x4ee : [ onMeasure-BB@0x4f2 onMeasure-BB@0x53a ]
+	366     (000004ee) if-ge                v1, v8, +26
+
+onMeasure-BB@0x4f2 : [ onMeasure-BB@0x50e onMeasure-BB@0x514 ]
+	367     (000004f2) invoke-virtual       v0, v1, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	368     (000004f8) move-result-object   v2
+	369     (000004fa) invoke-virtual       v2, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	370     (00000500) move-result-object   v3
+	371     (00000502) check-cast           v3, Landroid/support/v7/widget/ActionMenuView$c;
+	372     (00000506) iget-boolean         v4, v3, Landroid/support/v7/widget/ActionMenuView$c;->h Z
+	373     (0000050a) if-nez               v4, +5
+
+onMeasure-BB@0x50e : [ onMeasure-BB@0x534 ]
+	374     (0000050e) const/high16         v3, 16384 # [2.0]
+	375     (00000512) goto                 +11
+
+onMeasure-BB@0x514 : [ onMeasure-BB@0x534 ]
+	376     (00000514) iget                 v4, v3, Landroid/support/v7/widget/ActionMenuView$c;->d I
+	377     (00000518) mul-int              v4, v4, v11
+	378     (0000051c) iget                 v3, v3, Landroid/support/v7/widget/ActionMenuView$c;->e I
+	379     (00000520) add-int/2addr        v4, v3
+	380     (00000522) const/high16         v3, 16384 # [2.0]
+	381     (00000526) invoke-static        v4, v3, Landroid/view/View$MeasureSpec;->makeMeasureSpec(I I)I
+	382     (0000052c) move-result          v4
+	383     (0000052e) invoke-virtual       v2, v4, v7, Landroid/view/View;->measure(I I)V
+
+onMeasure-BB@0x534 : [ onMeasure-BB@0x4ee ]
+	384     (00000534) add-int/lit8         v1, v1, 1
+	385     (00000538) goto                 -25
+
+onMeasure-BB@0x53a : [ onMeasure-BB@0x542 onMeasure-BB@0x548 ]
+	386     (0000053a) const/high16         v3, 16384 # [2.0]
+	387     (0000053e) if-eq                v9, v3, +5
+
+onMeasure-BB@0x542 : [ onMeasure-BB@0x54c ]
+	388     (00000542) move/from16          v1, v23
+	389     (00000546) goto                 +3
+
+onMeasure-BB@0x548 : [ onMeasure-BB@0x54c ]
+	390     (00000548) move/from16          v1, v20
+
+onMeasure-BB@0x54c : [ onMeasure-BB@0x59e ]
+	391     (0000054c) move/from16          v2, v25
+	392     (00000550) invoke-virtual       v0, v2, v1, Landroid/view/ViewGroup;->setMeasuredDimension(I I)V
+	393     (00000556) goto                 +24
+
+onMeasure-BB@0x558 : [ onMeasure-BB@0x55e ]
+	394     (00000558) move/from16          v10, v32
+	395     (0000055c) const/4              v2, 0
+
+onMeasure-BB@0x55e : [ onMeasure-BB@0x562 onMeasure-BB@0x586 ]
+	396     (0000055e) if-ge                v2, v1, +14
+
+onMeasure-BB@0x562 : [ onMeasure-BB@0x55e ]
+	397     (00000562) invoke-virtual       v0, v2, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	398     (00000568) move-result-object   v3
+	399     (0000056a) invoke-virtual       v3, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+	400     (00000570) move-result-object   v3
+	401     (00000572) check-cast           v3, Landroid/support/v7/widget/ActionMenuView$c;
+	402     (00000576) const/4              v4, 0
+	403     (00000578) iput                 v4, v3, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin I
+	404     (0000057c) iput                 v4, v3, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin I
+	405     (00000580) add-int/lit8         v2, v2, 1
+	406     (00000584) goto                 -13
+
+onMeasure-BB@0x586 : [ onMeasure-BB@0x590 onMeasure-BB@0x598 ]
+	407     (00000586) iget                 v1, v0, La/a/a/e/e;->d I
+	408     (0000058a) const/4              v2, 1
+	409     (0000058c) if-ne                v1, v2, +6
+
+onMeasure-BB@0x590 : [ onMeasure-BB@0x59e ]
+	410     (00000590) invoke-virtual/range v30 ... v32, La/a/a/e/e;->d(I I)V
+	411     (00000596) goto                 +4
+
+onMeasure-BB@0x598 : [ onMeasure-BB@0x59e ]
+	412     (00000598) invoke-virtual/range v30 ... v32, La/a/a/e/e;->c(I I)V
+
+onMeasure-BB@0x59e : 
+	413     (0000059e) return-void          
+

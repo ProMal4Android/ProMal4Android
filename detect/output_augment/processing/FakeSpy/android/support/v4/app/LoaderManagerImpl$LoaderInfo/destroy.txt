@@ -1,0 +1,150 @@
+# Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->destroy()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v7
+#
+# - return:void
+
+destroy-BB@0x0 : [ destroy-BB@0xc destroy-BB@0x3c ]
+	0       (00000000) const/4              v6, 0
+	1       (00000002) const/4              v5, 0
+	2       (00000004) sget-boolean         v2, Landroid/support/v4/app/LoaderManagerImpl;->DEBUG Z
+	3       (00000008) if-eqz               v2, +1a
+
+destroy-BB@0xc : [ destroy-BB@0x3c ]
+	4       (0000000c) const-string         v2, 'LoaderManager'
+	5       (00000010) new-instance         v3, Ljava/lang/StringBuilder;
+	6       (00000014) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	7       (0000001a) const-string         v4, '  Destroying: '
+	8       (0000001e) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000024) move-result-object   v3
+	10      (00000026) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	11      (0000002c) move-result-object   v3
+	12      (0000002e) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	13      (00000034) move-result-object   v3
+	14      (00000036) invoke-static        v2, v3, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+destroy-BB@0x3c : [ destroy-BB@0x52 destroy-BB@0x10e ]
+	15      (0000003c) const/4              v2, 1
+	16      (0000003e) iput-boolean         v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mDestroyed Z
+	17      (00000042) iget-boolean         v1, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mDeliveredData Z
+	18      (00000046) iput-boolean         v5, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mDeliveredData Z
+	19      (0000004a) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mCallbacks Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
+	20      (0000004e) if-eqz               v2, +60
+
+destroy-BB@0x52 : [ destroy-BB@0x5a destroy-BB@0x10e ]
+	21      (00000052) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mLoader Landroid/support/v4/content/Loader;
+	22      (00000056) if-eqz               v2, +5c
+
+destroy-BB@0x5a : [ destroy-BB@0x62 destroy-BB@0x10e ]
+	23      (0000005a) iget-boolean         v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mHaveData Z
+	24      (0000005e) if-eqz               v2, +58
+
+destroy-BB@0x62 : [ destroy-BB@0x66 destroy-BB@0x10e ]
+	25      (00000062) if-eqz               v1, +56
+
+destroy-BB@0x66 : [ destroy-BB@0x6e destroy-BB@0x9e ]
+	26      (00000066) sget-boolean         v2, Landroid/support/v4/app/LoaderManagerImpl;->DEBUG Z
+	27      (0000006a) if-eqz               v2, +1a
+
+destroy-BB@0x6e : [ destroy-BB@0x9e ]
+	28      (0000006e) const-string         v2, 'LoaderManager'
+	29      (00000072) new-instance         v3, Ljava/lang/StringBuilder;
+	30      (00000076) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	31      (0000007c) const-string         v4, '  Reseting: '
+	32      (00000080) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	33      (00000086) move-result-object   v3
+	34      (00000088) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	35      (0000008e) move-result-object   v3
+	36      (00000090) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	37      (00000096) move-result-object   v3
+	38      (00000098) invoke-static        v2, v3, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+destroy-BB@0x9e : [ destroy-BB@0xb0 destroy-BB@0xdc ]
+	39      (0000009e) const/4              v0, 0
+	40      (000000a0) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	41      (000000a4) invoke-static        v2, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	42      (000000aa) move-result-object   v2
+	43      (000000ac) if-eqz               v2, +18
+
+destroy-BB@0xb0 : [ destroy-BB@0xdc ]
+	44      (000000b0) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	45      (000000b4) invoke-static        v2, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	46      (000000ba) move-result-object   v2
+	47      (000000bc) iget-object          v2, v2, Landroid/support/v4/app/FragmentHostCallback;->mFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	48      (000000c0) iget-object          v0, v2, Landroid/support/v4/app/FragmentManagerImpl;->mNoTransactionsBecause Ljava/lang/String;
+	49      (000000c4) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	50      (000000c8) invoke-static        v2, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	51      (000000ce) move-result-object   v2
+	52      (000000d0) iget-object          v2, v2, Landroid/support/v4/app/FragmentHostCallback;->mFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	53      (000000d4) const-string         v3, 'onLoaderReset'
+	54      (000000d8) iput-object          v3, v2, Landroid/support/v4/app/FragmentManagerImpl;->mNoTransactionsBecause Ljava/lang/String;
+
+destroy-BB@0xdc : [ destroy-BB@0xfa destroy-BB@0x10e ]
+	55      (000000dc) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mCallbacks Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
+	56      (000000e0) iget-object          v3, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mLoader Landroid/support/v4/content/Loader;
+	57      (000000e4) invoke-interface     v2, v3, Landroid/support/v4/app/LoaderManager$LoaderCallbacks;->onLoaderReset(Landroid/support/v4/content/Loader;)V
+	58      (000000ea) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	59      (000000ee) invoke-static        v2, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	60      (000000f4) move-result-object   v2
+	61      (000000f6) if-eqz               v2, +c
+	dc:e9
+	(Ljava/lang/Throwable; -> 160 destroy-BB@0x160)
+
+destroy-BB@0xfa : [ destroy-BB@0x10e ]
+	62      (000000fa) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	63      (000000fe) invoke-static        v2, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	64      (00000104) move-result-object   v2
+	65      (00000106) iget-object          v2, v2, Landroid/support/v4/app/FragmentHostCallback;->mFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	66      (0000010a) iput-object          v0, v2, Landroid/support/v4/app/FragmentManagerImpl;->mNoTransactionsBecause Ljava/lang/String;
+
+destroy-BB@0x10e : [ destroy-BB@0x122 destroy-BB@0x14c ]
+	67      (0000010e) iput-object          v6, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mCallbacks Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
+	68      (00000112) iput-object          v6, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mData Ljava/lang/Object;
+	69      (00000116) iput-boolean         v5, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mHaveData Z
+	70      (0000011a) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mLoader Landroid/support/v4/content/Loader;
+	71      (0000011e) if-eqz               v2, +17
+
+destroy-BB@0x122 : [ destroy-BB@0x12a destroy-BB@0x142 ]
+	72      (00000122) iget-boolean         v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mListenerRegistered Z
+	73      (00000126) if-eqz               v2, +e
+
+destroy-BB@0x12a : [ destroy-BB@0x142 ]
+	74      (0000012a) iput-boolean         v5, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mListenerRegistered Z
+	75      (0000012e) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mLoader Landroid/support/v4/content/Loader;
+	76      (00000132) invoke-virtual       v2, v7, Landroid/support/v4/content/Loader;->unregisterListener(Landroid/support/v4/content/Loader$OnLoadCompleteListener;)V
+	77      (00000138) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mLoader Landroid/support/v4/content/Loader;
+	78      (0000013c) invoke-virtual       v2, v7, Landroid/support/v4/content/Loader;->unregisterOnLoadCanceledListener(Landroid/support/v4/content/Loader$OnLoadCanceledListener;)V
+
+destroy-BB@0x142 : [ destroy-BB@0x14c ]
+	79      (00000142) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mLoader Landroid/support/v4/content/Loader;
+	80      (00000146) invoke-virtual       v2, Landroid/support/v4/content/Loader;->reset()V
+
+destroy-BB@0x14c : [ destroy-BB@0x154 destroy-BB@0x15e ]
+	81      (0000014c) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mPendingLoader Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;
+	82      (00000150) if-eqz               v2, +7
+
+destroy-BB@0x154 : [ destroy-BB@0x15e ]
+	83      (00000154) iget-object          v2, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mPendingLoader Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;
+	84      (00000158) invoke-virtual       v2, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->destroy()V
+
+destroy-BB@0x15e : 
+	85      (0000015e) return-void          
+
+destroy-BB@0x160 : [ destroy-BB@0x172 destroy-BB@0x186 ]
+	86      (00000160) move-exception       v2
+	87      (00000162) iget-object          v3, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	88      (00000166) invoke-static        v3, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	89      (0000016c) move-result-object   v3
+	90      (0000016e) if-eqz               v3, +c
+
+destroy-BB@0x172 : [ destroy-BB@0x186 ]
+	91      (00000172) iget-object          v3, v7, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	92      (00000176) invoke-static        v3, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	93      (0000017c) move-result-object   v3
+	94      (0000017e) iget-object          v3, v3, Landroid/support/v4/app/FragmentHostCallback;->mFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	95      (00000182) iput-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mNoTransactionsBecause Ljava/lang/String;
+
+destroy-BB@0x186 : 
+	96      (00000186) throw                v2
+

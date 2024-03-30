@@ -1,0 +1,152 @@
+# Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->onLoadComplete(Landroid/support/v4/content/Loader; Ljava/lang/Object;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.support.v4.content.Loader
+# - v8:java.lang.Object
+#
+# - return:void
+
+onLoadComplete-BB@0x0 : [ onLoadComplete-BB@0xa onLoadComplete-BB@0x3a ]
+	0       (00000000) const/4              v5, 0
+	1       (00000002) sget-boolean         v2, Landroid/support/v4/app/LoaderManagerImpl;->DEBUG Z
+	2       (00000006) if-eqz               v2, +1a
+
+onLoadComplete-BB@0xa : [ onLoadComplete-BB@0x3a ]
+	3       (0000000a) const-string         v2, 'LoaderManager'
+	4       (0000000e) new-instance         v3, Ljava/lang/StringBuilder;
+	5       (00000012) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	6       (00000018) const-string         v4, 'onLoadComplete: '
+	7       (0000001c) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000022) move-result-object   v3
+	9       (00000024) invoke-virtual       v3, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	10      (0000002a) move-result-object   v3
+	11      (0000002c) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	12      (00000032) move-result-object   v3
+	13      (00000034) invoke-static        v2, v3, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+onLoadComplete-BB@0x3a : [ onLoadComplete-BB@0x42 onLoadComplete-BB@0x5a ]
+	14      (0000003a) iget-boolean         v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mDestroyed Z
+	15      (0000003e) if-eqz               v2, +e
+
+onLoadComplete-BB@0x42 : [ onLoadComplete-BB@0x4a onLoadComplete-BB@0x58 ]
+	16      (00000042) sget-boolean         v2, Landroid/support/v4/app/LoaderManagerImpl;->DEBUG Z
+	17      (00000046) if-eqz               v2, +9
+
+onLoadComplete-BB@0x4a : [ onLoadComplete-BB@0x58 ]
+	18      (0000004a) const-string         v2, 'LoaderManager'
+	19      (0000004e) const-string         v3, '  Ignoring load complete -- destroyed'
+	20      (00000052) invoke-static        v2, v3, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+onLoadComplete-BB@0x58 : 
+	21      (00000058) return-void          
+
+onLoadComplete-BB@0x5a : [ onLoadComplete-BB@0x72 onLoadComplete-BB@0x8a ]
+	22      (0000005a) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	23      (0000005e) iget-object          v2, v2, Landroid/support/v4/app/LoaderManagerImpl;->mLoaders Landroid/support/v4/util/SparseArrayCompat;
+	24      (00000062) iget                 v3, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mId I
+	25      (00000066) invoke-virtual       v2, v3, Landroid/support/v4/util/SparseArrayCompat;->get(I)Ljava/lang/Object;
+	26      (0000006c) move-result-object   v2
+	27      (0000006e) if-eq                v2, v6, +e
+
+onLoadComplete-BB@0x72 : [ onLoadComplete-BB@0x7a onLoadComplete-BB@0x58 ]
+	28      (00000072) sget-boolean         v2, Landroid/support/v4/app/LoaderManagerImpl;->DEBUG Z
+	29      (00000076) if-eqz               v2, -f
+
+onLoadComplete-BB@0x7a : [ onLoadComplete-BB@0x58 ]
+	30      (0000007a) const-string         v2, 'LoaderManager'
+	31      (0000007e) const-string         v3, '  Ignoring load complete -- not active'
+	32      (00000082) invoke-static        v2, v3, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	33      (00000088) goto                 -18
+
+onLoadComplete-BB@0x8a : [ onLoadComplete-BB@0x92 onLoadComplete-BB@0xf2 ]
+	34      (0000008a) iget-object          v1, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mPendingLoader Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;
+	35      (0000008e) if-eqz               v1, +32
+
+onLoadComplete-BB@0x92 : [ onLoadComplete-BB@0x9a onLoadComplete-BB@0xca ]
+	36      (00000092) sget-boolean         v2, Landroid/support/v4/app/LoaderManagerImpl;->DEBUG Z
+	37      (00000096) if-eqz               v2, +1a
+
+onLoadComplete-BB@0x9a : [ onLoadComplete-BB@0xca ]
+	38      (0000009a) const-string         v2, 'LoaderManager'
+	39      (0000009e) new-instance         v3, Ljava/lang/StringBuilder;
+	40      (000000a2) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	41      (000000a8) const-string         v4, '  Switching to pending loader: '
+	42      (000000ac) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	43      (000000b2) move-result-object   v3
+	44      (000000b4) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	45      (000000ba) move-result-object   v3
+	46      (000000bc) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	47      (000000c2) move-result-object   v3
+	48      (000000c4) invoke-static        v2, v3, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+
+onLoadComplete-BB@0xca : [ onLoadComplete-BB@0x58 ]
+	49      (000000ca) iput-object          v5, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mPendingLoader Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;
+	50      (000000ce) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	51      (000000d2) iget-object          v2, v2, Landroid/support/v4/app/LoaderManagerImpl;->mLoaders Landroid/support/v4/util/SparseArrayCompat;
+	52      (000000d6) iget                 v3, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mId I
+	53      (000000da) invoke-virtual       v2, v3, v5, Landroid/support/v4/util/SparseArrayCompat;->put(I Ljava/lang/Object;)V
+	54      (000000e0) invoke-virtual       v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->destroy()V
+	55      (000000e6) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	56      (000000ea) invoke-virtual       v2, v1, Landroid/support/v4/app/LoaderManagerImpl;->installLoader(Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;)V
+	57      (000000f0) goto                 -4c
+
+onLoadComplete-BB@0xf2 : [ onLoadComplete-BB@0xfa onLoadComplete-BB@0x102 ]
+	58      (000000f2) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mData Ljava/lang/Object;
+	59      (000000f6) if-ne                v2, v8, +6
+
+onLoadComplete-BB@0xfa : [ onLoadComplete-BB@0x102 onLoadComplete-BB@0x11a ]
+	60      (000000fa) iget-boolean         v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mHaveData Z
+	61      (000000fe) if-nez               v2, +e
+
+onLoadComplete-BB@0x102 : [ onLoadComplete-BB@0x114 onLoadComplete-BB@0x11a ]
+	62      (00000102) iput-object          v8, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mData Ljava/lang/Object;
+	63      (00000106) const/4              v2, 1
+	64      (00000108) iput-boolean         v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mHaveData Z
+	65      (0000010c) iget-boolean         v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mStarted Z
+	66      (00000110) if-eqz               v2, +5
+
+onLoadComplete-BB@0x114 : [ onLoadComplete-BB@0x11a ]
+	67      (00000114) invoke-virtual       v6, v7, v8, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->callOnLoadFinished(Landroid/support/v4/content/Loader; Ljava/lang/Object;)V
+
+onLoadComplete-BB@0x11a : [ onLoadComplete-BB@0x136 onLoadComplete-BB@0x158 ]
+	68      (0000011a) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	69      (0000011e) iget-object          v2, v2, Landroid/support/v4/app/LoaderManagerImpl;->mInactiveLoaders Landroid/support/v4/util/SparseArrayCompat;
+	70      (00000122) iget                 v3, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mId I
+	71      (00000126) invoke-virtual       v2, v3, Landroid/support/v4/util/SparseArrayCompat;->get(I)Ljava/lang/Object;
+	72      (0000012c) move-result-object   v0
+	73      (0000012e) check-cast           v0, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;
+	74      (00000132) if-eqz               v0, +13
+
+onLoadComplete-BB@0x136 : [ onLoadComplete-BB@0x13a onLoadComplete-BB@0x158 ]
+	75      (00000136) if-eq                v0, v6, +11
+
+onLoadComplete-BB@0x13a : [ onLoadComplete-BB@0x158 ]
+	76      (0000013a) const/4              v2, 0
+	77      (0000013c) iput-boolean         v2, v0, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mDeliveredData Z
+	78      (00000140) invoke-virtual       v0, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->destroy()V
+	79      (00000146) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	80      (0000014a) iget-object          v2, v2, Landroid/support/v4/app/LoaderManagerImpl;->mInactiveLoaders Landroid/support/v4/util/SparseArrayCompat;
+	81      (0000014e) iget                 v3, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->mId I
+	82      (00000152) invoke-virtual       v2, v3, Landroid/support/v4/util/SparseArrayCompat;->remove(I)V
+
+onLoadComplete-BB@0x158 : [ onLoadComplete-BB@0x168 onLoadComplete-BB@0x58 ]
+	83      (00000158) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	84      (0000015c) invoke-static        v2, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	85      (00000162) move-result-object   v2
+	86      (00000164) if-eqz               v2, -86
+
+onLoadComplete-BB@0x168 : [ onLoadComplete-BB@0x178 onLoadComplete-BB@0x58 ]
+	87      (00000168) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	88      (0000016c) invoke-virtual       v2, Landroid/support/v4/app/LoaderManagerImpl;->hasRunningLoaders()Z
+	89      (00000172) move-result          v2
+	90      (00000174) if-nez               v2, -8e
+
+onLoadComplete-BB@0x178 : [ onLoadComplete-BB@0x58 ]
+	91      (00000178) iget-object          v2, v6, Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;->this$0 Landroid/support/v4/app/LoaderManagerImpl;
+	92      (0000017c) invoke-static        v2, Landroid/support/v4/app/LoaderManagerImpl;->access$000(Landroid/support/v4/app/LoaderManagerImpl;)Landroid/support/v4/app/FragmentHostCallback;
+	93      (00000182) move-result-object   v2
+	94      (00000184) iget-object          v2, v2, Landroid/support/v4/app/FragmentHostCallback;->mFragmentManager Landroid/support/v4/app/FragmentManagerImpl;
+	95      (00000188) invoke-virtual       v2, Landroid/support/v4/app/FragmentManagerImpl;->startPendingDeferredFragments()V
+	96      (0000018e) goto/16              -9b
+

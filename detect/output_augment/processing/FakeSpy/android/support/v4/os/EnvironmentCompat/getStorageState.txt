@@ -1,0 +1,56 @@
+# Landroid/support/v4/os/EnvironmentCompat;->getStorageState(Ljava/io/File;)Ljava/lang/String; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:java.io.File
+#
+# - return:java.lang.String
+
+getStorageState-BB@0x0 : [ getStorageState-BB@0xc getStorageState-BB@0x16 ]
+	0       (00000000) sget                 v3, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) const/16             v4, 19
+	2       (00000008) if-lt                v3, v4, +7
+
+getStorageState-BB@0xc : [ getStorageState-BB@0x14 ]
+	3       (0000000c) invoke-static        v7, Landroid/support/v4/os/EnvironmentCompatKitKat;->getStorageState(Ljava/io/File;)Ljava/lang/String;
+	4       (00000012) move-result-object   v4
+
+getStorageState-BB@0x14 : 
+	5       (00000014) return-object        v4
+
+getStorageState-BB@0x16 : [ getStorageState-BB@0x3a getStorageState-BB@0x76 ]
+	6       (00000016) invoke-virtual       v7, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+	7       (0000001c) move-result-object   v1
+	8       (0000001e) invoke-static        Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+	9       (00000024) move-result-object   v4
+	10      (00000026) invoke-virtual       v4, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+	11      (0000002c) move-result-object   v0
+	12      (0000002e) invoke-virtual       v1, v0, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+	13      (00000034) move-result          v4
+	14      (00000036) if-eqz               v4, +20
+	16:3f
+	(Ljava/io/IOException; -> 44 getStorageState-BB@0x44)
+
+getStorageState-BB@0x3a : [ getStorageState-BB@0x14 ]
+	15      (0000003a) invoke-static        Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+	16      (00000040) move-result-object   v4
+	17      (00000042) goto                 -17
+
+getStorageState-BB@0x44 : [ getStorageState-BB@0x76 ]
+	18      (00000044) move-exception       v2
+	19      (00000046) const-string         v4, 'EnvironmentCompat'
+	20      (0000004a) new-instance         v5, Ljava/lang/StringBuilder;
+	21      (0000004e) invoke-direct        v5, Ljava/lang/StringBuilder;-><init>()V
+	22      (00000054) const-string         v6, 'Failed to resolve canonical path: '
+	23      (00000058) invoke-virtual       v5, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (0000005e) move-result-object   v5
+	25      (00000060) invoke-virtual       v5, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	26      (00000066) move-result-object   v5
+	27      (00000068) invoke-virtual       v5, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	28      (0000006e) move-result-object   v5
+	29      (00000070) invoke-static        v4, v5, Landroid/util/Log;->w(Ljava/lang/String; Ljava/lang/String;)I
+
+getStorageState-BB@0x76 : [ getStorageState-BB@0x14 ]
+	30      (00000076) const-string         v4, 'unknown'
+	31      (0000007a) goto                 -33
+

@@ -1,0 +1,32 @@
+# Landroid/support/v7/widget/SearchView;->updateVoiceButton(Z)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:boolean
+#
+# - return:void
+
+updateVoiceButton-BB@0x0 : [ updateVoiceButton-BB@0xc updateVoiceButton-BB@0x2c ]
+	0       (00000000) const/16             v0, 8
+	1       (00000004) iget-boolean         v1, v3, Landroid/support/v7/widget/SearchView;->mVoiceButtonEnabled Z
+	2       (00000008) if-eqz               v1, +12
+
+updateVoiceButton-BB@0xc : [ updateVoiceButton-BB@0x18 updateVoiceButton-BB@0x2c ]
+	3       (0000000c) invoke-virtual       v3, Landroid/support/v7/widget/SearchView;->isIconified()Z
+	4       (00000012) move-result          v1
+	5       (00000014) if-nez               v1, +c
+
+updateVoiceButton-BB@0x18 : [ updateVoiceButton-BB@0x1c updateVoiceButton-BB@0x2c ]
+	6       (00000018) if-eqz               v4, +a
+
+updateVoiceButton-BB@0x1c : [ updateVoiceButton-BB@0x2c ]
+	7       (0000001c) const/4              v0, 0
+	8       (0000001e) iget-object          v1, v3, Landroid/support/v7/widget/SearchView;->mGoButton Landroid/widget/ImageView;
+	9       (00000022) const/16             v2, 8
+	10      (00000026) invoke-virtual       v1, v2, Landroid/widget/ImageView;->setVisibility(I)V
+
+updateVoiceButton-BB@0x2c : 
+	11      (0000002c) iget-object          v1, v3, Landroid/support/v7/widget/SearchView;->mVoiceButton Landroid/widget/ImageView;
+	12      (00000030) invoke-virtual       v1, v0, Landroid/widget/ImageView;->setVisibility(I)V
+	13      (00000036) return-void          
+

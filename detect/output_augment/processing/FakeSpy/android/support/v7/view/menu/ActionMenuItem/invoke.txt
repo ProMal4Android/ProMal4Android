@@ -1,0 +1,35 @@
+# Landroid/support/v7/view/menu/ActionMenuItem;->invoke()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:boolean
+
+invoke-BB@0x0 : [ invoke-BB@0xa invoke-BB@0x1c ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) iget-object          v1, v3, Landroid/support/v7/view/menu/ActionMenuItem;->mClickListener Landroid/view/MenuItem$OnMenuItemClickListener;
+	2       (00000006) if-eqz               v1, +b
+
+invoke-BB@0xa : [ invoke-BB@0x1a invoke-BB@0x1c ]
+	3       (0000000a) iget-object          v1, v3, Landroid/support/v7/view/menu/ActionMenuItem;->mClickListener Landroid/view/MenuItem$OnMenuItemClickListener;
+	4       (0000000e) invoke-interface     v1, v3, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
+	5       (00000014) move-result          v1
+	6       (00000016) if-eqz               v1, +3
+
+invoke-BB@0x1a : 
+	7       (0000001a) return               v0
+
+invoke-BB@0x1c : [ invoke-BB@0x24 invoke-BB@0x34 ]
+	8       (0000001c) iget-object          v1, v3, Landroid/support/v7/view/menu/ActionMenuItem;->mIntent Landroid/content/Intent;
+	9       (00000020) if-eqz               v1, +a
+
+invoke-BB@0x24 : [ invoke-BB@0x1a ]
+	10      (00000024) iget-object          v1, v3, Landroid/support/v7/view/menu/ActionMenuItem;->mContext Landroid/content/Context;
+	11      (00000028) iget-object          v2, v3, Landroid/support/v7/view/menu/ActionMenuItem;->mIntent Landroid/content/Intent;
+	12      (0000002c) invoke-virtual       v1, v2, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+	13      (00000032) goto                 -c
+
+invoke-BB@0x34 : [ invoke-BB@0x1a ]
+	14      (00000034) const/4              v0, 0
+	15      (00000036) goto                 -e
+

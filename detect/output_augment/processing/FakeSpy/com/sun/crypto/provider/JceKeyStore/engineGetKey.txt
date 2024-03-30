@@ -1,0 +1,61 @@
+# Lcom/sun/crypto/provider/JceKeyStore;->engineGetKey(Ljava/lang/String; [C)Ljava/security/Key; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+# - v5:char[]
+#
+# - return:java.security.Key
+
+engineGetKey-BB@0x0 : [ engineGetKey-BB@0x1c engineGetKey-BB@0x28 ]
+	0       (00000000) iget-object          v0, v3, Lcom/sun/crypto/provider/JceKeyStore;->e Ljava/util/Hashtable;
+	1       (00000004) invoke-virtual       v4, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) invoke-virtual       v0, v1, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	4       (00000012) move-result-object   v0
+	5       (00000014) instance-of          v1, v0, Lcom/sun/crypto/provider/JceKeyStore$ai;
+	6       (00000018) if-nez               v1, +8
+
+engineGetKey-BB@0x1c : [ engineGetKey-BB@0x24 engineGetKey-BB@0x28 ]
+	7       (0000001c) instance-of          v1, v0, Lcom/sun/crypto/provider/JceKeyStore$aj;
+	8       (00000020) if-nez               v1, +4
+
+engineGetKey-BB@0x24 : [ engineGetKey-BB@0x26 ]
+	9       (00000024) const/4              v0, 0
+
+engineGetKey-BB@0x26 : 
+	10      (00000026) return-object        v0
+
+engineGetKey-BB@0x28 : [ engineGetKey-BB@0x3a engineGetKey-BB@0x68 ]
+	11      (00000028) new-instance         v1, Lcom/sun/crypto/provider/SunJCE_z;
+	12      (0000002c) invoke-direct        v1, v5, Lcom/sun/crypto/provider/SunJCE_z;-><init>([C)V
+	13      (00000032) instance-of          v2, v0, Lcom/sun/crypto/provider/JceKeyStore$ai;
+	14      (00000036) if-eqz               v2, +19
+
+engineGetKey-BB@0x3a : [ engineGetKey-BB@0x42 ]
+	15      (0000003a) check-cast           v0, Lcom/sun/crypto/provider/JceKeyStore$ai;
+	16      (0000003e) iget-object          v0, v0, Lcom/sun/crypto/provider/JceKeyStore$ai;->b [B
+
+engineGetKey-BB@0x42 : [ engineGetKey-BB@0x26 ]
+	17      (00000042) new-instance         v2, Lcom/sun/crypto/provider/SunJCE_aa;
+	18      (00000046) invoke-direct        v2, v0, Lcom/sun/crypto/provider/SunJCE_aa;-><init>([B)V
+	19      (0000004c) invoke-virtual       v1, v2, Lcom/sun/crypto/provider/SunJCE_z;->a(Lcom/sun/crypto/provider/SunJCE_aa;)Ljava/security/Key;
+	20      (00000052) move-result-object   v0
+	21      (00000054) goto                 -17
+	42:4b
+	(Ljava/io/IOException; -> 56 engineGetKey-BB@0x56)
+
+engineGetKey-BB@0x56 : 
+	22      (00000056) move-exception       v0
+	23      (00000058) new-instance         v0, Ljava/security/UnrecoverableKeyException;
+	24      (0000005c) const-string         v1, 'Private key not stored as PKCS #8 EncryptedPrivateKeyInfo'
+	25      (00000060) invoke-direct        v0, v1, Ljava/security/UnrecoverableKeyException;-><init>(Ljava/lang/String;)V
+	26      (00000066) throw                v0
+
+engineGetKey-BB@0x68 : [ engineGetKey-BB@0x26 ]
+	27      (00000068) check-cast           v0, Lcom/sun/crypto/provider/JceKeyStore$aj;
+	28      (0000006c) iget-object          v0, v0, Lcom/sun/crypto/provider/JceKeyStore$aj;->b Ljavax/crypto/SealedObject;
+	29      (00000070) invoke-virtual       v1, v0, Lcom/sun/crypto/provider/SunJCE_z;->a(Ljavax/crypto/SealedObject;)Ljava/security/Key;
+	30      (00000076) move-result-object   v0
+	31      (00000078) goto                 -29
+

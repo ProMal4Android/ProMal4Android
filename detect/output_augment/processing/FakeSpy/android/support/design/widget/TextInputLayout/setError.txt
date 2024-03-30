@@ -1,0 +1,131 @@
+# Landroid/support/design/widget/TextInputLayout;->setError(Ljava/lang/CharSequence;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:java.lang.CharSequence
+#
+# - return:void
+
+setError-BB@0x0 : [ setError-BB@0x1e setError-BB@0x20 ]
+	0       (00000000) const-wide/16        v6, 200 # [200.0]
+	1       (00000004) const/4              v3, 0
+	2       (00000006) const/high16         v5, 16256 # [1.0]
+	3       (0000000a) const/4              v4, 0
+	4       (0000000c) const/4              v2, 1
+	5       (0000000e) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mError Ljava/lang/CharSequence;
+	6       (00000012) invoke-static        v1, v9, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence; Ljava/lang/CharSequence;)Z
+	7       (00000018) move-result          v1
+	8       (0000001a) if-eqz               v1, +3
+
+setError-BB@0x1e : 
+	9       (0000001e) return-void          
+
+setError-BB@0x20 : [ setError-BB@0x2c setError-BB@0x3e ]
+	10      (00000020) iput-object          v9, v8, Landroid/support/design/widget/TextInputLayout;->mError Ljava/lang/CharSequence;
+	11      (00000024) iget-boolean         v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorEnabled Z
+	12      (00000028) if-nez               v1, +b
+
+setError-BB@0x2c : [ setError-BB@0x38 setError-BB@0x1e ]
+	13      (0000002c) invoke-static        v9, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	14      (00000032) move-result          v1
+	15      (00000034) if-nez               v1, -b
+
+setError-BB@0x38 : [ setError-BB@0x3e ]
+	16      (00000038) invoke-virtual       v8, v2, Landroid/support/design/widget/TextInputLayout;->setErrorEnabled(Z)V
+
+setError-BB@0x3e : [ setError-BB@0x52 setError-BB@0xf6 ]
+	17      (0000003e) invoke-static        v8, Landroid/support/v4/view/ViewCompat;->isLaidOut(Landroid/view/View;)Z
+	18      (00000044) move-result          v0
+	19      (00000046) invoke-static        v9, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	20      (0000004c) move-result          v1
+	21      (0000004e) if-nez               v1, +54
+
+setError-BB@0x52 : [ setError-BB@0x54 ]
+	22      (00000052) move                 v1, v2
+
+setError-BB@0x54 : [ setError-BB@0x72 setError-BB@0xfa ]
+	23      (00000054) iput-boolean         v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorShown Z
+	24      (00000058) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	25      (0000005c) invoke-static        v1, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	26      (00000062) move-result-object   v1
+	27      (00000064) invoke-virtual       v1, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->cancel()V
+	28      (0000006a) iget-boolean         v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorShown Z
+	29      (0000006e) if-eqz               v1, +46
+
+setError-BB@0x72 : [ setError-BB@0x8a setError-BB@0xe8 ]
+	30      (00000072) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	31      (00000076) invoke-virtual       v1, v9, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	32      (0000007c) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	33      (00000080) invoke-virtual       v1, v3, Landroid/widget/TextView;->setVisibility(I)V
+	34      (00000086) if-eqz               v0, +31
+
+setError-BB@0x8a : [ setError-BB@0x9e setError-BB@0xa8 ]
+	35      (0000008a) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	36      (0000008e) invoke-static        v1, Landroid/support/v4/view/ViewCompat;->getAlpha(Landroid/view/View;)F
+	37      (00000094) move-result          v1
+	38      (00000096) cmpl-float           v1, v1, v5
+	39      (0000009a) if-nez               v1, +7
+
+setError-BB@0x9e : [ setError-BB@0xa8 ]
+	40      (0000009e) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	41      (000000a2) invoke-static        v1, v4, Landroid/support/v4/view/ViewCompat;->setAlpha(Landroid/view/View; F)V
+
+setError-BB@0xa8 : [ setError-BB@0xe8 ]
+	42      (000000a8) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	43      (000000ac) invoke-static        v1, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	44      (000000b2) move-result-object   v1
+	45      (000000b4) invoke-virtual       v1, v5, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	46      (000000ba) move-result-object   v1
+	47      (000000bc) invoke-virtual       v1, v6, v7, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	48      (000000c2) move-result-object   v1
+	49      (000000c4) sget-object          v3, Landroid/support/design/widget/AnimationUtils;->LINEAR_OUT_SLOW_IN_INTERPOLATOR Landroid/view/animation/Interpolator;
+	50      (000000c8) invoke-virtual       v1, v3, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	51      (000000ce) move-result-object   v1
+	52      (000000d0) new-instance         v3, Landroid/support/design/widget/TextInputLayout$2;
+	53      (000000d4) invoke-direct        v3, v8, Landroid/support/design/widget/TextInputLayout$2;-><init>(Landroid/support/design/widget/TextInputLayout;)V
+	54      (000000da) invoke-virtual       v1, v3, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setListener(Landroid/support/v4/view/ViewPropertyAnimatorListener;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	55      (000000e0) move-result-object   v1
+	56      (000000e2) invoke-virtual       v1, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->start()V
+
+setError-BB@0xe8 : [ setError-BB@0x1e ]
+	57      (000000e8) invoke-direct        v8, Landroid/support/design/widget/TextInputLayout;->updateEditTextBackground()V
+	58      (000000ee) invoke-direct        v8, v2, Landroid/support/design/widget/TextInputLayout;->updateLabelState(Z)V
+	59      (000000f4) goto                 -6b
+
+setError-BB@0xf6 : [ setError-BB@0x54 ]
+	60      (000000f6) move                 v1, v3
+	61      (000000f8) goto                 -52
+
+setError-BB@0xfa : [ setError-BB@0x10a setError-BB@0xe8 ]
+	62      (000000fa) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	63      (000000fe) invoke-virtual       v1, Landroid/widget/TextView;->getVisibility()I
+	64      (00000104) move-result          v1
+	65      (00000106) if-nez               v1, -f
+
+setError-BB@0x10a : [ setError-BB@0x10e setError-BB@0x150 ]
+	66      (0000010a) if-eqz               v0, +23
+
+setError-BB@0x10e : [ setError-BB@0xe8 ]
+	67      (0000010e) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	68      (00000112) invoke-static        v1, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	69      (00000118) move-result-object   v1
+	70      (0000011a) invoke-virtual       v1, v4, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	71      (00000120) move-result-object   v1
+	72      (00000122) invoke-virtual       v1, v6, v7, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	73      (00000128) move-result-object   v1
+	74      (0000012a) sget-object          v3, Landroid/support/design/widget/AnimationUtils;->FAST_OUT_LINEAR_IN_INTERPOLATOR Landroid/view/animation/Interpolator;
+	75      (0000012e) invoke-virtual       v1, v3, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	76      (00000134) move-result-object   v1
+	77      (00000136) new-instance         v3, Landroid/support/design/widget/TextInputLayout$3;
+	78      (0000013a) invoke-direct        v3, v8, v9, Landroid/support/design/widget/TextInputLayout$3;-><init>(Landroid/support/design/widget/TextInputLayout; Ljava/lang/CharSequence;)V
+	79      (00000140) invoke-virtual       v1, v3, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setListener(Landroid/support/v4/view/ViewPropertyAnimatorListener;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+	80      (00000146) move-result-object   v1
+	81      (00000148) invoke-virtual       v1, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->start()V
+	82      (0000014e) goto                 -33
+
+setError-BB@0x150 : [ setError-BB@0xe8 ]
+	83      (00000150) iget-object          v1, v8, Landroid/support/design/widget/TextInputLayout;->mErrorView Landroid/widget/TextView;
+	84      (00000154) const/4              v3, 4
+	85      (00000156) invoke-virtual       v1, v3, Landroid/widget/TextView;->setVisibility(I)V
+	86      (0000015c) goto                 -3a
+

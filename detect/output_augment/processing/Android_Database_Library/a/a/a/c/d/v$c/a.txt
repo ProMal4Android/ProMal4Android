@@ -1,0 +1,169 @@
+# La/a/a/c/d/v$c;->a()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v10
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x16 a-BB@0x64 ]
+	0       (00000000) iget-object          v0, v10, La/a/a/c/d/v$c;->q La/a/a/a/b;
+	1       (00000004) invoke-virtual       v0, La/a/a/a/b;->b()Landroid/view/View;
+	2       (0000000a) move-result-object   v1
+	3       (0000000c) const/16             v2, 8
+	4       (00000010) const/4              v3, 0
+	5       (00000012) if-eqz               v1, +29
+
+a-BB@0x16 : [ a-BB@0x22 a-BB@0x36 ]
+	6       (00000016) invoke-virtual       v1, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+	7       (0000001c) move-result-object   v0
+	8       (0000001e) if-eq                v0, v10, +c
+
+a-BB@0x22 : [ a-BB@0x26 a-BB@0x30 ]
+	9       (00000022) if-eqz               v0, +7
+
+a-BB@0x26 : [ a-BB@0x30 ]
+	10      (00000026) check-cast           v0, Landroid/view/ViewGroup;
+	11      (0000002a) invoke-virtual       v0, v1, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+a-BB@0x30 : [ a-BB@0x36 ]
+	12      (00000030) invoke-virtual       v10, v1, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+a-BB@0x36 : [ a-BB@0x42 a-BB@0x48 ]
+	13      (00000036) iput-object          v1, v10, La/a/a/c/d/v$c;->t Landroid/view/View;
+	14      (0000003a) iget-object          v0, v10, La/a/a/c/d/v$c;->r Landroid/widget/TextView;
+	15      (0000003e) if-eqz               v0, +5
+
+a-BB@0x42 : [ a-BB@0x48 ]
+	16      (00000042) invoke-virtual       v0, v2, Landroid/widget/TextView;->setVisibility(I)V
+
+a-BB@0x48 : [ a-BB@0x50 a-BB@0x1be ]
+	17      (00000048) iget-object          v0, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+	18      (0000004c) if-eqz               v0, +b9
+
+a-BB@0x50 : [ a-BB@0x1be ]
+	19      (00000050) invoke-virtual       v0, v2, Landroid/widget/ImageView;->setVisibility(I)V
+	20      (00000056) iget-object          v0, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+	21      (0000005a) invoke-virtual       v0, v3, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	22      (00000060) goto/16              +af
+
+a-BB@0x64 : [ a-BB@0x6c a-BB@0x76 ]
+	23      (00000064) iget-object          v1, v10, La/a/a/c/d/v$c;->t Landroid/view/View;
+	24      (00000068) if-eqz               v1, +7
+
+a-BB@0x6c : [ a-BB@0x76 ]
+	25      (0000006c) invoke-virtual       v10, v1, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+	26      (00000072) iput-object          v3, v10, La/a/a/c/d/v$c;->t Landroid/view/View;
+
+a-BB@0x76 : [ a-BB@0x92 a-BB@0xe0 ]
+	27      (00000076) invoke-virtual       v0, La/a/a/a/b;->c()Landroid/graphics/drawable/Drawable;
+	28      (0000007c) move-result-object   v1
+	29      (0000007e) invoke-virtual       v0, La/a/a/a/b;->d()Ljava/lang/CharSequence;
+	30      (00000084) move-result-object   v4
+	31      (00000086) const/16             v5, 16
+	32      (0000008a) const/4              v6, -2
+	33      (0000008c) const/4              v7, 0
+	34      (0000008e) if-eqz               v1, +29
+
+a-BB@0x92 : [ a-BB@0x9a a-BB@0xca ]
+	35      (00000092) iget-object          v8, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+	36      (00000096) if-nez               v8, +1a
+
+a-BB@0x9a : [ a-BB@0xca ]
+	37      (0000009a) new-instance         v8, Landroid/widget/ImageView;
+	38      (0000009e) invoke-virtual       v10, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+	39      (000000a4) move-result-object   v9
+	40      (000000a6) invoke-direct        v8, v9, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+	41      (000000ac) new-instance         v9, La/a/a/e/e$a;
+	42      (000000b0) invoke-direct        v9, v6, v6, La/a/a/e/e$a;-><init>(I I)V
+	43      (000000b6) iput                 v5, v9, La/a/a/e/e$a;->b I
+	44      (000000ba) invoke-virtual       v8, v9, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+	45      (000000c0) invoke-virtual       v10, v8, v7, Landroid/view/ViewGroup;->addView(Landroid/view/View; I)V
+	46      (000000c6) iput-object          v8, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+
+a-BB@0xca : [ a-BB@0xf8 ]
+	47      (000000ca) iget-object          v8, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+	48      (000000ce) invoke-virtual       v8, v1, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+	49      (000000d4) iget-object          v1, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+	50      (000000d8) invoke-virtual       v1, v7, Landroid/widget/ImageView;->setVisibility(I)V
+	51      (000000de) goto                 +d
+
+a-BB@0xe0 : [ a-BB@0xe8 a-BB@0xf8 ]
+	52      (000000e0) iget-object          v1, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+	53      (000000e4) if-eqz               v1, +a
+
+a-BB@0xe8 : [ a-BB@0xf8 ]
+	54      (000000e8) invoke-virtual       v1, v2, Landroid/widget/ImageView;->setVisibility(I)V
+	55      (000000ee) iget-object          v1, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+	56      (000000f2) invoke-virtual       v1, v3, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+a-BB@0xf8 : [ a-BB@0x108 a-BB@0x164 ]
+	57      (000000f8) invoke-static        v4, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	58      (000000fe) move-result          v1
+	59      (00000100) xor-int/lit8         v1, v1, 1
+	60      (00000104) if-eqz               v1, +30
+
+a-BB@0x108 : [ a-BB@0x110 a-BB@0x14e ]
+	61      (00000108) iget-object          v2, v10, La/a/a/c/d/v$c;->r Landroid/widget/TextView;
+	62      (0000010c) if-nez               v2, +21
+
+a-BB@0x110 : [ a-BB@0x14e ]
+	63      (00000110) new-instance         v2, La/a/a/c/d/l;
+	64      (00000114) invoke-virtual       v10, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+	65      (0000011a) move-result-object   v8
+	66      (0000011c) sget                 v9, La/a/a/b/a;->actionBarTabTextStyle I
+	67      (00000120) invoke-direct        v2, v8, v3, v9, La/a/a/c/d/l;-><init>(Landroid/content/Context; Landroid/util/AttributeSet; I)V
+	68      (00000126) sget-object          v8, Landroid/text/TextUtils$TruncateAt;->END Landroid/text/TextUtils$TruncateAt;
+	69      (0000012a) invoke-virtual       v2, v8, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+	70      (00000130) new-instance         v8, La/a/a/e/e$a;
+	71      (00000134) invoke-direct        v8, v6, v6, La/a/a/e/e$a;-><init>(I I)V
+	72      (0000013a) iput                 v5, v8, La/a/a/e/e$a;->b I
+	73      (0000013e) invoke-virtual       v2, v8, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+	74      (00000144) invoke-virtual       v10, v2, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+	75      (0000014a) iput-object          v2, v10, La/a/a/c/d/v$c;->r Landroid/widget/TextView;
+
+a-BB@0x14e : [ a-BB@0x17c ]
+	76      (0000014e) iget-object          v2, v10, La/a/a/c/d/v$c;->r Landroid/widget/TextView;
+	77      (00000152) invoke-virtual       v2, v4, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	78      (00000158) iget-object          v2, v10, La/a/a/c/d/v$c;->r Landroid/widget/TextView;
+	79      (0000015c) invoke-virtual       v2, v7, Landroid/widget/TextView;->setVisibility(I)V
+	80      (00000162) goto                 +d
+
+a-BB@0x164 : [ a-BB@0x16c a-BB@0x17c ]
+	81      (00000164) iget-object          v4, v10, La/a/a/c/d/v$c;->r Landroid/widget/TextView;
+	82      (00000168) if-eqz               v4, +a
+
+a-BB@0x16c : [ a-BB@0x17c ]
+	83      (0000016c) invoke-virtual       v4, v2, Landroid/widget/TextView;->setVisibility(I)V
+	84      (00000172) iget-object          v2, v10, La/a/a/c/d/v$c;->r Landroid/widget/TextView;
+	85      (00000176) invoke-virtual       v2, v3, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+a-BB@0x17c : [ a-BB@0x184 a-BB@0x192 ]
+	86      (0000017c) iget-object          v2, v10, La/a/a/c/d/v$c;->s Landroid/widget/ImageView;
+	87      (00000180) if-eqz               v2, +9
+
+a-BB@0x184 : [ a-BB@0x192 ]
+	88      (00000184) invoke-virtual       v0, La/a/a/a/b;->a()Ljava/lang/CharSequence;
+	89      (0000018a) move-result-object   v4
+	90      (0000018c) invoke-virtual       v2, v4, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+a-BB@0x192 : [ a-BB@0x196 a-BB@0x1b2 ]
+	91      (00000192) if-nez               v1, +10
+
+a-BB@0x196 : [ a-BB@0x1aa a-BB@0x1b2 ]
+	92      (00000196) invoke-virtual       v0, La/a/a/a/b;->a()Ljava/lang/CharSequence;
+	93      (0000019c) move-result-object   v0
+	94      (0000019e) invoke-static        v0, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	95      (000001a4) move-result          v0
+	96      (000001a6) if-nez               v0, +6
+
+a-BB@0x1aa : [ a-BB@0x1be ]
+	97      (000001aa) invoke-virtual       v10, v10, Landroid/view/ViewGroup;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+	98      (000001b0) goto                 +7
+
+a-BB@0x1b2 : [ a-BB@0x1be ]
+	99      (000001b2) invoke-virtual       v10, v3, Landroid/view/ViewGroup;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+	100     (000001b8) invoke-virtual       v10, v7, Landroid/view/ViewGroup;->setLongClickable(Z)V
+
+a-BB@0x1be : 
+	101     (000001be) return-void          
+

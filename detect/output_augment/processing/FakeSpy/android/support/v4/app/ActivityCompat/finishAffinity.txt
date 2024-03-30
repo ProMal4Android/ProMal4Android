@@ -1,0 +1,23 @@
+# Landroid/support/v4/app/ActivityCompat;->finishAffinity(Landroid/app/Activity;)V [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.app.Activity
+#
+# - return:void
+
+finishAffinity-BB@0x0 : [ finishAffinity-BB@0xc finishAffinity-BB@0x14 ]
+	0       (00000000) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	1       (00000004) const/16             v1, 16
+	2       (00000008) if-lt                v0, v1, +6
+
+finishAffinity-BB@0xc : [ finishAffinity-BB@0x12 ]
+	3       (0000000c) invoke-static        v2, Landroid/support/v4/app/ActivityCompatJB;->finishAffinity(Landroid/app/Activity;)V
+
+finishAffinity-BB@0x12 : 
+	4       (00000012) return-void          
+
+finishAffinity-BB@0x14 : [ finishAffinity-BB@0x12 ]
+	5       (00000014) invoke-virtual       v2, Landroid/app/Activity;->finish()V
+	6       (0000001a) goto                 -4
+

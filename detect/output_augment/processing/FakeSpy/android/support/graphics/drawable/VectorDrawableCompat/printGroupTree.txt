@@ -1,0 +1,102 @@
+# Landroid/support/graphics/drawable/VectorDrawableCompat;->printGroupTree(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup; I)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:android.support.graphics.drawable.VectorDrawableCompat$VGroup
+# - v8:int
+#
+# - return:void
+
+printGroupTree-BB@0x0 : [ printGroupTree-BB@0x6 ]
+	0       (00000000) const-string         v2, ''
+	1       (00000004) const/4              v1, 0
+
+printGroupTree-BB@0x6 : [ printGroupTree-BB@0xa printGroupTree-BB@0x36 ]
+	2       (00000006) if-ge                v1, v8, +18
+
+printGroupTree-BB@0xa : [ printGroupTree-BB@0x6 ]
+	3       (0000000a) new-instance         v3, Ljava/lang/StringBuilder;
+	4       (0000000e) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	5       (00000014) invoke-virtual       v3, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	6       (0000001a) move-result-object   v3
+	7       (0000001c) const-string         v4, '    '
+	8       (00000020) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000026) move-result-object   v3
+	10      (00000028) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	11      (0000002e) move-result-object   v2
+	12      (00000030) add-int/lit8         v1, v1, 1
+	13      (00000034) goto                 -17
+
+printGroupTree-BB@0x36 : [ printGroupTree-BB@0xdc ]
+	14      (00000036) const-string         v3, 'VectorDrawableCompat'
+	15      (0000003a) new-instance         v4, Ljava/lang/StringBuilder;
+	16      (0000003e) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	17      (00000044) invoke-virtual       v4, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	18      (0000004a) move-result-object   v4
+	19      (0000004c) const-string         v5, 'current group is :'
+	20      (00000050) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	21      (00000056) move-result-object   v4
+	22      (00000058) invoke-virtual       v7, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->getGroupName()Ljava/lang/String;
+	23      (0000005e) move-result-object   v5
+	24      (00000060) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (00000066) move-result-object   v4
+	26      (00000068) const-string         v5, ' rotation is '
+	27      (0000006c) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	28      (00000072) move-result-object   v4
+	29      (00000074) invoke-static        v7, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->access$200(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;)F
+	30      (0000007a) move-result          v5
+	31      (0000007c) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+	32      (00000082) move-result-object   v4
+	33      (00000084) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	34      (0000008a) move-result-object   v4
+	35      (0000008c) invoke-static        v3, v4, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	36      (00000092) const-string         v3, 'VectorDrawableCompat'
+	37      (00000096) new-instance         v4, Ljava/lang/StringBuilder;
+	38      (0000009a) invoke-direct        v4, Ljava/lang/StringBuilder;-><init>()V
+	39      (000000a0) invoke-virtual       v4, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	40      (000000a6) move-result-object   v4
+	41      (000000a8) const-string         v5, 'matrix is :'
+	42      (000000ac) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	43      (000000b2) move-result-object   v4
+	44      (000000b4) invoke-virtual       v7, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->getLocalMatrix()Landroid/graphics/Matrix;
+	45      (000000ba) move-result-object   v5
+	46      (000000bc) invoke-virtual       v5, Landroid/graphics/Matrix;->toString()Ljava/lang/String;
+	47      (000000c2) move-result-object   v5
+	48      (000000c4) invoke-virtual       v4, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	49      (000000ca) move-result-object   v4
+	50      (000000cc) invoke-virtual       v4, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	51      (000000d2) move-result-object   v4
+	52      (000000d4) invoke-static        v3, v4, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	53      (000000da) const/4              v1, 0
+
+printGroupTree-BB@0xdc : [ printGroupTree-BB@0xec printGroupTree-BB@0x124 ]
+	54      (000000dc) iget-object          v3, v7, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mChildren Ljava/util/ArrayList;
+	55      (000000e0) invoke-virtual       v3, Ljava/util/ArrayList;->size()I
+	56      (000000e6) move-result          v3
+	57      (000000e8) if-ge                v1, v3, +1e
+
+printGroupTree-BB@0xec : [ printGroupTree-BB@0x100 printGroupTree-BB@0x114 ]
+	58      (000000ec) iget-object          v3, v7, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;->mChildren Ljava/util/ArrayList;
+	59      (000000f0) invoke-virtual       v3, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	60      (000000f6) move-result-object   v0
+	61      (000000f8) instance-of          v3, v0, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;
+	62      (000000fc) if-eqz               v3, +c
+
+printGroupTree-BB@0x100 : [ printGroupTree-BB@0x10e ]
+	63      (00000100) check-cast           v0, Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;
+	64      (00000104) add-int/lit8         v3, v8, 1
+	65      (00000108) invoke-direct        v6, v0, v3, Landroid/support/graphics/drawable/VectorDrawableCompat;->printGroupTree(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup; I)V
+
+printGroupTree-BB@0x10e : [ printGroupTree-BB@0xdc ]
+	66      (0000010e) add-int/lit8         v1, v1, 1
+	67      (00000112) goto                 -1b
+
+printGroupTree-BB@0x114 : [ printGroupTree-BB@0x10e ]
+	68      (00000114) check-cast           v0, Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;
+	69      (00000118) add-int/lit8         v3, v8, 1
+	70      (0000011c) invoke-virtual       v0, v3, Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;->printVPath(I)V
+	71      (00000122) goto                 -a
+
+printGroupTree-BB@0x124 : 
+	72      (00000124) return-void          
+

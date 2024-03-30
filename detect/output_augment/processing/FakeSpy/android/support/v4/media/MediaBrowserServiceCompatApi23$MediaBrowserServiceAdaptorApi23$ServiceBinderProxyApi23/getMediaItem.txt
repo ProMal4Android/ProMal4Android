@@ -1,0 +1,42 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompatApi23$MediaBrowserServiceAdaptorApi23$ServiceBinderProxyApi23;->getMediaItem(Ljava/lang/String; Landroid/os/ResultReceiver;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.lang.String
+# - v6:android.os.ResultReceiver
+#
+# - return:void
+
+getMediaItem-BB@0x0 : [ getMediaItem-BB@0x32 ]
+	0       (00000000) const-class          v2, Landroid/service/media/MediaBrowserService;
+	1       (00000004) const-string         v3, 'KEY_MEDIA_ITEM'
+	2       (00000008) invoke-virtual       v2, v3, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+	3       (0000000e) move-result-object   v2
+	4       (00000010) const/4              v3, 0
+	5       (00000012) invoke-virtual       v2, v3, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	6       (00000018) move-result-object   v0
+	7       (0000001a) check-cast           v0, Ljava/lang/String;
+	8       (0000001e) iget-object          v2, v4, Landroid/support/v4/media/MediaBrowserServiceCompatApi23$MediaBrowserServiceAdaptorApi23$ServiceBinderProxyApi23;->mServiceImpl Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ServiceImplApi23;
+	9       (00000022) new-instance         v3, Landroid/support/v4/media/MediaBrowserServiceCompatApi23$MediaBrowserServiceAdaptorApi23$ServiceBinderProxyApi23$1;
+	10      (00000026) invoke-direct        v3, v4, v0, v6, Landroid/support/v4/media/MediaBrowserServiceCompatApi23$MediaBrowserServiceAdaptorApi23$ServiceBinderProxyApi23$1;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompatApi23$MediaBrowserServiceAdaptorApi23$ServiceBinderProxyApi23; Ljava/lang/String; Landroid/os/ResultReceiver;)V
+	11      (0000002c) invoke-interface     v2, v5, v3, Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ServiceImplApi23;->getMediaItem(Ljava/lang/String; Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ItemCallback;)V
+	0:1d
+	(Ljava/lang/IllegalAccessException; -> 46 getMediaItem-BB@0x46)
+	(Ljava/lang/NoSuchFieldException; -> 34 getMediaItem-BB@0x34)
+
+getMediaItem-BB@0x32 : 
+	12      (00000032) return-void          
+
+getMediaItem-BB@0x34 : [ getMediaItem-BB@0x36 ]
+	13      (00000034) move-exception       v1
+
+getMediaItem-BB@0x36 : [ getMediaItem-BB@0x32 ]
+	14      (00000036) const-string         v2, 'MediaBrowserServiceCompatApi21'
+	15      (0000003a) const-string         v3, 'Failed to get KEY_MEDIA_ITEM via reflection'
+	16      (0000003e) invoke-static        v2, v3, v1, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	17      (00000044) goto                 -9
+
+getMediaItem-BB@0x46 : [ getMediaItem-BB@0x36 ]
+	18      (00000046) move-exception       v1
+	19      (00000048) goto                 -9
+

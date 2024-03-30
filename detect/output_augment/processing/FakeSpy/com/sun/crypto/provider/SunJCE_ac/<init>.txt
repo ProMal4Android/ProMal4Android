@@ -1,0 +1,64 @@
+# Lcom/sun/crypto/provider/SunJCE_ac;-><init>([B)V [access_flags=constructor]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:byte[]
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x1c <init>-BB@0x2c ]
+	0       (00000000) invoke-direct        v4, Ljava/lang/Object;-><init>()V
+	1       (00000006) new-instance         v0, Lsun/security/util/DerValue;
+	2       (0000000a) invoke-direct        v0, v5, Lsun/security/util/DerValue;-><init>([B)V
+	3       (00000010) iget-byte            v1, v0, Lsun/security/util/DerValue;->tag B
+	4       (00000014) const/16             v2, 48
+	5       (00000018) if-eq                v1, v2, +a
+
+<init>-BB@0x1c : 
+	6       (0000001c) new-instance         v0, Ljava/io/IOException;
+	7       (00000020) const-string         v1, 'private key parse error: not a sequence'
+	8       (00000024) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	9       (0000002a) throw                v0
+
+<init>-BB@0x2c : [ <init>-BB@0x48 <init>-BB@0x92 ]
+	10      (0000002c) iget-object          v1, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	11      (00000030) invoke-virtual       v1, Lsun/security/util/DerInputStream;->getBigInteger()Ljava/math/BigInteger;
+	12      (00000036) move-result-object   v1
+	13      (00000038) sget-object          v2, Lcom/sun/crypto/provider/SunJCE_ac;->a Ljava/math/BigInteger;
+	14      (0000003c) invoke-virtual       v1, v2, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
+	15      (00000042) move-result          v2
+	16      (00000044) if-nez               v2, +27
+
+<init>-BB@0x48 : 
+	17      (00000048) new-instance         v0, Ljava/io/IOException;
+	18      (0000004c) new-instance         v2, Ljava/lang/StringBuilder;
+	19      (00000050) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	20      (00000056) const-string         v3, 'version mismatch: (supported: '
+	21      (0000005a) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	22      (00000060) move-result-object   v2
+	23      (00000062) sget-object          v3, Lcom/sun/crypto/provider/SunJCE_ac;->a Ljava/math/BigInteger;
+	24      (00000066) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	25      (0000006c) move-result-object   v2
+	26      (0000006e) const-string         v3, ', parsed: '
+	27      (00000072) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	28      (00000078) move-result-object   v2
+	29      (0000007a) invoke-virtual       v2, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	30      (00000080) move-result-object   v1
+	31      (00000082) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	32      (00000088) move-result-object   v1
+	33      (0000008a) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	34      (00000090) throw                v0
+
+<init>-BB@0x92 : 
+	35      (00000092) iget-object          v1, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	36      (00000096) invoke-virtual       v1, Lsun/security/util/DerInputStream;->getDerValue()Lsun/security/util/DerValue;
+	37      (0000009c) move-result-object   v1
+	38      (0000009e) invoke-static        v1, Lsun/security/x509/AlgorithmId;->parse(Lsun/security/util/DerValue;)Lsun/security/x509/AlgorithmId;
+	39      (000000a4) move-result-object   v1
+	40      (000000a6) iput-object          v1, v4, Lcom/sun/crypto/provider/SunJCE_ac;->b Lsun/security/x509/AlgorithmId;
+	41      (000000aa) iget-object          v0, v0, Lsun/security/util/DerValue;->data Lsun/security/util/DerInputStream;
+	42      (000000ae) invoke-virtual       v0, Lsun/security/util/DerInputStream;->getOctetString()[B
+	43      (000000b4) move-result-object   v0
+	44      (000000b6) iput-object          v0, v4, Lcom/sun/crypto/provider/SunJCE_ac;->c [B
+	45      (000000ba) return-void          
+

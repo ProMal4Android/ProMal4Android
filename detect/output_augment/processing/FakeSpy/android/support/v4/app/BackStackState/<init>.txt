@@ -1,0 +1,156 @@
+# Landroid/support/v4/app/BackStackState;-><init>(Landroid/support/v4/app/BackStackRecord;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.support.v4.app.BackStackRecord
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0xc ]
+	0       (00000000) invoke-direct        v8, Ljava/lang/Object;-><init>()V
+	1       (00000006) const/4              v2, 0
+	2       (00000008) iget-object          v3, v9, Landroid/support/v4/app/BackStackRecord;->mHead Landroid/support/v4/app/BackStackRecord$Op;
+
+<init>-BB@0xc : [ <init>-BB@0x10 <init>-BB@0x2c ]
+	3       (0000000c) if-eqz               v3, +10
+
+<init>-BB@0x10 : [ <init>-BB@0x18 <init>-BB@0x26 ]
+	4       (00000010) iget-object          v6, v3, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	5       (00000014) if-eqz               v6, +9
+
+<init>-BB@0x18 : [ <init>-BB@0x26 ]
+	6       (00000018) iget-object          v6, v3, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	7       (0000001c) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	8       (00000022) move-result          v6
+	9       (00000024) add-int/2addr        v2, v6
+
+<init>-BB@0x26 : [ <init>-BB@0xc ]
+	10      (00000026) iget-object          v3, v3, Landroid/support/v4/app/BackStackRecord$Op;->next Landroid/support/v4/app/BackStackRecord$Op;
+	11      (0000002a) goto                 -f
+
+<init>-BB@0x2c : [ <init>-BB@0x46 <init>-BB@0x56 ]
+	12      (0000002c) iget                 v6, v9, Landroid/support/v4/app/BackStackRecord;->mNumOp I
+	13      (00000030) mul-int/lit8         v6, v6, 7
+	14      (00000034) add-int/2addr        v6, v2
+	15      (00000036) new-array            v6, v6, [I
+	16      (0000003a) iput-object          v6, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	17      (0000003e) iget-boolean         v6, v9, Landroid/support/v4/app/BackStackRecord;->mAddToBackStack Z
+	18      (00000042) if-nez               v6, +a
+
+<init>-BB@0x46 : 
+	19      (00000046) new-instance         v6, Ljava/lang/IllegalStateException;
+	20      (0000004a) const-string         v7, 'Not on back stack'
+	21      (0000004e) invoke-direct        v6, v7, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	22      (00000054) throw                v6
+
+<init>-BB@0x56 : [ <init>-BB@0x5e ]
+	23      (00000056) iget-object          v3, v9, Landroid/support/v4/app/BackStackRecord;->mHead Landroid/support/v4/app/BackStackRecord$Op;
+	24      (0000005a) const/4              v4, 0
+	25      (0000005c) move                 v5, v4
+
+<init>-BB@0x5e : [ <init>-BB@0x62 <init>-BB@0x13c ]
+	26      (0000005e) if-eqz               v3, +6f
+
+<init>-BB@0x62 : [ <init>-BB@0x82 <init>-BB@0x11e ]
+	27      (00000062) iget-object          v6, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	28      (00000066) add-int/lit8         v4, v5, 1
+	29      (0000006a) iget                 v7, v3, Landroid/support/v4/app/BackStackRecord$Op;->cmd I
+	30      (0000006e) aput                 v7, v6, v5
+	31      (00000072) iget-object          v7, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	32      (00000076) add-int/lit8         v5, v4, 1
+	33      (0000007a) iget-object          v6, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	34      (0000007e) if-eqz               v6, +50
+
+<init>-BB@0x82 : [ <init>-BB@0x8a ]
+	35      (00000082) iget-object          v6, v3, Landroid/support/v4/app/BackStackRecord$Op;->fragment Landroid/support/v4/app/Fragment;
+	36      (00000086) iget                 v6, v6, Landroid/support/v4/app/Fragment;->mIndex I
+
+<init>-BB@0x8a : [ <init>-BB@0xd6 <init>-BB@0x12c ]
+	37      (0000008a) aput                 v6, v7, v4
+	38      (0000008e) iget-object          v6, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	39      (00000092) add-int/lit8         v4, v5, 1
+	40      (00000096) iget                 v7, v3, Landroid/support/v4/app/BackStackRecord$Op;->enterAnim I
+	41      (0000009a) aput                 v7, v6, v5
+	42      (0000009e) iget-object          v6, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	43      (000000a2) add-int/lit8         v5, v4, 1
+	44      (000000a6) iget                 v7, v3, Landroid/support/v4/app/BackStackRecord$Op;->exitAnim I
+	45      (000000aa) aput                 v7, v6, v4
+	46      (000000ae) iget-object          v6, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	47      (000000b2) add-int/lit8         v4, v5, 1
+	48      (000000b6) iget                 v7, v3, Landroid/support/v4/app/BackStackRecord$Op;->popEnterAnim I
+	49      (000000ba) aput                 v7, v6, v5
+	50      (000000be) iget-object          v6, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	51      (000000c2) add-int/lit8         v5, v4, 1
+	52      (000000c6) iget                 v7, v3, Landroid/support/v4/app/BackStackRecord$Op;->popExitAnim I
+	53      (000000ca) aput                 v7, v6, v4
+	54      (000000ce) iget-object          v6, v3, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	55      (000000d2) if-eqz               v6, +2d
+
+<init>-BB@0xd6 : [ <init>-BB@0xf2 ]
+	56      (000000d6) iget-object          v6, v3, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	57      (000000da) invoke-virtual       v6, Ljava/util/ArrayList;->size()I
+	58      (000000e0) move-result          v0
+	59      (000000e2) iget-object          v6, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	60      (000000e6) add-int/lit8         v4, v5, 1
+	61      (000000ea) aput                 v0, v6, v5
+	62      (000000ee) const/4              v1, 0
+	63      (000000f0) move                 v5, v4
+
+<init>-BB@0xf2 : [ <init>-BB@0xf6 <init>-BB@0x122 ]
+	64      (000000f2) if-ge                v1, v0, +18
+
+<init>-BB@0xf6 : [ <init>-BB@0xf2 ]
+	65      (000000f6) iget-object          v7, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	66      (000000fa) add-int/lit8         v4, v5, 1
+	67      (000000fe) iget-object          v6, v3, Landroid/support/v4/app/BackStackRecord$Op;->removed Ljava/util/ArrayList;
+	68      (00000102) invoke-virtual       v6, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	69      (00000108) move-result-object   v6
+	70      (0000010a) check-cast           v6, Landroid/support/v4/app/Fragment;
+	71      (0000010e) iget                 v6, v6, Landroid/support/v4/app/Fragment;->mIndex I
+	72      (00000112) aput                 v6, v7, v5
+	73      (00000116) add-int/lit8         v1, v1, 1
+	74      (0000011a) move                 v5, v4
+	75      (0000011c) goto                 -15
+
+<init>-BB@0x11e : [ <init>-BB@0x8a ]
+	76      (0000011e) const/4              v6, -1
+	77      (00000120) goto                 -4b
+
+<init>-BB@0x122 : [ <init>-BB@0x124 ]
+	78      (00000122) move                 v4, v5
+
+<init>-BB@0x124 : [ <init>-BB@0x5e ]
+	79      (00000124) iget-object          v3, v3, Landroid/support/v4/app/BackStackRecord$Op;->next Landroid/support/v4/app/BackStackRecord$Op;
+	80      (00000128) move                 v5, v4
+	81      (0000012a) goto                 -66
+
+<init>-BB@0x12c : [ <init>-BB@0x124 ]
+	82      (0000012c) iget-object          v6, v8, Landroid/support/v4/app/BackStackState;->mOps [I
+	83      (00000130) add-int/lit8         v4, v5, 1
+	84      (00000134) const/4              v7, 0
+	85      (00000136) aput                 v7, v6, v5
+	86      (0000013a) goto                 -b
+
+<init>-BB@0x13c : 
+	87      (0000013c) iget                 v6, v9, Landroid/support/v4/app/BackStackRecord;->mTransition I
+	88      (00000140) iput                 v6, v8, Landroid/support/v4/app/BackStackState;->mTransition I
+	89      (00000144) iget                 v6, v9, Landroid/support/v4/app/BackStackRecord;->mTransitionStyle I
+	90      (00000148) iput                 v6, v8, Landroid/support/v4/app/BackStackState;->mTransitionStyle I
+	91      (0000014c) iget-object          v6, v9, Landroid/support/v4/app/BackStackRecord;->mName Ljava/lang/String;
+	92      (00000150) iput-object          v6, v8, Landroid/support/v4/app/BackStackState;->mName Ljava/lang/String;
+	93      (00000154) iget                 v6, v9, Landroid/support/v4/app/BackStackRecord;->mIndex I
+	94      (00000158) iput                 v6, v8, Landroid/support/v4/app/BackStackState;->mIndex I
+	95      (0000015c) iget                 v6, v9, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbTitleRes I
+	96      (00000160) iput                 v6, v8, Landroid/support/v4/app/BackStackState;->mBreadCrumbTitleRes I
+	97      (00000164) iget-object          v6, v9, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbTitleText Ljava/lang/CharSequence;
+	98      (00000168) iput-object          v6, v8, Landroid/support/v4/app/BackStackState;->mBreadCrumbTitleText Ljava/lang/CharSequence;
+	99      (0000016c) iget                 v6, v9, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbShortTitleRes I
+	100     (00000170) iput                 v6, v8, Landroid/support/v4/app/BackStackState;->mBreadCrumbShortTitleRes I
+	101     (00000174) iget-object          v6, v9, Landroid/support/v4/app/BackStackRecord;->mBreadCrumbShortTitleText Ljava/lang/CharSequence;
+	102     (00000178) iput-object          v6, v8, Landroid/support/v4/app/BackStackState;->mBreadCrumbShortTitleText Ljava/lang/CharSequence;
+	103     (0000017c) iget-object          v6, v9, Landroid/support/v4/app/BackStackRecord;->mSharedElementSourceNames Ljava/util/ArrayList;
+	104     (00000180) iput-object          v6, v8, Landroid/support/v4/app/BackStackState;->mSharedElementSourceNames Ljava/util/ArrayList;
+	105     (00000184) iget-object          v6, v9, Landroid/support/v4/app/BackStackRecord;->mSharedElementTargetNames Ljava/util/ArrayList;
+	106     (00000188) iput-object          v6, v8, Landroid/support/v4/app/BackStackState;->mSharedElementTargetNames Ljava/util/ArrayList;
+	107     (0000018c) return-void          
+

@@ -1,0 +1,73 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->getFragment(Landroid/os/Bundle; Ljava/lang/String;)Landroid/support/v4/app/Fragment; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.os.Bundle
+# - v7:java.lang.String
+#
+# - return:android.support.v4.app.Fragment
+
+getFragment-BB@0x0 : [ getFragment-BB@0xe getFragment-BB@0x12 ]
+	0       (00000000) const/4              v2, -1
+	1       (00000002) invoke-virtual       v6, v7, v2, Landroid/os/Bundle;->getInt(Ljava/lang/String; I)I
+	2       (00000008) move-result          v1
+	3       (0000000a) if-ne                v1, v2, +4
+
+getFragment-BB@0xe : [ getFragment-BB@0x10 ]
+	4       (0000000e) const/4              v0, 0
+
+getFragment-BB@0x10 : 
+	5       (00000010) return-object        v0
+
+getFragment-BB@0x12 : [ getFragment-BB@0x22 getFragment-BB@0x6c ]
+	6       (00000012) iget-object          v2, v5, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	7       (00000016) invoke-virtual       v2, Ljava/util/ArrayList;->size()I
+	8       (0000001c) move-result          v2
+	9       (0000001e) if-lt                v1, v2, +27
+
+getFragment-BB@0x22 : [ getFragment-BB@0x6c ]
+	10      (00000022) new-instance         v2, Ljava/lang/IllegalStateException;
+	11      (00000026) new-instance         v3, Ljava/lang/StringBuilder;
+	12      (0000002a) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	13      (00000030) const-string         v4, 'Fragment no longer exists for key '
+	14      (00000034) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	15      (0000003a) move-result-object   v3
+	16      (0000003c) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000042) move-result-object   v3
+	18      (00000044) const-string         v4, ': index '
+	19      (00000048) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (0000004e) move-result-object   v3
+	21      (00000050) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	22      (00000056) move-result-object   v3
+	23      (00000058) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	24      (0000005e) move-result-object   v3
+	25      (00000060) invoke-direct        v2, v3, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	26      (00000066) invoke-direct        v5, v2, Landroid/support/v4/app/FragmentManagerImpl;->throwException(Ljava/lang/RuntimeException;)V
+
+getFragment-BB@0x6c : [ getFragment-BB@0x80 getFragment-BB@0x10 ]
+	27      (0000006c) iget-object          v2, v5, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	28      (00000070) invoke-virtual       v2, v1, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	29      (00000076) move-result-object   v0
+	30      (00000078) check-cast           v0, Landroid/support/v4/app/Fragment;
+	31      (0000007c) if-nez               v0, -36
+
+getFragment-BB@0x80 : [ getFragment-BB@0x10 ]
+	32      (00000080) new-instance         v2, Ljava/lang/IllegalStateException;
+	33      (00000084) new-instance         v3, Ljava/lang/StringBuilder;
+	34      (00000088) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	35      (0000008e) const-string         v4, 'Fragment no longer exists for key '
+	36      (00000092) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	37      (00000098) move-result-object   v3
+	38      (0000009a) invoke-virtual       v3, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	39      (000000a0) move-result-object   v3
+	40      (000000a2) const-string         v4, ': index '
+	41      (000000a6) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	42      (000000ac) move-result-object   v3
+	43      (000000ae) invoke-virtual       v3, v1, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	44      (000000b4) move-result-object   v3
+	45      (000000b6) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	46      (000000bc) move-result-object   v3
+	47      (000000be) invoke-direct        v2, v3, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	48      (000000c4) invoke-direct        v5, v2, Landroid/support/v4/app/FragmentManagerImpl;->throwException(Ljava/lang/RuntimeException;)V
+	49      (000000ca) goto                 -5d
+

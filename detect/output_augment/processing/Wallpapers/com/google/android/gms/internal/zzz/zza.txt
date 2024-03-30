@@ -1,0 +1,14 @@
+# Lcom/google/android/gms/internal/zzz;->zza(Ljava/net/URL;)Ljava/net/HttpURLConnection; [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.net.URL
+#
+# - return:java.net.HttpURLConnection
+
+zza-BB@0x0 : 
+	0       (00000000) invoke-virtual       v2, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+	1       (00000006) move-result-object   v0
+	2       (00000008) check-cast           v0, Ljava/net/HttpURLConnection;
+	3       (0000000c) return-object        v0
+

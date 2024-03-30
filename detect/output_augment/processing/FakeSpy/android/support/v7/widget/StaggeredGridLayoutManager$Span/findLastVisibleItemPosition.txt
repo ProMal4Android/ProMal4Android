@@ -1,0 +1,34 @@
+# Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->findLastVisibleItemPosition()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:int
+
+findLastVisibleItemPosition-BB@0x0 : [ findLastVisibleItemPosition-BB@0x12 findLastVisibleItemPosition-BB@0x28 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) iget-object          v0, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->this$0 Landroid/support/v7/widget/StaggeredGridLayoutManager;
+	2       (00000006) invoke-static        v0, Landroid/support/v7/widget/StaggeredGridLayoutManager;->access$600(Landroid/support/v7/widget/StaggeredGridLayoutManager;)Z
+	3       (0000000c) move-result          v0
+	4       (0000000e) if-eqz               v0, +d
+
+findLastVisibleItemPosition-BB@0x12 : [ findLastVisibleItemPosition-BB@0x26 ]
+	5       (00000012) iget-object          v0, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	6       (00000016) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	7       (0000001c) move-result          v0
+	8       (0000001e) invoke-virtual       v3, v2, v0, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->findOneVisibleChild(I I Z)I
+	9       (00000024) move-result          v0
+
+findLastVisibleItemPosition-BB@0x26 : 
+	10      (00000026) return               v0
+
+findLastVisibleItemPosition-BB@0x28 : [ findLastVisibleItemPosition-BB@0x26 ]
+	11      (00000028) iget-object          v0, v3, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->mViews Ljava/util/ArrayList;
+	12      (0000002c) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	13      (00000032) move-result          v0
+	14      (00000034) add-int/lit8         v0, v0, -1
+	15      (00000038) const/4              v1, -1
+	16      (0000003a) invoke-virtual       v3, v0, v1, v2, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->findOneVisibleChild(I I Z)I
+	17      (00000040) move-result          v0
+	18      (00000042) goto                 -e
+

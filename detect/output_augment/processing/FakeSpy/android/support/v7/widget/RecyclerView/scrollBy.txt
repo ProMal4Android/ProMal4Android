@@ -1,0 +1,57 @@
+# Landroid/support/v7/widget/RecyclerView;->scrollBy(I I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:int
+# - v6:int
+#
+# - return:void
+
+scrollBy-BB@0x0 : [ scrollBy-BB@0xa scrollBy-BB@0x1a ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) iget-object          v3, v4, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	2       (00000006) if-nez               v3, +a
+
+scrollBy-BB@0xa : [ scrollBy-BB@0x18 ]
+	3       (0000000a) const-string         v2, 'RecyclerView'
+	4       (0000000e) const-string         v3, 'Cannot scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.'
+	5       (00000012) invoke-static        v2, v3, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+
+scrollBy-BB@0x18 : 
+	6       (00000018) return-void          
+
+scrollBy-BB@0x1a : [ scrollBy-BB@0x22 scrollBy-BB@0x18 ]
+	7       (0000001a) iget-boolean         v3, v4, Landroid/support/v7/widget/RecyclerView;->mLayoutFrozen Z
+	8       (0000001e) if-nez               v3, -3
+
+scrollBy-BB@0x22 : [ scrollBy-BB@0x3e scrollBy-BB@0x42 ]
+	9       (00000022) iget-object          v3, v4, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	10      (00000026) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$LayoutManager;->canScrollHorizontally()Z
+	11      (0000002c) move-result          v0
+	12      (0000002e) iget-object          v3, v4, Landroid/support/v7/widget/RecyclerView;->mLayout Landroid/support/v7/widget/RecyclerView$LayoutManager;
+	13      (00000032) invoke-virtual       v3, Landroid/support/v7/widget/RecyclerView$LayoutManager;->canScrollVertically()Z
+	14      (00000038) move-result          v1
+	15      (0000003a) if-nez               v0, +4
+
+scrollBy-BB@0x3e : [ scrollBy-BB@0x42 scrollBy-BB@0x18 ]
+	16      (0000003e) if-eqz               v1, -13
+
+scrollBy-BB@0x42 : [ scrollBy-BB@0x46 scrollBy-BB@0x54 ]
+	17      (00000042) if-eqz               v0, +9
+
+scrollBy-BB@0x46 : [ scrollBy-BB@0x4a scrollBy-BB@0x58 ]
+	18      (00000046) if-eqz               v1, +9
+
+scrollBy-BB@0x4a : [ scrollBy-BB@0x18 ]
+	19      (0000004a) const/4              v2, 0
+	20      (0000004c) invoke-virtual       v4, v5, v6, v2, Landroid/support/v7/widget/RecyclerView;->scrollByInternal(I I Landroid/view/MotionEvent;)Z
+	21      (00000052) goto                 -1d
+
+scrollBy-BB@0x54 : [ scrollBy-BB@0x46 ]
+	22      (00000054) move                 v5, v2
+	23      (00000056) goto                 -8
+
+scrollBy-BB@0x58 : [ scrollBy-BB@0x4a ]
+	24      (00000058) move                 v6, v2
+	25      (0000005a) goto                 -8
+

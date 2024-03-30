@@ -1,0 +1,64 @@
+# Landroid/support/v7/widget/helper/ItemTouchHelper;->updateDxDy(Landroid/view/MotionEvent; I I)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.view.MotionEvent
+# - v6:int
+# - v7:int
+#
+# - return:void
+
+updateDxDy-BB@0x0 : [ updateDxDy-BB@0x32 updateDxDy-BB@0x42 ]
+	0       (00000000) const/4              v3, 0
+	1       (00000002) invoke-static        v5, v7, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent; I)F
+	2       (00000008) move-result          v0
+	3       (0000000a) invoke-static        v5, v7, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent; I)F
+	4       (00000010) move-result          v1
+	5       (00000012) iget                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mInitialTouchX F
+	6       (00000016) sub-float            v2, v0, v2
+	7       (0000001a) iput                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDx F
+	8       (0000001e) iget                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mInitialTouchY F
+	9       (00000022) sub-float            v2, v1, v2
+	10      (00000026) iput                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDy F
+	11      (0000002a) and-int/lit8         v2, v6, 4
+	12      (0000002e) if-nez               v2, +a
+
+updateDxDy-BB@0x32 : [ updateDxDy-BB@0x42 ]
+	13      (00000032) iget                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDx F
+	14      (00000036) invoke-static        v3, v2, Ljava/lang/Math;->max(F F)F
+	15      (0000003c) move-result          v2
+	16      (0000003e) iput                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDx F
+
+updateDxDy-BB@0x42 : [ updateDxDy-BB@0x4a updateDxDy-BB@0x5a ]
+	17      (00000042) and-int/lit8         v2, v6, 8
+	18      (00000046) if-nez               v2, +a
+
+updateDxDy-BB@0x4a : [ updateDxDy-BB@0x5a ]
+	19      (0000004a) iget                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDx F
+	20      (0000004e) invoke-static        v3, v2, Ljava/lang/Math;->min(F F)F
+	21      (00000054) move-result          v2
+	22      (00000056) iput                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDx F
+
+updateDxDy-BB@0x5a : [ updateDxDy-BB@0x62 updateDxDy-BB@0x72 ]
+	23      (0000005a) and-int/lit8         v2, v6, 1
+	24      (0000005e) if-nez               v2, +a
+
+updateDxDy-BB@0x62 : [ updateDxDy-BB@0x72 ]
+	25      (00000062) iget                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDy F
+	26      (00000066) invoke-static        v3, v2, Ljava/lang/Math;->max(F F)F
+	27      (0000006c) move-result          v2
+	28      (0000006e) iput                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDy F
+
+updateDxDy-BB@0x72 : [ updateDxDy-BB@0x7a updateDxDy-BB@0x8a ]
+	29      (00000072) and-int/lit8         v2, v6, 2
+	30      (00000076) if-nez               v2, +a
+
+updateDxDy-BB@0x7a : [ updateDxDy-BB@0x8a ]
+	31      (0000007a) iget                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDy F
+	32      (0000007e) invoke-static        v3, v2, Ljava/lang/Math;->min(F F)F
+	33      (00000084) move-result          v2
+	34      (00000086) iput                 v2, v4, Landroid/support/v7/widget/helper/ItemTouchHelper;->mDy F
+
+updateDxDy-BB@0x8a : 
+	35      (0000008a) return-void          
+

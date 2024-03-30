@@ -1,0 +1,120 @@
+# Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->inflate(Landroid/content/res/Resources; Lorg/xmlpull/v1/XmlPullParser; Landroid/util/AttributeSet; Landroid/content/res/Resources$Theme;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:android.content.res.Resources
+# - v12:org.xmlpull.v1.XmlPullParser
+# - v13:android.util.AttributeSet
+# - v14:android.content.res.Resources$Theme
+#
+# - return:void
+
+inflate-BB@0x0 : [ inflate-BB@0x8 inflate-BB@0x14 ]
+	0       (00000000) iget-object          v8, v10, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable Landroid/graphics/drawable/Drawable;
+	1       (00000004) if-eqz               v8, +8
+
+inflate-BB@0x8 : [ inflate-BB@0x12 ]
+	2       (00000008) iget-object          v8, v10, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mDelegateDrawable Landroid/graphics/drawable/Drawable;
+	3       (0000000c) invoke-static        v8, v11, v12, v13, v14, Landroid/support/v4/graphics/drawable/DrawableCompat;->inflate(Landroid/graphics/drawable/Drawable; Landroid/content/res/Resources; Lorg/xmlpull/v1/XmlPullParser; Landroid/util/AttributeSet; Landroid/content/res/Resources$Theme;)V
+
+inflate-BB@0x12 : 
+	4       (00000012) return-void          
+
+inflate-BB@0x14 : [ inflate-BB@0x1c ]
+	5       (00000014) invoke-interface     v12, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+	6       (0000001a) move-result          v2
+
+inflate-BB@0x1c : [ inflate-BB@0x22 inflate-BB@0x12 ]
+	7       (0000001c) const/4              v8, 1
+	8       (0000001e) if-eq                v2, v8, -6
+
+inflate-BB@0x22 : [ inflate-BB@0x28 inflate-BB@0xa0 ]
+	9       (00000022) const/4              v8, 2
+	10      (00000024) if-ne                v2, v8, +3e
+
+inflate-BB@0x28 : [ inflate-BB@0x40 inflate-BB@0xaa ]
+	11      (00000028) invoke-interface     v12, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	12      (0000002e) move-result-object   v5
+	13      (00000030) const-string         v8, 'animated-vector'
+	14      (00000034) invoke-virtual       v8, v5, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	15      (0000003a) move-result          v8
+	16      (0000003c) if-eqz               v8, +37
+
+inflate-BB@0x40 : [ inflate-BB@0x5c inflate-BB@0x9a ]
+	17      (00000040) sget-object          v8, Landroid/support/graphics/drawable/AndroidResources;->styleable_AnimatedVectorDrawable [I
+	18      (00000044) invoke-static        v11, v14, v13, v8, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->obtainAttributes(Landroid/content/res/Resources; Landroid/content/res/Resources$Theme; Landroid/util/AttributeSet; [I)Landroid/content/res/TypedArray;
+	19      (0000004a) move-result-object   v0
+	20      (0000004c) const/4              v8, 0
+	21      (0000004e) const/4              v9, 0
+	22      (00000050) invoke-virtual       v0, v8, v9, Landroid/content/res/TypedArray;->getResourceId(I I)I
+	23      (00000056) move-result          v1
+	24      (00000058) if-eqz               v1, +21
+
+inflate-BB@0x5c : [ inflate-BB@0x82 inflate-BB@0x92 ]
+	25      (0000005c) invoke-static        v11, v1, v14, Landroid/support/graphics/drawable/VectorDrawableCompat;->create(Landroid/content/res/Resources; I Landroid/content/res/Resources$Theme;)Landroid/support/graphics/drawable/VectorDrawableCompat;
+	26      (00000062) move-result-object   v7
+	27      (00000064) const/4              v8, 0
+	28      (00000066) invoke-virtual       v7, v8, Landroid/support/graphics/drawable/VectorDrawableCompat;->setAllowCaching(Z)V
+	29      (0000006c) iget-object          v8, v10, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mCallback Landroid/graphics/drawable/Drawable$Callback;
+	30      (00000070) invoke-virtual       v7, v8, Landroid/support/graphics/drawable/VectorDrawableCompat;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+	31      (00000076) iget-object          v8, v10, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	32      (0000007a) iget-object          v8, v8, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mVectorDrawable Landroid/support/graphics/drawable/VectorDrawableCompat;
+	33      (0000007e) if-eqz               v8, +a
+
+inflate-BB@0x82 : [ inflate-BB@0x92 ]
+	34      (00000082) iget-object          v8, v10, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	35      (00000086) iget-object          v8, v8, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mVectorDrawable Landroid/support/graphics/drawable/VectorDrawableCompat;
+	36      (0000008a) const/4              v9, 0
+	37      (0000008c) invoke-virtual       v8, v9, Landroid/support/graphics/drawable/VectorDrawableCompat;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+inflate-BB@0x92 : [ inflate-BB@0x9a ]
+	38      (00000092) iget-object          v8, v10, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mAnimatedVectorState Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;
+	39      (00000096) iput-object          v7, v8, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;->mVectorDrawable Landroid/support/graphics/drawable/VectorDrawableCompat;
+
+inflate-BB@0x9a : [ inflate-BB@0xa0 ]
+	40      (0000009a) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+
+inflate-BB@0xa0 : [ inflate-BB@0x1c ]
+	41      (000000a0) invoke-interface     v12, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	42      (000000a6) move-result          v2
+	43      (000000a8) goto                 -46
+
+inflate-BB@0xaa : [ inflate-BB@0xba inflate-BB@0xa0 ]
+	44      (000000aa) const-string         v8, 'target'
+	45      (000000ae) invoke-virtual       v8, v5, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	46      (000000b4) move-result          v8
+	47      (000000b6) if-eqz               v8, -b
+
+inflate-BB@0xba : [ inflate-BB@0xe0 inflate-BB@0xfa ]
+	48      (000000ba) sget-object          v8, Landroid/support/graphics/drawable/AndroidResources;->styleable_AnimatedVectorDrawableTarget [I
+	49      (000000be) invoke-virtual       v11, v13, v8, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet; [I)Landroid/content/res/TypedArray;
+	50      (000000c4) move-result-object   v0
+	51      (000000c6) const/4              v8, 0
+	52      (000000c8) invoke-virtual       v0, v8, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+	53      (000000ce) move-result-object   v6
+	54      (000000d0) const/4              v8, 1
+	55      (000000d2) const/4              v9, 0
+	56      (000000d4) invoke-virtual       v0, v8, v9, Landroid/content/res/TypedArray;->getResourceId(I I)I
+	57      (000000da) move-result          v3
+	58      (000000dc) if-eqz               v3, +f
+
+inflate-BB@0xe0 : [ inflate-BB@0xe8 inflate-BB@0x102 ]
+	59      (000000e0) iget-object          v8, v10, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mContext Landroid/content/Context;
+	60      (000000e4) if-eqz               v8, +f
+
+inflate-BB@0xe8 : [ inflate-BB@0xfa ]
+	61      (000000e8) iget-object          v8, v10, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->mContext Landroid/content/Context;
+	62      (000000ec) invoke-static        v8, v3, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context; I)Landroid/animation/Animator;
+	63      (000000f2) move-result-object   v4
+	64      (000000f4) invoke-direct        v10, v6, v4, Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;->setupAnimatorsForTarget(Ljava/lang/String; Landroid/animation/Animator;)V
+
+inflate-BB@0xfa : [ inflate-BB@0xa0 ]
+	65      (000000fa) invoke-virtual       v0, Landroid/content/res/TypedArray;->recycle()V
+	66      (00000100) goto                 -30
+
+inflate-BB@0x102 : 
+	67      (00000102) new-instance         v8, Ljava/lang/IllegalStateException;
+	68      (00000106) const-string         v9, "Context can't be null when inflating animators"
+	69      (0000010a) invoke-direct        v8, v9, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	70      (00000110) throw                v8
+

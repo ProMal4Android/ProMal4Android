@@ -1,0 +1,27 @@
+# Lkk/util/JRunCheck;->checkRootMethod1()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:boolean
+
+checkRootMethod1-BB@0x0 : [ checkRootMethod1-BB@0x8 checkRootMethod1-BB@0x1c ]
+	0       (00000000) sget-object          v0, Landroid/os/Build;->TAGS Ljava/lang/String;
+	1       (00000004) if-eqz               v0, +c
+
+checkRootMethod1-BB@0x8 : [ checkRootMethod1-BB@0x18 checkRootMethod1-BB@0x1c ]
+	2       (00000008) const-string         v1, 'test-keys'
+	3       (0000000c) invoke-virtual       v0, v1, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+	4       (00000012) move-result          v1
+	5       (00000014) if-eqz               v1, +4
+
+checkRootMethod1-BB@0x18 : [ checkRootMethod1-BB@0x1a ]
+	6       (00000018) const/4              v1, 1
+
+checkRootMethod1-BB@0x1a : 
+	7       (0000001a) return               v1
+
+checkRootMethod1-BB@0x1c : [ checkRootMethod1-BB@0x1a ]
+	8       (0000001c) const/4              v1, 0
+	9       (0000001e) goto                 -2
+

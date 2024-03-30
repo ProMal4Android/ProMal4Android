@@ -1,0 +1,40 @@
+# Landroid/support/v7/app/AppCompatDialogFragment;->setupDialog(Landroid/app/Dialog; I)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.app.Dialog
+# - v5:int
+#
+# - return:void
+
+setupDialog-BB@0x0 : [ setupDialog-BB@0x8 setupDialog-BB@0x32 ]
+	0       (00000000) instance-of          v1, v4, Landroid/support/v7/app/AppCompatDialog;
+	1       (00000004) if-eqz               v1, +17
+
+setupDialog-BB@0x8 : [ D:setupDialog-BB@0x14 1:setupDialog-BB@0x28 2:setupDialog-BB@0x28 3:setupDialog-BB@0x16 ]
+	2       (00000008) move-object          v0, v4
+	3       (0000000a) check-cast           v0, Landroid/support/v7/app/AppCompatDialog;
+	4       (0000000e) packed-switch        v5, +17 (0x3c)
+
+setupDialog-BB@0x14 : 
+	5       (00000014) return-void          
+
+setupDialog-BB@0x16 : [ setupDialog-BB@0x28 ]
+	6       (00000016) invoke-virtual       v4, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+	7       (0000001c) move-result-object   v1
+	8       (0000001e) const/16             v2, 24
+	9       (00000022) invoke-virtual       v1, v2, Landroid/view/Window;->addFlags(I)V
+
+setupDialog-BB@0x28 : [ setupDialog-BB@0x14 ]
+	10      (00000028) const/4              v1, 1
+	11      (0000002a) invoke-virtual       v0, v1, Landroid/support/v7/app/AppCompatDialog;->supportRequestWindowFeature(I)Z
+	12      (00000030) goto                 -e
+
+setupDialog-BB@0x32 : [ setupDialog-BB@0x14 ]
+	13      (00000032) invoke-super         v3, v4, v5, Landroid/support/v4/app/DialogFragment;->setupDialog(Landroid/app/Dialog; I)V
+	14      (00000038) goto                 -12
+
+setupDialog-BB@0x3a : 
+	15      (0000003a) nop                  
+	16      (0000003c) packed-switch-payload 1 2 3
+

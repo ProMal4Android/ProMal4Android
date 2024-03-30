@@ -1,0 +1,49 @@
+# Landroid/support/v4/app/BackStackRecord;->remapNames(Ljava/util/ArrayList; Ljava/util/ArrayList; Landroid/support/v4/util/ArrayMap;)Landroid/support/v4/util/ArrayMap; [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:java.util.ArrayList
+# - v6:java.util.ArrayList
+# - v7:android.support.v4.util.ArrayMap
+#
+# - return:android.support.v4.util.ArrayMap
+
+remapNames-BB@0x0 : [ remapNames-BB@0xc remapNames-BB@0xe ]
+	0       (00000000) invoke-virtual       v7, Landroid/support/v4/util/ArrayMap;->isEmpty()Z
+	1       (00000006) move-result          v4
+	2       (00000008) if-eqz               v4, +3
+
+remapNames-BB@0xc : 
+	3       (0000000c) return-object        v7
+
+remapNames-BB@0xe : [ remapNames-BB@0x22 ]
+	4       (0000000e) new-instance         v2, Landroid/support/v4/util/ArrayMap;
+	5       (00000012) invoke-direct        v2, Landroid/support/v4/util/ArrayMap;-><init>()V
+	6       (00000018) invoke-virtual       v5, Ljava/util/ArrayList;->size()I
+	7       (0000001e) move-result          v1
+	8       (00000020) const/4              v0, 0
+
+remapNames-BB@0x22 : [ remapNames-BB@0x26 remapNames-BB@0x52 ]
+	9       (00000022) if-ge                v0, v1, +18
+
+remapNames-BB@0x26 : [ remapNames-BB@0x3e remapNames-BB@0x4c ]
+	10      (00000026) invoke-virtual       v5, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	11      (0000002c) move-result-object   v4
+	12      (0000002e) invoke-virtual       v7, v4, Landroid/support/v4/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	13      (00000034) move-result-object   v3
+	14      (00000036) check-cast           v3, Landroid/view/View;
+	15      (0000003a) if-eqz               v3, +9
+
+remapNames-BB@0x3e : [ remapNames-BB@0x4c ]
+	16      (0000003e) invoke-virtual       v6, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	17      (00000044) move-result-object   v4
+	18      (00000046) invoke-virtual       v2, v4, v3, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+
+remapNames-BB@0x4c : [ remapNames-BB@0x22 ]
+	19      (0000004c) add-int/lit8         v0, v0, 1
+	20      (00000050) goto                 -17
+
+remapNames-BB@0x52 : [ remapNames-BB@0xc ]
+	21      (00000052) move-object          v7, v2
+	22      (00000054) goto                 -24
+

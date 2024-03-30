@@ -1,0 +1,63 @@
+# Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->detach()V [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+detach-BB@0x0 : [ detach-BB@0x8 detach-BB@0x84 ]
+	0       (00000000) iget-boolean         v0, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mDetachCalled Z
+	1       (00000004) if-nez               v0, +40
+
+detach-BB@0x8 : [ detach-BB@0x10 detach-BB@0x52 ]
+	2       (00000008) iget-boolean         v0, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mSendResultCalled Z
+	3       (0000000c) if-nez               v0, +23
+
+detach-BB@0x10 : [ detach-BB@0x18 detach-BB@0x20 ]
+	4       (00000010) iget-boolean         v0, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mSendErrorCalled Z
+	5       (00000014) if-nez               v0, +6
+
+detach-BB@0x18 : 
+	6       (00000018) const/4              v0, 1
+	7       (0000001a) iput-boolean         v0, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mDetachCalled Z
+	8       (0000001e) return-void          
+
+detach-BB@0x20 : 
+	9       (00000020) new-instance         v0, Ljava/lang/IllegalStateException;
+	10      (00000024) new-instance         v1, Ljava/lang/StringBuilder;
+	11      (00000028) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	12      (0000002e) const-string         v2, 'detach() called when sendError() had already been called for: '
+	13      (00000032) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	14      (00000038) iget-object          v2, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mDebug Ljava/lang/Object;
+	15      (0000003c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	16      (00000042) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	17      (00000048) move-result-object   v1
+	18      (0000004a) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	19      (00000050) throw                v0
+
+detach-BB@0x52 : 
+	20      (00000052) new-instance         v0, Ljava/lang/IllegalStateException;
+	21      (00000056) new-instance         v1, Ljava/lang/StringBuilder;
+	22      (0000005a) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	23      (00000060) const-string         v2, 'detach() called when sendResult() had already been called for: '
+	24      (00000064) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (0000006a) iget-object          v2, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mDebug Ljava/lang/Object;
+	26      (0000006e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	27      (00000074) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	28      (0000007a) move-result-object   v1
+	29      (0000007c) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	30      (00000082) throw                v0
+
+detach-BB@0x84 : 
+	31      (00000084) new-instance         v0, Ljava/lang/IllegalStateException;
+	32      (00000088) new-instance         v1, Ljava/lang/StringBuilder;
+	33      (0000008c) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	34      (00000092) const-string         v2, 'detach() called when detach() had already been called for: '
+	35      (00000096) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	36      (0000009c) iget-object          v2, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$Result;->mDebug Ljava/lang/Object;
+	37      (000000a0) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	38      (000000a6) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	39      (000000ac) move-result-object   v1
+	40      (000000ae) invoke-direct        v0, v1, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	41      (000000b4) throw                v0
+

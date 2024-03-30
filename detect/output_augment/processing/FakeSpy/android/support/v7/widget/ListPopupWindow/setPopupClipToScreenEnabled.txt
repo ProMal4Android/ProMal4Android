@@ -1,0 +1,35 @@
+# Landroid/support/v7/widget/ListPopupWindow;->setPopupClipToScreenEnabled(Z)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:boolean
+#
+# - return:void
+
+setPopupClipToScreenEnabled-BB@0x0 : [ setPopupClipToScreenEnabled-BB@0x8 setPopupClipToScreenEnabled-BB@0x2a ]
+	0       (00000000) sget-object          v1, Landroid/support/v7/widget/ListPopupWindow;->sClipToWindowEnabledMethod Ljava/lang/reflect/Method;
+	1       (00000004) if-eqz               v1, +13
+
+setPopupClipToScreenEnabled-BB@0x8 : [ setPopupClipToScreenEnabled-BB@0x2a ]
+	2       (00000008) sget-object          v1, Landroid/support/v7/widget/ListPopupWindow;->sClipToWindowEnabledMethod Ljava/lang/reflect/Method;
+	3       (0000000c) iget-object          v2, v6, Landroid/support/v7/widget/ListPopupWindow;->mPopup Landroid/widget/PopupWindow;
+	4       (00000010) const/4              v3, 1
+	5       (00000012) new-array            v3, v3, [Ljava/lang/Object;
+	6       (00000016) const/4              v4, 0
+	7       (00000018) invoke-static        v7, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	8       (0000001e) move-result-object   v5
+	9       (00000020) aput-object          v5, v3, v4
+	10      (00000024) invoke-virtual       v1, v2, v3, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	8:29
+	(Ljava/lang/Exception; -> 2c setPopupClipToScreenEnabled-BB@0x2c)
+
+setPopupClipToScreenEnabled-BB@0x2a : 
+	11      (0000002a) return-void          
+
+setPopupClipToScreenEnabled-BB@0x2c : [ setPopupClipToScreenEnabled-BB@0x2a ]
+	12      (0000002c) move-exception       v0
+	13      (0000002e) const-string         v1, 'ListPopupWindow'
+	14      (00000032) const-string         v2, 'Could not call setClipToScreenEnabled() on PopupWindow. Oh well.'
+	15      (00000036) invoke-static        v1, v2, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String;)I
+	16      (0000003c) goto                 -9
+

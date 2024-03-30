@@ -1,0 +1,18 @@
+# Landroid/support/v7/widget/DefaultItemAnimator;->animateAdd(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.support.v7.widget.RecyclerView$ViewHolder
+#
+# - return:boolean
+
+animateAdd-BB@0x0 : 
+	0       (00000000) invoke-direct        v2, v3, Landroid/support/v7/widget/DefaultItemAnimator;->resetAnimation(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+	1       (00000006) iget-object          v0, v3, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView Landroid/view/View;
+	2       (0000000a) const/4              v1, 0
+	3       (0000000c) invoke-static        v0, v1, Landroid/support/v4/view/ViewCompat;->setAlpha(Landroid/view/View; F)V
+	4       (00000012) iget-object          v0, v2, Landroid/support/v7/widget/DefaultItemAnimator;->mPendingAdditions Ljava/util/ArrayList;
+	5       (00000016) invoke-virtual       v0, v3, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	6       (0000001c) const/4              v0, 1
+	7       (0000001e) return               v0
+

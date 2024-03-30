@@ -1,0 +1,46 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->saveFragmentInstanceState(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment$SavedState; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.support.v4.app.Fragment
+#
+# - return:android.support.v4.app.Fragment$SavedState
+
+saveFragmentInstanceState-BB@0x0 : [ saveFragmentInstanceState-BB@0xa saveFragmentInstanceState-BB@0x4c ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) iget                 v2, v6, Landroid/support/v4/app/Fragment;->mIndex I
+	2       (00000006) if-gez               v2, +23
+
+saveFragmentInstanceState-BB@0xa : [ saveFragmentInstanceState-BB@0x4c ]
+	3       (0000000a) new-instance         v2, Ljava/lang/IllegalStateException;
+	4       (0000000e) new-instance         v3, Ljava/lang/StringBuilder;
+	5       (00000012) invoke-direct        v3, Ljava/lang/StringBuilder;-><init>()V
+	6       (00000018) const-string         v4, 'Fragment '
+	7       (0000001c) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	8       (00000022) move-result-object   v3
+	9       (00000024) invoke-virtual       v3, v6, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	10      (0000002a) move-result-object   v3
+	11      (0000002c) const-string         v4, ' is not currently in the FragmentManager'
+	12      (00000030) invoke-virtual       v3, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	13      (00000036) move-result-object   v3
+	14      (00000038) invoke-virtual       v3, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	15      (0000003e) move-result-object   v3
+	16      (00000040) invoke-direct        v2, v3, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	17      (00000046) invoke-direct        v5, v2, Landroid/support/v4/app/FragmentManagerImpl;->throwException(Ljava/lang/RuntimeException;)V
+
+saveFragmentInstanceState-BB@0x4c : [ saveFragmentInstanceState-BB@0x54 saveFragmentInstanceState-BB@0x6a ]
+	18      (0000004c) iget                 v2, v6, Landroid/support/v4/app/Fragment;->mState I
+	19      (00000050) if-lez               v2, +d
+
+saveFragmentInstanceState-BB@0x54 : [ saveFragmentInstanceState-BB@0x60 saveFragmentInstanceState-BB@0x6a ]
+	20      (00000054) invoke-virtual       v5, v6, Landroid/support/v4/app/FragmentManagerImpl;->saveFragmentBasicState(Landroid/support/v4/app/Fragment;)Landroid/os/Bundle;
+	21      (0000005a) move-result-object   v0
+	22      (0000005c) if-eqz               v0, +7
+
+saveFragmentInstanceState-BB@0x60 : [ saveFragmentInstanceState-BB@0x6a ]
+	23      (00000060) new-instance         v1, Landroid/support/v4/app/Fragment$SavedState;
+	24      (00000064) invoke-direct        v1, v0, Landroid/support/v4/app/Fragment$SavedState;-><init>(Landroid/os/Bundle;)V
+
+saveFragmentInstanceState-BB@0x6a : 
+	25      (0000006a) return-object        v1
+

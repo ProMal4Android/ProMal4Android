@@ -1,0 +1,191 @@
+# Landroid/support/v7/view/SupportMenuInflater;->parseMenu(Lorg/xmlpull/v1/XmlPullParser; Landroid/util/AttributeSet; Landroid/view/Menu;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:org.xmlpull.v1.XmlPullParser
+# - v12:android.util.AttributeSet
+# - v13:android.view.Menu
+#
+# - return:void
+
+parseMenu-BB@0x0 : [ parseMenu-BB@0x16 ]
+	0       (00000000) new-instance         v2, Landroid/support/v7/view/SupportMenuInflater$MenuState;
+	1       (00000004) invoke-direct        v2, v10, v13, Landroid/support/v7/view/SupportMenuInflater$MenuState;-><init>(Landroid/support/v7/view/SupportMenuInflater; Landroid/view/Menu;)V
+	2       (0000000a) invoke-interface     v11, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+	3       (00000010) move-result          v0
+	4       (00000012) const/4              v1, 0
+	5       (00000014) const/4              v6, 0
+
+parseMenu-BB@0x16 : [ parseMenu-BB@0x1c parseMenu-BB@0x84 ]
+	6       (00000016) const/4              v7, 2
+	7       (00000018) if-ne                v0, v7, +36
+
+parseMenu-BB@0x1c : [ parseMenu-BB@0x34 parseMenu-BB@0x52 ]
+	8       (0000001c) invoke-interface     v11, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	9       (00000022) move-result-object   v5
+	10      (00000024) const-string         v7, 'menu'
+	11      (00000028) invoke-virtual       v5, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	12      (0000002e) move-result          v7
+	13      (00000030) if-eqz               v7, +11
+
+parseMenu-BB@0x34 : [ parseMenu-BB@0x3c ]
+	14      (00000034) invoke-interface     v11, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	15      (0000003a) move-result          v0
+
+parseMenu-BB@0x3c : [ parseMenu-BB@0x3e ]
+	16      (0000003c) const/4              v3, 0
+
+parseMenu-BB@0x3e : [ parseMenu-BB@0x42 parseMenu-BB@0x1a2 ]
+	17      (0000003e) if-nez               v3, +b2
+
+parseMenu-BB@0x42 : [ D:parseMenu-BB@0x48 1:parseMenu-BB@0x192 2:parseMenu-BB@0x94 3:parseMenu-BB@0xf6 ]
+	18      (00000042) packed-switch        v0, +b1 (0x1a4)
+
+parseMenu-BB@0x48 : [ parseMenu-BB@0x3e ]
+	19      (00000048) invoke-interface     v11, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	20      (0000004e) move-result          v0
+	21      (00000050) goto                 -9
+
+parseMenu-BB@0x52 : 
+	22      (00000052) new-instance         v7, Ljava/lang/RuntimeException;
+	23      (00000056) new-instance         v8, Ljava/lang/StringBuilder;
+	24      (0000005a) invoke-direct        v8, Ljava/lang/StringBuilder;-><init>()V
+	25      (00000060) const-string         v9, 'Expecting menu, got '
+	26      (00000064) invoke-virtual       v8, v9, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	27      (0000006a) move-result-object   v8
+	28      (0000006c) invoke-virtual       v8, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	29      (00000072) move-result-object   v8
+	30      (00000074) invoke-virtual       v8, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	31      (0000007a) move-result-object   v8
+	32      (0000007c) invoke-direct        v7, v8, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	33      (00000082) throw                v7
+
+parseMenu-BB@0x84 : [ parseMenu-BB@0x92 parseMenu-BB@0x16 ]
+	34      (00000084) invoke-interface     v11, Lorg/xmlpull/v1/XmlPullParser;->next()I
+	35      (0000008a) move-result          v0
+	36      (0000008c) const/4              v7, 1
+	37      (0000008e) if-ne                v0, v7, -3c
+
+parseMenu-BB@0x92 : [ parseMenu-BB@0x3c ]
+	38      (00000092) goto                 -2b
+
+parseMenu-BB@0x94 : [ parseMenu-BB@0x98 parseMenu-BB@0x48 ]
+	39      (00000094) if-nez               v1, -26
+
+parseMenu-BB@0x98 : [ parseMenu-BB@0xb0 parseMenu-BB@0xb8 ]
+	40      (00000098) invoke-interface     v11, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	41      (0000009e) move-result-object   v5
+	42      (000000a0) const-string         v7, 'group'
+	43      (000000a4) invoke-virtual       v5, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	44      (000000aa) move-result          v7
+	45      (000000ac) if-eqz               v7, +6
+
+parseMenu-BB@0xb0 : [ parseMenu-BB@0x48 ]
+	46      (000000b0) invoke-virtual       v2, v12, Landroid/support/v7/view/SupportMenuInflater$MenuState;->readGroup(Landroid/util/AttributeSet;)V
+	47      (000000b6) goto                 -37
+
+parseMenu-BB@0xb8 : [ parseMenu-BB@0xc8 parseMenu-BB@0xd0 ]
+	48      (000000b8) const-string         v7, 'item'
+	49      (000000bc) invoke-virtual       v5, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	50      (000000c2) move-result          v7
+	51      (000000c4) if-eqz               v7, +6
+
+parseMenu-BB@0xc8 : [ parseMenu-BB@0x48 ]
+	52      (000000c8) invoke-virtual       v2, v12, Landroid/support/v7/view/SupportMenuInflater$MenuState;->readItem(Landroid/util/AttributeSet;)V
+	53      (000000ce) goto                 -43
+
+parseMenu-BB@0xd0 : [ parseMenu-BB@0xe0 parseMenu-BB@0xf0 ]
+	54      (000000d0) const-string         v7, 'menu'
+	55      (000000d4) invoke-virtual       v5, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	56      (000000da) move-result          v7
+	57      (000000dc) if-eqz               v7, +a
+
+parseMenu-BB@0xe0 : [ parseMenu-BB@0x48 ]
+	58      (000000e0) invoke-virtual       v2, Landroid/support/v7/view/SupportMenuInflater$MenuState;->addSubMenuItem()Landroid/view/SubMenu;
+	59      (000000e6) move-result-object   v4
+	60      (000000e8) invoke-direct        v10, v11, v12, v4, Landroid/support/v7/view/SupportMenuInflater;->parseMenu(Lorg/xmlpull/v1/XmlPullParser; Landroid/util/AttributeSet; Landroid/view/Menu;)V
+	61      (000000ee) goto                 -53
+
+parseMenu-BB@0xf0 : [ parseMenu-BB@0x48 ]
+	62      (000000f0) const/4              v1, 1
+	63      (000000f2) move-object          v6, v5
+	64      (000000f4) goto                 -56
+
+parseMenu-BB@0xf6 : [ parseMenu-BB@0x102 parseMenu-BB@0x114 ]
+	65      (000000f6) invoke-interface     v11, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+	66      (000000fc) move-result-object   v5
+	67      (000000fe) if-eqz               v1, +b
+
+parseMenu-BB@0x102 : [ parseMenu-BB@0x10e parseMenu-BB@0x114 ]
+	68      (00000102) invoke-virtual       v5, v6, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	69      (00000108) move-result          v7
+	70      (0000010a) if-eqz               v7, +5
+
+parseMenu-BB@0x10e : [ parseMenu-BB@0x48 ]
+	71      (0000010e) const/4              v1, 0
+	72      (00000110) const/4              v6, 0
+	73      (00000112) goto                 -65
+
+parseMenu-BB@0x114 : [ parseMenu-BB@0x124 parseMenu-BB@0x12c ]
+	74      (00000114) const-string         v7, 'group'
+	75      (00000118) invoke-virtual       v5, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	76      (0000011e) move-result          v7
+	77      (00000120) if-eqz               v7, +6
+
+parseMenu-BB@0x124 : [ parseMenu-BB@0x48 ]
+	78      (00000124) invoke-virtual       v2, Landroid/support/v7/view/SupportMenuInflater$MenuState;->resetGroup()V
+	79      (0000012a) goto                 -71
+
+parseMenu-BB@0x12c : [ parseMenu-BB@0x13c parseMenu-BB@0x17c ]
+	80      (0000012c) const-string         v7, 'item'
+	81      (00000130) invoke-virtual       v5, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	82      (00000136) move-result          v7
+	83      (00000138) if-eqz               v7, +22
+
+parseMenu-BB@0x13c : [ parseMenu-BB@0x148 parseMenu-BB@0x48 ]
+	84      (0000013c) invoke-virtual       v2, Landroid/support/v7/view/SupportMenuInflater$MenuState;->hasAddedItem()Z
+	85      (00000142) move-result          v7
+	86      (00000144) if-nez               v7, -7e
+
+parseMenu-BB@0x148 : [ parseMenu-BB@0x154 parseMenu-BB@0x172 ]
+	87      (00000148) invoke-static        v2, Landroid/support/v7/view/SupportMenuInflater$MenuState;->access$000(Landroid/support/v7/view/SupportMenuInflater$MenuState;)Landroid/support/v4/view/ActionProvider;
+	88      (0000014e) move-result-object   v7
+	89      (00000150) if-eqz               v7, +11
+
+parseMenu-BB@0x154 : [ parseMenu-BB@0x168 parseMenu-BB@0x172 ]
+	90      (00000154) invoke-static        v2, Landroid/support/v7/view/SupportMenuInflater$MenuState;->access$000(Landroid/support/v7/view/SupportMenuInflater$MenuState;)Landroid/support/v4/view/ActionProvider;
+	91      (0000015a) move-result-object   v7
+	92      (0000015c) invoke-virtual       v7, Landroid/support/v4/view/ActionProvider;->hasSubMenu()Z
+	93      (00000162) move-result          v7
+	94      (00000164) if-eqz               v7, +7
+
+parseMenu-BB@0x168 : [ parseMenu-BB@0x48 ]
+	95      (00000168) invoke-virtual       v2, Landroid/support/v7/view/SupportMenuInflater$MenuState;->addSubMenuItem()Landroid/view/SubMenu;
+	96      (0000016e) goto/16              -93
+
+parseMenu-BB@0x172 : [ parseMenu-BB@0x48 ]
+	97      (00000172) invoke-virtual       v2, Landroid/support/v7/view/SupportMenuInflater$MenuState;->addItem()V
+	98      (00000178) goto/16              -98
+
+parseMenu-BB@0x17c : [ parseMenu-BB@0x18c parseMenu-BB@0x48 ]
+	99      (0000017c) const-string         v7, 'menu'
+	100     (00000180) invoke-virtual       v5, v7, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	101     (00000186) move-result          v7
+	102     (00000188) if-eqz               v7, -a0
+
+parseMenu-BB@0x18c : [ parseMenu-BB@0x48 ]
+	103     (0000018c) const/4              v3, 1
+	104     (0000018e) goto/16              -a3
+
+parseMenu-BB@0x192 : 
+	105     (00000192) new-instance         v7, Ljava/lang/RuntimeException;
+	106     (00000196) const-string         v8, 'Unexpected end of document'
+	107     (0000019a) invoke-direct        v7, v8, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+	108     (000001a0) throw                v7
+
+parseMenu-BB@0x1a2 : 
+	109     (000001a2) return-void          
+
+parseMenu-BB@0x1a4 : 
+	110     (000001a4) packed-switch-payload 1 2 3
+

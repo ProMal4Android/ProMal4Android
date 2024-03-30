@@ -1,0 +1,114 @@
+# Lcom/google/android/gms/drive/internal/zzu;-><init>(Landroid/content/Context; Landroid/os/Looper; Lcom/google/android/gms/common/internal/zzf; Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks; Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener; Landroid/os/Bundle;)V [access_flags=public constructor]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.content.Context
+# - v10:android.os.Looper
+# - v11:com.google.android.gms.common.internal.zzf
+# - v12:com.google.android.gms.common.api.GoogleApiClient$ConnectionCallbacks
+# - v13:com.google.android.gms.common.api.GoogleApiClient$OnConnectionFailedListener
+# - v14:android.os.Bundle
+#
+# - return:void
+
+<init>-BB@0x0 : [ D:<init>-BB@0xa2 0:<init>-BB@0xe8 1:<init>-BB@0xee ]
+	0       (00000000) const/4              v7, 0
+	1       (00000002) const/16             v3, 11
+	2       (00000006) move-object          v0, v8
+	3       (00000008) move-object          v1, v9
+	4       (0000000a) move-object          v2, v10
+	5       (0000000c) move-object          v4, v11
+	6       (0000000e) move-object          v5, v12
+	7       (00000010) move-object          v6, v13
+	8       (00000012) invoke-direct/range  v0 ... v6, Lcom/google/android/gms/common/internal/zzj;-><init>(Landroid/content/Context; Landroid/os/Looper; I Lcom/google/android/gms/common/internal/zzf; Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks; Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+	9       (00000018) iput-boolean         v7, v8, Lcom/google/android/gms/drive/internal/zzu;->zzaoL Z
+	10      (0000001c) new-instance         v0, Ljava/util/HashMap;
+	11      (00000020) invoke-direct        v0, Ljava/util/HashMap;-><init>()V
+	12      (00000026) iput-object          v0, v8, Lcom/google/android/gms/drive/internal/zzu;->zzaoM Ljava/util/Map;
+	13      (0000002a) new-instance         v0, Ljava/util/HashMap;
+	14      (0000002e) invoke-direct        v0, Ljava/util/HashMap;-><init>()V
+	15      (00000034) iput-object          v0, v8, Lcom/google/android/gms/drive/internal/zzu;->zzaoN Ljava/util/Map;
+	16      (00000038) new-instance         v0, Ljava/util/HashMap;
+	17      (0000003c) invoke-direct        v0, Ljava/util/HashMap;-><init>()V
+	18      (00000042) iput-object          v0, v8, Lcom/google/android/gms/drive/internal/zzu;->zzaoO Ljava/util/Map;
+	19      (00000046) new-instance         v0, Ljava/util/HashMap;
+	20      (0000004a) invoke-direct        v0, Ljava/util/HashMap;-><init>()V
+	21      (00000050) iput-object          v0, v8, Lcom/google/android/gms/drive/internal/zzu;->zzaoP Ljava/util/Map;
+	22      (00000054) invoke-virtual       v11, Lcom/google/android/gms/common/internal/zzf;->zzqd()Ljava/lang/String;
+	23      (0000005a) move-result-object   v0
+	24      (0000005c) iput-object          v0, v8, Lcom/google/android/gms/drive/internal/zzu;->zzTz Ljava/lang/String;
+	25      (00000060) iput-object          v12, v8, Lcom/google/android/gms/drive/internal/zzu;->zzajO Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;
+	26      (00000064) iput-object          v14, v8, Lcom/google/android/gms/drive/internal/zzu;->zzaoH Landroid/os/Bundle;
+	27      (00000068) new-instance         v0, Landroid/content/Intent;
+	28      (0000006c) const-string         v1, 'com.google.android.gms.drive.events.HANDLE_EVENT'
+	29      (00000070) invoke-direct        v0, v1, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+	30      (00000076) invoke-virtual       v9, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+	31      (0000007c) move-result-object   v1
+	32      (0000007e) invoke-virtual       v0, v1, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+	33      (00000084) invoke-virtual       v9, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+	34      (0000008a) move-result-object   v1
+	35      (0000008c) invoke-virtual       v1, v0, v7, Landroid/content/pm/PackageManager;->queryIntentServices(Landroid/content/Intent; I)Ljava/util/List;
+	36      (00000092) move-result-object   v1
+	37      (00000094) invoke-interface     v1, Ljava/util/List;->size()I
+	38      (0000009a) move-result          v2
+	39      (0000009c) packed-switch        v2, +5a (0x150)
+
+<init>-BB@0xa2 : 
+	40      (000000a2) new-instance         v1, Ljava/lang/IllegalStateException;
+	41      (000000a6) new-instance         v2, Ljava/lang/StringBuilder;
+	42      (000000aa) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	43      (000000b0) const-string         v3, 'AndroidManifest.xml can only define one service that handles the '
+	44      (000000b4) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	45      (000000ba) move-result-object   v2
+	46      (000000bc) invoke-virtual       v0, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	47      (000000c2) move-result-object   v0
+	48      (000000c4) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	49      (000000ca) move-result-object   v0
+	50      (000000cc) const-string         v2, ' action'
+	51      (000000d0) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	52      (000000d6) move-result-object   v0
+	53      (000000d8) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	54      (000000de) move-result-object   v0
+	55      (000000e0) invoke-direct        v1, v0, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	56      (000000e6) throw                v1
+
+<init>-BB@0xe8 : [ <init>-BB@0xec ]
+	57      (000000e8) iput-boolean         v7, v8, Lcom/google/android/gms/drive/internal/zzu;->zzaoI Z
+
+<init>-BB@0xec : 
+	58      (000000ec) return-void          
+
+<init>-BB@0xee : [ <init>-BB@0x106 <init>-BB@0x148 ]
+	59      (000000ee) invoke-interface     v1, v7, Ljava/util/List;->get(I)Ljava/lang/Object;
+	60      (000000f4) move-result-object   v0
+	61      (000000f6) check-cast           v0, Landroid/content/pm/ResolveInfo;
+	62      (000000fa) iget-object          v0, v0, Landroid/content/pm/ResolveInfo;->serviceInfo Landroid/content/pm/ServiceInfo;
+	63      (000000fe) iget-boolean         v1, v0, Landroid/content/pm/ServiceInfo;->exported Z
+	64      (00000102) if-nez               v1, +23
+
+<init>-BB@0x106 : 
+	65      (00000106) new-instance         v1, Ljava/lang/IllegalStateException;
+	66      (0000010a) new-instance         v2, Ljava/lang/StringBuilder;
+	67      (0000010e) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	68      (00000114) const-string         v3, 'Drive event service '
+	69      (00000118) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	70      (0000011e) move-result-object   v2
+	71      (00000120) iget-object          v0, v0, Landroid/content/pm/ServiceInfo;->name Ljava/lang/String;
+	72      (00000124) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	73      (0000012a) move-result-object   v0
+	74      (0000012c) const-string         v2, ' must be exported in AndroidManifest.xml'
+	75      (00000130) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	76      (00000136) move-result-object   v0
+	77      (00000138) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	78      (0000013e) move-result-object   v0
+	79      (00000140) invoke-direct        v1, v0, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+	80      (00000146) throw                v1
+
+<init>-BB@0x148 : [ <init>-BB@0xec ]
+	81      (00000148) const/4              v0, 1
+	82      (0000014a) iput-boolean         v0, v8, Lcom/google/android/gms/drive/internal/zzu;->zzaoI Z
+	83      (0000014e) goto                 -31
+
+<init>-BB@0x150 : 
+	84      (00000150) packed-switch-payload 0 1
+

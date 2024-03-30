@@ -1,0 +1,59 @@
+# Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->hasAccessibilityDelegate(Landroid/view/View;)Z [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.view.View
+#
+# - return:boolean
+
+hasAccessibilityDelegate-BB@0x0 : [ hasAccessibilityDelegate-BB@0xc hasAccessibilityDelegate-BB@0xe ]
+	0       (00000000) const/4              v1, 1
+	1       (00000002) const/4              v2, 0
+	2       (00000004) sget-boolean         v3, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->accessibilityDelegateCheckFailed Z
+	3       (00000008) if-eqz               v3, +3
+
+hasAccessibilityDelegate-BB@0xc : 
+	4       (0000000c) return               v2
+
+hasAccessibilityDelegate-BB@0xe : [ hasAccessibilityDelegate-BB@0x16 hasAccessibilityDelegate-BB@0x36 ]
+	5       (0000000e) sget-object          v3, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mAccessibilityDelegateField Ljava/lang/reflect/Field;
+	6       (00000012) if-nez               v3, +12
+
+hasAccessibilityDelegate-BB@0x16 : [ hasAccessibilityDelegate-BB@0x36 ]
+	7       (00000016) const-class          v3, Landroid/view/View;
+	8       (0000001a) const-string         v4, 'mAccessibilityDelegate'
+	9       (0000001e) invoke-virtual       v3, v4, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+	10      (00000024) move-result-object   v3
+	11      (00000026) sput-object          v3, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mAccessibilityDelegateField Ljava/lang/reflect/Field;
+	12      (0000002a) sget-object          v3, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mAccessibilityDelegateField Ljava/lang/reflect/Field;
+	13      (0000002e) const/4              v4, 1
+	14      (00000030) invoke-virtual       v3, v4, Ljava/lang/reflect/Field;->setAccessible(Z)V
+	16:35
+	(Ljava/lang/Throwable; -> 4a hasAccessibilityDelegate-BB@0x4a)
+
+hasAccessibilityDelegate-BB@0x36 : [ hasAccessibilityDelegate-BB@0x46 hasAccessibilityDelegate-BB@0x52 ]
+	15      (00000036) sget-object          v3, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mAccessibilityDelegateField Ljava/lang/reflect/Field;
+	16      (0000003a) invoke-virtual       v3, v6, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	17      (00000040) move-result-object   v3
+	18      (00000042) if-eqz               v3, +8
+	36:3f
+	(Ljava/lang/Throwable; -> 56 hasAccessibilityDelegate-BB@0x56)
+
+hasAccessibilityDelegate-BB@0x46 : [ hasAccessibilityDelegate-BB@0xc ]
+	19      (00000046) move                 v2, v1
+	20      (00000048) goto                 -1e
+
+hasAccessibilityDelegate-BB@0x4a : [ hasAccessibilityDelegate-BB@0xc ]
+	21      (0000004a) move-exception       v0
+	22      (0000004c) sput-boolean         v1, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->accessibilityDelegateCheckFailed Z
+	23      (00000050) goto                 -22
+
+hasAccessibilityDelegate-BB@0x52 : [ hasAccessibilityDelegate-BB@0x46 ]
+	24      (00000052) move                 v1, v2
+	25      (00000054) goto                 -7
+
+hasAccessibilityDelegate-BB@0x56 : [ hasAccessibilityDelegate-BB@0xc ]
+	26      (00000056) move-exception       v0
+	27      (00000058) sput-boolean         v1, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->accessibilityDelegateCheckFailed Z
+	28      (0000005c) goto                 -28
+

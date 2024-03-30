@@ -1,0 +1,95 @@
+# Landroid/support/v7/view/menu/BaseMenuPresenter;->updateMenuView(Z)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v10
+# - v11:boolean
+#
+# - return:void
+
+updateMenuView-BB@0x0 : [ updateMenuView-BB@0xc updateMenuView-BB@0xe ]
+	0       (00000000) iget-object          v7, v10, Landroid/support/v7/view/menu/BaseMenuPresenter;->mMenuView Landroid/support/v7/view/menu/MenuView;
+	1       (00000004) check-cast           v7, Landroid/view/ViewGroup;
+	2       (00000008) if-nez               v7, +3
+
+updateMenuView-BB@0xc : 
+	3       (0000000c) return-void          
+
+updateMenuView-BB@0xe : [ updateMenuView-BB@0x18 updateMenuView-BB@0xa4 ]
+	4       (0000000e) const/4              v0, 0
+	5       (00000010) iget-object          v9, v10, Landroid/support/v7/view/menu/BaseMenuPresenter;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	6       (00000014) if-eqz               v9, +48
+
+updateMenuView-BB@0x18 : [ updateMenuView-BB@0x38 ]
+	7       (00000018) iget-object          v9, v10, Landroid/support/v7/view/menu/BaseMenuPresenter;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	8       (0000001c) invoke-virtual       v9, Landroid/support/v7/view/menu/MenuBuilder;->flagActionItems()V
+	9       (00000022) iget-object          v9, v10, Landroid/support/v7/view/menu/BaseMenuPresenter;->mMenu Landroid/support/v7/view/menu/MenuBuilder;
+	10      (00000026) invoke-virtual       v9, Landroid/support/v7/view/menu/MenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
+	11      (0000002c) move-result-object   v8
+	12      (0000002e) invoke-virtual       v8, Ljava/util/ArrayList;->size()I
+	13      (00000034) move-result          v4
+	14      (00000036) const/4              v2, 0
+
+updateMenuView-BB@0x38 : [ updateMenuView-BB@0x3c updateMenuView-BB@0xa4 ]
+	15      (00000038) if-ge                v2, v4, +36
+
+updateMenuView-BB@0x3c : [ updateMenuView-BB@0x54 updateMenuView-BB@0x9a ]
+	16      (0000003c) invoke-virtual       v8, v2, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	17      (00000042) move-result-object   v3
+	18      (00000044) check-cast           v3, Landroid/support/v7/view/menu/MenuItemImpl;
+	19      (00000048) invoke-virtual       v10, v0, v3, Landroid/support/v7/view/menu/BaseMenuPresenter;->shouldIncludeItem(I Landroid/support/v7/view/menu/MenuItemImpl;)Z
+	20      (0000004e) move-result          v9
+	21      (00000050) if-eqz               v9, +25
+
+updateMenuView-BB@0x54 : [ updateMenuView-BB@0x64 updateMenuView-BB@0xa0 ]
+	22      (00000054) invoke-virtual       v7, v0, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+	23      (0000005a) move-result-object   v1
+	24      (0000005c) instance-of          v9, v1, Landroid/support/v7/view/menu/MenuView$ItemView;
+	25      (00000060) if-eqz               v9, +20
+
+updateMenuView-BB@0x64 : [ updateMenuView-BB@0x72 ]
+	26      (00000064) move-object          v9, v1
+	27      (00000066) check-cast           v9, Landroid/support/v7/view/menu/MenuView$ItemView;
+	28      (0000006a) invoke-interface     v9, Landroid/support/v7/view/menu/MenuView$ItemView;->getItemData()Landroid/support/v7/view/menu/MenuItemImpl;
+	29      (00000070) move-result-object   v6
+
+updateMenuView-BB@0x72 : [ updateMenuView-BB@0x7e updateMenuView-BB@0x8c ]
+	30      (00000072) invoke-virtual       v10, v3, v1, v7, Landroid/support/v7/view/menu/BaseMenuPresenter;->getItemView(Landroid/support/v7/view/menu/MenuItemImpl; Landroid/view/View; Landroid/view/ViewGroup;)Landroid/view/View;
+	31      (00000078) move-result-object   v5
+	32      (0000007a) if-eq                v3, v6, +9
+
+updateMenuView-BB@0x7e : [ updateMenuView-BB@0x8c ]
+	33      (0000007e) const/4              v9, 0
+	34      (00000080) invoke-virtual       v5, v9, Landroid/view/View;->setPressed(Z)V
+	35      (00000086) invoke-static        v5, Landroid/support/v4/view/ViewCompat;->jumpDrawablesToCurrentState(Landroid/view/View;)V
+
+updateMenuView-BB@0x8c : [ updateMenuView-BB@0x90 updateMenuView-BB@0x96 ]
+	36      (0000008c) if-eq                v5, v1, +5
+
+updateMenuView-BB@0x90 : [ updateMenuView-BB@0x96 ]
+	37      (00000090) invoke-virtual       v10, v5, v0, Landroid/support/v7/view/menu/BaseMenuPresenter;->addItemView(Landroid/view/View; I)V
+
+updateMenuView-BB@0x96 : [ updateMenuView-BB@0x9a ]
+	38      (00000096) add-int/lit8         v0, v0, 1
+
+updateMenuView-BB@0x9a : [ updateMenuView-BB@0x38 ]
+	39      (0000009a) add-int/lit8         v2, v2, 1
+	40      (0000009e) goto                 -33
+
+updateMenuView-BB@0xa0 : [ updateMenuView-BB@0x72 ]
+	41      (000000a0) const/4              v6, 0
+	42      (000000a2) goto                 -18
+
+updateMenuView-BB@0xa4 : [ updateMenuView-BB@0xb0 updateMenuView-BB@0xc ]
+	43      (000000a4) invoke-virtual       v7, Landroid/view/ViewGroup;->getChildCount()I
+	44      (000000aa) move-result          v9
+	45      (000000ac) if-ge                v0, v9, -50
+
+updateMenuView-BB@0xb0 : [ updateMenuView-BB@0xbc updateMenuView-BB@0xa4 ]
+	46      (000000b0) invoke-virtual       v10, v7, v0, Landroid/support/v7/view/menu/BaseMenuPresenter;->filterLeftoverView(Landroid/view/ViewGroup; I)Z
+	47      (000000b6) move-result          v9
+	48      (000000b8) if-nez               v9, -a
+
+updateMenuView-BB@0xbc : [ updateMenuView-BB@0xa4 ]
+	49      (000000bc) add-int/lit8         v0, v0, 1
+	50      (000000c0) goto                 -e
+

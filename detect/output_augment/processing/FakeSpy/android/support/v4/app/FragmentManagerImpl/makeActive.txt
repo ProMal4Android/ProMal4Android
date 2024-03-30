@@ -1,0 +1,79 @@
+# Landroid/support/v4/app/FragmentManagerImpl;->makeActive(Landroid/support/v4/app/Fragment;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:android.support.v4.app.Fragment
+#
+# - return:void
+
+makeActive-BB@0x0 : [ makeActive-BB@0x8 makeActive-BB@0xa ]
+	0       (00000000) iget                 v0, v4, Landroid/support/v4/app/Fragment;->mIndex I
+	1       (00000004) if-ltz               v0, +3
+
+makeActive-BB@0x8 : 
+	2       (00000008) return-void          
+
+makeActive-BB@0xa : [ makeActive-BB@0x12 makeActive-BB@0x22 ]
+	3       (0000000a) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAvailIndices Ljava/util/ArrayList;
+	4       (0000000e) if-eqz               v0, +a
+
+makeActive-BB@0x12 : [ makeActive-BB@0x22 makeActive-BB@0x92 ]
+	5       (00000012) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAvailIndices Ljava/util/ArrayList;
+	6       (00000016) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	7       (0000001c) move-result          v0
+	8       (0000001e) if-gtz               v0, +3a
+
+makeActive-BB@0x22 : [ makeActive-BB@0x2a makeActive-BB@0x38 ]
+	9       (00000022) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	10      (00000026) if-nez               v0, +9
+
+makeActive-BB@0x2a : [ makeActive-BB@0x38 ]
+	11      (0000002a) new-instance         v0, Ljava/util/ArrayList;
+	12      (0000002e) invoke-direct        v0, Ljava/util/ArrayList;-><init>()V
+	13      (00000034) iput-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+
+makeActive-BB@0x38 : [ makeActive-BB@0x58 ]
+	14      (00000038) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	15      (0000003c) invoke-virtual       v0, Ljava/util/ArrayList;->size()I
+	16      (00000042) move-result          v0
+	17      (00000044) iget-object          v1, v3, Landroid/support/v4/app/FragmentManagerImpl;->mParent Landroid/support/v4/app/Fragment;
+	18      (00000048) invoke-virtual       v4, v0, v1, Landroid/support/v4/app/Fragment;->setIndex(I Landroid/support/v4/app/Fragment;)V
+	19      (0000004e) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	20      (00000052) invoke-virtual       v0, v4, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+makeActive-BB@0x58 : [ makeActive-BB@0x60 makeActive-BB@0x8 ]
+	21      (00000058) sget-boolean         v0, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG Z
+	22      (0000005c) if-eqz               v0, -2a
+
+makeActive-BB@0x60 : [ makeActive-BB@0x8 ]
+	23      (00000060) const-string         v0, 'FragmentManager'
+	24      (00000064) new-instance         v1, Ljava/lang/StringBuilder;
+	25      (00000068) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	26      (0000006e) const-string         v2, 'Allocated fragment index '
+	27      (00000072) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	28      (00000078) move-result-object   v1
+	29      (0000007a) invoke-virtual       v1, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	30      (00000080) move-result-object   v1
+	31      (00000082) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	32      (00000088) move-result-object   v1
+	33      (0000008a) invoke-static        v0, v1, Landroid/util/Log;->v(Ljava/lang/String; Ljava/lang/String;)I
+	34      (00000090) goto                 -44
+
+makeActive-BB@0x92 : [ makeActive-BB@0x58 ]
+	35      (00000092) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAvailIndices Ljava/util/ArrayList;
+	36      (00000096) iget-object          v1, v3, Landroid/support/v4/app/FragmentManagerImpl;->mAvailIndices Ljava/util/ArrayList;
+	37      (0000009a) invoke-virtual       v1, Ljava/util/ArrayList;->size()I
+	38      (000000a0) move-result          v1
+	39      (000000a2) add-int/lit8         v1, v1, -1
+	40      (000000a6) invoke-virtual       v0, v1, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+	41      (000000ac) move-result-object   v0
+	42      (000000ae) check-cast           v0, Ljava/lang/Integer;
+	43      (000000b2) invoke-virtual       v0, Ljava/lang/Integer;->intValue()I
+	44      (000000b8) move-result          v0
+	45      (000000ba) iget-object          v1, v3, Landroid/support/v4/app/FragmentManagerImpl;->mParent Landroid/support/v4/app/Fragment;
+	46      (000000be) invoke-virtual       v4, v0, v1, Landroid/support/v4/app/Fragment;->setIndex(I Landroid/support/v4/app/Fragment;)V
+	47      (000000c4) iget-object          v0, v3, Landroid/support/v4/app/FragmentManagerImpl;->mActive Ljava/util/ArrayList;
+	48      (000000c8) iget                 v1, v4, Landroid/support/v4/app/Fragment;->mIndex I
+	49      (000000cc) invoke-virtual       v0, v1, v4, Ljava/util/ArrayList;->set(I Ljava/lang/Object;)Ljava/lang/Object;
+	50      (000000d2) goto                 -3d
+

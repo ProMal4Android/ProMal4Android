@@ -1,0 +1,27 @@
+# Landroid/support/v7/widget/SuggestionsAdapter;->setViewText(Landroid/widget/TextView; Ljava/lang/CharSequence;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:android.widget.TextView
+# - v3:java.lang.CharSequence
+#
+# - return:void
+
+setViewText-BB@0x0 : [ setViewText-BB@0x12 setViewText-BB@0x1e ]
+	0       (00000000) invoke-virtual       v2, v3, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+	1       (00000006) invoke-static        v3, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	2       (0000000c) move-result          v0
+	3       (0000000e) if-eqz               v0, +8
+
+setViewText-BB@0x12 : [ setViewText-BB@0x1c ]
+	4       (00000012) const/16             v0, 8
+	5       (00000016) invoke-virtual       v2, v0, Landroid/widget/TextView;->setVisibility(I)V
+
+setViewText-BB@0x1c : 
+	6       (0000001c) return-void          
+
+setViewText-BB@0x1e : [ setViewText-BB@0x1c ]
+	7       (0000001e) const/4              v0, 0
+	8       (00000020) invoke-virtual       v2, v0, Landroid/widget/TextView;->setVisibility(I)V
+	9       (00000026) goto                 -5
+

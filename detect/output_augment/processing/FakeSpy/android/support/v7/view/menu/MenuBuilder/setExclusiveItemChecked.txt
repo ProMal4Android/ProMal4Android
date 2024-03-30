@@ -1,0 +1,59 @@
+# Landroid/support/v7/view/menu/MenuBuilder;->setExclusiveItemChecked(Landroid/view/MenuItem;)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.view.MenuItem
+#
+# - return:void
+
+setExclusiveItemChecked-BB@0x0 : [ setExclusiveItemChecked-BB@0x16 ]
+	0       (00000000) invoke-interface     v6, Landroid/view/MenuItem;->getGroupId()I
+	1       (00000006) move-result          v2
+	2       (00000008) iget-object          v4, v5, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	3       (0000000c) invoke-virtual       v4, Ljava/util/ArrayList;->size()I
+	4       (00000012) move-result          v0
+	5       (00000014) const/4              v3, 0
+
+setExclusiveItemChecked-BB@0x16 : [ setExclusiveItemChecked-BB@0x1a setExclusiveItemChecked-BB@0x66 ]
+	6       (00000016) if-ge                v3, v0, +28
+
+setExclusiveItemChecked-BB@0x1a : [ setExclusiveItemChecked-BB@0x36 setExclusiveItemChecked-BB@0x42 ]
+	7       (0000001a) iget-object          v4, v5, Landroid/support/v7/view/menu/MenuBuilder;->mItems Ljava/util/ArrayList;
+	8       (0000001e) invoke-virtual       v4, v3, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	9       (00000024) move-result-object   v1
+	10      (00000026) check-cast           v1, Landroid/support/v7/view/menu/MenuItemImpl;
+	11      (0000002a) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->getGroupId()I
+	12      (00000030) move-result          v4
+	13      (00000032) if-ne                v4, v2, +8
+
+setExclusiveItemChecked-BB@0x36 : [ setExclusiveItemChecked-BB@0x42 setExclusiveItemChecked-BB@0x48 ]
+	14      (00000036) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->isExclusiveCheckable()Z
+	15      (0000003c) move-result          v4
+	16      (0000003e) if-nez               v4, +5
+
+setExclusiveItemChecked-BB@0x42 : [ setExclusiveItemChecked-BB@0x16 ]
+	17      (00000042) add-int/lit8         v3, v3, 1
+	18      (00000046) goto                 -18
+
+setExclusiveItemChecked-BB@0x48 : [ setExclusiveItemChecked-BB@0x54 setExclusiveItemChecked-BB@0x42 ]
+	19      (00000048) invoke-virtual       v1, Landroid/support/v7/view/menu/MenuItemImpl;->isCheckable()Z
+	20      (0000004e) move-result          v4
+	21      (00000050) if-eqz               v4, -7
+
+setExclusiveItemChecked-BB@0x54 : [ setExclusiveItemChecked-BB@0x58 setExclusiveItemChecked-BB@0x62 ]
+	22      (00000054) if-ne                v1, v6, +7
+
+setExclusiveItemChecked-BB@0x58 : [ setExclusiveItemChecked-BB@0x5a ]
+	23      (00000058) const/4              v4, 1
+
+setExclusiveItemChecked-BB@0x5a : [ setExclusiveItemChecked-BB@0x42 ]
+	24      (0000005a) invoke-virtual       v1, v4, Landroid/support/v7/view/menu/MenuItemImpl;->setCheckedInt(Z)V
+	25      (00000060) goto                 -f
+
+setExclusiveItemChecked-BB@0x62 : [ setExclusiveItemChecked-BB@0x5a ]
+	26      (00000062) const/4              v4, 0
+	27      (00000064) goto                 -5
+
+setExclusiveItemChecked-BB@0x66 : 
+	28      (00000066) return-void          
+

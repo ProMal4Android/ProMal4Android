@@ -1,0 +1,18 @@
+# Landroid/support/v4/app/NotificationCompatGingerbread;->add(Landroid/app/Notification; Landroid/content/Context; Ljava/lang/CharSequence; Ljava/lang/CharSequence; Landroid/app/PendingIntent; Landroid/app/PendingIntent;)Landroid/app/Notification; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v-1
+# - v0:android.app.Notification
+# - v1:android.content.Context
+# - v2:java.lang.CharSequence
+# - v3:java.lang.CharSequence
+# - v4:android.app.PendingIntent
+# - v5:android.app.PendingIntent
+#
+# - return:android.app.Notification
+
+add-BB@0x0 : 
+	0       (00000000) invoke-virtual       v0, v1, v2, v3, v4, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context; Ljava/lang/CharSequence; Ljava/lang/CharSequence; Landroid/app/PendingIntent;)V
+	1       (00000006) iput-object          v5, v0, Landroid/app/Notification;->fullScreenIntent Landroid/app/PendingIntent;
+	2       (0000000a) return-object        v0
+

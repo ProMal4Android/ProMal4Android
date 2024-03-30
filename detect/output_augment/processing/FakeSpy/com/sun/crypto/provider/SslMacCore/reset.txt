@@ -1,0 +1,20 @@
+# Lcom/sun/crypto/provider/SslMacCore;->reset()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v1
+#
+# - return:void
+
+reset-BB@0x0 : [ reset-BB@0x8 reset-BB@0x18 ]
+	0       (00000000) iget-boolean         v0, v1, Lcom/sun/crypto/provider/SslMacCore;->first Z
+	1       (00000004) if-nez               v0, +a
+
+reset-BB@0x8 : [ reset-BB@0x18 ]
+	2       (00000008) iget-object          v0, v1, Lcom/sun/crypto/provider/SslMacCore;->md Ljava/security/MessageDigest;
+	3       (0000000c) invoke-virtual       v0, Ljava/security/MessageDigest;->reset()V
+	4       (00000012) const/4              v0, 1
+	5       (00000014) iput-boolean         v0, v1, Lcom/sun/crypto/provider/SslMacCore;->first Z
+
+reset-BB@0x18 : 
+	6       (00000018) return-void          
+

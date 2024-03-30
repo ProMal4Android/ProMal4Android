@@ -1,0 +1,33 @@
+# Lcom/sun/crypto/provider/DHKeyAgreement;-><init>()V [access_flags=public constructor]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:void
+
+<init>-BB@0x0 : [ <init>-BB@0x3a <init>-BB@0x4a ]
+	0       (00000000) const/4              v1, 0
+	1       (00000002) invoke-direct        v2, Ljavax/crypto/KeyAgreementSpi;-><init>()V
+	2       (00000008) const/4              v0, 0
+	3       (0000000a) iput-boolean         v0, v2, Lcom/sun/crypto/provider/DHKeyAgreement;->a Z
+	4       (0000000e) iput-object          v1, v2, Lcom/sun/crypto/provider/DHKeyAgreement;->b Ljava/math/BigInteger;
+	5       (00000012) iput-object          v1, v2, Lcom/sun/crypto/provider/DHKeyAgreement;->c Ljava/math/BigInteger;
+	6       (00000016) sget-object          v0, Ljava/math/BigInteger;->ZERO Ljava/math/BigInteger;
+	7       (0000001a) iput-object          v0, v2, Lcom/sun/crypto/provider/DHKeyAgreement;->d Ljava/math/BigInteger;
+	8       (0000001e) sget-object          v0, Ljava/math/BigInteger;->ZERO Ljava/math/BigInteger;
+	9       (00000022) iput-object          v0, v2, Lcom/sun/crypto/provider/DHKeyAgreement;->e Ljava/math/BigInteger;
+	10      (00000026) invoke-virtual       v2, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	11      (0000002c) move-result-object   v0
+	12      (0000002e) invoke-static        v0, Lcom/sun/crypto/provider/SunJCE;->b(Ljava/lang/Class;)Z
+	13      (00000034) move-result          v0
+	14      (00000036) if-nez               v0, +a
+
+<init>-BB@0x3a : 
+	15      (0000003a) new-instance         v0, Ljava/lang/SecurityException;
+	16      (0000003e) const-string         v1, 'The SunJCE provider may have been tampered.'
+	17      (00000042) invoke-direct        v0, v1, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+	18      (00000048) throw                v0
+
+<init>-BB@0x4a : 
+	19      (0000004a) return-void          
+

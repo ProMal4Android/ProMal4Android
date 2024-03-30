@@ -1,0 +1,67 @@
+# Landroid/support/v7/widget/AppCompatDrawableManager;->createDrawableIfNeeded(Landroid/content/Context; I)Landroid/graphics/drawable/Drawable; [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v9
+# - v10:android.content.Context
+# - v11:int
+#
+# - return:android.graphics.drawable.Drawable
+
+createDrawableIfNeeded-BB@0x0 : [ createDrawableIfNeeded-BB@0xa createDrawableIfNeeded-BB@0x18 ]
+	0       (00000000) const/4              v8, 1
+	1       (00000002) iget-object          v5, v9, Landroid/support/v7/widget/AppCompatDrawableManager;->mTypedValue Landroid/util/TypedValue;
+	2       (00000006) if-nez               v5, +9
+
+createDrawableIfNeeded-BB@0xa : [ createDrawableIfNeeded-BB@0x18 ]
+	3       (0000000a) new-instance         v5, Landroid/util/TypedValue;
+	4       (0000000e) invoke-direct        v5, Landroid/util/TypedValue;-><init>()V
+	5       (00000014) iput-object          v5, v9, Landroid/support/v7/widget/AppCompatDrawableManager;->mTypedValue Landroid/util/TypedValue;
+
+createDrawableIfNeeded-BB@0x18 : [ createDrawableIfNeeded-BB@0x3e createDrawableIfNeeded-BB@0x42 ]
+	6       (00000018) iget-object          v4, v9, Landroid/support/v7/widget/AppCompatDrawableManager;->mTypedValue Landroid/util/TypedValue;
+	7       (0000001c) invoke-virtual       v10, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+	8       (00000022) move-result-object   v5
+	9       (00000024) invoke-virtual       v5, v11, v4, v8, Landroid/content/res/Resources;->getValue(I Landroid/util/TypedValue; Z)V
+	10      (0000002a) invoke-static        v4, Landroid/support/v7/widget/AppCompatDrawableManager;->createCacheKey(Landroid/util/TypedValue;)J
+	11      (00000030) move-result-wide     v2
+	12      (00000032) invoke-direct        v9, v10, v2, v3, Landroid/support/v7/widget/AppCompatDrawableManager;->getCachedDrawable(Landroid/content/Context; J)Landroid/graphics/drawable/Drawable;
+	13      (00000038) move-result-object   v0
+	14      (0000003a) if-eqz               v0, +4
+
+createDrawableIfNeeded-BB@0x3e : [ createDrawableIfNeeded-BB@0x40 ]
+	15      (0000003e) move-object          v1, v0
+
+createDrawableIfNeeded-BB@0x40 : 
+	16      (00000040) return-object        v1
+
+createDrawableIfNeeded-BB@0x42 : [ createDrawableIfNeeded-BB@0x4a createDrawableIfNeeded-BB@0x7c ]
+	17      (00000042) sget                 v5, Landroid/support/v7/appcompat/R$drawable;->abc_cab_background_top_material I
+	18      (00000046) if-ne                v11, v5, +1b
+
+createDrawableIfNeeded-BB@0x4a : [ createDrawableIfNeeded-BB@0x7c ]
+	19      (0000004a) new-instance         v0, Landroid/graphics/drawable/LayerDrawable;
+	20      (0000004e) const/4              v5, 2
+	21      (00000050) new-array            v5, v5, [Landroid/graphics/drawable/Drawable;
+	22      (00000054) const/4              v6, 0
+	23      (00000056) sget                 v7, Landroid/support/v7/appcompat/R$drawable;->abc_cab_background_internal_bg I
+	24      (0000005a) invoke-virtual       v9, v10, v7, Landroid/support/v7/widget/AppCompatDrawableManager;->getDrawable(Landroid/content/Context; I)Landroid/graphics/drawable/Drawable;
+	25      (00000060) move-result-object   v7
+	26      (00000062) aput-object          v7, v5, v6
+	27      (00000066) sget                 v6, Landroid/support/v7/appcompat/R$drawable;->abc_cab_background_top_mtrl_alpha I
+	28      (0000006a) invoke-virtual       v9, v10, v6, Landroid/support/v7/widget/AppCompatDrawableManager;->getDrawable(Landroid/content/Context; I)Landroid/graphics/drawable/Drawable;
+	29      (00000070) move-result-object   v6
+	30      (00000072) aput-object          v6, v5, v8
+	31      (00000076) invoke-direct        v0, v5, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+createDrawableIfNeeded-BB@0x7c : [ createDrawableIfNeeded-BB@0x80 createDrawableIfNeeded-BB@0x90 ]
+	32      (0000007c) if-eqz               v0, +a
+
+createDrawableIfNeeded-BB@0x80 : [ createDrawableIfNeeded-BB@0x90 ]
+	33      (00000080) iget                 v5, v4, Landroid/util/TypedValue;->changingConfigurations I
+	34      (00000084) invoke-virtual       v0, v5, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
+	35      (0000008a) invoke-direct        v9, v10, v2, v3, v0, Landroid/support/v7/widget/AppCompatDrawableManager;->addDrawableToCache(Landroid/content/Context; J Landroid/graphics/drawable/Drawable;)Z
+
+createDrawableIfNeeded-BB@0x90 : [ createDrawableIfNeeded-BB@0x40 ]
+	36      (00000090) move-object          v1, v0
+	37      (00000092) goto                 -29
+

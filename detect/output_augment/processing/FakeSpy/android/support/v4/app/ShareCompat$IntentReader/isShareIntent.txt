@@ -1,0 +1,32 @@
+# Landroid/support/v4/app/ShareCompat$IntentReader;->isShareIntent()Z [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:boolean
+
+isShareIntent-BB@0x0 : [ isShareIntent-BB@0x1c isShareIntent-BB@0x2c ]
+	0       (00000000) iget-object          v1, v2, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent Landroid/content/Intent;
+	1       (00000004) invoke-virtual       v1, Landroid/content/Intent;->getAction()Ljava/lang/String;
+	2       (0000000a) move-result-object   v0
+	3       (0000000c) const-string         v1, 'android.intent.action.SEND'
+	4       (00000010) invoke-virtual       v1, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	5       (00000016) move-result          v1
+	6       (00000018) if-nez               v1, +a
+
+isShareIntent-BB@0x1c : [ isShareIntent-BB@0x2c isShareIntent-BB@0x30 ]
+	7       (0000001c) const-string         v1, 'android.intent.action.SEND_MULTIPLE'
+	8       (00000020) invoke-virtual       v1, v0, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	9       (00000026) move-result          v1
+	10      (00000028) if-eqz               v1, +4
+
+isShareIntent-BB@0x2c : [ isShareIntent-BB@0x2e ]
+	11      (0000002c) const/4              v1, 1
+
+isShareIntent-BB@0x2e : 
+	12      (0000002e) return               v1
+
+isShareIntent-BB@0x30 : [ isShareIntent-BB@0x2e ]
+	13      (00000030) const/4              v1, 0
+	14      (00000032) goto                 -2
+

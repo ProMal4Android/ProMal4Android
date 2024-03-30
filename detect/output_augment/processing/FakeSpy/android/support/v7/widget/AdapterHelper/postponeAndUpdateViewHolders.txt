@@ -1,0 +1,63 @@
+# Landroid/support/v7/widget/AdapterHelper;->postponeAndUpdateViewHolders(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.support.v7.widget.AdapterHelper$UpdateOp
+#
+# - return:void
+
+postponeAndUpdateViewHolders-BB@0x0 : [ D:postponeAndUpdateViewHolders-BB@0x14 1:postponeAndUpdateViewHolders-BB@0x46 2:postponeAndUpdateViewHolders-BB@0x6e 3:postponeAndUpdateViewHolders-BB@0x14 4:postponeAndUpdateViewHolders-BB@0x82 5:postponeAndUpdateViewHolders-BB@0x14 6:postponeAndUpdateViewHolders-BB@0x14 7:postponeAndUpdateViewHolders-BB@0x14 8:postponeAndUpdateViewHolders-BB@0x5a ]
+	0       (00000000) iget-object          v0, v4, Landroid/support/v7/widget/AdapterHelper;->mPostponedList Ljava/util/ArrayList;
+	1       (00000004) invoke-virtual       v0, v5, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	2       (0000000a) iget                 v0, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->cmd I
+	3       (0000000e) packed-switch        v0, +47 (0x9c)
+
+postponeAndUpdateViewHolders-BB@0x14 : 
+	4       (00000014) new-instance         v0, Ljava/lang/IllegalArgumentException;
+	5       (00000018) new-instance         v1, Ljava/lang/StringBuilder;
+	6       (0000001c) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	7       (00000022) const-string         v2, 'Unknown update op type for '
+	8       (00000026) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (0000002c) move-result-object   v1
+	10      (0000002e) invoke-virtual       v1, v5, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+	11      (00000034) move-result-object   v1
+	12      (00000036) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	13      (0000003c) move-result-object   v1
+	14      (0000003e) invoke-direct        v0, v1, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+	15      (00000044) throw                v0
+
+postponeAndUpdateViewHolders-BB@0x46 : [ postponeAndUpdateViewHolders-BB@0x58 ]
+	16      (00000046) iget-object          v0, v4, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	17      (0000004a) iget                 v1, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	18      (0000004e) iget                 v2, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	19      (00000052) invoke-interface     v0, v1, v2, Landroid/support/v7/widget/AdapterHelper$Callback;->offsetPositionsForAdd(I I)V
+
+postponeAndUpdateViewHolders-BB@0x58 : 
+	20      (00000058) return-void          
+
+postponeAndUpdateViewHolders-BB@0x5a : [ postponeAndUpdateViewHolders-BB@0x58 ]
+	21      (0000005a) iget-object          v0, v4, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	22      (0000005e) iget                 v1, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	23      (00000062) iget                 v2, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	24      (00000066) invoke-interface     v0, v1, v2, Landroid/support/v7/widget/AdapterHelper$Callback;->offsetPositionsForMove(I I)V
+	25      (0000006c) goto                 -a
+
+postponeAndUpdateViewHolders-BB@0x6e : [ postponeAndUpdateViewHolders-BB@0x58 ]
+	26      (0000006e) iget-object          v0, v4, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	27      (00000072) iget                 v1, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	28      (00000076) iget                 v2, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	29      (0000007a) invoke-interface     v0, v1, v2, Landroid/support/v7/widget/AdapterHelper$Callback;->offsetPositionsForRemovingLaidOutOrNewView(I I)V
+	30      (00000080) goto                 -14
+
+postponeAndUpdateViewHolders-BB@0x82 : [ postponeAndUpdateViewHolders-BB@0x58 ]
+	31      (00000082) iget-object          v0, v4, Landroid/support/v7/widget/AdapterHelper;->mCallback Landroid/support/v7/widget/AdapterHelper$Callback;
+	32      (00000086) iget                 v1, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->positionStart I
+	33      (0000008a) iget                 v2, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->itemCount I
+	34      (0000008e) iget-object          v3, v5, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->payload Ljava/lang/Object;
+	35      (00000092) invoke-interface     v0, v1, v2, v3, Landroid/support/v7/widget/AdapterHelper$Callback;->markViewHoldersUpdated(I I Ljava/lang/Object;)V
+	36      (00000098) goto                 -20
+
+postponeAndUpdateViewHolders-BB@0x9a : 
+	37      (0000009a) nop                  
+	38      (0000009c) packed-switch-payload 1 2 3 4 5 6 7 8
+

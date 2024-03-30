@@ -1,0 +1,60 @@
+# Lbutterknife/internal/BindingClass;->emitViewBindings(Ljava/lang/StringBuilder; Lbutterknife/internal/ViewBindings;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.StringBuilder
+# - v5:butterknife.internal.ViewBindings
+#
+# - return:void
+
+emitViewBindings-BB@0x0 : [ emitViewBindings-BB@0x1e emitViewBindings-BB@0x52 ]
+	0       (00000000) const-string         v1, '    view = '
+	1       (00000004) invoke-virtual       v4, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	2       (0000000a) invoke-virtual       v5, Lbutterknife/internal/ViewBindings;->getRequiredBindings()Ljava/util/List;
+	3       (00000010) move-result-object   v0
+	4       (00000012) invoke-interface     v0, Ljava/util/List;->isEmpty()Z
+	5       (00000018) move-result          v1
+	6       (0000001a) if-eqz               v1, +1c
+
+emitViewBindings-BB@0x1e : [ emitViewBindings-BB@0x44 ]
+	7       (0000001e) const-string         v1, 'finder.findOptionalView(source, '
+	8       (00000022) invoke-virtual       v4, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	9       (00000028) move-result-object   v1
+	10      (0000002a) invoke-virtual       v5, Lbutterknife/internal/ViewBindings;->getId()I
+	11      (00000030) move-result          v2
+	12      (00000032) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	13      (00000038) move-result-object   v1
+	14      (0000003a) const-string         v2, ', null);\n'
+	15      (0000003e) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+emitViewBindings-BB@0x44 : 
+	16      (00000044) invoke-direct        v3, v4, v5, Lbutterknife/internal/BindingClass;->emitFieldBindings(Ljava/lang/StringBuilder; Lbutterknife/internal/ViewBindings;)V
+	17      (0000004a) invoke-direct        v3, v4, v5, Lbutterknife/internal/BindingClass;->emitMethodBindings(Ljava/lang/StringBuilder; Lbutterknife/internal/ViewBindings;)V
+	18      (00000050) return-void          
+
+emitViewBindings-BB@0x52 : [ emitViewBindings-BB@0x60 emitViewBindings-BB@0x6c ]
+	19      (00000052) invoke-virtual       v5, Lbutterknife/internal/ViewBindings;->getId()I
+	20      (00000058) move-result          v1
+	21      (0000005a) const/4              v2, -1
+	22      (0000005c) if-ne                v1, v2, +8
+
+emitViewBindings-BB@0x60 : [ emitViewBindings-BB@0x44 ]
+	23      (00000060) const-string         v1, 'target;\n'
+	24      (00000064) invoke-virtual       v4, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	25      (0000006a) goto                 -13
+
+emitViewBindings-BB@0x6c : [ emitViewBindings-BB@0x44 ]
+	26      (0000006c) const-string         v1, 'finder.findRequiredView(source, '
+	27      (00000070) invoke-virtual       v4, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	28      (00000076) move-result-object   v1
+	29      (00000078) invoke-virtual       v5, Lbutterknife/internal/ViewBindings;->getId()I
+	30      (0000007e) move-result          v2
+	31      (00000080) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+	32      (00000086) move-result-object   v1
+	33      (00000088) const-string         v2, ', "'
+	34      (0000008c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	35      (00000092) invoke-static        v4, v0, Lbutterknife/internal/BindingClass;->emitHumanDescription(Ljava/lang/StringBuilder; Ljava/util/Collection;)V
+	36      (00000098) const-string         v1, '");\n'
+	37      (0000009c) invoke-virtual       v4, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	38      (000000a2) goto                 -2f
+

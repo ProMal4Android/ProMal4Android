@@ -1,0 +1,62 @@
+# Landroid/support/v4/widget/CompoundButtonCompatDonut;->getButtonDrawable(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable; [access_flags=static]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.widget.CompoundButton
+#
+# - return:android.graphics.drawable.Drawable
+
+getButtonDrawable-BB@0x0 : [ getButtonDrawable-BB@0xc getButtonDrawable-BB@0x30 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) const/4              v4, 1
+	2       (00000004) sget-boolean         v1, Landroid/support/v4/widget/CompoundButtonCompatDonut;->sButtonDrawableFieldFetched Z
+	3       (00000008) if-nez               v1, +14
+
+getButtonDrawable-BB@0xc : [ getButtonDrawable-BB@0x2c ]
+	4       (0000000c) const-class          v1, Landroid/widget/CompoundButton;
+	5       (00000010) const-string         v3, 'mButtonDrawable'
+	6       (00000014) invoke-virtual       v1, v3, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+	7       (0000001a) move-result-object   v1
+	8       (0000001c) sput-object          v1, Landroid/support/v4/widget/CompoundButtonCompatDonut;->sButtonDrawableField Ljava/lang/reflect/Field;
+	9       (00000020) sget-object          v1, Landroid/support/v4/widget/CompoundButtonCompatDonut;->sButtonDrawableField Ljava/lang/reflect/Field;
+	10      (00000024) const/4              v3, 1
+	11      (00000026) invoke-virtual       v1, v3, Ljava/lang/reflect/Field;->setAccessible(Z)V
+	c:2b
+	(Ljava/lang/NoSuchFieldException; -> 4a getButtonDrawable-BB@0x4a)
+
+getButtonDrawable-BB@0x2c : [ getButtonDrawable-BB@0x30 ]
+	12      (0000002c) sput-boolean         v4, Landroid/support/v4/widget/CompoundButtonCompatDonut;->sButtonDrawableFieldFetched Z
+
+getButtonDrawable-BB@0x30 : [ getButtonDrawable-BB@0x38 getButtonDrawable-BB@0x70 ]
+	13      (00000030) sget-object          v1, Landroid/support/v4/widget/CompoundButtonCompatDonut;->sButtonDrawableField Ljava/lang/reflect/Field;
+	14      (00000034) if-eqz               v1, +1e
+
+getButtonDrawable-BB@0x38 : [ getButtonDrawable-BB@0x48 ]
+	15      (00000038) sget-object          v1, Landroid/support/v4/widget/CompoundButtonCompatDonut;->sButtonDrawableField Ljava/lang/reflect/Field;
+	16      (0000003c) invoke-virtual       v1, v5, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+	17      (00000042) move-result-object   v1
+	18      (00000044) check-cast           v1, Landroid/graphics/drawable/Drawable;
+	38:47
+	(Ljava/lang/IllegalAccessException; -> 5c getButtonDrawable-BB@0x5c)
+
+getButtonDrawable-BB@0x48 : 
+	19      (00000048) return-object        v1
+
+getButtonDrawable-BB@0x4a : [ getButtonDrawable-BB@0x2c ]
+	20      (0000004a) move-exception       v0
+	21      (0000004c) const-string         v1, 'CompoundButtonCompatDonut'
+	22      (00000050) const-string         v3, 'Failed to retrieve mButtonDrawable field'
+	23      (00000054) invoke-static        v1, v3, v0, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	24      (0000005a) goto                 -17
+
+getButtonDrawable-BB@0x5c : [ getButtonDrawable-BB@0x70 ]
+	25      (0000005c) move-exception       v0
+	26      (0000005e) const-string         v1, 'CompoundButtonCompatDonut'
+	27      (00000062) const-string         v3, 'Failed to get button drawable via reflection'
+	28      (00000066) invoke-static        v1, v3, v0, Landroid/util/Log;->i(Ljava/lang/String; Ljava/lang/String; Ljava/lang/Throwable;)I
+	29      (0000006c) sput-object          v2, Landroid/support/v4/widget/CompoundButtonCompatDonut;->sButtonDrawableField Ljava/lang/reflect/Field;
+
+getButtonDrawable-BB@0x70 : [ getButtonDrawable-BB@0x48 ]
+	30      (00000070) move-object          v1, v2
+	31      (00000072) goto                 -15
+

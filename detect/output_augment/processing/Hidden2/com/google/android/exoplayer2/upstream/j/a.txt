@@ -1,0 +1,165 @@
+# Lcom/google/android/exoplayer2/upstream/j;->a(Ljava/net/URL; [B J J Z Z)Ljava/net/HttpURLConnection; [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v6
+# - v7:java.net.URL
+# - v8:byte[]
+# - v9:long
+# - v10:long
+# - v11:boolean
+# - v12:boolean
+#
+# - return:java.net.HttpURLConnection
+
+a-BB@0x0 : [ a-BB@0x28 a-BB@0x7c ]
+	0       (00000000) invoke-virtual       v5, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+	1       (00000006) move-result-object   v5
+	2       (00000008) check-cast           v5, Ljava/net/HttpURLConnection;
+	3       (0000000c) iget                 v0, v4, Lcom/google/android/exoplayer2/upstream/j;->e I
+	4       (00000010) invoke-virtual       v5, v0, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
+	5       (00000016) iget                 v0, v4, Lcom/google/android/exoplayer2/upstream/j;->f I
+	6       (0000001a) invoke-virtual       v5, v0, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
+	7       (00000020) iget-object          v0, v4, Lcom/google/android/exoplayer2/upstream/j;->i Lcom/google/android/exoplayer2/upstream/HttpDataSource$c;
+	8       (00000024) if-eqz               v0, +2c
+
+a-BB@0x28 : [ a-BB@0x44 ]
+	9       (00000028) iget-object          v0, v4, Lcom/google/android/exoplayer2/upstream/j;->i Lcom/google/android/exoplayer2/upstream/HttpDataSource$c;
+	10      (0000002c) invoke-virtual       v0, Lcom/google/android/exoplayer2/upstream/HttpDataSource$c;->a()Ljava/util/Map;
+	11      (00000032) move-result-object   v0
+	12      (00000034) invoke-interface     v0, Ljava/util/Map;->entrySet()Ljava/util/Set;
+	13      (0000003a) move-result-object   v0
+	14      (0000003c) invoke-interface     v0, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+	15      (00000042) move-result-object   v0
+
+a-BB@0x44 : [ a-BB@0x50 a-BB@0x7c ]
+	16      (00000044) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	17      (0000004a) move-result          v1
+	18      (0000004c) if-eqz               v1, +18
+
+a-BB@0x50 : [ a-BB@0x44 ]
+	19      (00000050) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	20      (00000056) move-result-object   v1
+	21      (00000058) check-cast           v1, Ljava/util/Map$Entry;
+	22      (0000005c) invoke-interface     v1, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+	23      (00000062) move-result-object   v2
+	24      (00000064) check-cast           v2, Ljava/lang/String;
+	25      (00000068) invoke-interface     v1, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	26      (0000006e) move-result-object   v1
+	27      (00000070) check-cast           v1, Ljava/lang/String;
+	28      (00000074) invoke-virtual       v5, v2, v1, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+	29      (0000007a) goto                 -1b
+
+a-BB@0x7c : [ a-BB@0x98 ]
+	30      (0000007c) iget-object          v0, v4, Lcom/google/android/exoplayer2/upstream/j;->j Lcom/google/android/exoplayer2/upstream/HttpDataSource$c;
+	31      (00000080) invoke-virtual       v0, Lcom/google/android/exoplayer2/upstream/HttpDataSource$c;->a()Ljava/util/Map;
+	32      (00000086) move-result-object   v0
+	33      (00000088) invoke-interface     v0, Ljava/util/Map;->entrySet()Ljava/util/Set;
+	34      (0000008e) move-result-object   v0
+	35      (00000090) invoke-interface     v0, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+	36      (00000096) move-result-object   v0
+
+a-BB@0x98 : [ a-BB@0xa4 a-BB@0xd0 ]
+	37      (00000098) invoke-interface     v0, Ljava/util/Iterator;->hasNext()Z
+	38      (0000009e) move-result          v1
+	39      (000000a0) if-eqz               v1, +18
+
+a-BB@0xa4 : [ a-BB@0x98 ]
+	40      (000000a4) invoke-interface     v0, Ljava/util/Iterator;->next()Ljava/lang/Object;
+	41      (000000aa) move-result-object   v1
+	42      (000000ac) check-cast           v1, Ljava/util/Map$Entry;
+	43      (000000b0) invoke-interface     v1, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+	44      (000000b6) move-result-object   v2
+	45      (000000b8) check-cast           v2, Ljava/lang/String;
+	46      (000000bc) invoke-interface     v1, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+	47      (000000c2) move-result-object   v1
+	48      (000000c4) check-cast           v1, Ljava/lang/String;
+	49      (000000c8) invoke-virtual       v5, v2, v1, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+	50      (000000ce) goto                 -1b
+
+a-BB@0xd0 : [ a-BB@0xe0 a-BB@0xe8 ]
+	51      (000000d0) const-wide/16        v0, 0 # [0.0]
+	52      (000000d4) cmp-long             v2, v7, v0
+	53      (000000d8) const-wide/16        v0, -1 # [-1.0]
+	54      (000000dc) if-nez               v2, +6
+
+a-BB@0xe0 : [ a-BB@0xe8 a-BB@0x150 ]
+	55      (000000e0) cmp-long             v2, v9, v0
+	56      (000000e4) if-eqz               v2, +36
+
+a-BB@0xe8 : [ a-BB@0x11c a-BB@0x146 ]
+	57      (000000e8) new-instance         v2, Ljava/lang/StringBuilder;
+	58      (000000ec) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	59      (000000f2) const-string         v3, 'bytes='
+	60      (000000f6) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	61      (000000fc) invoke-virtual       v2, v7, v8, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	62      (00000102) const-string         v3, '-'
+	63      (00000106) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	64      (0000010c) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	65      (00000112) move-result-object   v2
+	66      (00000114) cmp-long             v3, v9, v0
+	67      (00000118) if-eqz               v3, +17
+
+a-BB@0x11c : [ a-BB@0x146 ]
+	68      (0000011c) new-instance         v0, Ljava/lang/StringBuilder;
+	69      (00000120) invoke-direct        v0, Ljava/lang/StringBuilder;-><init>()V
+	70      (00000126) invoke-virtual       v0, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	71      (0000012c) add-long             v1, v7, v9
+	72      (00000130) const-wide/16        v7, 1 # [1.0]
+	73      (00000134) sub-long             v9, v1, v7
+	74      (00000138) invoke-virtual       v0, v9, v10, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+	75      (0000013e) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	76      (00000144) move-result-object   v2
+
+a-BB@0x146 : [ a-BB@0x150 ]
+	77      (00000146) const-string         v7, 'Range'
+	78      (0000014a) invoke-virtual       v5, v7, v2, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+
+a-BB@0x150 : [ a-BB@0x162 a-BB@0x170 ]
+	79      (00000150) const-string         v7, 'User-Agent'
+	80      (00000154) iget-object          v8, v4, Lcom/google/android/exoplayer2/upstream/j;->g Ljava/lang/String;
+	81      (00000158) invoke-virtual       v5, v7, v8, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+	82      (0000015e) if-nez               v11, +9
+
+a-BB@0x162 : [ a-BB@0x170 ]
+	83      (00000162) const-string         v7, 'Accept-Encoding'
+	84      (00000166) const-string         v8, 'identity'
+	85      (0000016a) invoke-virtual       v5, v7, v8, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String; Ljava/lang/String;)V
+
+a-BB@0x170 : [ a-BB@0x17a a-BB@0x17e ]
+	86      (00000170) invoke-virtual       v5, v12, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
+	87      (00000176) if-eqz               v6, +4
+
+a-BB@0x17a : [ a-BB@0x180 ]
+	88      (0000017a) const/4              v7, 1
+	89      (0000017c) goto                 +2
+
+a-BB@0x17e : [ a-BB@0x180 ]
+	90      (0000017e) const/4              v7, 0
+
+a-BB@0x180 : [ a-BB@0x18a a-BB@0x1c0 ]
+	91      (00000180) invoke-virtual       v5, v7, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
+	92      (00000186) if-eqz               v6, +1d
+
+a-BB@0x18a : [ a-BB@0x19a a-BB@0x19c ]
+	93      (0000018a) const-string         v7, 'POST'
+	94      (0000018e) invoke-virtual       v5, v7, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+	95      (00000194) array-length         v7, v6
+	96      (00000196) if-nez               v7, +3
+
+a-BB@0x19a : [ a-BB@0x1c0 ]
+	97      (0000019a) goto                 +13
+
+a-BB@0x19c : 
+	98      (0000019c) array-length         v7, v6
+	99      (0000019e) invoke-virtual       v5, v7, Ljava/net/HttpURLConnection;->setFixedLengthStreamingMode(I)V
+	100     (000001a4) invoke-virtual       v5, Ljava/net/HttpURLConnection;->connect()V
+	101     (000001aa) invoke-virtual       v5, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
+	102     (000001b0) move-result-object   v7
+	103     (000001b2) invoke-virtual       v7, v6, Ljava/io/OutputStream;->write([B)V
+	104     (000001b8) invoke-virtual       v7, Ljava/io/OutputStream;->close()V
+	105     (000001be) return-object        v5
+
+a-BB@0x1c0 : 
+	106     (000001c0) invoke-virtual       v5, Ljava/net/HttpURLConnection;->connect()V
+	107     (000001c6) return-object        v5
+

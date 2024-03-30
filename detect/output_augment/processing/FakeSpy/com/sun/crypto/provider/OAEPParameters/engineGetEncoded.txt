@@ -1,0 +1,107 @@
+# Lcom/sun/crypto/provider/OAEPParameters;->engineGetEncoded()[B [access_flags=protected]
+#
+# Parameters:
+# local registers: v0...v6
+#
+# - return:byte[]
+
+engineGetEncoded-BB@0x0 : [ engineGetEncoded-BB@0x14 ]
+	0       (00000000) const/16             v5, 48
+	1       (00000004) const/16             v4, -128
+	2       (00000008) const/4              v3, 1
+	3       (0000000a) new-instance         v0, Lsun/security/util/DerOutputStream;
+	4       (0000000e) invoke-direct        v0, Lsun/security/util/DerOutputStream;-><init>()V
+
+engineGetEncoded-BB@0x14 : [ engineGetEncoded-BB@0x54 ]
+	5       (00000014) iget-object          v1, v6, Lcom/sun/crypto/provider/OAEPParameters;->a Ljava/lang/String;
+	6       (00000018) invoke-static        v1, Lsun/security/x509/AlgorithmId;->get(Ljava/lang/String;)Lsun/security/x509/AlgorithmId;
+	7       (0000001e) move-result-object   v1
+	8       (00000020) new-instance         v2, Lsun/security/util/DerOutputStream;
+	9       (00000024) invoke-direct        v2, Lsun/security/util/DerOutputStream;-><init>()V
+	10      (0000002a) invoke-virtual       v1, v2, Lsun/security/x509/AlgorithmId;->derEncode(Ljava/io/OutputStream;)V
+	11      (00000030) const/4              v1, 0
+	12      (00000032) invoke-static        v4, v3, v1, Lsun/security/util/DerValue;->createTag(B Z B)B
+	13      (00000038) move-result          v1
+	14      (0000003a) invoke-virtual       v0, v1, v2, Lsun/security/util/DerOutputStream;->write(B Lsun/security/util/DerOutputStream;)V
+	15      (00000040) new-instance         v1, Lsun/security/util/DerOutputStream;
+	16      (00000044) invoke-direct        v1, Lsun/security/util/DerOutputStream;-><init>()V
+	17      (0000004a) sget-object          v2, Lcom/sun/crypto/provider/OAEPParameters;->d Lsun/security/util/ObjectIdentifier;
+	18      (0000004e) invoke-virtual       v1, v2, Lsun/security/util/DerOutputStream;->putOID(Lsun/security/util/ObjectIdentifier;)V
+	14:1d
+	(Ljava/security/NoSuchAlgorithmException; -> e4 engineGetEncoded-BB@0xe4)
+
+engineGetEncoded-BB@0x54 : 
+	19      (00000054) iget-object          v2, v6, Lcom/sun/crypto/provider/OAEPParameters;->b Ljava/security/spec/MGF1ParameterSpec;
+	20      (00000058) invoke-virtual       v2, Ljava/security/spec/MGF1ParameterSpec;->getDigestAlgorithm()Ljava/lang/String;
+	21      (0000005e) move-result-object   v2
+	22      (00000060) invoke-static        v2, Lsun/security/x509/AlgorithmId;->get(Ljava/lang/String;)Lsun/security/x509/AlgorithmId;
+	23      (00000066) move-result-object   v2
+	24      (00000068) invoke-virtual       v2, v1, Lsun/security/x509/AlgorithmId;->encode(Lsun/security/util/DerOutputStream;)V
+	25      (0000006e) new-instance         v2, Lsun/security/util/DerOutputStream;
+	26      (00000072) invoke-direct        v2, Lsun/security/util/DerOutputStream;-><init>()V
+	27      (00000078) invoke-virtual       v2, v5, v1, Lsun/security/util/DerOutputStream;->write(B Lsun/security/util/DerOutputStream;)V
+	28      (0000007e) invoke-static        v4, v3, v3, Lsun/security/util/DerValue;->createTag(B Z B)B
+	29      (00000084) move-result          v1
+	30      (00000086) invoke-virtual       v0, v1, v2, Lsun/security/util/DerOutputStream;->write(B Lsun/security/util/DerOutputStream;)V
+	31      (0000008c) new-instance         v1, Lsun/security/util/DerOutputStream;
+	32      (00000090) invoke-direct        v1, Lsun/security/util/DerOutputStream;-><init>()V
+	33      (00000096) sget-object          v2, Lcom/sun/crypto/provider/OAEPParameters;->e Lsun/security/util/ObjectIdentifier;
+	34      (0000009a) invoke-virtual       v1, v2, Lsun/security/util/DerOutputStream;->putOID(Lsun/security/util/ObjectIdentifier;)V
+	35      (000000a0) iget-object          v2, v6, Lcom/sun/crypto/provider/OAEPParameters;->c [B
+	36      (000000a4) invoke-virtual       v1, v2, Lsun/security/util/DerOutputStream;->putOctetString([B)V
+	37      (000000aa) new-instance         v2, Lsun/security/util/DerOutputStream;
+	38      (000000ae) invoke-direct        v2, Lsun/security/util/DerOutputStream;-><init>()V
+	39      (000000b4) invoke-virtual       v2, v5, v1, Lsun/security/util/DerOutputStream;->write(B Lsun/security/util/DerOutputStream;)V
+	40      (000000ba) const/4              v1, 2
+	41      (000000bc) invoke-static        v4, v3, v1, Lsun/security/util/DerValue;->createTag(B Z B)B
+	42      (000000c2) move-result          v1
+	43      (000000c4) invoke-virtual       v0, v1, v2, Lsun/security/util/DerOutputStream;->write(B Lsun/security/util/DerOutputStream;)V
+	44      (000000ca) new-instance         v1, Lsun/security/util/DerOutputStream;
+	45      (000000ce) invoke-direct        v1, Lsun/security/util/DerOutputStream;-><init>()V
+	46      (000000d4) invoke-virtual       v1, v5, v0, Lsun/security/util/DerOutputStream;->write(B Lsun/security/util/DerOutputStream;)V
+	47      (000000da) invoke-virtual       v1, Lsun/security/util/DerOutputStream;->toByteArray()[B
+	48      (000000e0) move-result-object   v0
+	49      (000000e2) return-object        v0
+	54:65
+	(Ljava/security/NoSuchAlgorithmException; -> 128 engineGetEncoded-BB@0x128)
+
+engineGetEncoded-BB@0xe4 : 
+	50      (000000e4) move-exception       v0
+	51      (000000e6) new-instance         v0, Ljava/io/IOException;
+	52      (000000ea) new-instance         v1, Ljava/lang/StringBuilder;
+	53      (000000ee) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	54      (000000f4) const-string         v2, 'AlgorithmId '
+	55      (000000f8) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	56      (000000fe) move-result-object   v1
+	57      (00000100) iget-object          v2, v6, Lcom/sun/crypto/provider/OAEPParameters;->a Ljava/lang/String;
+	58      (00000104) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	59      (0000010a) move-result-object   v1
+	60      (0000010c) const-string         v2, ' impl not found'
+	61      (00000110) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	62      (00000116) move-result-object   v1
+	63      (00000118) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	64      (0000011e) move-result-object   v1
+	65      (00000120) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	66      (00000126) throw                v0
+
+engineGetEncoded-BB@0x128 : 
+	67      (00000128) move-exception       v0
+	68      (0000012a) new-instance         v0, Ljava/io/IOException;
+	69      (0000012e) new-instance         v1, Ljava/lang/StringBuilder;
+	70      (00000132) invoke-direct        v1, Ljava/lang/StringBuilder;-><init>()V
+	71      (00000138) const-string         v2, 'AlgorithmId '
+	72      (0000013c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	73      (00000142) move-result-object   v1
+	74      (00000144) iget-object          v2, v6, Lcom/sun/crypto/provider/OAEPParameters;->b Ljava/security/spec/MGF1ParameterSpec;
+	75      (00000148) invoke-virtual       v2, Ljava/security/spec/MGF1ParameterSpec;->getDigestAlgorithm()Ljava/lang/String;
+	76      (0000014e) move-result-object   v2
+	77      (00000150) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	78      (00000156) move-result-object   v1
+	79      (00000158) const-string         v2, ' impl not found'
+	80      (0000015c) invoke-virtual       v1, v2, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	81      (00000162) move-result-object   v1
+	82      (00000164) invoke-virtual       v1, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	83      (0000016a) move-result-object   v1
+	84      (0000016c) invoke-direct        v0, v1, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+	85      (00000172) throw                v0
+

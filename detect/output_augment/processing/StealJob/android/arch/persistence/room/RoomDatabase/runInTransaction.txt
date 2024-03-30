@@ -1,0 +1,25 @@
+# Landroid/arch/persistence/room/RoomDatabase;->runInTransaction(Ljava/lang/Runnable;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.Runnable
+#
+# - return:void
+
+runInTransaction-BB@0x0 : [ runInTransaction-BB@0x6 ]
+	0       (00000000) invoke-virtual       v1, Landroid/arch/persistence/room/RoomDatabase;->beginTransaction()V
+
+runInTransaction-BB@0x6 : 
+	1       (00000006) invoke-interface     v2, Ljava/lang/Runnable;->run()V
+	2       (0000000c) invoke-virtual       v1, Landroid/arch/persistence/room/RoomDatabase;->setTransactionSuccessful()V
+	3       (00000012) invoke-virtual       v1, Landroid/arch/persistence/room/RoomDatabase;->endTransaction()V
+	4       (00000018) nop                  
+	5       (0000001a) return-void          
+	6:11
+	(Ljava/lang/Throwable; -> 1c runInTransaction-BB@0x1c)
+
+runInTransaction-BB@0x1c : 
+	6       (0000001c) move-exception       v0
+	7       (0000001e) invoke-virtual       v1, Landroid/arch/persistence/room/RoomDatabase;->endTransaction()V
+	8       (00000024) throw                v0
+

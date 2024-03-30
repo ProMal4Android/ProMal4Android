@@ -1,0 +1,57 @@
+# Landroid/support/v7/widget/SearchView;->hasVoiceSearch()Z [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v5
+#
+# - return:boolean
+
+hasVoiceSearch-BB@0x0 : [ hasVoiceSearch-BB@0xa hasVoiceSearch-BB@0x56 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) iget-object          v3, v5, Landroid/support/v7/widget/SearchView;->mSearchable Landroid/app/SearchableInfo;
+	2       (00000006) if-eqz               v3, +28
+
+hasVoiceSearch-BB@0xa : [ hasVoiceSearch-BB@0x1a hasVoiceSearch-BB@0x56 ]
+	3       (0000000a) iget-object          v3, v5, Landroid/support/v7/widget/SearchView;->mSearchable Landroid/app/SearchableInfo;
+	4       (0000000e) invoke-virtual       v3, Landroid/app/SearchableInfo;->getVoiceSearchEnabled()Z
+	5       (00000014) move-result          v3
+	6       (00000016) if-eqz               v3, +20
+
+hasVoiceSearch-BB@0x1a : [ hasVoiceSearch-BB@0x2c hasVoiceSearch-BB@0x58 ]
+	7       (0000001a) const/4              v1, 0
+	8       (0000001c) iget-object          v3, v5, Landroid/support/v7/widget/SearchView;->mSearchable Landroid/app/SearchableInfo;
+	9       (00000020) invoke-virtual       v3, Landroid/app/SearchableInfo;->getVoiceSearchLaunchWebSearch()Z
+	10      (00000026) move-result          v3
+	11      (00000028) if-eqz               v3, +18
+
+hasVoiceSearch-BB@0x2c : [ hasVoiceSearch-BB@0x30 ]
+	12      (0000002c) iget-object          v1, v5, Landroid/support/v7/widget/SearchView;->mVoiceWebSearchIntent Landroid/content/Intent;
+
+hasVoiceSearch-BB@0x30 : [ hasVoiceSearch-BB@0x34 hasVoiceSearch-BB@0x56 ]
+	13      (00000030) if-eqz               v1, +13
+
+hasVoiceSearch-BB@0x34 : [ hasVoiceSearch-BB@0x54 hasVoiceSearch-BB@0x56 ]
+	14      (00000034) invoke-virtual       v5, Landroid/support/v7/widget/SearchView;->getContext()Landroid/content/Context;
+	15      (0000003a) move-result-object   v3
+	16      (0000003c) invoke-virtual       v3, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+	17      (00000042) move-result-object   v3
+	18      (00000044) const/high16         v4, 1 # [9.183549615799121e-41]
+	19      (00000048) invoke-virtual       v3, v1, v4, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent; I)Landroid/content/pm/ResolveInfo;
+	20      (0000004e) move-result-object   v0
+	21      (00000050) if-eqz               v0, +3
+
+hasVoiceSearch-BB@0x54 : [ hasVoiceSearch-BB@0x56 ]
+	22      (00000054) const/4              v2, 1
+
+hasVoiceSearch-BB@0x56 : 
+	23      (00000056) return               v2
+
+hasVoiceSearch-BB@0x58 : [ hasVoiceSearch-BB@0x68 hasVoiceSearch-BB@0x30 ]
+	24      (00000058) iget-object          v3, v5, Landroid/support/v7/widget/SearchView;->mSearchable Landroid/app/SearchableInfo;
+	25      (0000005c) invoke-virtual       v3, Landroid/app/SearchableInfo;->getVoiceSearchLaunchRecognizer()Z
+	26      (00000062) move-result          v3
+	27      (00000064) if-eqz               v3, -1a
+
+hasVoiceSearch-BB@0x68 : [ hasVoiceSearch-BB@0x30 ]
+	28      (00000068) iget-object          v1, v5, Landroid/support/v7/widget/SearchView;->mVoiceAppSearchIntent Landroid/content/Intent;
+	29      (0000006c) goto                 -1e
+

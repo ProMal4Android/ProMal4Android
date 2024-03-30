@@ -1,0 +1,28 @@
+# Landroid/support/v7/widget/SearchView;->setQuery(Ljava/lang/CharSequence;)V [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.CharSequence
+#
+# - return:void
+
+setQuery-BB@0x0 : [ setQuery-BB@0x1a setQuery-BB@0x24 ]
+	0       (00000000) iget-object          v0, v2, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	1       (00000004) invoke-virtual       v0, v3, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setText(Ljava/lang/CharSequence;)V
+	2       (0000000a) iget-object          v1, v2, Landroid/support/v7/widget/SearchView;->mSearchSrcTextView Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+	3       (0000000e) invoke-static        v3, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+	4       (00000014) move-result          v0
+	5       (00000016) if-eqz               v0, +7
+
+setQuery-BB@0x1a : [ setQuery-BB@0x1c ]
+	6       (0000001a) const/4              v0, 0
+
+setQuery-BB@0x1c : 
+	7       (0000001c) invoke-virtual       v1, v0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setSelection(I)V
+	8       (00000022) return-void          
+
+setQuery-BB@0x24 : [ setQuery-BB@0x1c ]
+	9       (00000024) invoke-interface     v3, Ljava/lang/CharSequence;->length()I
+	10      (0000002a) move-result          v0
+	11      (0000002c) goto                 -8
+

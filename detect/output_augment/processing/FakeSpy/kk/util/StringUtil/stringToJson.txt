@@ -1,0 +1,88 @@
+# Lkk/util/StringUtil;->stringToJson(Ljava/lang/String;)Ljava/lang/String; [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:java.lang.String
+#
+# - return:java.lang.String
+
+stringToJson-BB@0x0 : [ stringToJson-BB@0x4 stringToJson-BB@0xa ]
+	0       (00000000) if-nez               v4, +5
+
+stringToJson-BB@0x4 : [ stringToJson-BB@0x8 ]
+	1       (00000004) const-string         v3, ''
+
+stringToJson-BB@0x8 : 
+	2       (00000008) return-object        v3
+
+stringToJson-BB@0xa : [ stringToJson-BB@0x16 ]
+	3       (0000000a) new-instance         v2, Ljava/lang/StringBuilder;
+	4       (0000000e) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	5       (00000014) const/4              v1, 0
+
+stringToJson-BB@0x16 : [ stringToJson-BB@0x22 stringToJson-BB@0x9c ]
+	6       (00000016) invoke-virtual       v4, Ljava/lang/String;->length()I
+	7       (0000001c) move-result          v3
+	8       (0000001e) if-ge                v1, v3, +3f
+
+stringToJson-BB@0x22 : [ D:stringToJson-BB@0x30 8:stringToJson-BB@0x54 9:stringToJson-BB@0x84 10:stringToJson-BB@0x6c 12:stringToJson-BB@0x60 13:stringToJson-BB@0x78 34:stringToJson-BB@0x3c 47:stringToJson-BB@0x90 92:stringToJson-BB@0x48 ]
+	9       (00000022) invoke-virtual       v4, v1, Ljava/lang/String;->charAt(I)C
+	10      (00000028) move-result          v0
+	11      (0000002a) sparse-switch        v0, +3f (0xa8)
+
+stringToJson-BB@0x30 : [ stringToJson-BB@0x36 ]
+	12      (00000030) invoke-virtual       v2, v0, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+stringToJson-BB@0x36 : [ stringToJson-BB@0x16 ]
+	13      (00000036) add-int/lit8         v1, v1, 1
+	14      (0000003a) goto                 -12
+
+stringToJson-BB@0x3c : [ stringToJson-BB@0x36 ]
+	15      (0000003c) const-string         v3, '\\"'
+	16      (00000040) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	17      (00000046) goto                 -8
+
+stringToJson-BB@0x48 : [ stringToJson-BB@0x36 ]
+	18      (00000048) const-string         v3, '\\\\'
+	19      (0000004c) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	20      (00000052) goto                 -e
+
+stringToJson-BB@0x54 : [ stringToJson-BB@0x36 ]
+	21      (00000054) const-string         v3, ''
+	22      (00000058) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	23      (0000005e) goto                 -14
+
+stringToJson-BB@0x60 : [ stringToJson-BB@0x36 ]
+	24      (00000060) const-string         v3, ''
+	25      (00000064) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	26      (0000006a) goto                 -1a
+
+stringToJson-BB@0x6c : [ stringToJson-BB@0x36 ]
+	27      (0000006c) const-string         v3, ''
+	28      (00000070) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	29      (00000076) goto                 -20
+
+stringToJson-BB@0x78 : [ stringToJson-BB@0x36 ]
+	30      (00000078) const-string         v3, ''
+	31      (0000007c) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	32      (00000082) goto                 -26
+
+stringToJson-BB@0x84 : [ stringToJson-BB@0x36 ]
+	33      (00000084) const-string         v3, ''
+	34      (00000088) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	35      (0000008e) goto                 -2c
+
+stringToJson-BB@0x90 : [ stringToJson-BB@0x36 ]
+	36      (00000090) const-string         v3, '\\/'
+	37      (00000094) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	38      (0000009a) goto                 -32
+
+stringToJson-BB@0x9c : [ stringToJson-BB@0x8 ]
+	39      (0000009c) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	40      (000000a2) move-result-object   v3
+	41      (000000a4) goto                 -4e
+
+stringToJson-BB@0xa6 : 
+	42      (000000a6) nop                  
+	43      (000000a8) sparse-switch-payload 8 9 a c d 22 2f 5c
+

@@ -1,0 +1,69 @@
+# Landroid/support/v4/content/Loader;->dump(Ljava/lang/String; Ljava/io/FileDescriptor; Ljava/io/PrintWriter; [Ljava/lang/String;)V [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v1
+# - v2:java.lang.String
+# - v3:java.io.FileDescriptor
+# - v4:java.io.PrintWriter
+# - v5:java.lang.String[]
+#
+# - return:void
+
+dump-BB@0x0 : [ dump-BB@0x36 dump-BB@0x46 ]
+	0       (00000000) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	1       (00000006) const-string         v0, 'mId='
+	2       (0000000a) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	3       (00000010) iget                 v0, v1, Landroid/support/v4/content/Loader;->mId I
+	4       (00000014) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(I)V
+	5       (0000001a) const-string         v0, ' mListener='
+	6       (0000001e) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	7       (00000024) iget-object          v0, v1, Landroid/support/v4/content/Loader;->mListener Landroid/support/v4/content/Loader$OnLoadCompleteListener;
+	8       (00000028) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
+	9       (0000002e) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mStarted Z
+	10      (00000032) if-nez               v0, +a
+
+dump-BB@0x36 : [ dump-BB@0x3e dump-BB@0x46 ]
+	11      (00000036) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mContentChanged Z
+	12      (0000003a) if-nez               v0, +6
+
+dump-BB@0x3e : [ dump-BB@0x46 dump-BB@0x88 ]
+	13      (0000003e) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mProcessingChange Z
+	14      (00000042) if-eqz               v0, +23
+
+dump-BB@0x46 : [ dump-BB@0x88 ]
+	15      (00000046) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	16      (0000004c) const-string         v0, 'mStarted='
+	17      (00000050) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	18      (00000056) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mStarted Z
+	19      (0000005a) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Z)V
+	20      (00000060) const-string         v0, ' mContentChanged='
+	21      (00000064) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	22      (0000006a) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mContentChanged Z
+	23      (0000006e) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Z)V
+	24      (00000074) const-string         v0, ' mProcessingChange='
+	25      (00000078) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	26      (0000007e) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mProcessingChange Z
+	27      (00000082) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Z)V
+
+dump-BB@0x88 : [ dump-BB@0x90 dump-BB@0x98 ]
+	28      (00000088) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mAbandoned Z
+	29      (0000008c) if-nez               v0, +6
+
+dump-BB@0x90 : [ dump-BB@0x98 dump-BB@0xc6 ]
+	30      (00000090) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mReset Z
+	31      (00000094) if-eqz               v0, +19
+
+dump-BB@0x98 : [ dump-BB@0xc6 ]
+	32      (00000098) invoke-virtual       v4, v2, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	33      (0000009e) const-string         v0, 'mAbandoned='
+	34      (000000a2) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	35      (000000a8) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mAbandoned Z
+	36      (000000ac) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Z)V
+	37      (000000b2) const-string         v0, ' mReset='
+	38      (000000b6) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+	39      (000000bc) iget-boolean         v0, v1, Landroid/support/v4/content/Loader;->mReset Z
+	40      (000000c0) invoke-virtual       v4, v0, Ljava/io/PrintWriter;->println(Z)V
+
+dump-BB@0xc6 : 
+	41      (000000c6) return-void          
+

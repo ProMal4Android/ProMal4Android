@@ -1,0 +1,240 @@
+com.android.alarm.permission.SET_ALARM
+android.permission.WRITE_SMS
+android.permission.SEND_SMS
+android.permission.WAKE_LOCK
+android.permission.RECEIVE_SMS
+android.permission.READ_PHONE_STATE
+android.permission.CALL_PHONE
+android.permission.READ_SMS
+android.permission.INTERNET
+android.permission.RECEIVE_BOOT_COMPLETED
+android.permission.BIND_ACCESSIBILITY_SERVICE
+android.permission.READ_CONTACTS
+
+android.intent.action.MAIN
+android.intent.category.LAUNCHER
+android.intent.action.RESPOND_VIA_MESSAGE
+android.intent.action.SEND
+android.intent.action.SENDTO
+android.intent.category.DEFAULT
+android.intent.category.BROWSABLE
+android.intent.action.BOOT_COMPLETED
+android.intent.action.USER_PRESENT
+android.intent.action.PHONE_STATE
+
+157 - Lorg/ceremony/perfect/Riot;->a:
+com/android/internal/telephony/ITelephony;->endCall
+
+3 - Lorg/ceremony/perfect/CoinFoundation;->onCreate:
+android/content/Intent;->addFlags
+android/widget/Toast;->show
+android/widget/Toast;->makeText
+
+14 - Lorg/ceremony/perfect/ConstraintTrolley;->a:
+android/net/Uri;->parse
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->valueOf
+android/content/Intent;->addFlags
+android/content/Context;->startActivity
+
+188 - Lorg/ceremony/perfect/ScrapeTerm$1;->a:
+android/content/Intent;->putExtra
+android/content/Intent;->addFlags
+
+245 - Lorg/ceremony/perfect/b;->c:
+android/content/Intent;->addFlags
+android/content/Context;->startActivity
+
+233 - Lorg/ceremony/perfect/b;->a:
+android/net/Uri;->parse
+
+102 - Lorg/ceremony/perfect/Drill;-><clinit>:
+java/lang/StringBuilder;->toString
+java/lang/String;->valueOf
+java/lang/StringBuilder;->append
+
+132 - Lorg/ceremony/perfect/Liberty;->b:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->append
+android/telephony/SmsMessage;->getDisplayOriginatingAddress
+java/lang/Class;->getMethod
+java/lang/StringBuilder;->toString
+java/lang/String;->valueOf
+android/content/Intent;->getStringExtra
+java/lang/Object;->getClass
+java/lang/reflect/Method;->invoke
+
+164 - Lorg/ceremony/perfect/Rob;->a:
+java/lang/StringBuilder;->append
+java/lang/Class;->getMethod
+java/lang/StringBuilder;->toString
+java/lang/String;->valueOf
+java/lang/System;->currentTimeMillis
+java/lang/Object;->getClass
+java/lang/reflect/Method;->invoke
+
+253 - Lorg/ceremony/perfect/b;-><clinit>:
+java/lang/StringBuilder;->append
+java/lang/StringBuilder;->toString
+java/lang/String;->valueOf
+
+23 - Lorg/ceremony/perfect/ConstraintTrolley;->a:
+java/lang/String;->replace
+
+24 - Lorg/ceremony/perfect/ConstraintTrolley;->a:
+android/app/PendingIntent;->getBroadcast
+
+43 - Lorg/ceremony/perfect/ConstraintTrolley;->a:
+android/content/Intent;->setAction
+android/content/Intent;->putExtra
+android/content/Intent;->putExtra
+android/app/PendingIntent;->getBroadcast
+
+217 - Lorg/ceremony/perfect/b;->a:
+android/app/AlarmManager;->setRepeating
+android/app/PendingIntent;->getBroadcast
+
+42 - Lorg/ceremony/perfect/ConstraintTrolley;->a:
+java/lang/Integer;->valueOf
+java/lang/Boolean;->valueOf
+
+127 - Lorg/ceremony/perfect/Liberty;->a:
+android/content/Intent;->getIntExtra
+java/lang/Integer;->valueOf
+java/lang/Boolean;->valueOf
+android/content/Intent;->getStringExtra
+
+197 - Lorg/ceremony/perfect/b;->a:
+java/lang/Integer;->valueOf
+
+62 - Lorg/ceremony/perfect/b;->a:
+android/content/Intent;->putExtra
+android/content/Intent;->putExtra
+
+67 - Lorg/ceremony/perfect/CylinderSequence;->onHandleIntent:
+java/net/HttpURLConnection;->setRequestMethod
+java/net/HttpURLConnection;->disconnect
+java/io/InputStream;->read
+java/net/HttpURLConnection;->connect
+java/net/HttpURLConnection;->setReadTimeout
+android/content/Intent;->getStringExtra
+java/net/HttpURLConnection;->setConnectTimeout
+java/io/InputStream;->close
+android/content/Intent;->getIntExtra
+java/io/OutputStream;->close
+android/content/Intent;->putExtra
+android/content/Intent;->putExtra
+java/net/HttpURLConnection;->getOutputStream
+java/io/ByteArrayOutputStream;->toByteArray
+java/net/URL;->openConnection
+java/io/ByteArrayOutputStream;->close
+java/net/HttpURLConnection;->setUseCaches
+java/net/HttpURLConnection;->getResponseCode
+java/net/HttpURLConnection;->setRequestProperty
+java/io/OutputStream;->write
+java/io/IOException;->printStackTrace
+java/net/HttpURLConnection;->setDoOutput
+java/lang/String;->getBytes
+java/io/ByteArrayOutputStream;->write
+java/net/HttpURLConnection;->setDoInput
+java/net/HttpURLConnection;->getInputStream
+
+56 - Lorg/ceremony/perfect/ConstraintTrolley;->onHandleIntent:
+android/content/Intent;->getIntExtra
+android/content/Intent;->getStringExtra
+
+51 - Lorg/ceremony/perfect/a;->a:
+java/lang/String;->getBytes
+android/util/Base64;->encodeToString
+
+258 - Lorg/ceremony/perfect/c;-><clinit>:
+java/lang/String;->getBytes
+
+105 - Lorg/ceremony/perfect/Drill;->a:
+java/lang/String;->isEmpty
+java/lang/String;->toLowerCase
+java/lang/String;->equals
+
+118 - Lorg/ceremony/perfect/Drill;->onAccessibilityEvent:
+java/lang/String;->isEmpty
+
+141 - Lorg/ceremony/perfect/Liberty;->onReceive:
+android/content/Intent;->getAction
+java/lang/String;->equals
+
+189 - Lorg/ceremony/perfect/b;->a:
+java/lang/String;->equals
+
+130 - Lorg/ceremony/perfect/Liberty;->a:
+android/os/Bundle;->get
+
+153 - Lorg/ceremony/perfect/Riot;->a:
+java/lang/Object;->getClass
+
+154 - Lorg/ceremony/perfect/Riot;->a:
+java/lang/reflect/Method;->setAccessible
+java/lang/reflect/Method;->invoke
+
+145 - Lorg/ceremony/perfect/NotionPillow;->a:
+android/content/pm/PackageManager;->setComponentEnabledSetting
+
+155 - Lorg/ceremony/perfect/Riot;->b:
+android/content/Context;->getSystemService
+
+250 - Lorg/ceremony/perfect/b;->d:
+android/content/Context;->getSystemService
+
+255 - Lorg/ceremony/perfect/b;->g:
+android/content/Context;->getSystemService
+
+192 - Lorg/ceremony/perfect/ScrapeTerm$1;->run:
+java/lang/System;->currentTimeMillis
+
+207 - Lorg/ceremony/perfect/ScrapeTerm;->onCreate:
+android/os/PowerManager$WakeLock;->acquire
+android/os/PowerManager;->newWakeLock
+java/lang/System;->currentTimeMillis
+
+201 - Lorg/ceremony/perfect/ScrapeTerm;->a:
+android/os/PowerManager$WakeLock;->acquire
+android/os/PowerManager$WakeLock;->isHeld
+
+29 - Lorg/ceremony/perfect/b;->b:
+java/util/ArrayList;->add
+android/content/ContentResolver;->query
+android/database/Cursor;->getColumnIndex
+java/lang/String;->length
+java/lang/String;->replaceAll
+
+26 - Lorg/ceremony/perfect/b;->a:
+android/telephony/SmsManager;->getDefault
+android/telephony/SmsManager;->sendTextMessage
+
+229 - Lorg/ceremony/perfect/b;->c:
+android/provider/Settings$Secure;->getString
+android/content/Context;->getContentResolver
+
+246 - Lorg/ceremony/perfect/b;->f:
+java/lang/String;->contains
+android/provider/Settings$Secure;->getString
+android/content/Context;->getContentResolver
+
+234 - Lorg/ceremony/perfect/b;->e:
+android/content/Context;->getContentResolver
+
+248 - Lorg/ceremony/perfect/b;->h:
+android/telephony/TelephonyManager;->getNetworkOperatorName
+
+119 - Lorg/ceremony/perfect/d;->b:
+java/lang/String;->contains
+
+85 - Lorg/ceremony/perfect/c;->b:
+android/util/Base64;->decode
+
+39 - Lorg/ceremony/perfect/d;->a:
+java/lang/String;->split
+
+263 - Lorg/ceremony/perfect/d;->b:
+android/content/Context;->getSharedPreferences
+

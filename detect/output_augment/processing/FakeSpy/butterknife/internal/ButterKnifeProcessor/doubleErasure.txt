@@ -1,0 +1,28 @@
+# Lbutterknife/internal/ButterKnifeProcessor;->doubleErasure(Ljavax/lang/model/type/TypeMirror;)Ljava/lang/String; [access_flags=private]
+#
+# Parameters:
+# - local registers: v0...v3
+# - v4:javax.lang.model.type.TypeMirror
+#
+# - return:java.lang.String
+
+doubleErasure-BB@0x0 : [ doubleErasure-BB@0x26 doubleErasure-BB@0x30 ]
+	0       (00000000) iget-object          v2, v3, Lbutterknife/internal/ButterKnifeProcessor;->typeUtils Ljavax/lang/model/util/Types;
+	1       (00000004) invoke-interface     v2, v4, Ljavax/lang/model/util/Types;->erasure(Ljavax/lang/model/type/TypeMirror;)Ljavax/lang/model/type/TypeMirror;
+	2       (0000000a) move-result-object   v2
+	3       (0000000c) invoke-interface     v2, Ljavax/lang/model/type/TypeMirror;->toString()Ljava/lang/String;
+	4       (00000012) move-result-object   v0
+	5       (00000014) const/16             v2, 60
+	6       (00000018) invoke-virtual       v0, v2, Ljava/lang/String;->indexOf(I)I
+	7       (0000001e) move-result          v1
+	8       (00000020) const/4              v2, -1
+	9       (00000022) if-eq                v1, v2, +7
+
+doubleErasure-BB@0x26 : [ doubleErasure-BB@0x30 ]
+	10      (00000026) const/4              v2, 0
+	11      (00000028) invoke-virtual       v0, v2, v1, Ljava/lang/String;->substring(I I)Ljava/lang/String;
+	12      (0000002e) move-result-object   v0
+
+doubleErasure-BB@0x30 : 
+	13      (00000030) return-object        v0
+

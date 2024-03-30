@@ -1,0 +1,28 @@
+# Landroid/support/design/widget/TabLayout;->updateAllTabs()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v3
+#
+# - return:void
+
+updateAllTabs-BB@0x0 : [ updateAllTabs-BB@0xe ]
+	0       (00000000) const/4              v0, 0
+	1       (00000002) iget-object          v2, v3, Landroid/support/design/widget/TabLayout;->mTabs Ljava/util/ArrayList;
+	2       (00000006) invoke-virtual       v2, Ljava/util/ArrayList;->size()I
+	3       (0000000c) move-result          v1
+
+updateAllTabs-BB@0xe : [ updateAllTabs-BB@0x12 updateAllTabs-BB@0x2e ]
+	4       (0000000e) if-ge                v0, v1, +10
+
+updateAllTabs-BB@0x12 : [ updateAllTabs-BB@0xe ]
+	5       (00000012) iget-object          v2, v3, Landroid/support/design/widget/TabLayout;->mTabs Ljava/util/ArrayList;
+	6       (00000016) invoke-virtual       v2, v0, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+	7       (0000001c) move-result-object   v2
+	8       (0000001e) check-cast           v2, Landroid/support/design/widget/TabLayout$Tab;
+	9       (00000022) invoke-static        v2, Landroid/support/design/widget/TabLayout$Tab;->access$600(Landroid/support/design/widget/TabLayout$Tab;)V
+	10      (00000028) add-int/lit8         v0, v0, 1
+	11      (0000002c) goto                 -f
+
+updateAllTabs-BB@0x2e : 
+	12      (0000002e) return-void          
+

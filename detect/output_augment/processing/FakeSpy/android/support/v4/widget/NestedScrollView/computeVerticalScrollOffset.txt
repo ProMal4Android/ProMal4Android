@@ -1,0 +1,15 @@
+# Landroid/support/v4/widget/NestedScrollView;->computeVerticalScrollOffset()I [access_flags=public]
+#
+# Parameters:
+# local registers: v0...v2
+#
+# - return:int
+
+computeVerticalScrollOffset-BB@0x0 : 
+	0       (00000000) const/4              v0, 0
+	1       (00000002) invoke-super         v2, Landroid/widget/FrameLayout;->computeVerticalScrollOffset()I
+	2       (00000008) move-result          v1
+	3       (0000000a) invoke-static        v0, v1, Ljava/lang/Math;->max(I I)I
+	4       (00000010) move-result          v0
+	5       (00000012) return               v0
+

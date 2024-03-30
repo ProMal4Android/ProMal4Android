@@ -1,0 +1,64 @@
+# Landroid/support/v4/app/NavUtils$NavUtilsImplBase;->getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v8
+# - v9:android.app.Activity
+#
+# - return:android.content.Intent
+
+getParentActivityIntent-BB@0x0 : [ getParentActivityIntent-BB@0xe getParentActivityIntent-BB@0x10 ]
+	0       (00000000) const/4              v2, 0
+	1       (00000002) invoke-static        v9, Landroid/support/v4/app/NavUtils;->getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;
+	2       (00000008) move-result-object   v3
+	3       (0000000a) if-nez               v3, +3
+
+getParentActivityIntent-BB@0xe : 
+	4       (0000000e) return-object        v2
+
+getParentActivityIntent-BB@0x10 : [ getParentActivityIntent-BB@0x1a ]
+	5       (00000010) new-instance         v4, Landroid/content/ComponentName;
+	6       (00000014) invoke-direct        v4, v9, v3, Landroid/content/ComponentName;-><init>(Landroid/content/Context; Ljava/lang/String;)V
+
+getParentActivityIntent-BB@0x1a : [ getParentActivityIntent-BB@0x26 getParentActivityIntent-BB@0x30 ]
+	7       (0000001a) invoke-static        v9, v4, Landroid/support/v4/app/NavUtils;->getParentActivityName(Landroid/content/Context; Landroid/content/ComponentName;)Ljava/lang/String;
+	8       (00000020) move-result-object   v1
+	9       (00000022) if-nez               v1, +7
+	1a:3f
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> 44 getParentActivityIntent-BB@0x44)
+
+getParentActivityIntent-BB@0x26 : [ getParentActivityIntent-BB@0x2e ]
+	10      (00000026) invoke-static        v4, Landroid/support/v4/content/IntentCompat;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
+	11      (0000002c) move-result-object   v2
+	1a:3f
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> 44 getParentActivityIntent-BB@0x44)
+
+getParentActivityIntent-BB@0x2e : [ getParentActivityIntent-BB@0xe ]
+	12      (0000002e) goto                 -10
+	1a:3f
+	(Landroid/content/pm/PackageManager$NameNotFoundException; -> 44 getParentActivityIntent-BB@0x44)
+
+getParentActivityIntent-BB@0x30 : [ getParentActivityIntent-BB@0x2e ]
+	13      (00000030) new-instance         v5, Landroid/content/Intent;
+	14      (00000034) invoke-direct        v5, Landroid/content/Intent;-><init>()V
+	15      (0000003a) invoke-virtual       v5, v4, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+	16      (00000040) move-result-object   v2
+	17      (00000042) goto                 -a
+
+getParentActivityIntent-BB@0x44 : [ getParentActivityIntent-BB@0xe ]
+	18      (00000044) move-exception       v0
+	19      (00000046) const-string         v5, 'NavUtils'
+	20      (0000004a) new-instance         v6, Ljava/lang/StringBuilder;
+	21      (0000004e) invoke-direct        v6, Ljava/lang/StringBuilder;-><init>()V
+	22      (00000054) const-string         v7, "getParentActivityIntent: bad parentActivityName '"
+	23      (00000058) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	24      (0000005e) move-result-object   v6
+	25      (00000060) invoke-virtual       v6, v3, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	26      (00000066) move-result-object   v6
+	27      (00000068) const-string         v7, "' in manifest"
+	28      (0000006c) invoke-virtual       v6, v7, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	29      (00000072) move-result-object   v6
+	30      (00000074) invoke-virtual       v6, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	31      (0000007a) move-result-object   v6
+	32      (0000007c) invoke-static        v5, v6, Landroid/util/Log;->e(Ljava/lang/String; Ljava/lang/String;)I
+	33      (00000082) goto                 -3a
+

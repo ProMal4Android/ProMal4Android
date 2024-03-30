@@ -1,0 +1,19 @@
+# Landroid/support/v4/content/Loader;->dataToString(Ljava/lang/Object;)Ljava/lang/String; [access_flags=public]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:java.lang.Object
+#
+# - return:java.lang.String
+
+dataToString-BB@0x0 : 
+	0       (00000000) new-instance         v0, Ljava/lang/StringBuilder;
+	1       (00000004) const/16             v1, 64
+	2       (00000008) invoke-direct        v0, v1, Ljava/lang/StringBuilder;-><init>(I)V
+	3       (0000000e) invoke-static        v3, v0, Landroid/support/v4/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object; Ljava/lang/StringBuilder;)V
+	4       (00000014) const-string         v1, '}'
+	5       (00000018) invoke-virtual       v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+	6       (0000001e) invoke-virtual       v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+	7       (00000024) move-result-object   v1
+	8       (00000026) return-object        v1
+

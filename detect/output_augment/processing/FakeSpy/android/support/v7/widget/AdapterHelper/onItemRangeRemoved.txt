@@ -1,0 +1,32 @@
+# Landroid/support/v7/widget/AdapterHelper;->onItemRangeRemoved(I I)Z [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:int
+# - v6:int
+#
+# - return:boolean
+
+onItemRangeRemoved-BB@0x0 : [ onItemRangeRemoved-BB@0x34 onItemRangeRemoved-BB@0x36 ]
+	0       (00000000) const/4              v0, 1
+	1       (00000002) iget-object          v1, v4, Landroid/support/v7/widget/AdapterHelper;->mPendingUpdates Ljava/util/ArrayList;
+	2       (00000006) const/4              v2, 2
+	3       (00000008) const/4              v3, 0
+	4       (0000000a) invoke-virtual       v4, v2, v5, v6, v3, Landroid/support/v7/widget/AdapterHelper;->obtainUpdateOp(I I I Ljava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+	5       (00000010) move-result-object   v2
+	6       (00000012) invoke-virtual       v1, v2, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+	7       (00000018) iget                 v1, v4, Landroid/support/v7/widget/AdapterHelper;->mExistingUpdateTypes I
+	8       (0000001c) or-int/lit8          v1, v1, 2
+	9       (00000020) iput                 v1, v4, Landroid/support/v7/widget/AdapterHelper;->mExistingUpdateTypes I
+	10      (00000024) iget-object          v1, v4, Landroid/support/v7/widget/AdapterHelper;->mPendingUpdates Ljava/util/ArrayList;
+	11      (00000028) invoke-virtual       v1, Ljava/util/ArrayList;->size()I
+	12      (0000002e) move-result          v1
+	13      (00000030) if-ne                v1, v0, +3
+
+onItemRangeRemoved-BB@0x34 : 
+	14      (00000034) return               v0
+
+onItemRangeRemoved-BB@0x36 : [ onItemRangeRemoved-BB@0x34 ]
+	15      (00000036) const/4              v0, 0
+	16      (00000038) goto                 -2
+

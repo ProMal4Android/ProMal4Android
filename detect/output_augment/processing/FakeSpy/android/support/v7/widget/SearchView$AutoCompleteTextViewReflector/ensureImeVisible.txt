@@ -1,0 +1,32 @@
+# Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->ensureImeVisible(Landroid/widget/AutoCompleteTextView; Z)V [access_flags=]
+#
+# Parameters:
+# - local registers: v0...v4
+# - v5:android.widget.AutoCompleteTextView
+# - v6:boolean
+#
+# - return:void
+
+ensureImeVisible-BB@0x0 : [ ensureImeVisible-BB@0x8 ensureImeVisible-BB@0x26 ]
+	0       (00000000) iget-object          v0, v4, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->ensureImeVisible Ljava/lang/reflect/Method;
+	1       (00000004) if-eqz               v0, +11
+
+ensureImeVisible-BB@0x8 : [ ensureImeVisible-BB@0x26 ]
+	2       (00000008) iget-object          v0, v4, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->ensureImeVisible Ljava/lang/reflect/Method;
+	3       (0000000c) const/4              v1, 1
+	4       (0000000e) new-array            v1, v1, [Ljava/lang/Object;
+	5       (00000012) const/4              v2, 0
+	6       (00000014) invoke-static        v6, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+	7       (0000001a) move-result-object   v3
+	8       (0000001c) aput-object          v3, v1, v2
+	9       (00000020) invoke-virtual       v0, v5, v1, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;
+	8:25
+	(Ljava/lang/Exception; -> 28 ensureImeVisible-BB@0x28)
+
+ensureImeVisible-BB@0x26 : 
+	10      (00000026) return-void          
+
+ensureImeVisible-BB@0x28 : [ ensureImeVisible-BB@0x26 ]
+	11      (00000028) move-exception       v0
+	12      (0000002a) goto                 -2
+

@@ -1,0 +1,31 @@
+# Landroid/support/v4/media/TransportMediatorJellybeanMR2;->windowAttached()V [access_flags=]
+#
+# Parameters:
+# local registers: v0...v4
+#
+# - return:void
+
+windowAttached-BB@0x0 : 
+	0       (00000000) iget-object          v0, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mContext Landroid/content/Context;
+	1       (00000004) iget-object          v1, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mMediaButtonReceiver Landroid/content/BroadcastReceiver;
+	2       (00000008) iget-object          v2, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mReceiverFilter Landroid/content/IntentFilter;
+	3       (0000000c) invoke-virtual       v0, v1, v2, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver; Landroid/content/IntentFilter;)Landroid/content/Intent;
+	4       (00000012) iget-object          v0, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mContext Landroid/content/Context;
+	5       (00000016) const/4              v1, 0
+	6       (00000018) iget-object          v2, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mIntent Landroid/content/Intent;
+	7       (0000001c) const/high16         v3, 4096 # [2.524354896707238e-29]
+	8       (00000020) invoke-static        v0, v1, v2, v3, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context; I Landroid/content/Intent; I)Landroid/app/PendingIntent;
+	9       (00000026) move-result-object   v0
+	10      (00000028) iput-object          v0, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mPendingIntent Landroid/app/PendingIntent;
+	11      (0000002c) new-instance         v0, Landroid/media/RemoteControlClient;
+	12      (00000030) iget-object          v1, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mPendingIntent Landroid/app/PendingIntent;
+	13      (00000034) invoke-direct        v0, v1, Landroid/media/RemoteControlClient;-><init>(Landroid/app/PendingIntent;)V
+	14      (0000003a) iput-object          v0, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mRemoteControl Landroid/media/RemoteControlClient;
+	15      (0000003e) iget-object          v0, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mRemoteControl Landroid/media/RemoteControlClient;
+	16      (00000042) iget-object          v1, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mGetPlaybackPositionListener Landroid/media/RemoteControlClient$OnGetPlaybackPositionListener;
+	17      (00000046) invoke-virtual       v0, v1, Landroid/media/RemoteControlClient;->setOnGetPlaybackPositionListener(Landroid/media/RemoteControlClient$OnGetPlaybackPositionListener;)V
+	18      (0000004c) iget-object          v0, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mRemoteControl Landroid/media/RemoteControlClient;
+	19      (00000050) iget-object          v1, v4, Landroid/support/v4/media/TransportMediatorJellybeanMR2;->mPlaybackPositionUpdateListener Landroid/media/RemoteControlClient$OnPlaybackPositionUpdateListener;
+	20      (00000054) invoke-virtual       v0, v1, Landroid/media/RemoteControlClient;->setPlaybackPositionUpdateListener(Landroid/media/RemoteControlClient$OnPlaybackPositionUpdateListener;)V
+	21      (0000005a) return-void          
+

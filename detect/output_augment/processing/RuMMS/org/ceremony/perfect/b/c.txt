@@ -1,0 +1,28 @@
+# Lorg/ceremony/perfect/b;->c(Landroid/content/Context; J)V [access_flags=private static]
+#
+# Parameters:
+# - local registers: v0...v5
+# - v6:android.content.Context
+# - v7:long
+#
+# - return:void
+
+c-BB@0x0 : [ c-BB@0x14 c-BB@0x36 ]
+	0       (00000000) sget-wide            v0, Lorg/ceremony/perfect/b;->a J
+	1       (00000004) sub-long             v0, v6, v0
+	2       (00000008) const-wide/16        v2, 10165 # [10165.0]
+	3       (0000000c) cmp-long             v0, v0, v2
+	4       (00000010) if-lez               v0, +13
+
+c-BB@0x14 : [ c-BB@0x36 ]
+	5       (00000014) sput-wide            v6, Lorg/ceremony/perfect/b;->a J
+	6       (00000018) new-instance         v0, Landroid/content/Intent;
+	7       (0000001c) const-class          v1, Lorg/ceremony/perfect/CoinFoundation;
+	8       (00000020) invoke-direct        v0, v5, v1, Landroid/content/Intent;-><init>(Landroid/content/Context; Ljava/lang/Class;)V
+	9       (00000026) const/high16         v1, 4096 # [2.524354896707238e-29]
+	10      (0000002a) invoke-virtual       v0, v1, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+	11      (00000030) invoke-virtual       v5, v0, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+c-BB@0x36 : 
+	12      (00000036) return-void          
+

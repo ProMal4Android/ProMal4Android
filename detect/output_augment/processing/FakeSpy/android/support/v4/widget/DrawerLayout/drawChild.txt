@@ -1,0 +1,266 @@
+# Landroid/support/v4/widget/DrawerLayout;->drawChild(Landroid/graphics/Canvas; Landroid/view/View; J)Z [access_flags=protected]
+#
+# Parameters:
+# - local registers: v0...v30
+# - v31:android.graphics.Canvas
+# - v32:android.view.View
+# - v33:long
+#
+# - return:boolean
+
+drawChild-BB@0x0 : [ drawChild-BB@0x2e drawChild-BB@0xf6 ]
+	0       (00000000) invoke-virtual/range v29, Landroid/support/v4/widget/DrawerLayout;->getHeight()I
+	1       (00000006) move-result          v18
+	2       (00000008) move-object/from16   v0, v29
+	3       (0000000c) move-object/from16   v1, v31
+	4       (00000010) invoke-virtual       v0, v1, Landroid/support/v4/widget/DrawerLayout;->isContentView(Landroid/view/View;)Z
+	5       (00000016) move-result          v17
+	6       (00000018) const/4              v13, 0
+	7       (0000001a) invoke-virtual/range v29, Landroid/support/v4/widget/DrawerLayout;->getWidth()I
+	8       (00000020) move-result          v14
+	9       (00000022) invoke-virtual/range v30, Landroid/graphics/Canvas;->save()I
+	10      (00000028) move-result          v21
+	11      (0000002a) if-eqz               v17, +66
+
+drawChild-BB@0x2e : [ drawChild-BB@0x3a ]
+	12      (0000002e) invoke-virtual/range v29, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
+	13      (00000034) move-result          v10
+	14      (00000036) const/16             v19, 0
+
+drawChild-BB@0x3a : [ drawChild-BB@0x42 drawChild-BB@0xe2 ]
+	15      (0000003a) move/from16          v0, v19
+	16      (0000003e) if-ge                v0, v10, +52
+
+drawChild-BB@0x42 : [ drawChild-BB@0x5e drawChild-BB@0x9a ]
+	17      (00000042) move-object/from16   v0, v29
+	18      (00000046) move/from16          v1, v19
+	19      (0000004a) invoke-virtual       v0, v1, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
+	20      (00000050) move-result-object   v25
+	21      (00000052) move-object/from16   v0, v25
+	22      (00000056) move-object/from16   v1, v31
+	23      (0000005a) if-eq                v0, v1, +20
+
+drawChild-BB@0x5e : [ drawChild-BB@0x6a drawChild-BB@0x9a ]
+	24      (0000005e) invoke-virtual/range v25, Landroid/view/View;->getVisibility()I
+	25      (00000064) move-result          v2
+	26      (00000066) if-nez               v2, +1a
+
+drawChild-BB@0x6a : [ drawChild-BB@0x76 drawChild-BB@0x9a ]
+	27      (0000006a) invoke-static/range  v25, Landroid/support/v4/widget/DrawerLayout;->hasOpaqueBackground(Landroid/view/View;)Z
+	28      (00000070) move-result          v2
+	29      (00000072) if-eqz               v2, +14
+
+drawChild-BB@0x76 : [ drawChild-BB@0x8a drawChild-BB@0x9a ]
+	30      (00000076) move-object/from16   v0, v29
+	31      (0000007a) move-object/from16   v1, v25
+	32      (0000007e) invoke-virtual       v0, v1, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
+	33      (00000084) move-result          v2
+	34      (00000086) if-eqz               v2, +a
+
+drawChild-BB@0x8a : [ drawChild-BB@0x9a drawChild-BB@0xa0 ]
+	35      (0000008a) invoke-virtual/range v25, Landroid/view/View;->getHeight()I
+	36      (00000090) move-result          v2
+	37      (00000092) move/from16          v0, v18
+	38      (00000096) if-ge                v2, v0, +5
+
+drawChild-BB@0x9a : [ drawChild-BB@0x3a ]
+	39      (0000009a) add-int/lit8         v19, v19, 1
+	40      (0000009e) goto                 -32
+
+drawChild-BB@0xa0 : [ drawChild-BB@0xb6 drawChild-BB@0xcc ]
+	41      (000000a0) const/4              v2, 3
+	42      (000000a2) move-object/from16   v0, v29
+	43      (000000a6) move-object/from16   v1, v25
+	44      (000000aa) invoke-virtual       v0, v1, v2, Landroid/support/v4/widget/DrawerLayout;->checkDrawerViewAbsoluteGravity(Landroid/view/View; I)Z
+	45      (000000b0) move-result          v2
+	46      (000000b2) if-eqz               v2, +d
+
+drawChild-BB@0xb6 : [ drawChild-BB@0xc6 drawChild-BB@0x9a ]
+	47      (000000b6) invoke-virtual/range v25, Landroid/view/View;->getRight()I
+	48      (000000bc) move-result          v27
+	49      (000000be) move/from16          v0, v27
+	50      (000000c2) if-le                v0, v13, -14
+
+drawChild-BB@0xc6 : [ drawChild-BB@0x9a ]
+	51      (000000c6) move/from16          v13, v27
+	52      (000000ca) goto                 -18
+
+drawChild-BB@0xcc : [ drawChild-BB@0xdc drawChild-BB@0x9a ]
+	53      (000000cc) invoke-virtual/range v25, Landroid/view/View;->getLeft()I
+	54      (000000d2) move-result          v26
+	55      (000000d4) move/from16          v0, v26
+	56      (000000d8) if-ge                v0, v14, -1f
+
+drawChild-BB@0xdc : [ drawChild-BB@0x9a ]
+	57      (000000dc) move/from16          v14, v26
+	58      (000000e0) goto                 -23
+
+drawChild-BB@0xe2 : [ drawChild-BB@0xf6 ]
+	59      (000000e2) const/4              v2, 0
+	60      (000000e4) invoke-virtual/range v29, Landroid/support/v4/widget/DrawerLayout;->getHeight()I
+	61      (000000ea) move-result          v3
+	62      (000000ec) move-object/from16   v0, v30
+	63      (000000f0) invoke-virtual       v0, v13, v2, v14, v3, Landroid/graphics/Canvas;->clipRect(I I I I)Z
+
+drawChild-BB@0xf6 : [ drawChild-BB@0x11e drawChild-BB@0x190 ]
+	64      (000000f6) invoke-super/range   v29 ... v33, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas; Landroid/view/View; J)Z
+	65      (000000fc) move-result          v22
+	66      (000000fe) move-object/from16   v0, v30
+	67      (00000102) move/from16          v1, v21
+	68      (00000106) invoke-virtual       v0, v1, Landroid/graphics/Canvas;->restoreToCount(I)V
+	69      (0000010c) move-object/from16   v0, v29
+	70      (00000110) iget                 v2, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimOpacity F
+	71      (00000114) const/4              v3, 0
+	72      (00000116) cmpl-float           v2, v2, v3
+	73      (0000011a) if-lez               v2, +3b
+
+drawChild-BB@0x11e : [ drawChild-BB@0x122 drawChild-BB@0x190 ]
+	74      (0000011e) if-eqz               v17, +39
+
+drawChild-BB@0x122 : [ drawChild-BB@0x18e ]
+	75      (00000122) move-object/from16   v0, v29
+	76      (00000126) iget                 v2, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimColor I
+	77      (0000012a) const/high16         v3, -256 # [-1.7014118346046923e+38]
+	78      (0000012e) and-int/2addr        v2, v3
+	79      (00000130) ushr-int/lit8        v9, v2, 24
+	80      (00000134) int-to-float         v2, v9
+	81      (00000136) move-object/from16   v0, v29
+	82      (0000013a) iget                 v3, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimOpacity F
+	83      (0000013e) mul-float/2addr      v2, v3
+	84      (00000140) float-to-int         v0, v2
+	85      (00000142) move/from16          v20, v0
+	86      (00000146) shl-int/lit8         v2, v20, 24
+	87      (0000014a) move-object/from16   v0, v29
+	88      (0000014e) iget                 v3, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimColor I
+	89      (00000152) const                v4, 16777215 # [2.3509885615147286e-38]
+	90      (00000158) and-int/2addr        v3, v4
+	91      (0000015a) or-int               v15, v2, v3
+	92      (0000015e) move-object/from16   v0, v29
+	93      (00000162) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimPaint Landroid/graphics/Paint;
+	94      (00000166) invoke-virtual       v2, v15, Landroid/graphics/Paint;->setColor(I)V
+	95      (0000016c) int-to-float         v3, v13
+	96      (0000016e) const/4              v4, 0
+	97      (00000170) int-to-float         v5, v14
+	98      (00000172) invoke-virtual/range v29, Landroid/support/v4/widget/DrawerLayout;->getHeight()I
+	99      (00000178) move-result          v2
+	100     (0000017a) int-to-float         v6, v2
+	101     (0000017c) move-object/from16   v0, v29
+	102     (00000180) iget-object          v7, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimPaint Landroid/graphics/Paint;
+	103     (00000184) move-object/from16   v2, v30
+	104     (00000188) invoke-virtual/range v2 ... v7, Landroid/graphics/Canvas;->drawRect(F F F F Landroid/graphics/Paint;)V
+
+drawChild-BB@0x18e : 
+	105     (0000018e) return               v22
+
+drawChild-BB@0x190 : [ drawChild-BB@0x19c drawChild-BB@0x246 ]
+	106     (00000190) move-object/from16   v0, v29
+	107     (00000194) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved Landroid/graphics/drawable/Drawable;
+	108     (00000198) if-eqz               v2, +57
+
+drawChild-BB@0x19c : [ drawChild-BB@0x1b2 drawChild-BB@0x246 ]
+	109     (0000019c) const/4              v2, 3
+	110     (0000019e) move-object/from16   v0, v29
+	111     (000001a2) move-object/from16   v1, v31
+	112     (000001a6) invoke-virtual       v0, v1, v2, Landroid/support/v4/widget/DrawerLayout;->checkDrawerViewAbsoluteGravity(Landroid/view/View; I)Z
+	113     (000001ac) move-result          v2
+	114     (000001ae) if-eqz               v2, +4c
+
+drawChild-BB@0x1b2 : [ drawChild-BB@0x18e ]
+	115     (000001b2) move-object/from16   v0, v29
+	116     (000001b6) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved Landroid/graphics/drawable/Drawable;
+	117     (000001ba) invoke-virtual       v2, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+	118     (000001c0) move-result          v23
+	119     (000001c2) invoke-virtual/range v31, Landroid/view/View;->getRight()I
+	120     (000001c8) move-result          v12
+	121     (000001ca) move-object/from16   v0, v29
+	122     (000001ce) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger Landroid/support/v4/widget/ViewDragHelper;
+	123     (000001d2) invoke-virtual       v2, Landroid/support/v4/widget/ViewDragHelper;->getEdgeSize()I
+	124     (000001d8) move-result          v16
+	125     (000001da) const/4              v2, 0
+	126     (000001dc) int-to-float         v3, v12
+	127     (000001de) move/from16          v0, v16
+	128     (000001e2) int-to-float         v4, v0
+	129     (000001e4) div-float/2addr      v3, v4
+	130     (000001e6) const/high16         v4, 16256 # [1.0]
+	131     (000001ea) invoke-static        v3, v4, Ljava/lang/Math;->min(F F)F
+	132     (000001f0) move-result          v3
+	133     (000001f2) invoke-static        v2, v3, Ljava/lang/Math;->max(F F)F
+	134     (000001f8) move-result          v8
+	135     (000001fa) move-object/from16   v0, v29
+	136     (000001fe) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved Landroid/graphics/drawable/Drawable;
+	137     (00000202) invoke-virtual/range v31, Landroid/view/View;->getTop()I
+	138     (00000208) move-result          v3
+	139     (0000020a) add-int              v4, v12, v23
+	140     (0000020e) invoke-virtual/range v31, Landroid/view/View;->getBottom()I
+	141     (00000214) move-result          v5
+	142     (00000216) invoke-virtual       v2, v12, v3, v4, v5, Landroid/graphics/drawable/Drawable;->setBounds(I I I I)V
+	143     (0000021c) move-object/from16   v0, v29
+	144     (00000220) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved Landroid/graphics/drawable/Drawable;
+	145     (00000224) const/high16         v3, 17279 # [255.0]
+	146     (00000228) mul-float/2addr      v3, v8
+	147     (0000022a) float-to-int         v3, v3
+	148     (0000022c) invoke-virtual       v2, v3, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+	149     (00000232) move-object/from16   v0, v29
+	150     (00000236) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved Landroid/graphics/drawable/Drawable;
+	151     (0000023a) move-object/from16   v0, v30
+	152     (0000023e) invoke-virtual       v2, v0, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+	153     (00000244) goto                 -5b
+
+drawChild-BB@0x246 : [ drawChild-BB@0x252 drawChild-BB@0x18e ]
+	154     (00000246) move-object/from16   v0, v29
+	155     (0000024a) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved Landroid/graphics/drawable/Drawable;
+	156     (0000024e) if-eqz               v2, -60
+
+drawChild-BB@0x252 : [ drawChild-BB@0x268 drawChild-BB@0x18e ]
+	157     (00000252) const/4              v2, 5
+	158     (00000254) move-object/from16   v0, v29
+	159     (00000258) move-object/from16   v1, v31
+	160     (0000025c) invoke-virtual       v0, v1, v2, Landroid/support/v4/widget/DrawerLayout;->checkDrawerViewAbsoluteGravity(Landroid/view/View; I)Z
+	161     (00000262) move-result          v2
+	162     (00000264) if-eqz               v2, -6b
+
+drawChild-BB@0x268 : [ drawChild-BB@0x18e ]
+	163     (00000268) move-object/from16   v0, v29
+	164     (0000026c) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved Landroid/graphics/drawable/Drawable;
+	165     (00000270) invoke-virtual       v2, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+	166     (00000276) move-result          v23
+	167     (00000278) invoke-virtual/range v31, Landroid/view/View;->getLeft()I
+	168     (0000027e) move-result          v11
+	169     (00000280) invoke-virtual/range v29, Landroid/support/v4/widget/DrawerLayout;->getWidth()I
+	170     (00000286) move-result          v2
+	171     (00000288) sub-int              v24, v2, v11
+	172     (0000028c) move-object/from16   v0, v29
+	173     (00000290) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger Landroid/support/v4/widget/ViewDragHelper;
+	174     (00000294) invoke-virtual       v2, Landroid/support/v4/widget/ViewDragHelper;->getEdgeSize()I
+	175     (0000029a) move-result          v16
+	176     (0000029c) const/4              v2, 0
+	177     (0000029e) move/from16          v0, v24
+	178     (000002a2) int-to-float         v3, v0
+	179     (000002a4) move/from16          v0, v16
+	180     (000002a8) int-to-float         v4, v0
+	181     (000002aa) div-float/2addr      v3, v4
+	182     (000002ac) const/high16         v4, 16256 # [1.0]
+	183     (000002b0) invoke-static        v3, v4, Ljava/lang/Math;->min(F F)F
+	184     (000002b6) move-result          v3
+	185     (000002b8) invoke-static        v2, v3, Ljava/lang/Math;->max(F F)F
+	186     (000002be) move-result          v8
+	187     (000002c0) move-object/from16   v0, v29
+	188     (000002c4) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved Landroid/graphics/drawable/Drawable;
+	189     (000002c8) sub-int              v3, v11, v23
+	190     (000002cc) invoke-virtual/range v31, Landroid/view/View;->getTop()I
+	191     (000002d2) move-result          v4
+	192     (000002d4) invoke-virtual/range v31, Landroid/view/View;->getBottom()I
+	193     (000002da) move-result          v5
+	194     (000002dc) invoke-virtual       v2, v3, v4, v11, v5, Landroid/graphics/drawable/Drawable;->setBounds(I I I I)V
+	195     (000002e2) move-object/from16   v0, v29
+	196     (000002e6) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved Landroid/graphics/drawable/Drawable;
+	197     (000002ea) const/high16         v3, 17279 # [255.0]
+	198     (000002ee) mul-float/2addr      v3, v8
+	199     (000002f0) float-to-int         v3, v3
+	200     (000002f2) invoke-virtual       v2, v3, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+	201     (000002f8) move-object/from16   v0, v29
+	202     (000002fc) iget-object          v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved Landroid/graphics/drawable/Drawable;
+	203     (00000300) move-object/from16   v0, v30
+	204     (00000304) invoke-virtual       v2, v0, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+	205     (0000030a) goto/16              -be
+
