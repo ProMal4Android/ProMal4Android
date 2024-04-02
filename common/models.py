@@ -83,6 +83,7 @@ class relBackup(models.Model):
 class sensitiveApi(models.Model):
     api = models.CharField(max_length=200, blank=True, default='')
     permission = models.CharField(max_length=200, blank=True, default='')
+    version=models.CharField(max_length=20, blank=True, default='')
 
 
 class sensitiveApiMini(models.Model):

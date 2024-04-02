@@ -1,0 +1,6 @@
+package ch.boye.httpclientandroidlib.concurrent;
+
+/* loaded from: classes.dex */
+public interface Cancellable {
+    boolean cancel();
+}

@@ -6,9 +6,9 @@ from common.models import ApiTest, PerTest, KgTest, KgBackup, ApiSim, ApiSDK, se
 from exper.views import extract_features
 from tools.utils import dict_list, generate_cg, gml_txt
 
-kg_permissions = []  # all permissions in kg/database
-kg_apis = []  # all apis in kg/database
-kg_features = []  # all features(permissions+apis) in kg
+KG_PERS = []  # all permissions in kg/database
+KG_APIS = []  # all apis in kg/database
+KG_FEATURES = []  # all features(permissions+apis) in kg
 
 
 def test(request):

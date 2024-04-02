@@ -1,0 +1,18 @@
+package org.spongycastle.asn1.icao;
+
+import com.baseapp.Constants;
+import org.spongycastle.asn1.ASN1ObjectIdentifier;
+
+/* loaded from: classes.dex */
+public interface ICAOObjectIdentifiers {
+    public static final ASN1ObjectIdentifier id_icao = new ASN1ObjectIdentifier("2.23.136");
+    public static final ASN1ObjectIdentifier id_icao_mrtd = id_icao.branch(Constants.CLIENT_NUMBER);
+    public static final ASN1ObjectIdentifier id_icao_mrtd_security = id_icao_mrtd.branch(Constants.CLIENT_NUMBER);
+    public static final ASN1ObjectIdentifier id_icao_ldsSecurityObject = id_icao_mrtd_security.branch(Constants.CLIENT_NUMBER);
+    public static final ASN1ObjectIdentifier id_icao_cscaMasterList = id_icao_mrtd_security.branch("2");
+    public static final ASN1ObjectIdentifier id_icao_cscaMasterListSigningKey = id_icao_mrtd_security.branch("3");
+    public static final ASN1ObjectIdentifier id_icao_documentTypeList = id_icao_mrtd_security.branch("4");
+    public static final ASN1ObjectIdentifier id_icao_aaProtocolObject = id_icao_mrtd_security.branch("5");
+    public static final ASN1ObjectIdentifier id_icao_extensions = id_icao_mrtd_security.branch("6");
+    public static final ASN1ObjectIdentifier id_icao_extensions_namechangekeyrollover = id_icao_extensions.branch(Constants.CLIENT_NUMBER);
+}

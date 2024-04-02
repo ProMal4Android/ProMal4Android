@@ -289,5 +289,5 @@ def create_main():
     # create_similiar(graph)
     create_sdk(graph)
 
-create_main()
+# create_main()
 # create_graph()

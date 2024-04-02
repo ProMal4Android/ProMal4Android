@@ -22,10 +22,10 @@ from common.models import ApiTest, PerTest, KgBackup, relBackup, ApiSim, ApiSDK,
     augmenTestPer, augmenTestAPi
 from exper.augment import joint_path
 
-kg_permissions = []  # all permissions in kg/database
-kg_apis = []  # all apis in kg/database
-apis_from_test = []  # Apitest中的apis
-kg_features = []  # all features(permissions+apis) in kg
+KG_PERS = []  # all permissions in kg/database
+KG_APIS = []  # all apis in kg/database
+MAL_APIS = []  # Apitest中的apis
+KG_FEATURES = []  # all features(permissions+apis) in kg
 
 # Create your views here.
 # testApk_path = 'D:\\testAPK0.txt'   # 输入是apk的特征文件
@@ -375,7 +375,7 @@ def extract_features(txt, apk_name, apk_path):
     # 1. write permissions
     # feature_file.write('perStart' + '\n')
     for per in permissions:
-        if per in kg_permissions:
+        if per in KG_PERS:
             feature_file.write(per + '\n')
     # feature_file.write('perEnd' + '\n')
     feature_file.write('\n')
@@ -385,7 +385,7 @@ def extract_features(txt, apk_name, apk_path):
     data = get_data(os.path.join('detect/outputCG/', apk_name + '.txt'))
     api_list = list()  # 存放即将写入特征文件的api
     node_list, edge_list = analyse(data)
-    global apis_from_test
+    global MAL_APIS
     # print('apis_from_test:', apis_from_test)
 
     # sta_apis=[] # 记录已经
@@ -489,14 +489,14 @@ def extract_features_plus(txt, apk_name, apk_path):
     # **********Write Information Belows*************
     # 1. write permissions
     for per in permissions:
-        if per in kg_permissions:
+        if per in KG_PERS:
             feature_file.write(per + '\n')
     feature_file.write('\n')
 
     # 2. write apis through .gml
     data = get_data(os.path.join('detect/outputCG/', apk_name + '.txt'))
     node_list, edge_list = analyse(data)
-    global apis_from_test
+    global MAL_APIS
 
     data = data.replace("\n", '')
 
@@ -631,7 +631,7 @@ def apk_map_kg_main():
         2) 所有的节点是否都有匹配的APK
         3) 所有的路径是否都有匹配的APK
     """
-    global kg_apis, kg_permissions, kg_features, apis_from_test
+    global KG_APIS, KG_PERS, KG_FEATURES, MAL_APIS
     kg_permissions, kg_apis, kg_features = get_pers_apis()  # 初始化数据：get all permissions&apis from kg/database
     apis_from_test = get_apis_from_test()
 
@@ -1206,7 +1206,7 @@ def kg_map_apk(feature_file, apk_name):
         elif tmp.find(";"):
             tmp1 = tmp.split(";")
             tmp = ";".join(tmp1)
-        if tmp in str(kg_features):
+        if tmp in str(KG_FEATURES):
             map_count = map_count + 1
             # print('映射成功的为：', feature)
             if feature not in mapFeatureList:
@@ -1894,7 +1894,7 @@ def apk_map_kg_main_after_augment():
     """
     使用扩充后的知识图谱来匹配APK
     """
-    global kg_apis, kg_permissions, kg_features, apis_from_test
+    global KG_APIS, KG_PERS, KG_FEATURES, MAL_APIS
     kg_permissions, kg_apis, kg_features = get_pers_apis_after_augment()  # 初始化数据：get all permissions&apis from kg/database
     apis_from_test = get_apis_from_test_after_augment()
 

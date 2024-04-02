@@ -17,7 +17,7 @@ from common import models
 
 
 def extract_behaviors_from_txt():
-    with open('./output/print_kg_all_upgrade.txt', 'r') as file:
+    with open('./input/print_kg_all_upgrade.txt', 'r') as file:
         lines = file.readlines()
 
     blocks = []
@@ -36,18 +36,18 @@ def extract_behaviors_from_txt():
     num = 1
     for block in blocks:
         block = block.split('\n')
-        malName = block[1].split('-',1)[1][:-1].strip()
-        malPer = block[2].split(':',1)[1]
-        malAPI = block[3].split(':',1)[1]
+        malName = block[1].split('-', 1)[1][:-1].strip()
+        malPer = block[2].split(':', 1)[1]
+        malAPI = block[3].split(':', 1)[1]
         # print(malName, malPer, malAPI, '\n')
 
         # insert into the database
-        perIDList=[]
+        perIDList = []
         if malPer != '':
             malPerList = malPer.split(',')
             for one in malPerList:
                 try:
-                    perID=models.MalPermission.objects.get(perName=one.strip()).apiIDperID
+                    perID = models.MalPermission.objects.get(perName=one.strip()).perID
                     perIDList.append(str(perID))
                 except:
                     len_per = len(list(models.MalPermission.objects.values()))
@@ -56,12 +56,12 @@ def extract_behaviors_from_txt():
                     models.MalPermission.objects.create(perID=len_per, perName=one.strip())
                     models.MalPermission.objects.filter(perID=len_per).update(id=len_per)
 
-        apiIDList=[]
+        apiIDList = []
         if malAPI != '':
             malAPIList = malAPI.split(',')
             for one in malAPIList:
                 try:
-                    apiID=models.MalAPI.objects.get(apiName=one.strip()).apiID
+                    apiID = models.MalAPI.objects.get(apiName=one.strip()).apiID
                     apiIDList.append(str(apiID))
                 except:
                     len_api = len(list(models.MalAPI.objects.values()))
@@ -71,30 +71,25 @@ def extract_behaviors_from_txt():
                     models.MalAPI.objects.filter(apiID=len_api).update(id=len_api)
 
         models.MalOperation.objects.create(nodeID=num, actionName=malName, perList=','.join(perIDList),
-                                            apiList=','.join(apiIDList))
+                                           apiList=','.join(apiIDList))
         models.MalOperation.objects.filter(nodeID=num).update(id=num)
-        num=num+1
+        num = num + 1
 
-
-# models.MalAPI.objects.all().delete()
-# models.MalPermission.objects.all().delete()
-# models.MalOperation.objects.all().delete()
-# extract_behaviors_from_txt()
 
 def extract_relation_from_csv():
     models.MalRelation.objects.all().delete()
     b = 0
-    with open('./output/common_augmentrelin.csv', newline='') as csvfile:
+    with open('./input/common_augmentrelin.csv', newline='') as csvfile:
         csv_reader = csv.DictReader(csvfile)
         for row in csv_reader:
             try:
-                sourceID=models.MalOperation.objects.filter(actionName=row['sourceAct'])[0].nodeID
+                sourceID = models.MalOperation.objects.filter(actionName=row['sourceAct'])[0].nodeID
             except:
-                sourceID=0
+                sourceID = 0
             try:
                 targetID = models.MalOperation.objects.filter(actionName=row['targetAct'])[0].nodeID
             except:
-                targetID=0
+                targetID = 0
             b = b + 1
             models.MalRelation.objects.create(sourceID=sourceID, sourceAct=row['sourceAct'],
                                               targetID=targetID, targetAct=row['targetAct'],
@@ -102,28 +97,26 @@ def extract_relation_from_csv():
             try:
                 models.MalRelation.objects.filter(Q(sourceID=sourceID) & Q(targetID=targetID)).update(id=b)
             except Exception as e:
-                print(e)
+                # print(e)
                 print(str(row['sourceID']) + str(row['targetID']))
-
-# extract_relation_from_csv()
 
 
 def simplfiy_API(apis):
-    apis=apis.split('\n')
-    ret=[]
+    apis = apis.split('\n')
+    ret = []
     for one in apis:
-        if one.find('(')!=-1:
-            index=one.find('(')
-            api=one[:index]
+        if one.find('(') != -1:
+            index = one.find('(')
+            api = one[:index]
         else:
-            api=one
-        if api[0]=='L':
-            api=api[1:]
+            api = one
+        if api[0] == 'L':
+            api = api[1:]
         try:
-            apiID=models.MalAPI.objects.get(apiName=api).apiID
+            apiID = models.MalAPI.objects.get(apiName=api).apiID
             ret.append(str(apiID))
         except:
-            len_api=len(list(models.MalAPI.objects.values()))
+            len_api = len(list(models.MalAPI.objects.values()))
             len_api = len_api + 1
             ret.append(str(len_api))
             models.MalAPI.objects.create(apiID=len_api, apiName=api.strip())
@@ -133,31 +126,29 @@ def simplfiy_API(apis):
 
 
 def add_new_records():
-    with open('./output/new_behaviors.csv', newline='') as csvfile:
+    with open('./input/new_behaviors.csv', newline='') as csvfile:
         csv_reader = csv.DictReader(csvfile)
         for row in csv_reader:
-            operation=row['Operation']
-            apis=row['API']
-            apiList=simplfiy_API(apis)
-            len_opr=len(list(models.MalOperation.objects.values()))
-            models.MalOperation.objects.create(nodeID=len_opr+1, actionName=operation,
+            operation = row['Operation']
+            apis = row['API']
+            apiList = simplfiy_API(apis)
+            len_opr = len(list(models.MalOperation.objects.values()))
+            models.MalOperation.objects.create(nodeID=len_opr + 1, actionName=operation,
                                                apiList=','.join(apiList))
-            models.MalOperation.objects.filter(nodeID=len_opr+1).update(id=len_opr+1)
-
-# add_new_records()
+            models.MalOperation.objects.filter(nodeID=len_opr + 1).update(id=len_opr + 1)
 
 
 def sdk_or_sim_number():
-    sdkAPIs=list(models.ApiSDK.objects.values())
+    sdkAPIs = list(models.ApiSDK.objects.values())
     for group in sdkAPIs:
-        id=group['listID']
-        apis=group['list'].split(',')
+        id = group['listID']
+        apis = group['list'].split(',')
         for api in apis:
             if models.MalAPI.objects.filter(apiName=api.strip()):
                 models.MalAPI.objects.filter(apiName=api.strip()).update(repList=id)
             else:
                 len_api = len(list(models.MalAPI.objects.values()))
-                models.MalAPI.objects.create(apiID=len_api + 1, apiName=api.strip(),repList=id)
+                models.MalAPI.objects.create(apiID=len_api + 1, apiName=api.strip(), repList=id)
                 models.MalAPI.objects.filter(apiID=len_api + 1).update(id=len_api + 1)
 
     simAPIs = list(models.ApiSim.objects.values())
@@ -172,22 +163,21 @@ def sdk_or_sim_number():
                 models.MalAPI.objects.create(apiID=len_api + 1, apiName=api.strip(), addList=id)
                 models.MalAPI.objects.filter(apiID=len_api + 1).update(id=len_api + 1)
 
-# sdk_or_sim_number()
 
 def find_levels():
-    apis=models.MalAPI.objects.values()
+    apis = models.MalAPI.objects.values()
     for api in apis:
         try:
-            obj=models.augmentAPiIn.objects.get(apiName=api['apiName'])
-            models.MalAPI.objects.filter(apiName=api['apiName']).update(inLevel=obj.inLevel,outLevel=obj.outLevel)
-        except:
-            print(e)
+            obj = models.augmentAPiIn.objects.get(apiName=api['apiName'])
+            models.MalAPI.objects.filter(apiName=api['apiName']).update(inLevel=obj.inLevel, outLevel=obj.outLevel)
+        except Exception as e:
+            # print(e)
+            pass
 
-# find_levels()
 
 def add_new_rel():
     # models.MalRelation.objects.all().delete()
-    with open('./output/new_rel.csv', newline='') as csvfile:
+    with open('./input/new_rel.csv', newline='') as csvfile:
         csv_reader = csv.DictReader(csvfile)
         for row in csv_reader:
             try:
@@ -203,9 +193,64 @@ def add_new_rel():
                                               targetID=targetID, targetAct=row['targetAct'],
                                               relation=row['relation'])
             try:
-                models.MalRelation.objects.filter(Q(sourceID=sourceID) & Q(targetID=targetID)).update(id=len_opr+1)
+                models.MalRelation.objects.filter(Q(sourceID=sourceID) & Q(targetID=targetID)).update(id=len_opr + 1)
             except Exception as e:
-                print(e)
+                # print(e)
                 print(str(row['sourceID']) + str(row['targetID']))
 
+
+def update_per_table():
+    pers = models.augmentPerIn.objects.values()
+    for per in pers:
+        try:
+            obj = models.MalPermission.objects.get(perName=per['perName'])
+            models.MalPermission.objects.filter(perID=obj.perID).update(inLevel=per['inLevel'],
+                                                                        outLevel=per['outLevel'])
+        except:
+            len_per = len(list(models.MalPermission.objects.values()))
+            len_per = len_per + 1
+            models.MalPermission.objects.create(perID=len_per, perName=per['perName'])
+            models.MalPermission.objects.filter(perID=len_per).update(id=len_per, inLevel=per['inLevel'],
+                                                                      outLevel=per['outLevel'])
+
+
+def update_sensitive_apis():
+    with open('./input/sensitive_api_mapping.csv', newline='') as csvfile:
+        csv_reader = csv.DictReader(csvfile)
+        for row in csv_reader:
+            api_name = row['CallerClass'] + ';->' + row['CallerMethod']
+            pers = row['Permission']
+            version = row['Version']
+            try:
+                id = models.sensitiveApi.objects.get(api=api_name).id
+                models.sensitiveApi.objects.filter(id=id).update(version=version)
+            except:
+                len_api = len(list(models.sensitiveApi.objects.values()))
+                models.sensitiveApi.objects.create(api=api_name, permission=pers, version=version)
+                models.sensitiveApi.objects.filter(id=len_api + 1).update(id=len_api + 1)
+
+
+def update_constStr():
+    with open('./input/const_string_mapping.csv', newline='') as csvfile:
+        csv_reader = csv.DictReader(csvfile)
+        for row in csv_reader:
+            nodeID = row['nodeID']
+            const = row['Const']
+            try:
+                models.MalOperation.objects.filter(nodeID=nodeID).update(constStr=const)
+            except:
+                pass
+
+# models.MalAPI.objects.all().delete()
+# models.MalPermission.objects.all().delete()
+# models.MalOperation.objects.all().delete()
+# extract_behaviors_from_txt()
+# extract_relation_from_csv()
+# add_new_records()
+# sdk_or_sim_number()
+# find_levels()
 # add_new_rel()
+# update_per_table()
+# update_constStr()
+
+# update_sensitive_apis()

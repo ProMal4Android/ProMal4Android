@@ -1,0 +1,32 @@
+# Landroid/support/v4/net/ConnectivityManagerCompatGingerbread;->isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z [access_flags=public static]
+#
+# Parameters:
+# - local registers: v0...v2
+# - v3:android.net.ConnectivityManager
+#
+# - return:boolean
+
+isActiveNetworkMetered-BB@0x0 : [ isActiveNetworkMetered-BB@0xe isActiveNetworkMetered-BB@0x10 ]
+	0       (00000000) const/4              v2, 1
+	1       (00000002) invoke-virtual       v3, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+	2       (00000008) move-result-object   v0
+	3       (0000000a) if-nez               v0, +3
+
+isActiveNetworkMetered-BB@0xe : 
+	4       (0000000e) return               v2
+
+isActiveNetworkMetered-BB@0x10 : [ D:isActiveNetworkMetered-BB@0x1e 0:isActiveNetworkMetered-BB@0xe 1:isActiveNetworkMetered-BB@0x20 2:isActiveNetworkMetered-BB@0xe 3:isActiveNetworkMetered-BB@0xe 4:isActiveNetworkMetered-BB@0xe 5:isActiveNetworkMetered-BB@0xe 6:isActiveNetworkMetered-BB@0xe ]
+	5       (00000010) invoke-virtual       v0, Landroid/net/NetworkInfo;->getType()I
+	6       (00000016) move-result          v1
+	7       (00000018) packed-switch        v1, +6 (0x24)
+
+isActiveNetworkMetered-BB@0x1e : [ isActiveNetworkMetered-BB@0xe ]
+	8       (0000001e) goto                 -8
+
+isActiveNetworkMetered-BB@0x20 : [ isActiveNetworkMetered-BB@0xe ]
+	9       (00000020) const/4              v2, 0
+	10      (00000022) goto                 -a
+
+isActiveNetworkMetered-BB@0x24 : 
+	11      (00000024) packed-switch-payload 0 1 2 3 4 5 6
+

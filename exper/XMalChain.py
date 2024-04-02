@@ -29,10 +29,10 @@ from manager.views import dict_trans_list
 from common.models import ApiTest, PerTest, KgBackup, relBackup, ApiSim, ApiSDK
 from exper.augment import joint_path
 
-kg_permissions = []  # all permissions in kg/database
-kg_apis = []  # all apis in kg/database
-apis_from_test = []  # Apitest中的apis
-kg_features = []  # all features(permissions+apis) in kg
+KG_PERS = []  # all permissions in kg/database
+KG_APIS = []  # all apis in kg/database
+MAL_APIS = []  # Apitest中的apis
+KG_FEATURES = []  # all features(permissions+apis) in kg
 
 # 原有的解释结果
 report_path = '../detect/output/xmalchain/report.txt'
@@ -242,15 +242,15 @@ def extract_features_plus(apk_name, apk_path):
     # **********Write Information Belows*************
     # 1. write permissions
     for per in permissions:
-        if per in kg_permissions:
+        if per in KG_PERS:
             feature_file.write(per + '\n')
     feature_file.write('\n')
 
     # 2. write apis through .gml
     data = get_data(os.path.join('../detect/outputCG/', apk_name + '.txt'))
     node_list, edge_list = analyse(data)
-    global apis_from_test
-    global kg_apis
+    global MAL_APIS
+    global KG_APIS
 
     data = data.replace("\n", '')
 
@@ -420,7 +420,7 @@ def XMalChain():
     with open("detect/output/nmapFetures.txt", "a", encoding='utf-8') as nmapFeatureFile:
         nmapFeatureFile.truncate(0)
 
-    global kg_apis, kg_permissions, kg_features, apis_from_test
+    global KG_APIS, KG_PERS, KG_FEATURES, MAL_APIS
     kg_permissions, kg_apis, kg_features = get_pers_apis_after_augment()  # 初始化数据：get all permissions&apis from kg/database
     apis_from_test = get_apis_from_test_after_augment()
 
@@ -937,7 +937,7 @@ def find_nodes(apk_name):
                 match_node_sin 匹配上了哪些节点，节点没有重复
     """
     global kg
-    global kg_apis
+    global KG_APIS
     feature_data = do_feature_file_v1(apk_name)
     data = feature_data.split("entrypoint node id:")
     permissions = data[0:1][0].strip('\n').split('\n')  # 该api申请的所有权限
@@ -1055,7 +1055,7 @@ def api_sdk_sim(api_name):
                 add_apis = add_apis.split(',')
                 for api in add_apis:
                     api = api.replace(' ', '')
-                    if api in str(kg_apis):
+                    if api in str(KG_APIS):
                         # print('新增 by sim：',api)
                         ret = api
                         break
@@ -1065,7 +1065,7 @@ def api_sdk_sim(api_name):
                 rep_apis = rep_apis.split(',')
                 for api in rep_apis:
                     api = api.replace(' ', '')
-                    if api in str(kg_apis):
+                    if api in str(KG_APIS):
                         # print('新增 by sdk：', api)
                         ret = api
                         break
@@ -1400,7 +1400,7 @@ def XMalChain_v1():
     with open(match_report, "a", encoding='utf-8') as f:
         f.truncate(0)
     global kg, malicious_nodes
-    global kg_apis, kg_permissions, kg_features, apis_from_test
+    global KG_APIS, KG_PERS, KG_FEATURES, MAL_APIS
     kg_permissions, kg_apis, kg_features = get_pers_apis_after_augment()  # 初始化数据：get all permissions&apis from kg/database
     apis_from_test = get_apis_from_test_after_augment()
     kg = get_all_list()

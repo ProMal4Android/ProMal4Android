@@ -10,14 +10,14 @@ django.setup()
 
 from common import models
 
-kg_permissions = []  # all permissions in kg/database
-kg_apis = []  # all apis in kg/database
-apis_from_test = []  # Apitest中的apis
-kg_features = []  # all features(permissions+apis) in kg
-kg = []
+KG_PERS = []  # all permissions in kg/database
+KG_APIS = []  # all apis in kg/database
+MAL_APIS = []  # Apitest中的apis
+KG_FEATURES = []  # all features(permissions+apis) in kg
+KG = []
 
 def define_use_data():
-    global kg_apis, kg_permissions, kg_features, apis_from_test, kg
+    global KG_APIS, KG_PERS, KG_FEATURES, MAL_APIS, KG
     kg_permissions, kg_apis, kg_features = get_pers_apis_after_augment()
     apis_from_test = get_apis_from_test_after_augment()
     kg = get_all_list()

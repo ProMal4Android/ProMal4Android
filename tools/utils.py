@@ -483,3 +483,18 @@ def find_relations_in_KG(kgNode1, kgNode2):
     return ret
 
 # print('find relation:',find_relations_in_KG(3,8))
+
+def find_apk_file(folder_path, apk_name):
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            if file == apk_name + '.apk':
+                return os.path.join(root, file)
+    return None
+
+def find_xml_file(folder_path, apk_name):
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            if file == apk_name + '.xml':
+                return os.path.join(root, file)
+    return None
+

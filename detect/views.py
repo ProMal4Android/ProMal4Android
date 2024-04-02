@@ -20,9 +20,9 @@ import csv
 from common.models import augmenTestAPi, PerTest, KgTest, relTest
 from common import models
 
-kg_permissions = []  # all permissions in kg/database
-kg_apis = []  # all apis in kg/database
-kg_features = []  # all features(permissions+apis) in kg
+KG_PERS = []  # all permissions in kg/database
+KG_APIS = []  # all apis in kg/database
+KG_FEATURES = []  # all features(permissions+apis) in kg
 
 # Follow are used for test
 # testApk_path = 'D:\\testAPK0.txt'   # a test apk
@@ -196,7 +196,7 @@ def extract_features(txt, apk_name, apk_path):
     # 1. write permissions
     # feature_file.write('perStart' + '\n')
     for per in permissions:
-        if per in kg_permissions:
+        if per in KG_PERS:
             feature_file.write(per + '\n')
     # feature_file.write('perEnd' + '\n')
     feature_file.write('\n')
@@ -232,7 +232,7 @@ def extract_features(txt, apk_name, apk_path):
                         judge = tmp.find("(") 
                         if judge != -1:
                             tmp = tmp[:judge]
-                        if tmp in str(kg_apis):
+                        if tmp in str(KG_APIS):
                             api_list.append(tmp)
                            
         else:  # case 2
@@ -246,7 +246,7 @@ def extract_features(txt, apk_name, apk_path):
                     judge = tmp.find("(")
                     if judge != -1:
                         tmp = tmp[:judge]
-                    if tmp in str(kg_apis):
+                    if tmp in str(KG_APIS):
                         # feature_file.write(tmp + '\n')
                         api_list.append(tmp)
 
@@ -265,7 +265,7 @@ def extract_features(txt, apk_name, apk_path):
                         judge = tmp.find("(")
                         if judge != -1:
                             tmp = tmp[:judge]
-                        if tmp in str(kg_apis):
+                        if tmp in str(KG_APIS):
                             feature_file.write(tmp + '\n')
 
     i = 0
@@ -324,7 +324,7 @@ def apk_map_kg_main():
         2 ) Do all nodes have a matching APK  
         3 ) Do all paths have matching APKs  
     """
-    global kg_apis, kg_permissions, kg_features
+    global KG_APIS, KG_PERS, KG_FEATURES
     kg_permissions, kg_apis, kg_features = get_pers_apis()
 
     sample_apks_folder_path = '/home/wuyang/Experiments/Datas/malwares/sample_apk_100'
@@ -738,7 +738,7 @@ def kg_map_apk(feature_file, apk_name):
         elif tmp.find(";"):
             tmp1 = tmp.split(";")
             tmp = ";".join(tmp1)
-        if tmp in str(kg_features):
+        if tmp in str(KG_FEATURES):
             map_count = map_count + 1
             # print('映射成功的为：', feature)
             if feature not in mapFeatureList:

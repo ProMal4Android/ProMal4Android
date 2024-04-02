@@ -1,7 +1,7 @@
 """
 This is the first module to analyse an apk.
 We will:
-1. Decompile the malware and analyze its code in combination with ICFG to produce a feature file;
+1. Decompile the malware and analyse its code in combination with ICFG to produce a feature file;
 2. Identify malicious behavior node corresponding to the knowledge graph based on its feature file.
 Finally, we can obtain what malicious behaviors the malware contains.
 
@@ -11,16 +11,14 @@ Finally, we can obtain what malicious behaviors the malware contains.
 import re
 import time
 
-from operator import itemgetter, eq
+from operator import eq
 from urllib.parse import urlparse
 
 import django
 import sys
 import os
-from exper.program_analysis import backwardDataflow, forwardDataflow, forwardDataflow_plus, key_sort_group, \
-    backwardDataflow_plus
-from tools.utils import analyse, get_data, generate_cg, gml_txt, do_feature_file, api_sdk_sim, list_print, \
-    create_cfg_specific
+from exper.program_analysis import forwardDataflow_plus,backwardDataflow_plus
+from tools.utils import analyse, get_data, generate_cg, gml_txt, do_feature_file, api_sdk_sim, create_cfg_specific
 
 sys.path.append('../')
 

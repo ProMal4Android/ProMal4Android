@@ -1,726 +1,980 @@
+DataBase: AUGMENT
+
 ********************
 1-Access the Internet:
 :
-76:java/net/URL;->openConnection
+1:java/net/URL;->openConnection
 ********************
 
 ********************
 2-Block broadcast:
 :
-10:android/content/BroadcastReceiver;->abortBroadcast
+2:android/content/BroadcastReceiver;->abortBroadcast
 ********************
 
 ********************
 3-Click the confirm button:
 :
-96:android/app/AlertDialog$Builder;->setPositiveButton
+3:android/app/AlertDialog$Builder;->setPositiveButton
 ********************
 
 ********************
 4-Stop the service:
 :
-112:android/app/Service;->stopSelf
+4:android/app/Service;->stopSelf
 ********************
 
 ********************
 5-Compress the information into a .zip file:
-21:android.permission.READ_EXTERNAL_STORAGE
-69,78:java/io/File;->createNewFile,java/util/zip/ZipOutputStream;->putNextEntry
+1:android.permission.READ_EXTERNAL_STORAGE
+5,6:java/io/File;->createNewFile,java/util/zip/ZipOutputStream;->putNextEntry
 ********************
 
 ********************
 6-Delete the recording of incoming phone calls:
-20,37:android.permission.READ_CONTACTS,android.permission.WRITE_CONTACTS
-11:android/content/ContentResolver;->delete
+2,3:android.permission.READ_CONTACTS,android.permission.WRITE_CONTACTS
+7:android/content/ContentResolver;->delete
 ********************
 
 ********************
-8-Download:
-16:android.permission.INTERNET
-563:android/app/DownloadManager;->enqueue
+7-Download:
+4:android.permission.INTERNET
+8:android/app/DownloadManager;->enqueue
 ********************
 
 ********************
-9-Clear app cache:
-44:android.permission.CLEAR_APP_CACHE
-11,13:android/content/ContentResolver;->delete,android/content/Context;->getContentResolver
+8-Clear app cache:
+5:android.permission.CLEAR_APP_CACHE
+7,9:android/content/ContentResolver;->delete,android/content/Context;->getContentResolver
 ********************
 
 ********************
-10-Generate pop-up widgets:
-34:android.permission.SYSTEM_ALERT_WINDOW
-19:android/content/Intent;->setAction
+9-Generate pop-up widgets:
+6:android.permission.SYSTEM_ALERT_WINDOW
+10:android/content/Intent;->setAction
 ********************
 
 ********************
-11-Get user's input information:
+10-Get user's input information:
 :
-65,70,72:android/widget/EditText;->getText,java/io/InputStreamReader;->read,java/lang/Object;->toString
+11,12,13:android/widget/EditText;->getText,java/io/InputStreamReader;->read,java/lang/Object;->toString
 ********************
 
 ********************
-12-Get IMEI:
+11-Get IMEI:
 :
-52:android/telephony/TelephonyManager;->getDeviceId
+14:android/telephony/TelephonyManager;->getDeviceId
 ********************
 
 ********************
-13-Get IMSI:
-24:android.permission.READ_PHONE_STATE
-61:android/telephony/TelephonyManager;->getSubscriberId
+12-Get IMSI:
+7:android.permission.READ_PHONE_STATE
+15:android/telephony/TelephonyManager;->getSubscriberId
 ********************
 
 ********************
-14-Get the SIM card serial number:
-24:android.permission.READ_PHONE_STATE
-60:android/telephony/TelephonyManager;->getSimSerialNumber
+13-Get the SIM card serial number:
+7:android.permission.READ_PHONE_STATE
+16:android/telephony/TelephonyManager;->getSimSerialNumber
 ********************
 
 ********************
-15-Query messages:
-26:android.permission.READ_SMS
-12:android/content/ContentResolver;->query
+14-Query messages:
+8:android.permission.READ_SMS
+17:android/content/ContentResolver;->query
 ********************
 
 ********************
-16-Get the application lists:
+15-Get the application lists:
 :
-14,24:android/content/Context;->getPackageManager,android/content/pm/PackageManager;->getInstalledPackages
+18,19:android/content/Context;->getPackageManager,android/content/pm/PackageManager;->getInstalledPackages
 ********************
 
 ********************
-17-Get the contact information:
-20:android.permission.READ_CONTACTS
-12:android/content/ContentResolver;->query
+16-Get the contact information:
+2:android.permission.READ_CONTACTS
+17:android/content/ContentResolver;->query
 ********************
 
 ********************
-18-Get call records:
-19:android.permission.READ_CALL_LOG
-12,13:android/content/ContentResolver;->query,android/content/Context;->getContentResolver
+17-Get call records:
+9:android.permission.READ_CALL_LOG
+17,9:android/content/ContentResolver;->query,android/content/Context;->getContentResolver
 ********************
 
 ********************
-19-Get location of device:
+18-Get location of device:
 :
-28,29:android/location/Location;->getLatitude,android/location/Location;->getLongitude
+20,21:android/location/Location;->getLatitude,android/location/Location;->getLongitude
 ********************
 
 ********************
-20-Get the network operator:
+19-Get the network operator:
 :
-56:android/telephony/TelephonyManager;->getNetworkOperator
+22:android/telephony/TelephonyManager;->getNetworkOperator
 ********************
 
 ********************
-21-Get network info:
-4:android.permission.ACCESS_NETWORK_STATE
-100:android/net/ConnectivityManager;->getActiveNetworkInfo
+20-Get network info:
+10:android.permission.ACCESS_NETWORK_STATE
+23:android/net/ConnectivityManager;->getActiveNetworkInfo
 ********************
 
 ********************
-22-Get user's phone number:
-24:android.permission.READ_PHONE_STATE
-54:android/telephony/TelephonyManager;->getLine1Number
+21-Get user's phone number:
+7:android.permission.READ_PHONE_STATE
+24:android/telephony/TelephonyManager;->getLine1Number
 ********************
 
 ********************
-23-Hide icon:
+22-Hide icon:
 :
 25:android/content/pm/PackageManager;->setComponentEnabledSetting
 ********************
 
 ********************
-24-Install Apps:
+23-Install Apps:
 :
-21,20:android/content/Intent;->setFlags,android/content/Intent;->setDataAndType
+26,27:android/content/Intent;->setFlags,android/content/Intent;->setDataAndType
 ********************
 
 ********************
-26-Reset password:
+24-Reset password:
 :
-5:android/app/admin/DevicePolicyManager;->resetPassword
+28:android/app/admin/DevicePolicyManager;->resetPassword
 ********************
 
 ********************
-27-Monitor incoming calls:
-24:android.permission.READ_PHONE_STATE
-43:android/telephony/PhoneStateListener;->onCallStateChanged
+25-Monitor incoming calls:
+7:android.permission.READ_PHONE_STATE
+29:android/telephony/PhoneStateListener;->onCallStateChanged
 ********************
 
 ********************
-28-Monitor the screen on/off:
+26-Monitor the screen on/off:
 :
-37:android/os/PowerManager;->isScreenOn
+30:android/os/PowerManager;->isScreenOn
 ********************
 
 ********************
-29-Parse SMS content:
+27-Parse SMS content:
 :
-9,94:android/telephony/SmsMessage;->getOriginatingAddress,android/telephony/SmsMessage;->getMessageBody
+31,32,239:android/telephony/SmsMessage;->getOriginatingAddress,android/telephony/SmsMessage;->getMessageBody,android/telephony/SmsMessage;->createFromPdu
 ********************
 
 ********************
-30-Mute:
+28-Mute:
 :
-31,32:android/media/AudioManager;->setRingerMode,android/media/AudioManager;->setVibrateSetting
+33,34:android/media/AudioManager;->setRingerMode,android/media/AudioManager;->setVibrateSetting
 ********************
 
 ********************
-32-Listen on clicks:
+29-Listen on clicks:
 :
-62:android/view/View;->setOnClickListener
+35:android/view/View;->setOnClickListener
 ********************
 
 ********************
-34-Check device admin privileges:
+30-Check device admin privileges:
 :
-568,98:android/content/ComponentName;-><init>,android/app/admin/DevicePolicyManager;->isAdminActive
+36,37:android/content/ComponentName;-><init>,android/app/admin/DevicePolicyManager;->isAdminActive
 ********************
 
 ********************
-35-Send SMS:
-30:android.permission.SEND_SMS
-47:android/telephony/SmsManager;->sendTextMessage
+31-Send SMS:
+11:android.permission.SEND_SMS
+38:android/telephony/SmsManager;->sendTextMessage
 ********************
 
 ********************
-39-Create a desktop shortcut:
-41:com.android.launcher.permission.INSTALL_SHORTCUT
-84:android/content/Intent$ShortcutIconResource;->fromContext
+32-Create a desktop shortcut:
+12:com.android.launcher.permission.INSTALL_SHORTCUT
+39:android/content/Intent$ShortcutIconResource;->fromContext
 ********************
 
 ********************
-40-Lock screen:
+33-Lock screen:
 :
-87:android/app/admin/DevicePolicyManager;->lockNow
+40:android/app/admin/DevicePolicyManager;->lockNow
 ********************
 
 ********************
-41-Stop the process:
+34-Stop the process:
 :
-88:java/lang/System;->exit
+41:java/lang/System;->exit
 ********************
 
 ********************
-43-Get SD path:
+35-Get SD path:
 :
-91:android/os/Environment;->getExternalStorageDirectory
+42:android/os/Environment;->getExternalStorageDirectory
 ********************
 
 ********************
-44-Set Wifi on or off:
-43:android.permission.CHANGE_WIFI_STATE
-93:android/net/wifi/WifiManager;->setWifiEnabled
+36-Set Wifi on or off:
+13:android.permission.CHANGE_WIFI_STATE
+43:android/net/wifi/WifiManager;->setWifiEnabled
 ********************
 
 ********************
-45-Get the list of running tasks:
-45:android.permission.GET_TASKS
-104:android/app/ActivityManager;->getRunningTasks
+37-Get the list of running tasks:
+14:android.permission.GET_TASKS
+44:android/app/ActivityManager;->getRunningTasks
 ********************
 
 ********************
-46-Add views:
+38-Add views:
 :
-105,106:android/view/ViewGroup;->addView,android/view/Window;->getAttributes
+45,46:android/view/ViewGroup;->addView,android/view/Window;->getAttributes
 ********************
 
 ********************
-47-Get mac address:
-42:android.permission.ACCESS_WIFI_STATE
-15,109,107:android/content/Context;->getSystemService,android/net/wifi/WifiManager;->getConnectionInfo,android/net/wifi/WifiInfo;->getMacAddress
+39-Get mac address:
+15:android.permission.ACCESS_WIFI_STATE
+47,48,49:android/content/Context;->getSystemService,android/net/wifi/WifiManager;->getConnectionInfo,android/net/wifi/WifiInfo;->getMacAddress
 ********************
 
 ********************
-48-Call or Call forwarding:
-8:android.permission.CALL_PHONE
-16,19,111:android/content/Intent;->addFlags,android/content/Intent;->setAction,android/content/Intent;->setData
+40-Call or Call forwarding:
+16:android.permission.CALL_PHONE
+50,10,51:android/content/Intent;->addFlags,android/content/Intent;->setAction,android/content/Intent;->setData
 ********************
 
 ********************
-49-Hang up phone call:
+41-Hang up phone call:
 :
-103:com/android/internal/telephony/ITelephony$Stub;->endCall
+52:com/android/internal/telephony/ITelephony$Stub;->endCall
 ********************
 
 ********************
-50-Get the list of services:
+42-Get the list of services:
 :
-113:android/app/ActivityManager;->getRunningServices
+53:android/app/ActivityManager;->getRunningServices
 ********************
 
 ********************
-51-Register content observer:
+43-Register content observer:
 :
-99,108:android/net/Uri;->parse,android/content/ContentResolver;->registerContentObserver
+54,55:android/net/Uri;->parse,android/content/ContentResolver;->registerContentObserver
 ********************
 
 ********************
-52-Register broadcast receiver:
+44-Register broadcast receiver:
 :
-114,110:android/content/IntentFilter;->addAction,android/content/Context;->registerReceiver
+56,57:android/content/IntentFilter;->addAction,android/content/Context;->registerReceiver
 ********************
 
 ********************
-53-Get file name:
+45-Get file name:
 :
-115,116:java/io/File;->getAbsoluteFile,java/io/File;->getName
+58,59:java/io/File;->getAbsoluteFile,java/io/File;->getName
 ********************
 
 ********************
-54-Record audio:
+46-Record audio:
 :
-117,118,119:android/media/MediaRecorder;->setAudioSource,android/media/MediaRecorder;->setOutputFormat,android/media/MediaRecorder;->setAudioEncoder
+60,61,62:android/media/MediaRecorder;->setAudioSource,android/media/MediaRecorder;->setOutputFormat,android/media/MediaRecorder;->setAudioEncoder
 ********************
 
 ********************
-55-Delete SMS:
-26,47:android.permission.READ_SMS,android.permission.WRITE_SMS
-13,11:android/content/Context;->getContentResolver,android/content/ContentResolver;->delete
+47-Delete SMS:
+8,17:android.permission.READ_SMS,android.permission.WRITE_SMS
+9,7:android/content/Context;->getContentResolver,android/content/ContentResolver;->delete
 ********************
 
 ********************
-56-Monitor received SMS:
-48:android.permission.RECEIVE_SMS
+48-Monitor received SMS:
+18:android.permission.RECEIVE_SMS
 :
 ********************
 
 ********************
-59-Get App's name:
+49-Get App's name:
 :
-89,158,159,160,72:android/content/Context;->getResources,android/content/Context;->getPackageName,android/content/res/Resources;->getIdentifier,android/content/res/Resources;->getText,java/lang/Object;->toString
+63,64,65,66,13:android/content/Context;->getResources,android/content/Context;->getPackageName,android/content/res/Resources;->getIdentifier,android/content/res/Resources;->getText,java/lang/Object;->toString
 ********************
 
 ********************
-60-Get user's agent:
+50-Get user's agent:
 :
-164,159:android/webkit/WebSettings;->getUserAgentString,android/content/res/Resources;->getIdentifier
+67,65:android/webkit/WebSettings;->getUserAgentString,android/content/res/Resources;->getIdentifier
 ********************
 
 ********************
-61-Get ACRA shared preferences:
+51-Get ACRA shared preferences:
 :
-171,172:android/app/Application;->getSharedPreferences,android/preference/PreferenceManager;->getDefaultSharedPreferences
+68,69:android/app/Application;->getSharedPreferences,android/preference/PreferenceManager;->getDefaultSharedPreferences
 ********************
 
 ********************
-62-Send notification:
+52-Send notification:
 :
-15,180:android/content/Context;->getSystemService,android/app/NotificationManager;->notify
+47,70:android/content/Context;->getSystemService,android/app/NotificationManager;->notify
 ********************
 
 ********************
-63-Get device's country:
+53-Get device's country:
 :
-89,189,190,191:android/content/Context;->getResources,android/content/res/Resources;->getConfiguration,android/content/Context;->getApplicationContext,java/util/Locale;->getCountry
+63,71,72,73:android/content/Context;->getResources,android/content/res/Resources;->getConfiguration,android/content/Context;->getApplicationContext,java/util/Locale;->getCountry
 ********************
 
 ********************
-64-Acquire the wake lock:
-36:android.permission.WAKE_LOCK
-196,15,197,198:android/os/PowerManager$WakeLock;->release,android/content/Context;->getSystemService,android/os/PowerManager;->newWakeLock,android/os/PowerManager$WakeLock;->acquire
+54-Acquire the wake lock:
+19:android.permission.WAKE_LOCK
+74,47,75,76:android/os/PowerManager$WakeLock;->release,android/content/Context;->getSystemService,android/os/PowerManager;->newWakeLock,android/os/PowerManager$WakeLock;->acquire
 ********************
 
 ********************
-66-Set date of birth:
+55-Set date of birth:
 :
-145,146,147,148:java/util/Calendar;->getInstance,java/util/Date;->getTime,java/util/Calendar;->setTimeInMillis,java/util/Calendar;->get
+77,78,79,80:java/util/Calendar;->getInstance,java/util/Date;->getTime,java/util/Calendar;->setTimeInMillis,java/util/Calendar;->get
 ********************
 
 ********************
-67-Get total internal memory size:
+56-Get total internal memory size:
 :
-230,231,232,233:android/os/Environment;->getDataDirectory,java/io/File;->getPath,android/os/StatFs;->getBlockSize,android/os/StatFs;->getBlockCount
+81,82,83,84:android/os/Environment;->getDataDirectory,java/io/File;->getPath,android/os/StatFs;->getBlockSize,android/os/StatFs;->getBlockCount
 ********************
 
 ********************
-68-Get avaliable internal memory size:
+57-Get avaliable internal memory size:
 :
-230,231,232,234:android/os/Environment;->getDataDirectory,java/io/File;->getPath,android/os/StatFs;->getBlockSize,android/os/StatFs;->getAvailableBlocks
+81,82,83,85:android/os/Environment;->getDataDirectory,java/io/File;->getPath,android/os/StatFs;->getBlockSize,android/os/StatFs;->getAvailableBlocks
 ********************
 
 ********************
-69-Get total external memory size:
+58-Get total external memory size:
 :
-91,231,232,233:android/os/Environment;->getExternalStorageDirectory,java/io/File;->getPath,android/os/StatFs;->getBlockSize,android/os/StatFs;->getBlockCount
+42,82,83,84:android/os/Environment;->getExternalStorageDirectory,java/io/File;->getPath,android/os/StatFs;->getBlockSize,android/os/StatFs;->getBlockCount
 ********************
 
 ********************
-70-Save database record:
+59-Save database record:
 :
-267,268,269:android/content/Context;->openOrCreateDatabase,android/database/sqlite/SQLiteDatabase;->insert,android/database/sqlite/SQLiteDatabase;->close
+86,87,88:android/content/Context;->openOrCreateDatabase,android/database/sqlite/SQLiteDatabase;->insert,android/database/sqlite/SQLiteDatabase;->close
 ********************
 
 ********************
-71-Delete SMS in database:
+60-Delete SMS in database:
 :
-267,273,269:android/content/Context;->openOrCreateDatabase,android/database/sqlite/SQLiteDatabase;->delete,android/database/sqlite/SQLiteDatabase;->close
+86,89,88:android/content/Context;->openOrCreateDatabase,android/database/sqlite/SQLiteDatabase;->delete,android/database/sqlite/SQLiteDatabase;->close
 ********************
 
 ********************
-72-Delete file from SD Card by path:
+61-Delete file from SD Card by path:
 :
-91,271,276:android/os/Environment;->getExternalStorageDirectory,java/io/File;->getAbsolutePath,java/io/File;->delete
+42,90,91:android/os/Environment;->getExternalStorageDirectory,java/io/File;->getAbsolutePath,java/io/File;->delete
 ********************
 
 ********************
-73-Write to SD from input:
+62-Write to SD from input:
 :
-124,296,297,298:java/io/InputStream;->read,java/io/OutputStream;->flush,java/io/OutputStream;->close,java/io/OutputStream;->write
+92,93,94,95:java/io/InputStream;->read,java/io/OutputStream;->flush,java/io/OutputStream;->close,java/io/OutputStream;->write
 ********************
 
 ********************
-74-Get cached message:
+63-Get cached message:
 :
-321,322,127,323:android/content/Context;->openFileInput,java/io/FileInputStream;->read,java/lang/StringBuilder;->toString,java/io/FileInputStream;->close
+96,97,98,99:android/content/Context;->openFileInput,java/io/FileInputStream;->read,java/lang/StringBuilder;->toString,java/io/FileInputStream;->close
 ********************
 
 ********************
-75-Cache message:
+64-Cache message:
 :
-168,182,125,169:android/content/Context;->openFileOutput,java/lang/String;->getBytes,java/io/FileOutputStream;->write,java/io/FileOutputStream;->close
+100,101,102,103:android/content/Context;->openFileOutput,java/lang/String;->getBytes,java/io/FileOutputStream;->write,java/io/FileOutputStream;->close
 ********************
 
 ********************
-76-Get SHA256:
+65-Get SHA256:
 :
-181,182,184,204:java/security/MessageDigest;->getInstance,java/lang/String;->getBytes,java/security/MessageDigest;->digest,java/math/BigInteger;->toString
+104,101,105,106:java/security/MessageDigest;->getInstance,java/lang/String;->getBytes,java/security/MessageDigest;->digest,java/math/BigInteger;->toString
 ********************
 
 ********************
-77-Check permissions:
+66-Check permissions:
 :
-348:android/content/pm/PackageManager;->checkPermission
+107:android/content/pm/PackageManager;->checkPermission
 ********************
 
 ********************
-78-Parse XML's Info from server:
+67-Parse XML's Info from server:
 :
-354,355,356:javax/xml/parsers/SAXParserFactory;->newInstance,javax/xml/parsers/SAXParserFactory;->newSAXParser,javax/xml/parsers/SAXParser;->parse
+108,109,110:javax/xml/parsers/SAXParserFactory;->newInstance,javax/xml/parsers/SAXParserFactory;->newSAXParser,javax/xml/parsers/SAXParser;->parse
 ********************
 
 ********************
-79-Cancel auto-sended message:
+68-Cancel auto-sended message:
 :
-19,134,15,358:android/content/Intent;->setAction,android/app/PendingIntent;->getBroadcast,android/content/Context;->getSystemService,android/app/AlarmManager;->cancel
+10,111,47,112:android/content/Intent;->setAction,android/app/PendingIntent;->getBroadcast,android/content/Context;->getSystemService,android/app/AlarmManager;->cancel
 ********************
 
 ********************
-80-Get avaliable-memory of SD:
+69-Get avaliable-memory of SD:
 :
-234,400:android/os/StatFs;->getAvailableBlocks,android/text/format/Formatter;->formatShortFileSize
+85,113:android/os/StatFs;->getAvailableBlocks,android/text/format/Formatter;->formatShortFileSize
 ********************
 
 ********************
-82-Execute:
+70-Execute:
 :
-414,415,416:java/io/DataOutputStream;->writeBytes,java/io/DataOutputStream;->flush,android/os/SystemClock;->sleep
+114,115,116:java/io/DataOutputStream;->writeBytes,java/io/DataOutputStream;->flush,android/os/SystemClock;->sleep
 ********************
 
 ********************
-83-Show dialog:
+71-Show dialog:
 :
-421,423,424:android/app/AlertDialog$Builder;->setTitle,android/app/AlertDialog$Builder;->create,android/app/AlertDialog;->show
+117,118,119:android/app/AlertDialog$Builder;->setTitle,android/app/AlertDialog$Builder;->create,android/app/AlertDialog;->show
 ********************
 
 ********************
-84-Get Uid from server:
+72-Get Uid from server:
 :
-76,385,123,436,124,221,386:java/net/URL;->openConnection,java/net/HttpURLConnection;->getResponseCode,java/net/HttpURLConnection;->getInputStream,java/io/InputStream;->available,java/io/InputStream;->read,java/io/InputStream;->close,java/net/HttpURLConnection;->disconnect
+1,120,121,122,92,123,124:java/net/URL;->openConnection,java/net/HttpURLConnection;->getResponseCode,java/net/HttpURLConnection;->getInputStream,java/io/InputStream;->available,java/io/InputStream;->read,java/io/InputStream;->close,java/net/HttpURLConnection;->disconnect
 ********************
 
 ********************
-85-Get value from server:
+73-Get value from server:
 :
-76,385,123,436,124,182,221,386:java/net/URL;->openConnection,java/net/HttpURLConnection;->getResponseCode,java/net/HttpURLConnection;->getInputStream,java/io/InputStream;->available,java/io/InputStream;->read,java/lang/String;->getBytes,java/io/InputStream;->close,java/net/HttpURLConnection;->disconnect
+1,120,121,122,92,101,123,124:java/net/URL;->openConnection,java/net/HttpURLConnection;->getResponseCode,java/net/HttpURLConnection;->getInputStream,java/io/InputStream;->available,java/io/InputStream;->read,java/lang/String;->getBytes,java/io/InputStream;->close,java/net/HttpURLConnection;->disconnect
 ********************
 
 ********************
-86-Call phone number:
+74-Call phone number:
 :
-99,111,21:android/net/Uri;->parse,android/content/Intent;->setData,android/content/Intent;->setFlags
+54,51,26:android/net/Uri;->parse,android/content/Intent;->setData,android/content/Intent;->setFlags
 ********************
 
 ********************
-87-Upload files:
+75-Upload files:
 :
-76,433,214,432,208,431,126,127,215,149,414,404,265,322,323,415,123,220,435,221,434:java/net/URL;->openConnection,java/net/HttpURLConnection;->setDoInput,java/net/HttpURLConnection;->setDoOutput,java/net/HttpURLConnection;->setUseCaches,java/net/HttpURLConnection;->setRequestMethod,java/net/HttpURLConnection;->setRequestProperty,java/lang/StringBuilder;->append,java/lang/StringBuilder;->toString,java/net/HttpURLConnection;->getOutputStream,java/lang/String;->valueOf,java/io/DataOutputStream;->writeBytes,java/lang/String;->lastIndexOf,java/lang/String;->substring,java/io/FileInputStream;->read,java/io/FileInputStream;->close,java/io/DataOutputStream;->flush,java/net/HttpURLConnection;->getInputStream,java/io/BufferedReader;->readLine,java/io/DataOutputStream;->close,java/io/InputStream;->close,java/io/DataOutputStream;->write
+1,125,126,127,128,129,130,98,131,132,114,133,134,97,99,115,121,135,136,123,137:java/net/URL;->openConnection,java/net/HttpURLConnection;->setDoInput,java/net/HttpURLConnection;->setDoOutput,java/net/HttpURLConnection;->setUseCaches,java/net/HttpURLConnection;->setRequestMethod,java/net/HttpURLConnection;->setRequestProperty,java/lang/StringBuilder;->append,java/lang/StringBuilder;->toString,java/net/HttpURLConnection;->getOutputStream,java/lang/String;->valueOf,java/io/DataOutputStream;->writeBytes,java/lang/String;->lastIndexOf,java/lang/String;->substring,java/io/FileInputStream;->read,java/io/FileInputStream;->close,java/io/DataOutputStream;->flush,java/net/HttpURLConnection;->getInputStream,java/io/BufferedReader;->readLine,java/io/DataOutputStream;->close,java/io/InputStream;->close,java/io/DataOutputStream;->write
 ********************
 
 ********************
-88-Encrypt:
+76-Encrypt:
 :
-381,260,262:javax/crypto/SecretKeyFactory;->getInstance,javax/crypto/Cipher;->getInstance,javax/crypto/Cipher;->doFinal
+138,139,140:javax/crypto/SecretKeyFactory;->getInstance,javax/crypto/Cipher;->getInstance,javax/crypto/Cipher;->doFinal
 ********************
 
 ********************
-89-Get MODEL ID:
+77-Get MODEL ID:
 :
-447,448,528:java/lang/Class;->getField,java/lang/reflect/Field;->get,android/os/Build;->MODEL
+141,142,143:java/lang/Class;->getField,java/lang/reflect/Field;->get,android/os/Build;->MODEL
 ********************
 
 ********************
-90-Get cid:
-2,24,3:android.permission.ACCESS_COARSE_LOCATION,android.permission.READ_PHONE_STATE,android.permission.ACCESS_FINE_LOCATION
-469:android/telephony/gsm/GsmCellLocation;->getCid
+78-Get cid:
+20,7,21:android.permission.ACCESS_COARSE_LOCATION,android.permission.READ_PHONE_STATE,android.permission.ACCESS_FINE_LOCATION
+144:android/telephony/gsm/GsmCellLocation;->getCid
 ********************
 
 ********************
-91-Get SDK version:
+79-Get HttpUrl:
 :
-527:android/os/Build$VERSION;->SDK
+130,145,146,147,98:java/lang/StringBuilder;->append,java/net/URL;->getHost,java/net/URL;->getPort,java/net/URL;->getPath,java/lang/StringBuilder;->toString
 ********************
 
 ********************
-94-Get HttpUrl:
+80-Read HttpResponse:
 :
-126,492,491,216,127:java/lang/StringBuilder;->append,java/net/URL;->getHost,java/net/URL;->getPort,java/net/URL;->getPath,java/lang/StringBuilder;->toString
+148,149,135,150:javax/net/ssl/HttpsURLConnection;->connect,javax/net/ssl/HttpsURLConnection;->getResponseCode,java/io/BufferedReader;->readLine,javax/net/ssl/HttpsURLConnection;->disconnect
 ********************
 
 ********************
-96-Read HttpResponse:
+81-Get sensor list:
 :
-522,523,220,525:javax/net/ssl/HttpsURLConnection;->connect,javax/net/ssl/HttpsURLConnection;->getResponseCode,java/io/BufferedReader;->readLine,javax/net/ssl/HttpsURLConnection;->disconnect
+47,151:android/content/Context;->getSystemService,android/hardware/SensorManager;->getSensorList
 ********************
 
 ********************
-98-Get sensor list:
+82-Get sensor info(name, version, vendor):
 :
-15,539:android/content/Context;->getSystemService,android/hardware/SensorManager;->getSensorList
+152,153,154:android/hardware/Sensor;->getName,android/hardware/Sensor;->getVersion,android/hardware/Sensor;->getVendor
 ********************
 
 ********************
-106-Get sensor info(name, version, vendor):
+83-Check the key guard:
 :
-540,541,542:android/hardware/Sensor;->getName,android/hardware/Sensor;->getVersion,android/hardware/Sensor;->getVendor
+155:android/app/KeyguardManager;->isKeyguardSecure
 ********************
 
 ********************
-111-Check the key guard:
+84-Get BSSID:
+15:android.permission.ACCESS_WIFI_STATE
+47,156,48,157:android/content/Context;->getSystemService,android/net/wifi/WifiManager;->isWifiEnabled,android/net/wifi/WifiManager;->getConnectionInfo,android/net/wifi/WifiInfo;->getBSSID
+********************
+
+********************
+85-Request permissions:
+:
+158:androidx/core/app/ActivityCompat;->requestPermissions
+********************
+
+********************
+86-Launch Apps:
+:
+159:android/content/Context;->startActivity
+********************
+
+********************
+87-Look for installed Apk:
+:
+18,64:android/content/Context;->getPackageManager,android/content/Context;->getPackageName
+********************
+
+********************
+88-Install:
+:
+18,27:android/content/Context;->getPackageManager,android/content/Intent;->setDataAndType
+********************
+
+********************
+89-Install App:
+:
+10,27:android/content/Intent;->setAction,android/content/Intent;->setDataAndType
+********************
+
+********************
+90-Get Country:
+:
+73,63,71:java/util/Locale;->getCountry,android/content/Context;->getResources,android/content/res/Resources;->getConfiguration
+********************
+
+********************
+91-Get Installed Apps List:
+:
+18,160:android/content/Context;->getPackageManager,android/content/pm/PackageManager;->getInstalledApplications
+********************
+
+********************
+92-Download File:
+22:android.permission.WRITE_EXTERNAL_STORAGE
+1,121,92,102,103,123:java/net/URL;->openConnection,java/net/HttpURLConnection;->getInputStream,java/io/InputStream;->read,java/io/FileOutputStream;->write,java/io/FileOutputStream;->close,java/io/InputStream;->close
+********************
+
+********************
+93-Download Files:
+22:android.permission.WRITE_EXTERNAL_STORAGE
+1,121,135,161:java/net/URL;->openConnection,java/net/HttpURLConnection;->getInputStream,java/io/BufferedReader;->readLine,java/io/BufferedReader;->close
+********************
+
+********************
+94-Uninstall APK:
+:
+54,162,26:android/net/Uri;->parse,android/content/Intent;-><init>,android/content/Intent;->setFlags
+********************
+
+********************
+95-Monitor incoming call:
+7:android.permission.READ_PHONE_STATE
+:
+********************
+
+********************
+96-Detect device lock/unlock:
+:
+163:android/app/KeyguardManager;->isKeyguardLocked
+********************
+
+********************
+97-Monitor boot:
+23:android.permission.RECEIVE_BOOT_COMPLETED
+:
+********************
+
+********************
+98-Activate the device manager:
+:
+162,164:android/content/Intent;-><init>,android/content/Intent;->putExtra
+********************
+
+********************
+99-Active CoreService:
+:
+165,166:android/content/Intent;->setClass,android/content/Context;->startService
+********************
+
+********************
+100-Get device country:
+7:android.permission.READ_PHONE_STATE
+167:android/telephony/TelephonyManager;->getNetworkCountryIso
+********************
+
+********************
+101-Get device ID:
+:
+168:android/provider/Settings$Secure;->getString
+********************
+
+********************
+102-Post to the remote server:
+:
+1,128,129,131,95,169,120,121,92:java/net/URL;->openConnection,java/net/HttpURLConnection;->setRequestMethod,java/net/HttpURLConnection;->setRequestProperty,java/net/HttpURLConnection;->getOutputStream,java/io/OutputStream;->write,java/net/HttpURLConnection;->connect,java/net/HttpURLConnection;->getResponseCode,java/net/HttpURLConnection;->getInputStream,java/io/InputStream;->read
+********************
+
+********************
+103-Listen on connectivity change:
+10:android.permission.ACCESS_NETWORK_STATE
+47,23:android/content/Context;->getSystemService,android/net/ConnectivityManager;->getActiveNetworkInfo
+********************
+
+********************
+104-Open a new page and download:
+:
+54,162:android/net/Uri;->parse,android/content/Intent;-><init>
+********************
+
+********************
+105-Read meta-data of App:
+:
+64,170,171:android/content/Context;->getPackageName,android/content/pm/PackageManager;->getApplicationInfo,android/os/Bundle;->getString
+********************
+
+********************
+106-Get a list of package names:
+:
+18,172:android/content/Context;->getPackageManager,android/content/pm/PackageManager;->getPackageInfo
+********************
+
+********************
+107-Check permission granted:
+:
+173:android/provider/Settings$Secure;->getInt
+********************
+
+********************
+108-Capture the screen:
+:
+174:android/media/projection/MediaProjectionManager;->createScreenCaptureIntent
+********************
+
+********************
+109-Uninstall app from device:
+:
+54,64,51,159:android/net/Uri;->parse,android/content/Context;->getPackageName,android/content/Intent;->setData,android/content/Context;->startActivity
+********************
+
+********************
+110-Uninstall app from device:
+:
+175,162,26,159:android/net/Uri;->fromParts,android/content/Intent;-><init>,android/content/Intent;->setFlags,android/content/Context;->startActivity
+********************
+
+********************
+111-Install Apps:
+:
+18,176:android/content/Context;->getPackageManager,android/content/pm/PackageManager;->getPackageArchiveInfo
+********************
+
+********************
+112-Delete file:
+:
+91:java/io/File;->delete
+********************
+
+********************
+113-Post to the remote server:
+:
+1,126,128,129,131,121,135:java/net/URL;->openConnection,java/net/HttpURLConnection;->setDoOutput,java/net/HttpURLConnection;->setRequestMethod,java/net/HttpURLConnection;->setRequestProperty,java/net/HttpURLConnection;->getOutputStream,java/net/HttpURLConnection;->getInputStream,java/io/BufferedReader;->readLine
+********************
+
+********************
+114-Store audio locally:
+:
+177,90,178:android/media/MediaRecorder;->setOutputFile,java/io/File;->getAbsolutePath,android/media/MediaRecorder;->start
+********************
+
+********************
+115-Read local file:
+:
+82,179,97:java/io/File;->getPath,java/io/FileInputStream;->available,java/io/FileInputStream;->read
+********************
+
+********************
+116-Post to the remote server:
+:
+1,125,126,128,129,180:java/net/URL;->openConnection,java/net/HttpURLConnection;->setDoInput,java/net/HttpURLConnection;->setDoOutput,java/net/HttpURLConnection;->setRequestMethod,java/net/HttpURLConnection;->setRequestProperty,java/net/HttpURLConnection;->getResponseMessage
+********************
+
+********************
+117-Get local file:
+:
+82:java/io/File;->getPath
+********************
+
+********************
+118-Get Android OS version:
+:
+181:android/os/Build$VERSION;->RELEASE
+********************
+
+********************
+119-Get device model:
+:
+143:android/os/Build;->MODEL
+********************
+
+********************
+120-Get software SDK version:
+:
+182:android/os/Build$VERSION;->SDK
+********************
+
+********************
+121-Open and read file:
+:
+183,184,185,186,135,161:java/io/File;-><init>,java/io/File;->isFile,java/io/File;->exists,java/io/BufferedReader;-><init>,java/io/BufferedReader;->readLine,java/io/BufferedReader;->close
+********************
+
+********************
+122-Write to the local file:
 :
-554:android/app/KeyguardManager;->isKeyguardSecure
+187,188,189,102,103:java/io/FileOutputStream;-><init>,android/database/Cursor;->moveToNext,android/database/Cursor;->getString,java/io/FileOutputStream;->write,java/io/FileOutputStream;->close
 ********************
 
 ********************
-116-Get BSSID:
-42:android.permission.ACCESS_WIFI_STATE
-15,558,109,559:android/content/Context;->getSystemService,android/net/wifi/WifiManager;->isWifiEnabled,android/net/wifi/WifiManager;->getConnectionInfo,android/net/wifi/WifiInfo;->getBSSID
+123-Get the external memory card file list information:
+:
+183,42,82:java/io/File;-><init>,android/os/Environment;->getExternalStorageDirectory,java/io/File;->getPath
+********************
+
+********************
+124-Obtain Account information:
+:
+190:android/accounts/AccountManager;->getAccounts
+********************
+
+********************
+125-Get Mac address:
+:
+47,48,49:android/content/Context;->getSystemService,android/net/wifi/WifiManager;->getConnectionInfo,android/net/wifi/WifiInfo;->getMacAddress
+********************
+
+********************
+126-Get Wifi ID:
+:
+47,48,191:android/content/Context;->getSystemService,android/net/wifi/WifiManager;->getConnectionInfo,android/net/wifi/WifiInfo;->getNetworkId
+********************
+
 ********************
+127-Get local IP:
+:
+47,48,192,193:android/content/Context;->getSystemService,android/net/wifi/WifiManager;->getConnectionInfo,android/net/wifi/WifiInfo;->getIpAddress,android/text/format/Formatter;->formatIpAddress
+********************
 
 ********************
-136-Request permissions:
+128-Get Android OS (INCREMENTAL):
 :
-66:androidx/core/app/ActivityCompat;->requestPermissions
+194:android/os/Build$VERSION;->INCREMENTAL
 ********************
 
 ********************
-137-Launch Apps:
+129-Get product name:
 :
-564:android/content/Context;->startActivity
+195:android/os/Build;->PRODUCT
 ********************
 
 ********************
-138-Look for installed Apk:
+130-Get device model:
 :
-14,158:android/content/Context;->getPackageManager,android/content/Context;->getPackageName
+143:android/os/Build;->MODEL
 ********************
 
 ********************
-139-Install:
+131-Get device manufacturer:
 :
-14,20:android/content/Context;->getPackageManager,android/content/Intent;->setDataAndType
+196:android/os/Build;->MANUFACTURER
 ********************
 
 ********************
-140-Install App:
+132-Get device brand:
 :
-19,20:android/content/Intent;->setAction,android/content/Intent;->setDataAndType
+197:android/os/Build;->BRAND
 ********************
 
 ********************
-141-Get Country:
+133-Get device board:
 :
-191,89,189:java/util/Locale;->getCountry,android/content/Context;->getResources,android/content/res/Resources;->getConfiguration
+198:android/os/Build;->BOARD
 ********************
 
 ********************
-142-Get Installed Apps List:
+134-Get device name:
 :
-14,569:android/content/Context;->getPackageManager,android/content/pm/PackageManager;->getInstalledApplications
+199:android/os/Build;->DEVICE
 ********************
 
 ********************
-143-Download File:
-38:android.permission.WRITE_EXTERNAL_STORAGE
-76,123,124,125,169,221:java/net/URL;->openConnection,java/net/HttpURLConnection;->getInputStream,java/io/InputStream;->read,java/io/FileOutputStream;->write,java/io/FileOutputStream;->close,java/io/InputStream;->close
+135-Get device display:
+:
+200:android/os/Build;->DISPLAY
 ********************
 
 ********************
-144-Download Files:
-38:android.permission.WRITE_EXTERNAL_STORAGE
-76,123,220,285:java/net/URL;->openConnection,java/net/HttpURLConnection;->getInputStream,java/io/BufferedReader;->readLine,java/io/BufferedReader;->close
+136-Get device hardware name:
+:
+201:android/os/Build;->HARDWARE
 ********************
 
 ********************
-145-Uninstall APK:
+137-Get device version:
 :
-99,567,21:android/net/Uri;->parse,android/content/Intent;-><init>,android/content/Intent;->setFlags
+202:android/os/Build;->ID
 ********************
 
 ********************
-146-Monitor incoming call:
-24:android.permission.READ_PHONE_STATE
+138-Obtain the country/region code:
 :
+47,167:android/content/Context;->getSystemService,android/telephony/TelephonyManager;->getNetworkCountryIso
 ********************
 
 ********************
-147-Detect device lock/unlock:
+139-Get the software version of the device:
 :
-608:android/app/KeyguardManager;->isKeyguardLocked
+47,203:android/content/Context;->getSystemService,android/telephony/TelephonyManager;->getDeviceSoftwareVersion
 ********************
 
 ********************
-148-Monitor boot:
-27:android.permission.RECEIVE_BOOT_COMPLETED
+140-Get the carrier name of the subscriber:
 :
+204,205:android/telephony/SubscriptionManager;->getActiveSubscriptionInfoList,android/telephony/SubscriptionInfo;->getCarrierName
 ********************
 
 ********************
-149-Activate the device manager:
+141-Get country/region related to subscription:
 :
-567,4:android/content/Intent;-><init>,android/content/Intent;->putExtra
+204,206:android/telephony/SubscriptionManager;->getActiveSubscriptionInfoList,android/telephony/SubscriptionInfo;->getCountryIso
 ********************
 
 ********************
-150-Active CoreService:
+142-Obtain the ICCID of the SIM card corresponding to the subscription information:
 :
-102,609:android/content/Intent;->setClass,android/content/Context;->startService
+204,207:android/telephony/SubscriptionManager;->getActiveSubscriptionInfoList,android/telephony/SubscriptionInfo;->getIccId
 ********************
 
 ********************
-151-Get device country:
-24:android.permission.READ_PHONE_STATE
-610:android/telephony/TelephonyManager;->getNetworkCountryIso
+143-Get subscription information:
+:
+204,208:android/telephony/SubscriptionManager;->getActiveSubscriptionInfoList,android/telephony/SubscriptionInfo;->getNumber
 ********************
 
 ********************
-152-Get device ID:
+144-Execute SQL query:
 :
-611:android/provider/Settings$Secure;->getString
+209,210,211,212,188:android/database/sqlite/SQLiteDatabase;->rawQuery,android/database/Cursor;->moveToFirst,java/lang/String;->contains,android/database/Cursor;->getColumnIndexOrThrow,android/database/Cursor;->moveToNext
 ********************
 
 ********************
-153-Post to the remote server:
+145-Check the optimized status of the battery:
 :
-76,208,431,215,298,478,385,123,124:java/net/URL;->openConnection,java/net/HttpURLConnection;->setRequestMethod,java/net/HttpURLConnection;->setRequestProperty,java/net/HttpURLConnection;->getOutputStream,java/io/OutputStream;->write,java/net/HttpURLConnection;->connect,java/net/HttpURLConnection;->getResponseCode,java/net/HttpURLConnection;->getInputStream,java/io/InputStream;->read
+213,214,215:android/app/Activity;->getPackageName,android/app/Activity;->getSystemService,android/os/PowerManager;->isIgnoringBatteryOptimizations
 ********************
 
 ********************
-154-Listen on connectivity change:
-4:android.permission.ACCESS_NETWORK_STATE
-15,100:android/content/Context;->getSystemService,android/net/ConnectivityManager;->getActiveNetworkInfo
+146-Ignore battery optimization:
+:
+10,51,216:android/content/Intent;->setAction,android/content/Intent;->setData,android/app/Activity;->startActivityForResult
 ********************
 
 ********************
-155-Open a new page and download:
+147-Run App:
 :
-99,567:android/net/Uri;->parse,android/content/Intent;-><init>
+217,218:android/app/Activity;->getBaseContext,com/update/system/important/utility/Utility;->startService
 ********************
 
 ********************
-156-Read meta-data of App:
+148-Capture the screen:
 :
-158,254,283:android/content/Context;->getPackageName,android/content/pm/PackageManager;->getApplicationInfo,android/os/Bundle;->getString
+47,219,220,221,222:android/content/Context;->getSystemService,android/hardware/camera2/CameraManager;->getCameraIdList,android/media/ImageReader;->newInstance,android/media/ImageReader;->setOnImageAvailableListener,android/hardware/camera2/CameraManager;->openCamera
 ********************
 
 ********************
-157-Get a list of package names:
+149-Steal data from the clipboard:
 :
-14,305:android/content/Context;->getPackageManager,android/content/pm/PackageManager;->getPackageInfo
+223,224,225,226:android/content/ClipboardManager;->getPrimaryClip,android/content/ClipData;->getItemAt,android/content/ClipData$Item;->getText,java/util/concurrent/ExecutorService;->execute
 ********************
 
 ********************
-158-Check permission granted:
+150-Set the background to transparent:
 :
-612:android/provider/Settings$Secure;->getInt
+227,228:android/view/Window;->setBackgroundDrawable,android/graphics/drawable/ColorDrawable;-><init>
 ********************
 
 ********************
-159-Capture the screen:
+151-Mute:
 :
-613:android/media/projection/MediaProjectionManager;->createScreenCaptureIntent
+47,229:android/content/Context;->getSystemService,android/media/AudioManager;->getStreamVolume
 ********************
 
 ********************
-160-Uninstall app from device:
+152-Install (other malware) via command:
 :
-99,158,111,564:android/net/Uri;->parse,android/content/Context;->getPackageName,android/content/Intent;->setData,android/content/Context;->startActivity
+230,231:java/lang/Runtime;->getRuntime,java/lang/Runtime;->exec
 ********************
 
 ********************
-161-Uninstall app from device:
+153-Check host:
 :
-437,567,21,564:android/net/Uri;->fromParts,android/content/Intent;-><init>,android/content/Intent;->setFlags,android/content/Context;->startActivity
+1,129,128:java/net/URL;->openConnection,java/net/HttpURLConnection;->setRequestProperty,java/net/HttpURLConnection;->setRequestMethod
 ********************
 
 ********************
-162-Install Apps:
+154-Load network resource files:
 :
-14,614:android/content/Context;->getPackageManager,android/content/pm/PackageManager;->getPackageArchiveInfo
+1,232,233,234,187,92,95:java/net/URL;->openConnection,java/net/URLConnection;->connect,java/net/URL;->openStream,java/io/BufferedInputStream;-><init>,java/io/FileOutputStream;-><init>,java/io/InputStream;->read,java/io/OutputStream;->write
 ********************
 
 ********************
-163-Delete file:
+155-Download the resource file:
 :
-276:java/io/File;->delete
+235,186,135,130:java/lang/StringBuilder;-><init>,java/io/BufferedReader;-><init>,java/io/BufferedReader;->readLine,java/lang/StringBuilder;->append
 ********************
 
 ********************
-165-Post to the remote server:
+156-Check the Wifi connection and disconnect the wireless network connection.:
 :
-76,214,208,431,215,123,220:java/net/URL;->openConnection,java/net/HttpURLConnection;->setDoOutput,java/net/HttpURLConnection;->setRequestMethod,java/net/HttpURLConnection;->setRequestProperty,java/net/HttpURLConnection;->getOutputStream,java/net/HttpURLConnection;->getInputStream,java/io/BufferedReader;->readLine
+47,236:android/content/Context;->getSystemService,android.net.wifi.WifiManager;->setWifiEnabled
 ********************
 
 ********************
-166-Store audio locally:
+157-Push advertising:
 :
-120,271,616:android/media/MediaRecorder;->setOutputFile,java/io/File;->getAbsolutePath,android/media/MediaRecorder;->start
+237,159:android/view/Window;->addFlags,android/content/Context;->startActivity
 ********************
 
 ********************
-167-Read local file:
+158-Call:
 :
-231,350,322:java/io/File;->getPath,java/io/FileInputStream;->available,java/io/FileInputStream;->read
+162,50,159:android/content/Intent;-><init>,android/content/Intent;->addFlags,android/content/Context;->startActivity
 ********************
 
 ********************
-168-Post to the remote server:
+159-Steal SMS text messages:
 :
-76,433,214,208,431,617:java/net/URL;->openConnection,java/net/HttpURLConnection;->setDoInput,java/net/HttpURLConnection;->setDoOutput,java/net/HttpURLConnection;->setRequestMethod,java/net/HttpURLConnection;->setRequestProperty,java/net/HttpURLConnection;->getResponseMessage
+238,239:android/telephony/SmsMessage;->getDisplayOriginatingAddress,android/telephony/SmsMessage;->createFromPdu
 ********************
 
 ********************
-169-Get local file:
+160-Obtain installation package information:
 :
-231:java/io/File;->getPath
+18,64,170:android/content/Context;->getPackageManager,android/content/Context;->getPackageName,android/content/pm/PackageManager;->getApplicationInfo
 ********************
 
 ********************
-170-Get Android OS version:
+161-Read the zip file and install it:
 :
-1:android/os/Build$VERSION;->RELEASE
+240,241,242:java/util/zip/ZipFile;->getEntry,java/util/zip/ZipFile;->getInputStream,java/util/zip/ZipFile;->close
 ********************
 
 ********************
-171-Get device model:
+162-Upload the file:
 :
-2:android/os/Build;->MODEL
+128,114,97,137,99,115,136:java/net/HttpURLConnection;->setRequestMethod,java/io/DataOutputStream;->writeBytes,java/io/FileInputStream;->read,java/io/DataOutputStream;->write,java/io/FileInputStream;->close,java/io/DataOutputStream;->flush,java/io/DataOutputStream;->close
 ********************
 
 ********************
-172-Get software SDK version:
+163-Send data to the server:
 :
-619:android/os/Build$VERSION;->SDK
+128,94:java/net/HttpURLConnection;->setRequestMethod,java/io/OutputStream;->close
 ********************
 

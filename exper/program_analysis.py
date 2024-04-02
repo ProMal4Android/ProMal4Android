@@ -205,7 +205,7 @@ def test(id, apkname):
 
 # test(16450, 'System_update')
 # print('\n______________\n')
-test(12043, 'StealJob')
+# test(12043, 'StealJob')
 
 
 def key_sort_group(data, keywords):

@@ -2,7 +2,7 @@ import os
 import django
 import sys
 
-from tools.utils import str_str_version2
+from common.utils import str_str_version2
 
 sys.path.append('../')
 
@@ -11,6 +11,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mwep.settings')
 django.setup()
 
 from common import models
+
 
 def name_action():
     """
@@ -30,6 +31,7 @@ def name_action():
             print('error')
             pass
 
+
 # name_action()
 
 
@@ -37,8 +39,8 @@ def print_kg_all_upgrade():
     """
     print all nodes after upgrade
     """
-    output_path = './output/print_kg_all_upgrade.txt'
-    model = list(models.augmentNodeIn.objects.values())
+    output_path = 'output/print_kg_all_upgrade.txt'
+    model = list(models.MalOperation.objects.values())
     # clean reports
     with open(output_path, "a", encoding='utf-8') as report:
         report.truncate(0)
@@ -61,11 +63,12 @@ def print_kg_all_upgrade():
 
 # print_kg_all_upgrade()
 
+
 def print_kg_rel_version2():
     """
     print all relations in the kg
     """
-    output_path = './output/print_kg_rel_upgrade.txt'
+    output_path = 'output/print_kg_rel_upgrade.txt'
     node_num = len(list(models.augmentRelIn.objects.values()))
     # clean report
     with open(output_path, "a", encoding='utf-8') as report:
@@ -91,7 +94,7 @@ def print_kg_rel_version2():
                 pass
 
 
-print_kg_rel_version2()
+# print_kg_rel_version2()
 
 
 """
@@ -103,7 +106,7 @@ def get_list():
     """获取Node表中每个节点的ID和其perlist, apilist的对应关系"""
     model = list(models.augmentNodeIn.objects.values())
     ret = []
-    nodelist=[]
+    nodelist = []
     for one in model:
         dict = {}
         nodeID = one['nodeID']
@@ -118,7 +121,7 @@ def get_list():
 
         ret.append(dict)
     # print('ret:\n ', ret)
-    return ret,nodelist
+    return ret, nodelist
 
 
 def optim_API():
@@ -138,7 +141,7 @@ def optim_API():
         for node in ret:
             nodeID = node['nodeID']
             apilist = node['apiList']
-            old_apilist=apilist
+            old_apilist = apilist
             if str(oldAPIID) in apilist:
                 if apilist.find(',') == -1:  # 只有一个api
                     if str(oldAPIID) == apilist:
@@ -150,11 +153,11 @@ def optim_API():
                             apilist[index] = str(newID)
                             break
                     apilist = ','.join(apilist)
-                if old_apilist!=apilist:
+                if old_apilist != apilist:
                     print('**** old ', str(oldAPIID) + '***')
                     print('before: node-', str(nodeID) + ', apilist-' + old_apilist)
                     print('**** new ', str(newID) + '***')
-                    print('after: node-', str(nodeID) + ', apilist-' + apilist+'\n')
+                    print('after: node-', str(nodeID) + ', apilist-' + apilist + '\n')
                     models.augmentNodeIn.objects.filter(nodeID=nodeID).update(apiList=apilist)
 
         models.augmentAPiIn.objects.filter(id=newID).update(apiID=newID)  # 更新ID
@@ -171,9 +174,9 @@ def delete_Rel():
     model = list(models.augmentRelIn.objects.values())
     print('nodelist:', nodelist)
     for rel in model:
-        id=rel['id']
-        source=rel['sourceID']
-        target=rel['targetID']
+        id = rel['id']
+        source = rel['sourceID']
+        target = rel['targetID']
         if source in nodelist and target in nodelist:
             continue
         else:
@@ -182,6 +185,7 @@ def delete_Rel():
         # if source not in nodelist or target not in nodelist:
         #     print('delete:', rel['id'])
         #     models.augmentRelIn.objects.filter(Q(sourceID=source) | Q(targetID=target)).delete()
+
 
 # delete_Rel()
 
@@ -199,7 +203,7 @@ def optim_Node():
 
             # 先更新Relation表中的Node id
             try:
-                ans=models.augmentRelIn.objects.filter(sourceID=oldNodeID)
+                ans = models.augmentRelIn.objects.filter(sourceID=oldNodeID)
                 if ans:
                     for i in ans:
                         models.augmentRelIn.objects.filter(sourceID=oldNodeID).update(sourceID=newID)
@@ -216,6 +220,7 @@ def optim_Node():
         # 更新Node表中的nodeID
         models.augmentNodeIn.objects.filter(id=newID).update(nodeID=newID)  # 更新Node ID
         # models.augmentAPiIn.objects.filter(id=newID).update(apiID=newID)  # 更新ID
+
 
 # optim_Node()
 

@@ -120,50 +120,50 @@ def ProMal():
         match_nodes = main_module1(apk_name, f, kg_apis, kg_permissions, kg_features, apis_from_test, kg)
         print('***Match nodes***')
         list_print(match_nodes)
-        matched_behaviors = []
-        for node in match_nodes:
-            if node['actionName'] not in matched_behaviors:
-                matched_behaviors.append(node['actionName'])
+        # matched_behaviors = []
+        # for node in match_nodes:
+        #     if node['actionName'] not in matched_behaviors:
+        #         matched_behaviors.append(node['actionName'])
+        #
+        # all_path, path_malicious, path_others = find_relations_all(match_nodes)
+        # relations_cfg = main_module2_relations(match_nodes, apk_name, f, kg_apis, kg_permissions, kg_features,
+        #                                        apis_from_test, kg,
+        #                                        all_path)
+        # kg_relations_list, cfg_relations_list, delete_kg_list, delete_cfg_list, final_graph, final_behaviors = match_relations_kgAndCfg(
+        #     match_nodes, relations_cfg)
+        # for node in match_nodes:
+        #     if node['actionName'] not in final_behaviors:
+        #         if models.augmentNodeIn.objects.get(nodeID=node['nodeID']).independent=='1':
+        #             final_behaviors.append(node['actionName'])
+        #
+        # print('\n *****final graph*****')
+        # dict_print(final_graph)
+        #
+        # print('\n *****final behaviors*****')
+        # list_print(final_behaviors)
+        #
+        # chains, chains_for_des = generate_chains(final_graph)
+        # print('\n *****final chains*****')
+        # list_print(chains)
+        # print('\n')
+        # list_print(chains_for_des)
+        # end_time = time.time()
+        # print('\n***Complete! Time cost: {:.5f} s'.format(end_time - start_time) + '***\n')
+        #
+        # kg_relation_str = do_output_str(kg_relations_list, "binary")
+        # cfg_relations_str = do_output_str(cfg_relations_list, "binary")
+        # delete_kg_str = do_output_str(delete_kg_list, "binary")
+        # # delete_cfg_list = do_output_str(delete_cfg_list,"binary")
+        # matched_behaviors_str = do_output_str(matched_behaviors, "single")
+        # final_behaviors_str = do_output_str(final_behaviors, "single")
+        # final_graph_str = do_output_str(final_graph, "dict")
+        # chains = do_output_str(chains_for_des, "binary")
+        # records = [file_id, apk_name, final_behaviors_str, chains, matched_behaviors_str, kg_relation_str,
+        #            len(kg_relations_list), cfg_relations_str,
+        #            delete_kg_str, len(delete_kg_list), final_graph_str]
+        # with open(csv_file, "a", encoding='utf-8', newline='') as report:
+        #     writer = csv.writer(report)
+        #     writer.writerow(records)
 
-        all_path, path_malicious, path_others = find_relations_all(match_nodes)
-        relations_cfg = main_module2_relations(match_nodes, apk_name, f, kg_apis, kg_permissions, kg_features,
-                                               apis_from_test, kg,
-                                               all_path)
-        kg_relations_list, cfg_relations_list, delete_kg_list, delete_cfg_list, final_graph, final_behaviors = match_relations_kgAndCfg(
-            match_nodes, relations_cfg)
-        for node in match_nodes:
-            if node['actionName'] not in final_behaviors:
-                if models.augmentNodeIn.objects.get(nodeID=node['nodeID']).independent=='1':
-                    final_behaviors.append(node['actionName'])
 
-        print('\n *****final graph*****')
-        dict_print(final_graph)
-
-        print('\n *****final behaviors*****')
-        list_print(final_behaviors)
-
-        chains, chains_for_des = generate_chains(final_graph)
-        print('\n *****final chains*****')
-        list_print(chains)
-        print('\n')
-        list_print(chains_for_des)
-        end_time = time.time()
-        print('\n***Complete! Time cost: {:.5f} s'.format(end_time - start_time) + '***\n')
-
-        kg_relation_str = do_output_str(kg_relations_list, "binary")
-        cfg_relations_str = do_output_str(cfg_relations_list, "binary")
-        delete_kg_str = do_output_str(delete_kg_list, "binary")
-        # delete_cfg_list = do_output_str(delete_cfg_list,"binary")
-        matched_behaviors_str = do_output_str(matched_behaviors, "single")
-        final_behaviors_str = do_output_str(final_behaviors, "single")
-        final_graph_str = do_output_str(final_graph, "dict")
-        chains = do_output_str(chains_for_des, "binary")
-        records = [file_id, apk_name, final_behaviors_str, chains, matched_behaviors_str, kg_relation_str,
-                   len(kg_relations_list), cfg_relations_str,
-                   delete_kg_str, len(delete_kg_list), final_graph_str]
-        with open(csv_file, "a", encoding='utf-8', newline='') as report:
-            writer = csv.writer(report)
-            writer.writerow(records)
-
-
-ProMal()
+# ProMal()
