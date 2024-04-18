@@ -23,13 +23,3 @@ The website is being deployed and released. Therefore, we use a demo to show the
 
 https://github.com/ProMal4Android/ProMal/assets/158020802/d0255695-d64a-4780-af5d-294eb576f83b
 
-
-
-## Development and Implementation
-- Operate System: Ubuntu 20.04.
-- Language & IDE & Framework: Using python 3.8, we choose Pycharm to implement our Django project.
-- Installation of important packages:
-  ```html
-  Androguard: apt install Androguard
-  Diango: python -m pip install Django
-  ```
