@@ -9,7 +9,8 @@ ProMal not only performs well in _MBT_ extraction but also has ability to genera
   
 ## Use Case
 - input: the malware you want to analyze. Taking malware AceCard0 as an example.
-- output: the descriptions that describe which malware operations are performed by malicious software and how malicious behaviors are completed step by step. As shown in the following figure.  
+- output: the descriptions that describe which malware operations are performed by malicious software and how malicious behaviors are completed step by step. As shown in the following figure.
+  <img width="60%" alt="image" src="https://github.com/ProMal4Android/ProMal/assets/158020802/98160279-f42f-4dcd-a2a9-d0cda99eca36">
   <img width="60%" alt="image" src="https://github.com/ProMal4Android/ProMal4Android/assets/158020802/4d5ee10f-214d-4fb2-8153-7a19c0339fb6">
 
 
