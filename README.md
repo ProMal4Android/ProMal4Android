@@ -1,16 +1,16 @@
 # ProMal
-ProMal, a tool used to analyze malicious applications, can automatically extract **Attack Sequences of Malicious Behaviors** (i.e., _AttackSeqs_) from malware and describe them in a human-readable way to inform users of malicious behaviors and remind users of potential security threats in detail.
+ProMal, a tool used to analyze malicious applications, can automatically extract **Malicious Behaviors Trajectory** (i.e., _MBT_) from malware and describe them in a human-readable way to inform users of malicious behaviors and remind users of potential security threats in detail.
 
 ## Our Advantages
 ProMal not only performs well in behavior detection and _AttackSeqs_ extraction but also has ability to generate comprehensive descriptions. Most importantly, it can generate more precise and informative descriptions than XMal or family classification. In conclusion, ProMal has the following advantages:
-- **Precise and Fine-grained**. ProMal can precisely identify AttackSeqs from malware, which has richer semantic information in terms of understanding malware behaviors. The specific malware operations recognized, along with the relations between them, can be reflected in the final description.
-- **Flexible**. ProMal is flexible and capable of addressing various types of malware, especially adapting to the rapid iteration of malware through the self-updating method and graph reasoning.
-- **Human-readable**. The generated behavior descriptions are easily readable, facilitating user acceptance and understanding of how malicious behaviors are implemented.
+- **Precise and Fine-grained**. The approach should precisely identify MBTs from malware, which has richer semantic information in terms of understanding malware behaviors.
+- **Scalable**. The approach is designed to be scalable and capable of addressing various types of malware and variants, especially adapting to the rapid iteration of malware.
+- **Human-readable**. The malware description should be easily readable, facilitating user acceptance and understanding of how malicious behaviors are implemented.
   
 ## Use Case
 - input: the malware you want to analyze. Taking malware AceCard0 as an example.
 - output: the descriptions that describe which malware operations are performed by malicious software and how malicious behaviors are completed step by step. As shown in the following figure.  
-  <img width="500" alt="image" src="https://github.com/ProMal4Android/ProMal/assets/158020802/98160279-f42f-4dcd-a2a9-d0cda99eca36">
+  <img width="50%" alt="image" src="https://github.com/ProMal4Android/ProMal/assets/158020802/98160279-f42f-4dcd-a2a9-d0cda99eca36">
 
 ## Tool Demo
 Additionally, we have developed an online website as shown below to help security analysts or users more easily analyze malware. After users uploading their malware, in addition to the basic information, the website can also provides users with three aspects of malware analysis:
