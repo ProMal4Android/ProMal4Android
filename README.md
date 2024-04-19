@@ -20,6 +20,7 @@ Additionally, we have developed an online website as shown below to help securit
 <img width="100%" alt="image" src="https://github.com/ProMal4Android/ProMal4Android/assets/158020802/4d5ee10f-214d-4fb2-8153-7a19c0339fb6">
 
 The website is being deployed and released. Therefore, we use a demo to show the general flow of our tool and record a demo video. Note that we have hidden all the identity-related information and datas in the video does not represent the final implementation effect. Since the video size is limited to 10M, it is a pity that we cannot provide a more detailed and richer display.
+
 https://github.com/ProMal4Android/ProMal4Android/assets/158020802/84a784a9-de8d-4aaf-888f-d95191e125c3
 
 
