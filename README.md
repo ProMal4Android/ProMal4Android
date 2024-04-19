@@ -23,8 +23,3 @@ The website is being deployed and released. Therefore, we use a demo to show the
 
 
 https://github.com/ProMal4Android/ProMal/assets/158020802/d0255695-d64a-4780-af5d-294eb576f83b
-
-<video src="https://github.com/ProMal4Android/ProMal/raw/main/ProMal_demo.mov?raw=true" controls="controls"  autoplay="autoplay">
-您的浏览器不支持 video 标签。
-</video>
-
