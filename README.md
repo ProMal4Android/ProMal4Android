@@ -1,5 +1,5 @@
 # ProMal
-ProMal, a tool used to analyze malicious applications, can automatically extract **Malicious Behaviors Trajectory** (i.e., _MBT_) from malware and describe them in a human-readable way to inform users of malicious behaviors and remind users of potential security threats in detail.
+_ProMal_, a tool used to analyze malicious applications, can automatically extract **Malicious Behaviors Trajectory** (i.e., _MBT_) from malware and describe them in a human-readable way to inform users of malicious behaviors and remind users of potential security threats in detail.
 
 ## Our Advantages
 ProMal not only performs well in behavior detection and _AttackSeqs_ extraction but also has ability to generate comprehensive descriptions. Most importantly, it can generate more precise and informative descriptions than XMal or family classification. In conclusion, ProMal has the following advantages:
