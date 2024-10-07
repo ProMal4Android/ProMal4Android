@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/internal/zzaji;-&gt;&lt;init&gt;(J)V" label="Lcom/google/android/gms/internal/zzaji;-&gt;&lt;init&gt;(J)V" />
+      <node id="Lcom/google/android/gms/internal/zzgp;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;)V" label="Lcom/google/android/gms/internal/zzgp;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" label="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" />
+      <node id="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" label="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/google/android/gms/ads/internal/zzbt;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/google/android/gms/internal/zzjn;Ljava/lang/String;Lcom/google/android/gms/internal/zzakd;Lcom/google/android/gms/internal/zzcv;)V" label="Lcom/google/android/gms/ads/internal/zzbt;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/google/android/gms/internal/zzjn;Ljava/lang/String;Lcom/google/android/gms/internal/zzakd;Lcom/google/android/gms/internal/zzcv;)V" />
+      <node id="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" label="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/internal/zzaji;-&gt;&lt;init&gt;(J)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Lcom/google/android/gms/internal/zzgp;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;)V" target="Lcom/google/android/gms/internal/zzaji;-&gt;&lt;init&gt;(J)V" id="1" />
+      <edge source="Lcom/google/android/gms/internal/zzgp;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;)V" target="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" id="2" />
+      <edge source="Lcom/google/android/gms/internal/zzgp;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" target="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" id="4" />
+      <edge source="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" target="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" id="5" />
+      <edge source="Lcom/google/android/gms/ads/internal/zzbt;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/google/android/gms/internal/zzjn;Ljava/lang/String;Lcom/google/android/gms/internal/zzakd;Lcom/google/android/gms/internal/zzcv;)V" target="Lcom/google/android/gms/internal/zzaji;-&gt;&lt;init&gt;(J)V" id="6" />
+      <edge source="Lcom/google/android/gms/ads/internal/zzbt;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/google/android/gms/internal/zzjn;Ljava/lang/String;Lcom/google/android/gms/internal/zzakd;Lcom/google/android/gms/internal/zzcv;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

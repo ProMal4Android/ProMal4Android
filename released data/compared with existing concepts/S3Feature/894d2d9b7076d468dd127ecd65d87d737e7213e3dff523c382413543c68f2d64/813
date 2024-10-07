@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" label="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" />
+      <node id="Landroid/support/multidex/MultiDex;-&gt;clearOldDexDir(Landroid/content/Context;)V" label="Landroid/support/multidex/MultiDex;-&gt;clearOldDexDir(Landroid/content/Context;)V" />
+      <node id="Landroid/support/v7/widget/ShareActionProvider;-&gt;onPrepareSubMenu(Landroid/view/SubMenu;)V" label="Landroid/support/v7/widget/ShareActionProvider;-&gt;onPrepareSubMenu(Landroid/view/SubMenu;)V" />
+      <node id="Landroid/support/multidex/MultiDex;-&gt;install(Landroid/content/Context;)V" label="Landroid/support/multidex/MultiDex;-&gt;install(Landroid/content/Context;)V" />
+      <node id="Landroid/util/Log;-&gt;i(Ljava/lang/String;Ljava/lang/String;)I" label="Landroid/util/Log;-&gt;i(Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" label="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;clearOldDexDir(Landroid/content/Context;)V" target="Landroid/util/Log;-&gt;i(Ljava/lang/String;Ljava/lang/String;)I" id="0" />
+      <edge source="Landroid/support/v7/widget/ShareActionProvider;-&gt;onPrepareSubMenu(Landroid/view/SubMenu;)V" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="1" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;install(Landroid/content/Context;)V" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="2" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;install(Landroid/content/Context;)V" target="Landroid/support/multidex/MultiDex;-&gt;clearOldDexDir(Landroid/content/Context;)V" id="3" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;install(Landroid/content/Context;)V" target="Landroid/util/Log;-&gt;i(Ljava/lang/String;Ljava/lang/String;)I" id="4" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;install(Landroid/content/Context;)V" target="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" id="5" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="6" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="7" />
+    </edges>
+  </graph>
+</gexf>

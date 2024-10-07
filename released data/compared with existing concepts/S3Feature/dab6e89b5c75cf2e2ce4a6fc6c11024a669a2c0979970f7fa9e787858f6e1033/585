@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/VectorEnabledTintResources;-&gt;shouldBeUsed()Z" label="Landroid/support/v7/widget/VectorEnabledTintResources;-&gt;shouldBeUsed()Z" />
+      <node id="Landroid/support/v7/widget/AppCompatAutoCompleteTextView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/support/v7/widget/AppCompatAutoCompleteTextView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Landroid/support/v7/app/AppCompatViewInflater;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;ZZZZ)Landroid/view/View;" label="Landroid/support/v7/app/AppCompatViewInflater;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;ZZZZ)Landroid/view/View;" />
+      <node id="Landroid/support/v7/widget/TintContextWrapper;-&gt;wrap(Landroid/content/Context;)Landroid/content/Context;" label="Landroid/support/v7/widget/TintContextWrapper;-&gt;wrap(Landroid/content/Context;)Landroid/content/Context;" />
+      <node id="Landroid/support/v7/widget/TintContextWrapper;-&gt;shouldWrap(Landroid/content/Context;)Z" label="Landroid/support/v7/widget/TintContextWrapper;-&gt;shouldWrap(Landroid/content/Context;)Z" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV9;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" label="Landroid/support/v7/app/AppCompatDelegateImplV9;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" />
+      <node id="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/AppCompatAutoCompleteTextView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Landroid/support/v7/widget/TintContextWrapper;-&gt;wrap(Landroid/content/Context;)Landroid/content/Context;" id="0" />
+      <edge source="Landroid/support/v7/app/AppCompatViewInflater;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;ZZZZ)Landroid/view/View;" target="Landroid/support/v7/widget/TintContextWrapper;-&gt;wrap(Landroid/content/Context;)Landroid/content/Context;" id="1" />
+      <edge source="Landroid/support/v7/widget/TintContextWrapper;-&gt;wrap(Landroid/content/Context;)Landroid/content/Context;" target="Landroid/support/v7/widget/TintContextWrapper;-&gt;shouldWrap(Landroid/content/Context;)Z" id="2" />
+      <edge source="Landroid/support/v7/widget/TintContextWrapper;-&gt;shouldWrap(Landroid/content/Context;)Z" target="Landroid/support/v7/widget/VectorEnabledTintResources;-&gt;shouldBeUsed()Z" id="3" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV9;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" target="Landroid/support/v7/widget/VectorEnabledTintResources;-&gt;shouldBeUsed()Z" id="4" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV9;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" target="Landroid/support/v7/app/AppCompatViewInflater;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;ZZZZ)Landroid/view/View;" id="5" />
+      <edge source="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Landroid/support/v7/widget/AppCompatAutoCompleteTextView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

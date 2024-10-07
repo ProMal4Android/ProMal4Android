@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lact/TrackingReceiver$a;-&gt;a([Ljava/lang/Void;)Ljava/lang/Boolean;" label="Lact/TrackingReceiver$a;-&gt;a([Ljava/lang/Void;)Ljava/lang/Boolean;" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;" label="Landroid/support/v4/app/RemoteInput;-&gt;getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" label="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" label="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" />
+      <node id="Landroid/os/Bundle;-&gt;keySet()Ljava/util/Set;" label="Landroid/os/Bundle;-&gt;keySet()Ljava/util/Set;" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;getClipDataIntentFromIntent(Landroid/content/Intent;)Landroid/content/Intent;" label="Landroid/support/v4/app/RemoteInput;-&gt;getClipDataIntentFromIntent(Landroid/content/Intent;)Landroid/content/Intent;" />
+      <node id="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" label="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" />
+    </nodes>
+    <edges>
+      <edge source="Lact/TrackingReceiver$a;-&gt;a([Ljava/lang/Void;)Ljava/lang/Boolean;" target="Landroid/os/Bundle;-&gt;keySet()Ljava/util/Set;" id="0" />
+      <edge source="Lact/TrackingReceiver$a;-&gt;a([Ljava/lang/Void;)Ljava/lang/Boolean;" target="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" id="1" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;" target="Landroid/os/Bundle;-&gt;keySet()Ljava/util/Set;" id="2" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;" target="Landroid/support/v4/app/RemoteInput;-&gt;getClipDataIntentFromIntent(Landroid/content/Intent;)Landroid/content/Intent;" id="3" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;" target="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" id="4" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/RemoteInput;-&gt;getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;" id="5" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" id="6" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/RemoteInput;-&gt;getClipDataIntentFromIntent(Landroid/content/Intent;)Landroid/content/Intent;" id="7" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" target="Landroid/support/v4/app/RemoteInput;-&gt;getClipDataIntentFromIntent(Landroid/content/Intent;)Landroid/content/Intent;" id="8" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" target="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" id="9" />
+    </edges>
+  </graph>
+</gexf>

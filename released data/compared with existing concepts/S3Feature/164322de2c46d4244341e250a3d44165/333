@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/res/Resources;-&gt;getConfiguration()Landroid/content/res/Configuration;" label="Landroid/content/res/Resources;-&gt;getConfiguration()Landroid/content/res/Configuration;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" />
+      <node id="Lcom/android/common/NetworkConnectivityListener;-&gt;stopListening()V" label="Lcom/android/common/NetworkConnectivityListener;-&gt;stopListening()V" />
+      <node id="Landroid/content/Context;-&gt;unregisterReceiver(Landroid/content/BroadcastReceiver;)V" label="Landroid/content/Context;-&gt;unregisterReceiver(Landroid/content/BroadcastReceiver;)V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyDayNight(Z)Z" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyDayNight(Z)Z" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-&gt;cleanup()V" label="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-&gt;cleanup()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" target="Landroid/content/res/Resources;-&gt;getConfiguration()Landroid/content/res/Configuration;" id="0" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroid/content/res/Resources;-&gt;getConfiguration()Landroid/content/res/Configuration;" id="1" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" id="2" />
+      <edge source="Lcom/android/common/NetworkConnectivityListener;-&gt;stopListening()V" target="Landroid/content/Context;-&gt;unregisterReceiver(Landroid/content/BroadcastReceiver;)V" id="3" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyDayNight(Z)Z" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" id="4" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyDayNight(Z)Z" target="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-&gt;cleanup()V" id="5" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-&gt;cleanup()V" target="Landroid/content/Context;-&gt;unregisterReceiver(Landroid/content/BroadcastReceiver;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

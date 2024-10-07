@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parseOne(Ljava/io/InputStream;)V" label="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parseOne(Ljava/io/InputStream;)V" />
+      <node id="Ljava/io/InputStreamReader;-&gt;&lt;init&gt;(Ljava/io/InputStream;Ljava/lang/String;)V" label="Ljava/io/InputStreamReader;-&gt;&lt;init&gt;(Ljava/io/InputStream;Ljava/lang/String;)V" />
+      <node id="Lcom/android/vcard/VCardParser_V21;-&gt;parseOne(Ljava/io/InputStream;)V" label="Lcom/android/vcard/VCardParser_V21;-&gt;parseOne(Ljava/io/InputStream;)V" />
+      <node id="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" label="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;fromMediaItemList(Ljava/util/List;)Ljava/util/List;" label="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;fromMediaItemList(Ljava/util/List;)Ljava/util/List;" />
+      <node id="Ljava/util/Iterator;-&gt;hasNext()Z" label="Ljava/util/Iterator;-&gt;hasNext()Z" />
+      <node id="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parse(Ljava/io/InputStream;)V" label="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parse(Ljava/io/InputStream;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parseOne(Ljava/io/InputStream;)V" target="Ljava/io/InputStreamReader;-&gt;&lt;init&gt;(Ljava/io/InputStream;Ljava/lang/String;)V" id="0" />
+      <edge source="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parseOne(Ljava/io/InputStream;)V" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="1" />
+      <edge source="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parseOne(Ljava/io/InputStream;)V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="2" />
+      <edge source="Lcom/android/vcard/VCardParser_V21;-&gt;parseOne(Ljava/io/InputStream;)V" target="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parseOne(Ljava/io/InputStream;)V" id="3" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;fromMediaItemList(Ljava/util/List;)Ljava/util/List;" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="4" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;fromMediaItemList(Ljava/util/List;)Ljava/util/List;" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="5" />
+      <edge source="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parse(Ljava/io/InputStream;)V" target="Ljava/io/InputStreamReader;-&gt;&lt;init&gt;(Ljava/io/InputStream;Ljava/lang/String;)V" id="6" />
+      <edge source="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parse(Ljava/io/InputStream;)V" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="7" />
+      <edge source="Lcom/android/vcard/VCardParserImpl_V21;-&gt;parse(Ljava/io/InputStream;)V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="8" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;onLayout(ZIIII)V" label="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;onLayout(ZIIII)V" />
+      <node id="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;c()V" label="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;c()V" />
+      <node id="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;e()V" label="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;e()V" />
+      <node id="Landroid/widget/Scroller;-&gt;computeScrollOffset()Z" label="Landroid/widget/Scroller;-&gt;computeScrollOffset()Z" />
+      <node id="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getChildCount()I" label="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getChildCount()I" />
+      <node id="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getMaxScroll()I" label="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getMaxScroll()I" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;computeScroll()V" label="Landroid/support/v4/view/ViewPager;-&gt;computeScroll()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;onLayout(ZIIII)V" target="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;c()V" id="0" />
+      <edge source="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;onLayout(ZIIII)V" target="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getChildCount()I" id="1" />
+      <edge source="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;c()V" target="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getMaxScroll()I" id="2" />
+      <edge source="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;e()V" target="Landroid/widget/Scroller;-&gt;computeScrollOffset()Z" id="3" />
+      <edge source="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;e()V" target="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getMaxScroll()I" id="4" />
+      <edge source="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getMaxScroll()I" target="Lcom/viruscleaner/antivirus/security/browser/customview/RecentsList;-&gt;getChildCount()I" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;computeScroll()V" target="Landroid/widget/Scroller;-&gt;computeScrollOffset()Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

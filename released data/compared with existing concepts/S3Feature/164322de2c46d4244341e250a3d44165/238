@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" label="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" />
+      <node id="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" label="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" />
+      <node id="Ljava/lang/Class;-&gt;forName(Ljava/lang/String;)Ljava/lang/Class;" label="Ljava/lang/Class;-&gt;forName(Ljava/lang/String;)Ljava/lang/Class;" />
+      <node id="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushMarshmallows(Landroid/content/res/Resources;)V" label="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushMarshmallows(Landroid/content/res/Resources;)V" />
+      <node id="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushThemedResourcesCache(Ljava/lang/Object;)V" label="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushThemedResourcesCache(Ljava/lang/Object;)V" />
+      <node id="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" label="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;getAnnotationGeneratedGlideModules(Landroid/content/Context;)Lcom/bumptech/glide/GeneratedAppGlideModule;" label="Lcom/bumptech/glide/Glide;-&gt;getAnnotationGeneratedGlideModules(Landroid/content/Context;)Lcom/bumptech/glide/GeneratedAppGlideModule;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" target="Lcom/bumptech/glide/Glide;-&gt;getAnnotationGeneratedGlideModules(Landroid/content/Context;)Lcom/bumptech/glide/GeneratedAppGlideModule;" id="0" />
+      <edge source="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushMarshmallows(Landroid/content/res/Resources;)V" target="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" id="1" />
+      <edge source="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushMarshmallows(Landroid/content/res/Resources;)V" target="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushThemedResourcesCache(Ljava/lang/Object;)V" id="2" />
+      <edge source="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushMarshmallows(Landroid/content/res/Resources;)V" target="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" id="3" />
+      <edge source="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushThemedResourcesCache(Ljava/lang/Object;)V" target="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" id="4" />
+      <edge source="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushThemedResourcesCache(Ljava/lang/Object;)V" target="Ljava/lang/Class;-&gt;forName(Ljava/lang/String;)Ljava/lang/Class;" id="5" />
+      <edge source="Landroidx/appcompat/app/ResourcesFlusher;-&gt;flushThemedResourcesCache(Ljava/lang/Object;)V" target="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" id="6" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;getAnnotationGeneratedGlideModules(Landroid/content/Context;)Lcom/bumptech/glide/GeneratedAppGlideModule;" target="Ljava/lang/Class;-&gt;forName(Ljava/lang/String;)Ljava/lang/Class;" id="7" />
+    </edges>
+  </graph>
+</gexf>

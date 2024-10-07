@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawVertical(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" label="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawVertical(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" />
+      <node id="Landroid/graphics/Canvas;-&gt;save()I" label="Landroid/graphics/Canvas;-&gt;save()I" />
+      <node id="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawHorizontal(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" label="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawHorizontal(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" />
+      <node id="Landroid/support/v7/widget/DividerItemDecoration;-&gt;onDraw(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$State;)V" label="Landroid/support/v7/widget/DividerItemDecoration;-&gt;onDraw(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$State;)V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;getClipToPadding()Z" label="Landroid/support/v7/widget/RecyclerView;-&gt;getClipToPadding()Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;" label="Landroid/support/v7/widget/RecyclerView;-&gt;getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;" />
+      <node id="Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;-&gt;performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z" label="Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;-&gt;performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawVertical(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" target="Landroid/graphics/Canvas;-&gt;save()I" id="0" />
+      <edge source="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawVertical(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getClipToPadding()Z" id="1" />
+      <edge source="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawHorizontal(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" target="Landroid/graphics/Canvas;-&gt;save()I" id="2" />
+      <edge source="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawHorizontal(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getClipToPadding()Z" id="3" />
+      <edge source="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawHorizontal(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;" id="4" />
+      <edge source="Landroid/support/v7/widget/DividerItemDecoration;-&gt;onDraw(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$State;)V" target="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawVertical(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" id="5" />
+      <edge source="Landroid/support/v7/widget/DividerItemDecoration;-&gt;onDraw(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$State;)V" target="Landroid/support/v7/widget/DividerItemDecoration;-&gt;drawHorizontal(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;)V" id="6" />
+      <edge source="Landroid/support/v7/widget/DividerItemDecoration;-&gt;onDraw(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$State;)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;" id="7" />
+      <edge source="Landroid/support/v7/widget/RecyclerViewAccessibilityDelegate;-&gt;performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z" target="Landroid/support/v7/widget/RecyclerView;-&gt;getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;" id="8" />
+    </edges>
+  </graph>
+</gexf>

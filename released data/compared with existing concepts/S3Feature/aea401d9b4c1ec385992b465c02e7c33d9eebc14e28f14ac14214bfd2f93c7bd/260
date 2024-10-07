@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/ads/AdChoicesView$1;-&gt;onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z" label="Lcom/facebook/ads/AdChoicesView$1;-&gt;onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/i;)Landroid/content/Intent;" label="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/i;)Landroid/content/Intent;" />
+      <node id="Lcom/facebook/ads/internal/util/r;-&gt;a(Ljava/lang/String;)Z" label="Lcom/facebook/ads/internal/util/r;-&gt;a(Ljava/lang/String;)Z" />
+      <node id="Lcom/facebook/ads/internal/util/f;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" label="Lcom/facebook/ads/internal/util/f;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" />
+      <node id="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" label="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/ads/AdChoicesView$1;-&gt;onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z" target="Lcom/facebook/ads/internal/util/r;-&gt;a(Ljava/lang/String;)Z" id="0" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" id="1" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" id="2" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/i;)Landroid/content/Intent;" target="Lcom/facebook/ads/internal/util/r;-&gt;a(Ljava/lang/String;)Z" id="3" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/i;)Landroid/content/Intent;" target="Lcom/facebook/ads/internal/util/f;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" id="4" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/i;)Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" id="5" />
+      <edge source="Lcom/facebook/ads/internal/util/f;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" target="Lcom/facebook/ads/internal/util/r;-&gt;a(Ljava/lang/String;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

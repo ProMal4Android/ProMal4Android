@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/chips/recipientchip/ReplacementDrawableSpan;-&gt;draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V" label="Lcom/android/ex/chips/recipientchip/ReplacementDrawableSpan;-&gt;draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V" />
+      <node id="Landroidx/appcompat/view/menu/ActionMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" label="Landroidx/appcompat/view/menu/ActionMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroidx/appcompat/widget/AppCompatSeekBarHelper;-&gt;drawTickMarks(Landroid/graphics/Canvas;)V" label="Landroidx/appcompat/widget/AppCompatSeekBarHelper;-&gt;drawTickMarks(Landroid/graphics/Canvas;)V" />
+      <node id="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" label="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" />
+      <node id="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" label="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" />
+      <node id="Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;-&gt;computeConstantSize()V" label="Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;-&gt;computeConstantSize()V" />
+      <node id="Landroid/graphics/Canvas;-&gt;save()I" label="Landroid/graphics/Canvas;-&gt;save()I" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/chips/recipientchip/ReplacementDrawableSpan;-&gt;draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V" target="Landroid/graphics/Canvas;-&gt;save()I" id="0" />
+      <edge source="Landroidx/appcompat/view/menu/ActionMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" id="1" />
+      <edge source="Landroidx/appcompat/view/menu/ActionMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" id="2" />
+      <edge source="Landroidx/appcompat/widget/AppCompatSeekBarHelper;-&gt;drawTickMarks(Landroid/graphics/Canvas;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" id="3" />
+      <edge source="Landroidx/appcompat/widget/AppCompatSeekBarHelper;-&gt;drawTickMarks(Landroid/graphics/Canvas;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" id="4" />
+      <edge source="Landroidx/appcompat/widget/AppCompatSeekBarHelper;-&gt;drawTickMarks(Landroid/graphics/Canvas;)V" target="Landroid/graphics/Canvas;-&gt;save()I" id="5" />
+      <edge source="Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;-&gt;computeConstantSize()V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" id="6" />
+      <edge source="Landroidx/appcompat/graphics/drawable/DrawableContainer$DrawableContainerState;-&gt;computeConstantSize()V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

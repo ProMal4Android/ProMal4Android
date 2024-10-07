@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;syncState()V" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;syncState()V" />
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" />
+      <node id="Landroid/support/v4/widget/MaterialProgressDrawable$Ring;-&gt;getStrokeWidth()F" label="Landroid/support/v4/widget/MaterialProgressDrawable$Ring;-&gt;getStrokeWidth()F" />
+      <node id="Landroid/support/v4/widget/MaterialProgressDrawable;-&gt;getMinProgressArc(Landroid/support/v4/widget/MaterialProgressDrawable$Ring;)F" label="Landroid/support/v4/widget/MaterialProgressDrawable;-&gt;getMinProgressArc(Landroid/support/v4/widget/MaterialProgressDrawable$Ring;)F" />
+      <node id="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" label="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Ljava/lang/Math;-&gt;toRadians(D)D" label="Ljava/lang/Math;-&gt;toRadians(D)D" />
+      <node id="Landroid/support/graphics/drawable/PathParser$PathDataNode;-&gt;drawArc(Landroid/graphics/Path;FFFFFFFZZ)V" label="Landroid/support/graphics/drawable/PathParser$PathDataNode;-&gt;drawArc(Landroid/graphics/Path;FFFFFFFZZ)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;syncState()V" target="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" id="0" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="1" />
+      <edge source="Landroid/support/v4/widget/MaterialProgressDrawable;-&gt;getMinProgressArc(Landroid/support/v4/widget/MaterialProgressDrawable$Ring;)F" target="Landroid/support/v4/widget/MaterialProgressDrawable$Ring;-&gt;getStrokeWidth()F" id="2" />
+      <edge source="Landroid/support/v4/widget/MaterialProgressDrawable;-&gt;getMinProgressArc(Landroid/support/v4/widget/MaterialProgressDrawable$Ring;)F" target="Ljava/lang/Math;-&gt;toRadians(D)D" id="3" />
+      <edge source="Landroid/support/graphics/drawable/PathParser$PathDataNode;-&gt;drawArc(Landroid/graphics/Path;FFFFFFFZZ)V" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="4" />
+      <edge source="Landroid/support/graphics/drawable/PathParser$PathDataNode;-&gt;drawArc(Landroid/graphics/Path;FFFFFFFZZ)V" target="Ljava/lang/Math;-&gt;toRadians(D)D" id="5" />
+    </edges>
+  </graph>
+</gexf>

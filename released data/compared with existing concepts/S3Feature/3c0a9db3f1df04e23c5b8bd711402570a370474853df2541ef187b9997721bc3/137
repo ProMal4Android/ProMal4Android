@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-19">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;-&gt;&lt;init&gt;(Ljava/util/Date;Ljava/util/Date;Lch/boye/httpclientandroidlib/StatusLine;[Lch/boye/httpclientandroidlib/Header;Lch/boye/httpclientandroidlib/client/cache/Resource;)V" label="Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;-&gt;&lt;init&gt;(Ljava/util/Date;Ljava/util/Date;Lch/boye/httpclientandroidlib/StatusLine;[Lch/boye/httpclientandroidlib/Header;Lch/boye/httpclientandroidlib/client/cache/Resource;)V" />
+      <node id="Lch/boye/httpclientandroidlib/impl/client/cache/CacheEntryUpdater;-&gt;updateCacheEntry(Ljava/lang/String;Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;Ljava/util/Date;Ljava/util/Date;Lch/boye/httpclientandroidlib/HttpResponse;)Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;" label="Lch/boye/httpclientandroidlib/impl/client/cache/CacheEntryUpdater;-&gt;updateCacheEntry(Ljava/lang/String;Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;Ljava/util/Date;Ljava/util/Date;Lch/boye/httpclientandroidlib/HttpResponse;)Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;" />
+      <node id="Lch/boye/httpclientandroidlib/HttpResponse;-&gt;getStatusLine()Lch/boye/httpclientandroidlib/StatusLine;" label="Lch/boye/httpclientandroidlib/HttpResponse;-&gt;getStatusLine()Lch/boye/httpclientandroidlib/StatusLine;" />
+      <node id="Lch/boye/httpclientandroidlib/impl/AbstractHttpClientConnection;-&gt;receiveResponseHeader()Lch/boye/httpclientandroidlib/HttpResponse;" label="Lch/boye/httpclientandroidlib/impl/AbstractHttpClientConnection;-&gt;receiveResponseHeader()Lch/boye/httpclientandroidlib/HttpResponse;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" label="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;getLoaderManager(Ljava/lang/String;ZZ)Landroid/support/v4/app/LoaderManagerImpl;" label="Landroid/support/v4/app/FragmentActivity;-&gt;getLoaderManager(Ljava/lang/String;ZZ)Landroid/support/v4/app/LoaderManagerImpl;" />
+      <node id="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" label="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;-&gt;&lt;init&gt;(Ljava/util/Date;Ljava/util/Date;Lch/boye/httpclientandroidlib/StatusLine;[Lch/boye/httpclientandroidlib/Header;Lch/boye/httpclientandroidlib/client/cache/Resource;)V" target="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Lch/boye/httpclientandroidlib/impl/client/cache/CacheEntryUpdater;-&gt;updateCacheEntry(Ljava/lang/String;Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;Ljava/util/Date;Ljava/util/Date;Lch/boye/httpclientandroidlib/HttpResponse;)Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;" target="Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;-&gt;&lt;init&gt;(Ljava/util/Date;Ljava/util/Date;Lch/boye/httpclientandroidlib/StatusLine;[Lch/boye/httpclientandroidlib/Header;Lch/boye/httpclientandroidlib/client/cache/Resource;)V" id="1" />
+      <edge source="Lch/boye/httpclientandroidlib/impl/client/cache/CacheEntryUpdater;-&gt;updateCacheEntry(Ljava/lang/String;Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;Ljava/util/Date;Ljava/util/Date;Lch/boye/httpclientandroidlib/HttpResponse;)Lch/boye/httpclientandroidlib/client/cache/HttpCacheEntry;" target="Lch/boye/httpclientandroidlib/HttpResponse;-&gt;getStatusLine()Lch/boye/httpclientandroidlib/StatusLine;" id="2" />
+      <edge source="Lch/boye/httpclientandroidlib/impl/AbstractHttpClientConnection;-&gt;receiveResponseHeader()Lch/boye/httpclientandroidlib/HttpResponse;" target="Lch/boye/httpclientandroidlib/HttpResponse;-&gt;getStatusLine()Lch/boye/httpclientandroidlib/StatusLine;" id="3" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" target="Landroid/support/v4/app/FragmentActivity;-&gt;getLoaderManager(Ljava/lang/String;ZZ)Landroid/support/v4/app/LoaderManagerImpl;" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;getLoaderManager(Ljava/lang/String;ZZ)Landroid/support/v4/app/LoaderManagerImpl;" target="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" id="5" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z" label="Landroid/support/v4/view/ViewPager;-&gt;dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z" />
+      <node id="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" label="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" />
+      <node id="Landroid/view/accessibility/AccessibilityEvent;-&gt;getEventType()I" label="Landroid/view/accessibility/AccessibilityEvent;-&gt;getEventType()I" />
+      <node id="Landroid/support/v7/widget/ActionBarContextView;-&gt;onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V" label="Landroid/support/v7/widget/ActionBarContextView;-&gt;onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z" target="Landroid/view/accessibility/AccessibilityEvent;-&gt;getEventType()I" id="0" />
+      <edge source="Landroid/support/v7/widget/ActionBarContextView;-&gt;onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="1" />
+      <edge source="Landroid/support/v7/widget/ActionBarContextView;-&gt;onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V" target="Landroid/view/accessibility/AccessibilityEvent;-&gt;getEventType()I" id="2" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="3" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" target="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" id="4" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" id="5" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" id="6" />
+    </edges>
+  </graph>
+</gexf>

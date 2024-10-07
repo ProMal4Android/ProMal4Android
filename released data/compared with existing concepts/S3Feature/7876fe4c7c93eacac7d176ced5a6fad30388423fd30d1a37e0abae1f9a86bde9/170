@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getItem(I)Ljava/lang/Object;" label="Landroid/support/v7/internal/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getItem(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserView$Callbacks;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" label="Landroid/support/v7/internal/widget/ActivityChooserView$Callbacks;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" />
+      <node id="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getItemViewType(I)I" label="Landroid/support/v7/internal/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getItemViewType(I)I" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserView;-&gt;access$500(Landroid/support/v7/internal/widget/ActivityChooserView;I)V" label="Landroid/support/v7/internal/widget/ActivityChooserView;-&gt;access$500(Landroid/support/v7/internal/widget/ActivityChooserView;I)V" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserView;-&gt;showPopupUnchecked(I)V" label="Landroid/support/v7/internal/widget/ActivityChooserView;-&gt;showPopupUnchecked(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getItem(I)Ljava/lang/Object;" target="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" id="0" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getItem(I)Ljava/lang/Object;" target="Landroid/support/v7/internal/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getItemViewType(I)I" id="1" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserView$Callbacks;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" target="Landroid/support/v7/internal/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getItemViewType(I)I" id="2" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserView$Callbacks;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" target="Landroid/support/v7/internal/widget/ActivityChooserView;-&gt;access$500(Landroid/support/v7/internal/widget/ActivityChooserView;I)V" id="3" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserView;-&gt;access$500(Landroid/support/v7/internal/widget/ActivityChooserView;I)V" target="Landroid/support/v7/internal/widget/ActivityChooserView;-&gt;showPopupUnchecked(I)V" id="4" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserView;-&gt;showPopupUnchecked(I)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="5" />
+    </edges>
+  </graph>
+</gexf>

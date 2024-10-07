@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;-&gt;&lt;init&gt;(Ljava/util/Map;)V" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;-&gt;&lt;init&gt;(Ljava/util/Map;)V" />
+      <node id="Lcom/google/android/gms/common/api/internal/zzch;-&gt;onStop()V" label="Lcom/google/android/gms/common/api/internal/zzch;-&gt;onStop()V" />
+      <node id="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" label="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/app/Fragment;-&gt;onStop()V" label="Landroid/app/Fragment;-&gt;onStop()V" />
+      <node id="Ljava/util/Iterator;-&gt;hasNext()Z" label="Ljava/util/Iterator;-&gt;hasNext()Z" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" label="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;-&gt;&lt;init&gt;(Ljava/util/Map;)V" target="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;-&gt;&lt;init&gt;(Ljava/util/Map;)V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="1" />
+      <edge source="Lcom/google/android/gms/common/api/internal/zzch;-&gt;onStop()V" target="Landroid/app/Fragment;-&gt;onStop()V" id="2" />
+      <edge source="Lcom/google/android/gms/common/api/internal/zzch;-&gt;onStop()V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="3" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;-&gt;&lt;init&gt;(Ljava/util/Map;)V" id="4" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="6" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" target="Landroid/app/Fragment;-&gt;onStop()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

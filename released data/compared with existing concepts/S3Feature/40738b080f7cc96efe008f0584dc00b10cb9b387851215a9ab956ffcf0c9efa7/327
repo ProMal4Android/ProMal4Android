@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" />
+      <node id="Lb/b/f/k/dc;-&gt;hf(Ljava/lang/Object;)Lb/b/f/k/dc;" label="Lb/b/f/k/dc;-&gt;hf(Ljava/lang/Object;)Lb/b/f/k/dc;" />
+      <node id="Lb/b/b/bb;-&gt;b(Ljava/io/InputStream;)Lb/b/f/k/dc;" label="Lb/b/b/bb;-&gt;b(Ljava/io/InputStream;)Lb/b/f/k/dc;" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Lb/b/f/nb;-&gt;nb(Ljava/lang/Object;)Lb/b/f/nb;" label="Lb/b/f/nb;-&gt;nb(Ljava/lang/Object;)Lb/b/f/nb;" />
+      <node id="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" label="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" />
+      <node id="Lb/b/b/t;-&gt;b(Ljava/lang/String;Ljava/lang/String;Ljava/security/Provider;)Lb/b/b/t$_b;" label="Lb/b/b/t;-&gt;b(Ljava/lang/String;Ljava/lang/String;Ljava/security/Provider;)Lb/b/b/t$_b;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" target="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" id="0" />
+      <edge source="Lb/b/f/k/dc;-&gt;hf(Ljava/lang/Object;)Lb/b/f/k/dc;" target="Lb/b/f/nb;-&gt;nb(Ljava/lang/Object;)Lb/b/f/nb;" id="1" />
+      <edge source="Lb/b/b/bb;-&gt;b(Ljava/io/InputStream;)Lb/b/f/k/dc;" target="Lb/b/f/k/dc;-&gt;hf(Ljava/lang/Object;)Lb/b/f/k/dc;" id="2" />
+      <edge source="Lb/b/b/bb;-&gt;b(Ljava/io/InputStream;)Lb/b/f/k/dc;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="3" />
+      <edge source="Lb/b/f/nb;-&gt;nb(Ljava/lang/Object;)Lb/b/f/nb;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="4" />
+      <edge source="Lb/b/b/t;-&gt;b(Ljava/lang/String;Ljava/lang/String;Ljava/security/Provider;)Lb/b/b/t$_b;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="5" />
+      <edge source="Lb/b/b/t;-&gt;b(Ljava/lang/String;Ljava/lang/String;Ljava/security/Provider;)Lb/b/b/t$_b;" target="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" id="6" />
+    </edges>
+  </graph>
+</gexf>

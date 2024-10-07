@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getItemViewType(I)I" label="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getItemViewType(I)I" />
+      <node id="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" label="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;)V" label="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;)V" />
+      <node id="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getItem(I)Ljava/lang/Object;" label="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getItem(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="0" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getItemViewType(I)I" id="1" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getItem(I)Ljava/lang/Object;" id="2" />
+      <edge source="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="3" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;)V" target="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" id="4" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getItem(I)Ljava/lang/Object;" target="Landroidx/appcompat/widget/ActivityChooserView$a;-&gt;getItemViewType(I)I" id="5" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" target="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;selectMode()I" label="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;selectMode()I" />
+      <node id="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCamera()Z" label="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCamera()Z" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" label="Landroid/support/v4/app/Fragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" />
+      <node id="Landroid/os/Bundle;-&gt;getBoolean(Ljava/lang/String;Z)Z" label="Landroid/os/Bundle;-&gt;getBoolean(Ljava/lang/String;Z)Z" />
+      <node id="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" label="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" />
+      <node id="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getArguments()Landroid/os/Bundle;" label="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getArguments()Landroid/os/Bundle;" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" label="Landroid/support/v4/app/ListFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;selectMode()I" target="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getArguments()Landroid/os/Bundle;" id="0" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCamera()Z" target="Landroid/os/Bundle;-&gt;getBoolean(Ljava/lang/String;Z)Z" id="1" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCamera()Z" target="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getArguments()Landroid/os/Bundle;" id="2" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" target="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;selectMode()I" id="3" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" target="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCamera()Z" id="4" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/Fragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" id="5" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" target="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getArguments()Landroid/os/Bundle;" id="6" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/Fragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

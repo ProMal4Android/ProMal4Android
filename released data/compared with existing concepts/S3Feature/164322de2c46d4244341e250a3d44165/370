@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" label="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" />
+      <node id="Landroidx/appcompat/app/ActionBarDrawerToggle$FrameworkActionBarDelegate;-&gt;setActionBarDescription(I)V" label="Landroidx/appcompat/app/ActionBarDrawerToggle$FrameworkActionBarDelegate;-&gt;setActionBarDescription(I)V" />
+      <node id="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" label="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" />
+      <node id="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" label="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" />
+      <node id="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" label="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" />
+      <node id="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" label="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" target="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" id="0" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggle$FrameworkActionBarDelegate;-&gt;setActionBarDescription(I)V" target="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" id="1" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggle$FrameworkActionBarDelegate;-&gt;setActionBarDescription(I)V" target="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" id="2" />
+      <edge source="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" target="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" id="5" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="6" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" target="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" id="7" />
+    </edges>
+  </graph>
+</gexf>

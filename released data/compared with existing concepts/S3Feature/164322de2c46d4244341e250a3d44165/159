@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/ListPreloader;-&gt;cancelAll()V" label="Lcom/bumptech/glide/ListPreloader;-&gt;cancelAll()V" />
+      <node id="Lcom/bumptech/glide/load/model/ModelCache$ModelKey;-&gt;get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;" label="Lcom/bumptech/glide/load/model/ModelCache$ModelKey;-&gt;get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;" />
+      <node id="Ljava/util/Queue;-&gt;poll()Ljava/lang/Object;" label="Ljava/util/Queue;-&gt;poll()Ljava/lang/Object;" />
+      <node id="Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;-&gt;next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;" label="Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;-&gt;next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;" />
+      <node id="Lcom/bumptech/glide/load/model/ModelCache;-&gt;put(Ljava/lang/Object;IILjava/lang/Object;)V" label="Lcom/bumptech/glide/load/model/ModelCache;-&gt;put(Ljava/lang/Object;IILjava/lang/Object;)V" />
+      <node id="Lcom/bumptech/glide/load/model/ModelCache;-&gt;get(Ljava/lang/Object;II)Ljava/lang/Object;" label="Lcom/bumptech/glide/load/model/ModelCache;-&gt;get(Ljava/lang/Object;II)Ljava/lang/Object;" />
+      <node id="Lcom/bumptech/glide/load/model/stream/BaseGlideUrlLoader;-&gt;buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;" label="Lcom/bumptech/glide/load/model/stream/BaseGlideUrlLoader;-&gt;buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/ListPreloader;-&gt;cancelAll()V" target="Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;-&gt;next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;" id="0" />
+      <edge source="Lcom/bumptech/glide/load/model/ModelCache$ModelKey;-&gt;get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;" target="Ljava/util/Queue;-&gt;poll()Ljava/lang/Object;" id="1" />
+      <edge source="Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;-&gt;next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;" target="Ljava/util/Queue;-&gt;poll()Ljava/lang/Object;" id="2" />
+      <edge source="Lcom/bumptech/glide/load/model/ModelCache;-&gt;put(Ljava/lang/Object;IILjava/lang/Object;)V" target="Lcom/bumptech/glide/load/model/ModelCache$ModelKey;-&gt;get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;" id="3" />
+      <edge source="Lcom/bumptech/glide/load/model/ModelCache;-&gt;get(Ljava/lang/Object;II)Ljava/lang/Object;" target="Lcom/bumptech/glide/load/model/ModelCache$ModelKey;-&gt;get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;" id="4" />
+      <edge source="Lcom/bumptech/glide/load/model/stream/BaseGlideUrlLoader;-&gt;buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;" target="Lcom/bumptech/glide/load/model/ModelCache;-&gt;put(Ljava/lang/Object;IILjava/lang/Object;)V" id="5" />
+      <edge source="Lcom/bumptech/glide/load/model/stream/BaseGlideUrlLoader;-&gt;buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;" target="Lcom/bumptech/glide/load/model/ModelCache;-&gt;get(Ljava/lang/Object;II)Ljava/lang/Object;" id="6" />
+    </edges>
+  </graph>
+</gexf>

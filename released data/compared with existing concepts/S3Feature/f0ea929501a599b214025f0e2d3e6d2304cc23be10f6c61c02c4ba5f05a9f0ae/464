@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/view/View;-&gt;getTop()I" label="Landroid/view/View;-&gt;getTop()I" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;onDraw(Landroid/graphics/Canvas;)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;onDraw(Landroid/graphics/Canvas;)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;getWidth()I" label="Landroid/support/v4/widget/DrawerLayout;-&gt;getWidth()I" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewOffset(Landroid/view/View;)F" label="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewOffset(Landroid/view/View;)F" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;closeDrawer(Landroid/view/View;Z)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;closeDrawer(Landroid/view/View;Z)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;-&gt;onViewReleased(Landroid/view/View;FF)V" label="Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;-&gt;onViewReleased(Landroid/view/View;FF)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;moveDrawerToOffset(Landroid/view/View;F)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;moveDrawerToOffset(Landroid/view/View;F)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;onDraw(Landroid/graphics/Canvas;)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getWidth()I" id="0" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;closeDrawer(Landroid/view/View;Z)V" target="Landroid/view/View;-&gt;getTop()I" id="1" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;closeDrawer(Landroid/view/View;Z)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getWidth()I" id="2" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;closeDrawer(Landroid/view/View;Z)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;moveDrawerToOffset(Landroid/view/View;F)V" id="3" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;-&gt;onViewReleased(Landroid/view/View;FF)V" target="Landroid/view/View;-&gt;getTop()I" id="4" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;-&gt;onViewReleased(Landroid/view/View;FF)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getWidth()I" id="5" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;-&gt;onViewReleased(Landroid/view/View;FF)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewOffset(Landroid/view/View;)F" id="6" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;moveDrawerToOffset(Landroid/view/View;F)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewOffset(Landroid/view/View;)F" id="7" />
+    </edges>
+  </graph>
+</gexf>

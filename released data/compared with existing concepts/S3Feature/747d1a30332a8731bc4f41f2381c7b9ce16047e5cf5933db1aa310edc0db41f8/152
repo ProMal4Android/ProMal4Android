@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/a/a/d;-&gt;a(Ljava/lang/String;I)I" label="Landroid/support/a/a/d;-&gt;a(Ljava/lang/String;I)I" />
+      <node id="Ljava/lang/String;-&gt;length()I" label="Ljava/lang/String;-&gt;length()I" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;retainNonConfig()Landroid/support/v4/app/FragmentManagerNonConfig;" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;retainNonConfig()Landroid/support/v4/app/FragmentManagerNonConfig;" />
+      <node id="Landroid/support/v4/app/FragmentController;-&gt;retainNestedNonConfig()Landroid/support/v4/app/FragmentManagerNonConfig;" label="Landroid/support/v4/app/FragmentController;-&gt;retainNestedNonConfig()Landroid/support/v4/app/FragmentManagerNonConfig;" />
+      <node id="Landroid/support/a/a/d;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroid/support/a/a/d$b;" label="Landroid/support/a/a/d;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroid/support/a/a/d$b;" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onRetainNonConfigurationInstance()Ljava/lang/Object;" label="Landroid/support/v4/app/FragmentActivity;-&gt;onRetainNonConfigurationInstance()Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/a/a/d;-&gt;a(Ljava/lang/String;I)I" target="Ljava/lang/String;-&gt;length()I" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;retainNonConfig()Landroid/support/v4/app/FragmentManagerNonConfig;" target="Ljava/util/ArrayList;-&gt;size()I" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentController;-&gt;retainNestedNonConfig()Landroid/support/v4/app/FragmentManagerNonConfig;" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;retainNonConfig()Landroid/support/v4/app/FragmentManagerNonConfig;" id="2" />
+      <edge source="Landroid/support/a/a/d;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroid/support/a/a/d$b;" target="Landroid/support/a/a/d;-&gt;a(Ljava/lang/String;I)I" id="3" />
+      <edge source="Landroid/support/a/a/d;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroid/support/a/a/d$b;" target="Ljava/lang/String;-&gt;length()I" id="4" />
+      <edge source="Landroid/support/a/a/d;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroid/support/a/a/d$b;" target="Ljava/util/ArrayList;-&gt;size()I" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onRetainNonConfigurationInstance()Ljava/lang/Object;" target="Landroid/support/v4/app/FragmentController;-&gt;retainNestedNonConfig()Landroid/support/v4/app/FragmentManagerNonConfig;" id="6" />
+    </edges>
+  </graph>
+</gexf>

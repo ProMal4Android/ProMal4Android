@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/support/v7/mms/Utils;-&gt;redactUrlForNonVerbose(Ljava/lang/String;)Ljava/lang/String;" label="Landroidx/support/v7/mms/Utils;-&gt;redactUrlForNonVerbose(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" label="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" />
+      <node id="Landroidx/support/v7/mms/MmsHttpClient;-&gt;execute(Ljava/lang/String;[BLjava/lang/String;ZLjava/lang/String;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)[B" label="Landroidx/support/v7/mms/MmsHttpClient;-&gt;execute(Ljava/lang/String;[BLjava/lang/String;ZLjava/lang/String;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)[B" />
+      <node id="Ljava/io/InputStream;-&gt;close()V" label="Ljava/io/InputStream;-&gt;close()V" />
+      <node id="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" label="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" />
+      <node id="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" label="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" />
+      <node id="Lcom/android/ex/photo/util/ImageUtils;-&gt;getImageBounds(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;)Landroid/graphics/Point;" label="Lcom/android/ex/photo/util/ImageUtils;-&gt;getImageBounds(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;)Landroid/graphics/Point;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/support/v7/mms/Utils;-&gt;redactUrlForNonVerbose(Ljava/lang/String;)Ljava/lang/String;" target="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" id="0" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" target="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" id="1" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" target="Lcom/android/ex/photo/util/ImageUtils;-&gt;getImageBounds(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;)Landroid/graphics/Point;" id="2" />
+      <edge source="Landroidx/support/v7/mms/MmsHttpClient;-&gt;execute(Ljava/lang/String;[BLjava/lang/String;ZLjava/lang/String;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)[B" target="Landroidx/support/v7/mms/Utils;-&gt;redactUrlForNonVerbose(Ljava/lang/String;)Ljava/lang/String;" id="3" />
+      <edge source="Landroidx/support/v7/mms/MmsHttpClient;-&gt;execute(Ljava/lang/String;[BLjava/lang/String;ZLjava/lang/String;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)[B" target="Ljava/io/InputStream;-&gt;close()V" id="4" />
+      <edge source="Landroidx/support/v7/mms/MmsHttpClient;-&gt;execute(Ljava/lang/String;[BLjava/lang/String;ZLjava/lang/String;ILandroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)[B" target="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" id="5" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" target="Ljava/io/InputStream;-&gt;close()V" id="6" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;getImageBounds(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;)Landroid/graphics/Point;" target="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" id="7" />
+    </edges>
+  </graph>
+</gexf>

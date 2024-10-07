@@ -1,0 +1,5 @@
+apk_name:acecard
+node_number:13609
+edge_number:31061
+fcg_graph_time:1.1380126476287842
+pattern_find_time:121.27410936355591

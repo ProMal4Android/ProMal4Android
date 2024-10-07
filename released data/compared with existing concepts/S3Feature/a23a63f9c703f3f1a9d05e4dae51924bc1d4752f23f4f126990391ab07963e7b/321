@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/FacebookSdk;-&gt;updateGraphDebugBehavior()V" label="Lcom/facebook/FacebookSdk;-&gt;updateGraphDebugBehavior()V" />
+      <node id="Landroid/support/design/widget/DirectedAcyclicGraph;-&gt;dfs(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V" label="Landroid/support/design/widget/DirectedAcyclicGraph;-&gt;dfs(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V" />
+      <node id="Ljava/util/HashSet;-&gt;add(Ljava/lang/Object;)Z" label="Ljava/util/HashSet;-&gt;add(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" />
+      <node id="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Lcom/facebook/FacebookSdk;-&gt;addLoggingBehavior(Lcom/facebook/LoggingBehavior;)V" label="Lcom/facebook/FacebookSdk;-&gt;addLoggingBehavior(Lcom/facebook/LoggingBehavior;)V" />
+      <node id="Ljava/util/HashSet;-&gt;contains(Ljava/lang/Object;)Z" label="Ljava/util/HashSet;-&gt;contains(Ljava/lang/Object;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/FacebookSdk;-&gt;updateGraphDebugBehavior()V" target="Ljava/util/HashSet;-&gt;add(Ljava/lang/Object;)Z" id="0" />
+      <edge source="Lcom/facebook/FacebookSdk;-&gt;updateGraphDebugBehavior()V" target="Ljava/util/HashSet;-&gt;contains(Ljava/lang/Object;)Z" id="1" />
+      <edge source="Landroid/support/design/widget/DirectedAcyclicGraph;-&gt;dfs(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V" target="Ljava/util/HashSet;-&gt;add(Ljava/lang/Object;)Z" id="2" />
+      <edge source="Landroid/support/design/widget/DirectedAcyclicGraph;-&gt;dfs(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V" target="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/design/widget/DirectedAcyclicGraph;-&gt;dfs(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V" target="Ljava/util/HashSet;-&gt;contains(Ljava/lang/Object;)Z" id="4" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" target="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+      <edge source="Lcom/facebook/FacebookSdk;-&gt;addLoggingBehavior(Lcom/facebook/LoggingBehavior;)V" target="Lcom/facebook/FacebookSdk;-&gt;updateGraphDebugBehavior()V" id="6" />
+      <edge source="Lcom/facebook/FacebookSdk;-&gt;addLoggingBehavior(Lcom/facebook/LoggingBehavior;)V" target="Ljava/util/HashSet;-&gt;add(Ljava/lang/Object;)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,6 @@
+apk_name:559e8016ffd7fae2203446cb8ea724a5561f50c42230be18828394a65cfa9cf0
+node_number:19
+edge_number:16
+fcg_graph_time:0.02353191375732422
+The size of remerged_sequences is:3
+sensitive api sequence:[['Lfla/jq/nine/flad;->onCreate(Landroid/os/Bundle;)V', 'Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;'], ['Lfla/jq/nine/flad;->onCreate(Landroid/os/Bundle;)V', 'Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V'], ['Lfla/jq/nine/flad;-><init>()V', 'Landroid/app/Activity;-><init>()V']]

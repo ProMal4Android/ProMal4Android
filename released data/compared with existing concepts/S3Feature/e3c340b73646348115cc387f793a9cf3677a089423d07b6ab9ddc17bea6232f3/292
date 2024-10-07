@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;getQueue()Ljava/util/List;" label="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;getQueue()Ljava/util/List;" />
+      <node id="Landroid/arch/lifecycle/FullLifecycleObserverAdapter;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/FullLifecycleObserver;)V" label="Landroid/arch/lifecycle/FullLifecycleObserverAdapter;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/FullLifecycleObserver;)V" />
+      <node id="Landroid/arch/lifecycle/a$a;-&gt;a(Ljava/util/List;Landroid/arch/lifecycle/d;Landroid/arch/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V" label="Landroid/arch/lifecycle/a$a;-&gt;a(Ljava/util/List;Landroid/arch/lifecycle/d;Landroid/arch/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V" />
+      <node id="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" label="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" />
+      <node id="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;removeQueueItemAt(I)V" label="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;removeQueueItemAt(I)V" />
+      <node id="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/a$a;-&gt;a(Ljava/util/List;Landroid/arch/lifecycle/d;Landroid/arch/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V" target="Ljava/util/List;-&gt;size()I" id="0" />
+      <edge source="Landroid/arch/lifecycle/a$a;-&gt;a(Ljava/util/List;Landroid/arch/lifecycle/d;Landroid/arch/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V" target="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" target="Ljava/util/List;-&gt;size()I" id="2" />
+      <edge source="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" target="Landroid/arch/lifecycle/FullLifecycleObserverAdapter;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/FullLifecycleObserver;)V" id="3" />
+      <edge source="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" target="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;removeQueueItemAt(I)V" target="Ljava/util/List;-&gt;size()I" id="5" />
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;removeQueueItemAt(I)V" target="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;getQueue()Ljava/util/List;" id="6" />
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;removeQueueItemAt(I)V" target="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

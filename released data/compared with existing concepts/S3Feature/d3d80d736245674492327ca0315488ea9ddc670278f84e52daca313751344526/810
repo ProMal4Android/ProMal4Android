@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" />
+      <node id="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;onLayoutChild(Landroid/view/View;I)V" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;onLayoutChild(Landroid/view/View;I)V" />
+      <node id="Landroid/support/v4/content/ContextCompat;-&gt;startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z" label="Landroid/support/v4/content/ContextCompat;-&gt;startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithAnchor(Landroid/view/View;Landroid/view/View;I)V" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithAnchor(Landroid/view/View;Landroid/view/View;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="0" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="1" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" target="Landroid/support/v4/content/ContextCompat;-&gt;startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z" id="2" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;onLayoutChild(Landroid/view/View;I)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="3" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;onLayoutChild(Landroid/view/View;I)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="4" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;onLayoutChild(Landroid/view/View;I)V" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithAnchor(Landroid/view/View;Landroid/view/View;I)V" id="5" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithAnchor(Landroid/view/View;Landroid/view/View;I)V" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" id="6" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithAnchor(Landroid/view/View;Landroid/view/View;I)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;setLogoDescription(I)V" label="Landroid/support/v7/widget/Toolbar;-&gt;setLogoDescription(I)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;setLogoDescription(Ljava/lang/CharSequence;)V" label="Landroid/support/v7/widget/Toolbar;-&gt;setLogoDescription(Ljava/lang/CharSequence;)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;ensureLogoView()V" label="Landroid/support/v7/widget/Toolbar;-&gt;ensureLogoView()V" />
+      <node id="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;ensureMenuView()V" label="Landroid/support/v7/widget/Toolbar;-&gt;ensureMenuView()V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;getContext()Landroid/content/Context;" label="Landroid/support/v7/widget/Toolbar;-&gt;getContext()Landroid/content/Context;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setLogoDescription(I)V" target="Landroid/support/v7/widget/Toolbar;-&gt;setLogoDescription(Ljava/lang/CharSequence;)V" id="0" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setLogoDescription(I)V" target="Landroid/support/v7/widget/Toolbar;-&gt;getContext()Landroid/content/Context;" id="1" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setLogoDescription(Ljava/lang/CharSequence;)V" target="Landroid/support/v7/widget/Toolbar;-&gt;ensureLogoView()V" id="2" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;ensureLogoView()V" target="Landroid/support/v7/widget/Toolbar;-&gt;getContext()Landroid/content/Context;" id="3" />
+      <edge source="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="4" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;ensureMenuView()V" target="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="5" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;ensureMenuView()V" target="Landroid/support/v7/widget/Toolbar;-&gt;getContext()Landroid/content/Context;" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/RequestManager;-&gt;resumeRequests()V" label="Lcom/bumptech/glide/RequestManager;-&gt;resumeRequests()V" />
+      <node id="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" label="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" />
+      <node id="Landroid/support/v4/util/ArraySet;-&gt;addAll(Ljava/util/Collection;)Z" label="Landroid/support/v4/util/ArraySet;-&gt;addAll(Ljava/util/Collection;)Z" />
+      <node id="Lcom/bumptech/glide/manager/RequestTracker;-&gt;resumeRequests()V" label="Lcom/bumptech/glide/manager/RequestTracker;-&gt;resumeRequests()V" />
+      <node id="Ljava/util/Collection;-&gt;size()I" label="Ljava/util/Collection;-&gt;size()I" />
+      <node id="Ljava/util/Iterator;-&gt;hasNext()Z" label="Ljava/util/Iterator;-&gt;hasNext()Z" />
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" label="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/RequestManager;-&gt;resumeRequests()V" target="Lcom/bumptech/glide/manager/RequestTracker;-&gt;resumeRequests()V" id="0" />
+      <edge source="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="1" />
+      <edge source="Landroid/support/v4/util/ArraySet;-&gt;addAll(Ljava/util/Collection;)Z" target="Ljava/util/Collection;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v4/util/ArraySet;-&gt;addAll(Ljava/util/Collection;)Z" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="3" />
+      <edge source="Lcom/bumptech/glide/manager/RequestTracker;-&gt;resumeRequests()V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="4" />
+      <edge source="Lcom/bumptech/glide/manager/RequestTracker;-&gt;resumeRequests()V" target="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" id="5" />
+      <edge source="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" target="Ljava/util/Collection;-&gt;size()I" id="6" />
+      <edge source="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

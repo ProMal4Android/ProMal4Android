@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/volley/Request;-&gt;getUrl()Ljava/lang/String;" label="Lcom/android/volley/Request;-&gt;getUrl()Ljava/lang/String;" />
+      <node id="Lcom/android/volley/toolbox/BasicNetwork;-&gt;performRequest(Lcom/android/volley/Request;)Lcom/android/volley/NetworkResponse;" label="Lcom/android/volley/toolbox/BasicNetwork;-&gt;performRequest(Lcom/android/volley/Request;)Lcom/android/volley/NetworkResponse;" />
+      <node id="Ljava/util/Collections;-&gt;emptyMap()Ljava/util/Map;" label="Ljava/util/Collections;-&gt;emptyMap()Ljava/util/Map;" />
+      <node id="Lcom/android/volley/Request;-&gt;getHeaders()Ljava/util/Map;" label="Lcom/android/volley/Request;-&gt;getHeaders()Ljava/util/Map;" />
+      <node id="Lcom/android/volley/toolbox/HttpClientStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" label="Lcom/android/volley/toolbox/HttpClientStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" />
+      <node id="Lcom/android/volley/toolbox/HurlStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" label="Lcom/android/volley/toolbox/HurlStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" />
+      <node id="Lcom/android/volley/toolbox/HttpClientStack;-&gt;addHeaders(Lorg/apache/http/client/methods/HttpUriRequest;Ljava/util/Map;)V" label="Lcom/android/volley/toolbox/HttpClientStack;-&gt;addHeaders(Lorg/apache/http/client/methods/HttpUriRequest;Ljava/util/Map;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/volley/toolbox/BasicNetwork;-&gt;performRequest(Lcom/android/volley/Request;)Lcom/android/volley/NetworkResponse;" target="Lcom/android/volley/Request;-&gt;getUrl()Ljava/lang/String;" id="0" />
+      <edge source="Lcom/android/volley/toolbox/BasicNetwork;-&gt;performRequest(Lcom/android/volley/Request;)Lcom/android/volley/NetworkResponse;" target="Ljava/util/Collections;-&gt;emptyMap()Ljava/util/Map;" id="1" />
+      <edge source="Lcom/android/volley/Request;-&gt;getHeaders()Ljava/util/Map;" target="Ljava/util/Collections;-&gt;emptyMap()Ljava/util/Map;" id="2" />
+      <edge source="Lcom/android/volley/toolbox/HttpClientStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" target="Lcom/android/volley/Request;-&gt;getHeaders()Ljava/util/Map;" id="3" />
+      <edge source="Lcom/android/volley/toolbox/HttpClientStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" target="Lcom/android/volley/toolbox/HttpClientStack;-&gt;addHeaders(Lorg/apache/http/client/methods/HttpUriRequest;Ljava/util/Map;)V" id="4" />
+      <edge source="Lcom/android/volley/toolbox/HurlStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" target="Lcom/android/volley/Request;-&gt;getUrl()Ljava/lang/String;" id="5" />
+      <edge source="Lcom/android/volley/toolbox/HurlStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" target="Lcom/android/volley/Request;-&gt;getHeaders()Ljava/util/Map;" id="6" />
+    </edges>
+  </graph>
+</gexf>

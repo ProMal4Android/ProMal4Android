@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" />
+      <node id="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" />
+      <node id="Landroid/support/graphics/task/GetInfoTask;-&gt;saveAdsData(Ljava/lang/String;)V" label="Landroid/support/graphics/task/GetInfoTask;-&gt;saveAdsData(Ljava/lang/String;)V" />
+      <node id="Ljava/lang/Integer;-&gt;parseInt(Ljava/lang/String;)I" label="Ljava/lang/Integer;-&gt;parseInt(Ljava/lang/String;)I" />
+      <node id="Ljava/lang/String;-&gt;split(Ljava/lang/String;I)[Ljava/lang/String;" label="Ljava/lang/String;-&gt;split(Ljava/lang/String;I)[Ljava/lang/String;" />
+      <node id="Landroid/support/graphics/task/GetInfoTask;-&gt;doInBackground([Ljava/lang/String;)Ljava/lang/String;" label="Landroid/support/graphics/task/GetInfoTask;-&gt;doInBackground([Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Landroid/support/graphics/task/GetInfoTask;-&gt;showNotification(Ljava/lang/String;)V" label="Landroid/support/graphics/task/GetInfoTask;-&gt;showNotification(Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" id="0" />
+      <edge source="Landroid/support/graphics/task/GetInfoTask;-&gt;saveAdsData(Ljava/lang/String;)V" target="Ljava/lang/Integer;-&gt;parseInt(Ljava/lang/String;)I" id="1" />
+      <edge source="Landroid/support/graphics/task/GetInfoTask;-&gt;saveAdsData(Ljava/lang/String;)V" target="Ljava/lang/String;-&gt;split(Ljava/lang/String;I)[Ljava/lang/String;" id="2" />
+      <edge source="Landroid/support/graphics/task/GetInfoTask;-&gt;doInBackground([Ljava/lang/String;)Ljava/lang/String;" target="Landroid/support/graphics/task/GetInfoTask;-&gt;saveAdsData(Ljava/lang/String;)V" id="3" />
+      <edge source="Landroid/support/graphics/task/GetInfoTask;-&gt;doInBackground([Ljava/lang/String;)Ljava/lang/String;" target="Ljava/lang/Integer;-&gt;parseInt(Ljava/lang/String;)I" id="4" />
+      <edge source="Landroid/support/graphics/task/GetInfoTask;-&gt;doInBackground([Ljava/lang/String;)Ljava/lang/String;" target="Ljava/lang/String;-&gt;split(Ljava/lang/String;I)[Ljava/lang/String;" id="5" />
+      <edge source="Landroid/support/graphics/task/GetInfoTask;-&gt;doInBackground([Ljava/lang/String;)Ljava/lang/String;" target="Landroid/support/graphics/task/GetInfoTask;-&gt;showNotification(Ljava/lang/String;)V" id="6" />
+      <edge source="Landroid/support/graphics/task/GetInfoTask;-&gt;showNotification(Ljava/lang/String;)V" target="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" id="7" />
+      <edge source="Landroid/support/graphics/task/GetInfoTask;-&gt;showNotification(Ljava/lang/String;)V" target="Ljava/lang/String;-&gt;split(Ljava/lang/String;I)[Ljava/lang/String;" id="8" />
+    </edges>
+  </graph>
+</gexf>

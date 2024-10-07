@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;)Z" label="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;)Z" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" />
+      <node id="Landroid/app/ActivityManager;-&gt;getRunningTasks(I)Ljava/util/List;" label="Landroid/app/ActivityManager;-&gt;getRunningTasks(I)Ljava/util/List;" />
+      <node id="Lcom/solid/lock/util/TopAppUtil;-&gt;getTopAppBeforeLollipop()Ljava/lang/String;" label="Lcom/solid/lock/util/TopAppUtil;-&gt;getTopAppBeforeLollipop()Ljava/lang/String;" />
+      <node id="Landroid/content/ComponentName;-&gt;getPackageName()Ljava/lang/String;" label="Landroid/content/ComponentName;-&gt;getPackageName()Ljava/lang/String;" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;)Z" target="Landroid/app/ActivityManager;-&gt;getRunningTasks(I)Ljava/util/List;" id="0" />
+      <edge source="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;)Z" target="Landroid/content/ComponentName;-&gt;getPackageName()Ljava/lang/String;" id="1" />
+      <edge source="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;)Z" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" id="3" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" target="Landroid/content/ComponentName;-&gt;getPackageName()Ljava/lang/String;" id="4" />
+      <edge source="Lcom/solid/lock/util/TopAppUtil;-&gt;getTopAppBeforeLollipop()Ljava/lang/String;" target="Landroid/app/ActivityManager;-&gt;getRunningTasks(I)Ljava/util/List;" id="5" />
+      <edge source="Lcom/solid/lock/util/TopAppUtil;-&gt;getTopAppBeforeLollipop()Ljava/lang/String;" target="Landroid/content/ComponentName;-&gt;getPackageName()Ljava/lang/String;" id="6" />
+      <edge source="Lcom/solid/lock/util/TopAppUtil;-&gt;getTopAppBeforeLollipop()Ljava/lang/String;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

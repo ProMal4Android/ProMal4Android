@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/content/ContextCompat;-&gt;startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z" label="Landroid/support/v4/content/ContextCompat;-&gt;startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z" />
+      <node id="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" label="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" />
+      <node id="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" label="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" />
+      <node id="Ljava/util/ArrayList;-&gt;isEmpty()Z" label="Ljava/util/ArrayList;-&gt;isEmpty()Z" />
+      <node id="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureTransitioningViews(Ljava/util/ArrayList;Landroid/view/View;)V" label="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureTransitioningViews(Ljava/util/ArrayList;Landroid/view/View;)V" />
+      <node id="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" label="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" target="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureTransitioningViews(Ljava/util/ArrayList;Landroid/view/View;)V" target="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" target="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" target="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureTransitioningViews(Ljava/util/ArrayList;Landroid/view/View;)V" id="4" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" target="Landroid/support/v4/content/ContextCompat;-&gt;startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z" id="5" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

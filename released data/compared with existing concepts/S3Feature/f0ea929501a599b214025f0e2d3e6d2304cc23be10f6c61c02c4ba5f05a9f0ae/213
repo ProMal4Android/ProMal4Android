@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" label="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" />
+      <node id="Landroid/view/View;-&gt;findViewById(I)Landroid/view/View;" label="Landroid/view/View;-&gt;findViewById(I)Landroid/view/View;" />
+      <node id="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" label="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" />
+      <node id="Landroid/support/multidex/MultiDex;-&gt;findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;" label="Landroid/support/multidex/MultiDex;-&gt;findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" label="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" />
+      <node id="Landroid/support/multidex/MultiDex;-&gt;expandFieldArray(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V" label="Landroid/support/multidex/MultiDex;-&gt;expandFieldArray(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" label="Landroid/support/v4/app/ListFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="0" />
+      <edge source="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" target="Landroid/view/View;-&gt;findViewById(I)Landroid/view/View;" id="1" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="2" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Landroid/view/View;-&gt;findViewById(I)Landroid/view/View;" id="3" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;expandFieldArray(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="4" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;expandFieldArray(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V" target="Landroid/support/multidex/MultiDex;-&gt;findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;" id="5" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

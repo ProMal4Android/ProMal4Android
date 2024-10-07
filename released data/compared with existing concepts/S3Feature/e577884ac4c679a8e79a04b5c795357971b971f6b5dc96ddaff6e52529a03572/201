@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;isInBackStack()Z" label="Landroid/support/v4/app/Fragment;-&gt;isInBackStack()Z" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;getAnimatingAway()Landroid/view/View;" label="Landroid/support/v4/app/Fragment;-&gt;getAnimatingAway()Landroid/view/View;" />
+      <node id="Landroid/view/ViewGroup;-&gt;removeViewAt(I)V" label="Landroid/view/ViewGroup;-&gt;removeViewAt(I)V" />
+      <node id="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" label="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveToState(Landroid/support/v4/app/Fragment;IIIZ)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveToState(Landroid/support/v4/app/Fragment;IIIZ)V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveFragmentToExpectedState(Landroid/support/v4/app/Fragment;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveFragmentToExpectedState(Landroid/support/v4/app/Fragment;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" target="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" id="0" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" target="Landroid/view/ViewGroup;-&gt;removeViewAt(I)V" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveToState(Landroid/support/v4/app/Fragment;IIIZ)V" target="Landroid/support/v4/app/Fragment;-&gt;isInBackStack()Z" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveToState(Landroid/support/v4/app/Fragment;IIIZ)V" target="Landroid/support/v4/app/Fragment;-&gt;getAnimatingAway()Landroid/view/View;" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveFragmentToExpectedState(Landroid/support/v4/app/Fragment;)V" target="Landroid/support/v4/app/Fragment;-&gt;isInBackStack()Z" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveFragmentToExpectedState(Landroid/support/v4/app/Fragment;)V" target="Landroid/view/ViewGroup;-&gt;removeViewAt(I)V" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveFragmentToExpectedState(Landroid/support/v4/app/Fragment;)V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;moveToState(Landroid/support/v4/app/Fragment;IIIZ)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

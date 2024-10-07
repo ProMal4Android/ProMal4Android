@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior$BottomSheetCallback;-&gt;onStateChanged(Landroid/view/View;I)V" label="Landroid/support/design/widget/BottomSheetBehavior$BottomSheetCallback;-&gt;onStateChanged(Landroid/view/View;I)V" />
+      <node id="Landroid/support/v4/widget/ViewDragHelper;-&gt;smoothSlideViewTo(Landroid/view/View;II)Z" label="Landroid/support/v4/widget/ViewDragHelper;-&gt;smoothSlideViewTo(Landroid/view/View;II)Z" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;dispatchOnSlide(I)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;dispatchOnSlide(I)V" />
+      <node id="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" label="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" target="Landroid/support/design/widget/BottomSheetBehavior$BottomSheetCallback;-&gt;onStateChanged(Landroid/view/View;I)V" id="0" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" id="2" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" target="Landroid/support/v4/widget/ViewDragHelper;-&gt;smoothSlideViewTo(Landroid/view/View;II)Z" id="3" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" id="5" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;dispatchOnSlide(I)V" id="6" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="7" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;dispatchOnSlide(I)V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="8" />
+    </edges>
+  </graph>
+</gexf>

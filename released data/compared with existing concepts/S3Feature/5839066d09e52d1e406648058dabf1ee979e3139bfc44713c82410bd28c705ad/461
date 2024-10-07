@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Lcom/google/android/gms/analytics/internal/zzam;-&gt;zza(Landroid/content/Context;Ljava/lang/Class;)Z" label="Lcom/google/android/gms/analytics/internal/zzam;-&gt;zza(Landroid/content/Context;Ljava/lang/Class;)Z" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Ljava/lang/Class;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Ljava/lang/Class;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" label="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" />
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/analytics/internal/zzam;-&gt;zza(Landroid/content/Context;Ljava/lang/Class;)Z" target="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" id="0" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzam;-&gt;zza(Landroid/content/Context;Ljava/lang/Class;)Z" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="1" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Ljava/lang/Class;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" id="2" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Ljava/lang/Class;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" id="3" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" id="5" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="6" />
+    </edges>
+  </graph>
+</gexf>

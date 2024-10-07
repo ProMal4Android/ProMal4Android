@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/core/app/ShareCompat$IntentReader;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" label="Landroidx/core/app/ShareCompat$IntentReader;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;getNextTimeMillis(Lcom/android/common/OperationScheduler$Options;)J" label="Lcom/android/common/OperationScheduler;-&gt;getNextTimeMillis(Lcom/android/common/OperationScheduler$Options;)J" />
+      <node id="Landroidx/core/app/ShareCompat;-&gt;getCallingPackage(Landroid/app/Activity;)Ljava/lang/String;" label="Landroidx/core/app/ShareCompat;-&gt;getCallingPackage(Landroid/app/Activity;)Ljava/lang/String;" />
+      <node id="Landroid/app/Activity;-&gt;getIntent()Landroid/content/Intent;" label="Landroid/app/Activity;-&gt;getIntent()Landroid/content/Intent;" />
+      <node id="Landroid/content/SharedPreferences;-&gt;getBoolean(Ljava/lang/String;Z)Z" label="Landroid/content/SharedPreferences;-&gt;getBoolean(Ljava/lang/String;Z)Z" />
+      <node id="Landroidx/core/app/ShareCompat;-&gt;getCallingActivity(Landroid/app/Activity;)Landroid/content/ComponentName;" label="Landroidx/core/app/ShareCompat;-&gt;getCallingActivity(Landroid/app/Activity;)Landroid/content/ComponentName;" />
+      <node id="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" label="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/core/app/ShareCompat$IntentReader;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Landroidx/core/app/ShareCompat;-&gt;getCallingPackage(Landroid/app/Activity;)Ljava/lang/String;" id="0" />
+      <edge source="Landroidx/core/app/ShareCompat$IntentReader;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Landroid/app/Activity;-&gt;getIntent()Landroid/content/Intent;" id="1" />
+      <edge source="Landroidx/core/app/ShareCompat$IntentReader;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Landroidx/core/app/ShareCompat;-&gt;getCallingActivity(Landroid/app/Activity;)Landroid/content/ComponentName;" id="2" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;getNextTimeMillis(Lcom/android/common/OperationScheduler$Options;)J" target="Landroid/content/SharedPreferences;-&gt;getBoolean(Ljava/lang/String;Z)Z" id="3" />
+      <edge source="Landroidx/core/app/ShareCompat;-&gt;getCallingPackage(Landroid/app/Activity;)Ljava/lang/String;" target="Landroid/app/Activity;-&gt;getIntent()Landroid/content/Intent;" id="4" />
+      <edge source="Landroidx/core/app/ShareCompat;-&gt;getCallingActivity(Landroid/app/Activity;)Landroid/content/ComponentName;" target="Landroid/app/Activity;-&gt;getIntent()Landroid/content/Intent;" id="5" />
+      <edge source="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" target="Landroid/app/Activity;-&gt;getIntent()Landroid/content/Intent;" id="6" />
+      <edge source="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" target="Landroid/content/SharedPreferences;-&gt;getBoolean(Ljava/lang/String;Z)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

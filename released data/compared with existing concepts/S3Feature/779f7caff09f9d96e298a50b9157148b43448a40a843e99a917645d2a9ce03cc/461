@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchCancel()V" label="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchCancel()V" />
+      <node id="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;cancel()V" label="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;cancel()V" />
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchEnd()V" label="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchEnd()V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Landroid/support/v4/app/FragmentManagerNonConfig;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Landroid/support/v4/app/FragmentManagerNonConfig;)V" />
+      <node id="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" label="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchCancel()V" target="Ljava/util/List;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;cancel()V" target="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchCancel()V" id="1" />
+      <edge source="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;cancel()V" target="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchEnd()V" id="2" />
+      <edge source="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchEnd()V" target="Ljava/util/List;-&gt;size()I" id="3" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" target="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Landroid/support/v4/app/FragmentManagerNonConfig;)V" target="Ljava/util/List;-&gt;size()I" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Landroid/support/v4/app/FragmentManagerNonConfig;)V" target="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" id="6" />
+    </edges>
+  </graph>
+</gexf>

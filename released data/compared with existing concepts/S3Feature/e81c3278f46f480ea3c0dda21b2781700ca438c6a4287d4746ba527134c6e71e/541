@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/res/Resources;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" label="Landroid/content/res/Resources;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowDrawableLeft(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowDrawableLeft(Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowDrawable(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowDrawable(Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroid/support/v4/content/ContextCompat;-&gt;getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/content/ContextCompat;-&gt;getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowResource(I)V" label="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowResource(I)V" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setHomeAsUpIndicator(I)V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setHomeAsUpIndicator(I)V" />
+      <node id="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowResourceLeft(I)V" label="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowResourceLeft(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowDrawable(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowDrawableLeft(Landroid/graphics/drawable/Drawable;)V" id="0" />
+      <edge source="Landroid/support/v4/content/ContextCompat;-&gt;getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;" target="Landroid/content/res/Resources;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" id="1" />
+      <edge source="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowResource(I)V" target="Landroid/content/res/Resources;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" id="2" />
+      <edge source="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowResource(I)V" target="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowDrawable(Landroid/graphics/drawable/Drawable;)V" id="3" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setHomeAsUpIndicator(I)V" target="Landroid/support/v4/content/ContextCompat;-&gt;getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;" id="4" />
+      <edge source="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowResourceLeft(I)V" target="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowDrawableLeft(Landroid/graphics/drawable/Drawable;)V" id="5" />
+      <edge source="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;setShadowResourceLeft(I)V" target="Landroid/support/v4/content/ContextCompat;-&gt;getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;" id="6" />
+    </edges>
+  </graph>
+</gexf>

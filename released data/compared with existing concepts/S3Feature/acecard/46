@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-18">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" />
+      <node id="Landroid/os/Bundle;-&gt;&lt;init&gt;()V" label="Landroid/os/Bundle;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase$GestureHandler;-&gt;&lt;init&gt;(Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase;Landroid/os/Handler;)V" label="Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase$GestureHandler;-&gt;&lt;init&gt;(Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase;Landroid/os/Handler;)V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;saveAllState()Landroid/os/Parcelable;" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;saveAllState()Landroid/os/Parcelable;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" />
+      <node id="Landroid/os/Handler;-&gt;&lt;init&gt;(Landroid/os/Looper;)V" label="Landroid/os/Handler;-&gt;&lt;init&gt;(Landroid/os/Looper;)V" />
+      <node id="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" label="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" target="Landroid/os/Bundle;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase$GestureHandler;-&gt;&lt;init&gt;(Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase;Landroid/os/Handler;)V" target="Landroid/os/Handler;-&gt;&lt;init&gt;(Landroid/os/Looper;)V" id="1" />
+      <edge source="Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase$GestureHandler;-&gt;&lt;init&gt;(Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase;Landroid/os/Handler;)V" target="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;saveAllState()Landroid/os/Parcelable;" target="Landroid/os/Bundle;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;saveAllState()Landroid/os/Parcelable;" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" id="5" />
+    </edges>
+  </graph>
+</gexf>

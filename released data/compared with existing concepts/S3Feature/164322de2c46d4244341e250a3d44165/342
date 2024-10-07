@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" label="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;getTimeBefore(Ljava/lang/String;J)J" label="Lcom/android/common/OperationScheduler;-&gt;getTimeBefore(Ljava/lang/String;J)J" />
+      <node id="Landroid/content/SharedPreferences$Editor;-&gt;putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;" label="Landroid/content/SharedPreferences$Editor;-&gt;putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;resetPermanentError()V" label="Lcom/android/common/OperationScheduler;-&gt;resetPermanentError()V" />
+      <node id="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" label="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" />
+      <node id="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" label="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" label="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="0" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" target="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" id="1" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;getTimeBefore(Ljava/lang/String;J)J" target="Landroid/content/SharedPreferences$Editor;-&gt;putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;" id="2" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;getTimeBefore(Ljava/lang/String;J)J" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="3" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;resetPermanentError()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="4" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;resetPermanentError()V" target="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" id="5" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" id="6" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Landroid/content/SharedPreferences$Editor;-&gt;putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;" id="7" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Lcom/android/common/OperationScheduler;-&gt;resetPermanentError()V" id="8" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="9" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" id="10" />
+    </edges>
+  </graph>
+</gexf>

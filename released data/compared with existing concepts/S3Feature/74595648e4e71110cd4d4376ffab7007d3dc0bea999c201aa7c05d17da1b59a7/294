@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;" label="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;" />
+      <node id="Lcom/google/gson/internal/ConstructorConstructor;-&gt;get(Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/internal/ObjectConstructor;" label="Lcom/google/gson/internal/ConstructorConstructor;-&gt;get(Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/internal/ObjectConstructor;" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" label="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" />
+      <node id="Lcom/google/gson/reflect/TypeToken;-&gt;getRawType()Ljava/lang/Class;" label="Lcom/google/gson/reflect/TypeToken;-&gt;getRawType()Ljava/lang/Class;" />
+      <node id="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;getTypeAdapter(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/annotations/JsonAdapter;)Lcom/google/gson/TypeAdapter;" label="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;getTypeAdapter(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/annotations/JsonAdapter;)Lcom/google/gson/TypeAdapter;" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V" label="Landroid/support/v4/view/ViewPager;-&gt;addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V" />
+      <node id="Ljava/lang/Class;-&gt;getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;" label="Ljava/lang/Class;-&gt;getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;" target="Lcom/google/gson/reflect/TypeToken;-&gt;getRawType()Ljava/lang/Class;" id="0" />
+      <edge source="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;" target="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;getTypeAdapter(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/annotations/JsonAdapter;)Lcom/google/gson/TypeAdapter;" id="1" />
+      <edge source="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;" target="Ljava/lang/Class;-&gt;getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;" id="2" />
+      <edge source="Lcom/google/gson/internal/ConstructorConstructor;-&gt;get(Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/internal/ObjectConstructor;" target="Lcom/google/gson/reflect/TypeToken;-&gt;getRawType()Ljava/lang/Class;" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" target="Ljava/lang/Class;-&gt;getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;" id="4" />
+      <edge source="Lcom/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory;-&gt;getTypeAdapter(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/annotations/JsonAdapter;)Lcom/google/gson/TypeAdapter;" target="Lcom/google/gson/internal/ConstructorConstructor;-&gt;get(Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/internal/ObjectConstructor;" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V" target="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

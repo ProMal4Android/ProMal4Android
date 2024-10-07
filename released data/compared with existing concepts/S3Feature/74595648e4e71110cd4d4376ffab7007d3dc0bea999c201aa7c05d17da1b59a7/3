@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/view/View;-&gt;getPaddingRight()I" label="Landroid/view/View;-&gt;getPaddingRight()I" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImpl;-&gt;applyFixedSizeWindow()V" label="Landroid/support/v7/app/AppCompatDelegateImpl;-&gt;applyFixedSizeWindow()V" />
+      <node id="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;getPaddingEnd()I" label="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;getPaddingEnd()I" />
+      <node id="Landroid/view/View;-&gt;getPaddingLeft()I" label="Landroid/view/View;-&gt;getPaddingLeft()I" />
+      <node id="Lcom/startapp/android/publish/ads/banner/banner3d/Banner3DSize;-&gt;b(Landroid/content/Context;Landroid/graphics/Point;Landroid/view/View;)V" label="Lcom/startapp/android/publish/ads/banner/banner3d/Banner3DSize;-&gt;b(Landroid/content/Context;Landroid/graphics/Point;Landroid/view/View;)V" />
+      <node id="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingEnd(Landroid/view/View;)I" label="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingEnd(Landroid/view/View;)I" />
+      <node id="Landroid/view/View;-&gt;getMeasuredWidth()I" label="Landroid/view/View;-&gt;getMeasuredWidth()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImpl;-&gt;applyFixedSizeWindow()V" target="Landroid/view/View;-&gt;getPaddingRight()I" id="0" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImpl;-&gt;applyFixedSizeWindow()V" target="Landroid/view/View;-&gt;getPaddingLeft()I" id="1" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;getPaddingEnd()I" target="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingEnd(Landroid/view/View;)I" id="2" />
+      <edge source="Lcom/startapp/android/publish/ads/banner/banner3d/Banner3DSize;-&gt;b(Landroid/content/Context;Landroid/graphics/Point;Landroid/view/View;)V" target="Landroid/view/View;-&gt;getPaddingRight()I" id="3" />
+      <edge source="Lcom/startapp/android/publish/ads/banner/banner3d/Banner3DSize;-&gt;b(Landroid/content/Context;Landroid/graphics/Point;Landroid/view/View;)V" target="Landroid/view/View;-&gt;getPaddingLeft()I" id="4" />
+      <edge source="Lcom/startapp/android/publish/ads/banner/banner3d/Banner3DSize;-&gt;b(Landroid/content/Context;Landroid/graphics/Point;Landroid/view/View;)V" target="Landroid/view/View;-&gt;getMeasuredWidth()I" id="5" />
+      <edge source="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingEnd(Landroid/view/View;)I" target="Landroid/view/View;-&gt;getPaddingRight()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

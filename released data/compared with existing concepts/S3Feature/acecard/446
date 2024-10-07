@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-18">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/Fragment;-&gt;isVisible()Z" label="Landroid/support/v4/app/Fragment;-&gt;isVisible()Z" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" label="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" label="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" label="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z" label="Landroid/support/v4/view/ViewPager;-&gt;dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z" />
+      <node id="Landroid/view/View;-&gt;getVisibility()I" label="Landroid/view/View;-&gt;getVisibility()I" />
+      <node id="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" label="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;isVisible()Z" target="Landroid/view/View;-&gt;getVisibility()I" id="0" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;isVisible()Z" target="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" id="1" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" target="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" id="2" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" target="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" id="3" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" target="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" id="4" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" id="5" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z" target="Landroid/view/View;-&gt;getVisibility()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

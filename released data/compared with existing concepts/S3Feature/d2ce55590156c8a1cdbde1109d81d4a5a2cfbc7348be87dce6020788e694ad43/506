@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;isAdded()Z" label="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;isAdded()Z" />
+      <node id="Landroid/support/v4/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" label="Landroid/support/v4/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" />
+      <node id="Landroid/support/v4/app/FragmentManager;-&gt;beginTransaction()Landroid/support/v4/app/FragmentTransaction;" label="Landroid/support/v4/app/FragmentManager;-&gt;beginTransaction()Landroid/support/v4/app/FragmentTransaction;" />
+      <node id="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;finishActivity(ILandroid/content/Intent;)V" label="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;finishActivity(ILandroid/content/Intent;)V" />
+      <node id="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" label="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" />
+      <node id="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;detach()V" label="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;detach()V" />
+      <node id="Landroid/support/v4/app/DialogFragment;-&gt;dismissInternal(Z)V" label="Landroid/support/v4/app/DialogFragment;-&gt;dismissInternal(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" target="Landroid/support/v4/app/DialogFragment;-&gt;dismissInternal(Z)V" id="0" />
+      <edge source="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;finishActivity(ILandroid/content/Intent;)V" target="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;isAdded()Z" id="1" />
+      <edge source="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" target="Landroid/support/v4/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" id="2" />
+      <edge source="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" target="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;finishActivity(ILandroid/content/Intent;)V" id="3" />
+      <edge source="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;detach()V" target="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;isAdded()Z" id="4" />
+      <edge source="Lcom/facebook/share/internal/DeviceShareDialogFragment;-&gt;detach()V" target="Landroid/support/v4/app/FragmentManager;-&gt;beginTransaction()Landroid/support/v4/app/FragmentTransaction;" id="5" />
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;dismissInternal(Z)V" target="Landroid/support/v4/app/FragmentManager;-&gt;beginTransaction()Landroid/support/v4/app/FragmentTransaction;" id="6" />
+    </edges>
+  </graph>
+</gexf>

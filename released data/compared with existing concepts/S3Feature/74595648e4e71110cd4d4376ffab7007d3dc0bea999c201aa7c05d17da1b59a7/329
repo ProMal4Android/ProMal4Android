@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" />
+      <node id="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" label="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" />
+      <node id="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;calculateTargetState(Landroid/arch/lifecycle/LifecycleObserver;)Landroid/arch/lifecycle/Lifecycle$State;" label="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;calculateTargetState(Landroid/arch/lifecycle/LifecycleObserver;)Landroid/arch/lifecycle/Lifecycle$State;" />
+      <node id="Landroid/arch/lifecycle/ClassesInfoCache;-&gt;createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;" label="Landroid/arch/lifecycle/ClassesInfoCache;-&gt;createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;" />
+      <node id="Ljava/util/Map$Entry;-&gt;getValue()Ljava/lang/Object;" label="Ljava/util/Map$Entry;-&gt;getValue()Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" label="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" target="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" id="1" />
+      <edge source="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;calculateTargetState(Landroid/arch/lifecycle/LifecycleObserver;)Landroid/arch/lifecycle/Lifecycle$State;" target="Ljava/util/ArrayList;-&gt;size()I" id="3" />
+      <edge source="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;calculateTargetState(Landroid/arch/lifecycle/LifecycleObserver;)Landroid/arch/lifecycle/Lifecycle$State;" target="Ljava/util/Map$Entry;-&gt;getValue()Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/arch/lifecycle/ClassesInfoCache;-&gt;createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;" target="Ljava/util/Map$Entry;-&gt;getValue()Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="6" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" id="7" />
+    </edges>
+  </graph>
+</gexf>

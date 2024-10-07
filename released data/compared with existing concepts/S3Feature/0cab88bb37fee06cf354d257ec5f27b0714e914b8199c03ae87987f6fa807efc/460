@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/view/Window$Callback;-&gt;onMenuOpened(ILandroid/view/Menu;)Z" label="Landroid/view/Window$Callback;-&gt;onMenuOpened(ILandroid/view/Menu;)Z" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;startDispatchingItemsChanged()V" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;startDispatchingItemsChanged()V" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;getWindowCallback()Landroid/view/Window$Callback;" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;getWindowCallback()Landroid/view/Window$Callback;" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7$ActionMenuPresenterCallback;-&gt;onOpenSubMenu(Landroid/support/v7/internal/view/menu/MenuBuilder;)Z" label="Landroid/support/v7/app/AppCompatDelegateImplV7$ActionMenuPresenterCallback;-&gt;onOpenSubMenu(Landroid/support/v7/internal/view/menu/MenuBuilder;)Z" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;isDestroyed()Z" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;isDestroyed()Z" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;openPanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;openPanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;preparePanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)Z" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;preparePanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7$ActionMenuPresenterCallback;-&gt;onOpenSubMenu(Landroid/support/v7/internal/view/menu/MenuBuilder;)Z" target="Landroid/view/Window$Callback;-&gt;onMenuOpened(ILandroid/view/Menu;)Z" id="0" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7$ActionMenuPresenterCallback;-&gt;onOpenSubMenu(Landroid/support/v7/internal/view/menu/MenuBuilder;)Z" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;getWindowCallback()Landroid/view/Window$Callback;" id="1" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;openPanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" target="Landroid/view/Window$Callback;-&gt;onMenuOpened(ILandroid/view/Menu;)Z" id="2" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;openPanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;getWindowCallback()Landroid/view/Window$Callback;" id="3" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;openPanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;isDestroyed()Z" id="4" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;openPanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;preparePanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)Z" id="5" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;preparePanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)Z" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;startDispatchingItemsChanged()V" id="6" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;preparePanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)Z" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;getWindowCallback()Landroid/view/Window$Callback;" id="7" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;preparePanel(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)Z" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;isDestroyed()Z" id="8" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;)V" label="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;)V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;getAutoTimeNightModeManager()Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;getAutoTimeNightModeManager()Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoBatteryNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/content/Context;)V" label="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoBatteryNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/content/Context;)V" />
+      <node id="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" label="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroidx/appcompat/app/TwilightManager;)V" label="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroidx/appcompat/app/TwilightManager;)V" />
+      <node id="Lcom/android/ex/photo/PhotoViewController;-&gt;onCreate(Landroid/os/Bundle;)V" label="Lcom/android/ex/photo/PhotoViewController;-&gt;onCreate(Landroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;getAutoTimeNightModeManager()Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;" target="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" id="0" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;getAutoTimeNightModeManager()Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;" target="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroidx/appcompat/app/TwilightManager;)V" id="1" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoBatteryNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/content/Context;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="2" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoBatteryNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/content/Context;)V" target="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;)V" id="3" />
+      <edge source="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroidx/appcompat/app/TwilightManager;)V" target="Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-&gt;&lt;init&gt;(Landroidx/appcompat/app/AppCompatDelegateImpl;)V" id="5" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;onCreate(Landroid/os/Bundle;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="6" />
+    </edges>
+  </graph>
+</gexf>

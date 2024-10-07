@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/hardware/display/DisplayManagerCompat;-&gt;getInstance(Landroid/content/Context;)Landroid/support/v4/hardware/display/DisplayManagerCompat;" label="Landroid/support/v4/hardware/display/DisplayManagerCompat;-&gt;getInstance(Landroid/content/Context;)Landroid/support/v4/hardware/display/DisplayManagerCompat;" />
+      <node id="Landroid/support/v7/internal/widget/TintManager;-&gt;get(Landroid/content/Context;)Landroid/support/v7/internal/widget/TintManager;" label="Landroid/support/v7/internal/widget/TintManager;-&gt;get(Landroid/content/Context;)Landroid/support/v7/internal/widget/TintManager;" />
+      <node id="Ljava/util/WeakHashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/WeakHashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/internal/app/WindowDecorActionBar$TabImpl;-&gt;setIcon(I)Landroid/support/v7/app/ActionBar$Tab;" label="Landroid/support/v7/internal/app/WindowDecorActionBar$TabImpl;-&gt;setIcon(I)Landroid/support/v7/app/ActionBar$Tab;" />
+      <node id="Ljava/util/WeakHashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/WeakHashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;getTintManager()Landroid/support/v7/internal/widget/TintManager;" label="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;getTintManager()Landroid/support/v7/internal/widget/TintManager;" />
+      <node id="Landroid/support/v7/internal/widget/TintManager;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/internal/widget/TintManager;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/hardware/display/DisplayManagerCompat;-&gt;getInstance(Landroid/content/Context;)Landroid/support/v4/hardware/display/DisplayManagerCompat;" target="Ljava/util/WeakHashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v4/hardware/display/DisplayManagerCompat;-&gt;getInstance(Landroid/content/Context;)Landroid/support/v4/hardware/display/DisplayManagerCompat;" target="Ljava/util/WeakHashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v7/internal/widget/TintManager;-&gt;get(Landroid/content/Context;)Landroid/support/v7/internal/widget/TintManager;" target="Ljava/util/WeakHashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v7/internal/widget/TintManager;-&gt;get(Landroid/content/Context;)Landroid/support/v7/internal/widget/TintManager;" target="Ljava/util/WeakHashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar$TabImpl;-&gt;setIcon(I)Landroid/support/v7/app/ActionBar$Tab;" target="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;getTintManager()Landroid/support/v7/internal/widget/TintManager;" id="4" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar$TabImpl;-&gt;setIcon(I)Landroid/support/v7/app/ActionBar$Tab;" target="Landroid/support/v7/internal/widget/TintManager;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" id="5" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;getTintManager()Landroid/support/v7/internal/widget/TintManager;" target="Landroid/support/v7/internal/widget/TintManager;-&gt;get(Landroid/content/Context;)Landroid/support/v7/internal/widget/TintManager;" id="6" />
+    </edges>
+  </graph>
+</gexf>

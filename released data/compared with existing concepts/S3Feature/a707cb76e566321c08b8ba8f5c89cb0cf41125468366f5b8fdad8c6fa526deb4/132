@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;performDestroy()V" label="Landroid/support/v4/app/Fragment;-&gt;performDestroy()V" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;findViewById(I)Landroid/view/View;" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;findViewById(I)Landroid/view/View;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchDestroy()V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchDestroy()V" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" label="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" label="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;performDestroy()V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchDestroy()V" id="0" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;performDestroy()V" target="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchDestroy()V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" id="2" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="3" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;findViewById(I)Landroid/view/View;" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="5" />
+    </edges>
+  </graph>
+</gexf>

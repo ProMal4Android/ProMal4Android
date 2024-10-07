@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" label="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" />
+      <node id="Landroid/support/v7/app/WindowDecorActionBar;-&gt;selectTab(Landroid/support/v7/app/ActionBar$Tab;)V" label="Landroid/support/v7/app/WindowDecorActionBar;-&gt;selectTab(Landroid/support/v7/app/ActionBar$Tab;)V" />
+      <node id="Landroid/support/v4/app/DialogFragment;-&gt;show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" label="Landroid/support/v4/app/DialogFragment;-&gt;show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/app/FragmentTransaction;-&gt;commit()I" label="Landroid/support/v4/app/FragmentTransaction;-&gt;commit()I" />
+      <node id="Lcom/google/android/gms/common/GooglePlayServicesUtil;-&gt;zza(Landroid/app/Activity;Landroid/content/DialogInterface$OnCancelListener;Ljava/lang/String;Landroid/app/Dialog;)V" label="Lcom/google/android/gms/common/GooglePlayServicesUtil;-&gt;zza(Landroid/app/Activity;Landroid/content/DialogInterface$OnCancelListener;Ljava/lang/String;Landroid/app/Dialog;)V" />
+      <node id="Lcom/google/android/gms/common/SupportErrorDialogFragment;-&gt;show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" label="Lcom/google/android/gms/common/SupportErrorDialogFragment;-&gt;show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;onTabChanged(Ljava/lang/String;)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;onTabChanged(Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;selectTab(Landroid/support/v7/app/ActionBar$Tab;)V" target="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" id="0" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;selectTab(Landroid/support/v7/app/ActionBar$Tab;)V" target="Landroid/support/v4/app/FragmentTransaction;-&gt;commit()I" id="1" />
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" target="Landroid/support/v4/app/FragmentTransaction;-&gt;commit()I" id="2" />
+      <edge source="Lcom/google/android/gms/common/GooglePlayServicesUtil;-&gt;zza(Landroid/app/Activity;Landroid/content/DialogInterface$OnCancelListener;Ljava/lang/String;Landroid/app/Dialog;)V" target="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" id="3" />
+      <edge source="Lcom/google/android/gms/common/GooglePlayServicesUtil;-&gt;zza(Landroid/app/Activity;Landroid/content/DialogInterface$OnCancelListener;Ljava/lang/String;Landroid/app/Dialog;)V" target="Lcom/google/android/gms/common/SupportErrorDialogFragment;-&gt;show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" id="4" />
+      <edge source="Lcom/google/android/gms/common/SupportErrorDialogFragment;-&gt;show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" target="Landroid/support/v4/app/DialogFragment;-&gt;show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;onTabChanged(Ljava/lang/String;)V" target="Landroid/support/v4/app/FragmentTransaction;-&gt;commit()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

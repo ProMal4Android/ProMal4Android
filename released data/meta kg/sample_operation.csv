@@ -1,0 +1,163 @@
+id,nodeID,malware operation
+1,1,Access the Internet
+2,2,Block broadcast
+3,3,Click the confirm button
+4,4,Stop the service
+5,5,Compress the information into a .zip file
+6,6,Delete the recording of incoming phone calls
+7,7,Download
+8,8,Clear app cache
+9,9,Generate pop-up widgets
+10,10,Get user's input information
+11,11,Get IMEI
+12,12,Get IMSI
+13,13,Get the SIM card serial number
+14,14,Query SMS messages
+15,15,Get the application lists
+16,16,Get the contact information
+17,17,Get call records
+18,18,Get location of device
+19,19,Get the network operator
+20,20,Get network info
+21,21,Get user's phone number
+22,22,Hide icon
+23,23,Install Apps
+24,24,Reset password
+25,25,Monitor incoming calls
+26,26,Monitor the screen on/off
+27,27,Parse SMS content
+28,28,Mute
+29,29,Listen on clicks
+30,30,Check device admin privileges
+31,31,Send SMS
+32,32,Create a desktop shortcut
+33,33,Lock screen
+34,34,Stop the process
+35,35,Get SD path
+36,36,Set Wifi on or off
+37,37,Get the list of running tasks
+38,38,Add views
+39,39,Get mac address
+40,40,Call or Call forwarding
+41,41,Hang up phone call
+42,42,Get the list of services
+43,43,Register content observer
+44,44,Register broadcast receiver
+45,45,Get file name
+46,46,Record audio
+47,47,Delete SMS
+48,48,Monitor received SMS
+49,49,Get App's name
+50,50,Get user's agent
+51,51,Get ACRA shared preferences
+52,52,Send notification
+53,53,Acquire the wake lock
+54,54,Set date of birth
+55,55,Get total internal memory size
+56,56,Get avaliable internal memory size
+57,57,Get total external memory size
+58,58,Save database record
+59,59,Delete data in database
+60,60,Delete file from SD Card by path
+61,61,Write to SD from input
+62,62,Get cached message
+63,63,Cache message
+64,64,Get SHA256
+65,65,Check permissions
+66,66,Parse XML's Info from server
+67,67,Cancel auto-sended message
+68,68,Get avaliable-memory of SD
+69,69,Execute
+70,70,Show dialog
+71,71,Get Uid from server
+72,72,Get value from server
+73,73,Call phone number
+74,74,Upload files
+75,75,Encrypt
+76,76,Get MODEL ID
+77,77,Get cid
+78,78,Get HttpUrl
+79,79,Read HttpResponse
+80,80,Get sensor list
+81,81,"Get sensor info(name, version, vendor)"
+82,82,Check the key guard
+83,83,Get BSSID
+84,84,Request permissions
+85,85,Launch Apps
+86,86,Look for installed Apk
+87,87,Install
+88,88,Install App
+89,89,Get device's country
+90,90,Get Installed Apps List
+91,91,Download File
+92,92,Download Files
+93,93,Uninstall APK
+94,94,Monitor incoming call
+95,95,Detect device lock/unlock
+96,96,Monitor boot
+97,97,Activate the device manager
+98,98,Active CoreService
+99,99,Get device country
+100,100,Get device ID
+101,101,Post to the remote server
+102,102,Listen on connectivity change
+103,103,Open a new page and download
+104,104,Read meta-data of App
+105,105,Get a list of package names
+106,106,Check permission granted
+107,107,Capture the screen
+108,108,Uninstall app from device
+109,109,Uninstall app from device
+110,110,Install Apps
+111,111,Delete file
+112,112,Post to the remote server
+113,113,Store audio locally
+114,114,Read local file
+115,115,Post to the remote server
+116,116,Get local file
+117,117,Get Android OS version
+118,118,Get device model
+119,119,Get software SDK version
+120,120,Open and read file
+121,121,Write to the local file
+122,122,Get the external memory card file list information
+123,123,Obtain Account information
+124,124,Get Mac address
+125,125,Get Wifi ID
+126,126,Get local IP
+127,127,Get Android OS (INCREMENTAL)
+128,128,Get product name
+129,129,Get device model
+130,130,Get device manufacturer
+131,131,Get device brand
+132,132,Get device board
+133,133,Get device name
+134,134,Get device display
+135,135,Get device hardware name
+136,136,Get device version
+137,137,Obtain the country/region code
+138,138,Get the software version of the device
+139,139,Get the carrier name of the subscriber
+140,140,Get country/region related to subscription
+141,141,Obtain the ICCID of the SIM card corresponding to the subscription information
+142,142,Get subscription information
+143,143,Execute SQL query
+144,144,Check the optimized status of the battery
+145,145,Ignore battery optimization
+146,146,Run App
+147,147,Capture the screen
+148,148,Steal data from the clipboard
+149,149,Set the background to transparent
+150,150,Mute
+151,151,Install (other malware) via command
+152,152,Check host
+153,153,Load network resource files
+154,154,Download the resource file
+155,155,Check the Wifi connection and disconnect the wireless network connection.
+156,156,Push advertising
+157,157,Call
+158,158,Steal SMS text messages
+159,159,Obtain installation package information
+160,160,Read the zip file and install it
+161,161,Upload the file
+162,162,Send data to the server

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NotificationCompat$WearableExtender;-&gt;extend(Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/support/v4/app/NotificationCompat$Builder;" label="Landroid/support/v4/app/NotificationCompat$WearableExtender;-&gt;extend(Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/support/v4/app/NotificationCompat$Builder;" />
+      <node id="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" />
+      <node id="Landroid/arch/lifecycle/d;-&gt;b()V" label="Landroid/arch/lifecycle/d;-&gt;b()V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" />
+      <node id="Landroid/arch/lifecycle/d;-&gt;c()V" label="Landroid/arch/lifecycle/d;-&gt;c()V" />
+      <node id="Landroid/arch/a/a/a;-&gt;c()Landroid/arch/a/a/b$d;" label="Landroid/arch/a/a/a;-&gt;c()Landroid/arch/a/a/b$d;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationCompat$WearableExtender;-&gt;extend(Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/support/v4/app/NotificationCompat$Builder;" target="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$WearableExtender;-&gt;extend(Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/support/v4/app/NotificationCompat$Builder;" target="Ljava/util/ArrayList;-&gt;size()I" id="1" />
+      <edge source="Landroid/arch/lifecycle/d;-&gt;b()V" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" target="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroid/arch/lifecycle/d;-&gt;c()V" target="Landroid/arch/lifecycle/d;-&gt;b()V" id="5" />
+      <edge source="Landroid/arch/lifecycle/d;-&gt;c()V" target="Landroid/arch/a/a/a;-&gt;c()Landroid/arch/a/a/b$d;" id="6" />
+    </edges>
+  </graph>
+</gexf>

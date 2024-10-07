@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/PopupMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;III)V" label="Landroid/support/v7/widget/PopupMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;III)V" />
+      <node id="Landroid/support/v7/widget/PopupMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;I)V" label="Landroid/support/v7/widget/PopupMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;I)V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;registerFragmentLifecycleCallbacks(Landroid/support/v4/app/FragmentManager$FragmentLifecycleCallbacks;Z)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;registerFragmentLifecycleCallbacks(Landroid/support/v4/app/FragmentManager$FragmentLifecycleCallbacks;Z)V" />
+      <node id="Landroid/support/v7/view/menu/MenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/support/v7/view/menu/MenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Ljava/util/concurrent/CopyOnWriteArrayList;-&gt;&lt;init&gt;()V" label="Ljava/util/concurrent/CopyOnWriteArrayList;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/util/Pair;-&gt;&lt;init&gt;(Ljava/lang/Object;Ljava/lang/Object;)V" label="Landroid/support/v4/util/Pair;-&gt;&lt;init&gt;(Ljava/lang/Object;Ljava/lang/Object;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/PopupMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;III)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v7/widget/PopupMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;III)V" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="1" />
+      <edge source="Landroid/support/v7/widget/PopupMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;I)V" target="Landroid/support/v7/widget/PopupMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/View;III)V" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;registerFragmentLifecycleCallbacks(Landroid/support/v4/app/FragmentManager$FragmentLifecycleCallbacks;Z)V" target="Ljava/util/concurrent/CopyOnWriteArrayList;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;registerFragmentLifecycleCallbacks(Landroid/support/v4/app/FragmentManager$FragmentLifecycleCallbacks;Z)V" target="Landroid/support/v4/util/Pair;-&gt;&lt;init&gt;(Ljava/lang/Object;Ljava/lang/Object;)V" id="4" />
+      <edge source="Landroid/support/v7/view/menu/MenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/v7/view/menu/MenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Ljava/util/concurrent/CopyOnWriteArrayList;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/util/Pair;-&gt;&lt;init&gt;(Ljava/lang/Object;Ljava/lang/Object;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

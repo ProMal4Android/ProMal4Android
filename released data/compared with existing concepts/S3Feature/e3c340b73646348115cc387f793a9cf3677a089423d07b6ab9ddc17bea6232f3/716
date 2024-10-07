@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/constraint/solver/LinearSystem;-&gt;optimize(Landroid/support/constraint/solver/Goal;)I" label="Landroid/support/constraint/solver/LinearSystem;-&gt;optimize(Landroid/support/constraint/solver/Goal;)I" />
+      <node id="Landroid/support/constraint/solver/Goal;-&gt;updateFromSystem(Landroid/support/constraint/solver/LinearSystem;)V" label="Landroid/support/constraint/solver/Goal;-&gt;updateFromSystem(Landroid/support/constraint/solver/LinearSystem;)V" />
+      <node id="Landroid/support/constraint/solver/ArrayLinkedVariables;-&gt;get(Landroid/support/constraint/solver/SolverVariable;)F" label="Landroid/support/constraint/solver/ArrayLinkedVariables;-&gt;get(Landroid/support/constraint/solver/SolverVariable;)F" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;draw(Landroid/graphics/Canvas;)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;draw(Landroid/graphics/Canvas;)V" />
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/constraint/solver/LinearSystem;-&gt;enforceBFS(Landroid/support/constraint/solver/Goal;)I" label="Landroid/support/constraint/solver/LinearSystem;-&gt;enforceBFS(Landroid/support/constraint/solver/Goal;)I" />
+      <node id="Landroid/support/constraint/solver/Goal;-&gt;getPivotCandidate()Landroid/support/constraint/solver/SolverVariable;" label="Landroid/support/constraint/solver/Goal;-&gt;getPivotCandidate()Landroid/support/constraint/solver/SolverVariable;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;optimize(Landroid/support/constraint/solver/Goal;)I" target="Landroid/support/constraint/solver/Goal;-&gt;updateFromSystem(Landroid/support/constraint/solver/LinearSystem;)V" id="0" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;optimize(Landroid/support/constraint/solver/Goal;)I" target="Landroid/support/constraint/solver/ArrayLinkedVariables;-&gt;get(Landroid/support/constraint/solver/SolverVariable;)F" id="1" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;optimize(Landroid/support/constraint/solver/Goal;)I" target="Landroid/support/constraint/solver/LinearSystem;-&gt;enforceBFS(Landroid/support/constraint/solver/Goal;)I" id="2" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;optimize(Landroid/support/constraint/solver/Goal;)I" target="Landroid/support/constraint/solver/Goal;-&gt;getPivotCandidate()Landroid/support/constraint/solver/SolverVariable;" id="3" />
+      <edge source="Landroid/support/constraint/solver/Goal;-&gt;updateFromSystem(Landroid/support/constraint/solver/LinearSystem;)V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;draw(Landroid/graphics/Canvas;)V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;enforceBFS(Landroid/support/constraint/solver/Goal;)I" target="Landroid/support/constraint/solver/Goal;-&gt;updateFromSystem(Landroid/support/constraint/solver/LinearSystem;)V" id="6" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;enforceBFS(Landroid/support/constraint/solver/Goal;)I" target="Landroid/support/constraint/solver/ArrayLinkedVariables;-&gt;get(Landroid/support/constraint/solver/SolverVariable;)F" id="7" />
+      <edge source="Landroid/support/constraint/solver/Goal;-&gt;getPivotCandidate()Landroid/support/constraint/solver/SolverVariable;" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="8" />
+    </edges>
+  </graph>
+</gexf>

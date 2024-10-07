@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/Fragment;-&gt;getString(I)Ljava/lang/String;" label="Landroid/support/v4/app/Fragment;-&gt;getString(I)Ljava/lang/String;" />
+      <node id="Landroid/content/res/Resources;-&gt;getString(I)Ljava/lang/String;" label="Landroid/content/res/Resources;-&gt;getString(I)Ljava/lang/String;" />
+      <node id="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Ladapters/AdapterCallsMsg;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/util/ArrayList;)V" label="Ladapters/AdapterCallsMsg;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/util/ArrayList;)V" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Lcom/test/acleaner/CallsMsgActivity;-&gt;informacionParaListview()V" label="Lcom/test/acleaner/CallsMsgActivity;-&gt;informacionParaListview()V" />
+      <node id="Lhelpers/InfoLlamadas;-&gt;obtenerDetallesLlamadas()V" label="Lhelpers/InfoLlamadas;-&gt;obtenerDetallesLlamadas()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getString(I)Ljava/lang/String;" target="Landroid/content/res/Resources;-&gt;getString(I)Ljava/lang/String;" id="0" />
+      <edge source="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/content/res/Resources;-&gt;getString(I)Ljava/lang/String;" id="1" />
+      <edge source="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="2" />
+      <edge source="Ladapters/AdapterCallsMsg;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/util/ArrayList;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="3" />
+      <edge source="Lcom/test/acleaner/CallsMsgActivity;-&gt;informacionParaListview()V" target="Ladapters/AdapterCallsMsg;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/util/ArrayList;)V" id="4" />
+      <edge source="Lcom/test/acleaner/CallsMsgActivity;-&gt;informacionParaListview()V" target="Lhelpers/InfoLlamadas;-&gt;obtenerDetallesLlamadas()V" id="5" />
+    </edges>
+  </graph>
+</gexf>

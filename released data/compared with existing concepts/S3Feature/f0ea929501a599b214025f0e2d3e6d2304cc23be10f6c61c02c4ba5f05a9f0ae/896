@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/data/MediaStoreThumbFetcher;-&gt;loadData(Lcom/bumptech/glide/Priority;)Ljava/io/InputStream;" label="Lcom/bumptech/glide/load/data/MediaStoreThumbFetcher;-&gt;loadData(Lcom/bumptech/glide/Priority;)Ljava/io/InputStream;" />
+      <node id="Lcom/bumptech/glide/load/data/DataFetcher;-&gt;loadData(Lcom/bumptech/glide/Priority;)Ljava/lang/Object;" label="Lcom/bumptech/glide/load/data/DataFetcher;-&gt;loadData(Lcom/bumptech/glide/Priority;)Ljava/lang/Object;" />
+      <node id="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" label="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" />
+      <node id="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeSource()Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeSource()Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceEncoder()Lcom/bumptech/glide/load/Encoder;" label="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceEncoder()Lcom/bumptech/glide/load/Encoder;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" id="0" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceEncoder()Lcom/bumptech/glide/load/Encoder;" id="1" />
+      <edge source="Lcom/bumptech/glide/load/data/MediaStoreThumbFetcher;-&gt;loadData(Lcom/bumptech/glide/Priority;)Ljava/io/InputStream;" target="Lcom/bumptech/glide/load/data/DataFetcher;-&gt;loadData(Lcom/bumptech/glide/Priority;)Ljava/lang/Object;" id="2" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" id="3" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" id="4" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeSource()Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/data/DataFetcher;-&gt;loadData(Lcom/bumptech/glide/Priority;)Ljava/lang/Object;" id="5" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeSource()Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" id="6" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeSource()Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" id="7" />
+    </edges>
+  </graph>
+</gexf>

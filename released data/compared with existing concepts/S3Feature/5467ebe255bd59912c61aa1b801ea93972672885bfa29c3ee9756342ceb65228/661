@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/widget/Scroller;-&gt;abortAnimation()V" label="Landroid/widget/Scroller;-&gt;abortAnimation()V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;completeScroll(Z)V" label="Landroid/support/v4/view/ViewPager;-&gt;completeScroll(Z)V" />
+      <node id="Landroid/view/MotionEvent;-&gt;getAction()I" label="Landroid/view/MotionEvent;-&gt;getAction()I" />
+      <node id="Landroid/widget/Scroller;-&gt;isFinished()Z" label="Landroid/widget/Scroller;-&gt;isFinished()Z" />
+      <node id="Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" label="Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;computeScroll()V" label="Landroid/support/v4/view/ViewPager;-&gt;computeScroll()V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" label="Landroid/support/v4/view/ViewPager;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;completeScroll(Z)V" target="Landroid/widget/Scroller;-&gt;abortAnimation()V" id="0" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;completeScroll(Z)V" target="Landroid/widget/Scroller;-&gt;isFinished()Z" id="1" />
+      <edge source="Landroid/support/v4/view/GestureDetectorCompat$GestureDetectorCompatImplBase;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" target="Landroid/view/MotionEvent;-&gt;getAction()I" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;computeScroll()V" target="Landroid/widget/Scroller;-&gt;abortAnimation()V" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;computeScroll()V" target="Landroid/support/v4/view/ViewPager;-&gt;completeScroll(Z)V" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;computeScroll()V" target="Landroid/widget/Scroller;-&gt;isFinished()Z" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" target="Landroid/widget/Scroller;-&gt;abortAnimation()V" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" target="Landroid/support/v4/view/ViewPager;-&gt;completeScroll(Z)V" id="7" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" target="Landroid/view/MotionEvent;-&gt;getAction()I" id="8" />
+    </edges>
+  </graph>
+</gexf>

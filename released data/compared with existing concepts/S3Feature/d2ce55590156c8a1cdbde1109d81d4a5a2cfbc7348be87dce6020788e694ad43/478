@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/constraint/solver/LinearSystem;-&gt;createVariable(Ljava/lang/String;Landroid/support/constraint/solver/SolverVariable$Type;)Landroid/support/constraint/solver/SolverVariable;" label="Landroid/support/constraint/solver/LinearSystem;-&gt;createVariable(Ljava/lang/String;Landroid/support/constraint/solver/SolverVariable$Type;)Landroid/support/constraint/solver/SolverVariable;" />
+      <node id="Landroid/support/constraint/solver/LinearSystem;-&gt;increaseTableSize()V" label="Landroid/support/constraint/solver/LinearSystem;-&gt;increaseTableSize()V" />
+      <node id="Landroid/support/constraint/solver/SolverVariable;-&gt;setName(Ljava/lang/String;)V" label="Landroid/support/constraint/solver/SolverVariable;-&gt;setName(Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" />
+      <node id="Landroid/support/constraint/solver/widgets/ConstraintWidget;-&gt;setDebugSolverName(Landroid/support/constraint/solver/LinearSystem;Ljava/lang/String;)V" label="Landroid/support/constraint/solver/widgets/ConstraintWidget;-&gt;setDebugSolverName(Landroid/support/constraint/solver/LinearSystem;Ljava/lang/String;)V" />
+      <node id="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" label="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" />
+      <node id="Ljava/util/ArrayList;-&gt;clear()V" label="Ljava/util/ArrayList;-&gt;clear()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;createVariable(Ljava/lang/String;Landroid/support/constraint/solver/SolverVariable$Type;)Landroid/support/constraint/solver/SolverVariable;" target="Landroid/support/constraint/solver/LinearSystem;-&gt;increaseTableSize()V" id="0" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;createVariable(Ljava/lang/String;Landroid/support/constraint/solver/SolverVariable$Type;)Landroid/support/constraint/solver/SolverVariable;" target="Landroid/support/constraint/solver/SolverVariable;-&gt;setName(Ljava/lang/String;)V" id="1" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;increaseTableSize()V" target="Ljava/util/ArrayList;-&gt;clear()V" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" target="Ljava/util/ArrayList;-&gt;clear()V" id="3" />
+      <edge source="Landroid/support/constraint/solver/widgets/ConstraintWidget;-&gt;setDebugSolverName(Landroid/support/constraint/solver/LinearSystem;Ljava/lang/String;)V" target="Landroid/support/constraint/solver/SolverVariable;-&gt;setName(Ljava/lang/String;)V" id="4" />
+      <edge source="Landroid/support/constraint/solver/widgets/ConstraintWidget;-&gt;setDebugSolverName(Landroid/support/constraint/solver/LinearSystem;Ljava/lang/String;)V" target="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" id="5" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" target="Landroid/support/constraint/solver/LinearSystem;-&gt;increaseTableSize()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

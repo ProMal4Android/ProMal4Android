@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/LinearSnapHelper;-&gt;calculateDistanceToFinalSnap(Landroid/support/v7/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I" label="Landroid/support/v7/widget/LinearSnapHelper;-&gt;calculateDistanceToFinalSnap(Landroid/support/v7/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I" />
+      <node id="Landroid/support/v7/widget/LinearSnapHelper;-&gt;getVerticalHelper(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/support/v7/widget/OrientationHelper;" label="Landroid/support/v7/widget/LinearSnapHelper;-&gt;getVerticalHelper(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/support/v7/widget/OrientationHelper;" />
+      <node id="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollVertically()Z" label="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollVertically()Z" />
+      <node id="Landroid/support/v7/widget/OrientationHelper;-&gt;createVerticalHelper(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/support/v7/widget/OrientationHelper;" label="Landroid/support/v7/widget/OrientationHelper;-&gt;createVerticalHelper(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/support/v7/widget/OrientationHelper;" />
+      <node id="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollHorizontally()Z" label="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollHorizontally()Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;scrollBy(II)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;scrollBy(II)V" />
+      <node id="Landroid/support/v7/widget/LinearSnapHelper;-&gt;findSnapView(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/view/View;" label="Landroid/support/v7/widget/LinearSnapHelper;-&gt;findSnapView(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/view/View;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/LinearSnapHelper;-&gt;calculateDistanceToFinalSnap(Landroid/support/v7/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I" target="Landroid/support/v7/widget/LinearSnapHelper;-&gt;getVerticalHelper(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/support/v7/widget/OrientationHelper;" id="0" />
+      <edge source="Landroid/support/v7/widget/LinearSnapHelper;-&gt;calculateDistanceToFinalSnap(Landroid/support/v7/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I" target="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollVertically()Z" id="1" />
+      <edge source="Landroid/support/v7/widget/LinearSnapHelper;-&gt;calculateDistanceToFinalSnap(Landroid/support/v7/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I" target="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollHorizontally()Z" id="2" />
+      <edge source="Landroid/support/v7/widget/LinearSnapHelper;-&gt;getVerticalHelper(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/support/v7/widget/OrientationHelper;" target="Landroid/support/v7/widget/OrientationHelper;-&gt;createVerticalHelper(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/support/v7/widget/OrientationHelper;" id="3" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;scrollBy(II)V" target="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollVertically()Z" id="4" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;scrollBy(II)V" target="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollHorizontally()Z" id="5" />
+      <edge source="Landroid/support/v7/widget/LinearSnapHelper;-&gt;findSnapView(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/view/View;" target="Landroid/support/v7/widget/LinearSnapHelper;-&gt;getVerticalHelper(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/support/v7/widget/OrientationHelper;" id="6" />
+      <edge source="Landroid/support/v7/widget/LinearSnapHelper;-&gt;findSnapView(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/view/View;" target="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollVertically()Z" id="7" />
+      <edge source="Landroid/support/v7/widget/LinearSnapHelper;-&gt;findSnapView(Landroid/support/v7/widget/RecyclerView$LayoutManager;)Landroid/view/View;" target="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;canScrollHorizontally()Z" id="8" />
+    </edges>
+  </graph>
+</gexf>

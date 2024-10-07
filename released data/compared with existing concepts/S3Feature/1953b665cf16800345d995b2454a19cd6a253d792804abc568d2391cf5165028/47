@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/graphics/Rect;-&gt;&lt;init&gt;()V" label="Landroid/graphics/Rect;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;d()Landroid/support/design/widget/j;" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;d()Landroid/support/design/widget/j;" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Landroid/support/design/widget/j;-&gt;&lt;init&gt;(II)V" label="Landroid/support/design/widget/j;-&gt;&lt;init&gt;(II)V" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;d()Landroid/support/design/widget/j;" target="Landroid/support/design/widget/j;-&gt;&lt;init&gt;(II)V" id="0" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Landroid/graphics/Rect;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/design/widget/j;-&gt;&lt;init&gt;(II)V" target="Landroid/graphics/Rect;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;d()Landroid/support/design/widget/j;" id="3" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="4" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" id="5" />
+    </edges>
+  </graph>
+</gexf>

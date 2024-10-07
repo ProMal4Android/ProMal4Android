@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/dr;-&gt;b()V" label="Landroid/support/v4/view/dr;-&gt;b()V" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;s()V" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;s()V" />
+      <node id="Landroid/support/v4/view/dr;-&gt;a(J)Landroid/support/v4/view/dr;" label="Landroid/support/v4/view/dr;-&gt;a(J)Landroid/support/v4/view/dr;" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;b(Landroid/support/v7/app/AppCompatDelegateImplV7;)V" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;b(Landroid/support/v7/app/AppCompatDelegateImplV7;)V" />
+      <node id="Landroid/support/v7/internal/widget/ViewStubCompat;-&gt;setVisibility(I)V" label="Landroid/support/v7/internal/widget/ViewStubCompat;-&gt;setVisibility(I)V" />
+      <node id="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" label="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/internal/widget/a;-&gt;a(IJ)Landroid/support/v4/view/dr;" label="Landroid/support/v7/internal/widget/a;-&gt;a(IJ)Landroid/support/v4/view/dr;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/dr;-&gt;b()V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;s()V" target="Landroid/support/v4/view/dr;-&gt;b()V" id="1" />
+      <edge source="Landroid/support/v4/view/dr;-&gt;a(J)Landroid/support/v4/view/dr;" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;b(Landroid/support/v7/app/AppCompatDelegateImplV7;)V" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;s()V" id="3" />
+      <edge source="Landroid/support/v7/internal/widget/ViewStubCompat;-&gt;setVisibility(I)V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v7/internal/widget/a;-&gt;a(IJ)Landroid/support/v4/view/dr;" target="Landroid/support/v4/view/dr;-&gt;b()V" id="5" />
+      <edge source="Landroid/support/v7/internal/widget/a;-&gt;a(IJ)Landroid/support/v4/view/dr;" target="Landroid/support/v4/view/dr;-&gt;a(J)Landroid/support/v4/view/dr;" id="6" />
+    </edges>
+  </graph>
+</gexf>

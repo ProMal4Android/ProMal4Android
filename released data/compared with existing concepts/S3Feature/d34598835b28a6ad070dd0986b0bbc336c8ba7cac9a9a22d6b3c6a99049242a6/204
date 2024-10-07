@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" label="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" />
+      <node id="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;init(Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" label="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;init(Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" />
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" />
+      <node id="Lcom/ap/injector/internal/common/utils/ViewUtils;-&gt;resizeBitmapForDpi(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" label="Lcom/ap/injector/internal/common/utils/ViewUtils;-&gt;resizeBitmapForDpi(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/widget/ImageView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/widget/ImageView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;getContext()Landroid/content/Context;" label="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;getContext()Landroid/content/Context;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" target="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;init(Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" id="0" />
+      <edge source="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" target="Landroid/widget/ImageView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="1" />
+      <edge source="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" target="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;getContext()Landroid/content/Context;" id="2" />
+      <edge source="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;init(Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" target="Lcom/ap/injector/internal/common/utils/ViewUtils;-&gt;resizeBitmapForDpi(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" id="3" />
+      <edge source="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;init(Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerCreative;)V" target="Lcom/ap/injector/internal/ads/types/banners/image/ImageBannerView;-&gt;getContext()Landroid/content/Context;" id="4" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" target="Landroid/widget/ImageView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="5" />
+      <edge source="Lcom/ap/injector/internal/common/utils/ViewUtils;-&gt;resizeBitmapForDpi(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="6" />
+    </edges>
+  </graph>
+</gexf>

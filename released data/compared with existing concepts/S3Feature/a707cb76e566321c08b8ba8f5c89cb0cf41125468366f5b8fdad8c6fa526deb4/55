@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/ArrayList;-&gt;clear()V" label="Ljava/util/ArrayList;-&gt;clear()V" />
+      <node id="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" label="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;&lt;init&gt;(Landroid/support/design/internal/NavigationMenuPresenter;)V" label="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;&lt;init&gt;(Landroid/support/design/internal/NavigationMenuPresenter;)V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Ljava/util/List;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Ljava/util/List;)V" />
+      <node id="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" label="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" target="Ljava/util/ArrayList;-&gt;clear()V" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;&lt;init&gt;(Landroid/support/design/internal/NavigationMenuPresenter;)V" target="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" id="2" />
+      <edge source="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;&lt;init&gt;(Landroid/support/design/internal/NavigationMenuPresenter;)V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Ljava/util/List;)V" target="Ljava/util/ArrayList;-&gt;clear()V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Ljava/util/List;)V" target="Ljava/util/List;-&gt;size()I" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Ljava/util/List;)V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

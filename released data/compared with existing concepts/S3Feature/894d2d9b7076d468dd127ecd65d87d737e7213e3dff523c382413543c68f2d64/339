@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" />
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="LUtilities/StartAppNativeAds;-&gt;access$000(LUtilities/StartAppNativeAds;)Landroid/widget/TextView;" label="LUtilities/StartAppNativeAds;-&gt;access$000(LUtilities/StartAppNativeAds;)Landroid/widget/TextView;" />
+      <node id="LUtilities/StartAppNativeAds$1;-&gt;run()V" label="LUtilities/StartAppNativeAds$1;-&gt;run()V" />
+      <node id="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" label="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;isStarted()Z" label="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;isStarted()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" target="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" id="1" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="LUtilities/StartAppNativeAds$1;-&gt;run()V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="3" />
+      <edge source="LUtilities/StartAppNativeAds$1;-&gt;run()V" target="LUtilities/StartAppNativeAds;-&gt;access$000(LUtilities/StartAppNativeAds;)Landroid/widget/TextView;" id="4" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="6" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;isStarted()Z" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="7" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;isStarted()Z" target="Ljava/util/ArrayList;-&gt;size()I" id="8" />
+    </edges>
+  </graph>
+</gexf>

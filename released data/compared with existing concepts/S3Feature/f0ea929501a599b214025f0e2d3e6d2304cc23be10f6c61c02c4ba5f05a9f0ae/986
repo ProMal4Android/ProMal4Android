@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;-&gt;assignCoordinateFromPadding()V" label="Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;-&gt;assignCoordinateFromPadding()V" />
+      <node id="Landroid/support/v7/widget/LinearLayoutManager;-&gt;onLayoutChildren(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)V" label="Landroid/support/v7/widget/LinearLayoutManager;-&gt;onLayoutChildren(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)V" />
+      <node id="Landroid/support/v7/widget/OrientationHelper;-&gt;getStartAfterPadding()I" label="Landroid/support/v7/widget/OrientationHelper;-&gt;getStartAfterPadding()I" />
+      <node id="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;fill(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/LayoutState;Landroid/support/v7/widget/RecyclerView$State;)I" label="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;fill(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/LayoutState;Landroid/support/v7/widget/RecyclerView$State;)I" />
+      <node id="Landroid/support/v7/widget/LayoutState;-&gt;hasMore(Landroid/support/v7/widget/RecyclerView$State;)Z" label="Landroid/support/v7/widget/LayoutState;-&gt;hasMore(Landroid/support/v7/widget/RecyclerView$State;)Z" />
+      <node id="Landroid/support/v7/widget/LinearLayoutManager;-&gt;updateAnchorInfoForLayout(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;)V" label="Landroid/support/v7/widget/LinearLayoutManager;-&gt;updateAnchorInfoForLayout(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;)V" />
+      <node id="Landroid/support/v7/widget/RecyclerView$State;-&gt;getItemCount()I" label="Landroid/support/v7/widget/RecyclerView$State;-&gt;getItemCount()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;-&gt;assignCoordinateFromPadding()V" target="Landroid/support/v7/widget/OrientationHelper;-&gt;getStartAfterPadding()I" id="0" />
+      <edge source="Landroid/support/v7/widget/LinearLayoutManager;-&gt;onLayoutChildren(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)V" target="Landroid/support/v7/widget/OrientationHelper;-&gt;getStartAfterPadding()I" id="1" />
+      <edge source="Landroid/support/v7/widget/LinearLayoutManager;-&gt;onLayoutChildren(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)V" target="Landroid/support/v7/widget/LinearLayoutManager;-&gt;updateAnchorInfoForLayout(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;)V" id="2" />
+      <edge source="Landroid/support/v7/widget/LinearLayoutManager;-&gt;onLayoutChildren(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)V" target="Landroid/support/v7/widget/RecyclerView$State;-&gt;getItemCount()I" id="3" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;fill(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/LayoutState;Landroid/support/v7/widget/RecyclerView$State;)I" target="Landroid/support/v7/widget/OrientationHelper;-&gt;getStartAfterPadding()I" id="4" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;fill(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/LayoutState;Landroid/support/v7/widget/RecyclerView$State;)I" target="Landroid/support/v7/widget/LayoutState;-&gt;hasMore(Landroid/support/v7/widget/RecyclerView$State;)Z" id="5" />
+      <edge source="Landroid/support/v7/widget/LayoutState;-&gt;hasMore(Landroid/support/v7/widget/RecyclerView$State;)Z" target="Landroid/support/v7/widget/RecyclerView$State;-&gt;getItemCount()I" id="6" />
+      <edge source="Landroid/support/v7/widget/LinearLayoutManager;-&gt;updateAnchorInfoForLayout(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;)V" target="Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;-&gt;assignCoordinateFromPadding()V" id="7" />
+      <edge source="Landroid/support/v7/widget/LinearLayoutManager;-&gt;updateAnchorInfoForLayout(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;Landroid/support/v7/widget/LinearLayoutManager$AnchorInfo;)V" target="Landroid/support/v7/widget/RecyclerView$State;-&gt;getItemCount()I" id="8" />
+    </edges>
+  </graph>
+</gexf>

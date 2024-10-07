@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" label="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/content/pm/ShortcutInfoCompat;-&gt;addToIntent(Landroid/content/Intent;)Landroid/content/Intent;" label="Landroid/support/v4/content/pm/ShortcutInfoCompat;-&gt;addToIntent(Landroid/content/Intent;)Landroid/content/Intent;" />
+      <node id="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;)V" label="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;)V" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" />
+      <node id="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;" label="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/content/pm/ShortcutInfoCompat;-&gt;addToIntent(Landroid/content/Intent;)Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" id="0" />
+      <edge source="Landroid/support/v4/content/pm/ShortcutInfoCompat;-&gt;addToIntent(Landroid/content/Intent;)Landroid/content/Intent;" target="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;)V" id="1" />
+      <edge source="Landroid/support/v4/content/pm/ShortcutInfoCompat;-&gt;addToIntent(Landroid/content/Intent;)Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;" id="2" />
+      <edge source="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;)V" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;" id="3" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" id="4" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;" id="5" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;" id="7" />
+    </edges>
+  </graph>
+</gexf>

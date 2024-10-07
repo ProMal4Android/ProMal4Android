@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" label="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;startUpdate(Landroid/view/ViewGroup;)V" label="Landroid/support/v4/view/PagerAdapter;-&gt;startUpdate(Landroid/view/ViewGroup;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" label="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" label="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" label="Landroid/support/v4/view/PagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" label="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" id="0" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;startUpdate(Landroid/view/ViewGroup;)V" id="1" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Ljava/util/ArrayList;-&gt;size()I" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;startUpdate(Landroid/view/ViewGroup;)V" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" target="Ljava/util/ArrayList;-&gt;size()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

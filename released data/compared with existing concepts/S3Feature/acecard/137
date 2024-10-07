@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-18">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchDestroy()V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchDestroy()V" />
+      <node id="Linfo/guardianproject/onionkit/ui/CertDisplayActivity;-&gt;onDestroy()V" label="Linfo/guardianproject/onionkit/ui/CertDisplayActivity;-&gt;onDestroy()V" />
+      <node id="Landroid/app/AlertDialog;-&gt;cancel()V" label="Landroid/app/AlertDialog;-&gt;cancel()V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" label="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onDestroy()V" label="Landroid/support/v4/app/FragmentActivity;-&gt;onDestroy()V" />
+      <node id="Landroid/app/Activity;-&gt;onDestroy()V" label="Landroid/app/Activity;-&gt;onDestroy()V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;performDestroy()V" label="Landroid/support/v4/app/Fragment;-&gt;performDestroy()V" />
+    </nodes>
+    <edges>
+      <edge source="Linfo/guardianproject/onionkit/ui/CertDisplayActivity;-&gt;onDestroy()V" target="Landroid/app/AlertDialog;-&gt;cancel()V" id="0" />
+      <edge source="Linfo/guardianproject/onionkit/ui/CertDisplayActivity;-&gt;onDestroy()V" target="Landroid/app/Activity;-&gt;onDestroy()V" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onDestroy()V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchDestroy()V" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onDestroy()V" target="Landroid/app/Activity;-&gt;onDestroy()V" id="3" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;performDestroy()V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchDestroy()V" id="4" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;performDestroy()V" target="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" id="5" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/os/Bundle;-&gt;getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;" label="Landroid/os/Bundle;-&gt;getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;" />
+      <node id="Lact/TrackingReceiver$a;-&gt;a([Ljava/lang/Void;)Ljava/lang/Boolean;" label="Lact/TrackingReceiver$a;-&gt;a([Ljava/lang/Void;)Ljava/lang/Boolean;" />
+      <node id="Landroid/support/v4/app/NotificationCompat$CarExtender;-&gt;getUnreadConversationFromBundle(Landroid/os/Bundle;)Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;" label="Landroid/support/v4/app/NotificationCompat$CarExtender;-&gt;getUnreadConversationFromBundle(Landroid/os/Bundle;)Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" label="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" />
+      <node id="Landroid/os/Bundle;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" label="Landroid/os/Bundle;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" />
+      <node id="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" label="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" />
+    </nodes>
+    <edges>
+      <edge source="Lact/TrackingReceiver$a;-&gt;a([Ljava/lang/Void;)Ljava/lang/Boolean;" target="Landroid/os/Bundle;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" id="0" />
+      <edge source="Lact/TrackingReceiver$a;-&gt;a([Ljava/lang/Void;)Ljava/lang/Boolean;" target="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$CarExtender;-&gt;getUnreadConversationFromBundle(Landroid/os/Bundle;)Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;" target="Landroid/os/Bundle;-&gt;getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$CarExtender;-&gt;getUnreadConversationFromBundle(Landroid/os/Bundle;)Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;" target="Landroid/os/Bundle;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" id="3" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" target="Landroid/os/Bundle;-&gt;getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;" id="4" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" target="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" id="5" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" target="Landroid/os/Bundle;-&gt;getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;" id="6" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" target="Landroid/os/Bundle;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" id="7" />
+    </edges>
+  </graph>
+</gexf>

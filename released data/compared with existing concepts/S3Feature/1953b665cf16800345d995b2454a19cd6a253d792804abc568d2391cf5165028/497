@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/measurement/internal/bs;-&gt;w()Lcom/google/android/gms/measurement/internal/bh;" label="Lcom/google/android/gms/measurement/internal/bs;-&gt;w()Lcom/google/android/gms/measurement/internal/bh;" />
+      <node id="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;m()V" label="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;m()V" />
+      <node id="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" label="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;setDrawerLockMode(I)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;setDrawerLockMode(I)V" />
+      <node id="Lcom/google/android/gms/measurement/internal/bs;-&gt;C()V" label="Lcom/google/android/gms/measurement/internal/bs;-&gt;C()V" />
+      <node id="Lcom/google/android/gms/measurement/internal/bs;-&gt;b(Z)V" label="Lcom/google/android/gms/measurement/internal/bs;-&gt;b(Z)V" />
+      <node id="Lcom/google/android/gms/measurement/internal/bs;-&gt;j()V" label="Lcom/google/android/gms/measurement/internal/bs;-&gt;j()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;m()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="0" />
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;m()V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;setDrawerLockMode(I)V" id="1" />
+      <edge source="Lcom/google/android/gms/measurement/internal/bs;-&gt;C()V" target="Lcom/google/android/gms/measurement/internal/bs;-&gt;w()Lcom/google/android/gms/measurement/internal/bh;" id="2" />
+      <edge source="Lcom/google/android/gms/measurement/internal/bs;-&gt;C()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="3" />
+      <edge source="Lcom/google/android/gms/measurement/internal/bs;-&gt;C()V" target="Lcom/google/android/gms/measurement/internal/bs;-&gt;b(Z)V" id="4" />
+      <edge source="Lcom/google/android/gms/measurement/internal/bs;-&gt;C()V" target="Lcom/google/android/gms/measurement/internal/bs;-&gt;j()V" id="5" />
+      <edge source="Lcom/google/android/gms/measurement/internal/bs;-&gt;b(Z)V" target="Lcom/google/android/gms/measurement/internal/bs;-&gt;w()Lcom/google/android/gms/measurement/internal/bh;" id="6" />
+      <edge source="Lcom/google/android/gms/measurement/internal/bs;-&gt;b(Z)V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="7" />
+      <edge source="Lcom/google/android/gms/measurement/internal/bs;-&gt;b(Z)V" target="Lcom/google/android/gms/measurement/internal/bs;-&gt;j()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

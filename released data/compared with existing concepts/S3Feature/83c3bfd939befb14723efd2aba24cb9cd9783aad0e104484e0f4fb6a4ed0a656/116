@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;addSharedElement(Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;" label="Landroid/support/v4/app/BackStackRecord;-&gt;addSharedElement(Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" label="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" />
+      <node id="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" label="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;run()V" label="Landroid/support/v4/app/BackStackRecord;-&gt;run()V" />
+      <node id="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZZZILjava/lang/CharSequence;ZLjava/util/ArrayList;Landroid/os/Bundle;Ljava/lang/String;ZLjava/lang/String;)V" label="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZZZILjava/lang/CharSequence;ZLjava/util/ArrayList;Landroid/os/Bundle;Ljava/lang/String;ZLjava/lang/String;)V" />
+      <node id="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;addSharedElement(Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;addSharedElement(Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/FragmentTransaction;" target="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="1" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;run()V" target="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" id="3" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;run()V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;run()V" target="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="5" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;run()V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZZZILjava/lang/CharSequence;ZLjava/util/ArrayList;Landroid/os/Bundle;Ljava/lang/String;ZLjava/lang/String;)V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

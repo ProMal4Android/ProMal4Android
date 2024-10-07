@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/PagerTitleStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/view/PagerTitleStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/graphics/Rect;-&gt;&lt;init&gt;()V" label="Landroid/graphics/Rect;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/view/PagerTitleStrip$PageListener;-&gt;&lt;init&gt;(Landroid/support/v4/view/PagerTitleStrip;Landroid/support/v4/view/PagerTitleStrip$1;)V" label="Landroid/support/v4/view/PagerTitleStrip$PageListener;-&gt;&lt;init&gt;(Landroid/support/v4/view/PagerTitleStrip;Landroid/support/v4/view/PagerTitleStrip$1;)V" />
+      <node id="Landroid/view/ViewGroup;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/view/ViewGroup;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/support/v4/view/PagerTitleStrip$PageListener;-&gt;&lt;init&gt;(Landroid/support/v4/view/PagerTitleStrip;)V" label="Landroid/support/v4/view/PagerTitleStrip$PageListener;-&gt;&lt;init&gt;(Landroid/support/v4/view/PagerTitleStrip;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/view/ViewPager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/PagerTitleStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/support/v4/view/PagerTitleStrip$PageListener;-&gt;&lt;init&gt;(Landroid/support/v4/view/PagerTitleStrip;Landroid/support/v4/view/PagerTitleStrip$1;)V" id="0" />
+      <edge source="Landroid/support/v4/view/PagerTitleStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/view/ViewGroup;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="1" />
+      <edge source="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/support/v4/view/PagerTitleStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="2" />
+      <edge source="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/graphics/Rect;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/view/PagerTitleStrip$PageListener;-&gt;&lt;init&gt;(Landroid/support/v4/view/PagerTitleStrip;Landroid/support/v4/view/PagerTitleStrip$1;)V" target="Landroid/support/v4/view/PagerTitleStrip$PageListener;-&gt;&lt;init&gt;(Landroid/support/v4/view/PagerTitleStrip;)V" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/graphics/Rect;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/view/ViewGroup;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

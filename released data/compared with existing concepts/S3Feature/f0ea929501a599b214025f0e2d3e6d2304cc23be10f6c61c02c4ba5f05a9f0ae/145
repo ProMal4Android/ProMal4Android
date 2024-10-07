@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/Iterator;-&gt;hasNext()Z" label="Ljava/util/Iterator;-&gt;hasNext()Z" />
+      <node id="Lcom/facebook/appevents/AppEventCollection;-&gt;keySet()Ljava/util/Set;" label="Lcom/facebook/appevents/AppEventCollection;-&gt;keySet()Ljava/util/Set;" />
+      <node id="Lcom/facebook/appevents/AppEventStore;-&gt;persistEvents(Lcom/facebook/appevents/AppEventCollection;)V" label="Lcom/facebook/appevents/AppEventStore;-&gt;persistEvents(Lcom/facebook/appevents/AppEventCollection;)V" />
+      <node id="Landroid/support/constraint/ConstraintSet;-&gt;applyToInternal(Landroid/support/constraint/ConstraintLayout;)V" label="Landroid/support/constraint/ConstraintSet;-&gt;applyToInternal(Landroid/support/constraint/ConstraintLayout;)V" />
+      <node id="Lcom/bumptech/glide/manager/ActivityFragmentLifecycle;-&gt;onStop()V" label="Lcom/bumptech/glide/manager/ActivityFragmentLifecycle;-&gt;onStop()V" />
+      <node id="Ljava/util/HashMap;-&gt;keySet()Ljava/util/Set;" label="Ljava/util/HashMap;-&gt;keySet()Ljava/util/Set;" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" label="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/appevents/AppEventCollection;-&gt;keySet()Ljava/util/Set;" target="Ljava/util/HashMap;-&gt;keySet()Ljava/util/Set;" id="0" />
+      <edge source="Lcom/facebook/appevents/AppEventStore;-&gt;persistEvents(Lcom/facebook/appevents/AppEventCollection;)V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="1" />
+      <edge source="Lcom/facebook/appevents/AppEventStore;-&gt;persistEvents(Lcom/facebook/appevents/AppEventCollection;)V" target="Lcom/facebook/appevents/AppEventCollection;-&gt;keySet()Ljava/util/Set;" id="2" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;applyToInternal(Landroid/support/constraint/ConstraintLayout;)V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="3" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;applyToInternal(Landroid/support/constraint/ConstraintLayout;)V" target="Ljava/util/HashMap;-&gt;keySet()Ljava/util/Set;" id="4" />
+      <edge source="Lcom/bumptech/glide/manager/ActivityFragmentLifecycle;-&gt;onStop()V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="5" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" target="Lcom/bumptech/glide/manager/ActivityFragmentLifecycle;-&gt;onStop()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

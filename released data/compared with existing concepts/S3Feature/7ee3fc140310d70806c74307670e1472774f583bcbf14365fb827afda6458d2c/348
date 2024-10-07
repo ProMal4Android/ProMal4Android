@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" label="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;onNestedFling(Landroid/view/View;FFZ)Z" label="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;onNestedFling(Landroid/view/View;FFZ)Z" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;o()V" label="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;o()V" />
+      <node id="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" label="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;getHeight()I" label="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;getHeight()I" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;a(FF)Z" label="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;a(FF)Z" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;k()V" label="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;k()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;onNestedFling(Landroid/view/View;FFZ)Z" target="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;o()V" id="0" />
+      <edge source="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;onNestedFling(Landroid/view/View;FFZ)Z" target="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;a(FF)Z" id="1" />
+      <edge source="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;o()V" target="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;k()V" id="2" />
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" id="3" />
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;getHeight()I" id="4" />
+      <edge source="Landroid/support/v7/internal/widget/ActionBarOverlayLayout;-&gt;a(FF)Z" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;getHeight()I" id="5" />
+    </edges>
+  </graph>
+</gexf>

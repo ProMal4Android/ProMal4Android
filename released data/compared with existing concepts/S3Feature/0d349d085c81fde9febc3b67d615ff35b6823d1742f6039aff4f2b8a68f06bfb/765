@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;createVoiceWebSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" label="Landroid/support/v7/widget/SearchView;-&gt;createVoiceWebSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;setSearchableInfo(Landroid/app/SearchableInfo;)V" label="Landroid/support/v7/widget/SearchView;-&gt;setSearchableInfo(Landroid/app/SearchableInfo;)V" />
+      <node id="Landroid/app/SearchableInfo;-&gt;getSearchActivity()Landroid/content/ComponentName;" label="Landroid/app/SearchableInfo;-&gt;getSearchActivity()Landroid/content/ComponentName;" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;onVoiceClicked()V" label="Landroid/support/v7/widget/SearchView;-&gt;onVoiceClicked()V" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" label="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" />
+      <node id="Landroid/app/SearchableInfo;-&gt;getVoiceSearchLaunchWebSearch()Z" label="Landroid/app/SearchableInfo;-&gt;getVoiceSearchLaunchWebSearch()Z" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;hasVoiceSearch()Z" label="Landroid/support/v7/widget/SearchView;-&gt;hasVoiceSearch()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;createVoiceWebSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" target="Landroid/app/SearchableInfo;-&gt;getSearchActivity()Landroid/content/ComponentName;" id="0" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;setSearchableInfo(Landroid/app/SearchableInfo;)V" target="Landroid/support/v7/widget/SearchView;-&gt;hasVoiceSearch()Z" id="1" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;onVoiceClicked()V" target="Landroid/support/v7/widget/SearchView;-&gt;createVoiceWebSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" id="2" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;onVoiceClicked()V" target="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" id="3" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;onVoiceClicked()V" target="Landroid/app/SearchableInfo;-&gt;getVoiceSearchLaunchWebSearch()Z" id="4" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" target="Landroid/app/SearchableInfo;-&gt;getSearchActivity()Landroid/content/ComponentName;" id="5" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;hasVoiceSearch()Z" target="Landroid/app/SearchableInfo;-&gt;getVoiceSearchLaunchWebSearch()Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

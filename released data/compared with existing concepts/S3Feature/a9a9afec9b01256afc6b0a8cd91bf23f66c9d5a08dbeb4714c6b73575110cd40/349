@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" label="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" />
+      <node id="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;" label="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getItem(I)Ljava/lang/Object;" label="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getItem(I)Ljava/lang/Object;" />
+      <node id="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;" label="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" label="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" />
+      <node id="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;b(I)Lcom/ironsource/mobilcore/aq;" label="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;b(I)Lcom/ironsource/mobilcore/aq;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;" id="0" />
+      <edge source="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="1" />
+      <edge source="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getItem(I)Ljava/lang/Object;" id="2" />
+      <edge source="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;" id="3" />
+      <edge source="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;getItem(I)Ljava/lang/Object;" target="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;b(I)Lcom/ironsource/mobilcore/aq;" id="4" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="5" />
+      <edge source="Lcom/ironsource/mobilcore/NativeAdsAdapter;-&gt;b(I)Lcom/ironsource/mobilcore/aq;" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/volley/toolbox/DiskBasedCache;-&gt;writeString(Ljava/io/OutputStream;Ljava/lang/String;)V" label="Lcom/android/volley/toolbox/DiskBasedCache;-&gt;writeString(Ljava/io/OutputStream;Ljava/lang/String;)V" />
+      <node id="Ljava/lang/String;-&gt;getBytes(Ljava/lang/String;)[B" label="Ljava/lang/String;-&gt;getBytes(Ljava/lang/String;)[B" />
+      <node id="Lcom/android/volley/toolbox/JsonRequest;-&gt;getBody()[B" label="Lcom/android/volley/toolbox/JsonRequest;-&gt;getBody()[B" />
+      <node id="Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;-&gt;writeHeader(Ljava/io/OutputStream;)Z" label="Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;-&gt;writeHeader(Ljava/io/OutputStream;)Z" />
+      <node id="Lcom/google/android/gms/internal/ads/zzam;-&gt;zza(Ljava/io/OutputStream;I)V" label="Lcom/google/android/gms/internal/ads/zzam;-&gt;zza(Ljava/io/OutputStream;I)V" />
+      <node id="Lcom/android/volley/toolbox/DiskBasedCache;-&gt;writeInt(Ljava/io/OutputStream;I)V" label="Lcom/android/volley/toolbox/DiskBasedCache;-&gt;writeInt(Ljava/io/OutputStream;I)V" />
+      <node id="Ljava/io/OutputStream;-&gt;write(I)V" label="Ljava/io/OutputStream;-&gt;write(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/volley/toolbox/DiskBasedCache;-&gt;writeString(Ljava/io/OutputStream;Ljava/lang/String;)V" target="Ljava/lang/String;-&gt;getBytes(Ljava/lang/String;)[B" id="0" />
+      <edge source="Lcom/android/volley/toolbox/JsonRequest;-&gt;getBody()[B" target="Ljava/lang/String;-&gt;getBytes(Ljava/lang/String;)[B" id="1" />
+      <edge source="Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;-&gt;writeHeader(Ljava/io/OutputStream;)Z" target="Lcom/android/volley/toolbox/DiskBasedCache;-&gt;writeString(Ljava/io/OutputStream;Ljava/lang/String;)V" id="2" />
+      <edge source="Lcom/android/volley/toolbox/DiskBasedCache$CacheHeader;-&gt;writeHeader(Ljava/io/OutputStream;)Z" target="Lcom/android/volley/toolbox/DiskBasedCache;-&gt;writeInt(Ljava/io/OutputStream;I)V" id="3" />
+      <edge source="Lcom/google/android/gms/internal/ads/zzam;-&gt;zza(Ljava/io/OutputStream;I)V" target="Ljava/io/OutputStream;-&gt;write(I)V" id="4" />
+      <edge source="Lcom/android/volley/toolbox/DiskBasedCache;-&gt;writeInt(Ljava/io/OutputStream;I)V" target="Ljava/io/OutputStream;-&gt;write(I)V" id="5" />
+    </edges>
+  </graph>
+</gexf>

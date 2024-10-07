@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;flagActionItems()Z" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;flagActionItems()Z" />
+      <node id="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" label="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" />
+      <node id="Lcom/test/acleaner/CallsMsgActivity$1;-&gt;onClick(Landroid/view/View;)V" label="Lcom/test/acleaner/CallsMsgActivity$1;-&gt;onClick(Landroid/view/View;)V" />
+      <node id="Ladapters/AdapterCallsMsg;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Ladapters/AdapterCallsMsg;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Lhelpers/Item;-&gt;isSection()Z" label="Lhelpers/Item;-&gt;isSection()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;flagActionItems()Z" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;flagActionItems()Z" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" id="1" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;flagActionItems()Z" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Lcom/test/acleaner/CallsMsgActivity$1;-&gt;onClick(Landroid/view/View;)V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="5" />
+      <edge source="Lcom/test/acleaner/CallsMsgActivity$1;-&gt;onClick(Landroid/view/View;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="6" />
+      <edge source="Lcom/test/acleaner/CallsMsgActivity$1;-&gt;onClick(Landroid/view/View;)V" target="Lhelpers/Item;-&gt;isSection()Z" id="7" />
+      <edge source="Ladapters/AdapterCallsMsg;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="8" />
+      <edge source="Ladapters/AdapterCallsMsg;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Lhelpers/Item;-&gt;isSection()Z" id="9" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/text/Spannable;I)Z" label="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/text/Spannable;I)Z" />
+      <node id="Landroid/text/Spannable;-&gt;length()I" label="Landroid/text/Spannable;-&gt;length()I" />
+      <node id="Landroid/support/v4/text/util/LinkifyCompat;-&gt;pruneOverlaps(Ljava/util/ArrayList;Landroid/text/Spannable;)V" label="Landroid/support/v4/text/util/LinkifyCompat;-&gt;pruneOverlaps(Ljava/util/ArrayList;Landroid/text/Spannable;)V" />
+      <node id="Landroid/support/v4/text/util/LinkifyCompat$LinkSpec;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/text/util/LinkifyCompat$LinkSpec;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" label="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setEmptyText(Ljava/lang/CharSequence;)V" label="Landroid/support/v4/app/ListFragment;-&gt;setEmptyText(Ljava/lang/CharSequence;)V" />
+      <node id="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/widget/TextView;I)Z" label="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/widget/TextView;I)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/text/Spannable;I)Z" target="Landroid/text/Spannable;-&gt;length()I" id="0" />
+      <edge source="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/text/Spannable;I)Z" target="Landroid/support/v4/text/util/LinkifyCompat;-&gt;pruneOverlaps(Ljava/util/ArrayList;Landroid/text/Spannable;)V" id="1" />
+      <edge source="Landroid/support/v4/text/util/LinkifyCompat;-&gt;pruneOverlaps(Ljava/util/ArrayList;Landroid/text/Spannable;)V" target="Landroid/text/Spannable;-&gt;length()I" id="2" />
+      <edge source="Landroid/support/v4/text/util/LinkifyCompat;-&gt;pruneOverlaps(Ljava/util/ArrayList;Landroid/text/Spannable;)V" target="Landroid/support/v4/text/util/LinkifyCompat$LinkSpec;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setEmptyText(Ljava/lang/CharSequence;)V" target="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" id="4" />
+      <edge source="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/widget/TextView;I)Z" target="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/text/Spannable;I)Z" id="5" />
+      <edge source="Landroid/support/v4/text/util/LinkifyCompat;-&gt;addLinks(Landroid/widget/TextView;I)Z" target="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

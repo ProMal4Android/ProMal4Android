@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;getChildCount()I" label="Landroid/support/v4/widget/DrawerLayout;-&gt;getChildCount()I" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;setDrawerLockMode(I)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;setDrawerLockMode(I)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;c(I)Landroid/view/View;" label="Landroid/support/v4/widget/DrawerLayout;-&gt;c(I)Landroid/view/View;" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;getChildAt(I)Landroid/view/View;" label="Landroid/support/v4/widget/DrawerLayout;-&gt;getChildAt(I)Landroid/view/View;" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;c(Landroid/view/View;Z)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;c(Landroid/view/View;Z)V" />
+      <node id="Landroid/support/v4/g/f;-&gt;a(II)I" label="Landroid/support/v4/g/f;-&gt;a(II)I" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;a(II)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;a(II)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;setDrawerLockMode(I)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;a(II)V" id="0" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;c(I)Landroid/view/View;" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getChildCount()I" id="1" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;c(I)Landroid/view/View;" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getChildAt(I)Landroid/view/View;" id="2" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;c(I)Landroid/view/View;" target="Landroid/support/v4/g/f;-&gt;a(II)I" id="3" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;c(Landroid/view/View;Z)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getChildCount()I" id="4" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;c(Landroid/view/View;Z)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getChildAt(I)Landroid/view/View;" id="5" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;a(II)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;c(I)Landroid/view/View;" id="6" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;a(II)V" target="Landroid/support/v4/g/f;-&gt;a(II)I" id="7" />
+    </edges>
+  </graph>
+</gexf>

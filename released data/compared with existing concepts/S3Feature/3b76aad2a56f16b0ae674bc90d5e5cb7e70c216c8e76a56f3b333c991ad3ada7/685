@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/widget/TabHost;-&gt;setup()V" label="Landroid/widget/TabHost;-&gt;setup()V" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;I)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;I)V" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;findViewById(I)Landroid/view/View;" label="Landroid/support/v4/app/FragmentTabHost;-&gt;findViewById(I)Landroid/view/View;" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureContent()V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureContent()V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;I)V" target="Landroid/widget/TabHost;-&gt;setup()V" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;I)V" target="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;I)V" target="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureContent()V" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" target="Landroid/support/v4/app/FragmentTabHost;-&gt;findViewById(I)Landroid/view/View;" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" target="Landroid/widget/TabHost;-&gt;setup()V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" target="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" target="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureContent()V" id="6" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureContent()V" target="Landroid/support/v4/app/FragmentTabHost;-&gt;findViewById(I)Landroid/view/View;" id="7" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureContent()V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

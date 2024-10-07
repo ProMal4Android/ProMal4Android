@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" />
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" />
+      <node id="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" label="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" />
+      <node id="Landroid/app/Activity;-&gt;getComponentName()Landroid/content/ComponentName;" label="Landroid/app/Activity;-&gt;getComponentName()Landroid/content/ComponentName;" />
+      <node id="Landroid/content/Intent;-&gt;&lt;init&gt;()V" label="Landroid/content/Intent;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" id="0" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" target="Landroid/app/Activity;-&gt;getComponentName()Landroid/content/ComponentName;" id="1" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="2" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Landroid/app/Activity;-&gt;getComponentName()Landroid/content/ComponentName;" id="3" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Landroid/content/Intent;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" id="5" />
+      <edge source="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" id="6" />
+      <edge source="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;&lt;init&gt;()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

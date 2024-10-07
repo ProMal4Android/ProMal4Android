@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" label="Landroid/support/v7/widget/RecyclerView;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;stopScrollersInternal()V" label="Landroid/support/v7/widget/RecyclerView;-&gt;stopScrollersInternal()V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;scrollToPosition(I)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;scrollToPosition(I)V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;cancelTouch()V" label="Landroid/support/v7/widget/RecyclerView;-&gt;cancelTouch()V" />
+      <node id="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;)I" label="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollState(I)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollState(I)V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;stopScroll()V" label="Landroid/support/v7/widget/RecyclerView;-&gt;stopScroll()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" target="Landroid/support/v7/widget/RecyclerView;-&gt;cancelTouch()V" id="0" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;)I" id="1" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;onInterceptTouchEvent(Landroid/view/MotionEvent;)Z" target="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollState(I)V" id="2" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;scrollToPosition(I)V" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;)I" id="3" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;scrollToPosition(I)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;stopScroll()V" id="4" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;cancelTouch()V" target="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollState(I)V" id="5" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollState(I)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;stopScrollersInternal()V" id="6" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;stopScroll()V" target="Landroid/support/v7/widget/RecyclerView;-&gt;stopScrollersInternal()V" id="7" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;stopScroll()V" target="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollState(I)V" id="8" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/StringBuilder;-&gt;append(D)Ljava/lang/StringBuilder;" label="Ljava/lang/StringBuilder;-&gt;append(D)Ljava/lang/StringBuilder;" />
+      <node id="Lcom/bumptech/glide/request/GenericRequest;-&gt;onSizeReady(II)V" label="Lcom/bumptech/glide/request/GenericRequest;-&gt;onSizeReady(II)V" />
+      <node id="Ljava/lang/Math;-&gt;cos(D)D" label="Ljava/lang/Math;-&gt;cos(D)D" />
+      <node id="Lcom/bumptech/glide/util/e;-&gt;a(J)D" label="Lcom/bumptech/glide/util/e;-&gt;a(J)D" />
+      <node id="Lcom/bumptech/glide/load/engine/b;-&gt;a(Ljava/lang/String;J)V" label="Lcom/bumptech/glide/load/engine/b;-&gt;a(Ljava/lang/String;J)V" />
+      <node id="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;DDDDDDDDD)V" label="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;DDDDDDDDD)V" />
+      <node id="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;FFFFFFFZZ)V" label="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;FFFFFFFZZ)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/request/GenericRequest;-&gt;onSizeReady(II)V" target="Ljava/lang/StringBuilder;-&gt;append(D)Ljava/lang/StringBuilder;" id="0" />
+      <edge source="Lcom/bumptech/glide/request/GenericRequest;-&gt;onSizeReady(II)V" target="Lcom/bumptech/glide/util/e;-&gt;a(J)D" id="1" />
+      <edge source="Lcom/bumptech/glide/load/engine/b;-&gt;a(Ljava/lang/String;J)V" target="Ljava/lang/StringBuilder;-&gt;append(D)Ljava/lang/StringBuilder;" id="2" />
+      <edge source="Lcom/bumptech/glide/load/engine/b;-&gt;a(Ljava/lang/String;J)V" target="Lcom/bumptech/glide/util/e;-&gt;a(J)D" id="3" />
+      <edge source="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;DDDDDDDDD)V" target="Ljava/lang/Math;-&gt;cos(D)D" id="4" />
+      <edge source="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;FFFFFFFZZ)V" target="Ljava/lang/StringBuilder;-&gt;append(D)Ljava/lang/StringBuilder;" id="5" />
+      <edge source="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;FFFFFFFZZ)V" target="Ljava/lang/Math;-&gt;cos(D)D" id="6" />
+      <edge source="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;FFFFFFFZZ)V" target="Landroid/supports/e/a/e$b;-&gt;a(Landroid/graphics/Path;DDDDDDDDD)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

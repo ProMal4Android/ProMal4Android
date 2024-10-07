@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" />
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" />
+      <node id="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityX(FF)F" label="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityX(FF)F" />
+      <node id="Ljava/lang/Math;-&gt;max(FF)F" label="Ljava/lang/Math;-&gt;max(FF)F" />
+      <node id="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityY(FF)F" label="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityY(FF)F" />
+      <node id="Ljava/lang/Math;-&gt;min(FF)F" label="Ljava/lang/Math;-&gt;min(FF)F" />
+      <node id="Lorg/andengine/engine/camera/SmoothCamera;-&gt;onUpdate(F)V" label="Lorg/andengine/engine/camera/SmoothCamera;-&gt;onUpdate(F)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" target="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" id="0" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" target="Ljava/lang/Math;-&gt;min(FF)F" id="1" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" target="Ljava/lang/Math;-&gt;min(FF)F" id="2" />
+      <edge source="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityX(FF)F" target="Ljava/lang/Math;-&gt;max(FF)F" id="3" />
+      <edge source="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityX(FF)F" target="Ljava/lang/Math;-&gt;min(FF)F" id="4" />
+      <edge source="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityY(FF)F" target="Ljava/lang/Math;-&gt;max(FF)F" id="5" />
+      <edge source="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityY(FF)F" target="Ljava/lang/Math;-&gt;min(FF)F" id="6" />
+      <edge source="Lorg/andengine/engine/camera/SmoothCamera;-&gt;onUpdate(F)V" target="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityX(FF)F" id="7" />
+      <edge source="Lorg/andengine/engine/camera/SmoothCamera;-&gt;onUpdate(F)V" target="Lorg/andengine/engine/camera/SmoothCamera;-&gt;limitToMaxVelocityY(FF)F" id="8" />
+    </edges>
+  </graph>
+</gexf>

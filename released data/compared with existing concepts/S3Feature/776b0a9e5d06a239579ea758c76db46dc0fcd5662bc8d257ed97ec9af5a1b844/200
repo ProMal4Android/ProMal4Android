@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/internal/azg;-&gt;a(Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z" label="Lcom/google/android/gms/internal/azg;-&gt;a(Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z" />
+      <node id="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" label="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" />
+      <node id="Landroid/supports/customtabs/c;-&gt;a(Landroid/supports/customtabs/b;)Landroid/supports/customtabs/f;" label="Landroid/supports/customtabs/c;-&gt;a(Landroid/supports/customtabs/b;)Landroid/supports/customtabs/f;" />
+      <node id="Lcom/bumptech/glide/util/h;-&gt;a()V" label="Lcom/bumptech/glide/util/h;-&gt;a()V" />
+      <node id="Landroid/supports/customtabs/c$2;-&gt;&lt;init&gt;(Landroid/supports/customtabs/c;Landroid/supports/customtabs/b;)V" label="Landroid/supports/customtabs/c$2;-&gt;&lt;init&gt;(Landroid/supports/customtabs/c;Landroid/supports/customtabs/b;)V" />
+      <node id="Lcom/bumptech/glide/request/GenericRequest;-&gt;clear()V" label="Lcom/bumptech/glide/request/GenericRequest;-&gt;clear()V" />
+      <node id="Lcom/bumptech/glide/util/h;-&gt;c()Z" label="Lcom/bumptech/glide/util/h;-&gt;c()Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/internal/azg;-&gt;a(Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z" target="Landroid/supports/customtabs/c;-&gt;a(Landroid/supports/customtabs/b;)Landroid/supports/customtabs/f;" id="0" />
+      <edge source="Landroid/supports/customtabs/c;-&gt;a(Landroid/supports/customtabs/b;)Landroid/supports/customtabs/f;" target="Landroid/supports/customtabs/c$2;-&gt;&lt;init&gt;(Landroid/supports/customtabs/c;Landroid/supports/customtabs/b;)V" id="1" />
+      <edge source="Lcom/bumptech/glide/util/h;-&gt;a()V" target="Lcom/bumptech/glide/util/h;-&gt;c()Z" id="2" />
+      <edge source="Landroid/supports/customtabs/c$2;-&gt;&lt;init&gt;(Landroid/supports/customtabs/c;Landroid/supports/customtabs/b;)V" target="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" id="3" />
+      <edge source="Lcom/bumptech/glide/request/GenericRequest;-&gt;clear()V" target="Lcom/bumptech/glide/util/h;-&gt;a()V" id="4" />
+      <edge source="Lcom/bumptech/glide/util/h;-&gt;c()Z" target="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" id="5" />
+    </edges>
+  </graph>
+</gexf>

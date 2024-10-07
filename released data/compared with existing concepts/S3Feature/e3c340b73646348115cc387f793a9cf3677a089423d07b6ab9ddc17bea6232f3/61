@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;isShowing()Z" label="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;isShowing()Z" />
+      <node id="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;tryShow()Z" label="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;tryShow()Z" />
+      <node id="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;show()V" label="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;show()V" />
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;hideOverflowMenu()Z" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;hideOverflowMenu()Z" />
+      <node id="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;dismiss()V" label="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;dismiss()V" />
+      <node id="Landroid/support/v7/app/WindowDecorActionBar$ActionModeImpl;-&gt;onSubMenuSelected(Landroid/support/v7/view/menu/SubMenuBuilder;)Z" label="Landroid/support/v7/app/WindowDecorActionBar$ActionModeImpl;-&gt;onSubMenuSelected(Landroid/support/v7/view/menu/SubMenuBuilder;)Z" />
+      <node id="Landroid/support/v7/widget/ActionMenuView;-&gt;hideOverflowMenu()Z" label="Landroid/support/v7/widget/ActionMenuView;-&gt;hideOverflowMenu()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;tryShow()Z" target="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;isShowing()Z" id="0" />
+      <edge source="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;show()V" target="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;tryShow()Z" id="1" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;hideOverflowMenu()Z" target="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;dismiss()V" id="2" />
+      <edge source="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;dismiss()V" target="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;isShowing()Z" id="3" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar$ActionModeImpl;-&gt;onSubMenuSelected(Landroid/support/v7/view/menu/SubMenuBuilder;)Z" target="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;show()V" id="4" />
+      <edge source="Landroid/support/v7/widget/ActionMenuView;-&gt;hideOverflowMenu()Z" target="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;hideOverflowMenu()Z" id="5" />
+    </edges>
+  </graph>
+</gexf>

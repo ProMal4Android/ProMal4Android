@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onDrawerClosed(Landroid/view/View;)V" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onDrawerClosed(Landroid/view/View;)V" />
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" />
+      <node id="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;setAlpha(I)V" label="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;setAlpha(I)V" />
+      <node id="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;invalidateSelf()V" label="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;invalidateSelf()V" />
+      <node id="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;setVerticalMirror(Z)V" label="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;setVerticalMirror(Z)V" />
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onDrawerOpened(Landroid/view/View;)V" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onDrawerOpened(Landroid/view/View;)V" />
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setPosition(F)V" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setPosition(F)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onDrawerClosed(Landroid/view/View;)V" target="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" id="0" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onDrawerClosed(Landroid/view/View;)V" target="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setPosition(F)V" id="1" />
+      <edge source="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;setAlpha(I)V" target="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;invalidateSelf()V" id="2" />
+      <edge source="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;setVerticalMirror(Z)V" target="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;invalidateSelf()V" id="3" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onDrawerOpened(Landroid/view/View;)V" target="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" id="4" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onDrawerOpened(Landroid/view/View;)V" target="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setPosition(F)V" id="5" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setPosition(F)V" target="Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;-&gt;setVerticalMirror(Z)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

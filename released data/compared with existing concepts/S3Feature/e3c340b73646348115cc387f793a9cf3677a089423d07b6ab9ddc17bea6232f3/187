@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/arch/lifecycle/g;-&gt;c(Ljava/lang/Class;)I" label="Landroid/arch/lifecycle/g;-&gt;c(Ljava/lang/Class;)I" />
+      <node id="Landroid/arch/lifecycle/n;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/m;" label="Landroid/arch/lifecycle/n;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/m;" />
+      <node id="Ljava/lang/Integer;-&gt;intValue()I" label="Ljava/lang/Integer;-&gt;intValue()I" />
+      <node id="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;" label="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;" />
+      <node id="Ljava/lang/Class;-&gt;getCanonicalName()Ljava/lang/String;" label="Ljava/lang/Class;-&gt;getCanonicalName()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" label="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" />
+      <node id="Landroid/arch/lifecycle/g;-&gt;b(Ljava/lang/Class;)I" label="Landroid/arch/lifecycle/g;-&gt;b(Ljava/lang/Class;)I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/g;-&gt;c(Ljava/lang/Class;)I" target="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;" id="0" />
+      <edge source="Landroid/arch/lifecycle/g;-&gt;c(Ljava/lang/Class;)I" target="Ljava/lang/Class;-&gt;getCanonicalName()Ljava/lang/String;" id="1" />
+      <edge source="Landroid/arch/lifecycle/g;-&gt;c(Ljava/lang/Class;)I" target="Landroid/arch/lifecycle/g;-&gt;b(Ljava/lang/Class;)I" id="2" />
+      <edge source="Landroid/arch/lifecycle/n;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/m;" target="Ljava/lang/Class;-&gt;getCanonicalName()Ljava/lang/String;" id="3" />
+      <edge source="Landroid/arch/lifecycle/g;-&gt;a(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;" target="Ljava/lang/Class;-&gt;getCanonicalName()Ljava/lang/String;" id="4" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" target="Ljava/lang/Integer;-&gt;intValue()I" id="5" />
+      <edge source="Landroid/arch/lifecycle/g;-&gt;b(Ljava/lang/Class;)I" target="Landroid/arch/lifecycle/g;-&gt;c(Ljava/lang/Class;)I" id="6" />
+      <edge source="Landroid/arch/lifecycle/g;-&gt;b(Ljava/lang/Class;)I" target="Ljava/lang/Integer;-&gt;intValue()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

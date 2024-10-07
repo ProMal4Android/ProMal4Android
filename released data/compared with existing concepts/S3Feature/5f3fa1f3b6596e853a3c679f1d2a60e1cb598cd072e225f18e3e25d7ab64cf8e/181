@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/Fragment$AnimationInfo;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/app/Fragment$AnimationInfo;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;executeOps()V" label="Landroid/support/v4/app/BackStackRecord;-&gt;executeOps()V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;ensureAnimationInfo()Landroid/support/v4/app/Fragment$AnimationInfo;" label="Landroid/support/v4/app/Fragment;-&gt;ensureAnimationInfo()Landroid/support/v4/app/Fragment$AnimationInfo;" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;addNewItem(II)Landroid/support/v4/view/ViewPager$ItemInfo;" label="Landroid/support/v4/view/ViewPager;-&gt;addNewItem(II)Landroid/support/v4/view/ViewPager$ItemInfo;" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" label="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;setNextTransition(II)V" label="Landroid/support/v4/app/Fragment;-&gt;setNextTransition(II)V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;executeOps()V" target="Landroid/support/v4/app/Fragment;-&gt;setNextTransition(II)V" id="0" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;executeOps()V" target="Ljava/util/ArrayList;-&gt;size()I" id="1" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;ensureAnimationInfo()Landroid/support/v4/app/Fragment$AnimationInfo;" target="Landroid/support/v4/app/Fragment$AnimationInfo;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;addNewItem(II)Landroid/support/v4/view/ViewPager$ItemInfo;" target="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;addNewItem(II)Landroid/support/v4/view/ViewPager$ItemInfo;" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;setNextTransition(II)V" target="Landroid/support/v4/app/Fragment;-&gt;ensureAnimationInfo()Landroid/support/v4/app/Fragment$AnimationInfo;" id="5" />
+    </edges>
+  </graph>
+</gexf>

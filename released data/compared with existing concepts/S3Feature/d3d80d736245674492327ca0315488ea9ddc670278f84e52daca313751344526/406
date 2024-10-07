@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" label="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" />
+      <node id="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" label="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" />
+      <node id="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/support/design/widget/TextInputLayout;-&gt;setErrorEnabled(Z)V" label="Landroid/support/design/widget/TextInputLayout;-&gt;setErrorEnabled(Z)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;setTitleTextAppearance(Landroid/content/Context;I)V" label="Landroid/support/v7/widget/Toolbar;-&gt;setTitleTextAppearance(Landroid/content/Context;I)V" />
+      <node id="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" label="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" />
+      <node id="Landroid/widget/TextView;-&gt;setTextAppearance(Landroid/content/Context;I)V" label="Landroid/widget/TextView;-&gt;setTextAppearance(Landroid/content/Context;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" id="0" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" target="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="1" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" id="2" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" target="Landroid/widget/TextView;-&gt;setTextAppearance(Landroid/content/Context;I)V" id="3" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setErrorEnabled(Z)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" id="4" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setErrorEnabled(Z)V" target="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="5" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setErrorEnabled(Z)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" id="6" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setErrorEnabled(Z)V" target="Landroid/widget/TextView;-&gt;setTextAppearance(Landroid/content/Context;I)V" id="7" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setTitleTextAppearance(Landroid/content/Context;I)V" target="Landroid/widget/TextView;-&gt;setTextAppearance(Landroid/content/Context;I)V" id="8" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" id="9" />
+    </edges>
+  </graph>
+</gexf>

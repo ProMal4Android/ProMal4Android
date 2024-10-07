@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/app/FragmentHostCallback;-&gt;dumpLoaders(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" label="Landroid/support/v4/app/FragmentHostCallback;-&gt;dumpLoaders(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" />
+      <node id="Ljava/io/PrintWriter;-&gt;print(Ljava/lang/String;)V" label="Ljava/io/PrintWriter;-&gt;print(Ljava/lang/String;)V" />
+      <node id="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" label="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" label="Landroid/support/v4/app/Fragment;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" />
+      <node id="Ljava/io/PrintWriter;-&gt;println(Ljava/lang/String;)V" label="Ljava/io/PrintWriter;-&gt;println(Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" label="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/io/PrintWriter;-&gt;print(Ljava/lang/String;)V" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Landroid/support/v4/app/Fragment;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/io/PrintWriter;-&gt;println(Ljava/lang/String;)V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentHostCallback;-&gt;dumpLoaders(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/io/PrintWriter;-&gt;print(Ljava/lang/String;)V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentHostCallback;-&gt;dumpLoaders(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentHostCallback;-&gt;dumpLoaders(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/io/PrintWriter;-&gt;println(Ljava/lang/String;)V" id="6" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" id="7" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/io/PrintWriter;-&gt;print(Ljava/lang/String;)V" id="8" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/io/PrintWriter;-&gt;println(Ljava/lang/String;)V" id="9" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/io/PrintWriter;-&gt;print(Ljava/lang/String;)V" id="10" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" id="11" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/io/PrintWriter;-&gt;println(Ljava/lang/String;)V" id="12" />
+    </edges>
+  </graph>
+</gexf>

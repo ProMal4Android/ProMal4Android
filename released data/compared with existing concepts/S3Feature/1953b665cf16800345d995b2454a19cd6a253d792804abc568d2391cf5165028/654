@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;findViewById(I)Landroid/view/View;" label="Landroid/support/v7/widget/Toolbar;-&gt;findViewById(I)Landroid/view/View;" />
+      <node id="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;f()Landroid/support/v4/app/ac;" label="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;f()Landroid/support/v4/app/ac;" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;b()V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;b()V" />
+      <node id="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;b(Landroid/support/v4/app/Fragment;)V" label="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;b(Landroid/support/v4/app/Fragment;)V" />
+      <node id="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onBackPressed()V" label="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onBackPressed()V" />
+      <node id="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" label="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;onKeyUp(ILandroid/view/KeyEvent;)Z" label="Landroid/support/v4/widget/DrawerLayout;-&gt;onKeyUp(ILandroid/view/KeyEvent;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;b(Landroid/support/v4/app/Fragment;)V" target="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;f()Landroid/support/v4/app/ac;" id="0" />
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;b(Landroid/support/v4/app/Fragment;)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;b()V" id="1" />
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onBackPressed()V" target="Landroid/support/v7/widget/Toolbar;-&gt;findViewById(I)Landroid/view/View;" id="2" />
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onBackPressed()V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;b()V" id="3" />
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" target="Landroid/support/v7/widget/Toolbar;-&gt;findViewById(I)Landroid/view/View;" id="4" />
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" target="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;f()Landroid/support/v4/app/ac;" id="5" />
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;b()V" id="6" />
+      <edge source="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" target="Lcom/hl/media/barcode/reader/free/MainActivity;-&gt;b(Landroid/support/v4/app/Fragment;)V" id="7" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;onKeyUp(ILandroid/view/KeyEvent;)Z" target="Landroid/support/v4/widget/DrawerLayout;-&gt;b()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

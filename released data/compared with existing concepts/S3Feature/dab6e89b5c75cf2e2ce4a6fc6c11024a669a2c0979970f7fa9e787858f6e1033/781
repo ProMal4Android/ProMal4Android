@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" label="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" />
+      <node id="Landroid/support/graphics/drawable/TypedArrayUtils;-&gt;getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F" label="Landroid/support/graphics/drawable/TypedArrayUtils;-&gt;getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F" />
+      <node id="Landroid/support/design/widget/CollapsingTextHelper;-&gt;readFontFamilyTypeface(I)Landroid/graphics/Typeface;" label="Landroid/support/design/widget/CollapsingTextHelper;-&gt;readFontFamilyTypeface(I)Landroid/graphics/Typeface;" />
+      <node id="Landroid/content/res/TypedArray;-&gt;getString(I)Ljava/lang/String;" label="Landroid/content/res/TypedArray;-&gt;getString(I)Ljava/lang/String;" />
+      <node id="Landroid/content/res/TypedArray;-&gt;getFloat(IF)F" label="Landroid/content/res/TypedArray;-&gt;getFloat(IF)F" />
+      <node id="Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" label="Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/content/res/TypedArray;-&gt;getFloat(IF)F" id="0" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" target="Landroid/support/graphics/drawable/TypedArrayUtils;-&gt;getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F" id="1" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" target="Landroid/content/res/TypedArray;-&gt;getString(I)Ljava/lang/String;" id="2" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" target="Landroid/content/res/TypedArray;-&gt;getFloat(IF)F" id="3" />
+      <edge source="Landroid/support/graphics/drawable/TypedArrayUtils;-&gt;getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F" target="Landroid/content/res/TypedArray;-&gt;getFloat(IF)F" id="4" />
+      <edge source="Landroid/support/design/widget/CollapsingTextHelper;-&gt;readFontFamilyTypeface(I)Landroid/graphics/Typeface;" target="Landroid/content/res/TypedArray;-&gt;getString(I)Ljava/lang/String;" id="5" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" target="Landroid/support/graphics/drawable/TypedArrayUtils;-&gt;getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F" id="6" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VFullPath;-&gt;updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V" target="Landroid/content/res/TypedArray;-&gt;getString(I)Ljava/lang/String;" id="7" />
+    </edges>
+  </graph>
+</gexf>

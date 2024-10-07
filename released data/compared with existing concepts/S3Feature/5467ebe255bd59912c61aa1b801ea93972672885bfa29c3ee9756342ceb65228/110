@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/lody/virtual/helper/utils/collection/SparseArray;-&gt;valueAt(I)Ljava/lang/Object;" label="Lcom/lody/virtual/helper/utils/collection/SparseArray;-&gt;valueAt(I)Ljava/lang/Object;" />
+      <node id="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;acquireProviderClient(ILandroid/content/pm/ProviderInfo;)Landroid/os/IBinder;" label="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;acquireProviderClient(ILandroid/content/pm/ProviderInfo;)Landroid/os/IBinder;" />
+      <node id="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;queryFreeVPidForProcess()I" label="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;queryFreeVPidForProcess()I" />
+      <node id="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;startProcessIfNeedLocked(Ljava/lang/String;ILjava/lang/String;)Lcom/lody/virtual/server/am/ProcessRecord;" label="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;startProcessIfNeedLocked(Ljava/lang/String;ILjava/lang/String;)Lcom/lody/virtual/server/am/ProcessRecord;" />
+      <node id="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;killAllApps()V" label="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;killAllApps()V" />
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V" label="Landroid/support/v4/content/FileProvider;-&gt;attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V" />
+      <node id="Ljava/lang/SecurityException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/SecurityException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;acquireProviderClient(ILandroid/content/pm/ProviderInfo;)Landroid/os/IBinder;" target="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;startProcessIfNeedLocked(Ljava/lang/String;ILjava/lang/String;)Lcom/lody/virtual/server/am/ProcessRecord;" id="0" />
+      <edge source="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;acquireProviderClient(ILandroid/content/pm/ProviderInfo;)Landroid/os/IBinder;" target="Ljava/lang/SecurityException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="1" />
+      <edge source="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;queryFreeVPidForProcess()I" target="Lcom/lody/virtual/helper/utils/collection/SparseArray;-&gt;valueAt(I)Ljava/lang/Object;" id="2" />
+      <edge source="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;startProcessIfNeedLocked(Ljava/lang/String;ILjava/lang/String;)Lcom/lody/virtual/server/am/ProcessRecord;" target="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;queryFreeVPidForProcess()I" id="3" />
+      <edge source="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;startProcessIfNeedLocked(Ljava/lang/String;ILjava/lang/String;)Lcom/lody/virtual/server/am/ProcessRecord;" target="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;killAllApps()V" id="4" />
+      <edge source="Lcom/lody/virtual/server/am/VActivityManagerService;-&gt;killAllApps()V" target="Lcom/lody/virtual/helper/utils/collection/SparseArray;-&gt;valueAt(I)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V" target="Ljava/lang/SecurityException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

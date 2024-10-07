@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/qoppa/viewer/views/b/b;-&gt;getChildAt(I)Landroid/view/View;" label="Lcom/qoppa/viewer/views/b/b;-&gt;getChildAt(I)Landroid/view/View;" />
+      <node id="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" label="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" />
+      <node id="Lcom/qoppa/viewer/views/b/b;-&gt;canScroll(Landroid/view/MotionEvent;)Z" label="Lcom/qoppa/viewer/views/b/b;-&gt;canScroll(Landroid/view/MotionEvent;)Z" />
+      <node id="Lcom/qoppa/viewer/views/b/b;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" label="Lcom/qoppa/viewer/views/b/b;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" label="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" label="Landroid/support/v4/view/ViewPager;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" />
+      <node id="Lcom/qoppa/viewer/views/b/b;-&gt;arrowScroll(IZ)Z" label="Lcom/qoppa/viewer/views/b/b;-&gt;arrowScroll(IZ)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/qoppa/viewer/views/b/b;-&gt;canScroll(Landroid/view/MotionEvent;)Z" target="Lcom/qoppa/viewer/views/b/b;-&gt;getChildAt(I)Landroid/view/View;" id="0" />
+      <edge source="Lcom/qoppa/viewer/views/b/b;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" id="1" />
+      <edge source="Lcom/qoppa/viewer/views/b/b;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" target="Lcom/qoppa/viewer/views/b/b;-&gt;canScroll(Landroid/view/MotionEvent;)Z" id="2" />
+      <edge source="Lcom/qoppa/viewer/views/b/b;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" target="Lcom/qoppa/viewer/views/b/b;-&gt;arrowScroll(IZ)Z" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" target="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" id="5" />
+      <edge source="Lcom/qoppa/viewer/views/b/b;-&gt;arrowScroll(IZ)Z" target="Lcom/qoppa/viewer/views/b/b;-&gt;getChildAt(I)Landroid/view/View;" id="6" />
+      <edge source="Lcom/qoppa/viewer/views/b/b;-&gt;arrowScroll(IZ)Z" target="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" id="7" />
+    </edges>
+  </graph>
+</gexf>

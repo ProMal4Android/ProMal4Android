@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;run()V" label="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;run()V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;access$400(Landroid/support/v7/widget/RecyclerView;)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;access$400(Landroid/support/v7/widget/RecyclerView;)V" />
+      <node id="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" label="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;dispatchLayout()V" label="Landroid/support/v7/widget/RecyclerView;-&gt;dispatchLayout()V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;eatRequestLayout()V" label="Landroid/support/v7/widget/RecyclerView;-&gt;eatRequestLayout()V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" label="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" />
+      <node id="Landroid/support/v4/widget/ScrollerCompat;-&gt;computeScrollOffset()Z" label="Landroid/support/v4/widget/ScrollerCompat;-&gt;computeScrollOffset()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;run()V" target="Landroid/support/v7/widget/RecyclerView;-&gt;access$400(Landroid/support/v7/widget/RecyclerView;)V" id="0" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;run()V" target="Landroid/support/v7/widget/RecyclerView;-&gt;eatRequestLayout()V" id="1" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;run()V" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;computeScrollOffset()Z" id="2" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;access$400(Landroid/support/v7/widget/RecyclerView;)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" id="3" />
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;computeScrollOffset()Z" id="4" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;dispatchLayout()V" target="Landroid/support/v7/widget/RecyclerView;-&gt;eatRequestLayout()V" id="5" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" target="Landroid/support/v7/widget/RecyclerView;-&gt;dispatchLayout()V" id="6" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" target="Landroid/support/v7/widget/RecyclerView;-&gt;eatRequestLayout()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

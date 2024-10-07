@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;getContext()Landroid/content/Context;" label="Landroid/support/v7/widget/RecyclerView;-&gt;getContext()Landroid/content/Context;" />
+      <node id="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" label="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" />
+      <node id="Landroid/support/compat/R;-&gt;&lt;init&gt;()V" label="Landroid/support/compat/R;-&gt;&lt;init&gt;()V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/widget/ScrollerCompat;-&gt;create(Landroid/content/Context;Landroid/view/animation/Interpolator;)Landroid/support/v4/widget/ScrollerCompat;" label="Landroid/support/v4/widget/ScrollerCompat;-&gt;create(Landroid/content/Context;Landroid/view/animation/Interpolator;)Landroid/support/v4/widget/ScrollerCompat;" />
+      <node id="Landroid/support/v4/widget/ScrollerCompat;-&gt;&lt;init&gt;(ZLandroid/content/Context;Landroid/view/animation/Interpolator;)V" label="Landroid/support/v4/widget/ScrollerCompat;-&gt;&lt;init&gt;(ZLandroid/content/Context;Landroid/view/animation/Interpolator;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getContext()Landroid/content/Context;" id="0" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$ViewFlinger;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;create(Landroid/content/Context;Landroid/view/animation/Interpolator;)Landroid/support/v4/widget/ScrollerCompat;" id="2" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getContext()Landroid/content/Context;" id="3" />
+      <edge source="Landroid/support/compat/R;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/widget/ScrollerCompat;-&gt;create(Landroid/content/Context;Landroid/view/animation/Interpolator;)Landroid/support/v4/widget/ScrollerCompat;" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;&lt;init&gt;(ZLandroid/content/Context;Landroid/view/animation/Interpolator;)V" id="5" />
+      <edge source="Landroid/support/v4/widget/ScrollerCompat;-&gt;&lt;init&gt;(ZLandroid/content/Context;Landroid/view/animation/Interpolator;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

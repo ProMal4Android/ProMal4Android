@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;-&gt;writeToParcel(Landroid/os/Parcel;I)V" label="Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;-&gt;writeToParcel(Landroid/os/Parcel;I)V" />
+      <node id="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" label="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" />
+      <node id="Landroid/os/Parcel;-&gt;writeFloat(F)V" label="Landroid/os/Parcel;-&gt;writeFloat(F)V" />
+      <node id="Landroid/os/Parcel;-&gt;writeInt(I)V" label="Landroid/os/Parcel;-&gt;writeInt(I)V" />
+      <node id="Landroid/os/Parcel;-&gt;writeLong(J)V" label="Landroid/os/Parcel;-&gt;writeLong(J)V" />
+      <node id="Landroid/support/v4/media/RatingCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" label="Landroid/support/v4/media/RatingCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" />
+      <node id="Landroid/support/v4/media/session/b$a$a;-&gt;a(Landroid/support/v4/media/RatingCompat;)V" label="Landroid/support/v4/media/session/b$a$a;-&gt;a(Landroid/support/v4/media/RatingCompat;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;-&gt;writeToParcel(Landroid/os/Parcel;I)V" target="Landroid/os/Parcel;-&gt;writeLong(J)V" id="0" />
+      <edge source="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" target="Landroid/os/Parcel;-&gt;writeFloat(F)V" id="1" />
+      <edge source="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" target="Landroid/os/Parcel;-&gt;writeInt(I)V" id="2" />
+      <edge source="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" target="Landroid/os/Parcel;-&gt;writeLong(J)V" id="3" />
+      <edge source="Landroid/support/v4/media/RatingCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" target="Landroid/os/Parcel;-&gt;writeFloat(F)V" id="4" />
+      <edge source="Landroid/support/v4/media/RatingCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" target="Landroid/os/Parcel;-&gt;writeInt(I)V" id="5" />
+      <edge source="Landroid/support/v4/media/session/b$a$a;-&gt;a(Landroid/support/v4/media/RatingCompat;)V" target="Landroid/os/Parcel;-&gt;writeInt(I)V" id="6" />
+      <edge source="Landroid/support/v4/media/session/b$a$a;-&gt;a(Landroid/support/v4/media/RatingCompat;)V" target="Landroid/support/v4/media/RatingCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

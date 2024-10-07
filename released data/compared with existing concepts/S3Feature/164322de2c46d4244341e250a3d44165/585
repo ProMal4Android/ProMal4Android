@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/view/SupportMenuInflater;-&gt;getRealOwner()Ljava/lang/Object;" label="Landroidx/appcompat/view/SupportMenuInflater;-&gt;getRealOwner()Ljava/lang/Object;" />
+      <node id="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" label="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" />
+      <node id="Landroidx/appcompat/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" label="Landroidx/appcompat/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Landroid/content/ContextWrapper;-&gt;getBaseContext()Landroid/content/Context;" label="Landroid/content/ContextWrapper;-&gt;getBaseContext()Landroid/content/Context;" />
+      <node id="Landroidx/appcompat/view/SupportMenuInflater;-&gt;findRealOwner(Ljava/lang/Object;)Ljava/lang/Object;" label="Landroidx/appcompat/view/SupportMenuInflater;-&gt;findRealOwner(Ljava/lang/Object;)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/view/SupportMenuInflater;-&gt;getRealOwner()Ljava/lang/Object;" target="Landroidx/appcompat/view/SupportMenuInflater;-&gt;findRealOwner(Ljava/lang/Object;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroidx/appcompat/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" target="Landroidx/appcompat/view/SupportMenuInflater;-&gt;getRealOwner()Ljava/lang/Object;" id="1" />
+      <edge source="Landroidx/appcompat/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" target="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" id="2" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" id="3" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" id="4" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" target="Landroid/content/ContextWrapper;-&gt;getBaseContext()Landroid/content/Context;" id="5" />
+      <edge source="Landroidx/appcompat/view/SupportMenuInflater;-&gt;findRealOwner(Ljava/lang/Object;)Ljava/lang/Object;" target="Landroid/content/ContextWrapper;-&gt;getBaseContext()Landroid/content/Context;" id="6" />
+    </edges>
+  </graph>
+</gexf>

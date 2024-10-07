@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/places/internal/WifiScannerImpl;-&gt;initAndCheckEligibility()V" label="Lcom/facebook/places/internal/WifiScannerImpl;-&gt;initAndCheckEligibility()V" />
+      <node id="Lcom/facebook/internal/Validate;-&gt;hasWiFiPermission(Landroid/content/Context;)Z" label="Lcom/facebook/internal/Validate;-&gt;hasWiFiPermission(Landroid/content/Context;)Z" />
+      <node id="Lcom/facebook/internal/Validate;-&gt;hasPermission(Landroid/content/Context;Ljava/lang/String;)Z" label="Lcom/facebook/internal/Validate;-&gt;hasPermission(Landroid/content/Context;Ljava/lang/String;)Z" />
+      <node id="Lcom/facebook/places/internal/WifiScannerImpl;-&gt;isWifiScanningEnabled()Z" label="Lcom/facebook/places/internal/WifiScannerImpl;-&gt;isWifiScanningEnabled()Z" />
+      <node id="Lcom/facebook/internal/Validate;-&gt;hasLocationPermission(Landroid/content/Context;)Z" label="Lcom/facebook/internal/Validate;-&gt;hasLocationPermission(Landroid/content/Context;)Z" />
+      <node id="Lcom/bumptech/glide/manager/ConnectivityMonitorFactory;-&gt;build(Landroid/content/Context;Lcom/bumptech/glide/manager/ConnectivityMonitor$ConnectivityListener;)Lcom/bumptech/glide/manager/ConnectivityMonitor;" label="Lcom/bumptech/glide/manager/ConnectivityMonitorFactory;-&gt;build(Landroid/content/Context;Lcom/bumptech/glide/manager/ConnectivityMonitor$ConnectivityListener;)Lcom/bumptech/glide/manager/ConnectivityMonitor;" />
+      <node id="Landroid/content/Context;-&gt;checkCallingOrSelfPermission(Ljava/lang/String;)I" label="Landroid/content/Context;-&gt;checkCallingOrSelfPermission(Ljava/lang/String;)I" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/places/internal/WifiScannerImpl;-&gt;initAndCheckEligibility()V" target="Lcom/facebook/internal/Validate;-&gt;hasWiFiPermission(Landroid/content/Context;)Z" id="0" />
+      <edge source="Lcom/facebook/internal/Validate;-&gt;hasWiFiPermission(Landroid/content/Context;)Z" target="Lcom/facebook/internal/Validate;-&gt;hasPermission(Landroid/content/Context;Ljava/lang/String;)Z" id="1" />
+      <edge source="Lcom/facebook/internal/Validate;-&gt;hasPermission(Landroid/content/Context;Ljava/lang/String;)Z" target="Landroid/content/Context;-&gt;checkCallingOrSelfPermission(Ljava/lang/String;)I" id="2" />
+      <edge source="Lcom/facebook/places/internal/WifiScannerImpl;-&gt;isWifiScanningEnabled()Z" target="Lcom/facebook/places/internal/WifiScannerImpl;-&gt;initAndCheckEligibility()V" id="3" />
+      <edge source="Lcom/facebook/places/internal/WifiScannerImpl;-&gt;isWifiScanningEnabled()Z" target="Lcom/facebook/internal/Validate;-&gt;hasLocationPermission(Landroid/content/Context;)Z" id="4" />
+      <edge source="Lcom/facebook/internal/Validate;-&gt;hasLocationPermission(Landroid/content/Context;)Z" target="Lcom/facebook/internal/Validate;-&gt;hasPermission(Landroid/content/Context;Ljava/lang/String;)Z" id="5" />
+      <edge source="Lcom/bumptech/glide/manager/ConnectivityMonitorFactory;-&gt;build(Landroid/content/Context;Lcom/bumptech/glide/manager/ConnectivityMonitor$ConnectivityListener;)Lcom/bumptech/glide/manager/ConnectivityMonitor;" target="Landroid/content/Context;-&gt;checkCallingOrSelfPermission(Ljava/lang/String;)I" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,6 @@
+apk_name:5395936963df4d72b365fd30ab52a00a88f8a5f75336ba84ac8a9fc369e0f811
+node_number:0
+edge_number:0
+fcg_graph_time:0.02300739288330078
+SeGdroid: Sensitive FCG Nodes:0
+SeGdroid: Sensitive FCG Edges:0

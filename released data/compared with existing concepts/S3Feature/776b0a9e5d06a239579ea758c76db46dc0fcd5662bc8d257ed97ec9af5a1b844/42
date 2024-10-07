@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" label="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" />
+      <node id="Lcom/bumptech/glide/request/GenericRequest;-&gt;onException(Ljava/lang/Exception;)V" label="Lcom/bumptech/glide/request/GenericRequest;-&gt;onException(Ljava/lang/Exception;)V" />
+      <node id="Landroid/supports/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" label="Landroid/supports/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" />
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" label="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" />
+      <node id="Landroid/supports/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" label="Landroid/supports/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" />
+      <node id="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" label="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="0" />
+      <edge source="Lcom/bumptech/glide/request/GenericRequest;-&gt;onException(Ljava/lang/Exception;)V" target="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" id="1" />
+      <edge source="Landroid/supports/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" target="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" id="2" />
+      <edge source="Landroid/supports/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" target="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" id="3" />
+      <edge source="Landroid/supports/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="4" />
+      <edge source="Landroid/supports/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" target="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" id="5" />
+      <edge source="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/app/Activity;)Ljava/lang/String;" target="Landroid/supports/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" id="6" />
+    </edges>
+  </graph>
+</gexf>

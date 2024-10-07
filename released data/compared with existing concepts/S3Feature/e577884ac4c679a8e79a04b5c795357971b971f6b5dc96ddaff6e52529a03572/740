@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" label="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" />
+      <node id="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" label="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" />
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/content/Intent;-&gt;getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;" label="Landroid/content/Intent;-&gt;getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" />
+      <node id="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStream(I)Landroid/net/Uri;" label="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStream(I)Landroid/net/Uri;" />
+      <node id="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" label="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" target="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" id="0" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" target="Landroid/content/Intent;-&gt;getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;" id="1" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" id="2" />
+      <edge source="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStream(I)Landroid/net/Uri;" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStream(I)Landroid/net/Uri;" target="Landroid/content/Intent;-&gt;getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;" id="4" />
+      <edge source="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStream(I)Landroid/net/Uri;" target="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" id="5" />
+      <edge source="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" target="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" id="6" />
+      <edge source="Landroid/supportz/v4/app/ShareCompat$IntentReader;-&gt;getStreamCount()I" target="Landroid/content/Intent;-&gt;getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/load/engine/cache/DiskLruCacheWrapper;-&gt;getDiskCache()Lcom/bumptech/glide/disklrucache/DiskLruCache;" label="Lcom/bumptech/glide/load/engine/cache/DiskLruCacheWrapper;-&gt;getDiskCache()Lcom/bumptech/glide/disklrucache/DiskLruCache;" />
+      <node id="Lcom/bumptech/glide/load/engine/cache/DiskLruCacheWrapper;-&gt;delete(Lcom/bumptech/glide/load/Key;)V" label="Lcom/bumptech/glide/load/engine/cache/DiskLruCacheWrapper;-&gt;delete(Lcom/bumptech/glide/load/Key;)V" />
+      <node id="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;readJournal()V" label="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;readJournal()V" />
+      <node id="Ljava/io/File;-&gt;exists()Z" label="Ljava/io/File;-&gt;exists()Z" />
+      <node id="Landroid/support/v4/util/AtomicFile;-&gt;openRead()Ljava/io/FileInputStream;" label="Landroid/support/v4/util/AtomicFile;-&gt;openRead()Ljava/io/FileInputStream;" />
+      <node id="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;open(Ljava/io/File;IIJ)Lcom/bumptech/glide/disklrucache/DiskLruCache;" label="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;open(Ljava/io/File;IIJ)Lcom/bumptech/glide/disklrucache/DiskLruCache;" />
+      <node id="Ljava/io/FileInputStream;-&gt;&lt;init&gt;(Ljava/io/File;)V" label="Ljava/io/FileInputStream;-&gt;&lt;init&gt;(Ljava/io/File;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/load/engine/cache/DiskLruCacheWrapper;-&gt;getDiskCache()Lcom/bumptech/glide/disklrucache/DiskLruCache;" target="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;open(Ljava/io/File;IIJ)Lcom/bumptech/glide/disklrucache/DiskLruCache;" id="0" />
+      <edge source="Lcom/bumptech/glide/load/engine/cache/DiskLruCacheWrapper;-&gt;delete(Lcom/bumptech/glide/load/Key;)V" target="Lcom/bumptech/glide/load/engine/cache/DiskLruCacheWrapper;-&gt;getDiskCache()Lcom/bumptech/glide/disklrucache/DiskLruCache;" id="1" />
+      <edge source="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;readJournal()V" target="Ljava/io/FileInputStream;-&gt;&lt;init&gt;(Ljava/io/File;)V" id="2" />
+      <edge source="Landroid/support/v4/util/AtomicFile;-&gt;openRead()Ljava/io/FileInputStream;" target="Ljava/io/File;-&gt;exists()Z" id="3" />
+      <edge source="Landroid/support/v4/util/AtomicFile;-&gt;openRead()Ljava/io/FileInputStream;" target="Ljava/io/FileInputStream;-&gt;&lt;init&gt;(Ljava/io/File;)V" id="4" />
+      <edge source="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;open(Ljava/io/File;IIJ)Lcom/bumptech/glide/disklrucache/DiskLruCache;" target="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;readJournal()V" id="5" />
+      <edge source="Lcom/bumptech/glide/disklrucache/DiskLruCache;-&gt;open(Ljava/io/File;IIJ)Lcom/bumptech/glide/disklrucache/DiskLruCache;" target="Ljava/io/File;-&gt;exists()Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;onLayout(ZIIII)V" label="Landroid/support/v7/widget/Toolbar;-&gt;onLayout(ZIIII)V" />
+      <node id="Ljava/lang/Math;-&gt;min(II)I" label="Ljava/lang/Math;-&gt;min(II)I" />
+      <node id="Landroid/support/v4/view/ViewCompat;-&gt;getLayoutDirection(Landroid/view/View;)I" label="Landroid/support/v4/view/ViewCompat;-&gt;getLayoutDirection(Landroid/view/View;)I" />
+      <node id="Landroid/support/v4/view/PagerTitleStrip;-&gt;updateTextPositions(IFZ)V" label="Landroid/support/v4/view/PagerTitleStrip;-&gt;updateTextPositions(IFZ)V" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" label="Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" />
+      <node id="Landroid/widget/TextView;-&gt;getMeasuredWidth()I" label="Landroid/widget/TextView;-&gt;getMeasuredWidth()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" target="Ljava/lang/Math;-&gt;min(II)I" id="0" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;onLayout(ZIIII)V" target="Ljava/lang/Math;-&gt;min(II)I" id="1" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;onLayout(ZIIII)V" target="Landroid/support/v4/view/ViewCompat;-&gt;getLayoutDirection(Landroid/view/View;)I" id="2" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;onLayout(ZIIII)V" target="Landroid/widget/TextView;-&gt;getMeasuredWidth()I" id="3" />
+      <edge source="Landroid/support/v4/view/PagerTitleStrip;-&gt;updateTextPositions(IFZ)V" target="Ljava/lang/Math;-&gt;min(II)I" id="4" />
+      <edge source="Landroid/support/v4/view/PagerTitleStrip;-&gt;updateTextPositions(IFZ)V" target="Landroid/widget/TextView;-&gt;getMeasuredWidth()I" id="5" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" target="Landroid/support/v4/view/ViewCompat;-&gt;getLayoutDirection(Landroid/view/View;)I" id="6" />
+    </edges>
+  </graph>
+</gexf>

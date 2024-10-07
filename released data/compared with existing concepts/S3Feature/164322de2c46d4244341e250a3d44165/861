@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getChipEnd(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)I" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getChipEnd(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)I" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSpannable()Landroid/text/Spannable;" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSpannable()Landroid/text/Spannable;" />
+      <node id="Landroid/text/Spannable;-&gt;getSpanEnd(Ljava/lang/Object;)I" label="Landroid/text/Spannable;-&gt;getSpanEnd(Ljava/lang/Object;)I" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onChipDelete()V" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onChipDelete()V" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;findChip(I)Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;findChip(I)Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;removeChip(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)V" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;removeChip(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getChipEnd(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)I" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSpannable()Landroid/text/Spannable;" id="0" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getChipEnd(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)I" target="Landroid/text/Spannable;-&gt;getSpanEnd(Ljava/lang/Object;)I" id="1" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSpannable()Landroid/text/Spannable;" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" id="2" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onChipDelete()V" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;removeChip(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)V" id="3" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;findChip(I)Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getChipEnd(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)I" id="4" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;findChip(I)Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSpannable()Landroid/text/Spannable;" id="5" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;removeChip(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)V" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" id="6" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;removeChip(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)V" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSpannable()Landroid/text/Spannable;" id="7" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;removeChip(Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;)V" target="Landroid/text/Spannable;-&gt;getSpanEnd(Ljava/lang/Object;)I" id="8" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;" label="Landroid/support/v7/widget/RecyclerView;-&gt;generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" />
+      <node id="Ljava/lang/reflect/Method;-&gt;getName()Ljava/lang/String;" label="Ljava/lang/reflect/Method;-&gt;getName()Ljava/lang/String;" />
+      <node id="Lcom/google/android/gms/internal/wc;-&gt;&lt;init&gt;(Ljava/lang/Class;)V" label="Lcom/google/android/gms/internal/wc;-&gt;&lt;init&gt;(Ljava/lang/Class;)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" label="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;a()Ljava/lang/String;" label="Landroid/support/v7/widget/RecyclerView;-&gt;a()Ljava/lang/String;" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="0" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;" target="Landroid/support/v7/widget/RecyclerView;-&gt;a()Ljava/lang/String;" id="1" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" target="Ljava/lang/reflect/Method;-&gt;getName()Ljava/lang/String;" id="2" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="3" />
+      <edge source="Lcom/google/android/gms/internal/wc;-&gt;&lt;init&gt;(Ljava/lang/Class;)V" target="Ljava/lang/reflect/Method;-&gt;getName()Ljava/lang/String;" id="4" />
+      <edge source="Lcom/google/android/gms/internal/wc;-&gt;&lt;init&gt;(Ljava/lang/Class;)V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="5" />
+      <edge source="Lcom/google/android/gms/internal/wc;-&gt;&lt;init&gt;(Ljava/lang/Class;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;a()Ljava/lang/String;" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="7" />
+    </edges>
+  </graph>
+</gexf>

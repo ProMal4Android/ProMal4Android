@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" />
+      <node id="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" label="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" />
+      <node id="Landroid/support/v4/util/ContainerHelpers;-&gt;idealIntArraySize(I)I" label="Landroid/support/v4/util/ContainerHelpers;-&gt;idealIntArraySize(I)I" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;delete(I)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;delete(I)V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;remove(I)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;remove(I)V" />
+      <node id="Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;-&gt;onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V" label="Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;-&gt;onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" target="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" id="0" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" target="Landroid/support/v4/util/ContainerHelpers;-&gt;idealIntArraySize(I)I" id="1" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" id="2" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" target="Landroid/support/v4/util/ContainerHelpers;-&gt;idealIntArraySize(I)I" id="3" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;delete(I)V" target="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" id="4" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;remove(I)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;delete(I)V" id="5" />
+      <edge source="Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;-&gt;onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" id="6" />
+      <edge source="Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;-&gt;onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;remove(I)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

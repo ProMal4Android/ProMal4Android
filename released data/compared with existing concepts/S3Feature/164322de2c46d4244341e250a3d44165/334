@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;setRetry(I)V" label="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;setRetry(I)V" />
+      <node id="Lcom/android/common/NetworkConnectivityListener;-&gt;stopListening()V" label="Lcom/android/common/NetworkConnectivityListener;-&gt;stopListening()V" />
+      <node id="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;unregister()V" label="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;unregister()V" />
+      <node id="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;&lt;init&gt;()V" label="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;processFirstPendingMessage()V" label="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;processFirstPendingMessage()V" />
+      <node id="Lcom/android/messaging/helper/ConnectivityUtil;-&gt;unregister()V" label="Lcom/android/messaging/helper/ConnectivityUtil;-&gt;unregister()V" />
+      <node id="Landroid/content/Context;-&gt;unregisterReceiver(Landroid/content/BroadcastReceiver;)V" label="Landroid/content/Context;-&gt;unregisterReceiver(Landroid/content/BroadcastReceiver;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/common/NetworkConnectivityListener;-&gt;stopListening()V" target="Landroid/content/Context;-&gt;unregisterReceiver(Landroid/content/BroadcastReceiver;)V" id="0" />
+      <edge source="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;unregister()V" target="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;unregister()V" target="Lcom/android/messaging/helper/ConnectivityUtil;-&gt;unregister()V" id="2" />
+      <edge source="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;processFirstPendingMessage()V" target="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;setRetry(I)V" id="3" />
+      <edge source="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;processFirstPendingMessage()V" target="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;unregister()V" id="4" />
+      <edge source="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;processFirstPendingMessage()V" target="Lcom/android/messaging/datamodel/action/ProcessPendingMessagesAction;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Lcom/android/messaging/helper/ConnectivityUtil;-&gt;unregister()V" target="Landroid/content/Context;-&gt;unregisterReceiver(Landroid/content/BroadcastReceiver;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

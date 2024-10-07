@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/res/TypedArray;-&gt;getColorStateList(I)Landroid/content/res/ColorStateList;" label="Landroid/content/res/TypedArray;-&gt;getColorStateList(I)Landroid/content/res/ColorStateList;" />
+      <node id="Landroid/support/v7/internal/widget/TintManager;-&gt;createSwitchThumbColorStateList(Landroid/content/Context;)Landroid/content/res/ColorStateList;" label="Landroid/support/v7/internal/widget/TintManager;-&gt;createSwitchThumbColorStateList(Landroid/content/Context;)Landroid/content/res/ColorStateList;" />
+      <node id="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getDisabledThemeAttrColor(Landroid/content/Context;I)I" label="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getDisabledThemeAttrColor(Landroid/content/Context;I)I" />
+      <node id="Landroid/content/res/ColorStateList;-&gt;getColorForState([II)I" label="Landroid/content/res/ColorStateList;-&gt;getColorForState([II)I" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" />
+      <node id="Landroid/content/res/ColorStateList;-&gt;isStateful()Z" label="Landroid/content/res/ColorStateList;-&gt;isStateful()Z" />
+      <node id="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getThemeAttrColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" label="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getThemeAttrColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/widget/TintManager;-&gt;createSwitchThumbColorStateList(Landroid/content/Context;)Landroid/content/res/ColorStateList;" target="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getDisabledThemeAttrColor(Landroid/content/Context;I)I" id="0" />
+      <edge source="Landroid/support/v7/internal/widget/TintManager;-&gt;createSwitchThumbColorStateList(Landroid/content/Context;)Landroid/content/res/ColorStateList;" target="Landroid/content/res/ColorStateList;-&gt;getColorForState([II)I" id="1" />
+      <edge source="Landroid/support/v7/internal/widget/TintManager;-&gt;createSwitchThumbColorStateList(Landroid/content/Context;)Landroid/content/res/ColorStateList;" target="Landroid/content/res/ColorStateList;-&gt;isStateful()Z" id="2" />
+      <edge source="Landroid/support/v7/internal/widget/TintManager;-&gt;createSwitchThumbColorStateList(Landroid/content/Context;)Landroid/content/res/ColorStateList;" target="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getThemeAttrColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" id="3" />
+      <edge source="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getDisabledThemeAttrColor(Landroid/content/Context;I)I" target="Landroid/content/res/ColorStateList;-&gt;getColorForState([II)I" id="4" />
+      <edge source="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getDisabledThemeAttrColor(Landroid/content/Context;I)I" target="Landroid/content/res/ColorStateList;-&gt;isStateful()Z" id="5" />
+      <edge source="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getDisabledThemeAttrColor(Landroid/content/Context;I)I" target="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getThemeAttrColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" id="6" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" target="Landroid/content/res/TypedArray;-&gt;getColorStateList(I)Landroid/content/res/ColorStateList;" id="7" />
+      <edge source="Landroid/support/v7/internal/widget/ThemeUtils;-&gt;getThemeAttrColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/content/res/TypedArray;-&gt;getColorStateList(I)Landroid/content/res/ColorStateList;" id="8" />
+    </edges>
+  </graph>
+</gexf>

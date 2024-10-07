@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-19">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" label="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setListShownNoAnimation(Z)V" label="Landroid/support/v4/app/ListFragment;-&gt;setListShownNoAnimation(Z)V" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" label="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/Fragment;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" />
+      <node id="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" label="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" label="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" />
+      <node id="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" target="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" id="0" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="1" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListShownNoAnimation(Z)V" target="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" id="2" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="3" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="4" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="5" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" id="6" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

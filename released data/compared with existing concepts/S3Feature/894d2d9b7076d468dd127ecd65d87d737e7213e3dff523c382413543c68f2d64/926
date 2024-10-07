@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lads/RateMyApp;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" label="Lads/RateMyApp;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" />
+      <node id="Lcom/test/acleaner/MainActivity;-&gt;onCreate(Landroid/os/Bundle;)V" label="Lcom/test/acleaner/MainActivity;-&gt;onCreate(Landroid/os/Bundle;)V" />
+      <node id="Landroid/app/Activity;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/app/Activity;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/app/Activity;-&gt;getPackageName()Ljava/lang/String;" label="Landroid/app/Activity;-&gt;getPackageName()Ljava/lang/String;" />
+      <node id="Lads/RateMyApp;-&gt;getApplicationName()Ljava/lang/String;" label="Lads/RateMyApp;-&gt;getApplicationName()Ljava/lang/String;" />
+      <node id="Lads/RateMyApp;-&gt;getPackageName()Ljava/lang/String;" label="Lads/RateMyApp;-&gt;getPackageName()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationIcon()Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationIcon()Landroid/graphics/drawable/Drawable;" />
+    </nodes>
+    <edges>
+      <edge source="Lads/RateMyApp;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Lads/RateMyApp;-&gt;getApplicationName()Ljava/lang/String;" id="0" />
+      <edge source="Lads/RateMyApp;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Lads/RateMyApp;-&gt;getPackageName()Ljava/lang/String;" id="1" />
+      <edge source="Lcom/test/acleaner/MainActivity;-&gt;onCreate(Landroid/os/Bundle;)V" target="Lads/RateMyApp;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" id="2" />
+      <edge source="Lads/RateMyApp;-&gt;getApplicationName()Ljava/lang/String;" target="Landroid/app/Activity;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="3" />
+      <edge source="Lads/RateMyApp;-&gt;getApplicationName()Ljava/lang/String;" target="Landroid/app/Activity;-&gt;getPackageName()Ljava/lang/String;" id="4" />
+      <edge source="Lads/RateMyApp;-&gt;getPackageName()Ljava/lang/String;" target="Landroid/app/Activity;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="5" />
+      <edge source="Lads/RateMyApp;-&gt;getPackageName()Ljava/lang/String;" target="Landroid/app/Activity;-&gt;getPackageName()Ljava/lang/String;" id="6" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationIcon()Landroid/graphics/drawable/Drawable;" target="Landroid/app/Activity;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onInterceptTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)Z" label="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onInterceptTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)Z" />
+      <node id="Landroid/support/design/widget/Snackbar$Behavior;-&gt;onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/Snackbar$SnackbarLayout;Landroid/view/MotionEvent;)Z" label="Landroid/support/design/widget/Snackbar$Behavior;-&gt;onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/Snackbar$SnackbarLayout;Landroid/view/MotionEvent;)Z" />
+      <node id="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)V" label="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)V" />
+      <node id="Landroid/view/MotionEvent;-&gt;getY()F" label="Landroid/view/MotionEvent;-&gt;getY()F" />
+      <node id="Landroid/support/v7/widget/helper/ItemTouchHelper;-&gt;access$400(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v4/view/GestureDetectorCompat;" label="Landroid/support/v7/widget/helper/ItemTouchHelper;-&gt;access$400(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v4/view/GestureDetectorCompat;" />
+      <node id="Landroid/support/v4/view/GestureDetectorCompat;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" label="Landroid/support/v4/view/GestureDetectorCompat;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" />
+      <node id="Landroid/view/MotionEvent;-&gt;getX()F" label="Landroid/view/MotionEvent;-&gt;getX()F" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onInterceptTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)Z" target="Landroid/view/MotionEvent;-&gt;getY()F" id="0" />
+      <edge source="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onInterceptTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)Z" target="Landroid/support/v7/widget/helper/ItemTouchHelper;-&gt;access$400(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v4/view/GestureDetectorCompat;" id="1" />
+      <edge source="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onInterceptTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)Z" target="Landroid/support/v4/view/GestureDetectorCompat;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" id="2" />
+      <edge source="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onInterceptTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)Z" target="Landroid/view/MotionEvent;-&gt;getX()F" id="3" />
+      <edge source="Landroid/support/design/widget/Snackbar$Behavior;-&gt;onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/Snackbar$SnackbarLayout;Landroid/view/MotionEvent;)Z" target="Landroid/view/MotionEvent;-&gt;getY()F" id="4" />
+      <edge source="Landroid/support/design/widget/Snackbar$Behavior;-&gt;onInterceptTouchEvent(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/Snackbar$SnackbarLayout;Landroid/view/MotionEvent;)Z" target="Landroid/view/MotionEvent;-&gt;getX()F" id="5" />
+      <edge source="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)V" target="Landroid/support/v7/widget/helper/ItemTouchHelper;-&gt;access$400(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v4/view/GestureDetectorCompat;" id="6" />
+      <edge source="Landroid/support/v7/widget/helper/ItemTouchHelper$2;-&gt;onTouchEvent(Landroid/support/v7/widget/RecyclerView;Landroid/view/MotionEvent;)V" target="Landroid/support/v4/view/GestureDetectorCompat;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

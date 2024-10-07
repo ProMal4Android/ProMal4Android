@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/Fragment;-&gt;getReturnTransition()Ljava/lang/Object;" label="Landroid/support/v4/app/Fragment;-&gt;getReturnTransition()Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" label="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" />
+      <node id="Landroid/support/v4/util/ArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Landroid/support/v4/util/ArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;cloneTransition(Ljava/lang/Object;)Ljava/lang/Object;" label="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;cloneTransition(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;getExitTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" label="Landroid/support/v4/app/BackStackRecord;-&gt;getExitTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;getEnterTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" label="Landroid/support/v4/app/BackStackRecord;-&gt;getEnterTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" label="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" target="Landroid/support/v4/util/ArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" target="Landroid/support/v4/app/BackStackRecord;-&gt;getExitTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" target="Landroid/support/v4/app/BackStackRecord;-&gt;getEnterTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;getExitTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" target="Landroid/support/v4/app/Fragment;-&gt;getReturnTransition()Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;getExitTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" target="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;cloneTransition(Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;getEnterTransition(Landroid/support/v4/app/Fragment;Z)Ljava/lang/Object;" target="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;cloneTransition(Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" target="Landroid/support/v4/util/ArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="6" />
+    </edges>
+  </graph>
+</gexf>

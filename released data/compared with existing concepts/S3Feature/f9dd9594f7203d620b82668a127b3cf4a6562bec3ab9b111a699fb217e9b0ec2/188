@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;finishUpdate(Landroid/view/ViewGroup;)V" label="Landroid/support/v4/view/PagerAdapter;-&gt;finishUpdate(Landroid/view/ViewGroup;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" label="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" />
+      <node id="Ljava/util/ArrayList;-&gt;isEmpty()Z" label="Ljava/util/ArrayList;-&gt;isEmpty()Z" />
+      <node id="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;calculateTargetState(Landroid/arch/lifecycle/LifecycleObserver;)Landroid/arch/lifecycle/Lifecycle$State;" label="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;calculateTargetState(Landroid/arch/lifecycle/LifecycleObserver;)Landroid/arch/lifecycle/Lifecycle$State;" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" label="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;recomputeScrollPosition(IIII)V" label="Landroid/support/v4/view/ViewPager;-&gt;recomputeScrollPosition(IIII)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;finishUpdate(Landroid/view/ViewGroup;)V" id="0" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Ljava/util/ArrayList;-&gt;size()I" id="1" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" id="2" />
+      <edge source="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;calculateTargetState(Landroid/arch/lifecycle/LifecycleObserver;)Landroid/arch/lifecycle/Lifecycle$State;" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="3" />
+      <edge source="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;calculateTargetState(Landroid/arch/lifecycle/LifecycleObserver;)Landroid/arch/lifecycle/Lifecycle$State;" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" target="Ljava/util/ArrayList;-&gt;size()I" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;recomputeScrollPosition(IIII)V" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;recomputeScrollPosition(IIII)V" target="Landroid/support/v4/view/ViewPager;-&gt;infoForPosition(I)Landroid/support/v4/view/ViewPager$ItemInfo;" id="7" />
+    </edges>
+  </graph>
+</gexf>

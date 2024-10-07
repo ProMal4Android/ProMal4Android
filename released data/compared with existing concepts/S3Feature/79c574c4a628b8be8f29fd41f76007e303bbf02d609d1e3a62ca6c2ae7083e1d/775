@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;dispatchHoverEvent(Landroid/view/MotionEvent;)Z" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;dispatchHoverEvent(Landroid/view/MotionEvent;)Z" />
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;manageFocusForChild(IILandroid/os/Bundle;)Z" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;manageFocusForChild(IILandroid/os/Bundle;)Z" />
+      <node id="Landroid/view/accessibility/AccessibilityManager;-&gt;isEnabled()Z" label="Landroid/view/accessibility/AccessibilityManager;-&gt;isEnabled()Z" />
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;requestAccessibilityFocus(I)Z" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;requestAccessibilityFocus(I)Z" />
+      <node id="Landroid/support/v4/view/accessibility/AccessibilityManagerCompat;-&gt;isTouchExplorationEnabled(Landroid/view/accessibility/AccessibilityManager;)Z" label="Landroid/support/v4/view/accessibility/AccessibilityManagerCompat;-&gt;isTouchExplorationEnabled(Landroid/view/accessibility/AccessibilityManager;)Z" />
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" />
+      <node id="Landroid/support/v4/view/ViewParentCompat;-&gt;requestSendAccessibilityEvent(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z" label="Landroid/support/v4/view/ViewParentCompat;-&gt;requestSendAccessibilityEvent(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;dispatchHoverEvent(Landroid/view/MotionEvent;)Z" target="Landroid/view/accessibility/AccessibilityManager;-&gt;isEnabled()Z" id="0" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;dispatchHoverEvent(Landroid/view/MotionEvent;)Z" target="Landroid/support/v4/view/accessibility/AccessibilityManagerCompat;-&gt;isTouchExplorationEnabled(Landroid/view/accessibility/AccessibilityManager;)Z" id="1" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;manageFocusForChild(IILandroid/os/Bundle;)Z" target="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;requestAccessibilityFocus(I)Z" id="2" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;requestAccessibilityFocus(I)Z" target="Landroid/view/accessibility/AccessibilityManager;-&gt;isEnabled()Z" id="3" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;requestAccessibilityFocus(I)Z" target="Landroid/support/v4/view/accessibility/AccessibilityManagerCompat;-&gt;isTouchExplorationEnabled(Landroid/view/accessibility/AccessibilityManager;)Z" id="4" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;requestAccessibilityFocus(I)Z" target="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" id="5" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" target="Landroid/view/accessibility/AccessibilityManager;-&gt;isEnabled()Z" id="6" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" target="Landroid/support/v4/view/ViewParentCompat;-&gt;requestSendAccessibilityEvent(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

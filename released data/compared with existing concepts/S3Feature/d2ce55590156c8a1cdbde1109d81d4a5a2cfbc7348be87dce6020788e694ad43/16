@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" label="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" />
+      <node id="Landroid/support/constraint/ConstraintSet;-&gt;center(IIIIIIIF)V" label="Landroid/support/constraint/ConstraintSet;-&gt;center(IIIIIIIF)V" />
+      <node id="Landroid/support/constraint/ConstraintSet;-&gt;connect(IIIII)V" label="Landroid/support/constraint/ConstraintSet;-&gt;connect(IIIII)V" />
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" label="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" />
+      <node id="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" label="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" />
+      <node id="Landroid/support/constraint/ConstraintSet;-&gt;get(I)Landroid/support/constraint/ConstraintSet$Constraint;" label="Landroid/support/constraint/ConstraintSet;-&gt;get(I)Landroid/support/constraint/ConstraintSet$Constraint;" />
+      <node id="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" target="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" id="0" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;center(IIIIIIIF)V" target="Landroid/support/constraint/ConstraintSet;-&gt;connect(IIIII)V" id="1" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;center(IIIIIIIF)V" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="2" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;center(IIIIIIIF)V" target="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;connect(IIIII)V" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="4" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;connect(IIIII)V" target="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" target="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="6" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;get(I)Landroid/support/constraint/ConstraintSet$Constraint;" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="7" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;get(I)Landroid/support/constraint/ConstraintSet$Constraint;" target="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="8" />
+    </edges>
+  </graph>
+</gexf>

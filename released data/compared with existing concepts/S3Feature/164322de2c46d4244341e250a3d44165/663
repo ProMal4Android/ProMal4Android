@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;commitByCharacter()V" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;commitByCharacter()V" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView$7;-&gt;onChanged(Ljava/util/List;)V" label="Lcom/android/ex/chips/RecipientEditTextView$7;-&gt;onChanged(Ljava/util/List;)V" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;appendRecipientEntry(Lcom/android/ex/chips/RecipientEntry;)V" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;appendRecipientEntry(Lcom/android/ex/chips/RecipientEntry;)V" />
+      <node id="Landroid/text/Editable;-&gt;length()I" label="Landroid/text/Editable;-&gt;length()I" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" />
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSortedRecipients()[Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSortedRecipients()[Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;commitByCharacter()V" target="Landroid/text/Editable;-&gt;length()I" id="0" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;commitByCharacter()V" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" id="1" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView$7;-&gt;onChanged(Ljava/util/List;)V" target="Landroid/text/Editable;-&gt;length()I" id="2" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView$7;-&gt;onChanged(Ljava/util/List;)V" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" id="3" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView$7;-&gt;onChanged(Ljava/util/List;)V" target="Ljava/util/List;-&gt;size()I" id="4" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;appendRecipientEntry(Lcom/android/ex/chips/RecipientEntry;)V" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" id="5" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;appendRecipientEntry(Lcom/android/ex/chips/RecipientEntry;)V" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSortedRecipients()[Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" id="6" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSortedRecipients()[Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" target="Landroid/text/Editable;-&gt;length()I" id="7" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getSortedRecipients()[Lcom/android/ex/chips/recipientchip/DrawableRecipientChip;" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;getText()Landroid/text/Editable;" id="8" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Intent;-&gt;setData(Landroid/net/Uri;)Landroid/content/Intent;" label="Landroid/content/Intent;-&gt;setData(Landroid/net/Uri;)Landroid/content/Intent;" />
+      <node id="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/overlay/AdLauncherIntentInfoParcel;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" label="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/overlay/AdLauncherIntentInfoParcel;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;createIntent(Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Landroid/content/Intent;" label="Landroid/support/v7/widget/SearchView;-&gt;createIntent(Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Landroid/content/Intent;" />
+      <node id="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;I)Landroid/content/Intent;" label="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;I)Landroid/content/Intent;" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Landroid/content/Intent;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" label="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Landroid/content/Intent;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;I)Landroid/content/Intent;" id="0" />
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/overlay/AdLauncherIntentInfoParcel;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" target="Landroid/content/Intent;-&gt;setData(Landroid/net/Uri;)Landroid/content/Intent;" id="2" />
+      <edge source="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/overlay/AdLauncherIntentInfoParcel;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/overlay/AdLauncherIntentInfoParcel;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" target="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Landroid/content/Intent;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" id="4" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;createIntent(Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;setData(Landroid/net/Uri;)Landroid/content/Intent;" id="5" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;createIntent(Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;I)Landroid/content/Intent;" id="6" />
+      <edge source="Lcom/google/android/gms/ads/internal/overlay/zza;-&gt;zza(Landroid/content/Context;Landroid/content/Intent;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

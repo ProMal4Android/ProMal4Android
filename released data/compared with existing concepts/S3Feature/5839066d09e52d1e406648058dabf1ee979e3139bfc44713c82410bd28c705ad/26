@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;sendSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;sendSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;toEven(F)I" label="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;toEven(F)I" />
+      <node id="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Ljava/lang/Math;-&gt;round(F)I" label="Ljava/lang/Math;-&gt;round(F)I" />
+      <node id="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;setShadowSize(FF)V" label="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;setShadowSize(FF)V" />
+      <node id="Landroid/support/design/widget/CircularBorderDrawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" label="Landroid/support/design/widget/CircularBorderDrawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" />
+      <node id="Landroid/graphics/Rect;-&gt;set(IIII)V" label="Landroid/graphics/Rect;-&gt;set(IIII)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;sendSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V" target="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="0" />
+      <edge source="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;toEven(F)I" target="Ljava/lang/Math;-&gt;round(F)I" id="1" />
+      <edge source="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;setShadowSize(FF)V" target="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;toEven(F)I" id="2" />
+      <edge source="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;setShadowSize(FF)V" target="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="3" />
+      <edge source="Landroid/support/design/widget/ShadowDrawableWrapper;-&gt;setShadowSize(FF)V" target="Ljava/lang/Math;-&gt;round(F)I" id="4" />
+      <edge source="Landroid/support/design/widget/CircularBorderDrawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" target="Ljava/lang/Math;-&gt;round(F)I" id="5" />
+      <edge source="Landroid/support/design/widget/CircularBorderDrawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" target="Landroid/graphics/Rect;-&gt;set(IIII)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

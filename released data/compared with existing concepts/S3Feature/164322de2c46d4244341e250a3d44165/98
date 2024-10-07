@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" label="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" />
+      <node id="Landroidx/appcompat/widget/SearchView$SearchAutoComplete;-&gt;setThreshold(I)V" label="Landroidx/appcompat/widget/SearchView$SearchAutoComplete;-&gt;setThreshold(I)V" />
+      <node id="Landroid/app/SearchableInfo;-&gt;getSuggestAuthority()Ljava/lang/String;" label="Landroid/app/SearchableInfo;-&gt;getSuggestAuthority()Ljava/lang/String;" />
+      <node id="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" label="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroidx/appcompat/widget/AppCompatAutoCompleteTextView;-&gt;setThreshold(I)V" label="Landroidx/appcompat/widget/AppCompatAutoCompleteTextView;-&gt;setThreshold(I)V" />
+      <node id="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" label="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" />
+      <node id="Landroidx/appcompat/widget/SearchView;-&gt;updateSearchAutoComplete()V" label="Landroidx/appcompat/widget/SearchView;-&gt;updateSearchAutoComplete()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/app/SearchableInfo;-&gt;getSuggestAuthority()Ljava/lang/String;" id="0" />
+      <edge source="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroidx/appcompat/widget/SearchView$SearchAutoComplete;-&gt;setThreshold(I)V" target="Landroidx/appcompat/widget/AppCompatAutoCompleteTextView;-&gt;setThreshold(I)V" id="2" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/app/SearchableInfo;-&gt;getSuggestAuthority()Ljava/lang/String;" id="3" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroidx/appcompat/widget/SearchView;-&gt;updateSearchAutoComplete()V" target="Landroidx/appcompat/widget/SearchView$SearchAutoComplete;-&gt;setThreshold(I)V" id="5" />
+      <edge source="Landroidx/appcompat/widget/SearchView;-&gt;updateSearchAutoComplete()V" target="Landroid/app/SearchableInfo;-&gt;getSuggestAuthority()Ljava/lang/String;" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;setVisible(ZZ)Z" label="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;setVisible(ZZ)Z" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;stopRunning()V" label="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;stopRunning()V" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;-&gt;start()V" label="Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;-&gt;start()V" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;stop()V" label="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;stop()V" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" label="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;invalidateSelf()V" label="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;invalidateSelf()V" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;onFrameReady(I)V" label="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;onFrameReady(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;setVisible(ZZ)Z" target="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;stopRunning()V" id="0" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;setVisible(ZZ)Z" target="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" id="1" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;stop()V" target="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;stopRunning()V" id="2" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" target="Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;-&gt;start()V" id="3" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" target="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;invalidateSelf()V" id="4" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;onFrameReady(I)V" target="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;stop()V" id="5" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;onFrameReady(I)V" target="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;invalidateSelf()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

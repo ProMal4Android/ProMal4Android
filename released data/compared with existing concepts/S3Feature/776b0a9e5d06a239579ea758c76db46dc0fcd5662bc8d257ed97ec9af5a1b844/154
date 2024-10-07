@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/supports/design/widget/AppBarLayout;I)I" label="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/supports/design/widget/AppBarLayout;I)I" />
+      <node id="Lcom/bumptech/glide/util/LruCache;-&gt;setSizeMultiplier(F)V" label="Lcom/bumptech/glide/util/LruCache;-&gt;setSizeMultiplier(F)V" />
+      <node id="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/AppBarLayout;I)I" label="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/AppBarLayout;I)I" />
+      <node id="Ljava/lang/Math;-&gt;round(F)I" label="Ljava/lang/Math;-&gt;round(F)I" />
+      <node id="Landroid/supports/design/widget/AppBarLayout;-&gt;getChildCount()I" label="Landroid/supports/design/widget/AppBarLayout;-&gt;getChildCount()I" />
+      <node id="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;c(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;)V" label="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;c(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;)V" />
+      <node id="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/supports/design/widget/AppBarLayout;I)I" target="Ljava/lang/Math;-&gt;round(F)I" id="0" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/supports/design/widget/AppBarLayout;I)I" target="Landroid/supports/design/widget/AppBarLayout;-&gt;getChildCount()I" id="1" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/supports/design/widget/AppBarLayout;I)I" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="2" />
+      <edge source="Lcom/bumptech/glide/util/LruCache;-&gt;setSizeMultiplier(F)V" target="Ljava/lang/Math;-&gt;round(F)I" id="3" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/AppBarLayout;I)I" target="Landroid/supports/design/widget/AppBarLayout;-&gt;getChildCount()I" id="4" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;c(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;)V" target="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/AppBarLayout;I)I" id="5" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;c(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;)V" target="Landroid/supports/design/widget/AppBarLayout;-&gt;getChildCount()I" id="6" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;c(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="7" />
+    </edges>
+  </graph>
+</gexf>

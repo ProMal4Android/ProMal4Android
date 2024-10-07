@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/ActivityChooserView;-&gt;dismissPopup()Z" label="Landroid/support/v7/widget/ActivityChooserView;-&gt;dismissPopup()Z" />
+      <node id="Landroid/support/v7/widget/ActivityChooserView$2;-&gt;onGlobalLayout()V" label="Landroid/support/v7/widget/ActivityChooserView$2;-&gt;onGlobalLayout()V" />
+      <node id="Landroid/support/v7/widget/ActivityChooserView;-&gt;getListPopupWindow()Landroid/support/v7/widget/ListPopupWindow;" label="Landroid/support/v7/widget/ActivityChooserView;-&gt;getListPopupWindow()Landroid/support/v7/widget/ListPopupWindow;" />
+      <node id="Landroid/support/v7/widget/ActivityChooserView;-&gt;isShowingPopup()Z" label="Landroid/support/v7/widget/ActivityChooserView;-&gt;isShowingPopup()Z" />
+      <node id="Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Landroid/support/v4/view/ActionProvider;-&gt;subUiVisibilityChanged(Z)V" label="Landroid/support/v4/view/ActionProvider;-&gt;subUiVisibilityChanged(Z)V" />
+      <node id="Landroid/support/v7/widget/ActivityChooserView;-&gt;getContext()Landroid/content/Context;" label="Landroid/support/v7/widget/ActivityChooserView;-&gt;getContext()Landroid/content/Context;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActivityChooserView;-&gt;dismissPopup()Z" target="Landroid/support/v7/widget/ActivityChooserView;-&gt;getListPopupWindow()Landroid/support/v7/widget/ListPopupWindow;" id="0" />
+      <edge source="Landroid/support/v7/widget/ActivityChooserView;-&gt;dismissPopup()Z" target="Landroid/support/v7/widget/ActivityChooserView;-&gt;isShowingPopup()Z" id="1" />
+      <edge source="Landroid/support/v7/widget/ActivityChooserView$2;-&gt;onGlobalLayout()V" target="Landroid/support/v7/widget/ActivityChooserView;-&gt;getListPopupWindow()Landroid/support/v7/widget/ListPopupWindow;" id="2" />
+      <edge source="Landroid/support/v7/widget/ActivityChooserView$2;-&gt;onGlobalLayout()V" target="Landroid/support/v7/widget/ActivityChooserView;-&gt;isShowingPopup()Z" id="3" />
+      <edge source="Landroid/support/v7/widget/ActivityChooserView$2;-&gt;onGlobalLayout()V" target="Landroid/support/v4/view/ActionProvider;-&gt;subUiVisibilityChanged(Z)V" id="4" />
+      <edge source="Landroid/support/v7/widget/ActivityChooserView;-&gt;getListPopupWindow()Landroid/support/v7/widget/ListPopupWindow;" target="Landroid/support/v7/widget/ActivityChooserView;-&gt;getContext()Landroid/content/Context;" id="5" />
+      <edge source="Landroid/support/v7/widget/ActivityChooserView;-&gt;isShowingPopup()Z" target="Landroid/support/v7/widget/ActivityChooserView;-&gt;getListPopupWindow()Landroid/support/v7/widget/ListPopupWindow;" id="6" />
+      <edge source="Landroid/support/v7/widget/ActivityChooserView$ActivityChooserViewAdapter;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/support/v7/widget/ActivityChooserView;-&gt;getContext()Landroid/content/Context;" id="7" />
+    </edges>
+  </graph>
+</gexf>

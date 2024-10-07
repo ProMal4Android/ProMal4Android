@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;getApplicationContext()Landroid/content/Context;" label="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Landroid/provider/Settings$Secure;-&gt;getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;" label="Landroid/provider/Settings$Secure;-&gt;getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;decideDefaultActivity()V" label="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;decideDefaultActivity()V" />
+      <node id="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;isWidgetShown()Z" label="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;isWidgetShown()Z" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" />
+      <node id="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;onCreate(Landroid/os/Bundle;)V" label="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;onCreate(Landroid/os/Bundle;)V" />
+      <node id="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;generateRandomNumber()I" label="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;generateRandomNumber()I" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;decideDefaultActivity()V" target="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;isWidgetShown()Z" id="0" />
+      <edge source="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;decideDefaultActivity()V" target="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;generateRandomNumber()I" id="1" />
+      <edge source="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;isWidgetShown()Z" target="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;getApplicationContext()Landroid/content/Context;" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" target="Landroid/provider/Settings$Secure;-&gt;getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;" id="3" />
+      <edge source="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;onCreate(Landroid/os/Bundle;)V" target="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;decideDefaultActivity()V" id="4" />
+      <edge source="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;onCreate(Landroid/os/Bundle;)V" target="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;isWidgetShown()Z" id="5" />
+      <edge source="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;generateRandomNumber()I" target="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;getApplicationContext()Landroid/content/Context;" id="6" />
+      <edge source="Lcom/adobe/air/AdobeAIRMainActivity;-&gt;generateRandomNumber()I" target="Landroid/provider/Settings$Secure;-&gt;getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;" id="7" />
+    </edges>
+  </graph>
+</gexf>

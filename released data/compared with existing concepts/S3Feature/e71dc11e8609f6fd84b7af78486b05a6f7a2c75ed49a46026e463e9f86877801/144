@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" label="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" />
+      <node id="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;measureChildWithMargins(Landroid/view/View;II)V" label="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;measureChildWithMargins(Landroid/view/View;II)V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;getItemDecorInsetsForChild(Landroid/view/View;)Landroid/graphics/Rect;" label="Landroid/support/v7/widget/RecyclerView;-&gt;getItemDecorInsetsForChild(Landroid/view/View;)Landroid/graphics/Rect;" />
+      <node id="Landroid/graphics/drawable/Drawable$ConstantState;-&gt;&lt;init&gt;()V" label="Landroid/graphics/drawable/Drawable$ConstantState;-&gt;&lt;init&gt;()V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" label="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" />
+      <node id="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" target="Landroid/graphics/drawable/Drawable$ConstantState;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="1" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;measureChildWithMargins(Landroid/view/View;II)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getItemDecorInsetsForChild(Landroid/view/View;)Landroid/graphics/Rect;" id="2" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;measureChildWithMargins(Landroid/view/View;II)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="3" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;getItemDecorInsetsForChild(Landroid/view/View;)Landroid/graphics/Rect;" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;getItemDecorInsetsForChild(Landroid/view/View;)Landroid/graphics/Rect;" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" target="Ljava/util/ArrayList;-&gt;size()I" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="7" />
+    </edges>
+  </graph>
+</gexf>

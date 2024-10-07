@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Math;-&gt;min(II)I" label="Ljava/lang/Math;-&gt;min(II)I" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getSelectionStart()I" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getSelectionStart()I" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getHtml(Ljava/util/ArrayList;Z)Ljava/lang/String;" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getHtml(Ljava/util/ArrayList;Z)Ljava/lang/String;" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;cutToClipBoard()V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;cutToClipBoard()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" />
+      <node id="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" label="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;copyToClipBoard()V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;copyToClipBoard()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getHtml(Ljava/util/ArrayList;Z)Ljava/lang/String;" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" id="0" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;cutToClipBoard()V" target="Ljava/lang/Math;-&gt;min(II)I" id="1" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;cutToClipBoard()V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getSelectionStart()I" id="2" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;cutToClipBoard()V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" id="3" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;cutToClipBoard()V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;copyToClipBoard()V" id="4" />
+      <edge source="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" target="Ljava/lang/Math;-&gt;min(II)I" id="5" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;copyToClipBoard()V" target="Ljava/lang/Math;-&gt;min(II)I" id="6" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;copyToClipBoard()V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getSelectionStart()I" id="7" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;copyToClipBoard()V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" id="8" />
+    </edges>
+  </graph>
+</gexf>

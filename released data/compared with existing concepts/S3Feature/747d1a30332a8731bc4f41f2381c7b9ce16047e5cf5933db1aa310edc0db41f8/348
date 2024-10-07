@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="La/e;-&gt;isCancellationRequested()Z" label="La/e;-&gt;isCancellationRequested()Z" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" />
+      <node id="La/i$a;-&gt;setCancelled()V" label="La/i$a;-&gt;setCancelled()V" />
+      <node id="La/i$4;-&gt;then(La/i;)La/i;" label="La/i$4;-&gt;then(La/i;)La/i;" />
+      <node id="La/i$5;-&gt;run()V" label="La/i$5;-&gt;run()V" />
+      <node id="La/i;-&gt;cancelled()La/i;" label="La/i;-&gt;cancelled()La/i;" />
+      <node id="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="0" />
+      <edge source="La/i$a;-&gt;setCancelled()V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="1" />
+      <edge source="La/i$4;-&gt;then(La/i;)La/i;" target="La/e;-&gt;isCancellationRequested()Z" id="2" />
+      <edge source="La/i$4;-&gt;then(La/i;)La/i;" target="La/i;-&gt;cancelled()La/i;" id="3" />
+      <edge source="La/i$5;-&gt;run()V" target="La/e;-&gt;isCancellationRequested()Z" id="4" />
+      <edge source="La/i$5;-&gt;run()V" target="La/i$a;-&gt;setCancelled()V" id="5" />
+      <edge source="La/i;-&gt;cancelled()La/i;" target="La/i$a;-&gt;setCancelled()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

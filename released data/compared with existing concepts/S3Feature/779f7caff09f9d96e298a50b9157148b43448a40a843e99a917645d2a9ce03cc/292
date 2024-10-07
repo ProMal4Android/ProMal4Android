@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" label="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" label="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompatKitKat;-&gt;areNotificationsEnabled(Landroid/content/Context;)Z" label="Landroid/support/v4/app/NotificationManagerCompatKitKat;-&gt;areNotificationsEnabled(Landroid/content/Context;)Z" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;cancelAll()V" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;cancelAll()V" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;cancel(Ljava/lang/String;I)V" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;cancel(Ljava/lang/String;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationManagerCompatKitKat;-&gt;areNotificationsEnabled(Landroid/content/Context;)Z" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompatKitKat;-&gt;areNotificationsEnabled(Landroid/content/Context;)Z" target="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompatKitKat;-&gt;areNotificationsEnabled(Landroid/content/Context;)Z" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;cancelAll()V" target="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;cancelAll()V" target="Landroid/support/v4/app/NotificationManagerCompat;-&gt;pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="5" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;cancel(Ljava/lang/String;I)V" target="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" id="6" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;cancel(Ljava/lang/String;I)V" target="Landroid/support/v4/app/NotificationManagerCompat;-&gt;pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

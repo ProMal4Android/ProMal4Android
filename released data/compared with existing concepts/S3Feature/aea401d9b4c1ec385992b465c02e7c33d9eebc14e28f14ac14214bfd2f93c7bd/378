@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;setMenu(Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/support/v7/widget/ActionMenuPresenter;)V" label="Landroid/support/v7/widget/Toolbar;-&gt;setMenu(Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/support/v7/widget/ActionMenuPresenter;)V" />
+      <node id="Landroid/support/v7/widget/ActionMenuView;-&gt;peekMenu()Landroid/support/v7/internal/view/menu/MenuBuilder;" label="Landroid/support/v7/widget/ActionMenuView;-&gt;peekMenu()Landroid/support/v7/internal/view/menu/MenuBuilder;" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;ensureMenu()V" label="Landroid/support/v7/widget/Toolbar;-&gt;ensureMenu()V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/UnusedStub;-&gt;&lt;init&gt;()V" label="Landroid/UnusedStub;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;Landroid/support/v7/widget/Toolbar$1;)V" label="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;Landroid/support/v7/widget/Toolbar$1;)V" />
+      <node id="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" label="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setMenu(Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/support/v7/widget/ActionMenuPresenter;)V" target="Landroid/support/v7/widget/ActionMenuView;-&gt;peekMenu()Landroid/support/v7/internal/view/menu/MenuBuilder;" id="0" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setMenu(Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/support/v7/widget/ActionMenuPresenter;)V" target="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;Landroid/support/v7/widget/Toolbar$1;)V" id="1" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;ensureMenu()V" target="Landroid/support/v7/widget/ActionMenuView;-&gt;peekMenu()Landroid/support/v7/internal/view/menu/MenuBuilder;" id="2" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;ensureMenu()V" target="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;Landroid/support/v7/widget/Toolbar$1;)V" id="3" />
+      <edge source="Landroid/UnusedStub;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;Landroid/support/v7/widget/Toolbar$1;)V" target="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" id="5" />
+      <edge source="Landroid/support/v7/widget/Toolbar$ExpandedActionViewMenuPresenter;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

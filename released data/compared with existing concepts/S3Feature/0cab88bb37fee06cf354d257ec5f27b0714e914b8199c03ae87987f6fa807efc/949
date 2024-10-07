@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;attachActivity(Landroid/support/v4/app/FragmentActivity;Landroid/support/v4/app/FragmentContainer;Landroid/support/v4/app/Fragment;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;attachActivity(Landroid/support/v4/app/FragmentActivity;Landroid/support/v4/app/FragmentContainer;Landroid/support/v4/app/Fragment;)V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;getChildFragmentManager()Landroid/support/v4/app/FragmentManager;" label="Landroid/support/v4/app/Fragment;-&gt;getChildFragmentManager()Landroid/support/v4/app/FragmentManager;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" label="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" />
+      <node id="Landroid/view/LayoutInflater;-&gt;cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;" label="Landroid/view/LayoutInflater;-&gt;cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;instantiateChildFragmentManager()V" label="Landroid/support/v4/app/Fragment;-&gt;instantiateChildFragmentManager()V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onCreate(Landroid/os/Bundle;)V" label="Landroid/support/v4/app/FragmentActivity;-&gt;onCreate(Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;getLayoutInflater()Landroid/view/LayoutInflater;" label="Landroid/support/v4/app/FragmentActivity;-&gt;getLayoutInflater()Landroid/view/LayoutInflater;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getChildFragmentManager()Landroid/support/v4/app/FragmentManager;" target="Landroid/support/v4/app/Fragment;-&gt;instantiateChildFragmentManager()V" id="0" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" target="Landroid/support/v4/app/Fragment;-&gt;getChildFragmentManager()Landroid/support/v4/app/FragmentManager;" id="1" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" target="Landroid/view/LayoutInflater;-&gt;cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;" id="2" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" target="Landroid/support/v4/app/FragmentActivity;-&gt;getLayoutInflater()Landroid/view/LayoutInflater;" id="3" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiateChildFragmentManager()V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;attachActivity(Landroid/support/v4/app/FragmentActivity;Landroid/support/v4/app/FragmentContainer;Landroid/support/v4/app/Fragment;)V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onCreate(Landroid/os/Bundle;)V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;attachActivity(Landroid/support/v4/app/FragmentActivity;Landroid/support/v4/app/FragmentContainer;Landroid/support/v4/app/Fragment;)V" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onCreate(Landroid/os/Bundle;)V" target="Landroid/support/v4/app/FragmentActivity;-&gt;getLayoutInflater()Landroid/view/LayoutInflater;" id="6" />
+    </edges>
+  </graph>
+</gexf>

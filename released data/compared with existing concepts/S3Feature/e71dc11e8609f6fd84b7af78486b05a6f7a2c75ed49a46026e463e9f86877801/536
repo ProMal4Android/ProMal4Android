@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;-&gt;&lt;init&gt;()V" label="Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/text/Html;-&gt;fromHtml(Ljava/lang/String;)Landroid/text/Spanned;" label="Landroid/text/Html;-&gt;fromHtml(Ljava/lang/String;)Landroid/text/Spanned;" />
+      <node id="Lcom/google/android/exoplayer2/text/subrip/SubripDecoder;-&gt;decode([BI)Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;" label="Lcom/google/android/exoplayer2/text/subrip/SubripDecoder;-&gt;decode([BI)Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;" />
+      <node id="Lcom/google/android/exoplayer2/util/ParsableByteArray;-&gt;&lt;init&gt;([BI)V" label="Lcom/google/android/exoplayer2/util/ParsableByteArray;-&gt;&lt;init&gt;([BI)V" />
+      <node id="Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;-&gt;&lt;init&gt;()V" label="Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;-&gt;&lt;init&gt;()V" target="Lcom/google/android/exoplayer2/util/ParsableByteArray;-&gt;&lt;init&gt;([BI)V" id="1" />
+      <edge source="Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;-&gt;&lt;init&gt;()V" target="Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Lcom/google/android/exoplayer2/text/subrip/SubripDecoder;-&gt;decode([BI)Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;" target="Landroid/text/Html;-&gt;fromHtml(Ljava/lang/String;)Landroid/text/Spanned;" id="3" />
+      <edge source="Lcom/google/android/exoplayer2/text/subrip/SubripDecoder;-&gt;decode([BI)Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;" target="Lcom/google/android/exoplayer2/util/ParsableByteArray;-&gt;&lt;init&gt;([BI)V" id="4" />
+      <edge source="Lcom/google/android/exoplayer2/util/ParsableByteArray;-&gt;&lt;init&gt;([BI)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Landroid/text/Html;-&gt;fromHtml(Ljava/lang/String;)Landroid/text/Spanned;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/Iterator;-&gt;hasNext()Z" label="Ljava/util/Iterator;-&gt;hasNext()Z" />
+      <node id="Lcom/facebook/internal/NativeProtocol;-&gt;createProxyAuthIntent(Landroid/content/Context;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;ZZLcom/facebook/login/DefaultAudience;)Landroid/content/Intent;" label="Lcom/facebook/internal/NativeProtocol;-&gt;createProxyAuthIntent(Landroid/content/Context;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;ZZLcom/facebook/login/DefaultAudience;)Landroid/content/Intent;" />
+      <node id="Ljava/util/Collection;-&gt;size()I" label="Ljava/util/Collection;-&gt;size()I" />
+      <node id="Lcom/bumptech/glide/manager/a;-&gt;b()V" label="Lcom/bumptech/glide/manager/a;-&gt;b()V" />
+      <node id="Lcom/facebook/internal/Utility;-&gt;isNullOrEmpty(Ljava/util/Collection;)Z" label="Lcom/facebook/internal/Utility;-&gt;isNullOrEmpty(Ljava/util/Collection;)Z" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" label="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" />
+      <node id="Lcom/bumptech/glide/i/h;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" label="Lcom/bumptech/glide/i/h;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;createProxyAuthIntent(Landroid/content/Context;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;ZZLcom/facebook/login/DefaultAudience;)Landroid/content/Intent;" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="0" />
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;createProxyAuthIntent(Landroid/content/Context;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;ZZLcom/facebook/login/DefaultAudience;)Landroid/content/Intent;" target="Lcom/facebook/internal/Utility;-&gt;isNullOrEmpty(Ljava/util/Collection;)Z" id="1" />
+      <edge source="Lcom/bumptech/glide/manager/a;-&gt;b()V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="2" />
+      <edge source="Lcom/bumptech/glide/manager/a;-&gt;b()V" target="Lcom/bumptech/glide/i/h;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" id="3" />
+      <edge source="Lcom/facebook/internal/Utility;-&gt;isNullOrEmpty(Ljava/util/Collection;)Z" target="Ljava/util/Collection;-&gt;size()I" id="4" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" target="Lcom/bumptech/glide/manager/a;-&gt;b()V" id="5" />
+      <edge source="Lcom/bumptech/glide/i/h;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="6" />
+      <edge source="Lcom/bumptech/glide/i/h;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" target="Ljava/util/Collection;-&gt;size()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

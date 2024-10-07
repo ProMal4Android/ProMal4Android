@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/gc/materialdesign/utils/Utils;-&gt;dpToPx(FLandroid/content/res/Resources;)I" label="Lcom/gc/materialdesign/utils/Utils;-&gt;dpToPx(FLandroid/content/res/Resources;)I" />
+      <node id="Lcom/gc/materialdesign/views/Button;-&gt;setDefaultProperties()V" label="Lcom/gc/materialdesign/views/Button;-&gt;setDefaultProperties()V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;setStatusBarBackgroundColor(I)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;setStatusBarBackgroundColor(I)V" />
+      <node id="Landroid/graphics/drawable/ColorDrawable;-&gt;&lt;init&gt;(I)V" label="Landroid/graphics/drawable/ColorDrawable;-&gt;&lt;init&gt;(I)V" />
+      <node id="Lcom/gc/materialdesign/views/Button;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Lcom/gc/materialdesign/views/Button;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Lcom/gc/materialdesign/views/ButtonFloat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Lcom/gc/materialdesign/views/ButtonFloat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Lcom/gc/materialdesign/views/ButtonIcon;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Lcom/gc/materialdesign/views/ButtonIcon;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/gc/materialdesign/views/Button;-&gt;setDefaultProperties()V" target="Lcom/gc/materialdesign/utils/Utils;-&gt;dpToPx(FLandroid/content/res/Resources;)I" id="0" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;setStatusBarBackgroundColor(I)V" target="Landroid/graphics/drawable/ColorDrawable;-&gt;&lt;init&gt;(I)V" id="1" />
+      <edge source="Lcom/gc/materialdesign/views/Button;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Lcom/gc/materialdesign/views/Button;-&gt;setDefaultProperties()V" id="2" />
+      <edge source="Lcom/gc/materialdesign/views/ButtonFloat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Lcom/gc/materialdesign/utils/Utils;-&gt;dpToPx(FLandroid/content/res/Resources;)I" id="3" />
+      <edge source="Lcom/gc/materialdesign/views/ButtonFloat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Lcom/gc/materialdesign/views/Button;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="4" />
+      <edge source="Lcom/gc/materialdesign/views/ButtonIcon;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Lcom/gc/materialdesign/utils/Utils;-&gt;dpToPx(FLandroid/content/res/Resources;)I" id="5" />
+      <edge source="Lcom/gc/materialdesign/views/ButtonIcon;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/graphics/drawable/ColorDrawable;-&gt;&lt;init&gt;(I)V" id="6" />
+      <edge source="Lcom/gc/materialdesign/views/ButtonIcon;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Lcom/gc/materialdesign/views/ButtonFloat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

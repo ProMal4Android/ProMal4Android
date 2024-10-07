@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Lcom/lody/virtual/client/core/VirtualCore;-&gt;getPM()Landroid/content/pm/PackageManager;" label="Lcom/lody/virtual/client/core/VirtualCore;-&gt;getPM()Landroid/content/pm/PackageManager;" />
+      <node id="Lcom/lody/virtual/client/hook/patchs/search/GetSearchableInfo;-&gt;call(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" label="Lcom/lody/virtual/client/hook/patchs/search/GetSearchableInfo;-&gt;call(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Lcom/lody/virtual/client/core/VirtualCore;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Lcom/lody/virtual/client/core/VirtualCore;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;" label="Landroid/content/pm/PackageManager;-&gt;getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/lody/virtual/client/core/VirtualCore;-&gt;getPM()Landroid/content/pm/PackageManager;" target="Lcom/lody/virtual/client/core/VirtualCore;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="0" />
+      <edge source="Lcom/lody/virtual/client/hook/patchs/search/GetSearchableInfo;-&gt;call(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" target="Lcom/lody/virtual/client/core/VirtualCore;-&gt;getPM()Landroid/content/pm/PackageManager;" id="1" />
+      <edge source="Lcom/lody/virtual/client/hook/patchs/search/GetSearchableInfo;-&gt;call(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" target="Landroid/content/pm/PackageManager;-&gt;getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;" id="2" />
+      <edge source="Lcom/lody/virtual/client/core/VirtualCore;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="3" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" id="4" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="5" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" target="Landroid/content/pm/PackageManager;-&gt;getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;" id="6" />
+    </edges>
+  </graph>
+</gexf>

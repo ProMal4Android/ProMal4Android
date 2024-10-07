@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/widget/ScrollingTabContainerView;-&gt;addTab(Landroid/support/v7/app/ActionBar$Tab;IZ)V" label="Landroid/support/v7/internal/widget/ScrollingTabContainerView;-&gt;addTab(Landroid/support/v7/app/ActionBar$Tab;IZ)V" />
+      <node id="Landroid/support/v7/internal/widget/SpinnerCompat;-&gt;getAdapter()Landroid/widget/SpinnerAdapter;" label="Landroid/support/v7/internal/widget/SpinnerCompat;-&gt;getAdapter()Landroid/widget/SpinnerAdapter;" />
+      <node id="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;configureTab(Landroid/support/v7/app/ActionBar$Tab;I)V" label="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;configureTab(Landroid/support/v7/app/ActionBar$Tab;I)V" />
+      <node id="Landroid/support/v7/internal/app/WindowDecorActionBar$TabImpl;-&gt;setPosition(I)V" label="Landroid/support/v7/internal/app/WindowDecorActionBar$TabImpl;-&gt;setPosition(I)V" />
+      <node id="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;addTab(Landroid/support/v7/app/ActionBar$Tab;IZ)V" label="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;addTab(Landroid/support/v7/app/ActionBar$Tab;IZ)V" />
+      <node id="Landroid/support/v7/internal/widget/ScrollingTabContainerView;-&gt;removeTabAt(I)V" label="Landroid/support/v7/internal/widget/ScrollingTabContainerView;-&gt;removeTabAt(I)V" />
+      <node id="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;removeTabAt(I)V" label="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;removeTabAt(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/widget/ScrollingTabContainerView;-&gt;addTab(Landroid/support/v7/app/ActionBar$Tab;IZ)V" target="Landroid/support/v7/internal/widget/SpinnerCompat;-&gt;getAdapter()Landroid/widget/SpinnerAdapter;" id="0" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;configureTab(Landroid/support/v7/app/ActionBar$Tab;I)V" target="Landroid/support/v7/internal/app/WindowDecorActionBar$TabImpl;-&gt;setPosition(I)V" id="1" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;addTab(Landroid/support/v7/app/ActionBar$Tab;IZ)V" target="Landroid/support/v7/internal/widget/ScrollingTabContainerView;-&gt;addTab(Landroid/support/v7/app/ActionBar$Tab;IZ)V" id="2" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;addTab(Landroid/support/v7/app/ActionBar$Tab;IZ)V" target="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;configureTab(Landroid/support/v7/app/ActionBar$Tab;I)V" id="3" />
+      <edge source="Landroid/support/v7/internal/widget/ScrollingTabContainerView;-&gt;removeTabAt(I)V" target="Landroid/support/v7/internal/widget/SpinnerCompat;-&gt;getAdapter()Landroid/widget/SpinnerAdapter;" id="4" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;removeTabAt(I)V" target="Landroid/support/v7/internal/app/WindowDecorActionBar$TabImpl;-&gt;setPosition(I)V" id="5" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;removeTabAt(I)V" target="Landroid/support/v7/internal/widget/ScrollingTabContainerView;-&gt;removeTabAt(I)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

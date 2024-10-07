@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Lcom/google/android/gms/ads/internal/overlay/zzc;-&gt;zztp()V" label="Lcom/google/android/gms/ads/internal/overlay/zzc;-&gt;zztp()V" />
+      <node id="Landroid/app/Fragment;-&gt;getActivity()Landroid/app/Activity;" label="Landroid/app/Fragment;-&gt;getActivity()Landroid/app/Activity;" />
+      <node id="Landroid/app/Activity;-&gt;getApplicationContext()Landroid/content/Context;" label="Landroid/app/Activity;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;isOnBackgroundThread()Z" label="Lcom/bumptech/glide/util/Util;-&gt;isOnBackgroundThread()Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" target="Landroid/app/Fragment;-&gt;getActivity()Landroid/app/Activity;" id="0" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" target="Landroid/app/Activity;-&gt;getApplicationContext()Landroid/content/Context;" id="1" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/util/Util;-&gt;isOnBackgroundThread()Z" id="2" />
+      <edge source="Lcom/google/android/gms/ads/internal/overlay/zzc;-&gt;zztp()V" target="Landroid/app/Activity;-&gt;getApplicationContext()Landroid/content/Context;" id="3" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" id="4" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" target="Landroid/app/Fragment;-&gt;getActivity()Landroid/app/Activity;" id="5" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" target="Landroid/app/Activity;-&gt;getApplicationContext()Landroid/content/Context;" id="6" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/util/Util;-&gt;isOnBackgroundThread()Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

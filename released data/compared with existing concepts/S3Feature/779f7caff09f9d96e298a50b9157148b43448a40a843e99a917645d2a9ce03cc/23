@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/session/MediaSessionCompatApi18;-&gt;setState(Ljava/lang/Object;IJFJ)V" label="Landroid/support/v4/media/session/MediaSessionCompatApi18;-&gt;setState(Ljava/lang/Object;IJFJ)V" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;getRccStateFromState(I)I" label="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;getRccStateFromState(I)I" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-&gt;setPlaybackState(Landroid/support/v4/media/session/PlaybackStateCompat;)V" label="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-&gt;setPlaybackState(Landroid/support/v4/media/session/PlaybackStateCompat;)V" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;-&gt;onMediaButtonEvent(Landroid/view/KeyEvent;Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V" label="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;-&gt;onMediaButtonEvent(Landroid/view/KeyEvent;Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V" />
+      <node id="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;getState()I" label="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;getState()I" />
+      <node id="Landroid/view/KeyEvent;-&gt;getAction()I" label="Landroid/view/KeyEvent;-&gt;getAction()I" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;setState(Ljava/lang/Object;I)V" label="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;setState(Ljava/lang/Object;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi18;-&gt;setState(Ljava/lang/Object;IJFJ)V" target="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;getRccStateFromState(I)I" id="0" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-&gt;setPlaybackState(Landroid/support/v4/media/session/PlaybackStateCompat;)V" target="Landroid/support/v4/media/session/MediaSessionCompatApi18;-&gt;setState(Ljava/lang/Object;IJFJ)V" id="1" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-&gt;setPlaybackState(Landroid/support/v4/media/session/PlaybackStateCompat;)V" target="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;getState()I" id="2" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-&gt;setPlaybackState(Landroid/support/v4/media/session/PlaybackStateCompat;)V" target="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;setState(Ljava/lang/Object;I)V" id="3" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;-&gt;onMediaButtonEvent(Landroid/view/KeyEvent;Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V" target="Landroid/support/v4/media/session/PlaybackStateCompat;-&gt;getState()I" id="4" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;-&gt;onMediaButtonEvent(Landroid/view/KeyEvent;Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V" target="Landroid/view/KeyEvent;-&gt;getAction()I" id="5" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;setState(Ljava/lang/Object;I)V" target="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;getRccStateFromState(I)I" id="6" />
+    </edges>
+  </graph>
+</gexf>

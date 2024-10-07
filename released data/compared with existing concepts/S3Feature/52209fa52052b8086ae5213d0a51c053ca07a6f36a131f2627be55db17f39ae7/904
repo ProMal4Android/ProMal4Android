@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getChildCount()I" label="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getChildCount()I" />
+      <node id="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;scrollHorizontallyBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I" label="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;scrollHorizontallyBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I" />
+      <node id="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;prepareLayoutStateForDelta(ILandroid/support/v7/widget/RecyclerView$State;)V" label="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;prepareLayoutStateForDelta(ILandroid/support/v7/widget/RecyclerView$State;)V" />
+      <node id="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;calculateScrollDirectionForPosition(I)I" label="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;calculateScrollDirectionForPosition(I)I" />
+      <node id="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getLastChildPosition()I" label="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getLastChildPosition()I" />
+      <node id="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getFirstChildPosition()I" label="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getFirstChildPosition()I" />
+      <node id="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;scrollBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I" label="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;scrollBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;scrollHorizontallyBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;scrollBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I" id="0" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;prepareLayoutStateForDelta(ILandroid/support/v7/widget/RecyclerView$State;)V" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getLastChildPosition()I" id="1" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;prepareLayoutStateForDelta(ILandroid/support/v7/widget/RecyclerView$State;)V" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getFirstChildPosition()I" id="2" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;calculateScrollDirectionForPosition(I)I" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getChildCount()I" id="3" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;calculateScrollDirectionForPosition(I)I" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getFirstChildPosition()I" id="4" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getLastChildPosition()I" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getChildCount()I" id="5" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getFirstChildPosition()I" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getChildCount()I" id="6" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;scrollBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;getChildCount()I" id="7" />
+      <edge source="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;scrollBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I" target="Landroid/support/v7/widget/StaggeredGridLayoutManager;-&gt;prepareLayoutStateForDelta(ILandroid/support/v7/widget/RecyclerView$State;)V" id="8" />
+    </edges>
+  </graph>
+</gexf>

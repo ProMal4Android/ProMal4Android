@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroidx/appcompat/app/AlertDialog$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;I)V" label="Landroidx/appcompat/app/AlertDialog$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;I)V" />
+      <node id="Landroidx/appcompat/app/AlertController$AlertParams;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroidx/appcompat/app/AlertController$AlertParams;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" label="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" />
+      <node id="Lcom/android/ex/photo/PhotoViewController;-&gt;initMaxPhotoSize()V" label="Lcom/android/ex/photo/PhotoViewController;-&gt;initMaxPhotoSize()V" />
+      <node id="Lcom/android/ex/photo/PhotoViewController;-&gt;onCreate(Landroid/os/Bundle;)V" label="Lcom/android/ex/photo/PhotoViewController;-&gt;onCreate(Landroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/AlertDialog$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;I)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroidx/appcompat/app/AlertDialog$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;I)V" target="Landroidx/appcompat/app/AlertController$AlertParams;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="1" />
+      <edge source="Landroidx/appcompat/app/AlertController$AlertParams;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="2" />
+      <edge source="Landroidx/appcompat/app/AlertController$AlertParams;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;initMaxPhotoSize()V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="5" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;onCreate(Landroid/os/Bundle;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="6" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;onCreate(Landroid/os/Bundle;)V" target="Lcom/android/ex/photo/PhotoViewController;-&gt;initMaxPhotoSize()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/photo/util/Trace;-&gt;beginSection(Ljava/lang/String;)V" label="Lcom/android/ex/photo/util/Trace;-&gt;beginSection(Ljava/lang/String;)V" />
+      <node id="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" label="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" />
+      <node id="Lcom/android/ex/photo/util/Trace;-&gt;endSection()V" label="Lcom/android/ex/photo/util/Trace;-&gt;endSection()V" />
+      <node id="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;get(I)B" label="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;get(I)B" />
+      <node id="Landroid/os/Trace;-&gt;endSection()V" label="Landroid/os/Trace;-&gt;endSection()V" />
+      <node id="Lcom/android/ex/photo/util/Exif;-&gt;getOrientation(Ljava/io/InputStream;J)I" label="Lcom/android/ex/photo/util/Exif;-&gt;getOrientation(Ljava/io/InputStream;J)I" />
+      <node id="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;advanceTo(I)V" label="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;advanceTo(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" target="Lcom/android/ex/photo/util/Exif;-&gt;getOrientation(Ljava/io/InputStream;J)I" id="0" />
+      <edge source="Lcom/android/ex/photo/util/Trace;-&gt;endSection()V" target="Landroid/os/Trace;-&gt;endSection()V" id="1" />
+      <edge source="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;get(I)B" target="Lcom/android/ex/photo/util/Trace;-&gt;beginSection(Ljava/lang/String;)V" id="2" />
+      <edge source="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;get(I)B" target="Lcom/android/ex/photo/util/Trace;-&gt;endSection()V" id="3" />
+      <edge source="Lcom/android/ex/photo/util/Exif;-&gt;getOrientation(Ljava/io/InputStream;J)I" target="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;get(I)B" id="4" />
+      <edge source="Lcom/android/ex/photo/util/Exif;-&gt;getOrientation(Ljava/io/InputStream;J)I" target="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;advanceTo(I)V" id="5" />
+      <edge source="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;advanceTo(I)V" target="Lcom/android/ex/photo/util/Trace;-&gt;beginSection(Ljava/lang/String;)V" id="6" />
+      <edge source="Lcom/android/ex/photo/util/InputStreamBuffer;-&gt;advanceTo(I)V" target="Lcom/android/ex/photo/util/Trace;-&gt;endSection()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

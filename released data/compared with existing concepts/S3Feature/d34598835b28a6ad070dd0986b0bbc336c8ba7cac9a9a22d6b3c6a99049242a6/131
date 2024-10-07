@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" />
+      <node id="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" label="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/graphics/Bitmap;-&gt;getWidth()I" label="Landroid/graphics/Bitmap;-&gt;getWidth()I" />
+      <node id="Landroid/graphics/Bitmap;-&gt;getHeight()I" label="Landroid/graphics/Bitmap;-&gt;getHeight()I" />
+      <node id="Ljava/lang/Math;-&gt;min(II)I" label="Ljava/lang/Math;-&gt;min(II)I" />
+      <node id="Lcom/ap/injector/internal/common/utils/ViewUtils;-&gt;resizeBitmapForDpi(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" label="Lcom/ap/injector/internal/common/utils/ViewUtils;-&gt;resizeBitmapForDpi(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" target="Ljava/lang/Math;-&gt;min(II)I" id="0" />
+      <edge source="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" id="1" />
+      <edge source="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/Bitmap;-&gt;getWidth()I" id="2" />
+      <edge source="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;addToShortcutIntent(Landroid/content/Intent;Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/Bitmap;-&gt;getHeight()I" id="3" />
+      <edge source="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" target="Landroid/graphics/Bitmap;-&gt;getWidth()I" id="4" />
+      <edge source="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" target="Landroid/graphics/Bitmap;-&gt;getHeight()I" id="5" />
+      <edge source="Landroid/support/v4/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" target="Ljava/lang/Math;-&gt;min(II)I" id="6" />
+      <edge source="Lcom/ap/injector/internal/common/utils/ViewUtils;-&gt;resizeBitmapForDpi(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" target="Landroid/graphics/Bitmap;-&gt;getWidth()I" id="7" />
+      <edge source="Lcom/ap/injector/internal/common/utils/ViewUtils;-&gt;resizeBitmapForDpi(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" target="Landroid/graphics/Bitmap;-&gt;getHeight()I" id="8" />
+    </edges>
+  </graph>
+</gexf>

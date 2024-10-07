@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" />
+      <node id="Landroid/app/ActionBar;-&gt;setHomeActionContentDescription(I)V" label="Landroid/app/ActionBar;-&gt;setHomeActionContentDescription(I)V" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;onDrawerClosed(Landroid/view/View;)V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;onDrawerClosed(Landroid/view/View;)V" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-&gt;setPosition(F)V" label="Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-&gt;setPosition(F)V" />
+      <node id="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" label="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;syncState()V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;syncState()V" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" target="Landroid/app/ActionBar;-&gt;setHomeActionContentDescription(I)V" id="0" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" target="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" id="1" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;onDrawerClosed(Landroid/view/View;)V" target="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarDescription(I)V" id="2" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;onDrawerClosed(Landroid/view/View;)V" target="Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-&gt;setPosition(F)V" id="3" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;syncState()V" target="Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-&gt;setPosition(F)V" id="4" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;syncState()V" target="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" id="5" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" target="Landroid/app/ActionBar;-&gt;setHomeActionContentDescription(I)V" id="6" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V" target="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" id="7" />
+    </edges>
+  </graph>
+</gexf>

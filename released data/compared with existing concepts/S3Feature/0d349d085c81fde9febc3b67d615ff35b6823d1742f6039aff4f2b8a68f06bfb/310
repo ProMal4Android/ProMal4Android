@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" label="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" />
+      <node id="Landroid/support/design/widget/DrawableUtils;-&gt;setContainerConstantStateV7(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z" label="Landroid/support/design/widget/DrawableUtils;-&gt;setContainerConstantStateV7(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;" />
+      <node id="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" label="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/DrawableUtils;-&gt;setContainerConstantStateV7(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z" target="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" id="0" />
+      <edge source="Landroid/support/design/widget/DrawableUtils;-&gt;setContainerConstantStateV7(Landroid/graphics/drawable/DrawableContainer;Landroid/graphics/drawable/Drawable$ConstantState;)Z" target="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;" target="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" target="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" target="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" id="5" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" target="Ljava/lang/reflect/Field;-&gt;setAccessible(Z)V" id="6" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" target="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" id="7" />
+    </edges>
+  </graph>
+</gexf>

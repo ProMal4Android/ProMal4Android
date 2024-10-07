@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;createEventForChild(II)Landroid/view/accessibility/AccessibilityEvent;" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;createEventForChild(II)Landroid/view/accessibility/AccessibilityEvent;" />
+      <node id="Landroid/support/v4/view/accessibility/AccessibilityEventCompat;-&gt;getRecord(Landroid/view/accessibility/AccessibilityEvent;I)Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;" label="Landroid/support/v4/view/accessibility/AccessibilityEventCompat;-&gt;getRecord(Landroid/view/accessibility/AccessibilityEvent;I)Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;" />
+      <node id="Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;-&gt;getRecord(Landroid/view/accessibility/AccessibilityEvent;I)Ljava/lang/Object;" label="Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;-&gt;getRecord(Landroid/view/accessibility/AccessibilityEvent;I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/view/accessibility/AccessibilityEventCompat;-&gt;asRecord(Landroid/view/accessibility/AccessibilityEvent;)Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;" label="Landroid/support/v4/view/accessibility/AccessibilityEventCompat;-&gt;asRecord(Landroid/view/accessibility/AccessibilityEvent;)Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;" />
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;createEvent(II)Landroid/view/accessibility/AccessibilityEvent;" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;createEvent(II)Landroid/view/accessibility/AccessibilityEvent;" />
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" />
+      <node id="Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" label="Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;createEventForChild(II)Landroid/view/accessibility/AccessibilityEvent;" target="Landroid/support/v4/view/accessibility/AccessibilityEventCompat;-&gt;asRecord(Landroid/view/accessibility/AccessibilityEvent;)Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;" id="0" />
+      <edge source="Landroid/support/v4/view/accessibility/AccessibilityEventCompat;-&gt;getRecord(Landroid/view/accessibility/AccessibilityEvent;I)Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;" target="Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;-&gt;getRecord(Landroid/view/accessibility/AccessibilityEvent;I)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v4/view/accessibility/AccessibilityEventCompat;-&gt;getRecord(Landroid/view/accessibility/AccessibilityEvent;I)Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;" target="Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" id="2" />
+      <edge source="Landroid/support/v4/view/accessibility/AccessibilityEventCompat;-&gt;asRecord(Landroid/view/accessibility/AccessibilityEvent;)Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;" target="Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" id="3" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;createEvent(II)Landroid/view/accessibility/AccessibilityEvent;" target="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;createEventForChild(II)Landroid/view/accessibility/AccessibilityEvent;" id="4" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" target="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;createEvent(II)Landroid/view/accessibility/AccessibilityEvent;" id="5" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/preference/f;-&gt;a(Landroid/support/v7/preference/Preference;)V" label="Landroid/support/v7/preference/f;-&gt;a(Landroid/support/v7/preference/Preference;)V" />
+      <node id="Landroid/support/design/widget/AppBarLayout;-&gt;addOnOffsetChangedListener(Landroid/support/design/widget/AppBarLayout$a;)V" label="Landroid/support/design/widget/AppBarLayout;-&gt;addOnOffsetChangedListener(Landroid/support/design/widget/AppBarLayout$a;)V" />
+      <node id="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" label="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v7/preference/f;-&gt;a(Ljava/util/List;Landroid/support/v7/preference/PreferenceGroup;)V" label="Landroid/support/v7/preference/f;-&gt;a(Ljava/util/List;Landroid/support/v7/preference/PreferenceGroup;)V" />
+      <node id="Landroid/support/v7/preference/PreferenceGroup;-&gt;c()V" label="Landroid/support/v7/preference/PreferenceGroup;-&gt;c()V" />
+      <node id="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;addAction(Landroid/support/v4/app/NotificationCompatBase$Action;)V" label="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;addAction(Landroid/support/v4/app/NotificationCompatBase$Action;)V" />
+      <node id="Ljava/util/List;-&gt;contains(Ljava/lang/Object;)Z" label="Ljava/util/List;-&gt;contains(Ljava/lang/Object;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/preference/f;-&gt;a(Landroid/support/v7/preference/Preference;)V" target="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" id="0" />
+      <edge source="Landroid/support/v7/preference/f;-&gt;a(Landroid/support/v7/preference/Preference;)V" target="Ljava/util/List;-&gt;contains(Ljava/lang/Object;)Z" id="1" />
+      <edge source="Landroid/support/design/widget/AppBarLayout;-&gt;addOnOffsetChangedListener(Landroid/support/design/widget/AppBarLayout$a;)V" target="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" id="2" />
+      <edge source="Landroid/support/design/widget/AppBarLayout;-&gt;addOnOffsetChangedListener(Landroid/support/design/widget/AppBarLayout$a;)V" target="Ljava/util/List;-&gt;contains(Ljava/lang/Object;)Z" id="3" />
+      <edge source="Landroid/support/v7/preference/f;-&gt;a(Ljava/util/List;Landroid/support/v7/preference/PreferenceGroup;)V" target="Landroid/support/v7/preference/f;-&gt;a(Landroid/support/v7/preference/Preference;)V" id="4" />
+      <edge source="Landroid/support/v7/preference/f;-&gt;a(Ljava/util/List;Landroid/support/v7/preference/PreferenceGroup;)V" target="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" id="5" />
+      <edge source="Landroid/support/v7/preference/f;-&gt;a(Ljava/util/List;Landroid/support/v7/preference/PreferenceGroup;)V" target="Landroid/support/v7/preference/PreferenceGroup;-&gt;c()V" id="6" />
+      <edge source="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;addAction(Landroid/support/v4/app/NotificationCompatBase$Action;)V" target="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

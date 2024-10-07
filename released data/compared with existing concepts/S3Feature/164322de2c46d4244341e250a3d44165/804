@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/collection/LruCache;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" label="Landroidx/collection/LruCache;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Lcom/android/ex/chips/DefaultPhotoManager;-&gt;populatePhotoBytesAsync(Lcom/android/ex/chips/RecipientEntry;Lcom/android/ex/chips/PhotoManager$PhotoManagerCallback;)V" label="Lcom/android/ex/chips/DefaultPhotoManager;-&gt;populatePhotoBytesAsync(Lcom/android/ex/chips/RecipientEntry;Lcom/android/ex/chips/PhotoManager$PhotoManagerCallback;)V" />
+      <node id="Landroidx/collection/LruCache;-&gt;trimToSize(I)V" label="Landroidx/collection/LruCache;-&gt;trimToSize(I)V" />
+      <node id="Lcom/android/ex/chips/RecipientEntry;-&gt;setPhotoBytes([B)V" label="Lcom/android/ex/chips/RecipientEntry;-&gt;setPhotoBytes([B)V" />
+      <node id="Lcom/android/ex/chips/DefaultPhotoManager$1;-&gt;onPostExecute([B)V" label="Lcom/android/ex/chips/DefaultPhotoManager$1;-&gt;onPostExecute([B)V" />
+      <node id="Ljava/util/LinkedHashMap;-&gt;isEmpty()Z" label="Ljava/util/LinkedHashMap;-&gt;isEmpty()Z" />
+      <node id="Landroidx/collection/LruCache;-&gt;entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V" label="Landroidx/collection/LruCache;-&gt;entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/collection/LruCache;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" target="Landroidx/collection/LruCache;-&gt;trimToSize(I)V" id="0" />
+      <edge source="Landroidx/collection/LruCache;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" target="Landroidx/collection/LruCache;-&gt;entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V" id="1" />
+      <edge source="Lcom/android/ex/chips/DefaultPhotoManager;-&gt;populatePhotoBytesAsync(Lcom/android/ex/chips/RecipientEntry;Lcom/android/ex/chips/PhotoManager$PhotoManagerCallback;)V" target="Lcom/android/ex/chips/RecipientEntry;-&gt;setPhotoBytes([B)V" id="2" />
+      <edge source="Landroidx/collection/LruCache;-&gt;trimToSize(I)V" target="Ljava/util/LinkedHashMap;-&gt;isEmpty()Z" id="3" />
+      <edge source="Landroidx/collection/LruCache;-&gt;trimToSize(I)V" target="Landroidx/collection/LruCache;-&gt;entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V" id="4" />
+      <edge source="Lcom/android/ex/chips/DefaultPhotoManager$1;-&gt;onPostExecute([B)V" target="Landroidx/collection/LruCache;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+      <edge source="Lcom/android/ex/chips/DefaultPhotoManager$1;-&gt;onPostExecute([B)V" target="Lcom/android/ex/chips/RecipientEntry;-&gt;setPhotoBytes([B)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

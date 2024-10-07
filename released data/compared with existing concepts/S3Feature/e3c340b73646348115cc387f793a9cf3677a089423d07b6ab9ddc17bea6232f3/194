@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" label="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" />
+      <node id="Landroid/support/v4/util/Pools$Pool;-&gt;release(Ljava/lang/Object;)Z" label="Landroid/support/v4/util/Pools$Pool;-&gt;release(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" label="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" />
+      <node id="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" label="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" />
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;removeTabViewAt(I)V" label="Landroid/support/design/widget/TabLayout;-&gt;removeTabViewAt(I)V" />
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;removeAllTabs()V" label="Landroid/support/design/widget/TabLayout;-&gt;removeAllTabs()V" />
+      <node id="Landroid/support/design/internal/BottomNavigationMenuView;-&gt;buildMenuView()V" label="Landroid/support/design/internal/BottomNavigationMenuView;-&gt;buildMenuView()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" target="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" id="0" />
+      <edge source="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" target="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" id="1" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;removeTabViewAt(I)V" target="Landroid/support/v4/util/Pools$Pool;-&gt;release(Ljava/lang/Object;)Z" id="2" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;removeAllTabs()V" target="Landroid/support/v4/util/Pools$Pool;-&gt;release(Ljava/lang/Object;)Z" id="3" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;removeAllTabs()V" target="Landroid/support/design/widget/TabLayout;-&gt;removeTabViewAt(I)V" id="4" />
+      <edge source="Landroid/support/design/internal/BottomNavigationMenuView;-&gt;buildMenuView()V" target="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" id="5" />
+      <edge source="Landroid/support/design/internal/BottomNavigationMenuView;-&gt;buildMenuView()V" target="Landroid/support/v4/util/Pools$Pool;-&gt;release(Ljava/lang/Object;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

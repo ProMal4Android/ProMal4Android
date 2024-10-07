@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentState;-&gt;&lt;init&gt;(Landroid/support/v4/app/Fragment;)V" label="Landroid/support/v4/app/FragmentState;-&gt;&lt;init&gt;(Landroid/support/v4/app/Fragment;)V" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;navigateUpFromSameTask(Landroid/app/Activity;)V" label="Landroid/support/v4/app/NavUtils;-&gt;navigateUpFromSameTask(Landroid/app/Activity;)V" />
+      <node id="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" label="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" />
+      <node id="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" label="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;saveAllState()Landroid/os/Parcelable;" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;saveAllState()Landroid/os/Parcelable;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentState;-&gt;&lt;init&gt;(Landroid/support/v4/app/Fragment;)V" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="0" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;navigateUpFromSameTask(Landroid/app/Activity;)V" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" id="1" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;navigateUpFromSameTask(Landroid/app/Activity;)V" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;saveAllState()Landroid/os/Parcelable;" target="Landroid/support/v4/app/FragmentState;-&gt;&lt;init&gt;(Landroid/support/v4/app/Fragment;)V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;saveAllState()Landroid/os/Parcelable;" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" id="5" />
+    </edges>
+  </graph>
+</gexf>

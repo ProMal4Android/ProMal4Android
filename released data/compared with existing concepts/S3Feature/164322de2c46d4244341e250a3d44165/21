@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onStartAction(IZ)V" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onStartAction(IZ)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I[Ljava/lang/Object;)V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I[Ljava/lang/Object;)V" />
+      <node id="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" label="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I)V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;getAction(I)Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$EditModeActionBase;" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;getAction(I)Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$EditModeActionBase;" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;&lt;clinit&gt;()V" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;&lt;clinit&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onStartAction(IZ)V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" id="0" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I[Ljava/lang/Object;)V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;getAction(I)Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$EditModeActionBase;" id="1" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I)V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I[Ljava/lang/Object;)V" id="2" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I)V" id="3" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;getAction(I)Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$EditModeActionBase;" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="4" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;&lt;clinit&gt;()V" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="5" />
+    </edges>
+  </graph>
+</gexf>

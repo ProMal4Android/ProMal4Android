@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" label="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" />
+      <node id="Landroid/support/v7/widget/GapWorker;-&gt;prefetchInnerRecyclerViewWithDeadline(Landroid/support/v7/widget/RecyclerView;J)V" label="Landroid/support/v7/widget/GapWorker;-&gt;prefetchInnerRecyclerViewWithDeadline(Landroid/support/v7/widget/RecyclerView;J)V" />
+      <node id="Landroid/support/v7/widget/AdapterHelper;-&gt;hasPendingUpdates()Z" label="Landroid/support/v7/widget/AdapterHelper;-&gt;hasPendingUpdates()Z" />
+      <node id="Landroid/support/v7/widget/GapWorker$LayoutPrefetchRegistryImpl;-&gt;collectPrefetchPositionsFromView(Landroid/support/v7/widget/RecyclerView;Z)V" label="Landroid/support/v7/widget/GapWorker$LayoutPrefetchRegistryImpl;-&gt;collectPrefetchPositionsFromView(Landroid/support/v7/widget/RecyclerView;Z)V" />
+      <node id="Landroid/support/v4/os/TraceCompat;-&gt;beginSection(Ljava/lang/String;)V" label="Landroid/support/v4/os/TraceCompat;-&gt;beginSection(Ljava/lang/String;)V" />
+      <node id="Landroid/support/v7/widget/AdapterHelper;-&gt;hasAnyUpdateTypes(I)Z" label="Landroid/support/v7/widget/AdapterHelper;-&gt;hasAnyUpdateTypes(I)Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView$Adapter;-&gt;createViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;" label="Landroid/support/v7/widget/RecyclerView$Adapter;-&gt;createViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" target="Landroid/support/v7/widget/AdapterHelper;-&gt;hasPendingUpdates()Z" id="0" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" target="Landroid/support/v4/os/TraceCompat;-&gt;beginSection(Ljava/lang/String;)V" id="1" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;consumePendingUpdateOperations()V" target="Landroid/support/v7/widget/AdapterHelper;-&gt;hasAnyUpdateTypes(I)Z" id="2" />
+      <edge source="Landroid/support/v7/widget/GapWorker;-&gt;prefetchInnerRecyclerViewWithDeadline(Landroid/support/v7/widget/RecyclerView;J)V" target="Landroid/support/v7/widget/GapWorker$LayoutPrefetchRegistryImpl;-&gt;collectPrefetchPositionsFromView(Landroid/support/v7/widget/RecyclerView;Z)V" id="3" />
+      <edge source="Landroid/support/v7/widget/GapWorker;-&gt;prefetchInnerRecyclerViewWithDeadline(Landroid/support/v7/widget/RecyclerView;J)V" target="Landroid/support/v4/os/TraceCompat;-&gt;beginSection(Ljava/lang/String;)V" id="4" />
+      <edge source="Landroid/support/v7/widget/GapWorker$LayoutPrefetchRegistryImpl;-&gt;collectPrefetchPositionsFromView(Landroid/support/v7/widget/RecyclerView;Z)V" target="Landroid/support/v7/widget/AdapterHelper;-&gt;hasPendingUpdates()Z" id="5" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$Adapter;-&gt;createViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;" target="Landroid/support/v4/os/TraceCompat;-&gt;beginSection(Ljava/lang/String;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

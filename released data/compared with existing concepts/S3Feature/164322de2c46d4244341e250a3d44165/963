@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;notifyCallbacksOfException()V" label="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;notifyCallbacksOfException()V" />
+      <node id="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;decrementPendingCallbacks()V" label="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;decrementPendingCallbacks()V" />
+      <node id="Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;-&gt;isEmpty()Z" label="Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;-&gt;isEmpty()Z" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;setVisible(ZZ)Z" label="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;setVisible(ZZ)Z" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" label="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" />
+      <node id="Lcom/bumptech/glide/util/Preconditions;-&gt;checkArgument(ZLjava/lang/String;)V" label="Lcom/bumptech/glide/util/Preconditions;-&gt;checkArgument(ZLjava/lang/String;)V" />
+      <node id="Lcom/bumptech/glide/util/pool/StateVerifier;-&gt;throwIfRecycled()V" label="Lcom/bumptech/glide/util/pool/StateVerifier;-&gt;throwIfRecycled()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;notifyCallbacksOfException()V" target="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;decrementPendingCallbacks()V" id="0" />
+      <edge source="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;notifyCallbacksOfException()V" target="Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;-&gt;isEmpty()Z" id="1" />
+      <edge source="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;notifyCallbacksOfException()V" target="Lcom/bumptech/glide/util/pool/StateVerifier;-&gt;throwIfRecycled()V" id="2" />
+      <edge source="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;decrementPendingCallbacks()V" target="Lcom/bumptech/glide/util/Preconditions;-&gt;checkArgument(ZLjava/lang/String;)V" id="3" />
+      <edge source="Lcom/bumptech/glide/load/engine/EngineJob;-&gt;decrementPendingCallbacks()V" target="Lcom/bumptech/glide/util/pool/StateVerifier;-&gt;throwIfRecycled()V" id="4" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;setVisible(ZZ)Z" target="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" id="5" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;setVisible(ZZ)Z" target="Lcom/bumptech/glide/util/Preconditions;-&gt;checkArgument(ZLjava/lang/String;)V" id="6" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifDrawable;-&gt;startRunning()V" target="Lcom/bumptech/glide/util/Preconditions;-&gt;checkArgument(ZLjava/lang/String;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

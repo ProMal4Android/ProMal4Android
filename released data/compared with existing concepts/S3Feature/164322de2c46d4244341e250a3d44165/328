@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onFixSelectedItem()V" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onFixSelectedItem()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;notifyStateChanged(II)V" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;notifyStateChanged(II)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onFixSelectedItem()V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onFixSelectedItem()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onTextContextMenuItem(I)Z" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onTextContextMenuItem(I)Z" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onClearStyles()V" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onClearStyles()V" />
+      <node id="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" label="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onFixSelectedItem()V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onFixSelectedItem()V" id="0" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;notifyStateChanged(II)V" target="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" id="1" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onFixSelectedItem()V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" id="2" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onTextContextMenuItem(I)Z" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onFixSelectedItem()V" id="3" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onTextContextMenuItem(I)Z" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onClearStyles()V" id="4" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;notifyStateChanged(II)V" id="5" />
+    </edges>
+  </graph>
+</gexf>

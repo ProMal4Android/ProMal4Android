@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;getChildViewHolderInt(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;" label="Landroid/support/v7/widget/RecyclerView;-&gt;getChildViewHolderInt(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;" />
+      <node id="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" label="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" />
+      <node id="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;snapToChildIfNeeded(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;)V" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;snapToChildIfNeeded(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;)V" />
+      <node id="Landroid/support/v7/widget/RecyclerView$Recycler;-&gt;bindViewToPosition(Landroid/view/View;I)V" label="Landroid/support/v7/widget/RecyclerView$Recycler;-&gt;bindViewToPosition(Landroid/view/View;I)V" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onNestedFling(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;FFZ)Z" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onNestedFling(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;FFZ)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;getChildViewHolderInt(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="0" />
+      <edge source="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="1" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;snapToChildIfNeeded(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;)V" target="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" id="2" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;snapToChildIfNeeded(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="3" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;snapToChildIfNeeded(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;)V" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" id="4" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$Recycler;-&gt;bindViewToPosition(Landroid/view/View;I)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getChildViewHolderInt(Landroid/view/View;)Landroid/support/v7/widget/RecyclerView$ViewHolder;" id="5" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$Recycler;-&gt;bindViewToPosition(Landroid/view/View;I)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="6" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onNestedFling(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;FFZ)Z" target="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" id="7" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onNestedFling(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;FFZ)Z" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" id="8" />
+    </edges>
+  </graph>
+</gexf>

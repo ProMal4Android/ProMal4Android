@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lfver/yofpu/dtnlnbbgt/sdk/manager/backstage/BackstageManagerImpl;-&gt;openUrl(Ljava/lang/String;)V" label="Lfver/yofpu/dtnlnbbgt/sdk/manager/backstage/BackstageManagerImpl;-&gt;openUrl(Ljava/lang/String;)V" />
+      <node id="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;checkSelfPermission(Ljava/lang/String;)I" label="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;checkSelfPermission(Ljava/lang/String;)I" />
+      <node id="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;createOverlayView()V" label="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;createOverlayView()V" />
+      <node id="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;hasPermission(Ljava/lang/String;)Z" label="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;hasPermission(Ljava/lang/String;)Z" />
+      <node id="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Lfver/yofpu/dtnlnbbgt/sdk/manager/main/CryopiggyManager;-&gt;getContext()Landroid/content/Context;" label="Lfver/yofpu/dtnlnbbgt/sdk/manager/main/CryopiggyManager;-&gt;getContext()Landroid/content/Context;" />
+    </nodes>
+    <edges>
+      <edge source="Lfver/yofpu/dtnlnbbgt/sdk/manager/backstage/BackstageManagerImpl;-&gt;openUrl(Ljava/lang/String;)V" target="Lfver/yofpu/dtnlnbbgt/sdk/manager/main/CryopiggyManager;-&gt;getContext()Landroid/content/Context;" id="0" />
+      <edge source="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;checkSelfPermission(Ljava/lang/String;)I" target="Lfver/yofpu/dtnlnbbgt/sdk/manager/main/CryopiggyManager;-&gt;getContext()Landroid/content/Context;" id="1" />
+      <edge source="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;createOverlayView()V" target="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;hasPermission(Ljava/lang/String;)Z" id="2" />
+      <edge source="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;createOverlayView()V" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="3" />
+      <edge source="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;createOverlayView()V" target="Lfver/yofpu/dtnlnbbgt/sdk/manager/main/CryopiggyManager;-&gt;getContext()Landroid/content/Context;" id="4" />
+      <edge source="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;hasPermission(Ljava/lang/String;)Z" target="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;checkSelfPermission(Ljava/lang/String;)I" id="5" />
+      <edge source="Lfver/yofpu/dtnlnbbgt/sdk/manager/android/AndroidManagerImpl;-&gt;hasPermission(Ljava/lang/String;)Z" target="Lfver/yofpu/dtnlnbbgt/sdk/manager/main/CryopiggyManager;-&gt;getContext()Landroid/content/Context;" id="6" />
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="7" />
+    </edges>
+  </graph>
+</gexf>

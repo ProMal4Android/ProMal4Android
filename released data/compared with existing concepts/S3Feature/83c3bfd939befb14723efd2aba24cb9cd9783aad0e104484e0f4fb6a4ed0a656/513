@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzie()Lcom/google/android/gms/analytics/internal/zzaf;" label="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzie()Lcom/google/android/gms/analytics/internal/zzaf;" />
+      <node id="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" label="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" />
+      <node id="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzX(Landroid/content/Context;)Lcom/google/android/gms/analytics/internal/zzf;" label="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzX(Landroid/content/Context;)Lcom/google/android/gms/analytics/internal/zzf;" />
+      <node id="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Lcom/google/android/gms/analytics/AnalyticsReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" label="Lcom/google/android/gms/analytics/AnalyticsReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" />
+      <node id="Lcom/google/android/gms/common/internal/zzx;-&gt;zzv(Ljava/lang/Object;)Ljava/lang/Object;" label="Lcom/google/android/gms/common/internal/zzx;-&gt;zzv(Ljava/lang/Object;)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzie()Lcom/google/android/gms/analytics/internal/zzaf;" id="0" />
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="1" />
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzX(Landroid/content/Context;)Lcom/google/android/gms/analytics/internal/zzf;" id="2" />
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/google/android/gms/common/internal/zzx;-&gt;zzv(Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzX(Landroid/content/Context;)Lcom/google/android/gms/analytics/internal/zzf;" target="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzie()Lcom/google/android/gms/analytics/internal/zzaf;" id="4" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzX(Landroid/content/Context;)Lcom/google/android/gms/analytics/internal/zzf;" target="Lcom/google/android/gms/common/internal/zzx;-&gt;zzv(Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="6" />
+      <edge source="Lcom/google/android/gms/analytics/AnalyticsReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzie()Lcom/google/android/gms/analytics/internal/zzaf;" id="7" />
+      <edge source="Lcom/google/android/gms/analytics/AnalyticsReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="8" />
+      <edge source="Lcom/google/android/gms/analytics/AnalyticsReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/google/android/gms/analytics/internal/zzf;-&gt;zzX(Landroid/content/Context;)Lcom/google/android/gms/analytics/internal/zzf;" id="9" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/startapp/android/publish/common/model/AdDetails;-&gt;getTitle()Ljava/lang/String;" label="Lcom/startapp/android/publish/common/model/AdDetails;-&gt;getTitle()Ljava/lang/String;" />
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" />
+      <node id="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" label="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" />
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" label="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" />
+      <node id="LUtilities/StartAppNativeAds$1;-&gt;run()V" label="LUtilities/StartAppNativeAds$1;-&gt;run()V" />
+      <node id="Lcom/startapp/android/publish/ads/nativead/NativeAdDetails;-&gt;getTitle()Ljava/lang/String;" label="Lcom/startapp/android/publish/ads/nativead/NativeAdDetails;-&gt;getTitle()Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;updateMenuView(Z)V" target="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" id="1" />
+      <edge source="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" id="3" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="4" />
+      <edge source="LUtilities/StartAppNativeAds$1;-&gt;run()V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="5" />
+      <edge source="LUtilities/StartAppNativeAds$1;-&gt;run()V" target="Lcom/startapp/android/publish/ads/nativead/NativeAdDetails;-&gt;getTitle()Ljava/lang/String;" id="6" />
+      <edge source="Lcom/startapp/android/publish/ads/nativead/NativeAdDetails;-&gt;getTitle()Ljava/lang/String;" target="Lcom/startapp/android/publish/common/model/AdDetails;-&gt;getTitle()Ljava/lang/String;" id="7" />
+    </edges>
+  </graph>
+</gexf>

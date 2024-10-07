@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" label="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" />
+      <node id="Lcom/amazon/device/ads/AdLayout;-&gt;initializeIfNecessary()V" label="Lcom/amazon/device/ads/AdLayout;-&gt;initializeIfNecessary()V" />
+      <node id="Lcom/appodeal/ads/Appodeal$1;-&gt;run()V" label="Lcom/appodeal/ads/Appodeal$1;-&gt;run()V" />
+      <node id="Lcom/amazon/device/ads/AdLayout;-&gt;loadAd(Lcom/amazon/device/ads/AdTargetingOptions;)Z" label="Lcom/amazon/device/ads/AdLayout;-&gt;loadAd(Lcom/amazon/device/ads/AdTargetingOptions;)Z" />
+      <node id="Lcom/amazon/device/ads/AdLayout;-&gt;isInitialized()Z" label="Lcom/amazon/device/ads/AdLayout;-&gt;isInitialized()Z" />
+      <node id="Landroid/support/v4/view/PagerTitleStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/view/PagerTitleStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/amazon/device/ads/AdLayout;-&gt;initializeIfNecessary()V" target="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="0" />
+      <edge source="Lcom/amazon/device/ads/AdLayout;-&gt;initializeIfNecessary()V" target="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" id="1" />
+      <edge source="Lcom/amazon/device/ads/AdLayout;-&gt;initializeIfNecessary()V" target="Lcom/amazon/device/ads/AdLayout;-&gt;isInitialized()Z" id="2" />
+      <edge source="Lcom/appodeal/ads/Appodeal$1;-&gt;run()V" target="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="3" />
+      <edge source="Lcom/appodeal/ads/Appodeal$1;-&gt;run()V" target="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" id="4" />
+      <edge source="Lcom/amazon/device/ads/AdLayout;-&gt;loadAd(Lcom/amazon/device/ads/AdTargetingOptions;)Z" target="Lcom/amazon/device/ads/AdLayout;-&gt;initializeIfNecessary()V" id="5" />
+      <edge source="Lcom/amazon/device/ads/AdLayout;-&gt;loadAd(Lcom/amazon/device/ads/AdTargetingOptions;)Z" target="Lcom/amazon/device/ads/AdLayout;-&gt;isInitialized()Z" id="6" />
+      <edge source="Landroid/support/v4/view/PagerTitleStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/widget/TextView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

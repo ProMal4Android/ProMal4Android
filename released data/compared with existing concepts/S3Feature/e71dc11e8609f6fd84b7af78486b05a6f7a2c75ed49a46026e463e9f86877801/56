@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" />
+      <node id="Landroid/support/v7/widget/DropDownListView;-&gt;&lt;init&gt;(Landroid/content/Context;Z)V" label="Landroid/support/v7/widget/DropDownListView;-&gt;&lt;init&gt;(Landroid/content/Context;Z)V" />
+      <node id="Landroid/support/v7/widget/ListViewCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/support/v7/widget/ListViewCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Landroid/widget/LinearLayout;-&gt;setOrientation(I)V" label="Landroid/widget/LinearLayout;-&gt;setOrientation(I)V" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" />
+      <node id="Landroid/support/v7/widget/ListPopupWindow;-&gt;buildDropDown()I" label="Landroid/support/v7/widget/ListPopupWindow;-&gt;buildDropDown()I" />
+      <node id="Landroid/support/v7/widget/ListPopupWindow;-&gt;createDropDownListView(Landroid/content/Context;Z)Landroid/support/v7/widget/DropDownListView;" label="Landroid/support/v7/widget/ListPopupWindow;-&gt;createDropDownListView(Landroid/content/Context;Z)Landroid/support/v7/widget/DropDownListView;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" target="Landroid/widget/LinearLayout;-&gt;setOrientation(I)V" id="0" />
+      <edge source="Landroid/support/v7/widget/DropDownListView;-&gt;&lt;init&gt;(Landroid/content/Context;Z)V" target="Landroid/support/v7/widget/ListViewCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" target="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" id="2" />
+      <edge source="Landroid/support/v7/widget/ListPopupWindow;-&gt;buildDropDown()I" target="Landroid/widget/LinearLayout;-&gt;setOrientation(I)V" id="3" />
+      <edge source="Landroid/support/v7/widget/ListPopupWindow;-&gt;buildDropDown()I" target="Landroid/support/v7/widget/ListPopupWindow;-&gt;createDropDownListView(Landroid/content/Context;Z)Landroid/support/v7/widget/DropDownListView;" id="4" />
+      <edge source="Landroid/support/v7/widget/ListPopupWindow;-&gt;createDropDownListView(Landroid/content/Context;Z)Landroid/support/v7/widget/DropDownListView;" target="Landroid/support/v7/widget/DropDownListView;-&gt;&lt;init&gt;(Landroid/content/Context;Z)V" id="5" />
+    </edges>
+  </graph>
+</gexf>

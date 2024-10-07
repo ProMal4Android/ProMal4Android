@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/internal/BottomNavigationItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/design/internal/BottomNavigationItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V" label="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V" />
+      <node id="Landroid/graphics/drawable/Drawable;-&gt;getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;" label="Landroid/graphics/drawable/Drawable;-&gt;getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;" />
+      <node id="Landroid/support/design/widget/FloatingActionButtonGingerbread;-&gt;setBackgroundDrawable(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;II)V" label="Landroid/support/design/widget/FloatingActionButtonGingerbread;-&gt;setBackgroundDrawable(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;II)V" />
+      <node id="Landroid/support/design/internal/NavigationMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/design/internal/NavigationMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/internal/BottomNavigationItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;" id="0" />
+      <edge source="Landroid/support/design/internal/BottomNavigationItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V" id="1" />
+      <edge source="Landroid/support/design/internal/BottomNavigationItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;" id="2" />
+      <edge source="Landroid/support/design/widget/FloatingActionButtonGingerbread;-&gt;setBackgroundDrawable(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;II)V" target="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;" id="3" />
+      <edge source="Landroid/support/design/widget/FloatingActionButtonGingerbread;-&gt;setBackgroundDrawable(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;II)V" target="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V" id="4" />
+      <edge source="Landroid/support/design/internal/NavigationMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" id="5" />
+      <edge source="Landroid/support/design/internal/NavigationMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;" id="6" />
+      <edge source="Landroid/support/design/internal/NavigationMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v4/graphics/drawable/DrawableCompat;-&gt;setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V" id="7" />
+      <edge source="Landroid/support/design/internal/NavigationMenuItemView;-&gt;setIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;" id="8" />
+    </edges>
+  </graph>
+</gexf>

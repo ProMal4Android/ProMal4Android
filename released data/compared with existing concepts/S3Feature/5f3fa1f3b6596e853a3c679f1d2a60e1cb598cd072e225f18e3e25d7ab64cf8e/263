@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;-&gt;sendCustomAction(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;-&gt;sendCustomAction(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;-&gt;playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;-&gt;playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;-&gt;sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;-&gt;sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V" />
+      <node id="Landroid/net/Uri;-&gt;equals(Ljava/lang/Object;)Z" label="Landroid/net/Uri;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Ljava/util/LinkedHashMap;-&gt;values()Ljava/util/Collection;" label="Ljava/util/LinkedHashMap;-&gt;values()Ljava/util/Collection;" />
+      <node id="Lorg/apache/cordova/PluginManager;-&gt;shouldAllowRequest(Ljava/lang/String;)Z" label="Lorg/apache/cordova/PluginManager;-&gt;shouldAllowRequest(Ljava/lang/String;)Z" />
+      <node id="Lorg/apache/cordova/engine/SystemWebViewClient;-&gt;shouldInterceptRequest(Landroid/webkit/WebView;Ljava/lang/String;)Landroid/webkit/WebResourceResponse;" label="Lorg/apache/cordova/engine/SystemWebViewClient;-&gt;shouldInterceptRequest(Landroid/webkit/WebView;Ljava/lang/String;)Landroid/webkit/WebResourceResponse;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;-&gt;playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V" target="Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;-&gt;sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V" id="0" />
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;-&gt;playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V" target="Landroid/net/Uri;-&gt;equals(Ljava/lang/Object;)Z" id="1" />
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;-&gt;sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V" target="Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;-&gt;sendCustomAction(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V" id="2" />
+      <edge source="Lorg/apache/cordova/PluginManager;-&gt;shouldAllowRequest(Ljava/lang/String;)Z" target="Ljava/util/LinkedHashMap;-&gt;values()Ljava/util/Collection;" id="3" />
+      <edge source="Lorg/apache/cordova/engine/SystemWebViewClient;-&gt;shouldInterceptRequest(Landroid/webkit/WebView;Ljava/lang/String;)Landroid/webkit/WebResourceResponse;" target="Landroid/net/Uri;-&gt;equals(Ljava/lang/Object;)Z" id="4" />
+      <edge source="Lorg/apache/cordova/engine/SystemWebViewClient;-&gt;shouldInterceptRequest(Landroid/webkit/WebView;Ljava/lang/String;)Landroid/webkit/WebResourceResponse;" target="Lorg/apache/cordova/PluginManager;-&gt;shouldAllowRequest(Ljava/lang/String;)Z" id="5" />
+    </edges>
+  </graph>
+</gexf>

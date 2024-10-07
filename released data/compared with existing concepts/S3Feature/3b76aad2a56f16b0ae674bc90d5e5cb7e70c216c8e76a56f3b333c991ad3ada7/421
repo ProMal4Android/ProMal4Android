@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrX()I" label="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrX()I" />
+      <node id="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;computeScroll()V" label="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;computeScroll()V" />
+      <node id="Landroid/support/v4/widget/ScrollerCompat;-&gt;computeScrollOffset()Z" label="Landroid/support/v4/widget/ScrollerCompat;-&gt;computeScrollOffset()Z" />
+      <node id="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" label="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScroll()V" label="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScroll()V" />
+      <node id="Landroid/support/v4/widget/ViewDragHelper;-&gt;abort()V" label="Landroid/support/v4/widget/ViewDragHelper;-&gt;abort()V" />
+      <node id="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrY()I" label="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrY()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;computeScroll()V" target="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" id="0" />
+      <edge source="Landroid/support/v4/widget/SlidingPaneLayout;-&gt;computeScroll()V" target="Landroid/support/v4/widget/ViewDragHelper;-&gt;abort()V" id="1" />
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrX()I" id="2" />
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;computeScrollOffset()Z" id="3" />
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;continueSettling(Z)Z" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrY()I" id="4" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScroll()V" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrX()I" id="5" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScroll()V" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;computeScrollOffset()Z" id="6" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScroll()V" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrY()I" id="7" />
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;abort()V" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrX()I" id="8" />
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;abort()V" target="Landroid/support/v4/widget/ScrollerCompat;-&gt;getCurrY()I" id="9" />
+    </edges>
+  </graph>
+</gexf>

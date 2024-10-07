@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/preference/PreferenceFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" label="Landroid/preference/PreferenceFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" />
+      <node id="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;getResources()Landroid/content/res/Resources;" label="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;getResources()Landroid/content/res/Resources;" />
+      <node id="Lcom/android/messaging/ui/appsettings/ApnSettingsActivity$ApnSettingsFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" label="Lcom/android/messaging/ui/appsettings/ApnSettingsActivity$ApnSettingsFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" />
+      <node id="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" label="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" />
+      <node id="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" label="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" />
+      <node id="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" label="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" />
+      <node id="Landroid/widget/TextView;-&gt;setText(I)V" label="Landroid/widget/TextView;-&gt;setText(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/messaging/ui/appsettings/ApnSettingsActivity$ApnSettingsFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" target="Landroid/preference/PreferenceFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" id="0" />
+      <edge source="Lcom/android/messaging/ui/appsettings/ApnSettingsActivity$ApnSettingsFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" target="Landroid/widget/TextView;-&gt;setText(I)V" id="1" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;getResources()Landroid/content/res/Resources;" id="2" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Landroid/widget/TextView;-&gt;setText(I)V" id="3" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;getResources()Landroid/content/res/Resources;" id="4" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" id="5" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

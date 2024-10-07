@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/analytics/internal/zzal;-&gt;zza(Landroid/content/Context;Ljava/lang/Class;Z)Z" label="Lcom/google/android/gms/analytics/internal/zzal;-&gt;zza(Landroid/content/Context;Ljava/lang/Class;Z)Z" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;getReceiverInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;" label="Landroid/content/pm/PackageManager;-&gt;getReceiverInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Ljava/lang/Class;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Ljava/lang/Class;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zzgb()V" label="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zzgb()V" />
+      <node id="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zziB()Landroid/app/PendingIntent;" label="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zziB()Landroid/app/PendingIntent;" />
+      <node id="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" label="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" />
+      <node id="Lcom/google/android/gms/analytics/internal/zzu;-&gt;getContext()Landroid/content/Context;" label="Lcom/google/android/gms/analytics/internal/zzu;-&gt;getContext()Landroid/content/Context;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/analytics/internal/zzal;-&gt;zza(Landroid/content/Context;Ljava/lang/Class;Z)Z" target="Landroid/content/pm/PackageManager;-&gt;getReceiverInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;" id="0" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzal;-&gt;zza(Landroid/content/Context;Ljava/lang/Class;Z)Z" target="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" id="1" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Ljava/lang/Class;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" id="2" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zzgb()V" target="Landroid/content/pm/PackageManager;-&gt;getReceiverInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;" id="3" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zzgb()V" target="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zziB()Landroid/app/PendingIntent;" id="4" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zzgb()V" target="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" id="5" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zzgb()V" target="Lcom/google/android/gms/analytics/internal/zzu;-&gt;getContext()Landroid/content/Context;" id="6" />
+      <edge source="Lcom/google/android/gms/analytics/internal/zzu;-&gt;zziB()Landroid/app/PendingIntent;" target="Lcom/google/android/gms/analytics/internal/zzu;-&gt;getContext()Landroid/content/Context;" id="7" />
+    </edges>
+  </graph>
+</gexf>

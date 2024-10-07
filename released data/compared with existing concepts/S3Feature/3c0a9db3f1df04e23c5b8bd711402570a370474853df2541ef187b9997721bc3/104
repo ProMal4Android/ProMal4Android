@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-19">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByTag(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByTag(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" label="Landroid/support/v4/app/FragmentActivity;-&gt;onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" />
+      <node id="Landroid/support/v4/view/ViewPager$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/view/ViewPager$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" label="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;" label="Landroid/support/v4/view/ViewPager;-&gt;generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" label="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByTag(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByTag(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByTag(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" target="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;" target="Landroid/support/v4/view/ViewPager$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

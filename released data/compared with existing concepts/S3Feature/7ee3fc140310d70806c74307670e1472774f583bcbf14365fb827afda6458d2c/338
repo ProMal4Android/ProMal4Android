@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/transition/TransitionSet;-&gt;getTransitionCount()I" label="Landroid/transition/TransitionSet;-&gt;getTransitionCount()I" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" label="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" />
+      <node id="Landroid/support/v4/app/ao;-&gt;a(Ljava/lang/Object;Ljava/util/ArrayList;)V" label="Landroid/support/v4/app/ao;-&gt;a(Ljava/lang/Object;Ljava/util/ArrayList;)V" />
+      <node id="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" label="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" />
+      <node id="Landroid/support/v4/app/as;-&gt;onPreDraw()Z" label="Landroid/support/v4/app/as;-&gt;onPreDraw()Z" />
+      <node id="Ljava/util/Iterator;-&gt;hasNext()Z" label="Ljava/util/Iterator;-&gt;hasNext()Z" />
+      <node id="Landroid/support/v7/internal/view/i;-&gt;b()V" label="Landroid/support/v7/internal/view/i;-&gt;b()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ao;-&gt;a(Ljava/lang/Object;Ljava/util/ArrayList;)V" target="Landroid/transition/TransitionSet;-&gt;getTransitionCount()I" id="0" />
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" id="1" />
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" target="Landroid/support/v7/internal/view/i;-&gt;b()V" id="2" />
+      <edge source="Landroid/support/v4/app/as;-&gt;onPreDraw()Z" target="Landroid/support/v4/app/ao;-&gt;a(Ljava/lang/Object;Ljava/util/ArrayList;)V" id="3" />
+      <edge source="Landroid/support/v4/app/as;-&gt;onPreDraw()Z" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="4" />
+      <edge source="Landroid/support/v7/internal/view/i;-&gt;b()V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="5" />
+    </edges>
+  </graph>
+</gexf>

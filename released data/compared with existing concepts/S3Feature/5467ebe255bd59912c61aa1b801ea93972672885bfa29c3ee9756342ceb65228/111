@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/MediaBrowserServiceCompat;-&gt;addSubscription(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;Landroid/os/IBinder;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/MediaBrowserServiceCompat;-&gt;addSubscription(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;Landroid/os/IBinder;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V" label="Landroid/support/v4/content/FileProvider;-&gt;attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V" />
+      <node id="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/content/LocalBroadcastManager;-&gt;registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V" label="Landroid/support/v4/content/LocalBroadcastManager;-&gt;registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V" />
+      <node id="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" label="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" />
+      <node id="Ljava/util/HashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/HashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" label="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/MediaBrowserServiceCompat;-&gt;addSubscription(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;Landroid/os/IBinder;Landroid/os/Bundle;)V" target="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v4/media/MediaBrowserServiceCompat;-&gt;addSubscription(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;Landroid/os/IBinder;Landroid/os/Bundle;)V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v4/media/MediaBrowserServiceCompat;-&gt;addSubscription(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;Landroid/os/IBinder;Landroid/os/Bundle;)V" target="Ljava/util/HashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V" target="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" id="3" />
+      <edge source="Landroid/support/v4/content/LocalBroadcastManager;-&gt;registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V" target="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v4/content/LocalBroadcastManager;-&gt;registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V" target="Ljava/util/HashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" target="Ljava/util/HashMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="6" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" target="Ljava/util/HashMap;-&gt;put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

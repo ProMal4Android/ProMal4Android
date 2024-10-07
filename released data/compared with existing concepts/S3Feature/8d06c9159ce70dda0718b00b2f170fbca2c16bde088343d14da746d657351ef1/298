@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/arch/lifecycle/h;-&gt;c()V" label="Landroid/arch/lifecycle/h;-&gt;c()V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v7/widget/bp;-&gt;a(Landroid/content/Context;)Landroid/content/Context;" label="Landroid/support/v7/widget/bp;-&gt;a(Landroid/content/Context;)Landroid/content/Context;" />
+      <node id="Landroid/support/v7/widget/g;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/support/v7/widget/g;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Landroid/support/v4/a/c;-&gt;a(Landroid/content/BroadcastReceiver;)V" label="Landroid/support/v4/a/c;-&gt;a(Landroid/content/BroadcastReceiver;)V" />
+      <node id="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Ljava/util/ArrayList;-&gt;remove(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;remove(I)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/h;-&gt;c()V" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroid/arch/lifecycle/h;-&gt;c()V" target="Ljava/util/ArrayList;-&gt;remove(I)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v7/widget/bp;-&gt;a(Landroid/content/Context;)Landroid/content/Context;" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v7/widget/bp;-&gt;a(Landroid/content/Context;)Landroid/content/Context;" target="Ljava/util/ArrayList;-&gt;remove(I)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v7/widget/g;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Landroid/support/v7/widget/bp;-&gt;a(Landroid/content/Context;)Landroid/content/Context;" id="4" />
+      <edge source="Landroid/support/v4/a/c;-&gt;a(Landroid/content/BroadcastReceiver;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="5" />
+      <edge source="Landroid/support/v4/a/c;-&gt;a(Landroid/content/BroadcastReceiver;)V" target="Ljava/util/ArrayList;-&gt;remove(I)Ljava/lang/Object;" id="6" />
+      <edge source="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Landroid/support/v7/widget/g;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

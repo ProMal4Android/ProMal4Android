@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/vcard/VCardComposer;-&gt;init(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z" label="Lcom/android/vcard/VCardComposer;-&gt;init(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z" />
+      <node id="Lcom/android/vcard/VCardComposer;-&gt;initWithCallback(Landroid/database/Cursor;Lcom/android/vcard/VCardComposer$RawContactEntitlesInfoCallback;)Z" label="Lcom/android/vcard/VCardComposer;-&gt;initWithCallback(Landroid/database/Cursor;Lcom/android/vcard/VCardComposer$RawContactEntitlesInfoCallback;)Z" />
+      <node id="Lcom/android/vcard/VCardComposer;-&gt;init(Ljava/lang/String;[Ljava/lang/String;)Z" label="Lcom/android/vcard/VCardComposer;-&gt;init(Ljava/lang/String;[Ljava/lang/String;)Z" />
+      <node id="Lcom/android/vcard/VCardComposer;-&gt;initInterFirstPart(Landroid/net/Uri;)Z" label="Lcom/android/vcard/VCardComposer;-&gt;initInterFirstPart(Landroid/net/Uri;)Z" />
+      <node id="Lcom/android/vcard/VCardComposer;-&gt;init()Z" label="Lcom/android/vcard/VCardComposer;-&gt;init()Z" />
+      <node id="Lcom/android/vcard/VCardComposer;-&gt;initInterMainPart()Z" label="Lcom/android/vcard/VCardComposer;-&gt;initInterMainPart()Z" />
+      <node id="Landroid/database/Cursor;-&gt;getCount()I" label="Landroid/database/Cursor;-&gt;getCount()I" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;init(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z" target="Lcom/android/vcard/VCardComposer;-&gt;initInterFirstPart(Landroid/net/Uri;)Z" id="0" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;init(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z" target="Lcom/android/vcard/VCardComposer;-&gt;initInterMainPart()Z" id="1" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;initWithCallback(Landroid/database/Cursor;Lcom/android/vcard/VCardComposer$RawContactEntitlesInfoCallback;)Z" target="Lcom/android/vcard/VCardComposer;-&gt;initInterFirstPart(Landroid/net/Uri;)Z" id="2" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;initWithCallback(Landroid/database/Cursor;Lcom/android/vcard/VCardComposer$RawContactEntitlesInfoCallback;)Z" target="Lcom/android/vcard/VCardComposer;-&gt;initInterMainPart()Z" id="3" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;init(Ljava/lang/String;[Ljava/lang/String;)Z" target="Lcom/android/vcard/VCardComposer;-&gt;init(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z" id="4" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;init()Z" target="Lcom/android/vcard/VCardComposer;-&gt;init(Ljava/lang/String;[Ljava/lang/String;)Z" id="5" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;initInterMainPart()Z" target="Landroid/database/Cursor;-&gt;getCount()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

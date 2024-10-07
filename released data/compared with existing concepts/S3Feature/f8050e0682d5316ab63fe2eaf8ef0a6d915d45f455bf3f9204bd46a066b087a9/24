@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionView(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;" label="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionView(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;" />
+      <node id="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getActionViewStatesKey()Ljava/lang/String;" label="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getActionViewStatesKey()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/internal/view/SupportMenuItem;-&gt;getActionView()Landroid/view/View;" label="Landroid/support/v4/internal/view/SupportMenuItem;-&gt;getActionView()Landroid/view/View;" />
+      <node id="Landroid/support/v7/view/menu/MenuBuilder;-&gt;restoreActionViewStates(Landroid/os/Bundle;)V" label="Landroid/support/v7/view/menu/MenuBuilder;-&gt;restoreActionViewStates(Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/internal/view/SupportMenuItem;-&gt;setActionView(Landroid/view/View;)Landroid/view/MenuItem;" label="Landroid/support/v4/internal/view/SupportMenuItem;-&gt;setActionView(Landroid/view/View;)Landroid/view/MenuItem;" />
+      <node id="Landroid/support/v4/view/MenuItemCompat;-&gt;getActionView(Landroid/view/MenuItem;)Landroid/view/View;" label="Landroid/support/v4/view/MenuItemCompat;-&gt;getActionView(Landroid/view/MenuItem;)Landroid/view/View;" />
+      <node id="Landroid/support/v7/view/menu/MenuItemWrapperICS;-&gt;setActionView(I)Landroid/view/MenuItem;" label="Landroid/support/v7/view/menu/MenuItemWrapperICS;-&gt;setActionView(I)Landroid/view/MenuItem;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionView(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;" target="Landroid/support/v4/internal/view/SupportMenuItem;-&gt;setActionView(Landroid/view/View;)Landroid/view/MenuItem;" id="0" />
+      <edge source="Landroid/support/v7/view/menu/MenuBuilder;-&gt;restoreActionViewStates(Landroid/os/Bundle;)V" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getActionViewStatesKey()Ljava/lang/String;" id="1" />
+      <edge source="Landroid/support/v7/view/menu/MenuBuilder;-&gt;restoreActionViewStates(Landroid/os/Bundle;)V" target="Landroid/support/v4/view/MenuItemCompat;-&gt;getActionView(Landroid/view/MenuItem;)Landroid/view/View;" id="2" />
+      <edge source="Landroid/support/v4/view/MenuItemCompat;-&gt;getActionView(Landroid/view/MenuItem;)Landroid/view/View;" target="Landroid/support/v4/internal/view/SupportMenuItem;-&gt;getActionView()Landroid/view/View;" id="3" />
+      <edge source="Landroid/support/v7/view/menu/MenuItemWrapperICS;-&gt;setActionView(I)Landroid/view/MenuItem;" target="Landroid/support/v4/internal/view/SupportMenuItem;-&gt;getActionView()Landroid/view/View;" id="4" />
+      <edge source="Landroid/support/v7/view/menu/MenuItemWrapperICS;-&gt;setActionView(I)Landroid/view/MenuItem;" target="Landroid/support/v4/internal/view/SupportMenuItem;-&gt;setActionView(Landroid/view/View;)Landroid/view/MenuItem;" id="5" />
+    </edges>
+  </graph>
+</gexf>

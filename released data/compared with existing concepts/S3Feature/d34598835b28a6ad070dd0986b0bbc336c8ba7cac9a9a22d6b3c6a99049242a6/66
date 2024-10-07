@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/net/NetworkInfo;-&gt;getTypeName()Ljava/lang/String;" label="Landroid/net/NetworkInfo;-&gt;getTypeName()Ljava/lang/String;" />
+      <node id="Landroid/net/NetworkInfo;-&gt;getType()I" label="Landroid/net/NetworkInfo;-&gt;getType()I" />
+      <node id="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" label="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" />
+      <node id="Lcom/ap/injector/internal/common/old/Util;-&gt;getConnectionType(Landroid/content/Context;)I" label="Lcom/ap/injector/internal/common/old/Util;-&gt;getConnectionType(Landroid/content/Context;)I" />
+      <node id="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" label="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" />
+      <node id="Lcom/ap/injector/internal/common/old/Util;-&gt;getNetworksubType(Landroid/content/Context;)Ljava/lang/String;" label="Lcom/ap/injector/internal/common/old/Util;-&gt;getNetworksubType(Landroid/content/Context;)Ljava/lang/String;" />
+      <node id="Lcom/ap/injector/internal/common/old/Util;-&gt;isConnectionFast(Landroid/content/Context;)Z" label="Lcom/ap/injector/internal/common/old/Util;-&gt;isConnectionFast(Landroid/content/Context;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" target="Landroid/net/NetworkInfo;-&gt;getType()I" id="0" />
+      <edge source="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="1" />
+      <edge source="Lcom/ap/injector/internal/common/old/Util;-&gt;getConnectionType(Landroid/content/Context;)I" target="Landroid/net/NetworkInfo;-&gt;getTypeName()Ljava/lang/String;" id="2" />
+      <edge source="Lcom/ap/injector/internal/common/old/Util;-&gt;getConnectionType(Landroid/content/Context;)I" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="3" />
+      <edge source="Lcom/ap/injector/internal/common/old/Util;-&gt;getNetworksubType(Landroid/content/Context;)Ljava/lang/String;" target="Landroid/net/NetworkInfo;-&gt;getTypeName()Ljava/lang/String;" id="4" />
+      <edge source="Lcom/ap/injector/internal/common/old/Util;-&gt;getNetworksubType(Landroid/content/Context;)Ljava/lang/String;" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="5" />
+      <edge source="Lcom/ap/injector/internal/common/old/Util;-&gt;isConnectionFast(Landroid/content/Context;)Z" target="Landroid/net/NetworkInfo;-&gt;getType()I" id="6" />
+      <edge source="Lcom/ap/injector/internal/common/old/Util;-&gt;isConnectionFast(Landroid/content/Context;)Z" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="7" />
+    </edges>
+  </graph>
+</gexf>

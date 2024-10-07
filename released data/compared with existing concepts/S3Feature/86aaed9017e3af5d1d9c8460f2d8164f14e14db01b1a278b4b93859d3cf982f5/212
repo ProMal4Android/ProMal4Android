@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getMessagesFromBundleArray([Landroid/os/Parcelable;)Ljava/util/List;" label="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getMessagesFromBundleArray([Landroid/os/Parcelable;)Ljava/util/List;" />
+      <node id="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;extractMessagingStyleFromNotification(Landroid/app/Notification;)Landroid/support/v4/app/NotificationCompat$MessagingStyle;" label="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;extractMessagingStyleFromNotification(Landroid/app/Notification;)Landroid/support/v4/app/NotificationCompat$MessagingStyle;" />
+      <node id="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getMessageFromBundle(Landroid/os/Bundle;)Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;" label="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getMessageFromBundle(Landroid/os/Bundle;)Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;" />
+      <node id="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;restoreFromCompatExtras(Landroid/os/Bundle;)V" label="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;restoreFromCompatExtras(Landroid/os/Bundle;)V" />
+      <node id="Landroid/os/Bundle;-&gt;getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;" label="Landroid/os/Bundle;-&gt;getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" />
+      <node id="Landroid/os/Bundle;-&gt;containsKey(Ljava/lang/String;)Z" label="Landroid/os/Bundle;-&gt;containsKey(Ljava/lang/String;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getMessagesFromBundleArray([Landroid/os/Parcelable;)Ljava/util/List;" target="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getMessageFromBundle(Landroid/os/Bundle;)Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;extractMessagingStyleFromNotification(Landroid/app/Notification;)Landroid/support/v4/app/NotificationCompat$MessagingStyle;" target="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;restoreFromCompatExtras(Landroid/os/Bundle;)V" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;extractMessagingStyleFromNotification(Landroid/app/Notification;)Landroid/support/v4/app/NotificationCompat$MessagingStyle;" target="Landroid/os/Bundle;-&gt;containsKey(Ljava/lang/String;)Z" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getMessageFromBundle(Landroid/os/Bundle;)Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;" target="Landroid/os/Bundle;-&gt;containsKey(Ljava/lang/String;)Z" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;restoreFromCompatExtras(Landroid/os/Bundle;)V" target="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getMessagesFromBundleArray([Landroid/os/Parcelable;)Ljava/util/List;" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;restoreFromCompatExtras(Landroid/os/Bundle;)V" target="Landroid/os/Bundle;-&gt;getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" target="Landroid/os/Bundle;-&gt;getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;" id="6" />
+    </edges>
+  </graph>
+</gexf>

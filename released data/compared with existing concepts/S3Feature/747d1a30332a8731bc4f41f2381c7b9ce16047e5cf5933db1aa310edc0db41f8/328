@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;toBundle()Landroid/os/Bundle;" label="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;toBundle()Landroid/os/Bundle;" />
+      <node id="Landroid/os/Bundle;-&gt;putLong(Ljava/lang/String;J)V" label="Landroid/os/Bundle;-&gt;putLong(Ljava/lang/String;J)V" />
+      <node id="Landroid/support/v4/app/NotificationCompatApi21;-&gt;getBundleForUnreadConversation(Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;)Landroid/os/Bundle;" label="Landroid/support/v4/app/NotificationCompatApi21;-&gt;getBundleForUnreadConversation(Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;)Landroid/os/Bundle;" />
+      <node id="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getBundleArrayForMessages(Ljava/util/List;)[Landroid/os/Bundle;" label="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getBundleArrayForMessages(Ljava/util/List;)[Landroid/os/Bundle;" />
+      <node id="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;addCompatExtras(Landroid/os/Bundle;)V" label="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;addCompatExtras(Landroid/os/Bundle;)V" />
+      <node id="Landroid/os/Bundle;-&gt;putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V" label="Landroid/os/Bundle;-&gt;putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V" />
+      <node id="Landroid/support/v4/app/NotificationCompat$Action$WearableExtender;-&gt;extend(Landroid/support/v4/app/NotificationCompat$Action$Builder;)Landroid/support/v4/app/NotificationCompat$Action$Builder;" label="Landroid/support/v4/app/NotificationCompat$Action$WearableExtender;-&gt;extend(Landroid/support/v4/app/NotificationCompat$Action$Builder;)Landroid/support/v4/app/NotificationCompat$Action$Builder;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;toBundle()Landroid/os/Bundle;" target="Landroid/os/Bundle;-&gt;putLong(Ljava/lang/String;J)V" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;toBundle()Landroid/os/Bundle;" target="Landroid/os/Bundle;-&gt;putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationCompatApi21;-&gt;getBundleForUnreadConversation(Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;)Landroid/os/Bundle;" target="Landroid/os/Bundle;-&gt;putLong(Ljava/lang/String;J)V" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getBundleArrayForMessages(Ljava/util/List;)[Landroid/os/Bundle;" target="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;toBundle()Landroid/os/Bundle;" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;addCompatExtras(Landroid/os/Bundle;)V" target="Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;-&gt;getBundleArrayForMessages(Ljava/util/List;)[Landroid/os/Bundle;" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$MessagingStyle;-&gt;addCompatExtras(Landroid/os/Bundle;)V" target="Landroid/os/Bundle;-&gt;putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V" id="5" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$Action$WearableExtender;-&gt;extend(Landroid/support/v4/app/NotificationCompat$Action$Builder;)Landroid/support/v4/app/NotificationCompat$Action$Builder;" target="Landroid/os/Bundle;-&gt;putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

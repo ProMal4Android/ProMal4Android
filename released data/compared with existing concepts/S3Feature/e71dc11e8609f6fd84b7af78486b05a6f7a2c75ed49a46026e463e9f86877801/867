@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" label="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" />
+      <node id="Lcom/facebook/ads/internal/view/e;-&gt;a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V" label="Lcom/facebook/ads/internal/view/e;-&gt;a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V" />
+      <node id="Lcom/google/android/gms/internal/zzpo;-&gt;zzp(Landroid/view/View;)Landroid/graphics/Bitmap;" label="Lcom/google/android/gms/internal/zzpo;-&gt;zzp(Landroid/view/View;)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/graphics/Bitmap;-&gt;createBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" label="Landroid/graphics/Bitmap;-&gt;createBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" />
+      <node id="Lcom/google/android/gms/internal/zzkr;-&gt;execute(Ljava/util/Map;)V" label="Lcom/google/android/gms/internal/zzkr;-&gt;execute(Ljava/util/Map;)V" />
+      <node id="Lcom/facebook/ads/internal/util/p;-&gt;a([Landroid/graphics/Bitmap;)V" label="Lcom/facebook/ads/internal/util/p;-&gt;a([Landroid/graphics/Bitmap;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/ads/internal/view/e;-&gt;a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V" target="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" id="0" />
+      <edge source="Lcom/facebook/ads/internal/view/e;-&gt;a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V" target="Landroid/graphics/Bitmap;-&gt;createBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" id="1" />
+      <edge source="Lcom/google/android/gms/internal/zzpo;-&gt;zzp(Landroid/view/View;)Landroid/graphics/Bitmap;" target="Landroid/graphics/Bitmap;-&gt;createBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;" id="2" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" target="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" id="3" />
+      <edge source="Lcom/google/android/gms/internal/zzkr;-&gt;execute(Ljava/util/Map;)V" target="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" id="4" />
+      <edge source="Lcom/google/android/gms/internal/zzkr;-&gt;execute(Ljava/util/Map;)V" target="Lcom/google/android/gms/internal/zzpo;-&gt;zzp(Landroid/view/View;)Landroid/graphics/Bitmap;" id="5" />
+      <edge source="Lcom/facebook/ads/internal/util/p;-&gt;a([Landroid/graphics/Bitmap;)V" target="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" id="6" />
+      <edge source="Lcom/facebook/ads/internal/util/p;-&gt;a([Landroid/graphics/Bitmap;)V" target="Lcom/facebook/ads/internal/view/e;-&gt;a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

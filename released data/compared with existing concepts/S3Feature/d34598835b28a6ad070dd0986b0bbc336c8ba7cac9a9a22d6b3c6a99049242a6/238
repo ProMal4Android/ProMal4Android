@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat(Landroid/support/v4/app/RemoteInput;)Landroid/app/RemoteInput;" label="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat(Landroid/support/v4/app/RemoteInput;)Landroid/app/RemoteInput;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;toBundle(Landroid/support/v4/app/RemoteInput;)Landroid/os/Bundle;" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;toBundle(Landroid/support/v4/app/RemoteInput;)Landroid/os/Bundle;" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;addDataResultToIntent(Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V" label="Landroid/support/v4/app/RemoteInput;-&gt;addDataResultToIntent(Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" label="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;getResultKey()Ljava/lang/String;" label="Landroid/support/v4/app/RemoteInput;-&gt;getResultKey()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;getLabel()Ljava/lang/CharSequence;" label="Landroid/support/v4/app/RemoteInput;-&gt;getLabel()Ljava/lang/CharSequence;" />
+      <node id="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat([Landroid/support/v4/app/RemoteInput;)[Landroid/app/RemoteInput;" label="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat([Landroid/support/v4/app/RemoteInput;)[Landroid/app/RemoteInput;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat(Landroid/support/v4/app/RemoteInput;)Landroid/app/RemoteInput;" target="Landroid/support/v4/app/RemoteInput;-&gt;getResultKey()Ljava/lang/String;" id="0" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat(Landroid/support/v4/app/RemoteInput;)Landroid/app/RemoteInput;" target="Landroid/support/v4/app/RemoteInput;-&gt;getLabel()Ljava/lang/CharSequence;" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;toBundle(Landroid/support/v4/app/RemoteInput;)Landroid/os/Bundle;" target="Landroid/support/v4/app/RemoteInput;-&gt;getResultKey()Ljava/lang/String;" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;toBundle(Landroid/support/v4/app/RemoteInput;)Landroid/os/Bundle;" target="Landroid/support/v4/app/RemoteInput;-&gt;getLabel()Ljava/lang/CharSequence;" id="3" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;addDataResultToIntent(Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V" target="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat(Landroid/support/v4/app/RemoteInput;)Landroid/app/RemoteInput;" id="4" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;addDataResultToIntent(Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V" target="Landroid/support/v4/app/RemoteInput;-&gt;getResultKey()Ljava/lang/String;" id="5" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/RemoteInput;-&gt;addDataResultToIntent(Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V" id="6" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/RemoteInput;-&gt;getResultKey()Ljava/lang/String;" id="7" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;addResultsToIntent([Landroid/support/v4/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V" target="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat([Landroid/support/v4/app/RemoteInput;)[Landroid/app/RemoteInput;" id="8" />
+      <edge source="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat([Landroid/support/v4/app/RemoteInput;)[Landroid/app/RemoteInput;" target="Landroid/support/v4/app/RemoteInput;-&gt;fromCompat(Landroid/support/v4/app/RemoteInput;)Landroid/app/RemoteInput;" id="9" />
+    </edges>
+  </graph>
+</gexf>

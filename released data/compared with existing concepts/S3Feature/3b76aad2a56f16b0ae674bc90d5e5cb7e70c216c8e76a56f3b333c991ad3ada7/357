@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" label="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" />
+      <node id="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawable(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawable(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v4/print/PrintHelperKitkat;-&gt;loadBitmap(Landroid/net/Uri;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" label="Landroid/support/v4/print/PrintHelperKitkat;-&gt;loadBitmap(Landroid/net/Uri;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" />
+      <node id="Landroid/content/ContentResolver;-&gt;openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;" label="Landroid/content/ContentResolver;-&gt;openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawable(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" id="1" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawable(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" id="2" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawable(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/content/ContentResolver;-&gt;openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;" id="3" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawable(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/print/PrintHelperKitkat;-&gt;loadBitmap(Landroid/net/Uri;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" target="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" id="5" />
+      <edge source="Landroid/support/v4/print/PrintHelperKitkat;-&gt;loadBitmap(Landroid/net/Uri;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" target="Landroid/content/ContentResolver;-&gt;openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;" id="6" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" target="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" id="7" />
+    </edges>
+  </graph>
+</gexf>

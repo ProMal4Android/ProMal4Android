@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/os/IResultReceiver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" label="Landroid/support/v4/os/IResultReceiver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" />
+      <node id="Landroid/support/v4/app/BackStackState;-&gt;&lt;init&gt;(Landroid/os/Parcel;)V" label="Landroid/support/v4/app/BackStackState;-&gt;&lt;init&gt;(Landroid/os/Parcel;)V" />
+      <node id="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" label="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" />
+      <node id="Landroid/content/pm/IPackageStatsObserver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" label="Landroid/content/pm/IPackageStatsObserver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" />
+      <node id="Landroid/os/Parcel;-&gt;readInt()I" label="Landroid/os/Parcel;-&gt;readInt()I" />
+      <node id="Landroid/os/Binder;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" label="Landroid/os/Binder;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;&lt;init&gt;(Landroid/os/Parcel;)V" label="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;&lt;init&gt;(Landroid/os/Parcel;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/os/IResultReceiver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" target="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v4/os/IResultReceiver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" target="Landroid/os/Parcel;-&gt;readInt()I" id="1" />
+      <edge source="Landroid/support/v4/os/IResultReceiver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" target="Landroid/os/Binder;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" id="2" />
+      <edge source="Landroid/support/v4/app/BackStackState;-&gt;&lt;init&gt;(Landroid/os/Parcel;)V" target="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v4/app/BackStackState;-&gt;&lt;init&gt;(Landroid/os/Parcel;)V" target="Landroid/os/Parcel;-&gt;readInt()I" id="4" />
+      <edge source="Landroid/content/pm/IPackageStatsObserver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" target="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/content/pm/IPackageStatsObserver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" target="Landroid/os/Parcel;-&gt;readInt()I" id="6" />
+      <edge source="Landroid/content/pm/IPackageStatsObserver$Stub;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" target="Landroid/os/Binder;-&gt;onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z" id="7" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;&lt;init&gt;(Landroid/os/Parcel;)V" target="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" id="8" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;&lt;init&gt;(Landroid/os/Parcel;)V" target="Landroid/os/Parcel;-&gt;readInt()I" id="9" />
+    </edges>
+  </graph>
+</gexf>

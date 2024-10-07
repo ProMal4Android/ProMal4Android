@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" label="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" />
+      <node id="Landroidx/fragment/app/b;-&gt;onDismiss(Landroid/content/DialogInterface;)V" label="Landroidx/fragment/app/b;-&gt;onDismiss(Landroid/content/DialogInterface;)V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;startPostponedEnterTransition()V" label="Landroidx/fragment/app/Fragment;-&gt;startPostponedEnterTransition()V" />
+      <node id="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" label="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" />
+      <node id="Landroidx/fragment/app/b;-&gt;dismissInternal(ZZ)V" label="Landroidx/fragment/app/b;-&gt;dismissInternal(ZZ)V" />
+      <node id="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V" label="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V" />
+      <node id="Landroid/support/v4/media/session/MediaControllerCompat$Callback;-&gt;setHandler(Landroid/os/Handler;)V" label="Landroid/support/v4/media/session/MediaControllerCompat$Callback;-&gt;setHandler(Landroid/os/Handler;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/fragment/app/b;-&gt;onDismiss(Landroid/content/DialogInterface;)V" target="Landroidx/fragment/app/b;-&gt;dismissInternal(ZZ)V" id="0" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;startPostponedEnterTransition()V" target="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" id="1" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;startPostponedEnterTransition()V" target="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" id="2" />
+      <edge source="Landroidx/fragment/app/b;-&gt;dismissInternal(ZZ)V" target="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" id="3" />
+      <edge source="Landroidx/fragment/app/b;-&gt;dismissInternal(ZZ)V" target="Landroidx/fragment/app/b;-&gt;onDismiss(Landroid/content/DialogInterface;)V" id="4" />
+      <edge source="Landroidx/fragment/app/b;-&gt;dismissInternal(ZZ)V" target="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" id="5" />
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V" target="Landroid/support/v4/media/session/MediaControllerCompat$Callback;-&gt;setHandler(Landroid/os/Handler;)V" id="6" />
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat$Callback;-&gt;setHandler(Landroid/os/Handler;)V" target="Landroid/os/Handler;-&gt;getLooper()Landroid/os/Looper;" id="7" />
+    </edges>
+  </graph>
+</gexf>

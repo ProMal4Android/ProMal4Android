@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeScaleUpAnimation(Landroid/view/View;IIII)Landroid/support/v4/app/ActivityOptionsCompat;" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeScaleUpAnimation(Landroid/view/View;IIII)Landroid/support/v4/app/ActivityOptionsCompat;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/ActivityOptionsCompat;" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/ActivityOptionsCompat;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImplJB;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompatJB;)V" label="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImplJB;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompatJB;)V" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat;" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImpl21;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompat21;)V" label="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImpl21;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompat21;)V" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeSceneTransitionAnimation(Landroid/app/Activity;[Landroid/support/v4/util/Pair;)Landroid/support/v4/app/ActivityOptionsCompat;" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeSceneTransitionAnimation(Landroid/app/Activity;[Landroid/support/v4/util/Pair;)Landroid/support/v4/app/ActivityOptionsCompat;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeScaleUpAnimation(Landroid/view/View;IIII)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeScaleUpAnimation(Landroid/view/View;IIII)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImplJB;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompatJB;)V" id="1" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImpl21;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompat21;)V" id="3" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImplJB;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompatJB;)V" target="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImplJB;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompatJB;)V" id="6" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImpl21;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompat21;)V" target="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" id="7" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeSceneTransitionAnimation(Landroid/app/Activity;[Landroid/support/v4/util/Pair;)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" id="8" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeSceneTransitionAnimation(Landroid/app/Activity;[Landroid/support/v4/util/Pair;)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsImpl21;-&gt;&lt;init&gt;(Landroid/support/v4/app/ActivityOptionsCompat21;)V" id="9" />
+    </edges>
+  </graph>
+</gexf>

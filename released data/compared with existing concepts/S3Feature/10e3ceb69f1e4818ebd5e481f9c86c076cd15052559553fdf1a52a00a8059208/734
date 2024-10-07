@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/AppBarLayout;-&gt;getChildCount()I" label="Landroid/support/design/widget/AppBarLayout;-&gt;getChildCount()I" />
+      <node id="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" label="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" />
+      <node id="Landroid/view/View;-&gt;getHeight()I" label="Landroid/view/View;-&gt;getHeight()I" />
+      <node id="Landroid/support/design/widget/AppBarLayout;-&gt;getUpNestedPreScrollRange()I" label="Landroid/support/design/widget/AppBarLayout;-&gt;getUpNestedPreScrollRange()I" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onNestedFling(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;FFZ)Z" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onNestedFling(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;FFZ)Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildFocus(Landroid/view/View;Landroid/view/View;)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildFocus(Landroid/view/View;Landroid/view/View;)V" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onLayoutChild(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;I)Z" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onLayoutChild(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;I)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" target="Landroid/support/design/widget/AppBarLayout;-&gt;getChildCount()I" id="0" />
+      <edge source="Landroid/support/design/widget/AppBarLayout;-&gt;getUpNestedPreScrollRange()I" target="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" id="1" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onNestedFling(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;FFZ)Z" target="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" id="2" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onNestedFling(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;FFZ)Z" target="Landroid/support/design/widget/AppBarLayout;-&gt;getUpNestedPreScrollRange()I" id="3" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildFocus(Landroid/view/View;Landroid/view/View;)V" target="Landroid/view/View;-&gt;getHeight()I" id="4" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onLayoutChild(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;I)Z" target="Landroid/support/design/widget/AppBarLayout;-&gt;getTotalScrollRange()I" id="5" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onLayoutChild(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;I)Z" target="Landroid/view/View;-&gt;getHeight()I" id="6" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;onLayoutChild(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;I)Z" target="Landroid/support/design/widget/AppBarLayout;-&gt;getUpNestedPreScrollRange()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

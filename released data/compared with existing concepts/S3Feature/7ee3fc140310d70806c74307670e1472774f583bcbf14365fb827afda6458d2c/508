@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/widget/bb;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/widget/SearchView;Landroid/app/SearchableInfo;Ljava/util/WeakHashMap;)V" label="Landroid/support/v7/widget/bb;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/widget/SearchView;Landroid/app/SearchableInfo;Ljava/util/WeakHashMap;)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/widget/aw;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;Z)V" label="Landroid/support/v4/widget/aw;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;Z)V" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;l()V" label="Landroid/support/v7/widget/SearchView;-&gt;l()V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;setOffscreenPageLimit(I)V" label="Landroid/support/v4/view/ViewPager;-&gt;setOffscreenPageLimit(I)V" />
+      <node id="Landroid/support/v4/a/n;-&gt;a(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/support/v4/a/n;-&gt;a(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/bb;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/widget/SearchView;Landroid/app/SearchableInfo;Ljava/util/WeakHashMap;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v7/widget/bb;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/widget/SearchView;Landroid/app/SearchableInfo;Ljava/util/WeakHashMap;)V" target="Landroid/support/v4/widget/aw;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;Z)V" id="1" />
+      <edge source="Landroid/support/v4/widget/aw;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;Z)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;l()V" target="Landroid/support/v7/widget/bb;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/widget/SearchView;Landroid/app/SearchableInfo;Ljava/util/WeakHashMap;)V" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setOffscreenPageLimit(I)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/a/n;-&gt;a(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/a/n;-&gt;a(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

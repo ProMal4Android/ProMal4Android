@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/remove/cacheremoverr/back/Ncu;-&gt;onCallStateChanged(ILjava/lang/String;)V" label="Lcom/remove/cacheremoverr/back/Ncu;-&gt;onCallStateChanged(ILjava/lang/String;)V" />
+      <node id="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Lcom/remove/cacheremoverr/back/NRepo;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" label="Lcom/remove/cacheremoverr/back/NRepo;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" />
+      <node id="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" label="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" />
+      <node id="Lcom/remove/cacheremoverr/back/Nue;-&gt;isNetworkAvailable(Landroid/content/Context;)Z" label="Lcom/remove/cacheremoverr/back/Nue;-&gt;isNetworkAvailable(Landroid/content/Context;)Z" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/remove/cacheremoverr/back/Ncu;-&gt;onCallStateChanged(ILjava/lang/String;)V" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="0" />
+      <edge source="Lcom/remove/cacheremoverr/back/Ncu;-&gt;onCallStateChanged(ILjava/lang/String;)V" target="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" id="1" />
+      <edge source="Lcom/remove/cacheremoverr/back/NRepo;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" id="2" />
+      <edge source="Lcom/remove/cacheremoverr/back/NRepo;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/remove/cacheremoverr/back/Nue;-&gt;isNetworkAvailable(Landroid/content/Context;)Z" id="3" />
+      <edge source="Lcom/remove/cacheremoverr/back/NRepo;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="5" />
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="6" />
+      <edge source="Lcom/remove/cacheremoverr/back/Nue;-&gt;isNetworkAvailable(Landroid/content/Context;)Z" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

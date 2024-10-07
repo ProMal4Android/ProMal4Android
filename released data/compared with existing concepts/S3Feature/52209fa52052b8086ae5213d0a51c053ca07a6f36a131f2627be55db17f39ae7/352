@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/view/ActionBarPolicy;-&gt;get(Landroid/content/Context;)Landroid/support/v7/view/ActionBarPolicy;" label="Landroid/support/v7/view/ActionBarPolicy;-&gt;get(Landroid/content/Context;)Landroid/support/v7/view/ActionBarPolicy;" />
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" />
+      <node id="Landroid/support/v7/app/WindowDecorActionBar;-&gt;getDecorToolbar(Landroid/view/View;)Landroid/support/v7/widget/DecorToolbar;" label="Landroid/support/v7/app/WindowDecorActionBar;-&gt;getDecorToolbar(Landroid/view/View;)Landroid/support/v7/widget/DecorToolbar;" />
+      <node id="Landroid/support/v7/app/WindowDecorActionBar;-&gt;init(Landroid/view/View;)V" label="Landroid/support/v7/app/WindowDecorActionBar;-&gt;init(Landroid/view/View;)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v7/view/ActionBarPolicy;-&gt;hasEmbeddedTabs()Z" label="Landroid/support/v7/view/ActionBarPolicy;-&gt;hasEmbeddedTabs()Z" />
+      <node id="Landroid/support/v7/app/WindowDecorActionBar;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" label="Landroid/support/v7/app/WindowDecorActionBar;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" target="Landroid/support/v7/view/ActionBarPolicy;-&gt;get(Landroid/content/Context;)Landroid/support/v7/view/ActionBarPolicy;" id="0" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;getDecorToolbar(Landroid/view/View;)Landroid/support/v7/widget/DecorToolbar;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;init(Landroid/view/View;)V" target="Landroid/support/v7/view/ActionBarPolicy;-&gt;get(Landroid/content/Context;)Landroid/support/v7/view/ActionBarPolicy;" id="2" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;init(Landroid/view/View;)V" target="Landroid/support/v7/app/WindowDecorActionBar;-&gt;getDecorToolbar(Landroid/view/View;)Landroid/support/v7/widget/DecorToolbar;" id="3" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;init(Landroid/view/View;)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;init(Landroid/view/View;)V" target="Landroid/support/v7/view/ActionBarPolicy;-&gt;hasEmbeddedTabs()Z" id="5" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" target="Landroid/support/v7/view/ActionBarPolicy;-&gt;get(Landroid/content/Context;)Landroid/support/v7/view/ActionBarPolicy;" id="6" />
+      <edge source="Landroid/support/v7/app/WindowDecorActionBar;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" target="Landroid/support/v7/view/ActionBarPolicy;-&gt;hasEmbeddedTabs()Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAttributionIdentifiers(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" label="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAttributionIdentifiers(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" />
+      <node id="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidId(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" label="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidId(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" />
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" label="Landroid/support/v4/content/FileProvider;-&gt;parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" />
+      <node id="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidIdViaReflection(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" label="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidIdViaReflection(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" />
+      <node id="Lcom/facebook/internal/AttributionIdentifiers;-&gt;&lt;init&gt;()V" label="Lcom/facebook/internal/AttributionIdentifiers;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/content/ContextCompat;-&gt;getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;" label="Landroid/support/v4/content/ContextCompat;-&gt;getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;" label="Landroid/content/pm/PackageManager;-&gt;resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAttributionIdentifiers(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" target="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidId(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" id="0" />
+      <edge source="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAttributionIdentifiers(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" target="Landroid/content/pm/PackageManager;-&gt;resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;" id="1" />
+      <edge source="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidId(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" target="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidIdViaReflection(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" id="2" />
+      <edge source="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidId(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" target="Lcom/facebook/internal/AttributionIdentifiers;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" target="Landroid/support/v4/content/ContextCompat;-&gt;getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;" id="4" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" target="Landroid/content/pm/PackageManager;-&gt;resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;" id="5" />
+      <edge source="Lcom/facebook/internal/AttributionIdentifiers;-&gt;getAndroidIdViaReflection(Landroid/content/Context;)Lcom/facebook/internal/AttributionIdentifiers;" target="Lcom/facebook/internal/AttributionIdentifiers;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

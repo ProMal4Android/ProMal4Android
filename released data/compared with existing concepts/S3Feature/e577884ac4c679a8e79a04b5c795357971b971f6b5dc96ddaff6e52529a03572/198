@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;Landroid/arch/lifecycle/c;Landroid/arch/lifecycle/b$a;)V" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;Landroid/arch/lifecycle/c;Landroid/arch/lifecycle/b$a;)V" />
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/List;Landroid/arch/lifecycle/c;Landroid/arch/lifecycle/b$a;)V" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/List;Landroid/arch/lifecycle/c;Landroid/arch/lifecycle/b$a;)V" />
+      <node id="Landroid/view/ViewGroup;-&gt;getChildAt(I)Landroid/view/View;" label="Landroid/view/ViewGroup;-&gt;getChildAt(I)Landroid/view/View;" />
+      <node id="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" label="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" />
+      <node id="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;containedBeforeIndex(Ljava/util/List;Landroid/view/View;I)Z" label="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;containedBeforeIndex(Ljava/util/List;Landroid/view/View;I)Z" />
+      <node id="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;Landroid/arch/lifecycle/c;Landroid/arch/lifecycle/b$a;)V" target="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/List;Landroid/arch/lifecycle/c;Landroid/arch/lifecycle/b$a;)V" id="0" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;filterLeftoverView(Landroid/view/ViewGroup;I)Z" target="Landroid/view/ViewGroup;-&gt;getChildAt(I)Landroid/view/View;" id="1" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/List;Landroid/arch/lifecycle/c;Landroid/arch/lifecycle/b$a;)V" target="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" target="Landroid/view/ViewGroup;-&gt;getChildAt(I)Landroid/view/View;" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" target="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;containedBeforeIndex(Ljava/util/List;Landroid/view/View;I)Z" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" target="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;containedBeforeIndex(Ljava/util/List;Landroid/view/View;I)Z" target="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" id="6" />
+    </edges>
+  </graph>
+</gexf>

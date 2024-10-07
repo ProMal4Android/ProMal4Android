@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/util/ArraySet;-&gt;add(Ljava/lang/Object;)Z" label="Landroid/support/v4/util/ArraySet;-&gt;add(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" label="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" />
+      <node id="Landroid/support/v4/util/ArraySet;-&gt;indexOfNull()I" label="Landroid/support/v4/util/ArraySet;-&gt;indexOfNull()I" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" />
+      <node id="Ljava/lang/Object;-&gt;equals(Ljava/lang/Object;)Z" label="Ljava/lang/Object;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" />
+      <node id="Landroid/support/v4/util/ArraySet;-&gt;indexOf(Ljava/lang/Object;I)I" label="Landroid/support/v4/util/ArraySet;-&gt;indexOf(Ljava/lang/Object;I)I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/util/ArraySet;-&gt;add(Ljava/lang/Object;)Z" target="Landroid/support/v4/util/ArraySet;-&gt;indexOfNull()I" id="0" />
+      <edge source="Landroid/support/v4/util/ArraySet;-&gt;add(Ljava/lang/Object;)Z" target="Landroid/support/v4/util/ArraySet;-&gt;indexOf(Ljava/lang/Object;I)I" id="1" />
+      <edge source="Landroid/support/v4/util/ArraySet;-&gt;indexOfNull()I" target="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" id="2" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" target="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" id="3" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" id="4" />
+      <edge source="Landroid/support/v4/util/ArraySet;-&gt;indexOf(Ljava/lang/Object;I)I" target="Landroid/support/v4/util/ContainerHelpers;-&gt;binarySearch([III)I" id="5" />
+      <edge source="Landroid/support/v4/util/ArraySet;-&gt;indexOf(Ljava/lang/Object;I)I" target="Ljava/lang/Object;-&gt;equals(Ljava/lang/Object;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

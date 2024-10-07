@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;configureTab(Landroid/support/design/widget/TabLayout$Tab;I)V" label="Landroid/support/design/widget/TabLayout;-&gt;configureTab(Landroid/support/design/widget/TabLayout$Tab;I)V" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;" />
+      <node id="Ljava/util/ArrayList;-&gt;isEmpty()Z" label="Ljava/util/ArrayList;-&gt;isEmpty()Z" />
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V" label="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V" />
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;)V" label="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;)V" />
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;Z)V" label="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;Z)V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;configureTab(Landroid/support/design/widget/TabLayout$Tab;I)V" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="1" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V" target="Landroid/support/design/widget/TabLayout;-&gt;configureTab(Landroid/support/design/widget/TabLayout$Tab;I)V" id="3" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;)V" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="4" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;)V" target="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;Z)V" id="5" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;Z)V" target="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V" id="6" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

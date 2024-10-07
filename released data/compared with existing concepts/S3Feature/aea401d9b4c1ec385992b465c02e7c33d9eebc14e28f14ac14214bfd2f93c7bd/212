@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" />
+      <node id="Landroid/widget/RelativeLayout;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/widget/RelativeLayout;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/widget/LinearLayout;-&gt;setOrientation(I)V" label="Landroid/widget/LinearLayout;-&gt;setOrientation(I)V" />
+      <node id="Lcom/facebook/ads/AdChoicesView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Z)V" label="Lcom/facebook/ads/AdChoicesView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Z)V" />
+      <node id="Lcom/facebook/ads/NativeAd;-&gt;isAdLoaded()Z" label="Lcom/facebook/ads/NativeAd;-&gt;isAdLoaded()Z" />
+      <node id="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" label="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" />
+      <node id="Lcom/facebook/ads/internal/f/b;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Lcom/facebook/ads/NativeAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)V" label="Lcom/facebook/ads/internal/f/b;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Lcom/facebook/ads/NativeAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" target="Landroid/widget/LinearLayout;-&gt;setOrientation(I)V" id="0" />
+      <edge source="Lcom/facebook/ads/AdChoicesView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Z)V" target="Landroid/widget/RelativeLayout;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="1" />
+      <edge source="Lcom/facebook/ads/AdChoicesView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Z)V" target="Lcom/facebook/ads/NativeAd;-&gt;isAdLoaded()Z" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentTabHost;-&gt;setup(Landroid/content/Context;Landroid/support/v4/app/FragmentManager;)V" target="Landroid/support/v4/app/FragmentTabHost;-&gt;ensureHierarchy(Landroid/content/Context;)V" id="3" />
+      <edge source="Lcom/facebook/ads/internal/f/b;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Lcom/facebook/ads/NativeAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)V" target="Landroid/widget/RelativeLayout;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="4" />
+      <edge source="Lcom/facebook/ads/internal/f/b;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Lcom/facebook/ads/NativeAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)V" target="Landroid/widget/LinearLayout;-&gt;setOrientation(I)V" id="5" />
+      <edge source="Lcom/facebook/ads/internal/f/b;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Lcom/facebook/ads/NativeAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)V" target="Lcom/facebook/ads/AdChoicesView;-&gt;&lt;init&gt;(Landroid/content/Context;Lcom/facebook/ads/NativeAd;Z)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

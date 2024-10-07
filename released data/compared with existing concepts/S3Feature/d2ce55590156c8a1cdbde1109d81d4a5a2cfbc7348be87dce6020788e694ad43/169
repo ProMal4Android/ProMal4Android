@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/ViewPager$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/view/ViewPager$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/content/res/TypedArray;-&gt;getIndexCount()I" label="Landroid/content/res/TypedArray;-&gt;getIndexCount()I" />
+      <node id="Landroid/support/constraint/ConstraintSet;-&gt;fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/support/constraint/ConstraintSet$Constraint;" label="Landroid/support/constraint/ConstraintSet;-&gt;fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/support/constraint/ConstraintSet$Constraint;" />
+      <node id="Landroid/support/constraint/ConstraintSet;-&gt;populateConstraint(Landroid/support/constraint/ConstraintSet$Constraint;Landroid/content/res/TypedArray;)V" label="Landroid/support/constraint/ConstraintSet;-&gt;populateConstraint(Landroid/support/constraint/ConstraintSet$Constraint;Landroid/content/res/TypedArray;)V" />
+      <node id="Landroid/support/constraint/ConstraintLayout;-&gt;init(Landroid/util/AttributeSet;)V" label="Landroid/support/constraint/ConstraintLayout;-&gt;init(Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/support/constraint/solver/widgets/ConstraintWidgetContainer;-&gt;setCompanionWidget(Ljava/lang/Object;)V" label="Landroid/support/constraint/solver/widgets/ConstraintWidgetContainer;-&gt;setCompanionWidget(Ljava/lang/Object;)V" />
+      <node id="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" label="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager$LayoutParams;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" id="0" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/support/constraint/ConstraintSet$Constraint;" target="Landroid/support/constraint/ConstraintSet;-&gt;populateConstraint(Landroid/support/constraint/ConstraintSet$Constraint;Landroid/content/res/TypedArray;)V" id="1" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;fillFromAttributeList(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/support/constraint/ConstraintSet$Constraint;" target="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" id="2" />
+      <edge source="Landroid/support/constraint/ConstraintSet;-&gt;populateConstraint(Landroid/support/constraint/ConstraintSet$Constraint;Landroid/content/res/TypedArray;)V" target="Landroid/content/res/TypedArray;-&gt;getIndexCount()I" id="3" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;init(Landroid/util/AttributeSet;)V" target="Landroid/content/res/TypedArray;-&gt;getIndexCount()I" id="4" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;init(Landroid/util/AttributeSet;)V" target="Landroid/support/constraint/solver/widgets/ConstraintWidgetContainer;-&gt;setCompanionWidget(Ljava/lang/Object;)V" id="5" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;init(Landroid/util/AttributeSet;)V" target="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;-&gt;getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V" label="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;-&gt;getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V" />
+      <node id="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-&gt;handleMessage(Landroid/os/Message;)V" label="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-&gt;handleMessage(Landroid/os/Message;)V" />
+      <node id="Ljava/lang/Class;-&gt;getClassLoader()Ljava/lang/ClassLoader;" label="Ljava/lang/Class;-&gt;getClassLoader()Ljava/lang/ClassLoader;" />
+      <node id="Landroid/os/Message;-&gt;getData()Landroid/os/Bundle;" label="Landroid/os/Message;-&gt;getData()Landroid/os/Bundle;" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationContentDescription(Ljava/lang/CharSequence;)V" label="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationContentDescription(Ljava/lang/CharSequence;)V" />
+      <node id="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" label="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" />
+      <node id="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-&gt;sendMessageAtTime(Landroid/os/Message;J)Z" label="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-&gt;sendMessageAtTime(Landroid/os/Message;J)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;-&gt;getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V" target="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" id="0" />
+      <edge source="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-&gt;handleMessage(Landroid/os/Message;)V" target="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;-&gt;getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V" id="1" />
+      <edge source="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-&gt;handleMessage(Landroid/os/Message;)V" target="Landroid/os/Message;-&gt;getData()Landroid/os/Bundle;" id="2" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationContentDescription(Ljava/lang/CharSequence;)V" target="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" id="3" />
+      <edge source="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-&gt;sendMessageAtTime(Landroid/os/Message;J)Z" target="Ljava/lang/Class;-&gt;getClassLoader()Ljava/lang/ClassLoader;" id="4" />
+      <edge source="Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-&gt;sendMessageAtTime(Landroid/os/Message;J)Z" target="Landroid/os/Message;-&gt;getData()Landroid/os/Bundle;" id="5" />
+    </edges>
+  </graph>
+</gexf>

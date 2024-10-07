@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingTop()I" label="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingTop()I" />
+      <node id="Landroid/support/constraint/ConstraintLayout;-&gt;onMeasure(II)V" label="Landroid/support/constraint/ConstraintLayout;-&gt;onMeasure(II)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;computeScroll()V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;computeScroll()V" />
+      <node id="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Landroid/support/constraint/ConstraintLayout;-&gt;b(II)V" label="Landroid/support/constraint/ConstraintLayout;-&gt;b(II)V" />
+      <node id="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingBottom()I" label="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingBottom()I" />
+      <node id="Landroid/support/constraint/ConstraintLayout;-&gt;a(II)V" label="Landroid/support/constraint/ConstraintLayout;-&gt;a(II)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;onMeasure(II)V" target="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingTop()I" id="0" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;onMeasure(II)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="1" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;onMeasure(II)V" target="Landroid/support/constraint/ConstraintLayout;-&gt;b(II)V" id="2" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;onMeasure(II)V" target="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingBottom()I" id="3" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;onMeasure(II)V" target="Landroid/support/constraint/ConstraintLayout;-&gt;a(II)V" id="4" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;computeScroll()V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="5" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;b(II)V" target="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingTop()I" id="6" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;b(II)V" target="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingBottom()I" id="7" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;a(II)V" target="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingTop()I" id="8" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;a(II)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="9" />
+      <edge source="Landroid/support/constraint/ConstraintLayout;-&gt;a(II)V" target="Landroid/support/constraint/ConstraintLayout;-&gt;getPaddingBottom()I" id="10" />
+    </edges>
+  </graph>
+</gexf>

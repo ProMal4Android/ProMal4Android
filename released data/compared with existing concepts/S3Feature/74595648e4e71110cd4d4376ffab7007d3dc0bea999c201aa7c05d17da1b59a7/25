@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" label="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" />
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/support/v7/widget/LinearLayoutCompat;-&gt;setDividerDrawable(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/v7/widget/LinearLayoutCompat;-&gt;setDividerDrawable(Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" />
+      <node id="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" label="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" />
+      <node id="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" label="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/graphics/Bitmap;-&gt;createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;" label="Landroid/graphics/Bitmap;-&gt;createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" id="0" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" id="1" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" target="Landroid/graphics/Bitmap;-&gt;createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;" id="2" />
+      <edge source="Landroid/support/v7/widget/LinearLayoutCompat;-&gt;setDividerDrawable(Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" id="3" />
+      <edge source="Landroid/support/v7/widget/LinearLayoutCompat;-&gt;setDividerDrawable(Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" id="4" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" target="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" id="5" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" target="Landroid/graphics/Bitmap;-&gt;createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;" id="6" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicHeight()I" id="7" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" id="8" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" target="Landroid/graphics/Bitmap;-&gt;createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;" id="9" />
+    </edges>
+  </graph>
+</gexf>

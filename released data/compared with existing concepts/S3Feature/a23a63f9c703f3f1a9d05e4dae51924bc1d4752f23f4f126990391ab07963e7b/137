@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/app/Activity;-&gt;getFragmentManager()Landroid/app/FragmentManager;" label="Landroid/app/Activity;-&gt;getFragmentManager()Landroid/app/FragmentManager;" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;isOnBackgroundThread()Z" label="Lcom/bumptech/glide/util/Util;-&gt;isOnBackgroundThread()Z" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" label="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" />
+      <node id="Lcom/google/android/gms/common/GoogleApiAvailability;-&gt;zza(Landroid/app/Activity;Landroid/app/Dialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V" label="Lcom/google/android/gms/common/GoogleApiAvailability;-&gt;zza(Landroid/app/Activity;Landroid/app/Dialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" id="0" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" id="1" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" target="Landroid/app/Activity;-&gt;getFragmentManager()Landroid/app/FragmentManager;" id="2" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" id="3" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/app/Activity;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/util/Util;-&gt;isOnBackgroundThread()Z" id="4" />
+      <edge source="Lcom/google/android/gms/common/GoogleApiAvailability;-&gt;zza(Landroid/app/Activity;Landroid/app/Dialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V" target="Landroid/app/Activity;-&gt;getFragmentManager()Landroid/app/FragmentManager;" id="5" />
+      <edge source="Lcom/google/android/gms/common/GoogleApiAvailability;-&gt;zza(Landroid/app/Activity;Landroid/app/Dialog;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V" target="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" id="6" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" id="7" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/util/Util;-&gt;isOnBackgroundThread()Z" id="8" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" target="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" id="9" />
+    </edges>
+  </graph>
+</gexf>

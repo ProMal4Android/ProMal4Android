@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lorg/springframework/core/convert/FieldDescriptor;-&gt;&lt;init&gt;(Ljava/lang/reflect/Field;)V" label="Lorg/springframework/core/convert/FieldDescriptor;-&gt;&lt;init&gt;(Ljava/lang/reflect/Field;)V" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" />
+      <node id="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Lorg/springframework/core/convert/AbstractDescriptor;)V" label="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Lorg/springframework/core/convert/AbstractDescriptor;)V" />
+      <node id="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Ljava/lang/reflect/Field;)V" label="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Ljava/lang/reflect/Field;)V" />
+      <node id="Ljava/lang/reflect/Field;-&gt;getType()Ljava/lang/Class;" label="Ljava/lang/reflect/Field;-&gt;getType()Ljava/lang/Class;" />
+      <node id="Lorg/springframework/core/convert/AbstractDescriptor;-&gt;getElementTypeDescriptor()Lorg/springframework/core/convert/TypeDescriptor;" label="Lorg/springframework/core/convert/AbstractDescriptor;-&gt;getElementTypeDescriptor()Lorg/springframework/core/convert/TypeDescriptor;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" />
+    </nodes>
+    <edges>
+      <edge source="Lorg/springframework/core/convert/FieldDescriptor;-&gt;&lt;init&gt;(Ljava/lang/reflect/Field;)V" target="Ljava/lang/reflect/Field;-&gt;getType()Ljava/lang/Class;" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" target="Ljava/lang/reflect/Field;-&gt;getType()Ljava/lang/Class;" id="1" />
+      <edge source="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Lorg/springframework/core/convert/AbstractDescriptor;)V" target="Lorg/springframework/core/convert/AbstractDescriptor;-&gt;getElementTypeDescriptor()Lorg/springframework/core/convert/TypeDescriptor;" id="2" />
+      <edge source="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Ljava/lang/reflect/Field;)V" target="Lorg/springframework/core/convert/FieldDescriptor;-&gt;&lt;init&gt;(Ljava/lang/reflect/Field;)V" id="3" />
+      <edge source="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Ljava/lang/reflect/Field;)V" target="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Lorg/springframework/core/convert/AbstractDescriptor;)V" id="4" />
+      <edge source="Lorg/springframework/core/convert/AbstractDescriptor;-&gt;getElementTypeDescriptor()Lorg/springframework/core/convert/TypeDescriptor;" target="Lorg/springframework/core/convert/TypeDescriptor;-&gt;&lt;init&gt;(Lorg/springframework/core/convert/AbstractDescriptor;)V" id="5" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getExtras(Landroid/app/Notification;)Landroid/os/Bundle;" id="6" />
+    </edges>
+  </graph>
+</gexf>

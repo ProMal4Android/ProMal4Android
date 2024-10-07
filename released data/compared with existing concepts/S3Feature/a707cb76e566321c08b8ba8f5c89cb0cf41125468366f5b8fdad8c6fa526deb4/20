@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V" label="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V" />
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V" label="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V" />
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;createTabView(Landroid/support/design/widget/TabLayout$Tab;)Landroid/support/design/widget/TabLayout$TabView;" label="Landroid/support/design/widget/TabLayout;-&gt;createTabView(Landroid/support/design/widget/TabLayout$Tab;)Landroid/support/design/widget/TabLayout$TabView;" />
+      <node id="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Landroid/support/design/widget/TabLayout;-&gt;addTabView(Landroid/support/design/widget/TabLayout$Tab;IZ)V" label="Landroid/support/design/widget/TabLayout;-&gt;addTabView(Landroid/support/design/widget/TabLayout$Tab;IZ)V" />
+      <node id="Landroid/support/design/widget/TabLayout$TabView;-&gt;&lt;init&gt;(Landroid/support/design/widget/TabLayout;Landroid/content/Context;Landroid/support/design/widget/TabLayout$Tab;)V" label="Landroid/support/design/widget/TabLayout$TabView;-&gt;&lt;init&gt;(Landroid/support/design/widget/TabLayout;Landroid/content/Context;Landroid/support/design/widget/TabLayout$Tab;)V" />
+      <node id="Landroid/widget/LinearLayout;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/widget/LinearLayout;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat;-&gt;registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V" target="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="0" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V" target="Ljava/lang/IllegalArgumentException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="1" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;addTab(Landroid/support/design/widget/TabLayout$Tab;IZ)V" target="Landroid/support/design/widget/TabLayout;-&gt;addTabView(Landroid/support/design/widget/TabLayout$Tab;IZ)V" id="2" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;createTabView(Landroid/support/design/widget/TabLayout$Tab;)Landroid/support/design/widget/TabLayout$TabView;" target="Landroid/support/design/widget/TabLayout$TabView;-&gt;&lt;init&gt;(Landroid/support/design/widget/TabLayout;Landroid/content/Context;Landroid/support/design/widget/TabLayout$Tab;)V" id="3" />
+      <edge source="Landroid/support/design/widget/TabLayout;-&gt;addTabView(Landroid/support/design/widget/TabLayout$Tab;IZ)V" target="Landroid/support/design/widget/TabLayout;-&gt;createTabView(Landroid/support/design/widget/TabLayout$Tab;)Landroid/support/design/widget/TabLayout$TabView;" id="4" />
+      <edge source="Landroid/support/design/widget/TabLayout$TabView;-&gt;&lt;init&gt;(Landroid/support/design/widget/TabLayout;Landroid/content/Context;Landroid/support/design/widget/TabLayout$Tab;)V" target="Landroid/widget/LinearLayout;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="5" />
+    </edges>
+  </graph>
+</gexf>

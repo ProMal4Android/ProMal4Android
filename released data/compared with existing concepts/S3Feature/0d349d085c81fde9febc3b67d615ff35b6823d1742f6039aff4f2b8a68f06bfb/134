@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;getCount()I" label="Landroid/support/v4/view/PagerAdapter;-&gt;getCount()I" />
+      <node id="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V" label="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;startUpdate(Landroid/view/ViewGroup;)V" label="Landroid/support/v4/view/PagerAdapter;-&gt;startUpdate(Landroid/view/ViewGroup;)V" />
+      <node id="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;canScroll()Z" label="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;canScroll()Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" label="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" label="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;access$200(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/PagerAdapter;" label="Landroid/support/v4/view/ViewPager;-&gt;access$200(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/PagerAdapter;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;getCount()I" id="0" />
+      <edge source="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V" target="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;canScroll()Z" id="1" />
+      <edge source="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V" target="Landroid/support/v4/view/ViewPager;-&gt;access$200(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/PagerAdapter;" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;canScroll()Z" target="Landroid/support/v4/view/PagerAdapter;-&gt;getCount()I" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager$MyAccessibilityDelegate;-&gt;canScroll()Z" target="Landroid/support/v4/view/ViewPager;-&gt;access$200(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/PagerAdapter;" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;getCount()I" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setAdapter(Landroid/support/v4/view/PagerAdapter;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;startUpdate(Landroid/view/ViewGroup;)V" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" target="Landroid/support/v4/view/PagerAdapter;-&gt;getCount()I" id="7" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" target="Landroid/support/v4/view/PagerAdapter;-&gt;startUpdate(Landroid/view/ViewGroup;)V" id="8" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/b/a;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Landroidx/b/a;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21;-&gt;unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V" label="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21;-&gt;unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;isCurrent(Landroid/os/Messenger;Ljava/lang/String;)Z" label="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;isCurrent(Landroid/os/Messenger;Ljava/lang/String;)Z" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" label="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;onServiceConnected(Landroid/os/Messenger;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat$Token;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;onServiceConnected(Landroid/os/Messenger;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat$Token;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$Subscription;-&gt;getCallbacks()Ljava/util/List;" label="Landroid/support/v4/media/MediaBrowserCompat$Subscription;-&gt;getCallbacks()Ljava/util/List;" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21;-&gt;unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V" target="Landroidx/b/a;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21;-&gt;unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V" target="Landroid/support/v4/media/MediaBrowserCompat$Subscription;-&gt;getCallbacks()Ljava/util/List;" id="1" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21;-&gt;unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;isCurrent(Landroid/os/Messenger;Ljava/lang/String;)Z" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" target="Landroidx/b/a;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putString(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;onServiceConnected(Landroid/os/Messenger;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat$Token;Landroid/os/Bundle;)V" target="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;isCurrent(Landroid/os/Messenger;Ljava/lang/String;)Z" id="6" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;onServiceConnected(Landroid/os/Messenger;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat$Token;Landroid/os/Bundle;)V" target="Landroid/support/v4/media/MediaBrowserCompat$Subscription;-&gt;getCallbacks()Ljava/util/List;" id="7" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;-&gt;onServiceConnected(Landroid/os/Messenger;Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat$Token;Landroid/os/Bundle;)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

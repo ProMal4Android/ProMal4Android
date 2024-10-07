@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" label="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" />
+      <node id="Lcom/android/vcard/VCardEntry$EntryElementIterator;-&gt;onElementGroupStarted(Lcom/android/vcard/VCardEntry$EntryLabel;)V" label="Lcom/android/vcard/VCardEntry$EntryElementIterator;-&gt;onElementGroupStarted(Lcom/android/vcard/VCardEntry$EntryLabel;)V" />
+      <node id="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" label="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" />
+      <node id="Lcom/android/vcard/VCardEntry;-&gt;iterateAllData(Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" label="Lcom/android/vcard/VCardEntry;-&gt;iterateAllData(Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" />
+      <node id="Lcom/android/vcard/VCardEntry;-&gt;isIgnorable()Z" label="Lcom/android/vcard/VCardEntry;-&gt;isIgnorable()Z" />
+      <node id="Lcom/android/vcard/VCardEntry;-&gt;iterateOneList(Ljava/util/List;Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" label="Lcom/android/vcard/VCardEntry;-&gt;iterateOneList(Ljava/util/List;Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" target="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" id="0" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" target="Lcom/android/vcard/VCardEntry;-&gt;iterateAllData(Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" id="1" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" target="Lcom/android/vcard/VCardEntry;-&gt;isIgnorable()Z" id="2" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;iterateAllData(Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" target="Lcom/android/vcard/VCardEntry$EntryElementIterator;-&gt;onElementGroupStarted(Lcom/android/vcard/VCardEntry$EntryLabel;)V" id="3" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;iterateAllData(Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" target="Lcom/android/vcard/VCardEntry;-&gt;iterateOneList(Ljava/util/List;Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" id="4" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;isIgnorable()Z" target="Lcom/android/vcard/VCardEntry;-&gt;iterateAllData(Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" id="5" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;iterateOneList(Ljava/util/List;Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" target="Ljava/util/List;-&gt;size()I" id="6" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;iterateOneList(Ljava/util/List;Lcom/android/vcard/VCardEntry$EntryElementIterator;)V" target="Lcom/android/vcard/VCardEntry$EntryElementIterator;-&gt;onElementGroupStarted(Lcom/android/vcard/VCardEntry$EntryLabel;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

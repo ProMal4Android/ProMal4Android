@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/qoppa/android/pdfProcess/PDFPage;-&gt;addAnnotation(Lcom/qoppa/android/pdf/annotations/Annotation;)V" label="Lcom/qoppa/android/pdfProcess/PDFPage;-&gt;addAnnotation(Lcom/qoppa/android/pdf/annotations/Annotation;)V" />
+      <node id="Lcom/qoppa/notes/b/b;-&gt;clearDrawingTool()V" label="Lcom/qoppa/notes/b/b;-&gt;clearDrawingTool()V" />
+      <node id="Landroid/app/Dialog;-&gt;show()V" label="Landroid/app/Dialog;-&gt;show()V" />
+      <node id="Lcom/qoppa/notes/views/annotcomps/drawingtools/NoteDrawingTool;-&gt;finishDrawing()V" label="Lcom/qoppa/notes/views/annotcomps/drawingtools/NoteDrawingTool;-&gt;finishDrawing()V" />
+      <node id="Lcom/qoppa/viewer/views/PDFPageView;-&gt;addAnnot(Lcom/qoppa/android/pdf/annotations/b/b;)V" label="Lcom/qoppa/viewer/views/PDFPageView;-&gt;addAnnot(Lcom/qoppa/android/pdf/annotations/b/b;)V" />
+      <node id="Lcom/qoppa/notes/views/annotcomps/drawingtools/AnnotDrawingTool;-&gt;finishDrawing()V" label="Lcom/qoppa/notes/views/annotcomps/drawingtools/AnnotDrawingTool;-&gt;finishDrawing()V" />
+      <node id="Landroid/support/v4/app/DialogFragment;-&gt;onStart()V" label="Landroid/support/v4/app/DialogFragment;-&gt;onStart()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/qoppa/notes/views/annotcomps/drawingtools/NoteDrawingTool;-&gt;finishDrawing()V" target="Lcom/qoppa/notes/b/b;-&gt;clearDrawingTool()V" id="0" />
+      <edge source="Lcom/qoppa/notes/views/annotcomps/drawingtools/NoteDrawingTool;-&gt;finishDrawing()V" target="Landroid/app/Dialog;-&gt;show()V" id="1" />
+      <edge source="Lcom/qoppa/notes/views/annotcomps/drawingtools/NoteDrawingTool;-&gt;finishDrawing()V" target="Lcom/qoppa/viewer/views/PDFPageView;-&gt;addAnnot(Lcom/qoppa/android/pdf/annotations/b/b;)V" id="2" />
+      <edge source="Lcom/qoppa/viewer/views/PDFPageView;-&gt;addAnnot(Lcom/qoppa/android/pdf/annotations/b/b;)V" target="Lcom/qoppa/android/pdfProcess/PDFPage;-&gt;addAnnotation(Lcom/qoppa/android/pdf/annotations/Annotation;)V" id="3" />
+      <edge source="Lcom/qoppa/notes/views/annotcomps/drawingtools/AnnotDrawingTool;-&gt;finishDrawing()V" target="Lcom/qoppa/notes/b/b;-&gt;clearDrawingTool()V" id="4" />
+      <edge source="Lcom/qoppa/notes/views/annotcomps/drawingtools/AnnotDrawingTool;-&gt;finishDrawing()V" target="Lcom/qoppa/viewer/views/PDFPageView;-&gt;addAnnot(Lcom/qoppa/android/pdf/annotations/b/b;)V" id="5" />
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;onStart()V" target="Landroid/app/Dialog;-&gt;show()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

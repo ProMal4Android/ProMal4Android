@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/internal/NavigationMenuItemView;-&gt;adjustAppearance()V" label="Landroid/support/design/internal/NavigationMenuItemView;-&gt;adjustAppearance()V" />
+      <node id="Landroid/support/v4/view/ActionProvider;-&gt;onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;" label="Landroid/support/v4/view/ActionProvider;-&gt;onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;" />
+      <node id="Landroid/widget/CheckedTextView;-&gt;setVisibility(I)V" label="Landroid/widget/CheckedTextView;-&gt;setVisibility(I)V" />
+      <node id="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" label="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" />
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;getItemView(Landroid/support/v7/view/menu/MenuItemImpl;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;getItemView(Landroid/support/v7/view/menu/MenuItemImpl;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Landroid/support/design/internal/NavigationMenuItemView;-&gt;shouldExpandActionArea()Z" label="Landroid/support/design/internal/NavigationMenuItemView;-&gt;shouldExpandActionArea()Z" />
+      <node id="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;getActionView()Landroid/view/View;" label="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;getActionView()Landroid/view/View;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/internal/NavigationMenuItemView;-&gt;adjustAppearance()V" target="Landroid/widget/CheckedTextView;-&gt;setVisibility(I)V" id="0" />
+      <edge source="Landroid/support/design/internal/NavigationMenuItemView;-&gt;adjustAppearance()V" target="Landroid/support/design/internal/NavigationMenuItemView;-&gt;shouldExpandActionArea()Z" id="1" />
+      <edge source="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" target="Landroid/support/v4/view/ActionProvider;-&gt;onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;" id="2" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;getItemView(Landroid/support/v7/view/menu/MenuItemImpl;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" id="3" />
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;getItemView(Landroid/support/v7/view/menu/MenuItemImpl;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;getActionView()Landroid/view/View;" id="4" />
+      <edge source="Landroid/support/design/internal/NavigationMenuItemView;-&gt;shouldExpandActionArea()Z" target="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;getActionView()Landroid/view/View;" id="5" />
+      <edge source="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;getActionView()Landroid/view/View;" target="Landroid/support/v4/view/ActionProvider;-&gt;onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;" id="6" />
+    </edges>
+  </graph>
+</gexf>

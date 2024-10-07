@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2000(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2000(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;doNext()Z" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;doNext()Z" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SelectAction;-&gt;doStartPosIsSelected()Z" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SelectAction;-&gt;doStartPosIsSelected()Z" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doNotSelected()Z" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doNotSelected()Z" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getEditMode()I" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getEditMode()I" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doEndPosIsSelected()Z" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doEndPosIsSelected()Z" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2200(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)I" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2200(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)I" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SelectAction;-&gt;doStartPosIsSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2000(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;" id="0" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SelectAction;-&gt;doStartPosIsSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getEditMode()I" id="1" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doNotSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2000(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;" id="2" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doNotSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;doNext()Z" id="3" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doNotSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getEditMode()I" id="4" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doNotSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2200(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)I" id="5" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doEndPosIsSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2000(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;" id="6" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doEndPosIsSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;doNext()Z" id="7" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doEndPosIsSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;getEditMode()I" id="8" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions$SetSpanActionBase;-&gt;doEndPosIsSelected()Z" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;access$2200(Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;)I" id="9" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Math;-&gt;min(II)I" label="Ljava/lang/Math;-&gt;min(II)I" />
+      <node id="Landroidx/appcompat/view/ActionBarPolicy;-&gt;getTabContainerHeight()I" label="Landroidx/appcompat/view/ActionBarPolicy;-&gt;getTabContainerHeight()I" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditStyledTextSpans$RescalableImageSpan;-&gt;getDrawable()Landroid/graphics/drawable/Drawable;" label="Lcom/android/ex/editstyledtext/EditStyledText$EditStyledTextSpans$RescalableImageSpan;-&gt;getDrawable()Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/content/ContentResolver;-&gt;openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;" label="Landroid/content/ContentResolver;-&gt;openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;" />
+      <node id="Landroidx/core/graphics/drawable/IconCompat;-&gt;loadDrawableInner(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;" label="Landroidx/core/graphics/drawable/IconCompat;-&gt;loadDrawableInner(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroidx/core/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" label="Landroidx/core/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/view/ActionBarPolicy;-&gt;getTabContainerHeight()I" target="Ljava/lang/Math;-&gt;min(II)I" id="0" />
+      <edge source="Landroidx/appcompat/view/ActionBarPolicy;-&gt;getTabContainerHeight()I" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="1" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditStyledTextSpans$RescalableImageSpan;-&gt;getDrawable()Landroid/graphics/drawable/Drawable;" target="Landroid/content/ContentResolver;-&gt;openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;" id="2" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditStyledTextSpans$RescalableImageSpan;-&gt;getDrawable()Landroid/graphics/drawable/Drawable;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="3" />
+      <edge source="Landroidx/core/graphics/drawable/IconCompat;-&gt;loadDrawableInner(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;" target="Landroid/content/ContentResolver;-&gt;openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;" id="4" />
+      <edge source="Landroidx/core/graphics/drawable/IconCompat;-&gt;loadDrawableInner(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;" target="Landroidx/core/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" id="5" />
+      <edge source="Landroidx/core/graphics/drawable/IconCompat;-&gt;loadDrawableInner(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="6" />
+      <edge source="Landroidx/core/graphics/drawable/IconCompat;-&gt;createLegacyIconFromAdaptiveIcon(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;" target="Ljava/lang/Math;-&gt;min(II)I" id="7" />
+    </edges>
+  </graph>
+</gexf>

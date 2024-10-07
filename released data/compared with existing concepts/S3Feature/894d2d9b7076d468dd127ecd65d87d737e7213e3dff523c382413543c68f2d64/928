@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/test/acleaner/ExceptionAppActivity;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" label="Lcom/test/acleaner/ExceptionAppActivity;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" />
+      <node id="Lcom/test/acleaner/Manager$SPreferences;-&gt;defaultSharedP(Landroid/content/Context;)V" label="Lcom/test/acleaner/Manager$SPreferences;-&gt;defaultSharedP(Landroid/content/Context;)V" />
+      <node id="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess;-&gt;doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;" label="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess;-&gt;doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;" label="Landroid/content/pm/PackageManager;-&gt;getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess$1$1$1;-&gt;run()V" label="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess$1$1$1;-&gt;run()V" />
+      <node id="Lorg/json/JSONArray;-&gt;&lt;init&gt;()V" label="Lorg/json/JSONArray;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationIcon()Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationIcon()Landroid/graphics/drawable/Drawable;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/test/acleaner/Manager$SPreferences;-&gt;defaultSharedP(Landroid/content/Context;)V" target="Lorg/json/JSONArray;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess;-&gt;doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;" target="Lcom/test/acleaner/ExceptionAppActivity;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" id="1" />
+      <edge source="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess;-&gt;doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;" target="Lcom/test/acleaner/Manager$SPreferences;-&gt;defaultSharedP(Landroid/content/Context;)V" id="2" />
+      <edge source="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess;-&gt;doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;" id="3" />
+      <edge source="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess$1$1$1;-&gt;run()V" target="Lcom/test/acleaner/ExceptionAppActivity;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" id="4" />
+      <edge source="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess$1$1$1;-&gt;run()V" target="Lcom/test/acleaner/Manager$SPreferences;-&gt;defaultSharedP(Landroid/content/Context;)V" id="5" />
+      <edge source="Lcom/test/acleaner/ExceptionAppActivity$LoadProcess$1$1$1;-&gt;run()V" target="Lorg/json/JSONArray;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationIcon()Landroid/graphics/drawable/Drawable;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;" id="7" />
+    </edges>
+  </graph>
+</gexf>

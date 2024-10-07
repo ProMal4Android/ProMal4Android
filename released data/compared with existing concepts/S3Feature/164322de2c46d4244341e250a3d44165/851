@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/AppCompatCallback;Ljava/lang/Object;)V" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/AppCompatCallback;Ljava/lang/Object;)V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegate;-&gt;&lt;init&gt;()V" label="Landroidx/appcompat/app/AppCompatDelegate;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/android/ex/photo/PhotoViewPager;-&gt;getCurrentItem()I" label="Lcom/android/ex/photo/PhotoViewPager;-&gt;getCurrentItem()I" />
+      <node id="Lcom/android/ex/photo/PhotoViewController;-&gt;updateActionBar()V" label="Lcom/android/ex/photo/PhotoViewController;-&gt;updateActionBar()V" />
+      <node id="Lcom/android/ex/photo/PhotoViewController;-&gt;setViewActivated(I)V" label="Lcom/android/ex/photo/PhotoViewController;-&gt;setViewActivated(I)V" />
+      <node id="Lcom/android/ex/photo/PhotoViewController;-&gt;getCursorAtProperPosition()Landroid/database/Cursor;" label="Lcom/android/ex/photo/PhotoViewController;-&gt;getCursorAtProperPosition()Landroid/database/Cursor;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/AppCompatCallback;Ljava/lang/Object;)V" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/view/Window;Landroidx/appcompat/app/AppCompatCallback;Ljava/lang/Object;)V" target="Landroidx/appcompat/app/AppCompatDelegate;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;updateActionBar()V" target="Lcom/android/ex/photo/PhotoViewPager;-&gt;getCurrentItem()I" id="2" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;updateActionBar()V" target="Lcom/android/ex/photo/PhotoViewController;-&gt;getCursorAtProperPosition()Landroid/database/Cursor;" id="3" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;setViewActivated(I)V" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;setViewActivated(I)V" target="Lcom/android/ex/photo/PhotoViewController;-&gt;updateActionBar()V" id="5" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;setViewActivated(I)V" target="Lcom/android/ex/photo/PhotoViewController;-&gt;getCursorAtProperPosition()Landroid/database/Cursor;" id="6" />
+      <edge source="Lcom/android/ex/photo/PhotoViewController;-&gt;getCursorAtProperPosition()Landroid/database/Cursor;" target="Lcom/android/ex/photo/PhotoViewPager;-&gt;getCurrentItem()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

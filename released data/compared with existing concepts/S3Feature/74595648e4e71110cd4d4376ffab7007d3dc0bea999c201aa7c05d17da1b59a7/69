@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;-&gt;&lt;init&gt;(Ljava/util/Map;)V" label="Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;-&gt;&lt;init&gt;(Ljava/util/Map;)V" />
+      <node id="Landroid/arch/lifecycle/ClassesInfoCache;-&gt;createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;" label="Landroid/arch/lifecycle/ClassesInfoCache;-&gt;createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;" />
+      <node id="Landroid/view/MenuItem;-&gt;getItemId()I" label="Landroid/view/MenuItem;-&gt;getItemId()I" />
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onOptionsItemSelected(Landroid/view/MenuItem;)Z" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onOptionsItemSelected(Landroid/view/MenuItem;)Z" />
+      <node id="Landroid/support/v7/view/menu/BaseMenuWrapper;-&gt;internalRemoveItem(I)V" label="Landroid/support/v7/view/menu/BaseMenuWrapper;-&gt;internalRemoveItem(I)V" />
+      <node id="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" label="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" />
+      <node id="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" label="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;-&gt;&lt;init&gt;(Ljava/util/Map;)V" target="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" id="0" />
+      <edge source="Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;-&gt;&lt;init&gt;(Ljava/util/Map;)V" target="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/arch/lifecycle/ClassesInfoCache;-&gt;createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;" target="Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;-&gt;&lt;init&gt;(Ljava/util/Map;)V" id="2" />
+      <edge source="Landroid/arch/lifecycle/ClassesInfoCache;-&gt;createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;" target="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" id="3" />
+      <edge source="Landroid/arch/lifecycle/ClassesInfoCache;-&gt;createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroid/arch/lifecycle/ClassesInfoCache$CallbackInfo;" target="Ljava/util/HashMap;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;onOptionsItemSelected(Landroid/view/MenuItem;)Z" target="Landroid/view/MenuItem;-&gt;getItemId()I" id="5" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuWrapper;-&gt;internalRemoveItem(I)V" target="Landroid/view/MenuItem;-&gt;getItemId()I" id="6" />
+      <edge source="Landroid/support/v7/view/menu/BaseMenuWrapper;-&gt;internalRemoveItem(I)V" target="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" id="7" />
+    </edges>
+  </graph>
+</gexf>

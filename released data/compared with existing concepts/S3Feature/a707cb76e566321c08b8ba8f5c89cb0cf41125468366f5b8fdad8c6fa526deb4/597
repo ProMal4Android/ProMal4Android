@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/SnackbarManager;-&gt;dismiss(Landroid/support/design/widget/SnackbarManager$Callback;I)V" label="Landroid/support/design/widget/SnackbarManager;-&gt;dismiss(Landroid/support/design/widget/SnackbarManager$Callback;I)V" />
+      <node id="Landroid/support/design/widget/SnackbarManager;-&gt;isNextSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" label="Landroid/support/design/widget/SnackbarManager;-&gt;isNextSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" />
+      <node id="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;start()V" label="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;start()V" />
+      <node id="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" label="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" />
+      <node id="Landroid/support/design/widget/SnackbarManager;-&gt;cancelTimeout(Landroid/support/design/widget/SnackbarManager$Callback;)V" label="Landroid/support/design/widget/SnackbarManager;-&gt;cancelTimeout(Landroid/support/design/widget/SnackbarManager$Callback;)V" />
+      <node id="Landroid/support/design/widget/SnackbarManager$SnackbarRecord;-&gt;isSnackbar(Landroid/support/design/widget/SnackbarManager$Callback;)Z" label="Landroid/support/design/widget/SnackbarManager$SnackbarRecord;-&gt;isSnackbar(Landroid/support/design/widget/SnackbarManager$Callback;)Z" />
+      <node id="Landroid/support/design/widget/SnackbarManager;-&gt;isCurrentSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" label="Landroid/support/design/widget/SnackbarManager;-&gt;isCurrentSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/SnackbarManager;-&gt;dismiss(Landroid/support/design/widget/SnackbarManager$Callback;I)V" target="Landroid/support/design/widget/SnackbarManager;-&gt;isNextSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" id="0" />
+      <edge source="Landroid/support/design/widget/SnackbarManager;-&gt;dismiss(Landroid/support/design/widget/SnackbarManager$Callback;I)V" target="Landroid/support/design/widget/SnackbarManager;-&gt;isCurrentSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" id="1" />
+      <edge source="Landroid/support/design/widget/SnackbarManager;-&gt;isNextSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" target="Landroid/support/design/widget/SnackbarManager$SnackbarRecord;-&gt;isSnackbar(Landroid/support/design/widget/SnackbarManager$Callback;)Z" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;start()V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/design/widget/SnackbarManager;-&gt;cancelTimeout(Landroid/support/design/widget/SnackbarManager$Callback;)V" target="Landroid/support/design/widget/SnackbarManager;-&gt;isCurrentSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" id="4" />
+      <edge source="Landroid/support/design/widget/SnackbarManager$SnackbarRecord;-&gt;isSnackbar(Landroid/support/design/widget/SnackbarManager$Callback;)Z" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/design/widget/SnackbarManager;-&gt;isCurrentSnackbarLocked(Landroid/support/design/widget/SnackbarManager$Callback;)Z" target="Landroid/support/design/widget/SnackbarManager$SnackbarRecord;-&gt;isSnackbar(Landroid/support/design/widget/SnackbarManager$Callback;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

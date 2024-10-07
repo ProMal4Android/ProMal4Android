@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/CursorAdapter;-&gt;newDropDownView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;" label="Landroid/support/v4/widget/CursorAdapter;-&gt;newDropDownView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" label="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" />
+      <node id="Landroid/database/Cursor;-&gt;moveToPosition(I)Z" label="Landroid/database/Cursor;-&gt;moveToPosition(I)Z" />
+      <node id="Landroid/support/v4/widget/CursorAdapter;-&gt;getItemId(I)J" label="Landroid/support/v4/widget/CursorAdapter;-&gt;getItemId(I)J" />
+      <node id="Landroid/support/v4/provider/DocumentsContractApi19;-&gt;queryForLong(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;J)J" label="Landroid/support/v4/provider/DocumentsContractApi19;-&gt;queryForLong(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;J)J" />
+      <node id="Landroid/database/Cursor;-&gt;getLong(I)J" label="Landroid/database/Cursor;-&gt;getLong(I)J" />
+      <node id="Landroid/support/v4/widget/CursorAdapter;-&gt;getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Landroid/support/v4/widget/CursorAdapter;-&gt;getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/CursorAdapter;-&gt;getItemId(I)J" target="Landroid/database/Cursor;-&gt;moveToPosition(I)Z" id="0" />
+      <edge source="Landroid/support/v4/widget/CursorAdapter;-&gt;getItemId(I)J" target="Landroid/database/Cursor;-&gt;getLong(I)J" id="1" />
+      <edge source="Landroid/support/v4/provider/DocumentsContractApi19;-&gt;queryForLong(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;J)J" target="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" id="2" />
+      <edge source="Landroid/support/v4/provider/DocumentsContractApi19;-&gt;queryForLong(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;J)J" target="Landroid/database/Cursor;-&gt;getLong(I)J" id="3" />
+      <edge source="Landroid/support/v4/widget/CursorAdapter;-&gt;getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/support/v4/widget/CursorAdapter;-&gt;newDropDownView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;" id="4" />
+      <edge source="Landroid/support/v4/widget/CursorAdapter;-&gt;getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/database/Cursor;-&gt;moveToPosition(I)Z" id="5" />
+    </edges>
+  </graph>
+</gexf>

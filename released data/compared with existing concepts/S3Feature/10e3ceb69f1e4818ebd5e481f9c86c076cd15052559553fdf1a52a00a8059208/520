@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/login/widget/ProfilePictureView;-&gt;updateImageQueryParameters()Z" label="Lcom/facebook/login/widget/ProfilePictureView;-&gt;updateImageQueryParameters()Z" />
+      <node id="Lcom/facebook/login/widget/ProfilePictureView;-&gt;getPresetSizeInPixels(Z)I" label="Lcom/facebook/login/widget/ProfilePictureView;-&gt;getPresetSizeInPixels(Z)I" />
+      <node id="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" label="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" />
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" />
+      <node id="Lcom/facebook/login/widget/ProfilePictureView;-&gt;getResources()Landroid/content/res/Resources;" label="Lcom/facebook/login/widget/ProfilePictureView;-&gt;getResources()Landroid/content/res/Resources;" />
+      <node id="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" label="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" />
+      <node id="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setBlankProfilePicture()V" label="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setBlankProfilePicture()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/login/widget/ProfilePictureView;-&gt;updateImageQueryParameters()Z" target="Lcom/facebook/login/widget/ProfilePictureView;-&gt;getPresetSizeInPixels(Z)I" id="0" />
+      <edge source="Lcom/facebook/login/widget/ProfilePictureView;-&gt;getPresetSizeInPixels(Z)I" target="Lcom/facebook/login/widget/ProfilePictureView;-&gt;getResources()Landroid/content/res/Resources;" id="1" />
+      <edge source="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" target="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" id="2" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;" target="Landroid/widget/ImageView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" id="3" />
+      <edge source="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setBlankProfilePicture()V" target="Lcom/facebook/login/widget/ProfilePictureView;-&gt;updateImageQueryParameters()Z" id="4" />
+      <edge source="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setBlankProfilePicture()V" target="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setImageBitmap(Landroid/graphics/Bitmap;)V" id="5" />
+      <edge source="Lcom/facebook/login/widget/ProfilePictureView;-&gt;setBlankProfilePicture()V" target="Lcom/facebook/login/widget/ProfilePictureView;-&gt;getResources()Landroid/content/res/Resources;" id="6" />
+    </edges>
+  </graph>
+</gexf>

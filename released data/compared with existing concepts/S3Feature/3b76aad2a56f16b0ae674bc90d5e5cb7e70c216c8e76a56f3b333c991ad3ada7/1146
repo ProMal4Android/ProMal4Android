@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" />
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;popBackStackImmediate(Ljava/lang/String;II)Z" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;popBackStackImmediate(Ljava/lang/String;II)Z" />
+      <node id="Ljava/util/ArrayList;-&gt;clear()V" label="Ljava/util/ArrayList;-&gt;clear()V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;cleanupExec()V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;cleanupExec()V" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;cleanupExec()V" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;popBackStackImmediate(Ljava/lang/String;II)Z" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;popBackStackImmediate(Ljava/lang/String;II)Z" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;cleanupExec()V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;cleanupExec()V" target="Ljava/util/ArrayList;-&gt;clear()V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" target="Ljava/util/ArrayList;-&gt;clear()V" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="6" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" target="Ljava/util/ArrayList;-&gt;clear()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

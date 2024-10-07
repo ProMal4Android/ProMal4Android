@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" label="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" />
+      <node id="Landroid/support/constraint/solver/widgets/ConstraintWidget;-&gt;applyConstraints(Landroid/support/constraint/solver/LinearSystem;ZLandroid/support/constraint/solver/SolverVariable;Landroid/support/constraint/solver/SolverVariable;Landroid/support/constraint/solver/widgets/ConstraintWidget$DimensionBehaviour;ZLandroid/support/constraint/solver/widgets/ConstraintAnchor;Landroid/support/constraint/solver/widgets/ConstraintAnchor;IIIIFZZIIIFZ)V" label="Landroid/support/constraint/solver/widgets/ConstraintWidget;-&gt;applyConstraints(Landroid/support/constraint/solver/LinearSystem;ZLandroid/support/constraint/solver/SolverVariable;Landroid/support/constraint/solver/SolverVariable;Landroid/support/constraint/solver/widgets/ConstraintWidget$DimensionBehaviour;ZLandroid/support/constraint/solver/widgets/ConstraintAnchor;Landroid/support/constraint/solver/widgets/ConstraintAnchor;IIIIFZZIIIFZ)V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" />
+      <node id="Landroid/support/constraint/solver/SolverVariable;-&gt;reset()V" label="Landroid/support/constraint/solver/SolverVariable;-&gt;reset()V" />
+      <node id="Landroid/support/constraint/solver/widgets/ConstraintAnchor;-&gt;resetSolverVariable(Landroid/support/constraint/solver/Cache;)V" label="Landroid/support/constraint/solver/widgets/ConstraintAnchor;-&gt;resetSolverVariable(Landroid/support/constraint/solver/Cache;)V" />
+      <node id="Ljava/lang/Math;-&gt;min(II)I" label="Ljava/lang/Math;-&gt;min(II)I" />
+      <node id="Landroid/support/constraint/solver/LinearSystem;-&gt;acquireSolverVariable(Landroid/support/constraint/solver/SolverVariable$Type;Ljava/lang/String;)Landroid/support/constraint/solver/SolverVariable;" label="Landroid/support/constraint/solver/LinearSystem;-&gt;acquireSolverVariable(Landroid/support/constraint/solver/SolverVariable$Type;Ljava/lang/String;)Landroid/support/constraint/solver/SolverVariable;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" target="Landroid/support/constraint/solver/SolverVariable;-&gt;reset()V" id="0" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" target="Landroid/support/constraint/solver/widgets/ConstraintAnchor;-&gt;resetSolverVariable(Landroid/support/constraint/solver/Cache;)V" id="1" />
+      <edge source="Landroid/support/constraint/solver/widgets/ConstraintWidget;-&gt;applyConstraints(Landroid/support/constraint/solver/LinearSystem;ZLandroid/support/constraint/solver/SolverVariable;Landroid/support/constraint/solver/SolverVariable;Landroid/support/constraint/solver/widgets/ConstraintWidget$DimensionBehaviour;ZLandroid/support/constraint/solver/widgets/ConstraintAnchor;Landroid/support/constraint/solver/widgets/ConstraintAnchor;IIIIFZZIIIFZ)V" target="Landroid/support/constraint/solver/LinearSystem;-&gt;createObjectVariable(Ljava/lang/Object;)Landroid/support/constraint/solver/SolverVariable;" id="2" />
+      <edge source="Landroid/support/constraint/solver/widgets/ConstraintWidget;-&gt;applyConstraints(Landroid/support/constraint/solver/LinearSystem;ZLandroid/support/constraint/solver/SolverVariable;Landroid/support/constraint/solver/SolverVariable;Landroid/support/constraint/solver/widgets/ConstraintWidget$DimensionBehaviour;ZLandroid/support/constraint/solver/widgets/ConstraintAnchor;Landroid/support/constraint/solver/widgets/ConstraintAnchor;IIIIFZZIIIFZ)V" target="Ljava/lang/Math;-&gt;min(II)I" id="3" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;removeAtRange(II)V" target="Ljava/lang/Math;-&gt;min(II)I" id="4" />
+      <edge source="Landroid/support/constraint/solver/widgets/ConstraintAnchor;-&gt;resetSolverVariable(Landroid/support/constraint/solver/Cache;)V" target="Landroid/support/constraint/solver/SolverVariable;-&gt;reset()V" id="5" />
+      <edge source="Landroid/support/constraint/solver/LinearSystem;-&gt;acquireSolverVariable(Landroid/support/constraint/solver/SolverVariable$Type;Ljava/lang/String;)Landroid/support/constraint/solver/SolverVariable;" target="Landroid/support/constraint/solver/SolverVariable;-&gt;reset()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" />
+      <node id="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" label="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" />
+      <node id="Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;-&gt;createInputStream()Ljava/io/InputStream;" label="Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;-&gt;createInputStream()Ljava/io/InputStream;" />
+      <node id="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" label="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" />
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Ljava/lang/Object;" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Ljava/lang/Object;" />
+      <node id="Lcom/android/ex/photo/util/ImageUtils;-&gt;getImageBounds(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;)Landroid/graphics/Point;" label="Lcom/android/ex/photo/util/ImageUtils;-&gt;getImageBounds(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;)Landroid/graphics/Point;" />
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;-&gt;&lt;init&gt;()V" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" target="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" id="0" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" target="Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" target="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" id="2" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" target="Lcom/android/ex/photo/util/ImageUtils;-&gt;getImageBounds(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;)Landroid/graphics/Point;" id="3" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;createLocalBitmap(Landroid/content/ContentResolver;Landroid/net/Uri;I)Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" target="Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" target="Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;-&gt;createInputStream()Ljava/io/InputStream;" id="5" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Ljava/lang/Object;" target="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" id="6" />
+      <edge source="Lcom/android/ex/photo/util/ImageUtils;-&gt;getImageBounds(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;)Landroid/graphics/Point;" target="Lcom/android/ex/photo/util/ImageUtils;-&gt;decodeStream(Lcom/android/ex/photo/util/ImageUtils$InputStreamFactory;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;" id="7" />
+    </edges>
+  </graph>
+</gexf>

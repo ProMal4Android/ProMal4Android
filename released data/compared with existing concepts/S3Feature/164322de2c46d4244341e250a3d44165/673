@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/content/res/AppCompatResources;-&gt;getTypedValue()Landroid/util/TypedValue;" label="Landroidx/appcompat/content/res/AppCompatResources;-&gt;getTypedValue()Landroid/util/TypedValue;" />
+      <node id="Landroidx/appcompat/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" label="Landroidx/appcompat/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" />
+      <node id="Landroidx/appcompat/content/res/AppCompatResources;-&gt;isColorInt(Landroid/content/Context;I)Z" label="Landroidx/appcompat/content/res/AppCompatResources;-&gt;isColorInt(Landroid/content/Context;I)Z" />
+      <node id="Ljava/lang/ThreadLocal;-&gt;get()Ljava/lang/Object;" label="Ljava/lang/ThreadLocal;-&gt;get()Ljava/lang/Object;" />
+      <node id="Lcom/android/common/content/SQLiteContentProvider;-&gt;insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" label="Lcom/android/common/content/SQLiteContentProvider;-&gt;insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" />
+      <node id="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" label="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" />
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/content/res/AppCompatResources;-&gt;getTypedValue()Landroid/util/TypedValue;" target="Ljava/lang/ThreadLocal;-&gt;get()Ljava/lang/Object;" id="0" />
+      <edge source="Landroidx/appcompat/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroidx/appcompat/content/res/AppCompatResources;-&gt;isColorInt(Landroid/content/Context;I)Z" id="1" />
+      <edge source="Landroidx/appcompat/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="2" />
+      <edge source="Landroidx/appcompat/content/res/AppCompatResources;-&gt;isColorInt(Landroid/content/Context;I)Z" target="Landroidx/appcompat/content/res/AppCompatResources;-&gt;getTypedValue()Landroid/util/TypedValue;" id="3" />
+      <edge source="Landroidx/appcompat/content/res/AppCompatResources;-&gt;isColorInt(Landroid/content/Context;I)Z" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="4" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" target="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" id="5" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" target="Ljava/lang/ThreadLocal;-&gt;get()Ljava/lang/Object;" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;&lt;init&gt;(I)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;&lt;init&gt;(I)V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;gc()V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;gc()V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;idealIntArraySize(I)I" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;idealIntArraySize(I)I" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;" label="Landroid/support/v4/app/FragmentActivity;-&gt;getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;&lt;init&gt;(I)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;idealIntArraySize(I)I" id="0" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" id="1" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;gc()V" id="2" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;append(ILjava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;idealIntArraySize(I)I" id="3" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;gc()V" id="4" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;idealIntArraySize(I)I" id="5" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;&lt;init&gt;()V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;&lt;init&gt;(I)V" id="6" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;put(ILjava/lang/Object;)V" id="7" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;getLoaderManager(IZZ)Landroid/support/v4/app/LoaderManagerImpl;" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;&lt;init&gt;()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

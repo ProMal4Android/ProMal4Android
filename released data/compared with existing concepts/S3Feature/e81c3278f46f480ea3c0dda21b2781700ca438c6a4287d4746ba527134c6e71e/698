@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setScrollingCacheEnabled(Z)V" label="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setScrollingCacheEnabled(Z)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" label="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" />
+      <node id="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" label="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" />
+      <node id="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" label="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" />
+      <node id="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZI)V" label="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZI)V" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" label="Landroid/support/v4/view/PagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" />
+      <node id="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZ)V" label="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZ)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" id="0" />
+      <edge source="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V" id="1" />
+      <edge source="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" target="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZ)V" id="2" />
+      <edge source="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" target="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setScrollingCacheEnabled(Z)V" id="3" />
+      <edge source="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" target="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZI)V" id="4" />
+      <edge source="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZI)V" target="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setScrollingCacheEnabled(Z)V" id="5" />
+      <edge source="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZ)V" target="Lcom/gigamole/infinitecycleviewpager/VerticalViewPager;-&gt;setCurrentItemInternal(IZZI)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

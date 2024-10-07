@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;destroyItem(Landroid/view/View;ILjava/lang/Object;)V" label="Landroid/support/v4/view/PagerAdapter;-&gt;destroyItem(Landroid/view/View;ILjava/lang/Object;)V" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" label="Landroid/support/v4/view/PagerAdapter;-&gt;destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" label="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/View;I)Ljava/lang/Object;" label="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/View;I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" label="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" />
+      <node id="Ljava/lang/UnsupportedOperationException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/UnsupportedOperationException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/PagerAdapter;-&gt;destroyItem(Landroid/view/View;ILjava/lang/Object;)V" target="Ljava/lang/UnsupportedOperationException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="0" />
+      <edge source="Landroid/support/v4/view/PagerAdapter;-&gt;destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;destroyItem(Landroid/view/View;ILjava/lang/Object;)V" id="1" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" target="Landroid/support/v4/view/PagerAdapter;-&gt;destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dataSetChanged()V" target="Ljava/util/ArrayList;-&gt;size()I" id="3" />
+      <edge source="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/View;I)Ljava/lang/Object;" target="Ljava/lang/UnsupportedOperationException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="4" />
+      <edge source="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" target="Landroid/support/v4/view/PagerAdapter;-&gt;instantiateItem(Landroid/view/View;I)Ljava/lang/Object;" id="5" />
+    </edges>
+  </graph>
+</gexf>

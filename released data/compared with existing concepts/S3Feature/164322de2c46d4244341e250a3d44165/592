@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getStringOrNull(Landroid/database/Cursor;I)Ljava/lang/String;" label="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getStringOrNull(Landroid/database/Cursor;I)Ljava/lang/String;" />
+      <node id="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getRecipientEntry(I)Lcom/android/ex/chips/RecipientEntry;" label="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getRecipientEntry(I)Lcom/android/ex/chips/RecipientEntry;" />
+      <node id="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getColumnString(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;" label="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getColumnString(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Landroid/database/Cursor;-&gt;getString(I)Ljava/lang/String;" label="Landroid/database/Cursor;-&gt;getString(I)Ljava/lang/String;" />
+      <node id="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" label="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" />
+      <node id="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getIcon1(Landroid/database/Cursor;)Landroid/graphics/drawable/Drawable;" label="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getIcon1(Landroid/database/Cursor;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" label="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getStringOrNull(Landroid/database/Cursor;I)Ljava/lang/String;" target="Landroid/database/Cursor;-&gt;getString(I)Ljava/lang/String;" id="0" />
+      <edge source="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getRecipientEntry(I)Lcom/android/ex/chips/RecipientEntry;" target="Landroid/database/Cursor;-&gt;getString(I)Ljava/lang/String;" id="1" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getColumnString(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;" target="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getStringOrNull(Landroid/database/Cursor;I)Ljava/lang/String;" id="2" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" target="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getStringOrNull(Landroid/database/Cursor;I)Ljava/lang/String;" id="3" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" target="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getIcon1(Landroid/database/Cursor;)Landroid/graphics/drawable/Drawable;" id="4" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getIcon1(Landroid/database/Cursor;)Landroid/graphics/drawable/Drawable;" target="Landroid/database/Cursor;-&gt;getString(I)Ljava/lang/String;" id="5" />
+      <edge source="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V" target="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getRecipientEntry(I)Lcom/android/ex/chips/RecipientEntry;" id="6" />
+    </edges>
+  </graph>
+</gexf>

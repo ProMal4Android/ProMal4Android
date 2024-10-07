@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/analytics/CampaignTrackingService;-&gt;onCreate()V" label="Lcom/google/android/gms/analytics/CampaignTrackingService;-&gt;onCreate()V" />
+      <node id="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" label="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" />
+      <node id="Lcom/google/android/gms/internal/zzsc;-&gt;zzan(Landroid/content/Context;)Lcom/google/android/gms/internal/zzsc;" label="Lcom/google/android/gms/internal/zzsc;-&gt;zzan(Landroid/content/Context;)Lcom/google/android/gms/internal/zzsc;" />
+      <node id="Lcom/google/android/gms/common/util/zzi;-&gt;zzzc()Lcom/google/android/gms/common/util/zze;" label="Lcom/google/android/gms/common/util/zzi;-&gt;zzzc()Lcom/google/android/gms/common/util/zze;" />
+      <node id="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Lcom/google/android/gms/internal/zzsc;-&gt;zznS()Lcom/google/android/gms/internal/zztd;" label="Lcom/google/android/gms/internal/zzsc;-&gt;zznS()Lcom/google/android/gms/internal/zztd;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingService;-&gt;onCreate()V" target="Lcom/google/android/gms/internal/zzsc;-&gt;zzan(Landroid/content/Context;)Lcom/google/android/gms/internal/zzsc;" id="0" />
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingService;-&gt;onCreate()V" target="Lcom/google/android/gms/internal/zzsc;-&gt;zznS()Lcom/google/android/gms/internal/zztd;" id="1" />
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="2" />
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/google/android/gms/internal/zzsc;-&gt;zzan(Landroid/content/Context;)Lcom/google/android/gms/internal/zzsc;" id="3" />
+      <edge source="Lcom/google/android/gms/analytics/CampaignTrackingReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/google/android/gms/internal/zzsc;-&gt;zznS()Lcom/google/android/gms/internal/zztd;" id="4" />
+      <edge source="Lcom/google/android/gms/internal/zzsc;-&gt;zzan(Landroid/content/Context;)Lcom/google/android/gms/internal/zzsc;" target="Lcom/google/android/gms/common/util/zzi;-&gt;zzzc()Lcom/google/android/gms/common/util/zze;" id="5" />
+      <edge source="Lcom/google/android/gms/internal/zzsc;-&gt;zzan(Landroid/content/Context;)Lcom/google/android/gms/internal/zzsc;" target="Lcom/google/android/gms/internal/zzsc;-&gt;zznS()Lcom/google/android/gms/internal/zztd;" id="6" />
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/Context;-&gt;startService(Landroid/content/Intent;)Landroid/content/ComponentName;" id="7" />
+    </edges>
+  </graph>
+</gexf>

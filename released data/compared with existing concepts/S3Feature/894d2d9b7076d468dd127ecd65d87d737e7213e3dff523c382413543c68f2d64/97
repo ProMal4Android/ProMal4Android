@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/view/MenuInflater;-&gt;inflate(ILandroid/view/Menu;)V" label="Landroid/view/MenuInflater;-&gt;inflate(ILandroid/view/Menu;)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;inflateMenu(I)V" label="Landroid/support/v7/widget/Toolbar;-&gt;inflateMenu(I)V" />
+      <node id="Landroid/support/v7/view/SupportMenuInflater;-&gt;inflate(ILandroid/view/Menu;)V" label="Landroid/support/v7/view/SupportMenuInflater;-&gt;inflate(ILandroid/view/Menu;)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;getMenu()Landroid/view/Menu;" label="Landroid/support/v7/widget/Toolbar;-&gt;getMenu()Landroid/view/Menu;" />
+      <node id="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;inflateMenu(I)V" target="Landroid/view/MenuInflater;-&gt;inflate(ILandroid/view/Menu;)V" id="0" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;inflateMenu(I)V" target="Landroid/support/v7/widget/Toolbar;-&gt;getMenu()Landroid/view/Menu;" id="1" />
+      <edge source="Landroid/support/v7/view/SupportMenuInflater;-&gt;inflate(ILandroid/view/Menu;)V" target="Landroid/view/MenuInflater;-&gt;inflate(ILandroid/view/Menu;)V" id="2" />
+      <edge source="Landroid/support/v7/view/SupportMenuInflater;-&gt;inflate(ILandroid/view/Menu;)V" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="3" />
+      <edge source="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="4" />
+      <edge source="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="5" />
+    </edges>
+  </graph>
+</gexf>

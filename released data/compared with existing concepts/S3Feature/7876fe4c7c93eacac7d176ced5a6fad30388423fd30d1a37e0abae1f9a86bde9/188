@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;scrollToChild(Landroid/view/View;)V" label="Landroid/support/v4/widget/NestedScrollView;-&gt;scrollToChild(Landroid/view/View;)V" />
+      <node id="Landroid/widget/FrameLayout;-&gt;onLayout(ZIIII)V" label="Landroid/widget/FrameLayout;-&gt;onLayout(ZIIII)V" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScrollDeltaToGetChildRectOnScreen(Landroid/graphics/Rect;)I" label="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScrollDeltaToGetChildRectOnScreen(Landroid/graphics/Rect;)I" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;getScrollRange()I" label="Landroid/support/v4/widget/NestedScrollView;-&gt;getScrollRange()I" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;onLayout(ZIIII)V" label="Landroid/support/v4/widget/NestedScrollView;-&gt;onLayout(ZIIII)V" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;onLayout(ZIIII)V" label="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;onLayout(ZIIII)V" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;getChildCount()I" label="Landroid/support/v4/widget/NestedScrollView;-&gt;getChildCount()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;scrollToChild(Landroid/view/View;)V" target="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScrollDeltaToGetChildRectOnScreen(Landroid/graphics/Rect;)I" id="0" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;computeScrollDeltaToGetChildRectOnScreen(Landroid/graphics/Rect;)I" target="Landroid/support/v4/widget/NestedScrollView;-&gt;getChildCount()I" id="1" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;getScrollRange()I" target="Landroid/support/v4/widget/NestedScrollView;-&gt;getChildCount()I" id="2" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;onLayout(ZIIII)V" target="Landroid/support/v4/widget/NestedScrollView;-&gt;scrollToChild(Landroid/view/View;)V" id="3" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;onLayout(ZIIII)V" target="Landroid/widget/FrameLayout;-&gt;onLayout(ZIIII)V" id="4" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;onLayout(ZIIII)V" target="Landroid/support/v4/widget/NestedScrollView;-&gt;getChildCount()I" id="5" />
+      <edge source="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;onLayout(ZIIII)V" target="Landroid/widget/FrameLayout;-&gt;onLayout(ZIIII)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

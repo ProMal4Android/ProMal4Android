@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getMenuView(Landroid/view/ViewGroup;)Landroid/support/v7/internal/view/menu/MenuView;" label="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getMenuView(Landroid/view/ViewGroup;)Landroid/support/v7/internal/view/menu/MenuView;" />
+      <node id="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;" label="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;" />
+      <node id="Landroid/support/v7/internal/widget/DecorToolbar;-&gt;getViewGroup()Landroid/view/ViewGroup;" label="Landroid/support/v7/internal/widget/DecorToolbar;-&gt;getViewGroup()Landroid/view/ViewGroup;" />
+      <node id="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getAdapter()Landroid/widget/ListAdapter;" label="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getAdapter()Landroid/widget/ListAdapter;" />
+      <node id="Landroid/support/v7/internal/app/ToolbarActionBar;-&gt;getListMenuView(Landroid/view/Menu;)Landroid/view/View;" label="Landroid/support/v7/internal/app/ToolbarActionBar;-&gt;getListMenuView(Landroid/view/Menu;)Landroid/view/View;" />
+      <node id="Landroid/support/v7/internal/view/menu/ListMenuPresenter$MenuAdapter;-&gt;&lt;init&gt;(Landroid/support/v7/internal/view/menu/ListMenuPresenter;)V" label="Landroid/support/v7/internal/view/menu/ListMenuPresenter$MenuAdapter;-&gt;&lt;init&gt;(Landroid/support/v7/internal/view/menu/ListMenuPresenter;)V" />
+      <node id="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;setCustomView(I)V" label="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;setCustomView(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getMenuView(Landroid/view/ViewGroup;)Landroid/support/v7/internal/view/menu/MenuView;" target="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;" id="0" />
+      <edge source="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getMenuView(Landroid/view/ViewGroup;)Landroid/support/v7/internal/view/menu/MenuView;" target="Landroid/support/v7/internal/view/menu/ListMenuPresenter$MenuAdapter;-&gt;&lt;init&gt;(Landroid/support/v7/internal/view/menu/ListMenuPresenter;)V" id="1" />
+      <edge source="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getAdapter()Landroid/widget/ListAdapter;" target="Landroid/support/v7/internal/view/menu/ListMenuPresenter$MenuAdapter;-&gt;&lt;init&gt;(Landroid/support/v7/internal/view/menu/ListMenuPresenter;)V" id="2" />
+      <edge source="Landroid/support/v7/internal/app/ToolbarActionBar;-&gt;getListMenuView(Landroid/view/Menu;)Landroid/view/View;" target="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getMenuView(Landroid/view/ViewGroup;)Landroid/support/v7/internal/view/menu/MenuView;" id="3" />
+      <edge source="Landroid/support/v7/internal/app/ToolbarActionBar;-&gt;getListMenuView(Landroid/view/Menu;)Landroid/view/View;" target="Landroid/support/v7/internal/widget/DecorToolbar;-&gt;getViewGroup()Landroid/view/ViewGroup;" id="4" />
+      <edge source="Landroid/support/v7/internal/app/ToolbarActionBar;-&gt;getListMenuView(Landroid/view/Menu;)Landroid/view/View;" target="Landroid/support/v7/internal/view/menu/ListMenuPresenter;-&gt;getAdapter()Landroid/widget/ListAdapter;" id="5" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;setCustomView(I)V" target="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;" id="6" />
+      <edge source="Landroid/support/v7/internal/app/WindowDecorActionBar;-&gt;setCustomView(I)V" target="Landroid/support/v7/internal/widget/DecorToolbar;-&gt;getViewGroup()Landroid/view/ViewGroup;" id="7" />
+    </edges>
+  </graph>
+</gexf>

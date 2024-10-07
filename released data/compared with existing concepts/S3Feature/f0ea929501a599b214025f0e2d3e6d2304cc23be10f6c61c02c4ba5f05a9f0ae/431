@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/os/Message;-&gt;sendToTarget()V" label="Landroid/os/Message;-&gt;sendToTarget()V" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;queueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;queueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" />
+      <node id="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" label="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" />
+      <node id="Landroid/os/Handler;-&gt;obtainMessage(ILjava/lang/Object;)Landroid/os/Message;" label="Landroid/os/Handler;-&gt;obtainMessage(ILjava/lang/Object;)Landroid/os/Message;" />
+      <node id="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" label="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" target="Landroid/os/Message;-&gt;sendToTarget()V" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" target="Landroid/os/Handler;-&gt;obtainMessage(ILjava/lang/Object;)Landroid/os/Message;" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" target="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;queueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;queueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" target="Landroid/os/Message;-&gt;sendToTarget()V" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;queueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" target="Landroid/os/Handler;-&gt;obtainMessage(ILjava/lang/Object;)Landroid/os/Message;" id="4" />
+      <edge source="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" target="Landroid/os/Message;-&gt;sendToTarget()V" id="5" />
+      <edge source="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" target="Landroid/os/Handler;-&gt;obtainMessage(ILjava/lang/Object;)Landroid/os/Message;" id="6" />
+      <edge source="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" target="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

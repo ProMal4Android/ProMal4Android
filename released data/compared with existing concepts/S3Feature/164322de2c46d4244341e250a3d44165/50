@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" label="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" />
+      <node id="Landroid/app/Fragment;-&gt;getActivity()Landroid/app/Activity;" label="Landroid/app/Fragment;-&gt;getActivity()Landroid/app/Activity;" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;setParentFragmentHint(Landroid/app/Fragment;)V" label="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;setParentFragmentHint(Landroid/app/Fragment;)V" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;registerFragmentWithRoot(Landroid/app/Activity;)V" label="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;registerFragmentWithRoot(Landroid/app/Activity;)V" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;getRequestManagerRetriever()Lcom/bumptech/glide/manager/RequestManagerRetriever;" label="Lcom/bumptech/glide/Glide;-&gt;getRequestManagerRetriever()Lcom/bumptech/glide/manager/RequestManagerRetriever;" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;getRetriever(Landroid/content/Context;)Lcom/bumptech/glide/manager/RequestManagerRetriever;" label="Lcom/bumptech/glide/Glide;-&gt;getRetriever(Landroid/content/Context;)Lcom/bumptech/glide/manager/RequestManagerRetriever;" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;setParentFragmentHint(Landroid/app/Fragment;)V" target="Landroid/app/Fragment;-&gt;getActivity()Landroid/app/Activity;" id="0" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;setParentFragmentHint(Landroid/app/Fragment;)V" target="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;registerFragmentWithRoot(Landroid/app/Activity;)V" id="1" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;registerFragmentWithRoot(Landroid/app/Activity;)V" target="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" id="2" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;registerFragmentWithRoot(Landroid/app/Activity;)V" target="Lcom/bumptech/glide/Glide;-&gt;getRequestManagerRetriever()Lcom/bumptech/glide/manager/RequestManagerRetriever;" id="3" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;getRetriever(Landroid/content/Context;)Lcom/bumptech/glide/manager/RequestManagerRetriever;" target="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" id="4" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;getRetriever(Landroid/content/Context;)Lcom/bumptech/glide/manager/RequestManagerRetriever;" target="Lcom/bumptech/glide/Glide;-&gt;getRequestManagerRetriever()Lcom/bumptech/glide/manager/RequestManagerRetriever;" id="5" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" target="Landroid/app/Fragment;-&gt;getActivity()Landroid/app/Activity;" id="6" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/app/Fragment;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/Glide;-&gt;getRetriever(Landroid/content/Context;)Lcom/bumptech/glide/manager/RequestManagerRetriever;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;I)V" label="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;I)V" />
+      <node id="Landroid/support/v4/app/FragmentHostCallback;-&gt;onGetLayoutInflater()Landroid/view/LayoutInflater;" label="Landroid/support/v4/app/FragmentHostCallback;-&gt;onGetLayoutInflater()Landroid/view/LayoutInflater;" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;performResume()V" label="Landroid/support/v4/app/Fragment;-&gt;performResume()V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;getChildFragmentManager()Landroid/support/v4/app/FragmentManager;" label="Landroid/support/v4/app/Fragment;-&gt;getChildFragmentManager()Landroid/support/v4/app/FragmentManager;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" label="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchResume()V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchResume()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;I)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentHostCallback;-&gt;onGetLayoutInflater()Landroid/view/LayoutInflater;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;performResume()V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchResume()V" id="2" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getChildFragmentManager()Landroid/support/v4/app/FragmentManager;" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchResume()V" id="3" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" target="Landroid/support/v4/app/FragmentHostCallback;-&gt;onGetLayoutInflater()Landroid/view/LayoutInflater;" id="4" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" target="Landroid/support/v4/app/Fragment;-&gt;getChildFragmentManager()Landroid/support/v4/app/FragmentManager;" id="5" />
+    </edges>
+  </graph>
+</gexf>

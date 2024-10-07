@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/messaging/ui/SnackBarManager;-&gt;show(Lcom/android/messaging/ui/SnackBar;)V" label="Lcom/android/messaging/ui/SnackBarManager;-&gt;show(Lcom/android/messaging/ui/SnackBar;)V" />
+      <node id="Lcom/android/messaging/ui/SnackBarManager;-&gt;dismiss()V" label="Lcom/android/messaging/ui/SnackBarManager;-&gt;dismiss()V" />
+      <node id="Landroid/os/Handler;-&gt;removeCallbacks(Ljava/lang/Runnable;)V" label="Landroid/os/Handler;-&gt;removeCallbacks(Ljava/lang/Runnable;)V" />
+      <node id="Landroidx/appcompat/widget/ListPopupWindow;-&gt;dismiss()V" label="Landroidx/appcompat/widget/ListPopupWindow;-&gt;dismiss()V" />
+      <node id="Landroid/widget/PopupWindow;-&gt;setContentView(Landroid/view/View;)V" label="Landroid/widget/PopupWindow;-&gt;setContentView(Landroid/view/View;)V" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onSizeChanged(IIII)V" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onSizeChanged(IIII)V" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;postHandlePendingChips()V" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;postHandlePendingChips()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/messaging/ui/SnackBarManager;-&gt;show(Lcom/android/messaging/ui/SnackBar;)V" target="Lcom/android/messaging/ui/SnackBarManager;-&gt;dismiss()V" id="0" />
+      <edge source="Lcom/android/messaging/ui/SnackBarManager;-&gt;show(Lcom/android/messaging/ui/SnackBar;)V" target="Landroid/os/Handler;-&gt;removeCallbacks(Ljava/lang/Runnable;)V" id="1" />
+      <edge source="Lcom/android/messaging/ui/SnackBarManager;-&gt;show(Lcom/android/messaging/ui/SnackBar;)V" target="Landroid/widget/PopupWindow;-&gt;setContentView(Landroid/view/View;)V" id="2" />
+      <edge source="Lcom/android/messaging/ui/SnackBarManager;-&gt;dismiss()V" target="Landroid/os/Handler;-&gt;removeCallbacks(Ljava/lang/Runnable;)V" id="3" />
+      <edge source="Landroidx/appcompat/widget/ListPopupWindow;-&gt;dismiss()V" target="Landroid/os/Handler;-&gt;removeCallbacks(Ljava/lang/Runnable;)V" id="4" />
+      <edge source="Landroidx/appcompat/widget/ListPopupWindow;-&gt;dismiss()V" target="Landroid/widget/PopupWindow;-&gt;setContentView(Landroid/view/View;)V" id="5" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onSizeChanged(IIII)V" target="Lcom/android/ex/chips/RecipientEditTextView;-&gt;postHandlePendingChips()V" id="6" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;postHandlePendingChips()V" target="Landroid/os/Handler;-&gt;removeCallbacks(Ljava/lang/Runnable;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" label="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" />
+      <node id="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;buildRequest(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/Request;" label="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;buildRequest(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/Request;" />
+      <node id="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" label="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" />
+      <node id="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" label="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" />
+      <node id="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" label="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" />
+      <node id="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;buildRequestRecursive(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;)Lcom/bumptech/glide/request/Request;" label="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;buildRequestRecursive(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;)Lcom/bumptech/glide/request/Request;" />
+      <node id="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" label="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;buildRequest(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/Request;" target="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;buildRequestRecursive(Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/request/ThumbnailRequestCoordinator;)Lcom/bumptech/glide/request/Request;" id="0" />
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" target="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" id="1" />
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" target="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" id="2" />
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" target="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" id="3" />
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" target="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;buildRequest(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/Request;" id="4" />
+      <edge source="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" target="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" id="5" />
+      <edge source="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" target="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" id="6" />
+      <edge source="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" target="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

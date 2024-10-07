@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;newInstance(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;" label="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;newInstance(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/app/Fragment;" />
+      <node id="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" label="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" />
+      <node id="Landroid/support/v7/view/SupportMenuInflater;-&gt;access$100(Landroid/support/v7/view/SupportMenuInflater;)Landroid/content/Context;" label="Landroid/support/v7/view/SupportMenuInflater;-&gt;access$100(Landroid/support/v7/view/SupportMenuInflater;)Landroid/content/Context;" />
+      <node id="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" label="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" />
+      <node id="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" label="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;newInstance(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;" target="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" id="0" />
+      <edge source="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;newInstance(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;" target="Landroid/support/v7/view/SupportMenuInflater;-&gt;access$100(Landroid/support/v7/view/SupportMenuInflater;)Landroid/content/Context;" id="1" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" id="2" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" target="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" id="3" />
+      <edge source="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" target="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;newInstance(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" target="Landroid/support/v7/view/SupportMenuInflater;-&gt;access$100(Landroid/support/v7/view/SupportMenuInflater;)Landroid/content/Context;" id="5" />
+      <edge source="Landroid/support/v7/view/SupportMenuInflater$MenuState;-&gt;setItem(Landroid/view/MenuItem;)V" target="Landroid/view/MenuItem;-&gt;setChecked(Z)Landroid/view/MenuItem;" id="6" />
+    </edges>
+  </graph>
+</gexf>

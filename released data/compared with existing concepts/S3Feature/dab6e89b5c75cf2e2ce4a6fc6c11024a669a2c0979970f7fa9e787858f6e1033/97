@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;sortChildDrawingOrder()V" label="Landroid/support/v4/view/ViewPager;-&gt;sortChildDrawingOrder()V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" label="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" />
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;finishUpdate(Landroid/view/ViewGroup;)V" label="Landroid/support/v4/view/PagerAdapter;-&gt;finishUpdate(Landroid/view/ViewGroup;)V" />
+      <node id="Landroid/support/v4/view/ViewPager$4;-&gt;onApplyWindowInsets(Landroid/view/View;Landroid/support/v4/view/WindowInsetsCompat;)Landroid/support/v4/view/WindowInsetsCompat;" label="Landroid/support/v4/view/ViewPager$4;-&gt;onApplyWindowInsets(Landroid/view/View;Landroid/support/v4/view/WindowInsetsCompat;)Landroid/support/v4/view/WindowInsetsCompat;" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;enableLayers(Z)V" label="Landroid/support/v4/view/ViewPager;-&gt;enableLayers(Z)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;getChildCount()I" label="Landroid/support/v4/view/ViewPager;-&gt;getChildCount()I" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;getChildAt(I)Landroid/view/View;" label="Landroid/support/v4/view/ViewPager;-&gt;getChildAt(I)Landroid/view/View;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;sortChildDrawingOrder()V" target="Landroid/support/v4/view/ViewPager;-&gt;getChildCount()I" id="0" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;sortChildDrawingOrder()V" target="Landroid/support/v4/view/ViewPager;-&gt;getChildAt(I)Landroid/view/View;" id="1" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Landroid/support/v4/view/ViewPager;-&gt;sortChildDrawingOrder()V" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Landroid/support/v4/view/PagerAdapter;-&gt;finishUpdate(Landroid/view/ViewGroup;)V" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Landroid/support/v4/view/ViewPager;-&gt;getChildCount()I" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;populate(I)V" target="Landroid/support/v4/view/ViewPager;-&gt;getChildAt(I)Landroid/view/View;" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager$4;-&gt;onApplyWindowInsets(Landroid/view/View;Landroid/support/v4/view/WindowInsetsCompat;)Landroid/support/v4/view/WindowInsetsCompat;" target="Landroid/support/v4/view/ViewPager;-&gt;getChildCount()I" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager$4;-&gt;onApplyWindowInsets(Landroid/view/View;Landroid/support/v4/view/WindowInsetsCompat;)Landroid/support/v4/view/WindowInsetsCompat;" target="Landroid/support/v4/view/ViewPager;-&gt;getChildAt(I)Landroid/view/View;" id="7" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;enableLayers(Z)V" target="Landroid/support/v4/view/ViewPager;-&gt;getChildCount()I" id="8" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;enableLayers(Z)V" target="Landroid/support/v4/view/ViewPager;-&gt;getChildAt(I)Landroid/view/View;" id="9" />
+    </edges>
+  </graph>
+</gexf>

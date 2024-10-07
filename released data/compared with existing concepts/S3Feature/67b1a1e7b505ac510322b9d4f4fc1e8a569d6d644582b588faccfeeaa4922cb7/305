@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" label="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z" label="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView$h;-&gt;b(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)[I" label="Landroid/support/v7/widget/RecyclerView$h;-&gt;b(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)[I" />
+      <node id="Landroid/support/v7/widget/RecyclerView$h;-&gt;d(Landroid/support/v7/widget/RecyclerView;II)Z" label="Landroid/support/v7/widget/RecyclerView$h;-&gt;d(Landroid/support/v7/widget/RecyclerView;II)Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;getFocusedChild()Landroid/view/View;" label="Landroid/support/v7/widget/RecyclerView;-&gt;getFocusedChild()Landroid/view/View;" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z" label="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z" />
+      <node id="Landroid/support/v7/widget/RecyclerView$h;-&gt;z()I" label="Landroid/support/v7/widget/RecyclerView$h;-&gt;z()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" target="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z" id="0" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z" target="Landroid/support/v7/widget/RecyclerView$h;-&gt;b(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)[I" id="1" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z" target="Landroid/support/v7/widget/RecyclerView$h;-&gt;d(Landroid/support/v7/widget/RecyclerView;II)Z" id="2" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$h;-&gt;b(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)[I" target="Landroid/support/v7/widget/RecyclerView$h;-&gt;z()I" id="3" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$h;-&gt;d(Landroid/support/v7/widget/RecyclerView;II)Z" target="Landroid/support/v7/widget/RecyclerView;-&gt;getFocusedChild()Landroid/view/View;" id="4" />
+      <edge source="Landroid/support/v7/widget/RecyclerView$h;-&gt;d(Landroid/support/v7/widget/RecyclerView;II)Z" target="Landroid/support/v7/widget/RecyclerView$h;-&gt;z()I" id="5" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z" target="Landroid/support/v7/widget/RecyclerView$h;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

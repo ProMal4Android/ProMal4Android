@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" />
+      <node id="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;isRuntimeInstalled()Z" label="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;isRuntimeInstalled()Z" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;" label="Landroid/content/pm/PackageManager;-&gt;getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;navigateUpFromSameTask(Landroid/app/Activity;)V" label="Landroid/support/v4/app/NavUtils;-&gt;navigateUpFromSameTask(Landroid/app/Activity;)V" />
+      <node id="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;launchMarketPlaceForAIR()V" label="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;launchMarketPlaceForAIR()V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+    </nodes>
+    <edges>
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;isRuntimeInstalled()Z" target="Landroid/content/pm/PackageManager;-&gt;getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;" id="0" />
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;isRuntimeInstalled()Z" target="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="1" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;navigateUpFromSameTask(Landroid/app/Activity;)V" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;" id="2" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;navigateUpFromSameTask(Landroid/app/Activity;)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;launchMarketPlaceForAIR()V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;launchMarketPlaceForAIR()V" target="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="5" />
+    </edges>
+  </graph>
+</gexf>

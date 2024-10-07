@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/print/PrintHelper;-&gt;printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;)V" label="Landroid/support/v4/print/PrintHelper;-&gt;printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;)V" />
+      <node id="Landroid/support/v4/print/PrintHelper;-&gt;isPortrait(Landroid/graphics/Bitmap;)Z" label="Landroid/support/v4/print/PrintHelper;-&gt;isPortrait(Landroid/graphics/Bitmap;)Z" />
+      <node id="Landroid/support/v4/print/PrintHelper;-&gt;copyAttributes(Landroid/print/PrintAttributes;)Landroid/print/PrintAttributes$Builder;" label="Landroid/support/v4/print/PrintHelper;-&gt;copyAttributes(Landroid/print/PrintAttributes;)Landroid/print/PrintAttributes$Builder;" />
+      <node id="Landroid/print/PrintAttributes$Builder;-&gt;&lt;init&gt;()V" label="Landroid/print/PrintAttributes$Builder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/graphics/Bitmap;-&gt;getWidth()I" label="Landroid/graphics/Bitmap;-&gt;getWidth()I" />
+      <node id="Landroid/print/PrintAttributes;-&gt;getMediaSize()Landroid/print/PrintAttributes$MediaSize;" label="Landroid/print/PrintAttributes;-&gt;getMediaSize()Landroid/print/PrintAttributes$MediaSize;" />
+      <node id="Landroid/support/v4/print/PrintHelper$PrintUriAdapter$1;-&gt;onPostExecute(Landroid/graphics/Bitmap;)V" label="Landroid/support/v4/print/PrintHelper$PrintUriAdapter$1;-&gt;onPostExecute(Landroid/graphics/Bitmap;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/print/PrintHelper;-&gt;printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;)V" target="Landroid/support/v4/print/PrintHelper;-&gt;isPortrait(Landroid/graphics/Bitmap;)Z" id="0" />
+      <edge source="Landroid/support/v4/print/PrintHelper;-&gt;printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;)V" target="Landroid/print/PrintAttributes$Builder;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v4/print/PrintHelper;-&gt;isPortrait(Landroid/graphics/Bitmap;)Z" target="Landroid/graphics/Bitmap;-&gt;getWidth()I" id="2" />
+      <edge source="Landroid/support/v4/print/PrintHelper;-&gt;copyAttributes(Landroid/print/PrintAttributes;)Landroid/print/PrintAttributes$Builder;" target="Landroid/print/PrintAttributes$Builder;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/print/PrintHelper;-&gt;copyAttributes(Landroid/print/PrintAttributes;)Landroid/print/PrintAttributes$Builder;" target="Landroid/print/PrintAttributes;-&gt;getMediaSize()Landroid/print/PrintAttributes$MediaSize;" id="4" />
+      <edge source="Landroid/support/v4/print/PrintHelper$PrintUriAdapter$1;-&gt;onPostExecute(Landroid/graphics/Bitmap;)V" target="Landroid/support/v4/print/PrintHelper;-&gt;isPortrait(Landroid/graphics/Bitmap;)Z" id="5" />
+      <edge source="Landroid/support/v4/print/PrintHelper$PrintUriAdapter$1;-&gt;onPostExecute(Landroid/graphics/Bitmap;)V" target="Landroid/graphics/Bitmap;-&gt;getWidth()I" id="6" />
+      <edge source="Landroid/support/v4/print/PrintHelper$PrintUriAdapter$1;-&gt;onPostExecute(Landroid/graphics/Bitmap;)V" target="Landroid/print/PrintAttributes;-&gt;getMediaSize()Landroid/print/PrintAttributes$MediaSize;" id="7" />
+    </edges>
+  </graph>
+</gexf>

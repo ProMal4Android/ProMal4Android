@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/ActionProvider;-&gt;refreshVisibility()V" label="Landroid/support/v4/view/ActionProvider;-&gt;refreshVisibility()V" />
+      <node id="Landroid/support/v4/view/ActionProvider;-&gt;overridesItemVisibility()Z" label="Landroid/support/v4/view/ActionProvider;-&gt;overridesItemVisibility()Z" />
+      <node id="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;isVisible()Z" label="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;isVisible()Z" />
+      <node id="Landroid/widget/TextView;-&gt;getVisibility()I" label="Landroid/widget/TextView;-&gt;getVisibility()I" />
+      <node id="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;setTitle(Ljava/lang/CharSequence;)V" label="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;setTitle(Ljava/lang/CharSequence;)V" />
+      <node id="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;setShortcut(ZC)V" label="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;setShortcut(ZC)V" />
+      <node id="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;initialize(Landroid/support/v7/view/menu/MenuItemImpl;I)V" label="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;initialize(Landroid/support/v7/view/menu/MenuItemImpl;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ActionProvider;-&gt;refreshVisibility()V" target="Landroid/support/v4/view/ActionProvider;-&gt;overridesItemVisibility()Z" id="0" />
+      <edge source="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;isVisible()Z" target="Landroid/support/v4/view/ActionProvider;-&gt;overridesItemVisibility()Z" id="1" />
+      <edge source="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;setTitle(Ljava/lang/CharSequence;)V" target="Landroid/widget/TextView;-&gt;getVisibility()I" id="2" />
+      <edge source="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;setShortcut(ZC)V" target="Landroid/widget/TextView;-&gt;getVisibility()I" id="3" />
+      <edge source="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;initialize(Landroid/support/v7/view/menu/MenuItemImpl;I)V" target="Landroid/support/v7/view/menu/MenuItemImpl;-&gt;isVisible()Z" id="4" />
+      <edge source="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;initialize(Landroid/support/v7/view/menu/MenuItemImpl;I)V" target="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;setTitle(Ljava/lang/CharSequence;)V" id="5" />
+      <edge source="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;initialize(Landroid/support/v7/view/menu/MenuItemImpl;I)V" target="Landroid/support/v7/view/menu/ListMenuItemView;-&gt;setShortcut(ZC)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

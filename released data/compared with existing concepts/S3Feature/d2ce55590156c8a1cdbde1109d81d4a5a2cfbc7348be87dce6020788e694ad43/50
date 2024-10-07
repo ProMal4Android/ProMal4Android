@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" label="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" />
+      <node id="Landroid/support/v4/app/AppLaunchChecker;-&gt;hasStartedFromLauncher(Landroid/content/Context;)Z" label="Landroid/support/v4/app/AppLaunchChecker;-&gt;hasStartedFromLauncher(Landroid/content/Context;)Z" />
+      <node id="Landroid/support/v4/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" label="Landroid/support/v4/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" />
+      <node id="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" label="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" />
+      <node id="Landroid/content/SharedPreferences;-&gt;getBoolean(Ljava/lang/String;Z)Z" label="Landroid/content/SharedPreferences;-&gt;getBoolean(Ljava/lang/String;Z)Z" />
+      <node id="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" label="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" />
+      <node id="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" label="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/AppLaunchChecker;-&gt;hasStartedFromLauncher(Landroid/content/Context;)Z" target="Landroid/content/SharedPreferences;-&gt;getBoolean(Ljava/lang/String;Z)Z" id="0" />
+      <edge source="Landroid/support/v4/app/AppLaunchChecker;-&gt;hasStartedFromLauncher(Landroid/content/Context;)Z" target="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" id="1" />
+      <edge source="Landroid/support/v4/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" target="Landroid/content/SharedPreferences;-&gt;getBoolean(Ljava/lang/String;Z)Z" id="2" />
+      <edge source="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" target="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" id="3" />
+      <edge source="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" target="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" id="4" />
+      <edge source="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" target="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" id="5" />
+    </edges>
+  </graph>
+</gexf>

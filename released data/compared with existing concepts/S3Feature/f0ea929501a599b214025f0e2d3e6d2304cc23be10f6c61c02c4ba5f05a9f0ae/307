@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;loadFromCache(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;loadFromCache(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/engine/DecodeJob$DiskCacheProvider;-&gt;getDiskCache()Lcom/bumptech/glide/load/engine/cache/DiskCache;" label="Lcom/bumptech/glide/load/engine/DecodeJob$DiskCacheProvider;-&gt;getDiskCache()Lcom/bumptech/glide/load/engine/cache/DiskCache;" />
+      <node id="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" label="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" label="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" />
+      <node id="Lcom/bumptech/glide/load/engine/cache/DiskCache;-&gt;get(Lcom/bumptech/glide/load/Key;)Ljava/io/File;" label="Lcom/bumptech/glide/load/engine/cache/DiskCache;-&gt;get(Lcom/bumptech/glide/load/Key;)Ljava/io/File;" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Ljava/lang/Object;Ljava/io/OutputStream;)Z" label="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Ljava/lang/Object;Ljava/io/OutputStream;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;loadFromCache(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/load/engine/Resource;" id="0" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/DecodeJob$DiskCacheProvider;-&gt;getDiskCache()Lcom/bumptech/glide/load/engine/cache/DiskCache;" id="1" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" id="2" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;loadFromCache(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/DecodeJob$DiskCacheProvider;-&gt;getDiskCache()Lcom/bumptech/glide/load/engine/cache/DiskCache;" id="3" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;loadFromCache(Lcom/bumptech/glide/load/Key;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/cache/DiskCache;-&gt;get(Lcom/bumptech/glide/load/Key;)Ljava/io/File;" id="4" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" target="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" id="5" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Ljava/lang/Object;Ljava/io/OutputStream;)Z" target="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

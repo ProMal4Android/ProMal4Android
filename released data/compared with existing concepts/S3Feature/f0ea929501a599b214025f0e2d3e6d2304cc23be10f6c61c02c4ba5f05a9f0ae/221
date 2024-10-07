@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/load/resource/transcode/GifBitmapWrapperDrawableTranscoder;-&gt;transcode(Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/resource/transcode/GifBitmapWrapperDrawableTranscoder;-&gt;transcode(Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/engine/Resource;-&gt;get()Ljava/lang/Object;" label="Lcom/bumptech/glide/load/engine/Resource;-&gt;get()Ljava/lang/Object;" />
+      <node id="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getGifResource()Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getGifResource()Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getBitmapResource()Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getBitmapResource()Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperTransformation;-&gt;transform(Lcom/bumptech/glide/load/engine/Resource;II)Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperTransformation;-&gt;transform(Lcom/bumptech/glide/load/engine/Resource;II)Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/engine/EngineResource;-&gt;get()Ljava/lang/Object;" label="Lcom/bumptech/glide/load/engine/EngineResource;-&gt;get()Ljava/lang/Object;" />
+      <node id="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" label="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/load/resource/transcode/GifBitmapWrapperDrawableTranscoder;-&gt;transcode(Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/Resource;-&gt;get()Ljava/lang/Object;" id="0" />
+      <edge source="Lcom/bumptech/glide/load/resource/transcode/GifBitmapWrapperDrawableTranscoder;-&gt;transcode(Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getGifResource()Lcom/bumptech/glide/load/engine/Resource;" id="1" />
+      <edge source="Lcom/bumptech/glide/load/resource/transcode/GifBitmapWrapperDrawableTranscoder;-&gt;transcode(Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getBitmapResource()Lcom/bumptech/glide/load/engine/Resource;" id="2" />
+      <edge source="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperTransformation;-&gt;transform(Lcom/bumptech/glide/load/engine/Resource;II)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/Resource;-&gt;get()Ljava/lang/Object;" id="3" />
+      <edge source="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperTransformation;-&gt;transform(Lcom/bumptech/glide/load/engine/Resource;II)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getGifResource()Lcom/bumptech/glide/load/engine/Resource;" id="4" />
+      <edge source="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperTransformation;-&gt;transform(Lcom/bumptech/glide/load/engine/Resource;II)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getBitmapResource()Lcom/bumptech/glide/load/engine/Resource;" id="5" />
+      <edge source="Lcom/bumptech/glide/load/engine/EngineResource;-&gt;get()Ljava/lang/Object;" target="Lcom/bumptech/glide/load/engine/Resource;-&gt;get()Ljava/lang/Object;" id="6" />
+      <edge source="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" target="Lcom/bumptech/glide/load/engine/Resource;-&gt;get()Ljava/lang/Object;" id="7" />
+      <edge source="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" target="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getGifResource()Lcom/bumptech/glide/load/engine/Resource;" id="8" />
+      <edge source="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapperResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" target="Lcom/bumptech/glide/load/resource/gifbitmap/GifBitmapWrapper;-&gt;getBitmapResource()Lcom/bumptech/glide/load/engine/Resource;" id="9" />
+    </edges>
+  </graph>
+</gexf>

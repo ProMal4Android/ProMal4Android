@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getExpandedItem()Landroid/support/v7/view/menu/MenuItemImpl;" label="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getExpandedItem()Landroid/support/v7/view/menu/MenuItemImpl;" />
+      <node id="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;showOverflowMenu()Z" label="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;showOverflowMenu()Z" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v7/view/menu/MenuAdapter;-&gt;findExpandedIndex()V" label="Landroid/support/v7/view/menu/MenuAdapter;-&gt;findExpandedIndex()V" />
+      <node id="Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;-&gt;findExpandedIndex()V" label="Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;-&gt;findExpandedIndex()V" />
+      <node id="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" label="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" />
+      <node id="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getNonActionItems()Ljava/util/ArrayList;" label="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getNonActionItems()Ljava/util/ArrayList;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActionMenuPresenter;-&gt;showOverflowMenu()Z" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getNonActionItems()Ljava/util/ArrayList;" id="0" />
+      <edge source="Landroid/support/v7/view/menu/MenuAdapter;-&gt;findExpandedIndex()V" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getExpandedItem()Landroid/support/v7/view/menu/MenuItemImpl;" id="1" />
+      <edge source="Landroid/support/v7/view/menu/MenuAdapter;-&gt;findExpandedIndex()V" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v7/view/menu/MenuAdapter;-&gt;findExpandedIndex()V" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getNonActionItems()Ljava/util/ArrayList;" id="3" />
+      <edge source="Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;-&gt;findExpandedIndex()V" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getExpandedItem()Landroid/support/v7/view/menu/MenuItemImpl;" id="4" />
+      <edge source="Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;-&gt;findExpandedIndex()V" target="Ljava/util/ArrayList;-&gt;size()I" id="5" />
+      <edge source="Landroid/support/v7/view/menu/ListMenuPresenter$MenuAdapter;-&gt;findExpandedIndex()V" target="Landroid/support/v7/view/menu/MenuBuilder;-&gt;getNonActionItems()Ljava/util/ArrayList;" id="6" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

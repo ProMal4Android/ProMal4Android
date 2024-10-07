@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ae;-&gt;a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/ae;-&gt;a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" label="Landroid/support/v7/widget/RecyclerView;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/BackStackState;-&gt;&lt;init&gt;(Landroid/support/v4/app/i;)V" label="Landroid/support/v4/app/BackStackState;-&gt;&lt;init&gt;(Landroid/support/v4/app/i;)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;b(Landroid/view/MotionEvent;)Z" label="Landroid/support/v7/widget/RecyclerView;-&gt;b(Landroid/view/MotionEvent;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ae;-&gt;a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v4/app/ae;-&gt;a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v4/app/ae;-&gt;a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;onTouchEvent(Landroid/view/MotionEvent;)Z" target="Landroid/support/v7/widget/RecyclerView;-&gt;b(Landroid/view/MotionEvent;)Z" id="4" />
+      <edge source="Landroid/support/v4/app/BackStackState;-&gt;&lt;init&gt;(Landroid/support/v4/app/i;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="5" />
+      <edge source="Landroid/support/v4/app/BackStackState;-&gt;&lt;init&gt;(Landroid/support/v4/app/i;)V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="6" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;b(Landroid/view/MotionEvent;)Z" target="Ljava/util/ArrayList;-&gt;size()I" id="7" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;b(Landroid/view/MotionEvent;)Z" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="8" />
+    </edges>
+  </graph>
+</gexf>

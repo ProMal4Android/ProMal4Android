@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/chips/RecipientEditTextView$IndividualReplacementTask$1;-&gt;matchesFound(Ljava/util/Map;)V" label="Lcom/android/ex/chips/RecipientEditTextView$IndividualReplacementTask$1;-&gt;matchesFound(Ljava/util/Map;)V" />
+      <node id="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" label="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" />
+      <node id="Lcom/android/ex/chips/RecipientEntry;-&gt;getDisplayName()Ljava/lang/String;" label="Lcom/android/ex/chips/RecipientEntry;-&gt;getDisplayName()Ljava/lang/String;" />
+      <node id="Lcom/android/ex/chips/RecipientEntry;-&gt;getDestination()Ljava/lang/String;" label="Lcom/android/ex/chips/RecipientEntry;-&gt;getDestination()Ljava/lang/String;" />
+      <node id="Lcom/android/ex/chips/BaseRecipientAdapter$DefaultFilter;-&gt;convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;" label="Lcom/android/ex/chips/BaseRecipientAdapter$DefaultFilter;-&gt;convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;" />
+      <node id="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" label="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" />
+      <node id="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" label="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView$IndividualReplacementTask$1;-&gt;matchesFound(Ljava/util/Map;)V" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getDestination()Ljava/lang/String;" id="0" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView$IndividualReplacementTask$1;-&gt;matchesFound(Ljava/util/Map;)V" target="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" id="1" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getDisplayName()Ljava/lang/String;" id="2" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getDestination()Ljava/lang/String;" id="3" />
+      <edge source="Lcom/android/ex/chips/BaseRecipientAdapter$DefaultFilter;-&gt;convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getDisplayName()Ljava/lang/String;" id="4" />
+      <edge source="Lcom/android/ex/chips/BaseRecipientAdapter$DefaultFilter;-&gt;convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getDestination()Ljava/lang/String;" id="5" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" target="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" id="6" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getDisplayName()Ljava/lang/String;" id="7" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getDestination()Ljava/lang/String;" id="8" />
+    </edges>
+  </graph>
+</gexf>

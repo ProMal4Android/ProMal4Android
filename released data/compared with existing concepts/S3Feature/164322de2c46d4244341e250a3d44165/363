@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/common/OperationScheduler;-&gt;onTransientError()V" label="Lcom/android/common/OperationScheduler;-&gt;onTransientError()V" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" label="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" />
+      <node id="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" label="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;currentTimeMillis()J" label="Lcom/android/common/OperationScheduler;-&gt;currentTimeMillis()J" />
+      <node id="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" label="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" />
+      <node id="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" label="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" label="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onTransientError()V" target="Lcom/android/common/OperationScheduler;-&gt;currentTimeMillis()J" id="0" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onTransientError()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="1" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="2" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" target="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" id="3" />
+      <edge source="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="4" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Lcom/android/common/OperationScheduler;-&gt;resetTransientError()V" id="5" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Lcom/android/common/OperationScheduler;-&gt;currentTimeMillis()J" id="6" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="7" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onSuccess()V" target="Landroid/content/SharedPreferences$Editor;-&gt;remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;" id="8" />
+    </edges>
+  </graph>
+</gexf>

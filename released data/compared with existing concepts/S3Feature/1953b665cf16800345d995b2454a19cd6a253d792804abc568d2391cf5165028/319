@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;a(Landroid/view/View;Z)V" label="Landroid/support/v7/widget/Toolbar;-&gt;a(Landroid/view/View;Z)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;d(Landroid/view/View;)Z" label="Landroid/support/v7/widget/Toolbar;-&gt;d(Landroid/view/View;)Z" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;setLogo(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/v7/widget/Toolbar;-&gt;setLogo(Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(I)V" label="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(I)V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;o()V" label="Landroid/support/v7/widget/Toolbar;-&gt;o()V" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;i()Landroid/support/v7/widget/gr;" label="Landroid/support/v7/widget/Toolbar;-&gt;i()Landroid/support/v7/widget/gr;" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(Landroid/graphics/drawable/Drawable;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;a(Landroid/view/View;Z)V" target="Landroid/support/v7/widget/Toolbar;-&gt;i()Landroid/support/v7/widget/gr;" id="0" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setLogo(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v7/widget/Toolbar;-&gt;a(Landroid/view/View;Z)V" id="1" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setLogo(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v7/widget/Toolbar;-&gt;d(Landroid/view/View;)Z" id="2" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(I)V" target="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(Landroid/graphics/drawable/Drawable;)V" id="3" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;o()V" target="Landroid/support/v7/widget/Toolbar;-&gt;i()Landroid/support/v7/widget/gr;" id="4" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v7/widget/Toolbar;-&gt;a(Landroid/view/View;Z)V" id="5" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v7/widget/Toolbar;-&gt;d(Landroid/view/View;)Z" id="6" />
+      <edge source="Landroid/support/v7/widget/Toolbar;-&gt;setNavigationIcon(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v7/widget/Toolbar;-&gt;o()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

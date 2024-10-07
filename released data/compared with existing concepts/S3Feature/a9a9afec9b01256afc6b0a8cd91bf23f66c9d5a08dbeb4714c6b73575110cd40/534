@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;-&gt;zzak(I)Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;" label="Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;-&gt;zzak(I)Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zza(Landroid/content/Intent;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/util/List;)Lcom/google/android/gms/appdatasearch/DocumentContents$zza;" label="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zza(Landroid/content/Intent;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/util/List;)Lcom/google/android/gms/appdatasearch/DocumentContents$zza;" />
+      <node id="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzbA(Ljava/lang/String;)Lcom/google/android/gms/appdatasearch/DocumentSection;" label="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzbA(Ljava/lang/String;)Lcom/google/android/gms/appdatasearch/DocumentSection;" />
+      <node id="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" label="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" />
+      <node id="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzi(Landroid/net/Uri;)Lcom/google/android/gms/appdatasearch/DocumentSection;" label="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzi(Landroid/net/Uri;)Lcom/google/android/gms/appdatasearch/DocumentSection;" />
+      <node id="Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" id="0" />
+      <edge source="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zza(Landroid/content/Intent;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/util/List;)Lcom/google/android/gms/appdatasearch/DocumentContents$zza;" target="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzbA(Ljava/lang/String;)Lcom/google/android/gms/appdatasearch/DocumentSection;" id="1" />
+      <edge source="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zza(Landroid/content/Intent;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/util/List;)Lcom/google/android/gms/appdatasearch/DocumentContents$zza;" target="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" id="2" />
+      <edge source="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zza(Landroid/content/Intent;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/util/List;)Lcom/google/android/gms/appdatasearch/DocumentContents$zza;" target="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzi(Landroid/net/Uri;)Lcom/google/android/gms/appdatasearch/DocumentSection;" id="3" />
+      <edge source="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzbA(Ljava/lang/String;)Lcom/google/android/gms/appdatasearch/DocumentSection;" target="Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;-&gt;zzak(I)Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;" id="4" />
+      <edge source="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzbA(Ljava/lang/String;)Lcom/google/android/gms/appdatasearch/DocumentSection;" target="Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="5" />
+      <edge source="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzi(Landroid/net/Uri;)Lcom/google/android/gms/appdatasearch/DocumentSection;" target="Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;-&gt;zzak(I)Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;" id="6" />
+      <edge source="Lcom/google/android/gms/appdatasearch/UsageInfo;-&gt;zzi(Landroid/net/Uri;)Lcom/google/android/gms/appdatasearch/DocumentSection;" target="Lcom/google/android/gms/appdatasearch/RegisterSectionInfo$zza;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

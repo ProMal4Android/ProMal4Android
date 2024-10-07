@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/net/HttpURLConnection;-&gt;setDoOutput(Z)V" label="Ljava/net/HttpURLConnection;-&gt;setDoOutput(Z)V" />
+      <node id="Lcom/android/volley/toolbox/HurlStack;-&gt;addBodyIfExists(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" label="Lcom/android/volley/toolbox/HurlStack;-&gt;addBodyIfExists(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" />
+      <node id="Lcom/android/volley/toolbox/HurlStack;-&gt;setConnectionParametersForRequest(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" label="Lcom/android/volley/toolbox/HurlStack;-&gt;setConnectionParametersForRequest(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" />
+      <node id="Ljava/net/HttpURLConnection;-&gt;addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V" label="Ljava/net/HttpURLConnection;-&gt;addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="Lcom/android/volley/Request;-&gt;getMethod()I" label="Lcom/android/volley/Request;-&gt;getMethod()I" />
+      <node id="Lcom/android/volley/toolbox/HttpClientStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" label="Lcom/android/volley/toolbox/HttpClientStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" />
+      <node id="Lcom/android/volley/toolbox/HttpClientStack;-&gt;createHttpRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/client/methods/HttpUriRequest;" label="Lcom/android/volley/toolbox/HttpClientStack;-&gt;createHttpRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/client/methods/HttpUriRequest;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/volley/toolbox/HurlStack;-&gt;addBodyIfExists(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" target="Ljava/net/HttpURLConnection;-&gt;setDoOutput(Z)V" id="0" />
+      <edge source="Lcom/android/volley/toolbox/HurlStack;-&gt;addBodyIfExists(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" target="Ljava/net/HttpURLConnection;-&gt;addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V" id="1" />
+      <edge source="Lcom/android/volley/toolbox/HurlStack;-&gt;setConnectionParametersForRequest(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" target="Ljava/net/HttpURLConnection;-&gt;setDoOutput(Z)V" id="2" />
+      <edge source="Lcom/android/volley/toolbox/HurlStack;-&gt;setConnectionParametersForRequest(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" target="Lcom/android/volley/toolbox/HurlStack;-&gt;addBodyIfExists(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" id="3" />
+      <edge source="Lcom/android/volley/toolbox/HurlStack;-&gt;setConnectionParametersForRequest(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" target="Ljava/net/HttpURLConnection;-&gt;addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V" id="4" />
+      <edge source="Lcom/android/volley/toolbox/HurlStack;-&gt;setConnectionParametersForRequest(Ljava/net/HttpURLConnection;Lcom/android/volley/Request;)V" target="Lcom/android/volley/Request;-&gt;getMethod()I" id="5" />
+      <edge source="Lcom/android/volley/toolbox/HttpClientStack;-&gt;performRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;" target="Lcom/android/volley/toolbox/HttpClientStack;-&gt;createHttpRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/client/methods/HttpUriRequest;" id="6" />
+      <edge source="Lcom/android/volley/toolbox/HttpClientStack;-&gt;createHttpRequest(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/client/methods/HttpUriRequest;" target="Lcom/android/volley/Request;-&gt;getMethod()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

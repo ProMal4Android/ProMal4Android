@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" label="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" />
+      <node id="Lbolts/AppLinkNavigation;-&gt;navigate(Landroid/content/Context;)Lbolts/AppLinkNavigation$NavigationResult;" label="Lbolts/AppLinkNavigation;-&gt;navigate(Landroid/content/Context;)Lbolts/AppLinkNavigation$NavigationResult;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Lbolts/AppLinkNavigation;-&gt;buildAppLinkDataForNavigation(Landroid/content/Context;)Landroid/os/Bundle;" label="Lbolts/AppLinkNavigation;-&gt;buildAppLinkDataForNavigation(Landroid/content/Context;)Landroid/os/Bundle;" />
+      <node id="Landroid/os/Bundle;-&gt;&lt;init&gt;()V" label="Landroid/os/Bundle;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" label="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Lbolts/AppLinkNavigation;-&gt;navigate(Landroid/content/Context;)Lbolts/AppLinkNavigation$NavigationResult;" target="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" id="0" />
+      <edge source="Lbolts/AppLinkNavigation;-&gt;navigate(Landroid/content/Context;)Lbolts/AppLinkNavigation$NavigationResult;" target="Lbolts/AppLinkNavigation;-&gt;buildAppLinkDataForNavigation(Landroid/content/Context;)Landroid/os/Bundle;" id="1" />
+      <edge source="Lbolts/AppLinkNavigation;-&gt;navigate(Landroid/content/Context;)Lbolts/AppLinkNavigation$NavigationResult;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="2" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="3" />
+      <edge source="Lbolts/AppLinkNavigation;-&gt;buildAppLinkDataForNavigation(Landroid/content/Context;)Landroid/os/Bundle;" target="Landroid/os/Bundle;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" target="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" id="5" />
+      <edge source="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="6" />
+    </edges>
+  </graph>
+</gexf>

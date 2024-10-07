@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchCancel()V" label="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchCancel()V" />
+      <node id="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;cancel()V" label="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;cancel()V" />
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/NotificationCompatApi21$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/support/v4/app/NotificationCompatApi21$Builder;-&gt;build()Landroid/app/Notification;" />
+      <node id="Landroid/app/Notification$Builder;-&gt;setExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;" label="Landroid/app/Notification$Builder;-&gt;setExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" />
+      <node id="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchCancel()V" target="Ljava/util/List;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;cancel()V" target="Landroid/support/v4/animation/GingerbreadAnimatorCompatProvider$GingerbreadFloatValueAnimator;-&gt;dispatchCancel()V" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationCompatApi21$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/app/Notification$Builder;-&gt;setExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" target="Ljava/util/List;-&gt;size()I" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/app/Notification$Builder;-&gt;setExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" id="5" />
+    </edges>
+  </graph>
+</gexf>

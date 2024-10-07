@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearHeader()V" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearHeader()V" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearAll()V" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearAll()V" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clear()V" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clear()V" />
+      <node id="Ljava/util/concurrent/CopyOnWriteArrayList;-&gt;isEmpty()Z" label="Ljava/util/concurrent/CopyOnWriteArrayList;-&gt;isEmpty()Z" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;onItemsChanged(Z)V" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;onItemsChanged(Z)V" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;dispatchPresenterUpdate(Z)V" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;dispatchPresenterUpdate(Z)V" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;dispatchRestoreInstanceState(Landroid/os/Bundle;)V" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;dispatchRestoreInstanceState(Landroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearHeader()V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;onItemsChanged(Z)V" id="0" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearAll()V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearHeader()V" id="1" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearAll()V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clear()V" id="2" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clearAll()V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;onItemsChanged(Z)V" id="3" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;clear()V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;onItemsChanged(Z)V" id="4" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;onItemsChanged(Z)V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;dispatchPresenterUpdate(Z)V" id="5" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;dispatchPresenterUpdate(Z)V" target="Ljava/util/concurrent/CopyOnWriteArrayList;-&gt;isEmpty()Z" id="6" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;dispatchRestoreInstanceState(Landroid/os/Bundle;)V" target="Ljava/util/concurrent/CopyOnWriteArrayList;-&gt;isEmpty()Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-&gt;processPendingCallbacksLocked()V" label="Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-&gt;processPendingCallbacksLocked()V" />
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" label="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" />
+      <node id="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" label="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;fromMediaItemList(Ljava/util/List;)Ljava/util/List;" label="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;fromMediaItemList(Ljava/util/List;)Ljava/util/List;" />
+      <node id="Lcom/bumptech/glide/manager/TargetTracker;-&gt;onDestroy()V" label="Lcom/bumptech/glide/manager/TargetTracker;-&gt;onDestroy()V" />
+      <node id="Ljava/util/ArrayList;-&gt;&lt;init&gt;(I)V" label="Ljava/util/ArrayList;-&gt;&lt;init&gt;(I)V" />
+      <node id="Lcom/bumptech/glide/RequestManager;-&gt;onDestroy()V" label="Lcom/bumptech/glide/RequestManager;-&gt;onDestroy()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-&gt;processPendingCallbacksLocked()V" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="0" />
+      <edge source="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;(I)V" id="1" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;fromMediaItemList(Ljava/util/List;)Ljava/util/List;" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="2" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-&gt;fromMediaItemList(Ljava/util/List;)Ljava/util/List;" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;(I)V" id="3" />
+      <edge source="Lcom/bumptech/glide/manager/TargetTracker;-&gt;onDestroy()V" target="Lcom/bumptech/glide/util/Util;-&gt;getSnapshot(Ljava/util/Collection;)Ljava/util/List;" id="4" />
+      <edge source="Lcom/bumptech/glide/manager/TargetTracker;-&gt;onDestroy()V" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="5" />
+      <edge source="Lcom/bumptech/glide/RequestManager;-&gt;onDestroy()V" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="6" />
+      <edge source="Lcom/bumptech/glide/RequestManager;-&gt;onDestroy()V" target="Lcom/bumptech/glide/manager/TargetTracker;-&gt;onDestroy()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

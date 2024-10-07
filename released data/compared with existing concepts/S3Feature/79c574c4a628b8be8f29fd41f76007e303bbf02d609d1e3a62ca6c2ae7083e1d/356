@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/BackStackRecord$TransitionState;-&gt;&lt;init&gt;(Landroid/support/v4/app/BackStackRecord;)V" label="Landroid/support/v4/app/BackStackRecord$TransitionState;-&gt;&lt;init&gt;(Landroid/support/v4/app/BackStackRecord;)V" />
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;beginTransition(Landroid/util/SparseArray;Landroid/util/SparseArray;Z)Landroid/support/v4/app/BackStackRecord$TransitionState;" label="Landroid/support/v4/app/BackStackRecord;-&gt;beginTransition(Landroid/util/SparseArray;Landroid/util/SparseArray;Z)Landroid/support/v4/app/BackStackRecord$TransitionState;" />
+      <node id="Landroid/support/v4/util/ArrayMap;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/util/ArrayMap;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/util/SparseArray;-&gt;get(I)Ljava/lang/Object;" label="Landroid/util/SparseArray;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" label="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/BackStackRecord$TransitionState;-&gt;&lt;init&gt;(Landroid/support/v4/app/BackStackRecord;)V" target="Landroid/support/v4/util/ArrayMap;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;beginTransition(Landroid/util/SparseArray;Landroid/util/SparseArray;Z)Landroid/support/v4/app/BackStackRecord$TransitionState;" target="Landroid/support/v4/app/BackStackRecord$TransitionState;-&gt;&lt;init&gt;(Landroid/support/v4/app/BackStackRecord;)V" id="2" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;beginTransition(Landroid/util/SparseArray;Landroid/util/SparseArray;Z)Landroid/support/v4/app/BackStackRecord$TransitionState;" target="Landroid/util/SparseArray;-&gt;get(I)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;beginTransition(Landroid/util/SparseArray;Landroid/util/SparseArray;Z)Landroid/support/v4/app/BackStackRecord$TransitionState;" target="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" id="4" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" target="Landroid/support/v4/util/ArrayMap;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;configureTransitions(ILandroid/support/v4/app/BackStackRecord$TransitionState;ZLandroid/util/SparseArray;Landroid/util/SparseArray;)Z" target="Landroid/util/SparseArray;-&gt;get(I)Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/view/View;-&gt;getGlobalVisibleRect(Landroid/graphics/Rect;)Z" label="Landroid/view/View;-&gt;getGlobalVisibleRect(Landroid/graphics/Rect;)Z" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" label="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" />
+      <node id="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" label="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" />
+      <node id="Landroid/view/View;-&gt;getWindowVisibility()I" label="Landroid/view/View;-&gt;getWindowVisibility()I" />
+      <node id="Lcom/google/android/gms/internal/zzdt;-&gt;zzax()V" label="Lcom/google/android/gms/internal/zzdt;-&gt;zzax()V" />
+      <node id="Lcom/google/android/gms/internal/zzgp;-&gt;zzm(I)V" label="Lcom/google/android/gms/internal/zzgp;-&gt;zzm(I)V" />
+      <node id="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" label="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" target="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" id="0" />
+      <edge source="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" target="Landroid/view/View;-&gt;getWindowVisibility()I" id="1" />
+      <edge source="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" target="Landroid/view/View;-&gt;getWindowToken()Landroid/os/IBinder;" id="2" />
+      <edge source="Lcom/google/android/gms/internal/zzdt;-&gt;zzax()V" target="Landroid/view/View;-&gt;getGlobalVisibleRect(Landroid/graphics/Rect;)Z" id="3" />
+      <edge source="Lcom/google/android/gms/internal/zzdt;-&gt;zzax()V" target="Landroid/view/View;-&gt;getWindowVisibility()I" id="4" />
+      <edge source="Lcom/google/android/gms/internal/zzgp;-&gt;zzm(I)V" target="Landroid/view/View;-&gt;getGlobalVisibleRect(Landroid/graphics/Rect;)Z" id="5" />
+      <edge source="Lcom/google/android/gms/internal/zzgp;-&gt;zzm(I)V" target="Lcom/google/android/gms/internal/zzaht;-&gt;isAttachedToWindow(Landroid/view/View;)Z" id="6" />
+      <edge source="Lcom/google/android/gms/internal/zzgp;-&gt;zzm(I)V" target="Landroid/view/View;-&gt;getWindowVisibility()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

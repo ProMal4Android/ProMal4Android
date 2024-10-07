@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;verifyAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)Z" label="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;verifyAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)Z" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;findAnchorView(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/view/View;" label="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;findAnchorView(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/view/View;" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;findViewById(I)Landroid/view/View;" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;findViewById(I)Landroid/view/View;" />
+      <node id="Landroid/support/design/widget/BottomSheetDialog;-&gt;wrapInBottomSheet(ILandroid/view/View;Landroid/view/ViewGroup$LayoutParams;)Landroid/view/View;" label="Landroid/support/design/widget/BottomSheetDialog;-&gt;wrapInBottomSheet(ILandroid/view/View;Landroid/view/ViewGroup$LayoutParams;)Landroid/view/View;" />
+      <node id="Landroid/view/ViewParent;-&gt;getParent()Landroid/view/ViewParent;" label="Landroid/view/ViewParent;-&gt;getParent()Landroid/view/ViewParent;" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" label="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" label="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;verifyAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)Z" target="Landroid/view/ViewParent;-&gt;getParent()Landroid/view/ViewParent;" id="0" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;findAnchorView(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/view/View;" target="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;verifyAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)Z" id="1" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;findAnchorView(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/view/View;" target="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" id="2" />
+      <edge source="Landroid/support/design/widget/BottomSheetDialog;-&gt;wrapInBottomSheet(ILandroid/view/View;Landroid/view/ViewGroup$LayoutParams;)Landroid/view/View;" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;findViewById(I)Landroid/view/View;" id="3" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;findViewById(I)Landroid/view/View;" id="4" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout$LayoutParams;-&gt;resolveAnchorView(Landroid/view/View;Landroid/support/design/widget/CoordinatorLayout;)V" target="Landroid/view/ViewParent;-&gt;getParent()Landroid/view/ViewParent;" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" target="Landroid/view/ViewParent;-&gt;getParent()Landroid/view/ViewParent;" id="6" />
+    </edges>
+  </graph>
+</gexf>

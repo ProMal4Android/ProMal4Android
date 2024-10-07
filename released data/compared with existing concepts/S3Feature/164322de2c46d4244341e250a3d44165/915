@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/fragment/app/FragmentManagerImpl;-&gt;dispatchActivityCreated()V" label="Landroidx/fragment/app/FragmentManagerImpl;-&gt;dispatchActivityCreated()V" />
+      <node id="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" label="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" />
+      <node id="Landroidx/fragment/app/FragmentManagerImpl;-&gt;dispatchStateChange(I)V" label="Landroidx/fragment/app/FragmentManagerImpl;-&gt;dispatchStateChange(I)V" />
+      <node id="Landroidx/fragment/app/FragmentManagerImpl;-&gt;moveToState(IZ)V" label="Landroidx/fragment/app/FragmentManagerImpl;-&gt;moveToState(IZ)V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" label="Landroidx/fragment/app/Fragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" />
+      <node id="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;performActivityCreated(Landroid/os/Bundle;)V" label="Landroidx/fragment/app/Fragment;-&gt;performActivityCreated(Landroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/fragment/app/FragmentManagerImpl;-&gt;dispatchActivityCreated()V" target="Landroidx/fragment/app/FragmentManagerImpl;-&gt;dispatchStateChange(I)V" id="0" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" target="Landroidx/fragment/app/Fragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" id="1" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="2" />
+      <edge source="Landroidx/fragment/app/FragmentManagerImpl;-&gt;dispatchStateChange(I)V" target="Landroidx/fragment/app/FragmentManagerImpl;-&gt;moveToState(IZ)V" id="3" />
+      <edge source="Landroidx/fragment/app/FragmentManagerImpl;-&gt;moveToState(IZ)V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="4" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;performActivityCreated(Landroid/os/Bundle;)V" target="Landroidx/fragment/app/FragmentManagerImpl;-&gt;dispatchActivityCreated()V" id="5" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;performActivityCreated(Landroid/os/Bundle;)V" target="Landroidx/fragment/app/Fragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

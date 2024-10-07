@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/request/GenericRequest;-&gt;onException(Ljava/lang/Exception;)V" label="Lcom/bumptech/glide/request/GenericRequest;-&gt;onException(Ljava/lang/Exception;)V" />
+      <node id="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" label="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" />
+      <node id="Landroid/supports/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" label="Landroid/supports/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" />
+      <node id="Landroid/supports/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" label="Landroid/supports/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" />
+      <node id="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" label="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" />
+      <node id="Landroid/supports/v4/provider/DocumentsContractApi21;-&gt;createFile(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;" label="Landroid/supports/v4/provider/DocumentsContractApi21;-&gt;createFile(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;" />
+      <node id="Landroid/supports/v4/provider/DocumentsContractApi21;-&gt;createDirectory(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;" label="Landroid/supports/v4/provider/DocumentsContractApi21;-&gt;createDirectory(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/request/GenericRequest;-&gt;onException(Ljava/lang/Exception;)V" target="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" id="0" />
+      <edge source="Landroid/supports/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" target="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" id="1" />
+      <edge source="Landroid/supports/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" target="Landroid/util/Log;-&gt;isLoggable(Ljava/lang/String;I)Z" id="2" />
+      <edge source="Landroid/supports/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" target="Landroid/supports/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" id="3" />
+      <edge source="Landroid/supports/v4/provider/DocumentsContractApi21;-&gt;createFile(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;" target="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" id="4" />
+      <edge source="Landroid/supports/v4/provider/DocumentsContractApi21;-&gt;createDirectory(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;" target="Landroid/supports/v4/provider/DocumentsContractApi21;-&gt;createFile(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;" id="5" />
+    </edges>
+  </graph>
+</gexf>

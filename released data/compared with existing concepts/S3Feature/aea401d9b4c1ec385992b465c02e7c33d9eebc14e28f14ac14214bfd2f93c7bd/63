@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Integer;-&gt;parseInt(Ljava/lang/String;)I" label="Ljava/lang/Integer;-&gt;parseInt(Ljava/lang/String;)I" />
+      <node id="Landroid/support/v4/text/BidiFormatter;-&gt;markBefore(Ljava/lang/String;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" label="Landroid/support/v4/text/BidiFormatter;-&gt;markBefore(Ljava/lang/String;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" />
+      <node id="Ljava/lang/String;-&gt;length()I" label="Ljava/lang/String;-&gt;length()I" />
+      <node id="Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;-&gt;&lt;init&gt;(Ljava/lang/String;Z)V" label="Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;-&gt;&lt;init&gt;(Ljava/lang/String;Z)V" />
+      <node id="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;setViewImage(Landroid/widget/ImageView;Ljava/lang/String;)V" label="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;setViewImage(Landroid/widget/ImageView;Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/text/BidiFormatter;-&gt;getEntryDir(Ljava/lang/String;)I" label="Landroid/support/v4/text/BidiFormatter;-&gt;getEntryDir(Ljava/lang/String;)I" />
+      <node id="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceValue(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceValue(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;markBefore(Ljava/lang/String;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" target="Ljava/lang/String;-&gt;length()I" id="0" />
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;markBefore(Ljava/lang/String;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" target="Landroid/support/v4/text/BidiFormatter;-&gt;getEntryDir(Ljava/lang/String;)I" id="1" />
+      <edge source="Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;-&gt;&lt;init&gt;(Ljava/lang/String;Z)V" target="Ljava/lang/String;-&gt;length()I" id="2" />
+      <edge source="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;setViewImage(Landroid/widget/ImageView;Ljava/lang/String;)V" target="Ljava/lang/Integer;-&gt;parseInt(Ljava/lang/String;)I" id="3" />
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;getEntryDir(Ljava/lang/String;)I" target="Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;-&gt;&lt;init&gt;(Ljava/lang/String;Z)V" id="4" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceValue(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;" target="Ljava/lang/Integer;-&gt;parseInt(Ljava/lang/String;)I" id="5" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceValue(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;" target="Ljava/lang/String;-&gt;length()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

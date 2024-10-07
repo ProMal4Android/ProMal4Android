@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$10;-&gt;onConnectionSuspended(I)V" label="Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$10;-&gt;onConnectionSuspended(I)V" />
+      <node id="Landroid/content/Context;-&gt;bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z" label="Landroid/content/Context;-&gt;bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z" />
+      <node id="Lcom/google/android/gms/cast/CastRemoteDisplayLocalService;-&gt;startService(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;Lcom/google/android/gms/cast/CastDevice;Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$NotificationSettings;Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$Callbacks;)V" label="Lcom/google/android/gms/cast/CastRemoteDisplayLocalService;-&gt;startService(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;Lcom/google/android/gms/cast/CastDevice;Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$NotificationSettings;Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$Callbacks;)V" />
+      <node id="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" label="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;ensureServiceBound(Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;)Z" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;ensureServiceBound(Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;)Z" />
+      <node id="Lcom/google/android/gms/cast/internal/zzl;-&gt;zzf(Ljava/lang/String;[Ljava/lang/Object;)V" label="Lcom/google/android/gms/cast/internal/zzl;-&gt;zzf(Ljava/lang/String;[Ljava/lang/Object;)V" />
+      <node id="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" label="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$10;-&gt;onConnectionSuspended(I)V" target="Lcom/google/android/gms/cast/internal/zzl;-&gt;zzf(Ljava/lang/String;[Ljava/lang/Object;)V" id="0" />
+      <edge source="Lcom/google/android/gms/cast/CastRemoteDisplayLocalService;-&gt;startService(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;Lcom/google/android/gms/cast/CastDevice;Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$NotificationSettings;Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$Callbacks;)V" target="Landroid/content/Context;-&gt;bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z" id="1" />
+      <edge source="Lcom/google/android/gms/cast/CastRemoteDisplayLocalService;-&gt;startService(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;Lcom/google/android/gms/cast/CastDevice;Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$NotificationSettings;Lcom/google/android/gms/cast/CastRemoteDisplayLocalService$Callbacks;)V" target="Lcom/google/android/gms/cast/internal/zzl;-&gt;zzf(Ljava/lang/String;[Ljava/lang/Object;)V" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;ensureServiceBound(Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;)Z" target="Landroid/content/Context;-&gt;bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;ensureServiceBound(Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager$ListenerRecord;)Z" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="4" />
+      <edge source="Lcom/google/android/gms/cast/internal/zzl;-&gt;zzf(Ljava/lang/String;[Ljava/lang/Object;)V" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="5" />
+      <edge source="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/em;-&gt;v()I" label="Landroid/support/v7/widget/em;-&gt;v()I" />
+      <node id="Landroid/view/View$MeasureSpec;-&gt;getSize(I)I" label="Landroid/view/View$MeasureSpec;-&gt;getSize(I)I" />
+      <node id="Landroid/support/v7/widget/em;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" label="Landroid/support/v7/widget/em;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" />
+      <node id="Landroid/support/design/widget/FloatingActionButton;-&gt;onMeasure(II)V" label="Landroid/support/design/widget/FloatingActionButton;-&gt;onMeasure(II)V" />
+      <node id="Ljava/lang/Math;-&gt;min(II)I" label="Ljava/lang/Math;-&gt;min(II)I" />
+      <node id="Landroid/support/design/widget/FloatingActionButton;-&gt;a(II)I" label="Landroid/support/design/widget/FloatingActionButton;-&gt;a(II)I" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z" label="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/em;-&gt;v()I" target="Landroid/view/View$MeasureSpec;-&gt;getSize(I)I" id="0" />
+      <edge source="Landroid/support/v7/widget/em;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" target="Landroid/support/v7/widget/em;-&gt;v()I" id="1" />
+      <edge source="Landroid/support/v7/widget/em;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" target="Ljava/lang/Math;-&gt;min(II)I" id="2" />
+      <edge source="Landroid/support/design/widget/FloatingActionButton;-&gt;onMeasure(II)V" target="Ljava/lang/Math;-&gt;min(II)I" id="3" />
+      <edge source="Landroid/support/design/widget/FloatingActionButton;-&gt;onMeasure(II)V" target="Landroid/support/design/widget/FloatingActionButton;-&gt;a(II)I" id="4" />
+      <edge source="Landroid/support/design/widget/FloatingActionButton;-&gt;a(II)I" target="Landroid/view/View$MeasureSpec;-&gt;getSize(I)I" id="5" />
+      <edge source="Landroid/support/design/widget/FloatingActionButton;-&gt;a(II)I" target="Ljava/lang/Math;-&gt;min(II)I" id="6" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z" target="Landroid/support/v7/widget/em;-&gt;a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;Z)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

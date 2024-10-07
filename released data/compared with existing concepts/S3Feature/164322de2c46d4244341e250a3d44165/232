@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/res/Resources;-&gt;getConfiguration()Landroid/content/res/Configuration;" label="Landroid/content/res/Resources;-&gt;getConfiguration()Landroid/content/res/Configuration;" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" label="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;Landroidx/versionedparcelable/VersionedParcelable;)V" label="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;Landroidx/versionedparcelable/VersionedParcelable;)V" />
+      <node id="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" label="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="0" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" target="Landroid/content/res/Resources;-&gt;getConfiguration()Landroid/content/res/Configuration;" id="1" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="2" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroid/content/res/Resources;-&gt;getConfiguration()Landroid/content/res/Configuration;" id="3" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateResourcesConfigurationForNightMode(IZ)V" id="4" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="5" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="6" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;Landroidx/versionedparcelable/VersionedParcelable;)V" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/supports/constraint/b;-&gt;c(Landroid/supports/constraint/ConstraintLayout;)V" label="Landroid/supports/constraint/b;-&gt;c(Landroid/supports/constraint/ConstraintLayout;)V" />
+      <node id="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" label="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" />
+      <node id="Landroid/supports/constraint/ConstraintLayout;-&gt;getChildCount()I" label="Landroid/supports/constraint/ConstraintLayout;-&gt;getChildCount()I" />
+      <node id="Landroid/supports/constraint/ConstraintLayout;-&gt;c()V" label="Landroid/supports/constraint/ConstraintLayout;-&gt;c()V" />
+      <node id="Lcom/bumptech/glide/util/LruCache;-&gt;trimToSize(I)V" label="Lcom/bumptech/glide/util/LruCache;-&gt;trimToSize(I)V" />
+      <node id="Landroid/supports/constraint/ConstraintLayout;-&gt;d()V" label="Landroid/supports/constraint/ConstraintLayout;-&gt;d()V" />
+      <node id="Lcom/bumptech/glide/util/LruCache;-&gt;clearMemory()V" label="Lcom/bumptech/glide/util/LruCache;-&gt;clearMemory()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/supports/constraint/b;-&gt;c(Landroid/supports/constraint/ConstraintLayout;)V" target="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/supports/constraint/b;-&gt;c(Landroid/supports/constraint/ConstraintLayout;)V" target="Landroid/supports/constraint/ConstraintLayout;-&gt;getChildCount()I" id="1" />
+      <edge source="Landroid/supports/constraint/ConstraintLayout;-&gt;c()V" target="Landroid/supports/constraint/ConstraintLayout;-&gt;getChildCount()I" id="2" />
+      <edge source="Landroid/supports/constraint/ConstraintLayout;-&gt;c()V" target="Landroid/supports/constraint/ConstraintLayout;-&gt;d()V" id="3" />
+      <edge source="Lcom/bumptech/glide/util/LruCache;-&gt;trimToSize(I)V" target="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/supports/constraint/ConstraintLayout;-&gt;d()V" target="Landroid/supports/constraint/b;-&gt;c(Landroid/supports/constraint/ConstraintLayout;)V" id="5" />
+      <edge source="Landroid/supports/constraint/ConstraintLayout;-&gt;d()V" target="Landroid/supports/constraint/ConstraintLayout;-&gt;getChildCount()I" id="6" />
+      <edge source="Lcom/bumptech/glide/util/LruCache;-&gt;clearMemory()V" target="Lcom/bumptech/glide/util/LruCache;-&gt;trimToSize(I)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

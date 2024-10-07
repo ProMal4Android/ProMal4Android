@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-19">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/Fragment;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" />
+      <node id="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" label="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" />
+      <node id="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" label="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/content/LocalBroadcastManager;-&gt;sendBroadcast(Landroid/content/Intent;)Z" label="Landroid/support/v4/content/LocalBroadcastManager;-&gt;sendBroadcast(Landroid/content/Intent;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Landroid/support/v4/app/Fragment;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" id="1" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" id="3" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="4" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" id="5" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;findFragmentByWho(Ljava/lang/String;)Landroid/support/v4/app/Fragment;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="6" />
+      <edge source="Landroid/support/v4/content/LocalBroadcastManager;-&gt;sendBroadcast(Landroid/content/Intent;)Z" target="Ljava/util/ArrayList;-&gt;size()I" id="7" />
+      <edge source="Landroid/support/v4/content/LocalBroadcastManager;-&gt;sendBroadcast(Landroid/content/Intent;)Z" target="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" id="8" />
+    </edges>
+  </graph>
+</gexf>

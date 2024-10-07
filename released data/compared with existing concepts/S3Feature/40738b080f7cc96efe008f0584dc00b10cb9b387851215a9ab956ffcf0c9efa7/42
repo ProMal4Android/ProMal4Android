@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Integer;-&gt;numberOfTrailingZeros(I)I" label="Ljava/lang/Integer;-&gt;numberOfTrailingZeros(I)I" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onCreatePanelMenu(ILandroid/view/Menu;)Z" label="Landroid/support/v4/app/FragmentActivity;-&gt;onCreatePanelMenu(ILandroid/view/Menu;)Z" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)Z" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)Z" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" label="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;-&gt;feedbackTypeToString(I)Ljava/lang/String;" label="Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;-&gt;feedbackTypeToString(I)Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onCreatePanelMenu(ILandroid/view/Menu;)Z" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)Z" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)Z" target="Ljava/util/ArrayList;-&gt;size()I" id="1" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;-&gt;feedbackTypeToString(I)Ljava/lang/String;" target="Ljava/lang/Integer;-&gt;numberOfTrailingZeros(I)I" id="4" />
+      <edge source="Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;-&gt;feedbackTypeToString(I)Ljava/lang/String;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="5" />
+    </edges>
+  </graph>
+</gexf>

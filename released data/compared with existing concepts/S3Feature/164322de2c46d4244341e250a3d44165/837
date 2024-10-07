@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;unregisterFragmentWithRoot()V" label="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;unregisterFragmentWithRoot()V" />
+      <node id="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" label="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" />
+      <node id="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;removeChildRequestManagerFragment(Lcom/bumptech/glide/manager/SupportRequestManagerFragment;)V" label="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;removeChildRequestManagerFragment(Lcom/bumptech/glide/manager/SupportRequestManagerFragment;)V" />
+      <node id="Lcom/airbnb/lottie/LottieTask;-&gt;removeFailureListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;" label="Lcom/airbnb/lottie/LottieTask;-&gt;removeFailureListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;" />
+      <node id="Lcom/airbnb/lottie/LottieAnimationView;-&gt;cancelLoaderTask()V" label="Lcom/airbnb/lottie/LottieAnimationView;-&gt;cancelLoaderTask()V" />
+      <node id="Lcom/airbnb/lottie/LottieTask;-&gt;removeListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;" label="Lcom/airbnb/lottie/LottieTask;-&gt;removeListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;" />
+      <node id="Ljava/util/Set;-&gt;remove(Ljava/lang/Object;)Z" label="Ljava/util/Set;-&gt;remove(Ljava/lang/Object;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;unregisterFragmentWithRoot()V" target="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;removeChildRequestManagerFragment(Lcom/bumptech/glide/manager/SupportRequestManagerFragment;)V" id="0" />
+      <edge source="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" target="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;unregisterFragmentWithRoot()V" id="1" />
+      <edge source="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;removeChildRequestManagerFragment(Lcom/bumptech/glide/manager/SupportRequestManagerFragment;)V" target="Ljava/util/Set;-&gt;remove(Ljava/lang/Object;)Z" id="2" />
+      <edge source="Lcom/airbnb/lottie/LottieTask;-&gt;removeFailureListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;" target="Ljava/util/Set;-&gt;remove(Ljava/lang/Object;)Z" id="3" />
+      <edge source="Lcom/airbnb/lottie/LottieAnimationView;-&gt;cancelLoaderTask()V" target="Lcom/airbnb/lottie/LottieTask;-&gt;removeFailureListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;" id="4" />
+      <edge source="Lcom/airbnb/lottie/LottieAnimationView;-&gt;cancelLoaderTask()V" target="Lcom/airbnb/lottie/LottieTask;-&gt;removeListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;" id="5" />
+      <edge source="Lcom/airbnb/lottie/LottieTask;-&gt;removeListener(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;" target="Ljava/util/Set;-&gt;remove(Ljava/lang/Object;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

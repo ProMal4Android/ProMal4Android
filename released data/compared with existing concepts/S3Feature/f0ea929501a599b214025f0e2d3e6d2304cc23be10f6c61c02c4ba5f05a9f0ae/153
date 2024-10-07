@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get()Lcom/bumptech/glide/manager/RequestManagerRetriever;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get()Lcom/bumptech/glide/manager/RequestManagerRetriever;" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifFrameResourceDecoder;-&gt;&lt;init&gt;(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V" label="Lcom/bumptech/glide/load/resource/gif/GifFrameResourceDecoder;-&gt;&lt;init&gt;(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;-&gt;getRequestBuilder(Landroid/content/Context;Lcom/bumptech/glide/gifdecoder/GifDecoder;IILcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Lcom/bumptech/glide/GenericRequestBuilder;" label="Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;-&gt;getRequestBuilder(Landroid/content/Context;Lcom/bumptech/glide/gifdecoder/GifDecoder;IILcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Lcom/bumptech/glide/GenericRequestBuilder;" />
+      <node id="Landroid/support/compat/BuildConfig;-&gt;&lt;init&gt;()V" label="Landroid/support/compat/BuildConfig;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get()Lcom/bumptech/glide/manager/RequestManagerRetriever;" id="0" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifFrameResourceDecoder;-&gt;&lt;init&gt;(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get()Lcom/bumptech/glide/manager/RequestManagerRetriever;" id="2" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;-&gt;getRequestBuilder(Landroid/content/Context;Lcom/bumptech/glide/gifdecoder/GifDecoder;IILcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Lcom/bumptech/glide/GenericRequestBuilder;" target="Lcom/bumptech/glide/load/resource/gif/GifFrameResourceDecoder;-&gt;&lt;init&gt;(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V" id="3" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;-&gt;getRequestBuilder(Landroid/content/Context;Lcom/bumptech/glide/gifdecoder/GifDecoder;IILcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Lcom/bumptech/glide/GenericRequestBuilder;" target="Lcom/bumptech/glide/Glide;-&gt;with(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" id="4" />
+      <edge source="Landroid/support/compat/BuildConfig;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="5" />
+    </edges>
+  </graph>
+</gexf>

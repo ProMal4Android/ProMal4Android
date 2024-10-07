@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/nio/ByteBuffer;-&gt;position()I" label="Ljava/nio/ByteBuffer;-&gt;position()I" />
+      <node id="Lcom/google/android/exoplayer2/audio/Ac3Util;-&gt;parseEAc3SyncframeAudioSampleCount(Ljava/nio/ByteBuffer;)I" label="Lcom/google/android/exoplayer2/audio/Ac3Util;-&gt;parseEAc3SyncframeAudioSampleCount(Ljava/nio/ByteBuffer;)I" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;setOffscreenPageLimit(I)V" label="Landroid/support/v4/view/ViewPager;-&gt;setOffscreenPageLimit(I)V" />
+      <node id="Lcom/google/android/exoplayer2/audio/DtsUtil;-&gt;parseDtsAudioSampleCount(Ljava/nio/ByteBuffer;)I" label="Lcom/google/android/exoplayer2/audio/DtsUtil;-&gt;parseDtsAudioSampleCount(Ljava/nio/ByteBuffer;)I" />
+      <node id="La/a/a/e;-&gt;a(Ljava/nio/ByteBuffer;Ljava/lang/StringBuilder;)V" label="La/a/a/e;-&gt;a(Ljava/nio/ByteBuffer;Ljava/lang/StringBuilder;)V" />
+      <node id="Lcom/google/android/exoplayer2/audio/AudioTrack;-&gt;getFramesPerEncodedSample(ILjava/nio/ByteBuffer;)I" label="Lcom/google/android/exoplayer2/audio/AudioTrack;-&gt;getFramesPerEncodedSample(ILjava/nio/ByteBuffer;)I" />
+      <node id="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" label="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/exoplayer2/audio/Ac3Util;-&gt;parseEAc3SyncframeAudioSampleCount(Ljava/nio/ByteBuffer;)I" target="Ljava/nio/ByteBuffer;-&gt;position()I" id="0" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setOffscreenPageLimit(I)V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="1" />
+      <edge source="Lcom/google/android/exoplayer2/audio/DtsUtil;-&gt;parseDtsAudioSampleCount(Ljava/nio/ByteBuffer;)I" target="Ljava/nio/ByteBuffer;-&gt;position()I" id="2" />
+      <edge source="La/a/a/e;-&gt;a(Ljava/nio/ByteBuffer;Ljava/lang/StringBuilder;)V" target="Ljava/nio/ByteBuffer;-&gt;position()I" id="3" />
+      <edge source="La/a/a/e;-&gt;a(Ljava/nio/ByteBuffer;Ljava/lang/StringBuilder;)V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="4" />
+      <edge source="Lcom/google/android/exoplayer2/audio/AudioTrack;-&gt;getFramesPerEncodedSample(ILjava/nio/ByteBuffer;)I" target="Lcom/google/android/exoplayer2/audio/Ac3Util;-&gt;parseEAc3SyncframeAudioSampleCount(Ljava/nio/ByteBuffer;)I" id="5" />
+      <edge source="Lcom/google/android/exoplayer2/audio/AudioTrack;-&gt;getFramesPerEncodedSample(ILjava/nio/ByteBuffer;)I" target="Lcom/google/android/exoplayer2/audio/DtsUtil;-&gt;parseDtsAudioSampleCount(Ljava/nio/ByteBuffer;)I" id="6" />
+      <edge source="Lcom/google/android/exoplayer2/audio/AudioTrack;-&gt;getFramesPerEncodedSample(ILjava/nio/ByteBuffer;)I" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="7" />
+    </edges>
+  </graph>
+</gexf>

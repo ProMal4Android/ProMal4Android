@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" />
+      <node id="Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;-&gt;matchesFound(Ljava/util/Map;)V" label="Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;-&gt;matchesFound(Ljava/util/Map;)V" />
+      <node id="Landroidx/appcompat/widget/ScrollingTabContainerView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroidx/appcompat/widget/ScrollingTabContainerView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipients(Landroid/content/Context;Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/ArrayList;ILandroid/accounts/Account;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;Lcom/android/ex/chips/ChipsUtil$PermissionsCheckListener;)V" label="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipients(Landroid/content/Context;Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/ArrayList;ILandroid/accounts/Account;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;Lcom/android/ex/chips/ChipsUtil$PermissionsCheckListener;)V" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipientsFromExtensionMatcher(Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/Set;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;)V" label="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipientsFromExtensionMatcher(Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/Set;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" target="Landroidx/appcompat/widget/ScrollingTabContainerView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="0" />
+      <edge source="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipients(Landroid/content/Context;Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/ArrayList;ILandroid/accounts/Account;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;Lcom/android/ex/chips/ChipsUtil$PermissionsCheckListener;)V" target="Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;-&gt;matchesFound(Ljava/util/Map;)V" id="1" />
+      <edge source="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipients(Landroid/content/Context;Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/ArrayList;ILandroid/accounts/Account;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;Lcom/android/ex/chips/ChipsUtil$PermissionsCheckListener;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipients(Landroid/content/Context;Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/ArrayList;ILandroid/accounts/Account;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;Lcom/android/ex/chips/ChipsUtil$PermissionsCheckListener;)V" target="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipientsFromExtensionMatcher(Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/Set;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;)V" id="3" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" id="4" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="5" />
+      <edge source="Lcom/android/ex/chips/RecipientAlternatesAdapter;-&gt;getMatchingRecipientsFromExtensionMatcher(Lcom/android/ex/chips/BaseRecipientAdapter;Ljava/util/Set;Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;)V" target="Lcom/android/ex/chips/RecipientAlternatesAdapter$RecipientMatchCallback;-&gt;matchesFound(Ljava/util/Map;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

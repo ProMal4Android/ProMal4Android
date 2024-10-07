@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/graphics/Path;-&gt;&lt;init&gt;()V" label="Landroid/graphics/Path;-&gt;&lt;init&gt;()V" />
+      <node id="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" label="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" />
+      <node id="Landroidx/core/graphics/PathParser;-&gt;createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;" label="Landroidx/core/graphics/PathParser;-&gt;createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;" />
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/graphics/Paint;-&gt;&lt;init&gt;()V" label="Landroid/graphics/Paint;-&gt;&lt;init&gt;()V" />
+      <node id="Landroidx/core/graphics/PathParser;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;" label="Landroidx/core/graphics/PathParser;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Landroid/graphics/Path;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroidx/appcompat/graphics/drawable/DrawerArrowDrawable;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Landroid/graphics/Paint;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroidx/core/graphics/PathParser;-&gt;createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;" target="Landroid/graphics/Path;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroidx/core/graphics/PathParser;-&gt;createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;" target="Landroidx/core/graphics/PathParser;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;" id="3" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/graphics/Paint;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroidx/core/graphics/PathParser;-&gt;createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

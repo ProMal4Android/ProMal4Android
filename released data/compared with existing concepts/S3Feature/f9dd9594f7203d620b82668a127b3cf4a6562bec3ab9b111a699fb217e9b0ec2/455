@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ViewDragHelper;-&gt;smoothSlideViewTo(Landroid/view/View;II)Z" label="Landroid/support/v4/widget/ViewDragHelper;-&gt;smoothSlideViewTo(Landroid/view/View;II)Z" />
+      <node id="Landroid/view/View;-&gt;getLeft()I" label="Landroid/view/View;-&gt;getLeft()I" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior$2;-&gt;onViewReleased(Landroid/view/View;FF)V" label="Landroid/support/design/widget/BottomSheetBehavior$2;-&gt;onViewReleased(Landroid/view/View;FF)V" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;shouldHide(Landroid/view/View;F)Z" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;shouldHide(Landroid/view/View;F)Z" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;startSettlingAnimation(Landroid/view/View;I)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;startSettlingAnimation(Landroid/view/View;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior$2;-&gt;onViewReleased(Landroid/view/View;FF)V" target="Landroid/view/View;-&gt;getLeft()I" id="0" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior$2;-&gt;onViewReleased(Landroid/view/View;FF)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" id="1" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior$2;-&gt;onViewReleased(Landroid/view/View;FF)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;shouldHide(Landroid/view/View;F)Z" id="2" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" target="Landroid/support/v4/widget/ViewDragHelper;-&gt;smoothSlideViewTo(Landroid/view/View;II)Z" id="3" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" target="Landroid/view/View;-&gt;getLeft()I" id="4" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" id="5" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onStopNestedScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;shouldHide(Landroid/view/View;F)Z" id="6" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;startSettlingAnimation(Landroid/view/View;I)V" target="Landroid/support/v4/widget/ViewDragHelper;-&gt;smoothSlideViewTo(Landroid/view/View;II)Z" id="7" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;startSettlingAnimation(Landroid/view/View;I)V" target="Landroid/view/View;-&gt;getLeft()I" id="8" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;startSettlingAnimation(Landroid/view/View;I)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;setStateInternal(I)V" id="9" />
+    </edges>
+  </graph>
+</gexf>

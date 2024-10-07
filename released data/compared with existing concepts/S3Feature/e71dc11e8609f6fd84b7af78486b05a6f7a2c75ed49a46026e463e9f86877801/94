@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/common/internal/zzh;-&gt;zzaT(Landroid/content/Context;)Ljava/lang/String;" label="Lcom/google/android/gms/common/internal/zzh;-&gt;zzaT(Landroid/content/Context;)Ljava/lang/String;" />
+      <node id="Lcom/google/android/gms/internal/zzadf;-&gt;zzdA(Ljava/lang/String;)Ljava/lang/CharSequence;" label="Lcom/google/android/gms/internal/zzadf;-&gt;zzdA(Ljava/lang/String;)Ljava/lang/CharSequence;" />
+      <node id="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" label="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" label="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" label="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" />
+      <node id="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" label="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;" label="Landroid/content/pm/PackageManager;-&gt;getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/common/internal/zzh;-&gt;zzaT(Landroid/content/Context;)Ljava/lang/String;" target="Lcom/google/android/gms/internal/zzadf;-&gt;zzdA(Ljava/lang/String;)Ljava/lang/CharSequence;" id="0" />
+      <edge source="Lcom/google/android/gms/common/internal/zzh;-&gt;zzaT(Landroid/content/Context;)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" id="1" />
+      <edge source="Lcom/google/android/gms/internal/zzadf;-&gt;zzdA(Ljava/lang/String;)Ljava/lang/CharSequence;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" id="2" />
+      <edge source="Lcom/google/android/gms/internal/zzadf;-&gt;zzdA(Ljava/lang/String;)Ljava/lang/CharSequence;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;" id="3" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" id="4" />
+      <edge source="Landroid/support/multidex/MultiDex;-&gt;getApplicationInfo(Landroid/content/Context;)Landroid/content/pm/ApplicationInfo;" target="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" id="5" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" id="6" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;" id="7" />
+    </edges>
+  </graph>
+</gexf>

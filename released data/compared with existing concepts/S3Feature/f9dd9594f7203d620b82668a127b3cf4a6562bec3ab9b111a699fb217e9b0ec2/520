@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/Fragment;-&gt;startActivityForResult(Landroid/content/Intent;I)V" label="Landroid/support/v4/app/Fragment;-&gt;startActivityForResult(Landroid/content/Intent;I)V" />
+      <node id="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Landroid/app/Activity;)V" label="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Landroid/app/Activity;)V" />
+      <node id="Lcom/facebook/internal/AppCall;-&gt;getRequestIntent()Landroid/content/Intent;" label="Lcom/facebook/internal/AppCall;-&gt;getRequestIntent()Landroid/content/Intent;" />
+      <node id="Lcom/facebook/internal/AppCall;-&gt;setPending()Z" label="Lcom/facebook/internal/AppCall;-&gt;setPending()Z" />
+      <node id="Lcom/facebook/internal/FragmentWrapper;-&gt;startActivityForResult(Landroid/content/Intent;I)V" label="Lcom/facebook/internal/FragmentWrapper;-&gt;startActivityForResult(Landroid/content/Intent;I)V" />
+      <node id="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Lcom/facebook/internal/FragmentWrapper;)V" label="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Lcom/facebook/internal/FragmentWrapper;)V" />
+      <node id="Lcom/facebook/internal/AppCall;-&gt;setCurrentPendingCall(Lcom/facebook/internal/AppCall;)Z" label="Lcom/facebook/internal/AppCall;-&gt;setCurrentPendingCall(Lcom/facebook/internal/AppCall;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Landroid/app/Activity;)V" target="Lcom/facebook/internal/AppCall;-&gt;getRequestIntent()Landroid/content/Intent;" id="0" />
+      <edge source="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Landroid/app/Activity;)V" target="Lcom/facebook/internal/AppCall;-&gt;setPending()Z" id="1" />
+      <edge source="Lcom/facebook/internal/AppCall;-&gt;setPending()Z" target="Lcom/facebook/internal/AppCall;-&gt;setCurrentPendingCall(Lcom/facebook/internal/AppCall;)Z" id="2" />
+      <edge source="Lcom/facebook/internal/FragmentWrapper;-&gt;startActivityForResult(Landroid/content/Intent;I)V" target="Landroid/support/v4/app/Fragment;-&gt;startActivityForResult(Landroid/content/Intent;I)V" id="3" />
+      <edge source="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Lcom/facebook/internal/FragmentWrapper;)V" target="Lcom/facebook/internal/AppCall;-&gt;getRequestIntent()Landroid/content/Intent;" id="4" />
+      <edge source="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Lcom/facebook/internal/FragmentWrapper;)V" target="Lcom/facebook/internal/AppCall;-&gt;setPending()Z" id="5" />
+      <edge source="Lcom/facebook/internal/DialogPresenter;-&gt;present(Lcom/facebook/internal/AppCall;Lcom/facebook/internal/FragmentWrapper;)V" target="Lcom/facebook/internal/FragmentWrapper;-&gt;startActivityForResult(Landroid/content/Intent;I)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

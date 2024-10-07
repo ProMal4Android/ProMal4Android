@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;doPendingDeferredStart()V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;doPendingDeferredStart()V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/a/a/c$a;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/a/a/c$a;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" label="Landroid/support/a/a/c$a;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/a/a/c$a;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;performPendingDeferredStart(Landroid/support/v4/app/Fragment;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;performPendingDeferredStart(Landroid/support/v4/app/Fragment;)V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;startPendingDeferredFragments()V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;startPendingDeferredFragments()V" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;setUserVisibleHint(Z)V" label="Landroid/support/v4/app/Fragment;-&gt;setUserVisibleHint(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;doPendingDeferredStart()V" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;doPendingDeferredStart()V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;startPendingDeferredFragments()V" id="1" />
+      <edge source="Landroid/support/a/a/c$a;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/a/a/c$a;Landroid/graphics/drawable/Drawable$Callback;Landroid/content/res/Resources;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" target="Landroid/support/v4/app/Fragment;-&gt;setUserVisibleHint(Z)V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;startPendingDeferredFragments()V" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;startPendingDeferredFragments()V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;performPendingDeferredStart(Landroid/support/v4/app/Fragment;)V" id="5" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;setUserVisibleHint(Z)V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;performPendingDeferredStart(Landroid/support/v4/app/Fragment;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

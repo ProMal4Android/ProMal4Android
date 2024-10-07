@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" label="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" />
+      <node id="Landroid/support/v4/app/FragmentController;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" label="Landroid/support/v4/app/FragmentController;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" label="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" />
+      <node id="Lcom/bumptech/glide/i/h;-&gt;isOnMainThread()Z" label="Lcom/bumptech/glide/i/h;-&gt;isOnMainThread()Z" />
+      <node id="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/h;" label="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/h;" />
+      <node id="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/h;" label="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/h;" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onBackPressed()V" label="Landroid/support/v4/app/FragmentActivity;-&gt;onBackPressed()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" target="Landroid/support/v4/app/FragmentController;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" id="0" />
+      <edge source="Lcom/bumptech/glide/i/h;-&gt;isOnMainThread()Z" target="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" id="1" />
+      <edge source="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/h;" target="Lcom/bumptech/glide/i/h;-&gt;isOnMainThread()Z" id="2" />
+      <edge source="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/h;" target="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/h;" id="3" />
+      <edge source="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/h;" target="Landroid/support/v4/app/FragmentActivity;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" id="4" />
+      <edge source="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/h;" target="Lcom/bumptech/glide/manager/j;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/h;" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onBackPressed()V" target="Landroid/support/v4/app/FragmentController;-&gt;getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;" id="6" />
+    </edges>
+  </graph>
+</gexf>

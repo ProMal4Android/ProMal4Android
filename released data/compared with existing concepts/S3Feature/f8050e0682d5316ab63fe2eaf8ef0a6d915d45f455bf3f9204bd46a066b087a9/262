@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/transition/TransitionManagerPort$MultiListener$1;-&gt;onTransitionEnd(Landroid/support/transition/TransitionPort;)V" label="Landroid/support/transition/TransitionManagerPort$MultiListener$1;-&gt;onTransitionEnd(Landroid/support/transition/TransitionPort;)V" />
+      <node id="Landroid/support/transition/TransitionIcs;-&gt;removeListener(Landroid/support/transition/TransitionInterfaceListener;)Landroid/support/transition/TransitionImpl;" label="Landroid/support/transition/TransitionIcs;-&gt;removeListener(Landroid/support/transition/TransitionInterfaceListener;)Landroid/support/transition/TransitionImpl;" />
+      <node id="Ljava/util/ArrayList;-&gt;remove(Ljava/lang/Object;)Z" label="Ljava/util/ArrayList;-&gt;remove(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" label="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" />
+      <node id="Landroid/support/transition/TransitionIcs$CompatListener;-&gt;removeListener(Landroid/support/transition/TransitionInterfaceListener;)V" label="Landroid/support/transition/TransitionIcs$CompatListener;-&gt;removeListener(Landroid/support/transition/TransitionInterfaceListener;)V" />
+      <node id="Landroid/support/v4/util/ArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Landroid/support/v4/util/ArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/transition/TransitionPort;-&gt;removeListener(Landroid/support/transition/TransitionPort$TransitionListener;)Landroid/support/transition/TransitionPort;" label="Landroid/support/transition/TransitionPort;-&gt;removeListener(Landroid/support/transition/TransitionPort$TransitionListener;)Landroid/support/transition/TransitionPort;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/transition/TransitionManagerPort$MultiListener$1;-&gt;onTransitionEnd(Landroid/support/transition/TransitionPort;)V" target="Ljava/util/ArrayList;-&gt;remove(Ljava/lang/Object;)Z" id="0" />
+      <edge source="Landroid/support/transition/TransitionManagerPort$MultiListener$1;-&gt;onTransitionEnd(Landroid/support/transition/TransitionPort;)V" target="Landroid/support/v4/util/ArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/transition/TransitionIcs;-&gt;removeListener(Landroid/support/transition/TransitionInterfaceListener;)Landroid/support/transition/TransitionImpl;" target="Landroid/support/transition/TransitionIcs$CompatListener;-&gt;removeListener(Landroid/support/transition/TransitionInterfaceListener;)V" id="2" />
+      <edge source="Landroid/support/transition/TransitionIcs;-&gt;removeListener(Landroid/support/transition/TransitionInterfaceListener;)Landroid/support/transition/TransitionImpl;" target="Landroid/support/transition/TransitionPort;-&gt;removeListener(Landroid/support/transition/TransitionPort$TransitionListener;)Landroid/support/transition/TransitionPort;" id="3" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" target="Landroid/support/v4/util/ArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/transition/TransitionIcs$CompatListener;-&gt;removeListener(Landroid/support/transition/TransitionInterfaceListener;)V" target="Ljava/util/ArrayList;-&gt;remove(Ljava/lang/Object;)Z" id="5" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;removeListener(Landroid/support/transition/TransitionPort$TransitionListener;)Landroid/support/transition/TransitionPort;" target="Ljava/util/ArrayList;-&gt;remove(Ljava/lang/Object;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

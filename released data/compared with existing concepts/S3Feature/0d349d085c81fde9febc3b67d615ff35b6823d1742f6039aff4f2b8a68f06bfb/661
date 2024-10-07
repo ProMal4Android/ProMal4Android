@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;openDrawer(Landroid/view/View;)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;openDrawer(Landroid/view/View;)V" />
+      <node id="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" label="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" />
+      <node id="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;getWidth()I" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;getWidth()I" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerView(Landroid/view/View;)Z" label="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerView(Landroid/view/View;)Z" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithKeyline(Landroid/view/View;II)V" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithKeyline(Landroid/view/View;II)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;openDrawer(Landroid/view/View;)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="0" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;openDrawer(Landroid/view/View;)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerView(Landroid/view/View;)Z" id="1" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" target="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" id="2" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="3" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;getDesiredAnchoredChildRect(Landroid/view/View;ILandroid/graphics/Rect;Landroid/graphics/Rect;)V" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;getWidth()I" id="4" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerView(Landroid/view/View;)Z" target="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" id="5" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerView(Landroid/view/View;)Z" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="6" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithKeyline(Landroid/view/View;II)V" target="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" id="7" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithKeyline(Landroid/view/View;II)V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="8" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;layoutChildWithKeyline(Landroid/view/View;II)V" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;getWidth()I" id="9" />
+    </edges>
+  </graph>
+</gexf>

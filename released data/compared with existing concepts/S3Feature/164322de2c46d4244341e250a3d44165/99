@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/net/Uri$Builder;-&gt;authority(Ljava/lang/String;)Landroid/net/Uri$Builder;" label="Landroid/net/Uri$Builder;-&gt;authority(Ljava/lang/String;)Landroid/net/Uri$Builder;" />
+      <node id="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" label="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" />
+      <node id="Landroidx/core/provider/FontsContractCompat;-&gt;getFontFromProvider(Landroid/content/Context;Landroidx/core/provider/FontRequest;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$FontInfo;" label="Landroidx/core/provider/FontsContractCompat;-&gt;getFontFromProvider(Landroid/content/Context;Landroidx/core/provider/FontRequest;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$FontInfo;" />
+      <node id="Landroid/net/Uri$Builder;-&gt;scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;" label="Landroid/net/Uri$Builder;-&gt;scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;" />
+      <node id="Landroidx/core/content/FileProvider$SimplePathStrategy;-&gt;getUriForFile(Ljava/io/File;)Landroid/net/Uri;" label="Landroidx/core/content/FileProvider$SimplePathStrategy;-&gt;getUriForFile(Ljava/io/File;)Landroid/net/Uri;" />
+      <node id="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" label="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" />
+      <node id="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" label="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/net/Uri$Builder;-&gt;authority(Ljava/lang/String;)Landroid/net/Uri$Builder;" id="0" />
+      <edge source="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/net/Uri$Builder;-&gt;scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;" id="1" />
+      <edge source="Lcom/android/common/Search;-&gt;getSuggestions(Landroid/content/Context;Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroidx/core/provider/FontsContractCompat;-&gt;getFontFromProvider(Landroid/content/Context;Landroidx/core/provider/FontRequest;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$FontInfo;" target="Landroid/net/Uri$Builder;-&gt;authority(Ljava/lang/String;)Landroid/net/Uri$Builder;" id="3" />
+      <edge source="Landroidx/core/provider/FontsContractCompat;-&gt;getFontFromProvider(Landroid/content/Context;Landroidx/core/provider/FontRequest;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$FontInfo;" target="Landroid/net/Uri$Builder;-&gt;scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;" id="4" />
+      <edge source="Landroidx/core/provider/FontsContractCompat;-&gt;getFontFromProvider(Landroid/content/Context;Landroidx/core/provider/FontRequest;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$FontInfo;" target="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroidx/core/content/FileProvider$SimplePathStrategy;-&gt;getUriForFile(Ljava/io/File;)Landroid/net/Uri;" target="Landroid/net/Uri$Builder;-&gt;authority(Ljava/lang/String;)Landroid/net/Uri$Builder;" id="6" />
+      <edge source="Landroidx/core/content/FileProvider$SimplePathStrategy;-&gt;getUriForFile(Ljava/io/File;)Landroid/net/Uri;" target="Landroid/net/Uri$Builder;-&gt;scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;" id="7" />
+      <edge source="Landroidx/core/content/FileProvider$SimplePathStrategy;-&gt;getUriForFile(Ljava/io/File;)Landroid/net/Uri;" target="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" id="8" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/net/Uri$Builder;-&gt;authority(Ljava/lang/String;)Landroid/net/Uri$Builder;" id="9" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/net/Uri$Builder;-&gt;scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;" id="10" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getSearchManagerSuggestions(Landroid/app/SearchableInfo;Ljava/lang/String;I)Landroid/database/Cursor;" target="Landroid/net/Uri$Builder;-&gt;&lt;init&gt;()V" id="11" />
+    </edges>
+  </graph>
+</gexf>

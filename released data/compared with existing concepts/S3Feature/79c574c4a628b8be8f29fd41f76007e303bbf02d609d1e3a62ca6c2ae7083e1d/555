@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Boolean;-&gt;valueOf(Z)Ljava/lang/Boolean;" label="Ljava/lang/Boolean;-&gt;valueOf(Z)Ljava/lang/Boolean;" />
+      <node id="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z" label="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;setPageTransformer(ZLandroid/support/v4/view/ViewPager$PageTransformer;)V" label="Landroid/support/v4/view/ViewPager;-&gt;setPageTransformer(ZLandroid/support/v4/view/ViewPager$PageTransformer;)V" />
+      <node id="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;InvokeMethod(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" label="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;InvokeMethod(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;setChildrenDrawingOrderEnabledCompat(Z)V" label="Landroid/support/v4/view/ViewPager;-&gt;setChildrenDrawingOrderEnabledCompat(Z)V" />
+      <node id="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" label="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z" target="Ljava/lang/Boolean;-&gt;valueOf(Z)Ljava/lang/Boolean;" id="0" />
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z" target="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;InvokeMethod(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setPageTransformer(ZLandroid/support/v4/view/ViewPager$PageTransformer;)V" target="Landroid/support/v4/view/ViewPager;-&gt;setChildrenDrawingOrderEnabledCompat(Z)V" id="2" />
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;InvokeMethod(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setChildrenDrawingOrderEnabledCompat(Z)V" target="Ljava/lang/Boolean;-&gt;valueOf(Z)Ljava/lang/Boolean;" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;setChildrenDrawingOrderEnabledCompat(Z)V" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" target="Ljava/lang/Boolean;-&gt;valueOf(Z)Ljava/lang/Boolean;" id="6" />
+      <edge source="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" target="Lair/com/eni/AnimalJudy018/AppEntry;-&gt;InvokeMethod(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

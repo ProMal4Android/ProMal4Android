@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/Fragment;-&gt;getString(I)Ljava/lang/String;" label="Landroid/support/v4/app/Fragment;-&gt;getString(I)Ljava/lang/String;" />
+      <node id="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;createInvisibleMultipleFileSelectionView()V" label="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;createInvisibleMultipleFileSelectionView()V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;&lt;init&gt;(Ljava/util/ArrayList;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V" label="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;&lt;init&gt;(Ljava/util/ArrayList;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V" />
+      <node id="Landroid/content/res/Resources;-&gt;getString(I)Ljava/lang/String;" label="Landroid/content/res/Resources;-&gt;getString(I)Ljava/lang/String;" />
+      <node id="Lcom/adobe/air/utils/Utils;-&gt;GetResourceStringFromRuntime(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;" label="Lcom/adobe/air/utils/Utils;-&gt;GetResourceStringFromRuntime(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;" />
+      <node id="Lcom/adobe/air/AndroidAlertDialog;-&gt;GetAlertDialogBuilder()Landroid/app/AlertDialog$Builder;" label="Lcom/adobe/air/AndroidAlertDialog;-&gt;GetAlertDialogBuilder()Landroid/app/AlertDialog$Builder;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;getString(I)Ljava/lang/String;" target="Landroid/content/res/Resources;-&gt;getString(I)Ljava/lang/String;" id="0" />
+      <edge source="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;createInvisibleMultipleFileSelectionView()V" target="Lcom/adobe/air/utils/Utils;-&gt;GetResourceStringFromRuntime(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;" id="1" />
+      <edge source="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;createInvisibleMultipleFileSelectionView()V" target="Lcom/adobe/air/AndroidAlertDialog;-&gt;GetAlertDialogBuilder()Landroid/app/AlertDialog$Builder;" id="2" />
+      <edge source="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;&lt;init&gt;(Ljava/util/ArrayList;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V" target="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;createInvisibleMultipleFileSelectionView()V" id="3" />
+      <edge source="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;&lt;init&gt;(Ljava/util/ArrayList;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;&lt;init&gt;(Ljava/util/ArrayList;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V" target="Lcom/adobe/air/utils/Utils;-&gt;GetResourceStringFromRuntime(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;" id="5" />
+      <edge source="Lcom/adobe/air/AIRExpandableFileChooser;-&gt;&lt;init&gt;(Ljava/util/ArrayList;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V" target="Lcom/adobe/air/AndroidAlertDialog;-&gt;GetAlertDialogBuilder()Landroid/app/AlertDialog$Builder;" id="6" />
+      <edge source="Lcom/adobe/air/utils/Utils;-&gt;GetResourceStringFromRuntime(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;" target="Landroid/content/res/Resources;-&gt;getString(I)Ljava/lang/String;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/vcard/VCardEntryConstructor;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" label="Lcom/android/vcard/VCardEntryConstructor;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" />
+      <node id="Lcom/android/vcard/VCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" label="Lcom/android/vcard/VCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" />
+      <node id="Lcom/android/messaging/datamodel/media/CustomVCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" label="Lcom/android/messaging/datamodel/media/CustomVCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" />
+      <node id="Lcom/android/vcard/VCardSourceDetector;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" label="Lcom/android/vcard/VCardSourceDetector;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" />
+      <node id="Lcom/android/vcard/VCardProperty;-&gt;getName()Ljava/lang/String;" label="Lcom/android/vcard/VCardProperty;-&gt;getName()Ljava/lang/String;" />
+      <node id="Lcom/android/messaging/datamodel/media/CustomVCardEntryConstructor;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" label="Lcom/android/messaging/datamodel/media/CustomVCardEntryConstructor;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" />
+      <node id="Lcom/android/vcard/VCardProperty;-&gt;getValueList()Ljava/util/List;" label="Lcom/android/vcard/VCardProperty;-&gt;getValueList()Ljava/util/List;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/vcard/VCardEntryConstructor;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" target="Lcom/android/vcard/VCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" id="0" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" target="Lcom/android/vcard/VCardProperty;-&gt;getName()Ljava/lang/String;" id="1" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" target="Lcom/android/vcard/VCardProperty;-&gt;getValueList()Ljava/util/List;" id="2" />
+      <edge source="Lcom/android/messaging/datamodel/media/CustomVCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" target="Lcom/android/vcard/VCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" id="3" />
+      <edge source="Lcom/android/messaging/datamodel/media/CustomVCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" target="Lcom/android/vcard/VCardProperty;-&gt;getName()Ljava/lang/String;" id="4" />
+      <edge source="Lcom/android/vcard/VCardSourceDetector;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" target="Lcom/android/vcard/VCardProperty;-&gt;getName()Ljava/lang/String;" id="5" />
+      <edge source="Lcom/android/vcard/VCardSourceDetector;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" target="Lcom/android/vcard/VCardProperty;-&gt;getValueList()Ljava/util/List;" id="6" />
+      <edge source="Lcom/android/messaging/datamodel/media/CustomVCardEntryConstructor;-&gt;onPropertyCreated(Lcom/android/vcard/VCardProperty;)V" target="Lcom/android/messaging/datamodel/media/CustomVCardEntry;-&gt;addProperty(Lcom/android/vcard/VCardProperty;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

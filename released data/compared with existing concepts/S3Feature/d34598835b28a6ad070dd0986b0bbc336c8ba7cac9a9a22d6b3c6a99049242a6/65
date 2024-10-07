@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;getNetworkInfoFromBroadcast(Landroid/net/ConnectivityManager;Landroid/content/Intent;)Landroid/net/NetworkInfo;" label="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;getNetworkInfoFromBroadcast(Landroid/net/ConnectivityManager;Landroid/content/Intent;)Landroid/net/NetworkInfo;" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Lorg/andengine/util/ConnectivityUtils;-&gt;getConnectivityManager(Landroid/content/Context;)Landroid/net/ConnectivityManager;" label="Lorg/andengine/util/ConnectivityUtils;-&gt;getConnectivityManager(Landroid/content/Context;)Landroid/net/ConnectivityManager;" />
+      <node id="Lorg/andengine/util/ConnectivityUtils;-&gt;getNetworkInfo(Landroid/content/Context;I)Landroid/net/NetworkInfo;" label="Lorg/andengine/util/ConnectivityUtils;-&gt;getNetworkInfo(Landroid/content/Context;I)Landroid/net/NetworkInfo;" />
+      <node id="Landroid/net/NetworkInfo;-&gt;getType()I" label="Landroid/net/NetworkInfo;-&gt;getType()I" />
+      <node id="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" label="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" />
+      <node id="Landroid/net/ConnectivityManager;-&gt;getNetworkInfo(I)Landroid/net/NetworkInfo;" label="Landroid/net/ConnectivityManager;-&gt;getNetworkInfo(I)Landroid/net/NetworkInfo;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;getNetworkInfoFromBroadcast(Landroid/net/ConnectivityManager;Landroid/content/Intent;)Landroid/net/NetworkInfo;" target="Landroid/net/NetworkInfo;-&gt;getType()I" id="0" />
+      <edge source="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;getNetworkInfoFromBroadcast(Landroid/net/ConnectivityManager;Landroid/content/Intent;)Landroid/net/NetworkInfo;" target="Landroid/net/ConnectivityManager;-&gt;getNetworkInfo(I)Landroid/net/NetworkInfo;" id="1" />
+      <edge source="Lorg/andengine/util/ConnectivityUtils;-&gt;getConnectivityManager(Landroid/content/Context;)Landroid/net/ConnectivityManager;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="2" />
+      <edge source="Lorg/andengine/util/ConnectivityUtils;-&gt;getNetworkInfo(Landroid/content/Context;I)Landroid/net/NetworkInfo;" target="Lorg/andengine/util/ConnectivityUtils;-&gt;getConnectivityManager(Landroid/content/Context;)Landroid/net/ConnectivityManager;" id="3" />
+      <edge source="Lorg/andengine/util/ConnectivityUtils;-&gt;getNetworkInfo(Landroid/content/Context;I)Landroid/net/NetworkInfo;" target="Landroid/net/ConnectivityManager;-&gt;getNetworkInfo(I)Landroid/net/NetworkInfo;" id="4" />
+      <edge source="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" target="Landroid/net/NetworkInfo;-&gt;getType()I" id="5" />
+    </edges>
+  </graph>
+</gexf>

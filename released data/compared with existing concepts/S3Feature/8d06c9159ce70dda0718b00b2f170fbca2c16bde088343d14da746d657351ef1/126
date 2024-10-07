@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+      <node id="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;I)Landroid/animation/Animator;" label="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;I)Landroid/animation/Animator;" />
+      <node id="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;IF)Landroid/animation/Animator;" label="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;IF)Landroid/animation/Animator;" />
+      <node id="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;I)Landroid/animation/Animator;" label="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;I)Landroid/animation/Animator;" />
+      <node id="Landroid/support/c/a/d;-&gt;a(Landroid/content/Context;I)Landroid/view/animation/Interpolator;" label="Landroid/support/c/a/d;-&gt;a(Landroid/content/Context;I)Landroid/view/animation/Interpolator;" />
+      <node id="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/content/res/Resources;-&gt;getAnimation(I)Landroid/content/res/XmlResourceParser;" label="Landroid/content/res/Resources;-&gt;getAnimation(I)Landroid/content/res/XmlResourceParser;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;I)Landroid/animation/Animator;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="0" />
+      <edge source="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;I)Landroid/animation/Animator;" target="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;I)Landroid/animation/Animator;" id="1" />
+      <edge source="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;IF)Landroid/animation/Animator;" target="Landroid/content/res/Resources;-&gt;getAnimation(I)Landroid/content/res/XmlResourceParser;" id="2" />
+      <edge source="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;I)Landroid/animation/Animator;" target="Landroid/support/c/a/e;-&gt;a(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;IF)Landroid/animation/Animator;" id="3" />
+      <edge source="Landroid/support/c/a/d;-&gt;a(Landroid/content/Context;I)Landroid/view/animation/Interpolator;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="4" />
+      <edge source="Landroid/support/c/a/d;-&gt;a(Landroid/content/Context;I)Landroid/view/animation/Interpolator;" target="Landroid/content/res/Resources;-&gt;getAnimation(I)Landroid/content/res/XmlResourceParser;" id="5" />
+      <edge source="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="6" />
+    </edges>
+  </graph>
+</gexf>

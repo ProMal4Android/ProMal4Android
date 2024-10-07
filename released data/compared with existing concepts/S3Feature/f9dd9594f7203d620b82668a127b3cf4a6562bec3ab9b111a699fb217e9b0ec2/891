@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" label="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" />
+      <node id="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingStart(Landroid/view/View;)I" label="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingStart(Landroid/view/View;)I" />
+      <node id="Landroid/support/v4/view/ViewCompat;-&gt;setPaddingRelative(Landroid/view/View;IIII)V" label="Landroid/support/v4/view/ViewCompat;-&gt;setPaddingRelative(Landroid/view/View;IIII)V" />
+      <node id="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" label="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" />
+      <node id="Landroid/support/design/internal/SnackbarContentLayout;-&gt;updateTopBottomPadding(Landroid/view/View;II)V" label="Landroid/support/design/internal/SnackbarContentLayout;-&gt;updateTopBottomPadding(Landroid/view/View;II)V" />
+      <node id="Landroid/support/design/widget/TextInputLayout;-&gt;adjustIndicatorPadding()V" label="Landroid/support/design/widget/TextInputLayout;-&gt;adjustIndicatorPadding()V" />
+      <node id="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" label="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" id="0" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;adjustIndicatorPadding()V" id="1" />
+      <edge source="Landroid/support/design/internal/SnackbarContentLayout;-&gt;updateTopBottomPadding(Landroid/view/View;II)V" target="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingStart(Landroid/view/View;)I" id="2" />
+      <edge source="Landroid/support/design/internal/SnackbarContentLayout;-&gt;updateTopBottomPadding(Landroid/view/View;II)V" target="Landroid/support/v4/view/ViewCompat;-&gt;setPaddingRelative(Landroid/view/View;IIII)V" id="3" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;adjustIndicatorPadding()V" target="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingStart(Landroid/view/View;)I" id="4" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;adjustIndicatorPadding()V" target="Landroid/support/v4/view/ViewCompat;-&gt;setPaddingRelative(Landroid/view/View;IIII)V" id="5" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;getContext()Landroid/content/Context;" id="6" />
+      <edge source="Landroid/support/design/widget/TextInputLayout;-&gt;setCounterEnabled(Z)V" target="Landroid/support/design/widget/TextInputLayout;-&gt;addIndicator(Landroid/widget/TextView;I)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

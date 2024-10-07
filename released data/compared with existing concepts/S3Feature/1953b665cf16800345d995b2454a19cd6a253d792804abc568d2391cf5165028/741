@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Class;-&gt;getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" label="Ljava/lang/Class;-&gt;getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" />
+      <node id="Lcom/a/a/e/o;-&gt;a(Landroid/content/Context;)Lcom/a/a/i;" label="Lcom/a/a/e/o;-&gt;a(Landroid/content/Context;)Lcom/a/a/i;" />
+      <node id="Landroid/content/ContextWrapper;-&gt;getBaseContext()Landroid/content/Context;" label="Landroid/content/ContextWrapper;-&gt;getBaseContext()Landroid/content/Context;" />
+      <node id="Landroid/support/v7/a/bi;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" label="Landroid/support/v7/a/bi;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" />
+      <node id="Lcom/a/a/e/o;-&gt;a(Landroid/support/v4/app/v;)Lcom/a/a/i;" label="Lcom/a/a/e/o;-&gt;a(Landroid/support/v4/app/v;)Lcom/a/a/i;" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;draw(Landroid/graphics/Canvas;)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;draw(Landroid/graphics/Canvas;)V" />
+      <node id="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" label="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/a/a/e/o;-&gt;a(Landroid/content/Context;)Lcom/a/a/i;" target="Landroid/content/ContextWrapper;-&gt;getBaseContext()Landroid/content/Context;" id="0" />
+      <edge source="Lcom/a/a/e/o;-&gt;a(Landroid/content/Context;)Lcom/a/a/i;" target="Lcom/a/a/e/o;-&gt;a(Landroid/support/v4/app/v;)Lcom/a/a/i;" id="1" />
+      <edge source="Landroid/support/v7/a/bi;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" target="Ljava/lang/Class;-&gt;getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" id="2" />
+      <edge source="Landroid/support/v7/a/bi;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" target="Landroid/content/ContextWrapper;-&gt;getBaseContext()Landroid/content/Context;" id="3" />
+      <edge source="Lcom/a/a/e/o;-&gt;a(Landroid/support/v4/app/v;)Lcom/a/a/i;" target="Lcom/a/a/e/o;-&gt;a(Landroid/content/Context;)Lcom/a/a/i;" id="4" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;draw(Landroid/graphics/Canvas;)V" target="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" id="5" />
+      <edge source="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" target="Ljava/lang/Class;-&gt;getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" id="6" />
+    </edges>
+  </graph>
+</gexf>

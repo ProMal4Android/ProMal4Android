@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" label="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" />
+      <node id="Landroid/support/multidex/MultiDexExtractor;-&gt;isModified(Landroid/content/Context;Ljava/io/File;J)Z" label="Landroid/support/multidex/MultiDexExtractor;-&gt;isModified(Landroid/content/Context;Ljava/io/File;J)Z" />
+      <node id="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" label="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" />
+      <node id="Landroid/support/multidex/MultiDexExtractor;-&gt;getMultiDexPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;" label="Landroid/support/multidex/MultiDexExtractor;-&gt;getMultiDexPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;" />
+      <node id="Landroid/content/SharedPreferences;-&gt;getLong(Ljava/lang/String;J)J" label="Landroid/content/SharedPreferences;-&gt;getLong(Ljava/lang/String;J)J" />
+      <node id="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" label="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" />
+      <node id="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" label="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/multidex/MultiDexExtractor;-&gt;isModified(Landroid/content/Context;Ljava/io/File;J)Z" target="Landroid/support/multidex/MultiDexExtractor;-&gt;getMultiDexPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;" id="0" />
+      <edge source="Landroid/support/multidex/MultiDexExtractor;-&gt;isModified(Landroid/content/Context;Ljava/io/File;J)Z" target="Landroid/content/SharedPreferences;-&gt;getLong(Ljava/lang/String;J)J" id="1" />
+      <edge source="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" target="Landroid/content/SharedPreferences;-&gt;getLong(Ljava/lang/String;J)J" id="2" />
+      <edge source="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" target="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" id="3" />
+      <edge source="Landroid/support/multidex/MultiDexExtractor;-&gt;getMultiDexPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;" target="Landroid/content/Context;-&gt;getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;" id="4" />
+      <edge source="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" target="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" id="5" />
+      <edge source="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" target="Lcom/ghostteam/h;-&gt;b(Landroid/content/Context;Ljava/lang/String;)J" id="6" />
+    </edges>
+  </graph>
+</gexf>

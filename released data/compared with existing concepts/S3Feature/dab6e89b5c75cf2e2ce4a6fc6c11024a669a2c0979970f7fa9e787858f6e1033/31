@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/TransportMediatorJellybeanMR2;-&gt;pausePlaying()V" label="Landroid/support/v4/media/TransportMediatorJellybeanMR2;-&gt;pausePlaying()V" />
+      <node id="Landroid/support/v4/media/TransportMediator;-&gt;refreshState()V" label="Landroid/support/v4/media/TransportMediator;-&gt;refreshState()V" />
+      <node id="Landroid/support/v4/media/TransportMediatorJellybeanMR2;-&gt;dropAudioFocus()V" label="Landroid/support/v4/media/TransportMediatorJellybeanMR2;-&gt;dropAudioFocus()V" />
+      <node id="Lcom/facebook/ads/internal/i/e/b/b;-&gt;finalize()V" label="Lcom/facebook/ads/internal/i/e/b/b;-&gt;finalize()V" />
+      <node id="Landroid/media/AudioManager;-&gt;abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I" label="Landroid/media/AudioManager;-&gt;abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I" />
+      <node id="Landroid/support/v4/media/TransportMediator;-&gt;reportPlayingChanged()V" label="Landroid/support/v4/media/TransportMediator;-&gt;reportPlayingChanged()V" />
+      <node id="Landroid/support/v4/media/TransportMediator;-&gt;pausePlaying()V" label="Landroid/support/v4/media/TransportMediator;-&gt;pausePlaying()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/TransportMediatorJellybeanMR2;-&gt;pausePlaying()V" target="Landroid/support/v4/media/TransportMediatorJellybeanMR2;-&gt;dropAudioFocus()V" id="0" />
+      <edge source="Landroid/support/v4/media/TransportMediator;-&gt;refreshState()V" target="Landroid/support/v4/media/TransportMediator;-&gt;reportPlayingChanged()V" id="1" />
+      <edge source="Landroid/support/v4/media/TransportMediatorJellybeanMR2;-&gt;dropAudioFocus()V" target="Landroid/media/AudioManager;-&gt;abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I" id="2" />
+      <edge source="Lcom/facebook/ads/internal/i/e/b/b;-&gt;finalize()V" target="Landroid/media/AudioManager;-&gt;abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I" id="3" />
+      <edge source="Landroid/support/v4/media/TransportMediator;-&gt;pausePlaying()V" target="Landroid/support/v4/media/TransportMediatorJellybeanMR2;-&gt;pausePlaying()V" id="4" />
+      <edge source="Landroid/support/v4/media/TransportMediator;-&gt;pausePlaying()V" target="Landroid/support/v4/media/TransportMediator;-&gt;reportPlayingChanged()V" id="5" />
+    </edges>
+  </graph>
+</gexf>

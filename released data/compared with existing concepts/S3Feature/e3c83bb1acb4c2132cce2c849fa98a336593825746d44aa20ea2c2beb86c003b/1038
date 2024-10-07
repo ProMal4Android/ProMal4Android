@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;I)V" label="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;I)V" />
+      <node id="Landroid/support/v4/widget/CursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/database/Cursor;I)V" label="Landroid/support/v4/widget/CursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/database/Cursor;I)V" />
+      <node id="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;findColumns(Landroid/database/Cursor;[Ljava/lang/String;)V" label="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;findColumns(Landroid/database/Cursor;[Ljava/lang/String;)V" />
+      <node id="Landroid/database/Cursor;-&gt;getColumnIndexOrThrow(Ljava/lang/String;)I" label="Landroid/database/Cursor;-&gt;getColumnIndexOrThrow(Ljava/lang/String;)I" />
+      <node id="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[II)V" label="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[II)V" />
+      <node id="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V" label="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V" />
+      <node id="Landroid/support/v4/widget/CursorAdapter;-&gt;init(Landroid/content/Context;Landroid/database/Cursor;I)V" label="Landroid/support/v4/widget/CursorAdapter;-&gt;init(Landroid/content/Context;Landroid/database/Cursor;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;I)V" target="Landroid/support/v4/widget/CursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/database/Cursor;I)V" id="0" />
+      <edge source="Landroid/support/v4/widget/CursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/database/Cursor;I)V" target="Landroid/support/v4/widget/CursorAdapter;-&gt;init(Landroid/content/Context;Landroid/database/Cursor;I)V" id="1" />
+      <edge source="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;findColumns(Landroid/database/Cursor;[Ljava/lang/String;)V" target="Landroid/database/Cursor;-&gt;getColumnIndexOrThrow(Ljava/lang/String;)I" id="2" />
+      <edge source="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[II)V" target="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;I)V" id="3" />
+      <edge source="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[II)V" target="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;findColumns(Landroid/database/Cursor;[Ljava/lang/String;)V" id="4" />
+      <edge source="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V" target="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;findColumns(Landroid/database/Cursor;[Ljava/lang/String;)V" id="5" />
+      <edge source="Landroid/support/v4/widget/CursorAdapter;-&gt;init(Landroid/content/Context;Landroid/database/Cursor;I)V" target="Landroid/database/Cursor;-&gt;getColumnIndexOrThrow(Ljava/lang/String;)I" id="6" />
+    </edges>
+  </graph>
+</gexf>

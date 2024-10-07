@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" />
+      <node id="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" label="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" />
+      <node id="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" label="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" />
+      <node id="Landroid/content/Intent;-&gt;setAction(Ljava/lang/String;)Landroid/content/Intent;" label="Landroid/content/Intent;-&gt;setAction(Ljava/lang/String;)Landroid/content/Intent;" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" />
+      <node id="Lcom/android/ex/photo/Intents$PhotoViewIntentBuilder;-&gt;build()Landroid/content/Intent;" label="Lcom/android/ex/photo/Intents$PhotoViewIntentBuilder;-&gt;build()Landroid/content/Intent;" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="1" />
+      <edge source="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" target="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" id="2" />
+      <edge source="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;setAction(Ljava/lang/String;)Landroid/content/Intent;" id="3" />
+      <edge source="Landroidx/core/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" id="5" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="6" />
+      <edge source="Lcom/android/ex/photo/Intents$PhotoViewIntentBuilder;-&gt;build()Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;setAction(Ljava/lang/String;)Landroid/content/Intent;" id="7" />
+    </edges>
+  </graph>
+</gexf>

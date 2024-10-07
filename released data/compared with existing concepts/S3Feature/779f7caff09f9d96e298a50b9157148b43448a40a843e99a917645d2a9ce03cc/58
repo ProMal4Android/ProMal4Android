@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleQueueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleQueueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleMessage(Landroid/os/Message;)Z" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleMessage(Landroid/os/Message;)Z" />
+      <node id="Landroid/support/v7/widget/ShareActionProvider;-&gt;onCreateActionView()Landroid/view/View;" label="Landroid/support/v7/widget/ShareActionProvider;-&gt;onCreateActionView()Landroid/view/View;" />
+      <node id="Landroid/support/v7/widget/ActivityChooserModel;-&gt;get(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v7/widget/ActivityChooserModel;" label="Landroid/support/v7/widget/ActivityChooserModel;-&gt;get(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v7/widget/ActivityChooserModel;" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleRetryListenerQueue(Landroid/content/ComponentName;)V" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleRetryListenerQueue(Landroid/content/ComponentName;)V" />
+      <node id="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleQueueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" target="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;updateListenerMap()V" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleMessage(Landroid/os/Message;)Z" target="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleQueueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleMessage(Landroid/os/Message;)Z" target="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleRetryListenerQueue(Landroid/content/ComponentName;)V" id="2" />
+      <edge source="Landroid/support/v7/widget/ShareActionProvider;-&gt;onCreateActionView()Landroid/view/View;" target="Landroid/support/v7/widget/ActivityChooserModel;-&gt;get(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v7/widget/ActivityChooserModel;" id="3" />
+      <edge source="Landroid/support/v7/widget/ActivityChooserModel;-&gt;get(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v7/widget/ActivityChooserModel;" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleRetryListenerQueue(Landroid/content/ComponentName;)V" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+    </edges>
+  </graph>
+</gexf>

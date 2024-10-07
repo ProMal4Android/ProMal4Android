@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getIconUri()Landroid/net/Uri;" label="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getIconUri()Landroid/net/Uri;" />
+      <node id="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;toString()Ljava/lang/String;" label="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;toString()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;setViewImage(Landroid/widget/ImageView;Ljava/lang/String;)V" label="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;setViewImage(Landroid/widget/ImageView;Ljava/lang/String;)V" />
+      <node id="Landroid/net/Uri;-&gt;parse(Ljava/lang/String;)Landroid/net/Uri;" label="Landroid/net/Uri;-&gt;parse(Ljava/lang/String;)Landroid/net/Uri;" />
+      <node id="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getId()Ljava/lang/String;" label="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getId()Ljava/lang/String;" />
+      <node id="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getName()Ljava/lang/String;" label="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getName()Ljava/lang/String;" />
+      <node id="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;isValid()Z" label="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;isValid()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getIconUri()Landroid/net/Uri;" target="Landroid/net/Uri;-&gt;parse(Ljava/lang/String;)Landroid/net/Uri;" id="0" />
+      <edge source="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;toString()Ljava/lang/String;" target="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getIconUri()Landroid/net/Uri;" id="1" />
+      <edge source="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;toString()Ljava/lang/String;" target="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getId()Ljava/lang/String;" id="2" />
+      <edge source="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;toString()Ljava/lang/String;" target="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getName()Ljava/lang/String;" id="3" />
+      <edge source="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;toString()Ljava/lang/String;" target="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;isValid()Z" id="4" />
+      <edge source="Landroid/support/v4/widget/SimpleCursorAdapter;-&gt;setViewImage(Landroid/widget/ImageView;Ljava/lang/String;)V" target="Landroid/net/Uri;-&gt;parse(Ljava/lang/String;)Landroid/net/Uri;" id="5" />
+      <edge source="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;isValid()Z" target="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getId()Ljava/lang/String;" id="6" />
+      <edge source="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;isValid()Z" target="Landroid/support/v7/media/MediaRouteDescriptor;-&gt;getName()Ljava/lang/String;" id="7" />
+    </edges>
+  </graph>
+</gexf>

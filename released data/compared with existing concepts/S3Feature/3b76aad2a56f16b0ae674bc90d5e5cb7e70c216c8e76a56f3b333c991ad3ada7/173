@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" label="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" label="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Landroid/support/v4/app/FragmentManagerNonConfig;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Landroid/support/v4/app/FragmentManagerNonConfig;)V" />
+      <node id="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" label="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" />
+      <node id="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" label="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" label="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;" label="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Landroid/support/v4/app/FragmentManagerNonConfig;)V" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;restoreAllState(Landroid/os/Parcelable;Landroid/support/v4/app/FragmentManagerNonConfig;)V" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="2" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="3" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" target="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" id="4" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="5" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;" target="Ljava/lang/Integer;-&gt;valueOf(I)Ljava/lang/Integer;" id="6" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarUpIndicator(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;" target="Landroid/app/Activity;-&gt;getActionBar()Landroid/app/ActionBar;" id="7" />
+    </edges>
+  </graph>
+</gexf>

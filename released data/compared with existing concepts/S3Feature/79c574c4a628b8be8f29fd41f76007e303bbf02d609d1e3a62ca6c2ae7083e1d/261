@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/graphics/Paint;-&gt;&lt;init&gt;()V" label="Landroid/graphics/Paint;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/widget/CircleImageView;-&gt;&lt;init&gt;(Landroid/content/Context;IF)V" label="Landroid/support/v4/widget/CircleImageView;-&gt;&lt;init&gt;(Landroid/content/Context;IF)V" />
+      <node id="Landroid/support/v4/widget/CircleImageView$OvalShadow;-&gt;&lt;init&gt;(Landroid/support/v4/widget/CircleImageView;II)V" label="Landroid/support/v4/widget/CircleImageView$OvalShadow;-&gt;&lt;init&gt;(Landroid/support/v4/widget/CircleImageView;II)V" />
+      <node id="Landroid/graphics/drawable/shapes/OvalShape;-&gt;&lt;init&gt;()V" label="Landroid/graphics/drawable/shapes/OvalShape;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" id="0" />
+      <edge source="Landroid/support/v4/widget/CircleImageView;-&gt;&lt;init&gt;(Landroid/content/Context;IF)V" target="Landroid/support/v4/widget/CircleImageView$OvalShadow;-&gt;&lt;init&gt;(Landroid/support/v4/widget/CircleImageView;II)V" id="1" />
+      <edge source="Landroid/support/v4/widget/CircleImageView;-&gt;&lt;init&gt;(Landroid/content/Context;IF)V" target="Landroid/graphics/drawable/shapes/OvalShape;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/v4/widget/CircleImageView;-&gt;&lt;init&gt;(Landroid/content/Context;IF)V" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="3" />
+      <edge source="Landroid/support/v4/widget/CircleImageView$OvalShadow;-&gt;&lt;init&gt;(Landroid/support/v4/widget/CircleImageView;II)V" target="Landroid/graphics/Paint;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/widget/CircleImageView$OvalShadow;-&gt;&lt;init&gt;(Landroid/support/v4/widget/CircleImageView;II)V" target="Landroid/graphics/drawable/shapes/OvalShape;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/graphics/Paint;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/view/PagerTabStrip;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/arch/lifecycle/e;-&gt;d()V" label="Landroid/arch/lifecycle/e;-&gt;d()V" />
+      <node id="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" label="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" />
+      <node id="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" label="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Landroid/arch/lifecycle/e;-&gt;c(Landroid/arch/lifecycle/c;)Landroid/arch/lifecycle/Lifecycle$State;" label="Landroid/arch/lifecycle/e;-&gt;c(Landroid/arch/lifecycle/c;)Landroid/arch/lifecycle/Lifecycle$State;" />
+      <node id="Ljava/util/Map$Entry;-&gt;getValue()Ljava/lang/Object;" label="Ljava/util/Map$Entry;-&gt;getValue()Ljava/lang/Object;" />
+      <node id="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" label="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" />
+      <node id="Landroid/arch/lifecycle/e;-&gt;a(Landroid/arch/lifecycle/c;)V" label="Landroid/arch/lifecycle/e;-&gt;a(Landroid/arch/lifecycle/c;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/e;-&gt;d()V" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="0" />
+      <edge source="Landroid/arch/lifecycle/e;-&gt;d()V" target="Ljava/util/Map$Entry;-&gt;getValue()Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/arch/lifecycle/e;-&gt;d()V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v4/view/MenuItemCompat;-&gt;setActionProvider(Landroid/view/MenuItem;Landroid/support/v4/view/ActionProvider;)Landroid/view/MenuItem;" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;)I" id="3" />
+      <edge source="Landroid/arch/lifecycle/e;-&gt;c(Landroid/arch/lifecycle/c;)Landroid/arch/lifecycle/Lifecycle$State;" target="Ljava/util/Map$Entry;-&gt;getValue()Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/arch/lifecycle/e;-&gt;a(Landroid/arch/lifecycle/c;)V" target="Landroid/arch/lifecycle/e;-&gt;d()V" id="5" />
+      <edge source="Landroid/arch/lifecycle/e;-&gt;a(Landroid/arch/lifecycle/c;)V" target="Landroid/arch/lifecycle/e;-&gt;c(Landroid/arch/lifecycle/c;)Landroid/arch/lifecycle/Lifecycle$State;" id="6" />
+      <edge source="Landroid/arch/lifecycle/e;-&gt;a(Landroid/arch/lifecycle/c;)V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

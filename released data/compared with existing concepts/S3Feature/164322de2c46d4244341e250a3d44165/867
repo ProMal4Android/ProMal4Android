@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/widget/ProgressBar;-&gt;setVisibility(I)V" label="Landroid/widget/ProgressBar;-&gt;setVisibility(I)V" />
+      <node id="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" label="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" />
+      <node id="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;getResources()Landroid/content/res/Resources;" label="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;getResources()Landroid/content/res/Resources;" />
+      <node id="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" label="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" />
+      <node id="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" label="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" />
+      <node id="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" label="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" />
+      <node id="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setIndeterminate(Z)V" label="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setIndeterminate(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;getResources()Landroid/content/res/Resources;" id="0" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" id="1" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onLoadFinished(Landroidx/loader/content/Loader;Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" id="2" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" target="Landroid/widget/ProgressBar;-&gt;setVisibility(I)V" id="3" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" target="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" id="4" />
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;displayPhoto(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;getResources()Landroid/content/res/Resources;" id="5" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" target="Landroid/widget/ProgressBar;-&gt;setVisibility(I)V" id="6" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setIndeterminate(Z)V" target="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

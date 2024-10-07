@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/view/menu/i;-&gt;a(Landroidx/appcompat/view/menu/r;)V" label="Landroidx/appcompat/view/menu/i;-&gt;a(Landroidx/appcompat/view/menu/r;)V" />
+      <node id="Landroidx/appcompat/view/menu/i;-&gt;getTitleCondensed()Ljava/lang/CharSequence;" label="Landroidx/appcompat/view/menu/i;-&gt;getTitleCondensed()Ljava/lang/CharSequence;" />
+      <node id="Landroidx/appcompat/view/menu/i;-&gt;getTitle()Ljava/lang/CharSequence;" label="Landroidx/appcompat/view/menu/i;-&gt;getTitle()Ljava/lang/CharSequence;" />
+      <node id="Landroidx/appcompat/view/menu/g;-&gt;a(Landroid/view/MenuItem;Landroidx/appcompat/view/menu/m;I)Z" label="Landroidx/appcompat/view/menu/g;-&gt;a(Landroid/view/MenuItem;Landroidx/appcompat/view/menu/m;I)Z" />
+      <node id="Landroidx/appcompat/view/menu/i;-&gt;a(Landroidx/appcompat/view/menu/n$a;)Ljava/lang/CharSequence;" label="Landroidx/appcompat/view/menu/i;-&gt;a(Landroidx/appcompat/view/menu/n$a;)Ljava/lang/CharSequence;" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" label="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/view/menu/i;-&gt;a(Landroidx/appcompat/view/menu/r;)V" target="Landroidx/appcompat/view/menu/i;-&gt;getTitle()Ljava/lang/CharSequence;" id="0" />
+      <edge source="Landroidx/appcompat/view/menu/i;-&gt;getTitleCondensed()Ljava/lang/CharSequence;" target="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" id="1" />
+      <edge source="Landroidx/appcompat/view/menu/g;-&gt;a(Landroid/view/MenuItem;Landroidx/appcompat/view/menu/m;I)Z" target="Landroidx/appcompat/view/menu/i;-&gt;a(Landroidx/appcompat/view/menu/r;)V" id="2" />
+      <edge source="Landroidx/appcompat/view/menu/i;-&gt;a(Landroidx/appcompat/view/menu/n$a;)Ljava/lang/CharSequence;" target="Landroidx/appcompat/view/menu/i;-&gt;getTitleCondensed()Ljava/lang/CharSequence;" id="3" />
+      <edge source="Landroidx/appcompat/view/menu/i;-&gt;a(Landroidx/appcompat/view/menu/n$a;)Ljava/lang/CharSequence;" target="Landroidx/appcompat/view/menu/i;-&gt;getTitle()Ljava/lang/CharSequence;" id="4" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" target="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" id="5" />
+    </edges>
+  </graph>
+</gexf>

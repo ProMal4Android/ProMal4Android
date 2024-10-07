@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/messaging/datamodel/BugleNotifications;-&gt;getThumbnailUri(Landroid/net/Uri;)Landroid/net/Uri;" label="Lcom/android/messaging/datamodel/BugleNotifications;-&gt;getThumbnailUri(Landroid/net/Uri;)Landroid/net/Uri;" />
+      <node id="Lcom/android/messaging/helper/AvatarUriUtil;-&gt;getAvatarType(Landroid/net/Uri;)Ljava/lang/String;" label="Lcom/android/messaging/helper/AvatarUriUtil;-&gt;getAvatarType(Landroid/net/Uri;)Ljava/lang/String;" />
+      <node id="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" label="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" />
+      <node id="Lcom/android/vcard/VCardComposer;-&gt;init(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z" label="Lcom/android/vcard/VCardComposer;-&gt;init(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z" />
+      <node id="Landroid/net/Uri;-&gt;getAuthority()Ljava/lang/String;" label="Landroid/net/Uri;-&gt;getAuthority()Ljava/lang/String;" />
+      <node id="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" label="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/net/Uri;-&gt;getPathSegments()Ljava/util/List;" label="Landroid/net/Uri;-&gt;getPathSegments()Ljava/util/List;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/messaging/datamodel/BugleNotifications;-&gt;getThumbnailUri(Landroid/net/Uri;)Landroid/net/Uri;" target="Lcom/android/messaging/helper/AvatarUriUtil;-&gt;getAvatarType(Landroid/net/Uri;)Ljava/lang/String;" id="0" />
+      <edge source="Lcom/android/messaging/datamodel/BugleNotifications;-&gt;getThumbnailUri(Landroid/net/Uri;)Landroid/net/Uri;" target="Landroid/net/Uri;-&gt;getAuthority()Ljava/lang/String;" id="1" />
+      <edge source="Lcom/android/messaging/datamodel/BugleNotifications;-&gt;getThumbnailUri(Landroid/net/Uri;)Landroid/net/Uri;" target="Landroid/net/Uri;-&gt;getPathSegments()Ljava/util/List;" id="2" />
+      <edge source="Lcom/android/messaging/helper/AvatarUriUtil;-&gt;getAvatarType(Landroid/net/Uri;)Ljava/lang/String;" target="Landroid/net/Uri;-&gt;getPathSegments()Ljava/util/List;" id="3" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;init(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;)Z" target="Landroid/net/Uri;-&gt;getAuthority()Ljava/lang/String;" id="4" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" id="5" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/net/Uri;-&gt;getAuthority()Ljava/lang/String;" id="6" />
+      <edge source="Landroidx/appcompat/widget/SuggestionsAdapter;-&gt;getDrawableFromResourceUri(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/net/Uri;-&gt;getPathSegments()Ljava/util/List;" id="7" />
+    </edges>
+  </graph>
+</gexf>

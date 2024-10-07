@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/core/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroidx/core/app/TaskStackBuilder;" label="Landroidx/core/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroidx/core/app/TaskStackBuilder;" />
+      <node id="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntent(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" label="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntent(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" />
+      <node id="Ljava/util/ArrayList;-&gt;add(ILjava/lang/Object;)V" label="Ljava/util/ArrayList;-&gt;add(ILjava/lang/Object;)V" />
+      <node id="Lcom/android/common/widget/CompositeCursorAdapter;-&gt;addPartition(ILcom/android/common/widget/CompositeCursorAdapter$Partition;)V" label="Lcom/android/common/widget/CompositeCursorAdapter;-&gt;addPartition(ILcom/android/common/widget/CompositeCursorAdapter$Partition;)V" />
+      <node id="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" label="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" />
+      <node id="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" label="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" />
+      <node id="Lcom/android/messaging/ui/UIIntentsImpl;-&gt;getPendingIntentForLowStorageNotifications(Landroid/content/Context;)Landroid/app/PendingIntent;" label="Lcom/android/messaging/ui/UIIntentsImpl;-&gt;getPendingIntentForLowStorageNotifications(Landroid/content/Context;)Landroid/app/PendingIntent;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/core/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroidx/core/app/TaskStackBuilder;" target="Ljava/util/ArrayList;-&gt;add(ILjava/lang/Object;)V" id="0" />
+      <edge source="Landroidx/core/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroidx/core/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" id="1" />
+      <edge source="Lcom/android/common/widget/CompositeCursorAdapter;-&gt;addPartition(ILcom/android/common/widget/CompositeCursorAdapter$Partition;)V" target="Ljava/util/ArrayList;-&gt;add(ILjava/lang/Object;)V" id="2" />
+      <edge source="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" target="Landroidx/core/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroidx/core/app/TaskStackBuilder;" id="3" />
+      <edge source="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" target="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntent(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" id="4" />
+      <edge source="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" id="5" />
+      <edge source="Lcom/android/messaging/ui/UIIntentsImpl;-&gt;getPendingIntentForLowStorageNotifications(Landroid/content/Context;)Landroid/app/PendingIntent;" target="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntent(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" id="6" />
+      <edge source="Lcom/android/messaging/ui/UIIntentsImpl;-&gt;getPendingIntentForLowStorageNotifications(Landroid/content/Context;)Landroid/app/PendingIntent;" target="Landroidx/core/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroidx/core/app/TaskStackBuilder;" id="7" />
+    </edges>
+  </graph>
+</gexf>

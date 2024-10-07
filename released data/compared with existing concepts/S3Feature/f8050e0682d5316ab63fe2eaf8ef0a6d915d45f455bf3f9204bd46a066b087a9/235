@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" label="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" />
+      <node id="Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" label="Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" />
+      <node id="Landroid/net/NetworkInfo;-&gt;getType()I" label="Landroid/net/NetworkInfo;-&gt;getType()I" />
+      <node id="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" label="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" />
+      <node id="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" label="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" label="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" target="Landroid/net/NetworkInfo;-&gt;getType()I" id="0" />
+      <edge source="Landroid/support/v4/net/ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="1" />
+      <edge source="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" target="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" id="2" />
+      <edge source="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="3" />
+      <edge source="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="4" />
+      <edge source="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/net/NetworkInfo;-&gt;getType()I" id="5" />
+      <edge source="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="6" />
+      <edge source="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

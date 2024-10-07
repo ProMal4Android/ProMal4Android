@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/content/ContextCompat;-&gt;getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" label="Landroid/support/v4/content/ContextCompat;-&gt;getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" />
+      <node id="Landroid/content/res/Resources;-&gt;getXml(I)Landroid/content/res/XmlResourceParser;" label="Landroid/content/res/Resources;-&gt;getXml(I)Landroid/content/res/XmlResourceParser;" />
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+      <node id="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" label="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" />
+      <node id="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v7/content/res/AppCompatResources;-&gt;getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" label="Landroid/support/v7/content/res/AppCompatResources;-&gt;getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" />
+      <node id="Landroid/support/v7/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" label="Landroid/support/v7/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/content/ContextCompat;-&gt;getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="0" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" target="Landroid/content/res/Resources;-&gt;getXml(I)Landroid/content/res/XmlResourceParser;" id="1" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="2" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" target="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" id="3" />
+      <edge source="Landroid/support/v7/content/res/AppCompatResources;-&gt;getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/support/v4/content/ContextCompat;-&gt;getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" id="4" />
+      <edge source="Landroid/support/v7/content/res/AppCompatResources;-&gt;getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/support/v7/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" id="5" />
+      <edge source="Landroid/support/v7/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/content/res/Resources;-&gt;getXml(I)Landroid/content/res/XmlResourceParser;" id="6" />
+      <edge source="Landroid/support/v7/content/res/AppCompatResources;-&gt;inflateColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="7" />
+    </edges>
+  </graph>
+</gexf>

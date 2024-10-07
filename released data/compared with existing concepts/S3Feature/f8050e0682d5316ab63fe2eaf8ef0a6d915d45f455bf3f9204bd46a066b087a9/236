@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lco/ronash/pushe/k/l;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" label="Lco/ronash/pushe/k/l;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" />
+      <node id="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" label="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" />
+      <node id="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" label="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" />
+      <node id="Landroid/net/NetworkInfo;-&gt;isConnectedOrConnecting()Z" label="Landroid/net/NetworkInfo;-&gt;isConnectedOrConnecting()Z" />
+      <node id="Lco/ronash/pushe/task/scheduler/b/a;-&gt;e()Z" label="Lco/ronash/pushe/task/scheduler/b/a;-&gt;e()Z" />
+      <node id="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" label="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" />
+      <node id="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" label="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" target="Landroid/support/v4/net/ConnectivityManagerCompat;-&gt;isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z" id="0" />
+      <edge source="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" target="Landroid/net/NetworkInfo;-&gt;isConnectedOrConnecting()Z" id="1" />
+      <edge source="Lcom/evernote/android/job/util/Device;-&gt;getNetworkType(Landroid/content/Context;)Lcom/evernote/android/job/JobRequest$NetworkType;" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="2" />
+      <edge source="Lco/ronash/pushe/task/scheduler/b/a;-&gt;e()Z" target="Lco/ronash/pushe/k/l;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" id="3" />
+      <edge source="Lco/ronash/pushe/task/scheduler/b/a;-&gt;e()Z" target="Landroid/net/NetworkInfo;-&gt;isConnectedOrConnecting()Z" id="4" />
+      <edge source="Lco/ronash/pushe/task/scheduler/b/a;-&gt;e()Z" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="5" />
+      <edge source="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/net/NetworkInfo;-&gt;isConnectedOrConnecting()Z" id="6" />
+      <edge source="Lco/ronash/pushe/receiver/ConnectivityReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/net/ConnectivityManager;-&gt;getActiveNetworkInfo()Landroid/net/NetworkInfo;" id="7" />
+    </edges>
+  </graph>
+</gexf>

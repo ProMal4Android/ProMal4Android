@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/manager/a;-&gt;c()V" label="Lcom/bumptech/glide/manager/a;-&gt;c()V" />
+      <node id="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" label="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setRetaining(Landroid/support/v4/app/FragmentManagerNonConfig;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setRetaining(Landroid/support/v4/app/FragmentManagerNonConfig;)V" />
+      <node id="Landroid/arch/a/b/b;-&gt;equals(Ljava/lang/Object;)Z" label="Landroid/arch/a/b/b;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Ljava/util/Iterator;-&gt;hasNext()Z" label="Ljava/util/Iterator;-&gt;hasNext()Z" />
+      <node id="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" label="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" />
+      <node id="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" label="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/manager/a;-&gt;c()V" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="0" />
+      <edge source="Lcom/bumptech/glide/manager/a;-&gt;c()V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="1" />
+      <edge source="Lcom/bumptech/glide/manager/a;-&gt;c()V" target="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setRetaining(Landroid/support/v4/app/FragmentManagerNonConfig;)V" target="Ljava/util/List;-&gt;iterator()Ljava/util/Iterator;" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setRetaining(Landroid/support/v4/app/FragmentManagerNonConfig;)V" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setRetaining(Landroid/support/v4/app/FragmentManagerNonConfig;)V" target="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/arch/a/b/b;-&gt;equals(Ljava/lang/Object;)Z" target="Ljava/util/Iterator;-&gt;hasNext()Z" id="6" />
+      <edge source="Landroid/arch/a/b/b;-&gt;equals(Ljava/lang/Object;)Z" target="Ljava/util/Iterator;-&gt;next()Ljava/lang/Object;" id="7" />
+      <edge source="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" target="Lcom/bumptech/glide/manager/a;-&gt;c()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

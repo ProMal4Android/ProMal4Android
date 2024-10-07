@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;setDefaultActivity(I)V" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;setDefaultActivity(I)V" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;dispatchOffsetUpdates(Landroid/support/design/widget/AppBarLayout;)V" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;dispatchOffsetUpdates(Landroid/support/design/widget/AppBarLayout;)V" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;setAppBarTopBottomOffset(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;setAppBarTopBottomOffset(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;scroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;scroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" />
+      <node id="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopAndBottomOffset()I" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopAndBottomOffset()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;setDefaultActivity(I)V" target="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;dispatchOffsetUpdates(Landroid/support/design/widget/AppBarLayout;)V" target="Ljava/util/List;-&gt;get(I)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;dispatchOffsetUpdates(Landroid/support/design/widget/AppBarLayout;)V" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopAndBottomOffset()I" id="2" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;setAppBarTopBottomOffset(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;dispatchOffsetUpdates(Landroid/support/design/widget/AppBarLayout;)V" id="3" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;setAppBarTopBottomOffset(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" id="4" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;scroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;setAppBarTopBottomOffset(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" id="5" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;scroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" id="6" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopBottomOffsetForScrollingSibling()I" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;getTopAndBottomOffset()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

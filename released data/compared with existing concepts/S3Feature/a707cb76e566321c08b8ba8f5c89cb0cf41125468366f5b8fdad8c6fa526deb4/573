@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" label="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" />
+      <node id="Landroid/support/v7/app/AppCompatViewInflater;-&gt;createView(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;" label="Landroid/support/v7/app/AppCompatViewInflater;-&gt;createView(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;" />
+      <node id="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" label="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;isSupportFragmentClass(Landroid/content/Context;Ljava/lang/String;)Z" label="Landroid/support/v4/app/Fragment;-&gt;isSupportFragmentClass(Landroid/content/Context;Ljava/lang/String;)Z" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" label="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" />
+      <node id="Landroid/support/v4/util/SimpleArrayMap;-&gt;indexOfKey(Ljava/lang/Object;)I" label="Landroid/support/v4/util/SimpleArrayMap;-&gt;indexOfKey(Ljava/lang/Object;)I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" target="Landroid/support/v4/util/SimpleArrayMap;-&gt;indexOfKey(Ljava/lang/Object;)I" id="0" />
+      <edge source="Landroid/support/v7/app/AppCompatViewInflater;-&gt;createView(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;" target="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" id="1" />
+      <edge source="Landroid/support/v7/app/AppCompatViewInflater;-&gt;createView(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;" target="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" id="2" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;isSupportFragmentClass(Landroid/content/Context;Ljava/lang/String;)Z" target="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;isSupportFragmentClass(Landroid/content/Context;Ljava/lang/String;)Z" target="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" id="4" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;isSupportFragmentClass(Landroid/content/Context;Ljava/lang/String;)Z" target="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" id="5" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" target="Landroid/support/v4/util/SimpleArrayMap;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="6" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" target="Landroid/content/Context;-&gt;getClassLoader()Ljava/lang/ClassLoader;" id="7" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;" target="Ljava/lang/ClassLoader;-&gt;loadClass(Ljava/lang/String;)Ljava/lang/Class;" id="8" />
+    </edges>
+  </graph>
+</gexf>

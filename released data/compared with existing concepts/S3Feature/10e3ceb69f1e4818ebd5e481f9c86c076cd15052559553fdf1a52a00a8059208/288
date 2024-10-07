@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/AccessTokenTracker;-&gt;&lt;init&gt;()V" label="Lcom/facebook/AccessTokenTracker;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;I)V" label="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;I)V" />
+      <node id="Landroid/support/v4/app/DialogFragment;-&gt;onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;" label="Landroid/support/v4/app/DialogFragment;-&gt;onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;" />
+      <node id="Lcom/facebook/internal/Validate;-&gt;sdkInitialized()V" label="Lcom/facebook/internal/Validate;-&gt;sdkInitialized()V" />
+      <node id="Lcom/facebook/FacebookSdk;-&gt;getWebDialogTheme()I" label="Lcom/facebook/FacebookSdk;-&gt;getWebDialogTheme()I" />
+      <node id="Landroid/app/Dialog;-&gt;&lt;init&gt;(Landroid/content/Context;I)V" label="Landroid/app/Dialog;-&gt;&lt;init&gt;(Landroid/content/Context;I)V" />
+      <node id="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;)V" label="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/AccessTokenTracker;-&gt;&lt;init&gt;()V" target="Lcom/facebook/internal/Validate;-&gt;sdkInitialized()V" id="0" />
+      <edge source="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;I)V" target="Lcom/facebook/FacebookSdk;-&gt;getWebDialogTheme()I" id="1" />
+      <edge source="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;I)V" target="Landroid/app/Dialog;-&gt;&lt;init&gt;(Landroid/content/Context;I)V" id="2" />
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;" target="Landroid/app/Dialog;-&gt;&lt;init&gt;(Landroid/content/Context;I)V" id="3" />
+      <edge source="Lcom/facebook/FacebookSdk;-&gt;getWebDialogTheme()I" target="Lcom/facebook/internal/Validate;-&gt;sdkInitialized()V" id="4" />
+      <edge source="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;)V" target="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;I)V" id="5" />
+      <edge source="Lcom/facebook/internal/WebDialog;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;)V" target="Lcom/facebook/FacebookSdk;-&gt;getWebDialogTheme()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

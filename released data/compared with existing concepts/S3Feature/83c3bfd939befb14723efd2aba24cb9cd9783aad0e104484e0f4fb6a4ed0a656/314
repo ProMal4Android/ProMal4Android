@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/amazon/device/ads/UserAgentManager$1;-&gt;run()V" label="Lcom/amazon/device/ads/UserAgentManager$1;-&gt;run()V" />
+      <node id="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;Landroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" label="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;Landroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" />
+      <node id="Lcom/amazon/device/ads/ViewManager;-&gt;getPreloadedWebView()Landroid/webkit/WebView;" label="Lcom/amazon/device/ads/ViewManager;-&gt;getPreloadedWebView()Landroid/webkit/WebView;" />
+      <node id="Landroid/view/ViewGroup;-&gt;getContext()Landroid/content/Context;" label="Landroid/view/ViewGroup;-&gt;getContext()Landroid/content/Context;" />
+      <node id="Lcom/amazon/device/ads/ViewManager;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" label="Lcom/amazon/device/ads/ViewManager;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" />
+      <node id="Lcom/amazon/device/ads/WebViewFactory;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" label="Lcom/amazon/device/ads/WebViewFactory;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" />
+      <node id="Landroid/webkit/WebView;-&gt;getSettings()Landroid/webkit/WebSettings;" label="Landroid/webkit/WebView;-&gt;getSettings()Landroid/webkit/WebSettings;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/amazon/device/ads/UserAgentManager$1;-&gt;run()V" target="Lcom/amazon/device/ads/WebViewFactory;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" id="0" />
+      <edge source="Lcom/amazon/device/ads/UserAgentManager$1;-&gt;run()V" target="Landroid/webkit/WebView;-&gt;getSettings()Landroid/webkit/WebSettings;" id="1" />
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;Landroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" target="Landroid/view/ViewGroup;-&gt;getContext()Landroid/content/Context;" id="2" />
+      <edge source="Lcom/amazon/device/ads/ViewManager;-&gt;getPreloadedWebView()Landroid/webkit/WebView;" target="Landroid/view/ViewGroup;-&gt;getContext()Landroid/content/Context;" id="3" />
+      <edge source="Lcom/amazon/device/ads/ViewManager;-&gt;getPreloadedWebView()Landroid/webkit/WebView;" target="Lcom/amazon/device/ads/ViewManager;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" id="4" />
+      <edge source="Lcom/amazon/device/ads/ViewManager;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" target="Lcom/amazon/device/ads/WebViewFactory;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" id="5" />
+      <edge source="Lcom/amazon/device/ads/ViewManager;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" target="Landroid/webkit/WebView;-&gt;getSettings()Landroid/webkit/WebSettings;" id="6" />
+      <edge source="Lcom/amazon/device/ads/WebViewFactory;-&gt;createWebView(Landroid/content/Context;)Landroid/webkit/WebView;" target="Landroid/webkit/WebView;-&gt;getSettings()Landroid/webkit/WebSettings;" id="7" />
+    </edges>
+  </graph>
+</gexf>

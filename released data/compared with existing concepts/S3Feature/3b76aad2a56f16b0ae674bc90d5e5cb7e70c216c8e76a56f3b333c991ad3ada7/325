@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/Class;-&gt;getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" label="Ljava/lang/Class;-&gt;getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" />
+      <node id="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" label="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" label="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" />
+      <node id="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" label="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;-&gt;getLayoutDirection(Landroid/graphics/drawable/Drawable;)I" label="Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;-&gt;getLayoutDirection(Landroid/graphics/drawable/Drawable;)I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Ljava/lang/Class;-&gt;getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" id="0" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" id="1" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;sendEventForVirtualView(II)Z" target="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" id="2" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" target="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" id="3" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;-&gt;getLayoutDirection(Landroid/graphics/drawable/Drawable;)I" target="Ljava/lang/Class;-&gt;getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" id="5" />
+      <edge source="Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;-&gt;getLayoutDirection(Landroid/graphics/drawable/Drawable;)I" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="6" />
+    </edges>
+  </graph>
+</gexf>

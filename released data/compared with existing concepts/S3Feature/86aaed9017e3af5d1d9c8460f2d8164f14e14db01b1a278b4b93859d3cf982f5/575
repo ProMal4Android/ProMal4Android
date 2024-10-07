@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/transition/Transition;-&gt;runAnimators()V" label="Landroid/support/transition/Transition;-&gt;runAnimators()V" />
+      <node id="Landroid/support/transition/Transition;-&gt;end()V" label="Landroid/support/transition/Transition;-&gt;end()V" />
+      <node id="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" label="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" />
+      <node id="Landroid/support/v7/widget/DefaultItemAnimator;-&gt;runPendingAnimations()V" label="Landroid/support/v7/widget/DefaultItemAnimator;-&gt;runPendingAnimations()V" />
+      <node id="Ljava/util/ArrayList;-&gt;clone()Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;clone()Ljava/lang/Object;" />
+      <node id="Landroid/support/transition/Transition;-&gt;start()V" label="Landroid/support/transition/Transition;-&gt;start()V" />
+      <node id="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/transition/Transition;-&gt;runAnimators()V" target="Landroid/support/transition/Transition;-&gt;end()V" id="0" />
+      <edge source="Landroid/support/transition/Transition;-&gt;runAnimators()V" target="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" id="1" />
+      <edge source="Landroid/support/transition/Transition;-&gt;runAnimators()V" target="Landroid/support/transition/Transition;-&gt;start()V" id="2" />
+      <edge source="Landroid/support/transition/Transition;-&gt;end()V" target="Ljava/util/ArrayList;-&gt;clone()Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/transition/Transition;-&gt;end()V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v7/widget/DefaultItemAnimator;-&gt;runPendingAnimations()V" target="Ljava/util/ArrayList;-&gt;iterator()Ljava/util/Iterator;" id="5" />
+      <edge source="Landroid/support/v7/widget/DefaultItemAnimator;-&gt;runPendingAnimations()V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="6" />
+      <edge source="Landroid/support/transition/Transition;-&gt;start()V" target="Ljava/util/ArrayList;-&gt;clone()Ljava/lang/Object;" id="7" />
+      <edge source="Landroid/support/transition/Transition;-&gt;start()V" target="Ljava/util/ArrayList;-&gt;get(I)Ljava/lang/Object;" id="8" />
+    </edges>
+  </graph>
+</gexf>

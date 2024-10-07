@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" />
+      <node id="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" label="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" />
+      <node id="Ljava/lang/Integer;-&gt;toHexString(I)Ljava/lang/String;" label="Ljava/lang/Integer;-&gt;toHexString(I)Ljava/lang/String;" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" label="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;toString()Ljava/lang/String;" label="Landroid/support/v4/app/BackStackRecord;-&gt;toString()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" label="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/Integer;-&gt;toHexString(I)Ljava/lang/String;" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Landroid/support/v4/app/BackStackRecord;-&gt;toString()Ljava/lang/String;" id="3" />
+      <edge source="Ladapters/AdapterCache;-&gt;getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;toString()Ljava/lang/String;" target="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" id="5" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;toString()Ljava/lang/String;" target="Ljava/lang/Integer;-&gt;toHexString(I)Ljava/lang/String;" id="6" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/System;-&gt;identityHashCode(Ljava/lang/Object;)I" id="7" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/Integer;-&gt;toHexString(I)Ljava/lang/String;" id="8" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="9" />
+    </edges>
+  </graph>
+</gexf>

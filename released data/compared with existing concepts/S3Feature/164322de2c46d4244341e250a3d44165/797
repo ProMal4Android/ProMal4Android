@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/fragment/app/FragmentManager;-&gt;beginTransaction()Landroidx/fragment/app/FragmentTransaction;" label="Landroidx/fragment/app/FragmentManager;-&gt;beginTransaction()Landroidx/fragment/app/FragmentTransaction;" />
+      <node id="Lcom/android/ex/photo/adapters/BaseFragmentPagerAdapter;-&gt;instantiateItem(Landroid/view/View;I)Ljava/lang/Object;" label="Lcom/android/ex/photo/adapters/BaseFragmentPagerAdapter;-&gt;instantiateItem(Landroid/view/View;I)Ljava/lang/Object;" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;getNavigationMode()I" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;getNavigationMode()I" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;getSelectedNavigationIndex()I" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;getSelectedNavigationIndex()I" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" />
+      <node id="Landroidx/appcompat/widget/DecorToolbar;-&gt;getNavigationMode()I" label="Landroidx/appcompat/widget/DecorToolbar;-&gt;getNavigationMode()I" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/photo/adapters/BaseFragmentPagerAdapter;-&gt;instantiateItem(Landroid/view/View;I)Ljava/lang/Object;" target="Landroidx/fragment/app/FragmentManager;-&gt;beginTransaction()Landroidx/fragment/app/FragmentTransaction;" id="0" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;getNavigationMode()I" target="Landroidx/appcompat/widget/DecorToolbar;-&gt;getNavigationMode()I" id="1" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;getSelectedNavigationIndex()I" id="2" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" id="3" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" target="Landroidx/appcompat/widget/DecorToolbar;-&gt;getNavigationMode()I" id="4" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;getSelectedNavigationIndex()I" target="Landroidx/appcompat/widget/DecorToolbar;-&gt;getNavigationMode()I" id="5" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" target="Landroidx/fragment/app/FragmentManager;-&gt;beginTransaction()Landroidx/fragment/app/FragmentTransaction;" id="6" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;getNavigationMode()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

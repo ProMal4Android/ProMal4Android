@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ContentLoadingProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/widget/ContentLoadingProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/widget/ProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/widget/ProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Lcom/applovin/impl/adview/o;-&gt;setBackgroundColor(I)V" label="Lcom/applovin/impl/adview/o;-&gt;setBackgroundColor(I)V" />
+      <node id="Lcom/applovin/impl/adview/o;-&gt;&lt;init&gt;(Lcom/applovin/impl/adview/r;Lcom/applovin/sdk/AppLovinSdk;Landroid/content/Context;)V" label="Lcom/applovin/impl/adview/o;-&gt;&lt;init&gt;(Lcom/applovin/impl/adview/r;Lcom/applovin/sdk/AppLovinSdk;Landroid/content/Context;)V" />
+      <node id="Lcom/applovin/impl/adview/AdViewControllerImpl;-&gt;b()Lcom/applovin/impl/adview/o;" label="Lcom/applovin/impl/adview/AdViewControllerImpl;-&gt;b()Lcom/applovin/impl/adview/o;" />
+      <node id="Landroid/webkit/WebView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/webkit/WebView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Lcom/mobimento/caponate/section/WebSection;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" label="Lcom/mobimento/caponate/section/WebSection;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ContentLoadingProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/widget/ProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" id="0" />
+      <edge source="Lcom/applovin/impl/adview/o;-&gt;&lt;init&gt;(Lcom/applovin/impl/adview/r;Lcom/applovin/sdk/AppLovinSdk;Landroid/content/Context;)V" target="Lcom/applovin/impl/adview/o;-&gt;setBackgroundColor(I)V" id="1" />
+      <edge source="Lcom/applovin/impl/adview/o;-&gt;&lt;init&gt;(Lcom/applovin/impl/adview/r;Lcom/applovin/sdk/AppLovinSdk;Landroid/content/Context;)V" target="Landroid/webkit/WebView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="2" />
+      <edge source="Lcom/applovin/impl/adview/AdViewControllerImpl;-&gt;b()Lcom/applovin/impl/adview/o;" target="Lcom/applovin/impl/adview/o;-&gt;setBackgroundColor(I)V" id="3" />
+      <edge source="Lcom/applovin/impl/adview/AdViewControllerImpl;-&gt;b()Lcom/applovin/impl/adview/o;" target="Lcom/applovin/impl/adview/o;-&gt;&lt;init&gt;(Lcom/applovin/impl/adview/r;Lcom/applovin/sdk/AppLovinSdk;Landroid/content/Context;)V" id="4" />
+      <edge source="Lcom/mobimento/caponate/section/WebSection;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" target="Landroid/widget/ProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" id="5" />
+      <edge source="Lcom/mobimento/caponate/section/WebSection;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" target="Landroid/webkit/WebView;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

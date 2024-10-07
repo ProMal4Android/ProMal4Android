@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/app/ActivityOptions;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/app/ActivityOptions;" label="Landroid/app/ActivityOptions;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/app/ActivityOptions;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat;" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat24;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat24;" label="Landroid/support/v4/app/ActivityOptionsCompat24;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat24;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;&lt;init&gt;(Landroid/app/ActivityOptions;)V" label="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;&lt;init&gt;(Landroid/app/ActivityOptions;)V" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat21;" label="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat21;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat;" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat21;" label="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat21;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat24;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat24;" id="0" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat21;" id="1" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat24;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat24;" target="Landroid/app/ActivityOptions;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/app/ActivityOptions;" id="2" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat21;" target="Landroid/app/ActivityOptions;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/app/ActivityOptions;" id="3" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat21;" target="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;&lt;init&gt;(Landroid/app/ActivityOptions;)V" id="4" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat21;" id="5" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat21;" target="Landroid/support/v4/app/ActivityOptionsCompat21;-&gt;&lt;init&gt;(Landroid/app/ActivityOptions;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

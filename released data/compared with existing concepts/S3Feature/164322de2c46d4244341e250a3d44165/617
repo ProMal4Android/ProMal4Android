@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" />
+      <node id="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" label="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" />
+      <node id="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" label="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar$TabImpl;-&gt;getCallback()Landroidx/appcompat/app/ActionBar$TabListener;" label="Landroidx/appcompat/app/WindowDecorActionBar$TabImpl;-&gt;getCallback()Landroidx/appcompat/app/ActionBar$TabListener;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" target="Landroidx/appcompat/app/WindowDecorActionBar$TabImpl;-&gt;getCallback()Landroidx/appcompat/app/ActionBar$TabListener;" id="1" />
+      <edge source="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" target="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" id="2" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;size()I" id="3" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V" id="4" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" id="5" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="6" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V" target="Landroidx/appcompat/app/WindowDecorActionBar$TabImpl;-&gt;getCallback()Landroidx/appcompat/app/ActionBar$TabListener;" id="7" />
+    </edges>
+  </graph>
+</gexf>

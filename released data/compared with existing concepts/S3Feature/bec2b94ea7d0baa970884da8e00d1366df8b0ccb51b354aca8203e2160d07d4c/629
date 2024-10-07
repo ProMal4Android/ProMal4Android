@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;addNewMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" label="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;addNewMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;buildOldMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" label="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;buildOldMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" />
+      <node id="Landroid/os/Bundle;-&gt;getLong(Ljava/lang/String;)J" label="Landroid/os/Bundle;-&gt;getLong(Ljava/lang/String;)J" />
+      <node id="Landroid/os/Bundle;-&gt;containsKey(Ljava/lang/String;)Z" label="Landroid/os/Bundle;-&gt;containsKey(Ljava/lang/String;)Z" />
+      <node id="Landroid/media/RemoteControlClient;-&gt;editMetadata(Z)Landroid/media/RemoteControlClient$MetadataEditor;" label="Landroid/media/RemoteControlClient;-&gt;editMetadata(Z)Landroid/media/RemoteControlClient$MetadataEditor;" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;J)V" label="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;J)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;addNewMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" target="Landroid/os/Bundle;-&gt;getLong(Ljava/lang/String;)J" id="0" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;addNewMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" target="Landroid/os/Bundle;-&gt;containsKey(Ljava/lang/String;)Z" id="1" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;)V" target="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;buildOldMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" id="2" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;)V" target="Landroid/media/RemoteControlClient;-&gt;editMetadata(Z)Landroid/media/RemoteControlClient$MetadataEditor;" id="3" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;buildOldMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" target="Landroid/os/Bundle;-&gt;getLong(Ljava/lang/String;)J" id="4" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;buildOldMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" target="Landroid/os/Bundle;-&gt;containsKey(Ljava/lang/String;)Z" id="5" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;J)V" target="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;addNewMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" id="6" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;J)V" target="Landroid/support/v4/media/session/MediaSessionCompatApi14;-&gt;buildOldMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V" id="7" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompatApi19;-&gt;setMetadata(Ljava/lang/Object;Landroid/os/Bundle;J)V" target="Landroid/media/RemoteControlClient;-&gt;editMetadata(Z)Landroid/media/RemoteControlClient$MetadataEditor;" id="8" />
+    </edges>
+  </graph>
+</gexf>

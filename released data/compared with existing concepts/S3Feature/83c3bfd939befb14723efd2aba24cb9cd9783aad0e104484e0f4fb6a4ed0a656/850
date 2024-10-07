@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" label="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" />
+      <node id="Lcom/amazon/device/ads/AdController;-&gt;calculateScalingMultiplier()V" label="Lcom/amazon/device/ads/AdController;-&gt;calculateScalingMultiplier()V" />
+      <node id="Lcom/amazon/device/ads/AdController;-&gt;isInterstitial()Z" label="Lcom/amazon/device/ads/AdController;-&gt;isInterstitial()Z" />
+      <node id="Lcom/amazon/device/ads/AdController;-&gt;setViewDimensionsToAdDimensions()V" label="Lcom/amazon/device/ads/AdController;-&gt;setViewDimensionsToAdDimensions()V" />
+      <node id="Lcom/amazon/device/ads/AdData;-&gt;getHeight()I" label="Lcom/amazon/device/ads/AdData;-&gt;getHeight()I" />
+      <node id="Lcom/amazon/device/ads/AdController;-&gt;moveViewBackToParent(Landroid/view/ViewGroup$LayoutParams;)V" label="Lcom/amazon/device/ads/AdController;-&gt;moveViewBackToParent(Landroid/view/ViewGroup$LayoutParams;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" label="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;calculateScalingMultiplier()V" target="Lcom/amazon/device/ads/AdController;-&gt;isInterstitial()Z" id="0" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;calculateScalingMultiplier()V" target="Lcom/amazon/device/ads/AdController;-&gt;setViewDimensionsToAdDimensions()V" id="1" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;calculateScalingMultiplier()V" target="Lcom/amazon/device/ads/AdData;-&gt;getHeight()I" id="2" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;setViewDimensionsToAdDimensions()V" target="Lcom/amazon/device/ads/AdData;-&gt;getHeight()I" id="3" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;moveViewBackToParent(Landroid/view/ViewGroup$LayoutParams;)V" target="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" id="4" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;moveViewBackToParent(Landroid/view/ViewGroup$LayoutParams;)V" target="Lcom/amazon/device/ads/AdController;-&gt;setViewDimensionsToAdDimensions()V" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" target="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

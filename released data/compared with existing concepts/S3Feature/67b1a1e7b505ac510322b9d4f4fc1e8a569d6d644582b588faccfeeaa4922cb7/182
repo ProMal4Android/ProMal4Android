@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/google/android/gms/common/api/e$a;-&gt;a()Lcom/google/android/gms/common/internal/bd;" label="Lcom/google/android/gms/common/api/e$a;-&gt;a()Lcom/google/android/gms/common/internal/bd;" />
+      <node id="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" label="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" />
+      <node id="Lcom/google/android/gms/common/api/internal/zzch;-&gt;onStop()V" label="Lcom/google/android/gms/common/api/internal/zzch;-&gt;onStop()V" />
+      <node id="Lcom/google/android/gms/common/api/e$a;-&gt;b()Lcom/google/android/gms/common/api/e;" label="Lcom/google/android/gms/common/api/e$a;-&gt;b()Lcom/google/android/gms/common/api/e;" />
+      <node id="Landroid/app/Fragment;-&gt;onStop()V" label="Landroid/app/Fragment;-&gt;onStop()V" />
+      <node id="Lcom/google/android/gms/common/internal/bd;-&gt;&lt;init&gt;(Landroid/accounts/Account;Ljava/util/Set;Ljava/util/Map;ILandroid/view/View;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/hq;)V" label="Lcom/google/android/gms/common/internal/bd;-&gt;&lt;init&gt;(Landroid/accounts/Account;Ljava/util/Set;Ljava/util/Map;ILandroid/view/View;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/hq;)V" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" label="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/google/android/gms/common/api/e$a;-&gt;a()Lcom/google/android/gms/common/internal/bd;" target="Lcom/google/android/gms/common/internal/bd;-&gt;&lt;init&gt;(Landroid/accounts/Account;Ljava/util/Set;Ljava/util/Map;ILandroid/view/View;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/hq;)V" id="0" />
+      <edge source="Lcom/google/android/gms/common/api/internal/zzch;-&gt;onStop()V" target="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" id="1" />
+      <edge source="Lcom/google/android/gms/common/api/internal/zzch;-&gt;onStop()V" target="Landroid/app/Fragment;-&gt;onStop()V" id="2" />
+      <edge source="Lcom/google/android/gms/common/api/e$a;-&gt;b()Lcom/google/android/gms/common/api/e;" target="Lcom/google/android/gms/common/api/e$a;-&gt;a()Lcom/google/android/gms/common/internal/bd;" id="3" />
+      <edge source="Lcom/google/android/gms/common/api/e$a;-&gt;b()Lcom/google/android/gms/common/api/e;" target="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" id="4" />
+      <edge source="Lcom/google/android/gms/common/internal/bd;-&gt;&lt;init&gt;(Landroid/accounts/Account;Ljava/util/Set;Ljava/util/Map;ILandroid/view/View;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/hq;)V" target="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" id="5" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerFragment;-&gt;onStop()V" target="Landroid/app/Fragment;-&gt;onStop()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

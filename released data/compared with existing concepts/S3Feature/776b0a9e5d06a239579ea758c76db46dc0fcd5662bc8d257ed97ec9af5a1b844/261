@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" label="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" />
+      <node id="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;)V" label="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;)V" />
+      <node id="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;Landroid/supports/transition/av;Landroid/supports/transition/av;)V" label="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;Landroid/supports/transition/av;Landroid/supports/transition/av;)V" />
+      <node id="Lcom/bumptech/glide/util/LruCache;-&gt;trimToSize(I)V" label="Lcom/bumptech/glide/util/LruCache;-&gt;trimToSize(I)V" />
+      <node id="Landroid/supports/transition/ao;-&gt;m()Landroid/supports/v4/util/ArrayMap;" label="Landroid/supports/transition/ao;-&gt;m()Landroid/supports/v4/util/ArrayMap;" />
+      <node id="Lcom/bumptech/glide/util/LruCache;-&gt;clearMemory()V" label="Lcom/bumptech/glide/util/LruCache;-&gt;clearMemory()V" />
+      <node id="Landroid/supports/v4/util/ArrayMap;-&gt;&lt;init&gt;(Landroid/supports/v4/util/SimpleArrayMap;)V" label="Landroid/supports/v4/util/ArrayMap;-&gt;&lt;init&gt;(Landroid/supports/v4/util/SimpleArrayMap;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;)V" target="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" id="0" />
+      <edge source="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;)V" target="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;Landroid/supports/transition/av;Landroid/supports/transition/av;)V" id="1" />
+      <edge source="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;)V" target="Landroid/supports/transition/ao;-&gt;m()Landroid/supports/v4/util/ArrayMap;" id="2" />
+      <edge source="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;Landroid/supports/transition/av;Landroid/supports/transition/av;)V" target="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" id="3" />
+      <edge source="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;Landroid/supports/transition/av;Landroid/supports/transition/av;)V" target="Landroid/supports/transition/ao;-&gt;m()Landroid/supports/v4/util/ArrayMap;" id="4" />
+      <edge source="Landroid/supports/transition/ao;-&gt;a(Landroid/view/ViewGroup;Landroid/supports/transition/av;Landroid/supports/transition/av;)V" target="Landroid/supports/v4/util/ArrayMap;-&gt;&lt;init&gt;(Landroid/supports/v4/util/SimpleArrayMap;)V" id="5" />
+      <edge source="Lcom/bumptech/glide/util/LruCache;-&gt;trimToSize(I)V" target="Ljava/util/Set;-&gt;iterator()Ljava/util/Iterator;" id="6" />
+      <edge source="Lcom/bumptech/glide/util/LruCache;-&gt;clearMemory()V" target="Lcom/bumptech/glide/util/LruCache;-&gt;trimToSize(I)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

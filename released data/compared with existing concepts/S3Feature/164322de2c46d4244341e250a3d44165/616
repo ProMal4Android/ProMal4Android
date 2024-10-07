@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" />
+      <node id="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" label="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" />
+      <node id="Landroidx/appcompat/widget/ScrollingTabContainerView;-&gt;setVisibility(I)V" label="Landroidx/appcompat/widget/ScrollingTabContainerView;-&gt;setVisibility(I)V" />
+      <node id="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" label="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" />
+      <node id="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" label="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" target="Landroidx/appcompat/widget/ScrollingTabContainerView;-&gt;setVisibility(I)V" id="0" />
+      <edge source="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" target="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" id="1" />
+      <edge source="Lcom/android/vcard/VCardEntry;-&gt;constructInsertOperations(Landroid/content/ContentResolver;Ljava/util/ArrayList;)Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" id="3" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" target="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;ensureTabsExist()V" id="5" />
+      <edge source="Landroidx/appcompat/app/WindowDecorActionBar;-&gt;setNavigationMode(I)V" target="Landroidx/appcompat/widget/ScrollingTabContainerView;-&gt;setVisibility(I)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

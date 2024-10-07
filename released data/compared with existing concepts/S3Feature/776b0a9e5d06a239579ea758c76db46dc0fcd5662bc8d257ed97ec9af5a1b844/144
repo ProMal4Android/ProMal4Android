@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;II)V" label="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;II)V" />
+      <node id="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;d()I" label="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;d()I" />
+      <node id="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b()I" label="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b()I" />
+      <node id="Lcom/bumptech/glide/util/LruCache;-&gt;setSizeMultiplier(F)V" label="Lcom/bumptech/glide/util/LruCache;-&gt;setSizeMultiplier(F)V" />
+      <node id="Landroid/supports/design/widget/HeaderBehavior;-&gt;d()I" label="Landroid/supports/design/widget/HeaderBehavior;-&gt;d()I" />
+      <node id="Ljava/lang/Math;-&gt;round(F)I" label="Ljava/lang/Math;-&gt;round(F)I" />
+      <node id="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;IF)V" label="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;IF)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;II)V" target="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b()I" id="0" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;d()I" target="Landroid/supports/design/widget/HeaderBehavior;-&gt;d()I" id="1" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b()I" target="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;d()I" id="2" />
+      <edge source="Lcom/bumptech/glide/util/LruCache;-&gt;setSizeMultiplier(F)V" target="Ljava/lang/Math;-&gt;round(F)I" id="3" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;IF)V" target="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;II)V" id="4" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;IF)V" target="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;b()I" id="5" />
+      <edge source="Landroid/supports/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/supports/design/widget/CoordinatorLayout;Landroid/supports/design/widget/AppBarLayout;IF)V" target="Ljava/lang/Math;-&gt;round(F)I" id="6" />
+    </edges>
+  </graph>
+</gexf>

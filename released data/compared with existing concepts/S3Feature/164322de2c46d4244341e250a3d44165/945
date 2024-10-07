@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/vcard/VCardBuilder;-&gt;appendNameProperties(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" label="Lcom/android/vcard/VCardBuilder;-&gt;appendNameProperties(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" />
+      <node id="Lcom/android/vcard/VCardBuilder;-&gt;appendNamePropertiesV40(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" label="Lcom/android/vcard/VCardBuilder;-&gt;appendNamePropertiesV40(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" />
+      <node id="Lcom/android/vcard/VCardBuilder;-&gt;appendTypeParameter(Ljava/lang/StringBuilder;Ljava/lang/String;)V" label="Lcom/android/vcard/VCardBuilder;-&gt;appendTypeParameter(Ljava/lang/StringBuilder;Ljava/lang/String;)V" />
+      <node id="Lcom/android/vcard/VCardComposer;-&gt;buildVCard(Ljava/util/Map;)Ljava/lang/String;" label="Lcom/android/vcard/VCardComposer;-&gt;buildVCard(Ljava/util/Map;)Ljava/lang/String;" />
+      <node id="Lcom/android/vcard/VCardConfig;-&gt;isVersion40(I)Z" label="Lcom/android/vcard/VCardConfig;-&gt;isVersion40(I)Z" />
+      <node id="Lcom/android/vcard/VCardConfig;-&gt;isVersion30(I)Z" label="Lcom/android/vcard/VCardConfig;-&gt;isVersion30(I)Z" />
+      <node id="Lcom/android/vcard/VCardBuilder;-&gt;&lt;init&gt;(ILjava/lang/String;)V" label="Lcom/android/vcard/VCardBuilder;-&gt;&lt;init&gt;(ILjava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/vcard/VCardBuilder;-&gt;appendNameProperties(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" target="Lcom/android/vcard/VCardBuilder;-&gt;appendNamePropertiesV40(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" id="0" />
+      <edge source="Lcom/android/vcard/VCardBuilder;-&gt;appendNameProperties(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" target="Lcom/android/vcard/VCardConfig;-&gt;isVersion40(I)Z" id="1" />
+      <edge source="Lcom/android/vcard/VCardBuilder;-&gt;appendNameProperties(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" target="Lcom/android/vcard/VCardConfig;-&gt;isVersion30(I)Z" id="2" />
+      <edge source="Lcom/android/vcard/VCardBuilder;-&gt;appendTypeParameter(Ljava/lang/StringBuilder;Ljava/lang/String;)V" target="Lcom/android/vcard/VCardConfig;-&gt;isVersion40(I)Z" id="3" />
+      <edge source="Lcom/android/vcard/VCardBuilder;-&gt;appendTypeParameter(Ljava/lang/StringBuilder;Ljava/lang/String;)V" target="Lcom/android/vcard/VCardConfig;-&gt;isVersion30(I)Z" id="4" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;buildVCard(Ljava/util/Map;)Ljava/lang/String;" target="Lcom/android/vcard/VCardBuilder;-&gt;appendNameProperties(Ljava/util/List;)Lcom/android/vcard/VCardBuilder;" id="5" />
+      <edge source="Lcom/android/vcard/VCardComposer;-&gt;buildVCard(Ljava/util/Map;)Ljava/lang/String;" target="Lcom/android/vcard/VCardBuilder;-&gt;&lt;init&gt;(ILjava/lang/String;)V" id="6" />
+      <edge source="Lcom/android/vcard/VCardBuilder;-&gt;&lt;init&gt;(ILjava/lang/String;)V" target="Lcom/android/vcard/VCardConfig;-&gt;isVersion40(I)Z" id="7" />
+      <edge source="Lcom/android/vcard/VCardBuilder;-&gt;&lt;init&gt;(ILjava/lang/String;)V" target="Lcom/android/vcard/VCardConfig;-&gt;isVersion30(I)Z" id="8" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/ArrayList;-&gt;clear()V" label="Ljava/util/ArrayList;-&gt;clear()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getHtml(Ljava/util/ArrayList;Z)Ljava/lang/String;" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getHtml(Ljava/util/ArrayList;Z)Ljava/lang/String;" />
+      <node id="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;stopDispatchingItemsChanged()V" label="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;stopDispatchingItemsChanged()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$StyledTextConverter;-&gt;getUriArray(Ljava/util/ArrayList;Landroid/text/Editable;)V" label="Lcom/android/ex/editstyledtext/EditStyledText$StyledTextConverter;-&gt;getUriArray(Ljava/util/ArrayList;Landroid/text/Editable;)V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;doInvalidatePanelMenu(I)V" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;doInvalidatePanelMenu(I)V" />
+      <node id="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;clear()V" label="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;clear()V" />
+      <node id="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;collapseItemActionView(Landroidx/appcompat/view/menu/MenuItemImpl;)Z" label="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;collapseItemActionView(Landroidx/appcompat/view/menu/MenuItemImpl;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getHtml(Ljava/util/ArrayList;Z)Ljava/lang/String;" target="Lcom/android/ex/editstyledtext/EditStyledText$StyledTextConverter;-&gt;getUriArray(Ljava/util/ArrayList;Landroid/text/Editable;)V" id="0" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$StyledTextConverter;-&gt;getUriArray(Ljava/util/ArrayList;Landroid/text/Editable;)V" target="Ljava/util/ArrayList;-&gt;clear()V" id="1" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;doInvalidatePanelMenu(I)V" target="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;stopDispatchingItemsChanged()V" id="2" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;doInvalidatePanelMenu(I)V" target="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;clear()V" id="3" />
+      <edge source="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;clear()V" target="Ljava/util/ArrayList;-&gt;clear()V" id="4" />
+      <edge source="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;clear()V" target="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;collapseItemActionView(Landroidx/appcompat/view/menu/MenuItemImpl;)Z" id="5" />
+      <edge source="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;collapseItemActionView(Landroidx/appcompat/view/menu/MenuItemImpl;)Z" target="Landroidx/appcompat/view/menu/MenuBuilder;-&gt;stopDispatchingItemsChanged()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

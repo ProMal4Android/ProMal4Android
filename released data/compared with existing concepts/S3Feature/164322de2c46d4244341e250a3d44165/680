@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Ljava/lang/Class;-&gt;getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" label="Ljava/lang/Class;-&gt;getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" />
+      <node id="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" label="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" />
+      <node id="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" label="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" />
+      <node id="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" label="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" />
+      <node id="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" label="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" />
+      <node id="Landroidx/appcompat/view/menu/MenuItemWrapperICS;-&gt;setExclusiveCheckable(Z)V" label="Landroidx/appcompat/view/menu/MenuItemWrapperICS;-&gt;setExclusiveCheckable(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" target="Ljava/lang/Class;-&gt;getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" id="0" />
+      <edge source="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="1" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="2" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" target="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;-&gt;&lt;init&gt;(Landroid/app/Activity;)V" id="3" />
+      <edge source="Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb;-&gt;setActionBarDescription(Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;Landroid/app/Activity;I)Landroidx/appcompat/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="4" />
+      <edge source="Landroidx/appcompat/view/menu/MenuItemWrapperICS;-&gt;setExclusiveCheckable(Z)V" target="Ljava/lang/reflect/Method;-&gt;invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;" id="5" />
+      <edge source="Landroidx/appcompat/view/menu/MenuItemWrapperICS;-&gt;setExclusiveCheckable(Z)V" target="Ljava/lang/Class;-&gt;getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;" id="6" />
+      <edge source="Landroidx/appcompat/view/menu/MenuItemWrapperICS;-&gt;setExclusiveCheckable(Z)V" target="Landroid/util/Log;-&gt;w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="7" />
+    </edges>
+  </graph>
+</gexf>

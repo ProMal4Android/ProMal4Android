@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" label="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" />
+      <node id="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" label="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" />
+      <node id="Landroid/support/v7/internal/a/f;-&gt;k(Z)V" label="Landroid/support/v7/internal/a/f;-&gt;k(Z)V" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;getHeight()I" label="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;getHeight()I" />
+      <node id="Landroid/support/v4/view/bw;-&gt;a(Landroid/view/View;F)V" label="Landroid/support/v4/view/bw;-&gt;a(Landroid/view/View;F)V" />
+      <node id="Landroid/support/v7/internal/a/g;-&gt;b(Landroid/view/View;)V" label="Landroid/support/v7/internal/a/g;-&gt;b(Landroid/view/View;)V" />
+      <node id="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setTransitioning(Z)V" label="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setTransitioning(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" id="0" />
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;getHeight()I" id="1" />
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;j(Z)V" target="Landroid/support/v4/view/bw;-&gt;a(Landroid/view/View;F)V" id="2" />
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;k(Z)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;getHeight()I" id="3" />
+      <edge source="Landroid/support/v7/internal/a/f;-&gt;k(Z)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setTransitioning(Z)V" id="4" />
+      <edge source="Landroid/support/v7/internal/a/g;-&gt;b(Landroid/view/View;)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setVisibility(I)V" id="5" />
+      <edge source="Landroid/support/v7/internal/a/g;-&gt;b(Landroid/view/View;)V" target="Landroid/support/v4/view/bw;-&gt;a(Landroid/view/View;F)V" id="6" />
+      <edge source="Landroid/support/v7/internal/a/g;-&gt;b(Landroid/view/View;)V" target="Landroid/support/v7/internal/widget/ActionBarContainer;-&gt;setTransitioning(Z)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

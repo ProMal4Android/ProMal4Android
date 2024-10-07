@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" label="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" label="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/Object;)Ljava/lang/StringBuilder;" label="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/Object;)Ljava/lang/StringBuilder;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" label="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" />
+      <node id="Landroid/support/v4/app/LoaderManagerImpl;-&gt;doDestroy()V" label="Landroid/support/v4/app/LoaderManagerImpl;-&gt;doDestroy()V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;-&gt;feedbackTypeToString(I)Ljava/lang/String;" label="Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;-&gt;feedbackTypeToString(I)Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="0" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/Object;)Ljava/lang/StringBuilder;" id="1" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;onDestroy()V" target="Landroid/support/v4/app/LoaderManagerImpl;-&gt;doDestroy()V" id="3" />
+      <edge source="Landroid/support/v4/app/LoaderManagerImpl;-&gt;doDestroy()V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="4" />
+      <edge source="Landroid/support/v4/app/LoaderManagerImpl;-&gt;doDestroy()V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/Object;)Ljava/lang/StringBuilder;" id="5" />
+      <edge source="Landroid/support/v4/app/LoaderManagerImpl;-&gt;doDestroy()V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;-&gt;feedbackTypeToString(I)Ljava/lang/String;" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;" id="7" />
+      <edge source="Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;-&gt;feedbackTypeToString(I)Ljava/lang/String;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" label="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" />
+      <node id="Landroid/view/View;-&gt;getViewTreeObserver()Landroid/view/ViewTreeObserver;" label="Landroid/view/View;-&gt;getViewTreeObserver()Landroid/view/ViewTreeObserver;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/app/FragmentTransitionCompat21$2;-&gt;onPreDraw()Z" label="Landroid/support/v4/app/FragmentTransitionCompat21$2;-&gt;onPreDraw()Z" />
+      <node id="Ljava/util/ArrayList;-&gt;isEmpty()Z" label="Ljava/util/ArrayList;-&gt;isEmpty()Z" />
+      <node id="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" label="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" />
+      <node id="Landroid/support/v4/app/BackStackRecord$3;-&gt;onPreDraw()Z" label="Landroid/support/v4/app/BackStackRecord$3;-&gt;onPreDraw()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;captureExitingViews(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;Ljava/util/Map;Landroid/view/View;)Ljava/lang/Object;" target="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" id="1" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;startActivities(Landroid/os/Bundle;)V" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21$2;-&gt;onPreDraw()Z" target="Landroid/view/View;-&gt;getViewTreeObserver()Landroid/view/ViewTreeObserver;" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21$2;-&gt;onPreDraw()Z" target="Ljava/util/Map;-&gt;values()Ljava/util/Collection;" id="4" />
+      <edge source="Landroid/support/v4/app/BackStackRecord$3;-&gt;onPreDraw()Z" target="Landroid/view/View;-&gt;getViewTreeObserver()Landroid/view/ViewTreeObserver;" id="5" />
+    </edges>
+  </graph>
+</gexf>

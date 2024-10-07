@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/DialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" label="Landroid/support/v4/app/DialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" />
+      <node id="Landroid/support/v7/app/AppCompatDialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" label="Landroid/support/v7/app/AppCompatDialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" />
+      <node id="Landroid/app/Dialog;-&gt;getWindow()Landroid/view/Window;" label="Landroid/app/Dialog;-&gt;getWindow()Landroid/view/Window;" />
+      <node id="Landroid/support/v7/app/AppCompatDelegate;-&gt;create(Landroid/app/Dialog;Landroid/support/v7/app/AppCompatCallback;)Landroid/support/v7/app/AppCompatDelegate;" label="Landroid/support/v7/app/AppCompatDelegate;-&gt;create(Landroid/app/Dialog;Landroid/support/v7/app/AppCompatCallback;)Landroid/support/v7/app/AppCompatDelegate;" />
+      <node id="Landroid/support/v4/app/DialogFragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" label="Landroid/support/v4/app/DialogFragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" />
+      <node id="Landroid/support/v7/app/AppCompatDialog;-&gt;getDelegate()Landroid/support/v7/app/AppCompatDelegate;" label="Landroid/support/v7/app/AppCompatDialog;-&gt;getDelegate()Landroid/support/v7/app/AppCompatDelegate;" />
+      <node id="Landroid/view/Window;-&gt;addFlags(I)V" label="Landroid/view/Window;-&gt;addFlags(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" target="Landroid/app/Dialog;-&gt;getWindow()Landroid/view/Window;" id="0" />
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" target="Landroid/view/Window;-&gt;addFlags(I)V" id="1" />
+      <edge source="Landroid/support/v7/app/AppCompatDialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" target="Landroid/support/v4/app/DialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" id="2" />
+      <edge source="Landroid/support/v7/app/AppCompatDialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" target="Landroid/app/Dialog;-&gt;getWindow()Landroid/view/Window;" id="3" />
+      <edge source="Landroid/support/v7/app/AppCompatDialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" target="Landroid/view/Window;-&gt;addFlags(I)V" id="4" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegate;-&gt;create(Landroid/app/Dialog;Landroid/support/v7/app/AppCompatCallback;)Landroid/support/v7/app/AppCompatDelegate;" target="Landroid/app/Dialog;-&gt;getWindow()Landroid/view/Window;" id="5" />
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;" target="Landroid/support/v4/app/DialogFragment;-&gt;setupDialog(Landroid/app/Dialog;I)V" id="6" />
+      <edge source="Landroid/support/v7/app/AppCompatDialog;-&gt;getDelegate()Landroid/support/v7/app/AppCompatDelegate;" target="Landroid/support/v7/app/AppCompatDelegate;-&gt;create(Landroid/app/Dialog;Landroid/support/v7/app/AppCompatCallback;)Landroid/support/v7/app/AppCompatDelegate;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/PagerAdapter;-&gt;notifyDataSetChanged()V" label="Landroid/support/v4/view/PagerAdapter;-&gt;notifyDataSetChanged()V" />
+      <node id="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;getAdapter()Landroid/widget/ListAdapter;" label="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;getAdapter()Landroid/widget/ListAdapter;" />
+      <node id="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;onMeasure(II)V" label="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;onMeasure(II)V" />
+      <node id="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;getRowHeight()I" label="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;getRowHeight()I" />
+      <node id="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter$HeaderViewGridAdapter;-&gt;notifyDataSetChanged()V" label="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter$HeaderViewGridAdapter;-&gt;notifyDataSetChanged()V" />
+      <node id="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter$HeaderViewGridAdapter;-&gt;setNumColumns(I)V" label="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter$HeaderViewGridAdapter;-&gt;setNumColumns(I)V" />
+      <node id="Landroid/database/DataSetObservable;-&gt;notifyChanged()V" label="Landroid/database/DataSetObservable;-&gt;notifyChanged()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/PagerAdapter;-&gt;notifyDataSetChanged()V" target="Landroid/database/DataSetObservable;-&gt;notifyChanged()V" id="0" />
+      <edge source="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;onMeasure(II)V" target="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;getAdapter()Landroid/widget/ListAdapter;" id="1" />
+      <edge source="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;onMeasure(II)V" target="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;getRowHeight()I" id="2" />
+      <edge source="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;onMeasure(II)V" target="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter$HeaderViewGridAdapter;-&gt;setNumColumns(I)V" id="3" />
+      <edge source="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;getRowHeight()I" target="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter;-&gt;getAdapter()Landroid/widget/ListAdapter;" id="4" />
+      <edge source="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter$HeaderViewGridAdapter;-&gt;notifyDataSetChanged()V" target="Landroid/database/DataSetObservable;-&gt;notifyChanged()V" id="5" />
+      <edge source="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter$HeaderViewGridAdapter;-&gt;setNumColumns(I)V" target="Lcom/igaworks/adpopcorn/activity/view/GridViewWithHeaderAndFooter$HeaderViewGridAdapter;-&gt;notifyDataSetChanged()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

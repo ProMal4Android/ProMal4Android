@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/Glide;-&gt;buildFileDescriptorModelLoader(Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" label="Lcom/bumptech/glide/Glide;-&gt;buildFileDescriptorModelLoader(Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" />
+      <node id="Landroid/support/customtabs/CustomTabsClient;-&gt;connectAndInitialize(Landroid/content/Context;Ljava/lang/String;)Z" label="Landroid/support/customtabs/CustomTabsClient;-&gt;connectAndInitialize(Landroid/content/Context;Ljava/lang/String;)Z" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;buildStreamModelLoader(Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" label="Lcom/bumptech/glide/Glide;-&gt;buildStreamModelLoader(Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" />
+      <node id="Lcom/bumptech/glide/RequestManager;-&gt;loadGeneric(Ljava/lang/Class;)Lcom/bumptech/glide/DrawableTypeRequest;" label="Lcom/bumptech/glide/RequestManager;-&gt;loadGeneric(Ljava/lang/Class;)Lcom/bumptech/glide/DrawableTypeRequest;" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;buildModelLoader(Ljava/lang/Class;Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" label="Lcom/bumptech/glide/Glide;-&gt;buildModelLoader(Ljava/lang/Class;Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" />
+      <node id="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" label="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" label="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;buildFileDescriptorModelLoader(Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" target="Lcom/bumptech/glide/Glide;-&gt;buildModelLoader(Ljava/lang/Class;Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" id="0" />
+      <edge source="Landroid/support/customtabs/CustomTabsClient;-&gt;connectAndInitialize(Landroid/content/Context;Ljava/lang/String;)Z" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="1" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;buildStreamModelLoader(Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" target="Lcom/bumptech/glide/Glide;-&gt;buildModelLoader(Ljava/lang/Class;Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" id="2" />
+      <edge source="Lcom/bumptech/glide/RequestManager;-&gt;loadGeneric(Ljava/lang/Class;)Lcom/bumptech/glide/DrawableTypeRequest;" target="Lcom/bumptech/glide/Glide;-&gt;buildFileDescriptorModelLoader(Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" id="3" />
+      <edge source="Lcom/bumptech/glide/RequestManager;-&gt;loadGeneric(Ljava/lang/Class;)Lcom/bumptech/glide/DrawableTypeRequest;" target="Lcom/bumptech/glide/Glide;-&gt;buildStreamModelLoader(Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" id="4" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;buildModelLoader(Ljava/lang/Class;Ljava/lang/Class;Landroid/content/Context;)Lcom/bumptech/glide/load/model/ModelLoader;" target="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" id="5" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="6" />
+    </edges>
+  </graph>
+</gexf>

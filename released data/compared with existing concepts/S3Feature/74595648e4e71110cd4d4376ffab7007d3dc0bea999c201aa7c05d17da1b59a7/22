@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/support/v7/widget/LinearLayoutCompat;-&gt;setDividerDrawable(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/v7/widget/LinearLayoutCompat;-&gt;setDividerDrawable(Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" label="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" />
+      <node id="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" label="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" />
+      <node id="Landroid/content/res/Resources;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" label="Landroid/content/res/Resources;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" label="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/LinearLayoutCompat;-&gt;setDividerDrawable(Landroid/graphics/drawable/Drawable;)V" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" id="0" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" target="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="1" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" target="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" id="2" />
+      <edge source="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" target="Landroid/content/res/Resources;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" target="Landroid/graphics/drawable/Drawable;-&gt;getIntrinsicWidth()I" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationCompat$Style;-&gt;createColoredBitmap(III)Landroid/graphics/Bitmap;" target="Landroid/content/res/Resources;-&gt;getDrawable(I)Landroid/graphics/drawable/Drawable;" id="5" />
+    </edges>
+  </graph>
+</gexf>

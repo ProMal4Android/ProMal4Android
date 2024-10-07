@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/content/b;-&gt;b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" label="Landroid/support/v4/content/b;-&gt;b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" />
+      <node id="Landroid/support/design/widget/f;-&gt;c(I)V" label="Landroid/support/design/widget/f;-&gt;c(I)V" />
+      <node id="Landroid/content/Context;-&gt;getColorStateList(I)Landroid/content/res/ColorStateList;" label="Landroid/content/Context;-&gt;getColorStateList(I)Landroid/content/res/ColorStateList;" />
+      <node id="Landroid/support/v7/widget/an;-&gt;e(I)Landroid/content/res/ColorStateList;" label="Landroid/support/v7/widget/an;-&gt;e(I)Landroid/content/res/ColorStateList;" />
+      <node id="Landroid/support/v7/b/a/b;-&gt;a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" label="Landroid/support/v7/b/a/b;-&gt;a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" />
+      <node id="Landroid/support/v7/widget/an;-&gt;a(Landroid/content/Context;I[I)Landroid/support/v7/widget/an;" label="Landroid/support/v7/widget/an;-&gt;a(Landroid/content/Context;I[I)Landroid/support/v7/widget/an;" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/content/b;-&gt;b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/content/Context;-&gt;getColorStateList(I)Landroid/content/res/ColorStateList;" id="0" />
+      <edge source="Landroid/support/design/widget/f;-&gt;c(I)V" target="Landroid/support/v7/widget/an;-&gt;e(I)Landroid/content/res/ColorStateList;" id="1" />
+      <edge source="Landroid/support/design/widget/f;-&gt;c(I)V" target="Landroid/support/v7/widget/an;-&gt;a(Landroid/content/Context;I[I)Landroid/support/v7/widget/an;" id="2" />
+      <edge source="Landroid/support/v7/widget/an;-&gt;e(I)Landroid/content/res/ColorStateList;" target="Landroid/support/v7/b/a/b;-&gt;a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" id="3" />
+      <edge source="Landroid/support/v7/b/a/b;-&gt;a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/support/v4/content/b;-&gt;b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" id="4" />
+      <edge source="Landroid/support/v7/b/a/b;-&gt;a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;" target="Landroid/content/Context;-&gt;getColorStateList(I)Landroid/content/res/ColorStateList;" id="5" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" target="Landroid/support/v7/widget/an;-&gt;e(I)Landroid/content/res/ColorStateList;" id="6" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" target="Landroid/support/v7/widget/an;-&gt;a(Landroid/content/Context;I[I)Landroid/support/v7/widget/an;" id="7" />
+    </edges>
+  </graph>
+</gexf>

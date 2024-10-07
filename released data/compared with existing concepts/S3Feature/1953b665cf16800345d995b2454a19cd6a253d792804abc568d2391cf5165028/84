@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" />
+      <node id="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;a(Landroid/view/View;)Landroid/support/design/widget/j;" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;a(Landroid/view/View;)Landroid/support/design/widget/j;" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;-&gt;a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z" label="Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;-&gt;a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z" />
+      <node id="Ljava/util/List;-&gt;clear()V" label="Ljava/util/List;-&gt;clear()V" />
+      <node id="Landroid/support/design/widget/CoordinatorLayout;-&gt;c(Landroid/view/View;)Ljava/util/List;" label="Landroid/support/design/widget/CoordinatorLayout;-&gt;c(Landroid/view/View;)Ljava/util/List;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;a(Landroid/view/View;)Landroid/support/design/widget/j;" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="1" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;a(Landroid/view/View;)Landroid/support/design/widget/j;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;-&gt;a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="3" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;-&gt;a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z" target="Landroid/support/design/widget/CoordinatorLayout;-&gt;c(Landroid/view/View;)Ljava/util/List;" id="4" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;c(Landroid/view/View;)Ljava/util/List;" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="5" />
+      <edge source="Landroid/support/design/widget/CoordinatorLayout;-&gt;c(Landroid/view/View;)Ljava/util/List;" target="Ljava/util/List;-&gt;clear()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

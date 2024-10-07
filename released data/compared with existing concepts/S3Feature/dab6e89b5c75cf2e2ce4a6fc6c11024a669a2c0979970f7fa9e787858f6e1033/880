@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" label="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" />
+      <node id="Landroid/support/v4/view/KeyEventCompat;-&gt;hasNoModifiers(Landroid/view/KeyEvent;)Z" label="Landroid/support/v4/view/KeyEventCompat;-&gt;hasNoModifiers(Landroid/view/KeyEvent;)Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" label="Landroid/support/v4/view/ViewPager;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" label="Landroid/support/v4/view/ViewPager;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" />
+      <node id="Landroid/view/KeyEvent;-&gt;getAction()I" label="Landroid/view/KeyEvent;-&gt;getAction()I" />
+      <node id="Landroid/support/v7/app/AppCompatActivity;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" label="Landroid/support/v7/app/AppCompatActivity;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" />
+      <node id="Landroid/view/KeyEvent;-&gt;getMetaState()I" label="Landroid/view/KeyEvent;-&gt;getMetaState()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/support/v4/view/KeyEventCompat;-&gt;hasNoModifiers(Landroid/view/KeyEvent;)Z" id="0" />
+      <edge source="Landroid/support/v4/widget/ExploreByTouchHelper;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/view/KeyEvent;-&gt;getAction()I" id="1" />
+      <edge source="Landroid/support/v4/view/KeyEventCompat;-&gt;hasNoModifiers(Landroid/view/KeyEvent;)Z" target="Landroid/view/KeyEvent;-&gt;getMetaState()I" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/support/v4/view/KeyEventCompat;-&gt;hasNoModifiers(Landroid/view/KeyEvent;)Z" id="3" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/view/KeyEvent;-&gt;getAction()I" id="4" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/support/v4/view/ViewPager;-&gt;executeKeyEvent(Landroid/view/KeyEvent;)Z" id="5" />
+      <edge source="Landroid/support/v7/app/AppCompatActivity;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/view/KeyEvent;-&gt;getAction()I" id="6" />
+      <edge source="Landroid/support/v7/app/AppCompatActivity;-&gt;dispatchKeyEvent(Landroid/view/KeyEvent;)Z" target="Landroid/view/KeyEvent;-&gt;getMetaState()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ContentLoadingProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v4/widget/ContentLoadingProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Lcom/mobimento/caponate/section/dataviews/DataView;-&gt;getContentLayout()Landroid/widget/LinearLayout;" label="Lcom/mobimento/caponate/section/dataviews/DataView;-&gt;getContentLayout()Landroid/widget/LinearLayout;" />
+      <node id="Lcom/mobimento/caponate/section/DataViewSection;-&gt;getCollection()Lcom/mobimento/caponate/resource/CollectionResource;" label="Lcom/mobimento/caponate/section/DataViewSection;-&gt;getCollection()Lcom/mobimento/caponate/resource/CollectionResource;" />
+      <node id="Lcom/mobimento/caponate/section/dataviews/ARPoisDataView;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" label="Lcom/mobimento/caponate/section/dataviews/ARPoisDataView;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" />
+      <node id="Landroid/widget/ProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/widget/ProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Lcom/mobimento/caponate/section/dataviews/WebDataView;-&gt;reloadData()V" label="Lcom/mobimento/caponate/section/dataviews/WebDataView;-&gt;reloadData()V" />
+      <node id="Lcom/mobimento/caponate/section/dataviews/CalendarDataView;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" label="Lcom/mobimento/caponate/section/dataviews/CalendarDataView;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ContentLoadingProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/widget/ProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" id="0" />
+      <edge source="Lcom/mobimento/caponate/section/dataviews/ARPoisDataView;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" target="Lcom/mobimento/caponate/section/dataviews/DataView;-&gt;getContentLayout()Landroid/widget/LinearLayout;" id="1" />
+      <edge source="Lcom/mobimento/caponate/section/dataviews/ARPoisDataView;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" target="Lcom/mobimento/caponate/section/DataViewSection;-&gt;getCollection()Lcom/mobimento/caponate/resource/CollectionResource;" id="2" />
+      <edge source="Lcom/mobimento/caponate/section/dataviews/WebDataView;-&gt;reloadData()V" target="Lcom/mobimento/caponate/section/dataviews/DataView;-&gt;getContentLayout()Landroid/widget/LinearLayout;" id="3" />
+      <edge source="Lcom/mobimento/caponate/section/dataviews/WebDataView;-&gt;reloadData()V" target="Lcom/mobimento/caponate/section/DataViewSection;-&gt;getCollection()Lcom/mobimento/caponate/resource/CollectionResource;" id="4" />
+      <edge source="Lcom/mobimento/caponate/section/dataviews/WebDataView;-&gt;reloadData()V" target="Landroid/widget/ProgressBar;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" id="5" />
+      <edge source="Lcom/mobimento/caponate/section/dataviews/CalendarDataView;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" target="Lcom/mobimento/caponate/section/dataviews/DataView;-&gt;getContentLayout()Landroid/widget/LinearLayout;" id="6" />
+      <edge source="Lcom/mobimento/caponate/section/dataviews/CalendarDataView;-&gt;getView(Landroid/content/Context;)Landroid/view/View;" target="Lcom/mobimento/caponate/section/DataViewSection;-&gt;getCollection()Lcom/mobimento/caponate/resource/CollectionResource;" id="7" />
+    </edges>
+  </graph>
+</gexf>

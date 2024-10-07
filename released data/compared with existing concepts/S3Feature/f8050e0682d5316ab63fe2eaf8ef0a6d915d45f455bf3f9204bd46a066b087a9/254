@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/transition/TransitionPort$TransitionListener;-&gt;onTransitionEnd(Landroid/support/transition/TransitionPort;)V" label="Landroid/support/transition/TransitionPort$TransitionListener;-&gt;onTransitionEnd(Landroid/support/transition/TransitionPort;)V" />
+      <node id="Landroid/support/transition/TransitionPort;-&gt;runAnimators()V" label="Landroid/support/transition/TransitionPort;-&gt;runAnimators()V" />
+      <node id="Landroid/support/transition/TransitionPort;-&gt;start()V" label="Landroid/support/transition/TransitionPort;-&gt;start()V" />
+      <node id="Ljava/util/ArrayList;-&gt;clone()Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;clone()Ljava/lang/Object;" />
+      <node id="Landroid/support/transition/TransitionPort;-&gt;end()V" label="Landroid/support/transition/TransitionPort;-&gt;end()V" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" label="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" />
+      <node id="Landroid/support/v4/util/ArrayMap;-&gt;containsKey(Ljava/lang/Object;)Z" label="Landroid/support/v4/util/ArrayMap;-&gt;containsKey(Ljava/lang/Object;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;runAnimators()V" target="Landroid/support/transition/TransitionPort;-&gt;start()V" id="0" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;runAnimators()V" target="Landroid/support/transition/TransitionPort;-&gt;end()V" id="1" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;runAnimators()V" target="Landroid/support/v4/util/ArrayMap;-&gt;containsKey(Ljava/lang/Object;)Z" id="2" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;start()V" target="Ljava/util/ArrayList;-&gt;clone()Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;end()V" target="Landroid/support/transition/TransitionPort$TransitionListener;-&gt;onTransitionEnd(Landroid/support/transition/TransitionPort;)V" id="4" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;end()V" target="Ljava/util/ArrayList;-&gt;clone()Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat$Builder;-&gt;putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaMetadataCompat$Builder;" target="Landroid/support/v4/util/ArrayMap;-&gt;containsKey(Ljava/lang/Object;)Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

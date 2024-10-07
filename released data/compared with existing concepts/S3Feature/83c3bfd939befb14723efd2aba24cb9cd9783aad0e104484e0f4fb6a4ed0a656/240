@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" label="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" />
+      <node id="Landroid/view/ViewGroup;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" label="Landroid/view/ViewGroup;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" label="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewAbsoluteGravity(Landroid/view/View;)I" label="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewAbsoluteGravity(Landroid/view/View;)I" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" label="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" />
+      <node id="Landroid/support/v4/view/ViewCompat;-&gt;getLayoutDirection(Landroid/view/View;)I" label="Landroid/support/v4/view/ViewCompat;-&gt;getLayoutDirection(Landroid/view/View;)I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" target="Landroid/view/ViewGroup;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" id="0" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewAbsoluteGravity(Landroid/view/View;)I" target="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" id="1" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewAbsoluteGravity(Landroid/view/View;)I" target="Landroid/support/v4/view/ViewCompat;-&gt;getLayoutDirection(Landroid/view/View;)I" id="2" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" target="Landroid/view/ViewGroup;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" id="3" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;onRestoreInstanceState(Landroid/os/Parcelable;)V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" id="4" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" target="Landroid/support/v4/view/GravityCompat;-&gt;getAbsoluteGravity(II)I" id="5" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" target="Landroid/support/v4/widget/DrawerLayout;-&gt;getDrawerViewAbsoluteGravity(Landroid/view/View;)I" id="6" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" target="Landroid/support/v4/view/ViewCompat;-&gt;getLayoutDirection(Landroid/view/View;)I" id="7" />
+    </edges>
+  </graph>
+</gexf>

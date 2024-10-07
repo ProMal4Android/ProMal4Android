@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" label="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" />
+      <node id="Landroid/support/v4/view/ViewCompat;-&gt;isAttachedToWindow(Landroid/view/View;)Z" label="Landroid/support/v4/view/ViewCompat;-&gt;isAttachedToWindow(Landroid/view/View;)Z" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getText(Ljava/lang/String;)Ljava/lang/CharSequence;" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getText(Ljava/lang/String;)Ljava/lang/CharSequence;" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getDescription()Landroid/support/v4/media/MediaDescriptionCompat;" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getDescription()Landroid/support/v4/media/MediaDescriptionCompat;" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;shouldInheritContext(Landroid/view/ViewParent;)Z" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;shouldInheritContext(Landroid/view/ViewParent;)Z" />
+      <node id="Landroid/support/design/widget/CollapsingToolbarLayout;-&gt;onLayout(ZIIII)V" label="Landroid/support/design/widget/CollapsingToolbarLayout;-&gt;onLayout(ZIIII)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;createView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;shouldInheritContext(Landroid/view/ViewParent;)Z" id="0" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getDescription()Landroid/support/v4/media/MediaDescriptionCompat;" target="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" id="1" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getDescription()Landroid/support/v4/media/MediaDescriptionCompat;" target="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getText(Ljava/lang/String;)Ljava/lang/CharSequence;" id="2" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;shouldInheritContext(Landroid/view/ViewParent;)Z" target="Landroid/support/v4/view/ViewCompat;-&gt;isAttachedToWindow(Landroid/view/View;)Z" id="3" />
+      <edge source="Landroid/support/design/widget/CollapsingToolbarLayout;-&gt;onLayout(ZIIII)V" target="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" id="4" />
+      <edge source="Landroid/support/design/widget/CollapsingToolbarLayout;-&gt;onLayout(ZIIII)V" target="Landroid/support/v4/view/ViewCompat;-&gt;isAttachedToWindow(Landroid/view/View;)Z" id="5" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" label="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" />
+      <node id="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" label="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" />
+      <node id="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;chooseActivity(I)Landroid/content/Intent;" label="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;chooseActivity(I)Landroid/content/Intent;" />
+      <node id="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" label="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" />
+      <node id="Ljava/lang/System;-&gt;currentTimeMillis()J" label="Ljava/lang/System;-&gt;currentTimeMillis()J" />
+      <node id="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;addHistoricalRecord(Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;)Z" label="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;addHistoricalRecord(Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;)Z" />
+      <node id="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;sortActivitiesIfNeeded()Z" label="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;sortActivitiesIfNeeded()Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/vcard/VCardEntryCommitter;-&gt;onEntryCreated(Lcom/android/vcard/VCardEntry;)V" target="Ljava/lang/System;-&gt;currentTimeMillis()J" id="0" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;chooseActivity(I)Landroid/content/Intent;" target="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" id="1" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;chooseActivity(I)Landroid/content/Intent;" target="Ljava/lang/System;-&gt;currentTimeMillis()J" id="2" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;chooseActivity(I)Landroid/content/Intent;" target="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;addHistoricalRecord(Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;)Z" id="3" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" target="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" id="4" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" target="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;sortActivitiesIfNeeded()Z" id="5" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;addHistoricalRecord(Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;)Z" target="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" id="6" />
+      <edge source="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;addHistoricalRecord(Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;)Z" target="Landroidx/appcompat/widget/ActivityChooserModel;-&gt;sortActivitiesIfNeeded()Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

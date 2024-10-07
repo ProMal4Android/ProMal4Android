@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" />
+      <node id="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Ljava/lang/Class;-&gt;getSuperclass()Ljava/lang/Class;" label="Ljava/lang/Class;-&gt;getSuperclass()Ljava/lang/Class;" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" />
+      <node id="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" label="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" id="4" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/util/Map;Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$b;Landroid/arch/lifecycle/b$a;Ljava/lang/Class;)V" id="5" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Ljava/lang/Class;-&gt;getSuperclass()Ljava/lang/Class;" id="6" />
+      <edge source="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;b(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" target="Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver;-&gt;a(Ljava/lang/Class;)Landroid/arch/lifecycle/ReflectiveGenericLifecycleObserver$a;" id="7" />
+    </edges>
+  </graph>
+</gexf>

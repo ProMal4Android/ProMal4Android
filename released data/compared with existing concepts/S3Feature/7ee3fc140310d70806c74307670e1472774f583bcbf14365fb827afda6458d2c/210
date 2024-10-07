@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/a/h;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/a/h;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v7/app/e;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/app/am;Landroid/view/Window;)V" label="Landroid/support/v7/app/e;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/app/am;Landroid/view/Window;)V" />
+      <node id="Landroid/support/v4/a/g;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/a/g;-&gt;&lt;init&gt;()V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v7/internal/widget/ViewStubCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/support/v7/internal/widget/ViewStubCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Landroid/support/v4/a/e;-&gt;&lt;clinit&gt;()V" label="Landroid/support/v4/a/e;-&gt;&lt;clinit&gt;()V" />
+      <node id="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;" label="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/a/h;-&gt;&lt;init&gt;()V" target="Landroid/support/v4/a/g;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v7/app/e;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/app/am;Landroid/view/Window;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v7/app/e;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/app/am;Landroid/view/Window;)V" target="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;" id="2" />
+      <edge source="Landroid/support/v4/a/g;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v7/internal/widget/ViewStubCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Landroid/content/Context;-&gt;obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;" id="4" />
+      <edge source="Landroid/support/v4/a/e;-&gt;&lt;clinit&gt;()V" target="Landroid/support/v4/a/h;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/v4/a/e;-&gt;&lt;clinit&gt;()V" target="Landroid/support/v4/a/g;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

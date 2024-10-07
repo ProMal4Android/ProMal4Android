@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/ActionMenuView;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" label="Landroid/support/v7/widget/ActionMenuView;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" />
+      <node id="Landroid/support/v7/view/menu/i;-&gt;l()Ljava/util/ArrayList;" label="Landroid/support/v7/view/menu/i;-&gt;l()Ljava/util/ArrayList;" />
+      <node id="Landroid/support/v7/widget/k;-&gt;h()Z" label="Landroid/support/v7/widget/k;-&gt;h()Z" />
+      <node id="Landroid/support/v7/view/menu/i;-&gt;i()Ljava/util/ArrayList;" label="Landroid/support/v7/view/menu/i;-&gt;i()Ljava/util/ArrayList;" />
+      <node id="Ljava/util/ArrayList;-&gt;clear()V" label="Ljava/util/ArrayList;-&gt;clear()V" />
+      <node id="Landroid/support/v7/widget/k;-&gt;d()Z" label="Landroid/support/v7/widget/k;-&gt;d()Z" />
+      <node id="Landroid/support/v7/view/menu/i;-&gt;j()V" label="Landroid/support/v7/view/menu/i;-&gt;j()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/ActionMenuView;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" target="Landroid/support/v7/widget/k;-&gt;h()Z" id="0" />
+      <edge source="Landroid/support/v7/widget/ActionMenuView;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" target="Landroid/support/v7/widget/k;-&gt;d()Z" id="1" />
+      <edge source="Landroid/support/v7/view/menu/i;-&gt;l()Ljava/util/ArrayList;" target="Landroid/support/v7/view/menu/i;-&gt;j()V" id="2" />
+      <edge source="Landroid/support/v7/view/menu/i;-&gt;i()Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;clear()V" id="3" />
+      <edge source="Landroid/support/v7/widget/k;-&gt;d()Z" target="Landroid/support/v7/view/menu/i;-&gt;l()Ljava/util/ArrayList;" id="4" />
+      <edge source="Landroid/support/v7/widget/k;-&gt;d()Z" target="Landroid/support/v7/widget/k;-&gt;h()Z" id="5" />
+      <edge source="Landroid/support/v7/view/menu/i;-&gt;j()V" target="Landroid/support/v7/view/menu/i;-&gt;i()Ljava/util/ArrayList;" id="6" />
+      <edge source="Landroid/support/v7/view/menu/i;-&gt;j()V" target="Ljava/util/ArrayList;-&gt;clear()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

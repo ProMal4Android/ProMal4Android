@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onStartAction(IZ)V" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onStartAction(IZ)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;handleSelectAll()V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;handleSelectAll()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onStartSelectAll(Z)V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onStartSelectAll(Z)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I)V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;insertHorizontalLine()V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;insertHorizontalLine()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;onStartAction(IZ)V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" id="0" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;handleSelectAll()V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I)V" id="1" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onStartSelectAll(Z)V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;handleSelectAll()V" id="2" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onStartSelectAll(Z)V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" id="3" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;insertHorizontalLine()V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" id="4" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditModeActions;-&gt;onAction(I)V" id="5" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;onAction(IZ)V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;access$300(Lcom/android/ex/editstyledtext/EditStyledText;II)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

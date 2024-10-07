@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" label="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(ILandroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/Menu;)V" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(ILandroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/Menu;)V" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/internal/view/menu/i;Z)V" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/internal/view/menu/i;Z)V" />
+      <node id="Landroid/view/Window$Callback;-&gt;onPanelClosed(ILandroid/view/Menu;)V" label="Landroid/view/Window$Callback;-&gt;onPanelClosed(ILandroid/view/Menu;)V" />
+      <node id="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;l()Z" label="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;l()Z" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" label="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(ILandroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/Menu;)V" target="Landroid/view/Window$Callback;-&gt;onPanelClosed(ILandroid/view/Menu;)V" id="0" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(ILandroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/Menu;)V" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;l()Z" id="1" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" target="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" id="2" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;l()Z" id="3" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/internal/view/menu/i;Z)V" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/app/AppCompatDelegateImplV7$PanelFeatureState;Landroid/view/KeyEvent;)V" id="4" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/internal/view/menu/i;Z)V" target="Landroid/view/Window$Callback;-&gt;onPanelClosed(ILandroid/view/Menu;)V" id="5" />
+      <edge source="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;a(Landroid/support/v7/internal/view/menu/i;Z)V" target="Landroid/support/v7/app/AppCompatDelegateImplV7;-&gt;l()Z" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" target="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

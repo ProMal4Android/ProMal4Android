@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" label="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" />
+      <node id="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" label="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getAction(Landroid/app/Notification;ILandroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$Action;" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getAction(Landroid/app/Notification;ILandroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$Action;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingActivityIcon()Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingActivityIcon()Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setHWLayerAnimListenerIfAlpha(Landroid/view/View;Landroid/view/animation/Animation;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setHWLayerAnimListenerIfAlpha(Landroid/view/View;Landroid/view/animation/Animation;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;" target="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;ensureActionReflectionReadyLocked()Z" target="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getAction(Landroid/app/Notification;ILandroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$Action;" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getAction(Landroid/app/Notification;ILandroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$Action;" target="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;getActionObjectsLocked(Landroid/app/Notification;)[Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingActivityIcon()Landroid/graphics/drawable/Drawable;" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="6" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setHWLayerAnimListenerIfAlpha(Landroid/view/View;Landroid/view/animation/Animation;)V" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="7" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;setHWLayerAnimListenerIfAlpha(Landroid/view/View;Landroid/view/animation/Animation;)V" target="Ljava/lang/Class;-&gt;getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;" id="8" />
+    </edges>
+  </graph>
+</gexf>

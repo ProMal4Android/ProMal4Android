@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;ILandroid/os/Bundle;)V" label="Landroid/support/v4/app/FragmentActivity;-&gt;startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;ILandroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;allocateRequestIndex(Landroid/support/v4/app/Fragment;)I" label="Landroid/support/v4/app/FragmentActivity;-&gt;allocateRequestIndex(Landroid/support/v4/app/Fragment;)I" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;indexOfKey(I)I" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;indexOfKey(I)I" />
+      <node id="Landroid/support/v4/app/LoaderManagerImpl;-&gt;destroyLoader(I)V" label="Landroid/support/v4/app/LoaderManagerImpl;-&gt;destroyLoader(I)V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;gc()V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;gc()V" />
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;size()I" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/ActivityCompat;-&gt;startActivityForResult(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V" label="Landroid/support/v4/app/ActivityCompat;-&gt;startActivityForResult(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;ILandroid/os/Bundle;)V" target="Landroid/support/v4/app/FragmentActivity;-&gt;allocateRequestIndex(Landroid/support/v4/app/Fragment;)I" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;ILandroid/os/Bundle;)V" target="Landroid/support/v4/app/ActivityCompat;-&gt;startActivityForResult(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;allocateRequestIndex(Landroid/support/v4/app/Fragment;)I" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;indexOfKey(I)I" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;allocateRequestIndex(Landroid/support/v4/app/Fragment;)I" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;size()I" id="3" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;indexOfKey(I)I" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;gc()V" id="4" />
+      <edge source="Landroid/support/v4/app/LoaderManagerImpl;-&gt;destroyLoader(I)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;indexOfKey(I)I" id="5" />
+      <edge source="Landroid/support/v4/util/SparseArrayCompat;-&gt;size()I" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;gc()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

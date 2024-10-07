@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;jumpDrawablesToCurrentState()V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;jumpDrawablesToCurrentState()V" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;setChecked(Z)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;setChecked(Z)V" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;toggle()V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;toggle()V" />
+      <node id="Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;-&gt;&lt;init&gt;(Landroid/support/v7/widget/SwitchCompat;FFLandroid/support/v7/widget/SwitchCompat$1;)V" label="Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;-&gt;&lt;init&gt;(Landroid/support/v7/widget/SwitchCompat;FFLandroid/support/v7/widget/SwitchCompat$1;)V" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;isChecked()Z" label="Landroid/support/v7/widget/SwitchCompat;-&gt;isChecked()Z" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;cancelPositionAnimator()V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;cancelPositionAnimator()V" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;animateThumbToCheckedState(Z)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;animateThumbToCheckedState(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;jumpDrawablesToCurrentState()V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;isChecked()Z" id="0" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;jumpDrawablesToCurrentState()V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;cancelPositionAnimator()V" id="1" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;setChecked(Z)V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;isChecked()Z" id="2" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;setChecked(Z)V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;cancelPositionAnimator()V" id="3" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;setChecked(Z)V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;animateThumbToCheckedState(Z)V" id="4" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;toggle()V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;setChecked(Z)V" id="5" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;toggle()V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;isChecked()Z" id="6" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;animateThumbToCheckedState(Z)V" target="Landroid/support/v7/widget/SwitchCompat$ThumbAnimation;-&gt;&lt;init&gt;(Landroid/support/v7/widget/SwitchCompat;FFLandroid/support/v7/widget/SwitchCompat$1;)V" id="7" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;animateThumbToCheckedState(Z)V" target="Landroid/support/v7/widget/SwitchCompat;-&gt;cancelPositionAnimator()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

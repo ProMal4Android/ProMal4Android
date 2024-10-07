@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;insertHorizontalLine()V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;insertHorizontalLine()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" label="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" />
+      <node id="Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I" label="Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles(Ljava/lang/CharSequence;)V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles(Ljava/lang/CharSequence;)V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles()V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles()V" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$2;-&gt;run()V" label="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$2;-&gt;run()V" />
+      <node id="Lcom/android/ex/editstyledtext/EditStyledText$EditStyledTextSpans$HorizontalLineSpan;-&gt;&lt;init&gt;(IILandroid/text/Spannable;)V" label="Lcom/android/ex/editstyledtext/EditStyledText$EditStyledTextSpans$HorizontalLineSpan;-&gt;&lt;init&gt;(IILandroid/text/Spannable;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;insertHorizontalLine()V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" id="0" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;insertHorizontalLine()V" target="Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I" id="1" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;insertHorizontalLine()V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditStyledTextSpans$HorizontalLineSpan;-&gt;&lt;init&gt;(IILandroid/text/Spannable;)V" id="2" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles(Ljava/lang/CharSequence;)V" target="Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I" id="3" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles()V" target="Lcom/android/ex/editstyledtext/EditStyledText;-&gt;getText()Landroid/text/Editable;" id="4" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles()V" target="Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I" id="5" />
+      <edge source="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles()V" target="Lcom/android/ex/editstyledtext/EditStyledText$EditorManager;-&gt;clearStyles(Ljava/lang/CharSequence;)V" id="6" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase$2;-&gt;run()V" target="Landroid/util/Log;-&gt;d(Ljava/lang/String;Ljava/lang/String;)I" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/a/ag;-&gt;b(Landroid/support/v7/a/as;)Z" label="Landroid/support/v7/a/ag;-&gt;b(Landroid/support/v7/a/as;)Z" />
+      <node id="Landroid/support/v7/a/ag;-&gt;a(Landroid/support/v7/view/c;)Landroid/support/v7/view/b;" label="Landroid/support/v7/a/ag;-&gt;a(Landroid/support/v7/view/c;)Landroid/support/v7/view/b;" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" label="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" />
+      <node id="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/content/res/Resources;-&gt;getDisplayMetrics()Landroid/util/DisplayMetrics;" label="Landroid/content/res/Resources;-&gt;getDisplayMetrics()Landroid/util/DisplayMetrics;" />
+      <node id="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" label="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" label="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/a/ag;-&gt;b(Landroid/support/v7/a/as;)Z" target="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v7/a/ag;-&gt;b(Landroid/support/v7/a/as;)Z" target="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" id="1" />
+      <edge source="Landroid/support/v7/a/ag;-&gt;a(Landroid/support/v7/view/c;)Landroid/support/v7/view/b;" target="Landroid/content/res/Resources;-&gt;getDisplayMetrics()Landroid/util/DisplayMetrics;" id="2" />
+      <edge source="Landroid/support/v7/a/ag;-&gt;a(Landroid/support/v7/view/c;)Landroid/support/v7/view/b;" target="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v7/a/ag;-&gt;a(Landroid/support/v7/view/c;)Landroid/support/v7/view/b;" target="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" id="4" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" target="Landroid/content/res/Resources;-&gt;getDisplayMetrics()Landroid/util/DisplayMetrics;" id="5" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" target="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" target="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" id="7" />
+      <edge source="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/content/res/Resources;-&gt;getDisplayMetrics()Landroid/util/DisplayMetrics;" id="8" />
+    </edges>
+  </graph>
+</gexf>

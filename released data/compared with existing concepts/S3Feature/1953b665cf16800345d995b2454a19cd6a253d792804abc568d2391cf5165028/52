@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/Collections;-&gt;unmodifiableList(Ljava/util/List;)Ljava/util/List;" label="Ljava/util/Collections;-&gt;unmodifiableList(Ljava/util/List;)Ljava/util/List;" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" />
+      <node id="Landroid/support/v7/widget/fc;-&gt;y()V" label="Landroid/support/v7/widget/fc;-&gt;y()V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;getContext()Landroid/content/Context;" label="Landroid/support/v7/widget/RecyclerView;-&gt;getContext()Landroid/content/Context;" />
+      <node id="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" label="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v7/widget/RecyclerView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" label="Landroid/support/v7/widget/RecyclerView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" />
+      <node id="Landroid/support/v7/widget/et;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" label="Landroid/support/v7/widget/et;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;setScrollingTouchSlop(I)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getContext()Landroid/content/Context;" id="0" />
+      <edge source="Landroid/support/v7/widget/fc;-&gt;y()V" target="Ljava/util/Collections;-&gt;unmodifiableList(Ljava/util/List;)Ljava/util/List;" id="1" />
+      <edge source="Landroid/support/v7/widget/fc;-&gt;y()V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Landroid/support/v7/widget/RecyclerView;-&gt;getContext()Landroid/content/Context;" id="3" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v7/widget/RecyclerView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;I)V" target="Landroid/support/v7/widget/et;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" id="5" />
+      <edge source="Landroid/support/v7/widget/et;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" target="Ljava/util/Collections;-&gt;unmodifiableList(Ljava/util/List;)Ljava/util/List;" id="6" />
+      <edge source="Landroid/support/v7/widget/et;-&gt;&lt;init&gt;(Landroid/support/v7/widget/RecyclerView;)V" target="Ljava/util/ArrayList;-&gt;&lt;init&gt;()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

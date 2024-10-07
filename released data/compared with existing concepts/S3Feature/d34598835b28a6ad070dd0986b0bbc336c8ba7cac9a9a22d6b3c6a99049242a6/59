@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Lact/TrackingReceiver;-&gt;b(Landroid/content/Context;)Ljava/lang/String;" label="Lact/TrackingReceiver;-&gt;b(Landroid/content/Context;)Ljava/lang/String;" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;from(Landroid/content/Context;)Landroid/support/v4/app/NotificationManagerCompat;" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;from(Landroid/content/Context;)Landroid/support/v4/app/NotificationManagerCompat;" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;" label="Landroid/content/pm/PackageManager;-&gt;getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;" />
+      <node id="Landroid/support/v4/provider/FontsContractCompat;-&gt;getProvider(Landroid/content/pm/PackageManager;Landroid/support/v4/provider/FontRequest;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;" label="Landroid/support/v4/provider/FontsContractCompat;-&gt;getProvider(Landroid/content/pm/PackageManager;Landroid/support/v4/provider/FontRequest;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lact/TrackingReceiver;-&gt;b(Landroid/content/Context;)Ljava/lang/String;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Lact/TrackingReceiver;-&gt;b(Landroid/content/Context;)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="1" />
+      <edge source="Lact/TrackingReceiver;-&gt;b(Landroid/content/Context;)Ljava/lang/String;" target="Landroid/content/pm/PackageManager;-&gt;getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;from(Landroid/content/Context;)Landroid/support/v4/app/NotificationManagerCompat;" target="Landroid/support/v4/app/NotificationManagerCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" id="3" />
+      <edge source="Landroid/support/v4/provider/FontsContractCompat;-&gt;getProvider(Landroid/content/pm/PackageManager;Landroid/support/v4/provider/FontRequest;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Landroid/support/v4/provider/FontsContractCompat;-&gt;getProvider(Landroid/content/pm/PackageManager;Landroid/support/v4/provider/FontRequest;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;" target="Landroid/content/pm/PackageManager;-&gt;getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;" id="5" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="6" />
+    </edges>
+  </graph>
+</gexf>

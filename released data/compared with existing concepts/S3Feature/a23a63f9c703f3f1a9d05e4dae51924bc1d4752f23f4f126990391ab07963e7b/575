@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/Fragment$AnimationInfo;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/app/Fragment$AnimationInfo;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" />
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;isOnMainThread()Z" label="Lcom/bumptech/glide/util/Util;-&gt;isOnMainThread()Z" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;ensureAnimationInfo()Landroid/support/v4/app/Fragment$AnimationInfo;" label="Landroid/support/v4/app/Fragment;-&gt;ensureAnimationInfo()Landroid/support/v4/app/Fragment$AnimationInfo;" />
+      <node id="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" label="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" />
+      <node id="Landroid/support/v4/app/Fragment;-&gt;startPostponedEnterTransition()V" label="Landroid/support/v4/app/Fragment;-&gt;startPostponedEnterTransition()V" />
+      <node id="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" label="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/util/Util;-&gt;isOnMainThread()Z" id="0" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" id="1" />
+      <edge source="Lcom/bumptech/glide/util/Util;-&gt;isOnMainThread()Z" target="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" id="2" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;ensureAnimationInfo()Landroid/support/v4/app/Fragment$AnimationInfo;" target="Landroid/support/v4/app/Fragment$AnimationInfo;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;startPostponedEnterTransition()V" target="Landroid/support/v4/app/Fragment;-&gt;ensureAnimationInfo()Landroid/support/v4/app/Fragment$AnimationInfo;" id="4" />
+      <edge source="Landroid/support/v4/app/Fragment;-&gt;startPostponedEnterTransition()V" target="Landroid/os/Looper;-&gt;myLooper()Landroid/os/Looper;" id="5" />
+      <edge source="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/support/v4/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;" target="Lcom/bumptech/glide/manager/RequestManagerRetriever;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;" id="6" />
+    </edges>
+  </graph>
+</gexf>

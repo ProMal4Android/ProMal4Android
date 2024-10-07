@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/load/resource/gifbitmap/ImageVideoGifDrawableLoadProvider;-&gt;&lt;init&gt;(Lcom/bumptech/glide/provider/DataLoadProvider;Lcom/bumptech/glide/provider/DataLoadProvider;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V" label="Lcom/bumptech/glide/load/resource/gifbitmap/ImageVideoGifDrawableLoadProvider;-&gt;&lt;init&gt;(Lcom/bumptech/glide/provider/DataLoadProvider;Lcom/bumptech/glide/provider/DataLoadProvider;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V" />
+      <node id="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" label="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" />
+      <node id="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceDecoder()Lcom/bumptech/glide/load/ResourceDecoder;" label="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceDecoder()Lcom/bumptech/glide/load/ResourceDecoder;" />
+      <node id="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" label="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" />
+      <node id="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" label="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" />
+      <node id="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceEncoder()Lcom/bumptech/glide/load/Encoder;" label="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceEncoder()Lcom/bumptech/glide/load/Encoder;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" id="0" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceEncoder()Lcom/bumptech/glide/load/Encoder;" id="1" />
+      <edge source="Lcom/bumptech/glide/load/resource/gifbitmap/ImageVideoGifDrawableLoadProvider;-&gt;&lt;init&gt;(Lcom/bumptech/glide/provider/DataLoadProvider;Lcom/bumptech/glide/provider/DataLoadProvider;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V" target="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceDecoder()Lcom/bumptech/glide/load/ResourceDecoder;" id="2" />
+      <edge source="Lcom/bumptech/glide/load/resource/gifbitmap/ImageVideoGifDrawableLoadProvider;-&gt;&lt;init&gt;(Lcom/bumptech/glide/provider/DataLoadProvider;Lcom/bumptech/glide/provider/DataLoadProvider;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V" target="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceEncoder()Lcom/bumptech/glide/load/Encoder;" id="3" />
+      <edge source="Lcom/bumptech/glide/load/resource/gif/GifResourceEncoder;-&gt;encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/OutputStream;)Z" target="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" id="4" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;cacheAndDecodeSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" id="5" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/util/LogTime;-&gt;getLogTime()J" id="6" />
+      <edge source="Lcom/bumptech/glide/load/engine/DecodeJob;-&gt;decodeFromSourceData(Ljava/lang/Object;)Lcom/bumptech/glide/load/engine/Resource;" target="Lcom/bumptech/glide/provider/DataLoadProvider;-&gt;getSourceDecoder()Lcom/bumptech/glide/load/ResourceDecoder;" id="7" />
+    </edges>
+  </graph>
+</gexf>

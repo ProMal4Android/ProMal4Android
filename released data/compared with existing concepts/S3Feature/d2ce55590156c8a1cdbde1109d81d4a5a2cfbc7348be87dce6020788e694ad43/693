@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/String;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/String;" label="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/String;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/String;" />
+      <node id="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" label="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/text/TextDirectionHeuristicCompat;-&gt;isRtl(Ljava/lang/CharSequence;II)Z" label="Landroid/support/v4/text/TextDirectionHeuristicCompat;-&gt;isRtl(Ljava/lang/CharSequence;II)Z" />
+      <node id="Landroid/support/v4/text/BidiFormatter;-&gt;markAfter(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" label="Landroid/support/v4/text/BidiFormatter;-&gt;markAfter(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" />
+      <node id="Ljava/lang/CharSequence;-&gt;length()I" label="Ljava/lang/CharSequence;-&gt;length()I" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;" label="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/String;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/String;" target="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" id="0" />
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/String;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/String;" target="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;" id="1" />
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;markAfter(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" target="Landroid/support/v4/text/TextDirectionHeuristicCompat;-&gt;isRtl(Ljava/lang/CharSequence;II)Z" id="2" />
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;markAfter(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" target="Ljava/lang/CharSequence;-&gt;length()I" id="3" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" target="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" id="4" />
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;" target="Landroid/support/v4/text/TextDirectionHeuristicCompat;-&gt;isRtl(Ljava/lang/CharSequence;II)Z" id="5" />
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;" target="Landroid/support/v4/text/BidiFormatter;-&gt;markAfter(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;)Ljava/lang/String;" id="6" />
+      <edge source="Landroid/support/v4/text/BidiFormatter;-&gt;unicodeWrap(Ljava/lang/CharSequence;Landroid/support/v4/text/TextDirectionHeuristicCompat;Z)Ljava/lang/CharSequence;" target="Ljava/lang/CharSequence;-&gt;length()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

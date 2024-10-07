@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/FacebookBroadcastReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" label="Lcom/facebook/FacebookBroadcastReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" />
+      <node id="Lcom/facebook/internal/NativeProtocol;-&gt;isErrorResult(Landroid/content/Intent;)Z" label="Lcom/facebook/internal/NativeProtocol;-&gt;isErrorResult(Landroid/content/Intent;)Z" />
+      <node id="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" label="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" />
+      <node id="Lcom/facebook/internal/NativeProtocol;-&gt;getBridgeArgumentsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" label="Lcom/facebook/internal/NativeProtocol;-&gt;getBridgeArgumentsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" />
+      <node id="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" label="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" />
+      <node id="Lcom/facebook/internal/NativeProtocol;-&gt;getErrorDataFromResultIntent(Landroid/content/Intent;)Landroid/os/Bundle;" label="Lcom/facebook/internal/NativeProtocol;-&gt;getErrorDataFromResultIntent(Landroid/content/Intent;)Landroid/os/Bundle;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/FacebookBroadcastReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Lcom/facebook/internal/NativeProtocol;-&gt;isErrorResult(Landroid/content/Intent;)Z" id="0" />
+      <edge source="Lcom/facebook/FacebookBroadcastReceiver;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" id="1" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" id="2" />
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;isErrorResult(Landroid/content/Intent;)Z" target="Lcom/facebook/internal/NativeProtocol;-&gt;getBridgeArgumentsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" id="3" />
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;isErrorResult(Landroid/content/Intent;)Z" target="Landroid/content/Intent;-&gt;hasExtra(Ljava/lang/String;)Z" id="4" />
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;getErrorDataFromResultIntent(Landroid/content/Intent;)Landroid/os/Bundle;" target="Lcom/facebook/internal/NativeProtocol;-&gt;isErrorResult(Landroid/content/Intent;)Z" id="5" />
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;getErrorDataFromResultIntent(Landroid/content/Intent;)Landroid/os/Bundle;" target="Landroid/content/Intent;-&gt;getExtras()Landroid/os/Bundle;" id="6" />
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;getErrorDataFromResultIntent(Landroid/content/Intent;)Landroid/os/Bundle;" target="Lcom/facebook/internal/NativeProtocol;-&gt;getBridgeArgumentsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-19">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/Object;)Ljava/lang/StringBuilder;" label="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/Object;)Ljava/lang/StringBuilder;" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;popFromBackStack(Z)V" label="Landroid/support/v4/app/BackStackRecord;-&gt;popFromBackStack(Z)V" />
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchOptionsMenuClosed(Landroid/view/Menu;)V" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchOptionsMenuClosed(Landroid/view/Menu;)V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onPanelClosed(ILandroid/view/Menu;)V" label="Landroid/support/v4/app/FragmentActivity;-&gt;onPanelClosed(ILandroid/view/Menu;)V" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" label="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;popFromBackStack(Z)V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/Object;)Ljava/lang/StringBuilder;" id="0" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;popFromBackStack(Z)V" target="Ljava/util/ArrayList;-&gt;size()I" id="1" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;popFromBackStack(Z)V" target="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" id="2" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;popFromBackStack(Z)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchOptionsMenuClosed(Landroid/view/Menu;)V" target="Ljava/util/ArrayList;-&gt;size()I" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onPanelClosed(ILandroid/view/Menu;)V" target="Landroid/support/v4/app/FragmentManagerImpl;-&gt;dispatchOptionsMenuClosed(Landroid/view/Menu;)V" id="5" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" target="Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/Object;)Ljava/lang/StringBuilder;" id="6" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" target="Ljava/util/ArrayList;-&gt;size()I" id="7" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;bumpBackStackNesting(I)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

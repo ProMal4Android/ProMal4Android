@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerOpen(I)Z" label="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerOpen(I)Z" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;III)V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;III)V" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;ZIII)V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;ZIII)V" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;syncState()V" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;syncState()V" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" label="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" />
+      <node id="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;getThemeUpIndicator()Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;getThemeUpIndicator()Landroid/graphics/drawable/Drawable;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerOpen(I)Z" target="Landroid/support/v4/widget/DrawerLayout;-&gt;findDrawerWithGravity(I)Landroid/view/View;" id="0" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" target="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;syncState()V" id="1" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;onConfigurationChanged(Landroid/content/res/Configuration;)V" target="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;getThemeUpIndicator()Landroid/graphics/drawable/Drawable;" id="2" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;III)V" target="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;ZIII)V" id="3" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;ZIII)V" target="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;getThemeUpIndicator()Landroid/graphics/drawable/Drawable;" id="4" />
+      <edge source="Landroid/support/v4/app/ActionBarDrawerToggle;-&gt;syncState()V" target="Landroid/support/v4/widget/DrawerLayout;-&gt;isDrawerOpen(I)Z" id="5" />
+    </edges>
+  </graph>
+</gexf>

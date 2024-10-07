@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/an;-&gt;b(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/widget/an;-&gt;b(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" label="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" />
+      <node id="Lcom/bumptech/glide/d/c/a;-&gt;isAssetUri(Landroid/net/Uri;)Z" label="Lcom/bumptech/glide/d/c/a;-&gt;isAssetUri(Landroid/net/Uri;)Z" />
+      <node id="Lcom/bumptech/glide/d/c/q;-&gt;getResourceFetcher(Landroid/net/Uri;II)Lcom/bumptech/glide/d/a/c;" label="Lcom/bumptech/glide/d/c/q;-&gt;getResourceFetcher(Landroid/net/Uri;II)Lcom/bumptech/glide/d/a/c;" />
+      <node id="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" label="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" label="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" />
+      <node id="Landroid/net/Uri;-&gt;getScheme()Ljava/lang/String;" label="Landroid/net/Uri;-&gt;getScheme()Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/an;-&gt;b(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" id="0" />
+      <edge source="Landroid/support/v7/widget/an;-&gt;b(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="1" />
+      <edge source="Landroid/support/v7/widget/an;-&gt;b(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/net/Uri;-&gt;getScheme()Ljava/lang/String;" id="2" />
+      <edge source="Lcom/bumptech/glide/d/c/a;-&gt;isAssetUri(Landroid/net/Uri;)Z" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="3" />
+      <edge source="Lcom/bumptech/glide/d/c/a;-&gt;isAssetUri(Landroid/net/Uri;)Z" target="Landroid/net/Uri;-&gt;getScheme()Ljava/lang/String;" id="4" />
+      <edge source="Lcom/bumptech/glide/d/c/q;-&gt;getResourceFetcher(Landroid/net/Uri;II)Lcom/bumptech/glide/d/a/c;" target="Lcom/bumptech/glide/d/c/a;-&gt;isAssetUri(Landroid/net/Uri;)Z" id="5" />
+      <edge source="Lcom/bumptech/glide/d/c/q;-&gt;getResourceFetcher(Landroid/net/Uri;II)Lcom/bumptech/glide/d/a/c;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="6" />
+      <edge source="Lcom/bumptech/glide/d/c/q;-&gt;getResourceFetcher(Landroid/net/Uri;II)Lcom/bumptech/glide/d/a/c;" target="Landroid/net/Uri;-&gt;getScheme()Ljava/lang/String;" id="7" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" target="Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;" id="8" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat;-&gt;getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="9" />
+    </edges>
+  </graph>
+</gexf>

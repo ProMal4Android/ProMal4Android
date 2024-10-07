@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/chips/recipientchip/ReplacementDrawableSpan;-&gt;draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V" label="Lcom/android/ex/chips/recipientchip/ReplacementDrawableSpan;-&gt;draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V" />
+      <node id="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;&lt;init&gt;(Landroid/support/rastermill/FrameSequence;Landroid/support/rastermill/FrameSequenceDrawable$BitmapProvider;)V" label="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;&lt;init&gt;(Landroid/support/rastermill/FrameSequence;Landroid/support/rastermill/FrameSequenceDrawable$BitmapProvider;)V" />
+      <node id="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;checkDestroyedLocked()V" label="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;checkDestroyedLocked()V" />
+      <node id="Landroid/graphics/Canvas;-&gt;save()I" label="Landroid/graphics/Canvas;-&gt;save()I" />
+      <node id="Landroid/support/rastermill/FrameSequence;-&gt;createState()Landroid/support/rastermill/FrameSequence$State;" label="Landroid/support/rastermill/FrameSequence;-&gt;createState()Landroid/support/rastermill/FrameSequence$State;" />
+      <node id="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" label="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/chips/recipientchip/ReplacementDrawableSpan;-&gt;draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V" target="Landroid/graphics/Canvas;-&gt;save()I" id="0" />
+      <edge source="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;&lt;init&gt;(Landroid/support/rastermill/FrameSequence;Landroid/support/rastermill/FrameSequenceDrawable$BitmapProvider;)V" target="Landroid/support/rastermill/FrameSequence;-&gt;createState()Landroid/support/rastermill/FrameSequence$State;" id="1" />
+      <edge source="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;checkDestroyedLocked()V" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="2" />
+      <edge source="Landroid/support/rastermill/FrameSequence;-&gt;createState()Landroid/support/rastermill/FrameSequence$State;" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="3" />
+      <edge source="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" target="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;checkDestroyedLocked()V" id="4" />
+      <edge source="Landroid/support/rastermill/FrameSequenceDrawable;-&gt;draw(Landroid/graphics/Canvas;)V" target="Landroid/graphics/Canvas;-&gt;save()I" id="5" />
+    </edges>
+  </graph>
+</gexf>

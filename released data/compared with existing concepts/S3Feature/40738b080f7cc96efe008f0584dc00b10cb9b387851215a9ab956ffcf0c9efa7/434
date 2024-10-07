@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" />
+      <node id="Lcom/google/android/gms/ads/AdRequest$Builder;-&gt;&lt;init&gt;()V" label="Lcom/google/android/gms/ads/AdRequest$Builder;-&gt;&lt;init&gt;()V" />
+      <node id="Lwhats/me/update2017/AdmobInterstital;-&gt;showInterstital(Landroid/content/Context;)V" label="Lwhats/me/update2017/AdmobInterstital;-&gt;showInterstital(Landroid/content/Context;)V" />
+      <node id="Landroid/text/Html;-&gt;fromHtml(Ljava/lang/String;)Landroid/text/Spanned;" label="Landroid/text/Html;-&gt;fromHtml(Ljava/lang/String;)Landroid/text/Spanned;" />
+      <node id="Lwhats/me/update2017/ManageArticlesNews;-&gt;onCreate(Landroid/os/Bundle;)V" label="Lwhats/me/update2017/ManageArticlesNews;-&gt;onCreate(Landroid/os/Bundle;)V" />
+      <node id="Lcom/google/android/gms/internal/as$a;-&gt;&lt;init&gt;()V" label="Lcom/google/android/gms/internal/as$a;-&gt;&lt;init&gt;()V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setHtmlText(Ljava/lang/String;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Landroid/text/Html;-&gt;fromHtml(Ljava/lang/String;)Landroid/text/Spanned;" id="0" />
+      <edge source="Lcom/google/android/gms/ads/AdRequest$Builder;-&gt;&lt;init&gt;()V" target="Lcom/google/android/gms/internal/as$a;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Lcom/google/android/gms/ads/AdRequest$Builder;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Lwhats/me/update2017/AdmobInterstital;-&gt;showInterstital(Landroid/content/Context;)V" target="Lcom/google/android/gms/ads/AdRequest$Builder;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Lwhats/me/update2017/ManageArticlesNews;-&gt;onCreate(Landroid/os/Bundle;)V" target="Lcom/google/android/gms/ads/AdRequest$Builder;-&gt;&lt;init&gt;()V" id="4" />
+      <edge source="Lwhats/me/update2017/ManageArticlesNews;-&gt;onCreate(Landroid/os/Bundle;)V" target="Lwhats/me/update2017/AdmobInterstital;-&gt;showInterstital(Landroid/content/Context;)V" id="5" />
+      <edge source="Lwhats/me/update2017/ManageArticlesNews;-&gt;onCreate(Landroid/os/Bundle;)V" target="Landroid/text/Html;-&gt;fromHtml(Ljava/lang/String;)Landroid/text/Spanned;" id="6" />
+      <edge source="Lcom/google/android/gms/internal/as$a;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="7" />
+    </edges>
+  </graph>
+</gexf>

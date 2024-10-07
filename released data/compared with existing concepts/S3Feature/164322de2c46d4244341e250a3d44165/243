@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" label="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;getAutoTimeNightModeManager()Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;getAutoTimeNightModeManager()Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;" />
+      <node id="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" label="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" label="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyDayNight(Z)Z" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyDayNight(Z)Z" />
+      <node id="Lcom/bumptech/glide/Glide;-&gt;getAnnotationGeneratedGlideModules(Landroid/content/Context;)Lcom/bumptech/glide/GeneratedAppGlideModule;" label="Lcom/bumptech/glide/Glide;-&gt;getAnnotationGeneratedGlideModules(Landroid/content/Context;)Lcom/bumptech/glide/GeneratedAppGlideModule;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="0" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" target="Lcom/bumptech/glide/Glide;-&gt;getAnnotationGeneratedGlideModules(Landroid/content/Context;)Lcom/bumptech/glide/GeneratedAppGlideModule;" id="1" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="2" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;getAutoTimeNightModeManager()Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;" target="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" id="3" />
+      <edge source="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="4" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyDayNight(Z)Z" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" id="5" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyDayNight(Z)Z" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;getAutoTimeNightModeManager()Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;" id="6" />
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;getAnnotationGeneratedGlideModules(Landroid/content/Context;)Lcom/bumptech/glide/GeneratedAppGlideModule;" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="7" />
+    </edges>
+  </graph>
+</gexf>

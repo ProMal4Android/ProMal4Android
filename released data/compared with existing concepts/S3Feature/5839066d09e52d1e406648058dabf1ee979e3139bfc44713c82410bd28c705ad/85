@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Ljava/util/ArrayList;-&gt;size()I" label="Ljava/util/ArrayList;-&gt;size()I" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" />
+      <node id="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" label="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" />
+      <node id="Ljava/util/ArrayList;-&gt;clear()V" label="Ljava/util/ArrayList;-&gt;clear()V" />
+      <node id="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" label="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;clear()V" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" target="Ljava/util/ArrayList;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Ljava/util/ArrayList;-&gt;size()I" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Ljava/lang/IllegalStateException;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Ljava/util/ArrayList;-&gt;clear()V" id="5" />
+      <edge source="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" target="Ljava/util/ArrayList;-&gt;size()I" id="6" />
+      <edge source="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" id="7" />
+      <edge source="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;-&gt;prepareMenuItems()V" target="Ljava/util/ArrayList;-&gt;clear()V" id="8" />
+    </edges>
+  </graph>
+</gexf>

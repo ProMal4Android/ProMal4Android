@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/facebook/FacebookSdk;-&gt;getApplicationContext()Landroid/content/Context;" label="Lcom/facebook/FacebookSdk;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Lcom/facebook/internal/Validate;-&gt;sdkInitialized()V" label="Lcom/facebook/internal/Validate;-&gt;sdkInitialized()V" />
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" label="Landroid/support/v4/content/FileProvider;-&gt;parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" />
+      <node id="Landroid/support/v4/content/ContextCompat;-&gt;getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;" label="Landroid/support/v4/content/ContextCompat;-&gt;getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;" />
+      <node id="Lcom/facebook/internal/NativeProtocol;-&gt;fetchAllAvailableProtocolVersionsForAppInfo(Lcom/facebook/internal/NativeProtocol$NativeAppInfo;)Ljava/util/TreeSet;" label="Lcom/facebook/internal/NativeProtocol;-&gt;fetchAllAvailableProtocolVersionsForAppInfo(Lcom/facebook/internal/NativeProtocol$NativeAppInfo;)Ljava/util/TreeSet;" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;" label="Landroid/content/pm/PackageManager;-&gt;resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;" />
+      <node id="Lcom/facebook/AccessTokenTracker;-&gt;&lt;init&gt;()V" label="Lcom/facebook/AccessTokenTracker;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/FacebookSdk;-&gt;getApplicationContext()Landroid/content/Context;" target="Lcom/facebook/internal/Validate;-&gt;sdkInitialized()V" id="0" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" target="Landroid/support/v4/content/ContextCompat;-&gt;getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;" id="1" />
+      <edge source="Landroid/support/v4/content/FileProvider;-&gt;parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;" target="Landroid/content/pm/PackageManager;-&gt;resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;" id="2" />
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;fetchAllAvailableProtocolVersionsForAppInfo(Lcom/facebook/internal/NativeProtocol$NativeAppInfo;)Ljava/util/TreeSet;" target="Lcom/facebook/FacebookSdk;-&gt;getApplicationContext()Landroid/content/Context;" id="3" />
+      <edge source="Lcom/facebook/internal/NativeProtocol;-&gt;fetchAllAvailableProtocolVersionsForAppInfo(Lcom/facebook/internal/NativeProtocol$NativeAppInfo;)Ljava/util/TreeSet;" target="Landroid/content/pm/PackageManager;-&gt;resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;" id="4" />
+      <edge source="Lcom/facebook/AccessTokenTracker;-&gt;&lt;init&gt;()V" target="Lcom/facebook/FacebookSdk;-&gt;getApplicationContext()Landroid/content/Context;" id="5" />
+      <edge source="Lcom/facebook/AccessTokenTracker;-&gt;&lt;init&gt;()V" target="Lcom/facebook/internal/Validate;-&gt;sdkInitialized()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

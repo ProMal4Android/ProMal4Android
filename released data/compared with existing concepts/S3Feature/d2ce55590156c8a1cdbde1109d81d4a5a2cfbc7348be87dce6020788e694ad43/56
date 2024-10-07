@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" label="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" />
+      <node id="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" label="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" />
+      <node id="Lcom/tonyodev/fetch/Fetch;-&gt;getInstance(Landroid/content/Context;)Lcom/tonyodev/fetch/Fetch;" label="Lcom/tonyodev/fetch/Fetch;-&gt;getInstance(Landroid/content/Context;)Lcom/tonyodev/fetch/Fetch;" />
+      <node id="Lcom/ghostteam/h;-&gt;d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Boolean;" label="Lcom/ghostteam/h;-&gt;d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Boolean;" />
+      <node id="Lcom/tonyodev/fetch/Fetch;-&gt;getDownloadedFile(J)Ljava/io/File;" label="Lcom/tonyodev/fetch/Fetch;-&gt;getDownloadedFile(J)Ljava/io/File;" />
+      <node id="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;)Z" label="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;)Z" />
+      <node id="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" label="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" target="Lcom/tonyodev/fetch/Fetch;-&gt;getInstance(Landroid/content/Context;)Lcom/tonyodev/fetch/Fetch;" id="0" />
+      <edge source="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" target="Lcom/ghostteam/h;-&gt;d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Boolean;" id="1" />
+      <edge source="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)V" target="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;)Z" id="2" />
+      <edge source="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;)Z" target="Lcom/tonyodev/fetch/Fetch;-&gt;getInstance(Landroid/content/Context;)Lcom/tonyodev/fetch/Fetch;" id="3" />
+      <edge source="Lcom/ghostteam/g;-&gt;a(Landroid/content/Context;)Z" target="Lcom/tonyodev/fetch/Fetch;-&gt;getDownloadedFile(J)Ljava/io/File;" id="4" />
+      <edge source="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" target="Landroid/support/v4/content/FileProvider;-&gt;getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;" id="5" />
+      <edge source="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" target="Lcom/tonyodev/fetch/Fetch;-&gt;getInstance(Landroid/content/Context;)Lcom/tonyodev/fetch/Fetch;" id="6" />
+      <edge source="Lcom/ghostteam/FE;-&gt;a(Landroid/content/Context;)V" target="Lcom/tonyodev/fetch/Fetch;-&gt;getDownloadedFile(J)Ljava/io/File;" id="7" />
+    </edges>
+  </graph>
+</gexf>

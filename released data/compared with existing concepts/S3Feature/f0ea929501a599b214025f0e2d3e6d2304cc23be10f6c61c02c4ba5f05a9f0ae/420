@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" label="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" />
+      <node id="Landroid/support/customtabs/CustomTabsClient$2;-&gt;&lt;init&gt;(Landroid/support/customtabs/CustomTabsClient;Landroid/support/customtabs/CustomTabsCallback;)V" label="Landroid/support/customtabs/CustomTabsClient$2;-&gt;&lt;init&gt;(Landroid/support/customtabs/CustomTabsClient;Landroid/support/customtabs/CustomTabsCallback;)V" />
+      <node id="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" label="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" />
+      <node id="Landroid/support/customtabs/CustomTabsClient;-&gt;newSession(Landroid/support/customtabs/CustomTabsCallback;)Landroid/support/customtabs/CustomTabsSession;" label="Landroid/support/customtabs/CustomTabsClient;-&gt;newSession(Landroid/support/customtabs/CustomTabsCallback;)Landroid/support/customtabs/CustomTabsSession;" />
+      <node id="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" label="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" />
+      <node id="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" label="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" />
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;isOnMainThread()Z" label="Lcom/bumptech/glide/util/Util;-&gt;isOnMainThread()Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" target="Lcom/bumptech/glide/util/Util;-&gt;isOnMainThread()Z" id="0" />
+      <edge source="Landroid/support/customtabs/CustomTabsClient$2;-&gt;&lt;init&gt;(Landroid/support/customtabs/CustomTabsClient;Landroid/support/customtabs/CustomTabsCallback;)V" target="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" id="1" />
+      <edge source="Landroid/support/customtabs/CustomTabsClient;-&gt;newSession(Landroid/support/customtabs/CustomTabsCallback;)Landroid/support/customtabs/CustomTabsSession;" target="Landroid/support/customtabs/CustomTabsClient$2;-&gt;&lt;init&gt;(Landroid/support/customtabs/CustomTabsClient;Landroid/support/customtabs/CustomTabsCallback;)V" id="2" />
+      <edge source="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" target="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" id="3" />
+      <edge source="Lcom/bumptech/glide/load/engine/Engine;-&gt;onResourceRemoved(Lcom/bumptech/glide/load/engine/Resource;)V" target="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" id="4" />
+      <edge source="Lcom/bumptech/glide/load/engine/ResourceRecycler;-&gt;recycle(Lcom/bumptech/glide/load/engine/Resource;)V" target="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" id="5" />
+      <edge source="Lcom/bumptech/glide/util/Util;-&gt;isOnMainThread()Z" target="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" id="6" />
+    </edges>
+  </graph>
+</gexf>

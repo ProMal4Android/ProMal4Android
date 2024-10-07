@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" label="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" />
+      <node id="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;" label="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" label="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" />
+      <node id="Lcom/facebook/ads/internal/util/s;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" label="Lcom/facebook/ads/internal/util/s;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" label="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" />
+      <node id="Lcom/facebook/ads/internal/f/f$1;-&gt;run()V" label="Lcom/facebook/ads/internal/f/f$1;-&gt;run()V" />
+      <node id="Landroid/os/Bundle;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" label="Landroid/os/Bundle;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" id="0" />
+      <edge source="Landroid/support/v4/app/NavUtils$NavUtilsImplBase;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;" target="Landroid/os/Bundle;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" id="1" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" id="2" />
+      <edge source="Lcom/facebook/ads/internal/util/s;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" id="3" />
+      <edge source="Lcom/facebook/ads/internal/f/f$1;-&gt;run()V" target="Lcom/facebook/ads/internal/util/s;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" id="4" />
+      <edge source="Lcom/facebook/ads/internal/f/f$1;-&gt;run()V" target="Landroid/content/Context;-&gt;getPackageName()Ljava/lang/String;" id="5" />
+    </edges>
+  </graph>
+</gexf>

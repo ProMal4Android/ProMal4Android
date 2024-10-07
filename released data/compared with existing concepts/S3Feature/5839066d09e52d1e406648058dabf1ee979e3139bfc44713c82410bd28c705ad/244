@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/internal/NavigationMenu;-&gt;addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;" label="Landroid/support/design/internal/NavigationMenu;-&gt;addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;" />
+      <node id="Landroid/support/v7/internal/view/menu/SubMenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/support/v7/internal/view/menu/MenuItemImpl;)V" label="Landroid/support/v7/internal/view/menu/SubMenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/support/v7/internal/view/menu/MenuItemImpl;)V" />
+      <node id="Landroid/support/v7/internal/view/menu/SubMenuBuilder;-&gt;setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;" label="Landroid/support/v7/internal/view/menu/SubMenuBuilder;-&gt;setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" />
+      <node id="Landroid/support/design/internal/NavigationSubMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/design/internal/NavigationMenu;Landroid/support/v7/internal/view/menu/MenuItemImpl;)V" label="Landroid/support/design/internal/NavigationSubMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/design/internal/NavigationMenu;Landroid/support/v7/internal/view/menu/MenuItemImpl;)V" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;setSubMenu(Landroid/support/v7/internal/view/menu/SubMenuBuilder;)V" label="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;setSubMenu(Landroid/support/v7/internal/view/menu/SubMenuBuilder;)V" />
+      <node id="Landroid/support/design/internal/NavigationMenu;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" label="Landroid/support/design/internal/NavigationMenu;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" target="Landroid/support/v7/internal/view/menu/SubMenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/support/v7/internal/view/menu/MenuItemImpl;)V" id="0" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" target="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;setSubMenu(Landroid/support/v7/internal/view/menu/SubMenuBuilder;)V" id="1" />
+      <edge source="Landroid/support/design/internal/NavigationSubMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/design/internal/NavigationMenu;Landroid/support/v7/internal/view/menu/MenuItemImpl;)V" target="Landroid/support/v7/internal/view/menu/SubMenuBuilder;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/support/v7/internal/view/menu/MenuItemImpl;)V" id="2" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;setSubMenu(Landroid/support/v7/internal/view/menu/SubMenuBuilder;)V" target="Landroid/support/v7/internal/view/menu/SubMenuBuilder;-&gt;setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;" id="3" />
+      <edge source="Landroid/support/design/internal/NavigationMenu;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" target="Landroid/support/design/internal/NavigationMenu;-&gt;addInternal(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;" id="4" />
+      <edge source="Landroid/support/design/internal/NavigationMenu;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" target="Landroid/support/design/internal/NavigationSubMenu;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/support/design/internal/NavigationMenu;Landroid/support/v7/internal/view/menu/MenuItemImpl;)V" id="5" />
+      <edge source="Landroid/support/design/internal/NavigationMenu;-&gt;addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;" target="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;setSubMenu(Landroid/support/v7/internal/view/menu/SubMenuBuilder;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

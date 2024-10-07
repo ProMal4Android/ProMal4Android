@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;getView()Landroid/view/View;" label="Landroid/support/v4/app/ListFragment;-&gt;getView()Landroid/view/View;" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setEmptyText(Ljava/lang/CharSequence;)V" label="Landroid/support/v4/app/ListFragment;-&gt;setEmptyText(Ljava/lang/CharSequence;)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" label="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" label="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" label="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" />
+      <node id="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" label="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" />
+      <node id="Landroid/support/v4/app/ListFragment;-&gt;getContext()Landroid/content/Context;" label="Landroid/support/v4/app/ListFragment;-&gt;getContext()Landroid/content/Context;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setEmptyText(Ljava/lang/CharSequence;)V" target="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" id="0" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setEmptyText(Ljava/lang/CharSequence;)V" target="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" id="1" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" target="Landroid/support/v4/app/ListFragment;-&gt;getView()Landroid/view/View;" id="2" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" target="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" id="3" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Landroid/support/v4/app/ListFragment;-&gt;getView()Landroid/view/View;" id="4" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Landroid/support/v4/app/ListFragment;-&gt;setListAdapter(Landroid/widget/ListAdapter;)V" id="5" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" id="6" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" target="Landroid/widget/TextView;-&gt;setText(Ljava/lang/CharSequence;)V" id="7" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" target="Landroid/support/v4/app/ListFragment;-&gt;ensureList()V" id="8" />
+      <edge source="Landroid/support/v4/app/ListFragment;-&gt;setListShown(ZZ)V" target="Landroid/support/v4/app/ListFragment;-&gt;getContext()Landroid/content/Context;" id="9" />
+    </edges>
+  </graph>
+</gexf>

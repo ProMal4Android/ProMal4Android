@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/app/Notification$Builder;-&gt;setExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;" label="Landroid/app/Notification$Builder;-&gt;setExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" label="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" />
+      <node id="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" />
+      <node id="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" />
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Landroid/support/v4/app/NotificationCompatApi20$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/support/v4/app/NotificationCompatApi20$Builder;-&gt;build()Landroid/app/Notification;" />
+      <node id="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" label="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" target="Ljava/util/List;-&gt;size()I" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationCompatJellybean$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/app/Notification$Builder;-&gt;setExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;" id="3" />
+      <edge source="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/support/v4/app/NotificationCompatJellybean;-&gt;buildActionExtrasMap(Ljava/util/List;)Landroid/util/SparseArray;" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationCompatKitKat$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" id="5" />
+      <edge source="Landroid/support/v4/app/NotificationCompatApi20$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/app/Notification$Builder;-&gt;setExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;" id="6" />
+      <edge source="Landroid/support/v4/app/NotificationCompatApi20$Builder;-&gt;build()Landroid/app/Notification;" target="Landroid/app/Notification$Builder;-&gt;build()Landroid/app/Notification;" id="7" />
+    </edges>
+  </graph>
+</gexf>

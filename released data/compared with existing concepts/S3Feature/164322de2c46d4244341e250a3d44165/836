@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" label="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;onDestroy()V" label="Landroidx/fragment/app/Fragment;-&gt;onDestroy()V" />
+      <node id="Landroidx/fragment/app/FragmentManagerImpl;-&gt;noteStateNotSaved()V" label="Landroidx/fragment/app/FragmentManagerImpl;-&gt;noteStateNotSaved()V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;performDestroy()V" label="Landroidx/fragment/app/Fragment;-&gt;performDestroy()V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;performCreate(Landroid/os/Bundle;)V" label="Landroidx/fragment/app/Fragment;-&gt;performCreate(Landroid/os/Bundle;)V" />
+      <node id="Landroidx/lifecycle/LifecycleRegistry;-&gt;handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V" label="Landroidx/lifecycle/LifecycleRegistry;-&gt;handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;noteStateNotSaved()V" label="Landroidx/fragment/app/Fragment;-&gt;noteStateNotSaved()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onDestroy()V" target="Landroidx/fragment/app/Fragment;-&gt;onDestroy()V" id="0" />
+      <edge source="Landroidx/fragment/app/FragmentManagerImpl;-&gt;noteStateNotSaved()V" target="Landroidx/fragment/app/Fragment;-&gt;noteStateNotSaved()V" id="1" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;performDestroy()V" target="Landroidx/fragment/app/Fragment;-&gt;onDestroy()V" id="2" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;performDestroy()V" target="Landroidx/lifecycle/LifecycleRegistry;-&gt;handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V" id="3" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;performCreate(Landroid/os/Bundle;)V" target="Landroidx/fragment/app/FragmentManagerImpl;-&gt;noteStateNotSaved()V" id="4" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;performCreate(Landroid/os/Bundle;)V" target="Landroidx/lifecycle/LifecycleRegistry;-&gt;handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V" id="5" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;noteStateNotSaved()V" target="Landroidx/fragment/app/FragmentManagerImpl;-&gt;noteStateNotSaved()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/browser/a/c$a;-&gt;&lt;init&gt;(Landroidx/browser/a/e;)V" label="Landroidx/browser/a/c$a;-&gt;&lt;init&gt;(Landroidx/browser/a/e;)V" />
+      <node id="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" label="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;)V" label="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;)V" />
+      <node id="Landroid/content/Intent;-&gt;setPackage(Ljava/lang/String;)Landroid/content/Intent;" label="Landroid/content/Intent;-&gt;setPackage(Ljava/lang/String;)Landroid/content/Intent;" />
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" label="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$i$1;-&gt;run()V" label="Landroid/support/v4/media/MediaBrowserCompat$i$1;-&gt;run()V" />
+      <node id="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/browser/a/c$a;-&gt;&lt;init&gt;(Landroidx/browser/a/e;)V" target="Landroid/content/Intent;-&gt;setPackage(Ljava/lang/String;)Landroid/content/Intent;" id="0" />
+      <edge source="Landroidx/browser/a/c$a;-&gt;&lt;init&gt;(Landroidx/browser/a/e;)V" target="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="1" />
+      <edge source="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" target="Landroid/content/Intent;-&gt;setPackage(Ljava/lang/String;)Landroid/content/Intent;" id="2" />
+      <edge source="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" target="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="3" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;)V" target="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" id="4" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" target="Landroidx/media/a/a;-&gt;a(Landroid/content/Context;)Landroid/content/ComponentName;" id="5" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;)V" target="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="6" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$i$1;-&gt;run()V" target="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

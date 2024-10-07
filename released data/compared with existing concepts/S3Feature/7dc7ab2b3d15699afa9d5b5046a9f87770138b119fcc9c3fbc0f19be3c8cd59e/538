@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="La/a/a/a/a/b/k;-&gt;c(Landroid/content/Context;)Ljava/lang/String;" label="La/a/a/a/a/b/k;-&gt;c(Landroid/content/Context;)Ljava/lang/String;" />
+      <node id="Landroid/net/Uri;-&gt;getAuthority()Ljava/lang/String;" label="Landroid/net/Uri;-&gt;getAuthority()Ljava/lang/String;" />
+      <node id="La/a/a/a/a/b/m;-&gt;a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" label="La/a/a/a/a/b/m;-&gt;a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" label="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" />
+      <node id="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" label="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" />
+      <node id="Landroid/content/res/Resources;-&gt;getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I" label="Landroid/content/res/Resources;-&gt;getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="Landroid/support/v7/widget/de;-&gt;a(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/widget/de;-&gt;a(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" />
+    </nodes>
+    <edges>
+      <edge source="La/a/a/a/a/b/k;-&gt;c(Landroid/content/Context;)Ljava/lang/String;" target="La/a/a/a/a/b/m;-&gt;a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" id="0" />
+      <edge source="La/a/a/a/a/b/k;-&gt;c(Landroid/content/Context;)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="1" />
+      <edge source="La/a/a/a/a/b/m;-&gt;a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="2" />
+      <edge source="La/a/a/a/a/b/m;-&gt;a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I" target="Landroid/content/res/Resources;-&gt;getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I" id="3" />
+      <edge source="Landroid/support/v7/widget/ActionMenuView;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/util/AttributeSet;)V" target="Landroid/content/Context;-&gt;getResources()Landroid/content/res/Resources;" id="4" />
+      <edge source="Landroid/support/v7/widget/de;-&gt;a(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/net/Uri;-&gt;getAuthority()Ljava/lang/String;" id="5" />
+      <edge source="Landroid/support/v7/widget/de;-&gt;a(Landroid/net/Uri;)Landroid/graphics/drawable/Drawable;" target="Landroid/content/res/Resources;-&gt;getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;-&gt;getCallingPackage()Ljava/lang/String;" label="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;-&gt;getCallingPackage()Ljava/lang/String;" />
+      <node id="Lcom/android/ex/photo/util/Util;-&gt;announceForAccessibility(Landroid/view/View;Landroid/view/accessibility/AccessibilityManager;Ljava/lang/CharSequence;)V" label="Lcom/android/ex/photo/util/Util;-&gt;announceForAccessibility(Landroid/view/View;Landroid/view/accessibility/AccessibilityManager;Ljava/lang/CharSequence;)V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" />
+      <node id="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" label="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;isActivityManifestHandlingUiMode()Z" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;isActivityManifestHandlingUiMode()Z" />
+      <node id="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" label="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" label="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;-&gt;getCallingPackage()Ljava/lang/String;" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="0" />
+      <edge source="Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;-&gt;getCallingPackage()Ljava/lang/String;" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="1" />
+      <edge source="Lcom/android/ex/photo/util/Util;-&gt;announceForAccessibility(Landroid/view/View;Landroid/view/accessibility/AccessibilityManager;Ljava/lang/CharSequence;)V" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="2" />
+      <edge source="Lcom/android/ex/photo/util/Util;-&gt;announceForAccessibility(Landroid/view/View;Landroid/view/accessibility/AccessibilityManager;Ljava/lang/CharSequence;)V" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="3" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroid/util/Log;-&gt;e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I" id="4" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;isActivityManifestHandlingUiMode()Z" id="5" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;updateForNightMode(IZ)Z" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="6" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;isActivityManifestHandlingUiMode()Z" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="7" />
+    </edges>
+  </graph>
+</gexf>

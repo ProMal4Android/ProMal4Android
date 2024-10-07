@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/c/a/a;-&gt;d(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/c/a/a;-&gt;d(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;onMeasure(II)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;onMeasure(II)V" />
+      <node id="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" label="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" />
+      <node id="Landroid/graphics/drawable/Drawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" label="Landroid/graphics/drawable/Drawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;a(FF)Z" label="Landroid/support/v7/widget/SwitchCompat;-&gt;a(FF)Z" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbScrollRange()I" label="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbScrollRange()I" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbOffset()I" label="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbOffset()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;onMeasure(II)V" target="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" id="0" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;onMeasure(II)V" target="Landroid/graphics/drawable/Drawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" id="1" />
+      <edge source="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" target="Landroid/support/v4/c/a/a;-&gt;d(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;" id="2" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;a(FF)Z" target="Landroid/graphics/drawable/Drawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" id="3" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;a(FF)Z" target="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbOffset()I" id="4" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbScrollRange()I" target="Landroid/support/v7/widget/cm;-&gt;a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;" id="5" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbScrollRange()I" target="Landroid/graphics/drawable/Drawable;-&gt;getPadding(Landroid/graphics/Rect;)Z" id="6" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbOffset()I" target="Landroid/support/v7/widget/SwitchCompat;-&gt;getThumbScrollRange()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

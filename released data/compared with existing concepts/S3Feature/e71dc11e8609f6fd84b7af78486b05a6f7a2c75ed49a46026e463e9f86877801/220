@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/os/AsyncTask;-&gt;executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;" label="Landroid/os/AsyncTask;-&gt;executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;" />
+      <node id="Lcom/facebook/ads/internal/util/h;-&gt;a(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;" label="Lcom/facebook/ads/internal/util/h;-&gt;a(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;" />
+      <node id="Landroid/support/v4/os/AsyncTaskCompat;-&gt;executeParallel(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;" label="Landroid/support/v4/os/AsyncTaskCompat;-&gt;executeParallel(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;" />
+      <node id="Lcom/facebook/ads/internal/e/e;-&gt;a(Lcom/facebook/ads/internal/e/g;Lcom/facebook/ads/internal/e/a;)Landroid/os/AsyncTask;" label="Lcom/facebook/ads/internal/e/e;-&gt;a(Lcom/facebook/ads/internal/e/g;Lcom/facebook/ads/internal/e/a;)Landroid/os/AsyncTask;" />
+      <node id="Lcom/facebook/ads/internal/e/e;-&gt;a(Lcom/facebook/ads/internal/g/d;Lcom/facebook/ads/internal/e/a;)Landroid/os/AsyncTask;" label="Lcom/facebook/ads/internal/e/e;-&gt;a(Lcom/facebook/ads/internal/g/d;Lcom/facebook/ads/internal/e/a;)Landroid/os/AsyncTask;" />
+      <node id="Landroid/support/v4/os/AsyncTaskCompatHoneycomb;-&gt;executeParallel(Landroid/os/AsyncTask;[Ljava/lang/Object;)V" label="Landroid/support/v4/os/AsyncTaskCompatHoneycomb;-&gt;executeParallel(Landroid/os/AsyncTask;[Ljava/lang/Object;)V" />
+      <node id="Lcom/facebook/ads/internal/g/g;-&gt;a(Lcom/facebook/ads/internal/g/d;)V" label="Lcom/facebook/ads/internal/g/g;-&gt;a(Lcom/facebook/ads/internal/g/d;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/ads/internal/util/h;-&gt;a(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;" target="Landroid/os/AsyncTask;-&gt;executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;" id="0" />
+      <edge source="Landroid/support/v4/os/AsyncTaskCompat;-&gt;executeParallel(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;" target="Landroid/support/v4/os/AsyncTaskCompatHoneycomb;-&gt;executeParallel(Landroid/os/AsyncTask;[Ljava/lang/Object;)V" id="1" />
+      <edge source="Lcom/facebook/ads/internal/e/e;-&gt;a(Lcom/facebook/ads/internal/e/g;Lcom/facebook/ads/internal/e/a;)Landroid/os/AsyncTask;" target="Lcom/facebook/ads/internal/util/h;-&gt;a(Landroid/os/AsyncTask;[Ljava/lang/Object;)Landroid/os/AsyncTask;" id="2" />
+      <edge source="Lcom/facebook/ads/internal/e/e;-&gt;a(Lcom/facebook/ads/internal/g/d;Lcom/facebook/ads/internal/e/a;)Landroid/os/AsyncTask;" target="Lcom/facebook/ads/internal/e/e;-&gt;a(Lcom/facebook/ads/internal/e/g;Lcom/facebook/ads/internal/e/a;)Landroid/os/AsyncTask;" id="3" />
+      <edge source="Landroid/support/v4/os/AsyncTaskCompatHoneycomb;-&gt;executeParallel(Landroid/os/AsyncTask;[Ljava/lang/Object;)V" target="Landroid/os/AsyncTask;-&gt;executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;" id="4" />
+      <edge source="Lcom/facebook/ads/internal/g/g;-&gt;a(Lcom/facebook/ads/internal/g/d;)V" target="Lcom/facebook/ads/internal/e/e;-&gt;a(Lcom/facebook/ads/internal/g/d;Lcom/facebook/ads/internal/e/a;)Landroid/os/AsyncTask;" id="5" />
+    </edges>
+  </graph>
+</gexf>

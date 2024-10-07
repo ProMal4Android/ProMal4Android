@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/util/SparseArrayCompat;-&gt;remove(I)V" label="Landroid/support/v4/util/SparseArrayCompat;-&gt;remove(I)V" />
+      <node id="Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;-&gt;onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V" label="Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;-&gt;onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;setNameOverride(Landroid/support/v4/util/ArrayMap;Ljava/lang/String;Ljava/lang/String;)V" label="Landroid/support/v4/app/BackStackRecord;-&gt;setNameOverride(Landroid/support/v4/util/ArrayMap;Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" label="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" label="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" />
+      <node id="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" label="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/util/ArrayMap;-&gt;size()I" label="Landroid/support/v4/util/ArrayMap;-&gt;size()I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;-&gt;onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V" target="Landroid/support/v4/util/SparseArrayCompat;-&gt;remove(I)V" id="0" />
+      <edge source="Landroid/support/v4/app/LoaderManagerImpl$LoaderInfo;-&gt;onLoadComplete(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;setNameOverride(Landroid/support/v4/util/ArrayMap;Ljava/lang/String;Ljava/lang/String;)V" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="2" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;setNameOverride(Landroid/support/v4/util/ArrayMap;Ljava/lang/String;Ljava/lang/String;)V" target="Landroid/support/v4/util/ArrayMap;-&gt;size()I" id="3" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="4" />
+      <edge source="Landroid/support/v4/app/BackStackRecord;-&gt;doAddOp(ILandroid/support/v4/app/Fragment;Ljava/lang/String;I)V" target="Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V" id="5" />
+    </edges>
+  </graph>
+</gexf>

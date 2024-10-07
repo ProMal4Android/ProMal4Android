@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" />
+      <node id="Landroid/support/v4/widget/DrawerLayout;-&gt;computeScroll()V" label="Landroid/support/v4/widget/DrawerLayout;-&gt;computeScroll()V" />
+      <node id="Landroid/support/design/widget/AppBarLayout;-&gt;getDownNestedScrollRange()I" label="Landroid/support/design/widget/AppBarLayout;-&gt;getDownNestedScrollRange()I" />
+      <node id="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" label="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;IIII)V" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;IIII)V" />
+      <node id="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;a()I" label="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;a()I" />
+      <node id="Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;-&gt;c(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z" label="Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;-&gt;c(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;a()I" id="0" />
+      <edge source="Landroid/support/v4/widget/DrawerLayout;-&gt;computeScroll()V" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="1" />
+      <edge source="Landroid/support/design/widget/AppBarLayout;-&gt;getDownNestedScrollRange()I" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="2" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;IIII)V" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;b(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;III)I" id="3" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;Landroid/view/View;IIII)V" target="Landroid/support/design/widget/AppBarLayout;-&gt;getDownNestedScrollRange()I" id="4" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;-&gt;c(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z" target="Landroid/view/View;-&gt;getLayoutParams()Landroid/view/ViewGroup$LayoutParams;" id="5" />
+      <edge source="Landroid/support/design/widget/AppBarLayout$ScrollingViewBehavior;-&gt;c(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z" target="Landroid/support/design/widget/AppBarLayout$Behavior;-&gt;a()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

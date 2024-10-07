@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lch/qos/logback/core/joran/util/PropertySetter;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" label="Lch/qos/logback/core/joran/util/PropertySetter;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" label="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" />
+      <node id="Ljava/lang/Class;-&gt;getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;" label="Ljava/lang/Class;-&gt;getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V" label="Landroid/support/v4/view/ViewPager;-&gt;addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V" />
+      <node id="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" label="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" />
+      <node id="Lch/qos/logback/core/joran/spi/NoAutoStartUtil;-&gt;notMarkedWithNoAutoStart(Ljava/lang/Object;)Z" label="Lch/qos/logback/core/joran/spi/NoAutoStartUtil;-&gt;notMarkedWithNoAutoStart(Ljava/lang/Object;)Z" />
+      <node id="Lch/qos/logback/core/joran/action/NestedComplexPropertyIA;-&gt;end(Lch/qos/logback/core/joran/spi/InterpretationContext;Ljava/lang/String;)V" label="Lch/qos/logback/core/joran/action/NestedComplexPropertyIA;-&gt;end(Lch/qos/logback/core/joran/spi/InterpretationContext;Ljava/lang/String;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lch/qos/logback/core/joran/util/PropertySetter;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="0" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" target="Ljava/lang/Class;-&gt;getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;" id="1" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="2" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V" target="Landroid/support/v4/view/ViewPager;-&gt;isDecorView(Landroid/view/View;)Z" id="3" />
+      <edge source="Lch/qos/logback/core/joran/spi/NoAutoStartUtil;-&gt;notMarkedWithNoAutoStart(Ljava/lang/Object;)Z" target="Ljava/lang/Class;-&gt;getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;" id="4" />
+      <edge source="Lch/qos/logback/core/joran/spi/NoAutoStartUtil;-&gt;notMarkedWithNoAutoStart(Ljava/lang/Object;)Z" target="Ljava/lang/Object;-&gt;getClass()Ljava/lang/Class;" id="5" />
+      <edge source="Lch/qos/logback/core/joran/action/NestedComplexPropertyIA;-&gt;end(Lch/qos/logback/core/joran/spi/InterpretationContext;Ljava/lang/String;)V" target="Lch/qos/logback/core/joran/util/PropertySetter;-&gt;&lt;init&gt;(Ljava/lang/Object;)V" id="6" />
+      <edge source="Lch/qos/logback/core/joran/action/NestedComplexPropertyIA;-&gt;end(Lch/qos/logback/core/joran/spi/InterpretationContext;Ljava/lang/String;)V" target="Lch/qos/logback/core/joran/spi/NoAutoStartUtil;-&gt;notMarkedWithNoAutoStart(Ljava/lang/Object;)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

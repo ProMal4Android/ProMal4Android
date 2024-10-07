@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" />
+      <node id="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" label="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="0" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;" id="1" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" id="2" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="3" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" id="4" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" id="5" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="6" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" id="7" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/content/ComponentName;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;" id="8" />
+    </edges>
+  </graph>
+</gexf>

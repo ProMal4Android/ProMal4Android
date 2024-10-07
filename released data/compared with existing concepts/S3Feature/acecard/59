@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-18">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" />
+      <node id="Landroid/content/Intent;-&gt;getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;" label="Landroid/content/Intent;-&gt;getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;" />
+      <node id="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" label="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;" />
+      <node id="Ljava/util/ArrayList;-&gt;isEmpty()Z" label="Ljava/util/ArrayList;-&gt;isEmpty()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" target="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" id="0" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;getIntent()Landroid/content/Intent;" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;saveState()Landroid/os/Parcelable;" target="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" target="Landroid/content/Intent;-&gt;getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;" id="3" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;combineArrayExtra(Ljava/lang/String;Ljava/util/ArrayList;)V" target="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" id="4" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;" target="Ljava/util/ArrayList;-&gt;toArray([Ljava/lang/Object;)[Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;getPendingIntent(IILandroid/os/Bundle;)Landroid/app/PendingIntent;" target="Ljava/util/ArrayList;-&gt;isEmpty()Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

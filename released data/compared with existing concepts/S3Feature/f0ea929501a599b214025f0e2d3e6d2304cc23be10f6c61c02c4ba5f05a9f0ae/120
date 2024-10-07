@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getContext()Landroid/content/Context;" label="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getContext()Landroid/content/Context;" />
+      <node id="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" label="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" />
+      <node id="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;requestPermission(Ljava/lang/String;Ljava/lang/String;I)V" label="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;requestPermission(Ljava/lang/String;Ljava/lang/String;I)V" />
+      <node id="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCameraAction()V" label="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCameraAction()V" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" label="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" />
+    </nodes>
+    <edges>
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;requestPermission(Ljava/lang/String;Ljava/lang/String;I)V" target="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getContext()Landroid/content/Context;" id="0" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCameraAction()V" target="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;getContext()Landroid/content/Context;" id="1" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCameraAction()V" target="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;requestPermission(Ljava/lang/String;Ljava/lang/String;I)V" id="2" />
+      <edge source="Lme/nereo/multi_image_selector/MultiImageSelectorFragment;-&gt;showCameraAction()V" target="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" id="3" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" id="4" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" id="5" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;getComponent()Landroid/content/ComponentName;" id="6" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addParentStack(Landroid/app/Activity;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Intent;-&gt;resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;" id="7" />
+    </edges>
+  </graph>
+</gexf>

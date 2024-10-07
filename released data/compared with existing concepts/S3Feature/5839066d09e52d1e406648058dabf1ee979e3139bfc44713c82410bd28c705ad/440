@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;get(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v7/internal/widget/ActivityChooserModel;" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;get(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v7/internal/widget/ActivityChooserModel;" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleRetryListenerQueue(Landroid/content/ComponentName;)V" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleRetryListenerQueue(Landroid/content/ComponentName;)V" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" />
+      <node id="Landroid/support/v4/app/INotificationSideChannel$Stub;-&gt;asInterface(Landroid/os/IBinder;)Landroid/support/v4/app/INotificationSideChannel;" label="Landroid/support/v4/app/INotificationSideChannel$Stub;-&gt;asInterface(Landroid/os/IBinder;)Landroid/support/v4/app/INotificationSideChannel;" />
+      <node id="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" label="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v7/widget/ShareActionProvider;-&gt;onCreateActionView()Landroid/view/View;" label="Landroid/support/v7/widget/ShareActionProvider;-&gt;onCreateActionView()Landroid/view/View;" />
+      <node id="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleMessage(Landroid/os/Message;)Z" label="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleMessage(Landroid/os/Message;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;get(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v7/internal/widget/ActivityChooserModel;" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleRetryListenerQueue(Landroid/content/ComponentName;)V" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" target="Landroid/support/v4/app/INotificationSideChannel$Stub;-&gt;asInterface(Landroid/os/IBinder;)Landroid/support/v4/app/INotificationSideChannel;" id="2" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" target="Ljava/util/Map;-&gt;get(Ljava/lang/Object;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v7/widget/ShareActionProvider;-&gt;onCreateActionView()Landroid/view/View;" target="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;get(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v7/internal/widget/ActivityChooserModel;" id="4" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleMessage(Landroid/os/Message;)Z" target="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleRetryListenerQueue(Landroid/content/ComponentName;)V" id="5" />
+      <edge source="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleMessage(Landroid/os/Message;)Z" target="Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;-&gt;handleServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

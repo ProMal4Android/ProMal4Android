@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" />
+      <node id="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" label="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" />
+      <node id="Landroid/graphics/Matrix;-&gt;set(Landroid/graphics/Matrix;)V" label="Landroid/graphics/Matrix;-&gt;set(Landroid/graphics/Matrix;)V" />
+      <node id="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;&lt;init&gt;(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;Landroid/support/v4/util/ArrayMap;)V" label="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;&lt;init&gt;(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;Landroid/support/v4/util/ArrayMap;)V" />
+      <node id="Ljava/lang/Math;-&gt;min(FF)F" label="Ljava/lang/Math;-&gt;min(FF)F" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/graphics/drawable/VectorDrawableCompat$VPathRenderer;-&gt;drawPath(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V" label="Landroid/support/graphics/drawable/VectorDrawableCompat$VPathRenderer;-&gt;drawPath(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" target="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" id="0" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" target="Landroid/graphics/Matrix;-&gt;set(Landroid/graphics/Matrix;)V" id="1" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;" target="Ljava/lang/Math;-&gt;min(FF)F" id="2" />
+      <edge source="Landroid/support/v4/app/SharedElementCallback;-&gt;createDrawableBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;" target="Ljava/lang/Math;-&gt;min(FF)F" id="3" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;&lt;init&gt;(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;Landroid/support/v4/util/ArrayMap;)V" target="Landroid/graphics/Matrix;-&gt;set(Landroid/graphics/Matrix;)V" id="4" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;-&gt;&lt;init&gt;(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;Landroid/support/v4/util/ArrayMap;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VPathRenderer;-&gt;drawPath(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V" target="Landroid/graphics/Matrix;-&gt;set(Landroid/graphics/Matrix;)V" id="6" />
+      <edge source="Landroid/support/graphics/drawable/VectorDrawableCompat$VPathRenderer;-&gt;drawPath(Landroid/support/graphics/drawable/VectorDrawableCompat$VGroup;Landroid/support/graphics/drawable/VectorDrawableCompat$VPath;Landroid/graphics/Canvas;IILandroid/graphics/ColorFilter;)V" target="Ljava/lang/Math;-&gt;min(FF)F" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;isOffScreen(Landroid/view/View;)Z" label="Landroid/support/v4/widget/NestedScrollView;-&gt;isOffScreen(Landroid/view/View;)Z" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;isWithinDeltaOfScreen(Landroid/view/View;II)Z" label="Landroid/support/v4/widget/NestedScrollView;-&gt;isWithinDeltaOfScreen(Landroid/view/View;II)Z" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;arrowScroll(I)Z" label="Landroid/support/v4/widget/NestedScrollView;-&gt;arrowScroll(I)Z" />
+      <node id="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" label="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" />
+      <node id="Landroid/view/View;-&gt;getDrawingRect(Landroid/graphics/Rect;)V" label="Landroid/view/View;-&gt;getDrawingRect(Landroid/graphics/Rect;)V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" label="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;onRequestFocusInDescendants(ILandroid/graphics/Rect;)Z" label="Landroid/support/v4/widget/NestedScrollView;-&gt;onRequestFocusInDescendants(ILandroid/graphics/Rect;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;isOffScreen(Landroid/view/View;)Z" target="Landroid/support/v4/widget/NestedScrollView;-&gt;isWithinDeltaOfScreen(Landroid/view/View;II)Z" id="0" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;isWithinDeltaOfScreen(Landroid/view/View;II)Z" target="Landroid/view/View;-&gt;getDrawingRect(Landroid/graphics/Rect;)V" id="1" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;arrowScroll(I)Z" target="Landroid/support/v4/widget/NestedScrollView;-&gt;isOffScreen(Landroid/view/View;)Z" id="2" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;arrowScroll(I)Z" target="Landroid/support/v4/widget/NestedScrollView;-&gt;isWithinDeltaOfScreen(Landroid/view/View;II)Z" id="3" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;arrowScroll(I)Z" target="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" id="4" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;arrowScroll(I)Z" target="Landroid/view/View;-&gt;getDrawingRect(Landroid/graphics/Rect;)V" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;arrowScroll(I)Z" target="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" id="6" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;onRequestFocusInDescendants(ILandroid/graphics/Rect;)Z" target="Landroid/support/v4/widget/NestedScrollView;-&gt;isOffScreen(Landroid/view/View;)Z" id="7" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;onRequestFocusInDescendants(ILandroid/graphics/Rect;)Z" target="Landroid/view/FocusFinder;-&gt;getInstance()Landroid/view/FocusFinder;" id="8" />
+    </edges>
+  </graph>
+</gexf>

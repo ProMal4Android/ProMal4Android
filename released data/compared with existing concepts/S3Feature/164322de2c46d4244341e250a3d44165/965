@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onDestroyView()V" label="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onDestroyView()V" />
+      <node id="Landroidx/fragment/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" label="Landroidx/fragment/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" />
+      <node id="Landroidx/fragment/app/DialogFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" label="Landroidx/fragment/app/DialogFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;onDestroyView()V" label="Landroidx/fragment/app/Fragment;-&gt;onDestroyView()V" />
+      <node id="Landroidx/fragment/app/DialogFragment;-&gt;dismissInternal(ZZ)V" label="Landroidx/fragment/app/DialogFragment;-&gt;dismissInternal(ZZ)V" />
+      <node id="Landroid/app/Dialog;-&gt;setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V" label="Landroid/app/Dialog;-&gt;setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V" />
+      <node id="Landroidx/fragment/app/DialogFragment;-&gt;onDestroyView()V" label="Landroidx/fragment/app/DialogFragment;-&gt;onDestroyView()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/photo/fragments/PhotoViewFragment;-&gt;onDestroyView()V" target="Landroidx/fragment/app/Fragment;-&gt;onDestroyView()V" id="0" />
+      <edge source="Landroidx/fragment/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" target="Landroidx/fragment/app/DialogFragment;-&gt;dismissInternal(ZZ)V" id="1" />
+      <edge source="Landroidx/fragment/app/DialogFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" target="Landroid/app/Dialog;-&gt;setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V" id="2" />
+      <edge source="Landroidx/fragment/app/DialogFragment;-&gt;dismissInternal(ZZ)V" target="Landroidx/fragment/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" id="3" />
+      <edge source="Landroidx/fragment/app/DialogFragment;-&gt;dismissInternal(ZZ)V" target="Landroid/app/Dialog;-&gt;setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V" id="4" />
+      <edge source="Landroidx/fragment/app/DialogFragment;-&gt;onDestroyView()V" target="Landroidx/fragment/app/DialogFragment;-&gt;onDismiss(Landroid/content/DialogInterface;)V" id="5" />
+      <edge source="Landroidx/fragment/app/DialogFragment;-&gt;onDestroyView()V" target="Landroidx/fragment/app/Fragment;-&gt;onDestroyView()V" id="6" />
+      <edge source="Landroidx/fragment/app/DialogFragment;-&gt;onDestroyView()V" target="Landroid/app/Dialog;-&gt;setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

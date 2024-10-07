@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/os/Parcel;-&gt;setDataPosition(I)V" label="Landroid/os/Parcel;-&gt;setDataPosition(I)V" />
+      <node id="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" label="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" />
+      <node id="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;extraCommand(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;" label="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;extraCommand(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;fromMediaMetadata(Ljava/lang/Object;)Landroid/support/v4/media/MediaMetadataCompat;" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;fromMediaMetadata(Ljava/lang/Object;)Landroid/support/v4/media/MediaMetadataCompat;" />
+      <node id="Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;" label="Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;" />
+      <node id="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;mayLaunchUrl(Landroid/support/customtabs/ICustomTabsCallback;Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z" label="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;mayLaunchUrl(Landroid/support/customtabs/ICustomTabsCallback;Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z" />
+      <node id="Landroid/support/v4/media/MediaBrowserCompat$ItemCallback$StubApi23;-&gt;onItemLoaded(Landroid/os/Parcel;)V" label="Landroid/support/v4/media/MediaBrowserCompat$ItemCallback$StubApi23;-&gt;onItemLoaded(Landroid/os/Parcel;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;extraCommand(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;" target="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;extraCommand(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;" target="Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;" id="1" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;fromMediaMetadata(Ljava/lang/Object;)Landroid/support/v4/media/MediaMetadataCompat;" target="Landroid/os/Parcel;-&gt;setDataPosition(I)V" id="2" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;fromMediaMetadata(Ljava/lang/Object;)Landroid/support/v4/media/MediaMetadataCompat;" target="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" id="3" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;fromMediaMetadata(Ljava/lang/Object;)Landroid/support/v4/media/MediaMetadataCompat;" target="Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;" id="4" />
+      <edge source="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;mayLaunchUrl(Landroid/support/customtabs/ICustomTabsCallback;Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z" target="Landroid/os/Parcel;-&gt;obtain()Landroid/os/Parcel;" id="5" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$ItemCallback$StubApi23;-&gt;onItemLoaded(Landroid/os/Parcel;)V" target="Landroid/os/Parcel;-&gt;setDataPosition(I)V" id="6" />
+      <edge source="Landroid/support/v4/media/MediaBrowserCompat$ItemCallback$StubApi23;-&gt;onItemLoaded(Landroid/os/Parcel;)V" target="Landroid/os/Parcelable$Creator;-&gt;createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

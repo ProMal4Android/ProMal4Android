@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat;" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat;" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" label="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" />
+      <node id="La/a/e;-&gt;a(La/a/b/a/a;)La/a/c;" label="La/a/e;-&gt;a(La/a/b/a/a;)La/a/c;" />
+      <node id="La/a/g;-&gt;&lt;init&gt;(La/a/b/a/a;Ljava/lang/Object;ILa/a/b/b/e;)V" label="La/a/g;-&gt;&lt;init&gt;(La/a/b/a/a;Ljava/lang/Object;ILa/a/b/b/e;)V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;-&gt;&lt;init&gt;(Landroid/app/ActivityOptions;)V" label="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;-&gt;&lt;init&gt;(Landroid/app/ActivityOptions;)V" />
+      <node id="La/a/g;-&gt;&lt;init&gt;(La/a/b/a/a;Ljava/lang/Object;)V" label="La/a/g;-&gt;&lt;init&gt;(La/a/b/a/a;Ljava/lang/Object;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat;" target="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;-&gt;&lt;init&gt;(Landroid/app/ActivityOptions;)V" id="1" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="La/a/e;-&gt;a(La/a/b/a/a;)La/a/c;" target="La/a/g;-&gt;&lt;init&gt;(La/a/b/a/a;Ljava/lang/Object;ILa/a/b/b/e;)V" id="3" />
+      <edge source="La/a/g;-&gt;&lt;init&gt;(La/a/b/a/a;Ljava/lang/Object;ILa/a/b/b/e;)V" target="La/a/g;-&gt;&lt;init&gt;(La/a/b/a/a;Ljava/lang/Object;)V" id="4" />
+      <edge source="Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsCompatImpl;-&gt;&lt;init&gt;(Landroid/app/ActivityOptions;)V" target="Landroid/support/v4/app/ActivityOptionsCompat;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="La/a/g;-&gt;&lt;init&gt;(La/a/b/a/a;Ljava/lang/Object;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

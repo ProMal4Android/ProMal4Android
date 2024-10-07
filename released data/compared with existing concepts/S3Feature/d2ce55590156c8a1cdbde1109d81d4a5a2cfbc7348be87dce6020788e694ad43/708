@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/os/Environment;-&gt;getExternalStorageDirectory()Ljava/io/File;" label="Landroid/os/Environment;-&gt;getExternalStorageDirectory()Ljava/io/File;" />
+      <node id="Lcom/facebook/internal/Utility;-&gt;externalStorageExists()Z" label="Lcom/facebook/internal/Utility;-&gt;externalStorageExists()Z" />
+      <node id="Landroid/os/Environment;-&gt;getExternalStorageState()Ljava/lang/String;" label="Landroid/os/Environment;-&gt;getExternalStorageState()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/os/EnvironmentCompat;-&gt;getStorageState(Ljava/io/File;)Ljava/lang/String;" label="Landroid/support/v4/os/EnvironmentCompat;-&gt;getStorageState(Ljava/io/File;)Ljava/lang/String;" />
+      <node id="Landroid/os/StatFs;-&gt;&lt;init&gt;(Ljava/lang/String;)V" label="Landroid/os/StatFs;-&gt;&lt;init&gt;(Ljava/lang/String;)V" />
+      <node id="Lcom/facebook/internal/Utility;-&gt;refreshTotalExternalStorage()V" label="Lcom/facebook/internal/Utility;-&gt;refreshTotalExternalStorage()V" />
+      <node id="Lcom/facebook/internal/Utility;-&gt;refreshAvailableExternalStorage()V" label="Lcom/facebook/internal/Utility;-&gt;refreshAvailableExternalStorage()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/internal/Utility;-&gt;externalStorageExists()Z" target="Landroid/os/Environment;-&gt;getExternalStorageState()Ljava/lang/String;" id="0" />
+      <edge source="Landroid/support/v4/os/EnvironmentCompat;-&gt;getStorageState(Ljava/io/File;)Ljava/lang/String;" target="Landroid/os/Environment;-&gt;getExternalStorageDirectory()Ljava/io/File;" id="1" />
+      <edge source="Landroid/support/v4/os/EnvironmentCompat;-&gt;getStorageState(Ljava/io/File;)Ljava/lang/String;" target="Landroid/os/Environment;-&gt;getExternalStorageState()Ljava/lang/String;" id="2" />
+      <edge source="Lcom/facebook/internal/Utility;-&gt;refreshTotalExternalStorage()V" target="Landroid/os/Environment;-&gt;getExternalStorageDirectory()Ljava/io/File;" id="3" />
+      <edge source="Lcom/facebook/internal/Utility;-&gt;refreshTotalExternalStorage()V" target="Lcom/facebook/internal/Utility;-&gt;externalStorageExists()Z" id="4" />
+      <edge source="Lcom/facebook/internal/Utility;-&gt;refreshTotalExternalStorage()V" target="Landroid/os/StatFs;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="5" />
+      <edge source="Lcom/facebook/internal/Utility;-&gt;refreshAvailableExternalStorage()V" target="Landroid/os/Environment;-&gt;getExternalStorageDirectory()Ljava/io/File;" id="6" />
+      <edge source="Lcom/facebook/internal/Utility;-&gt;refreshAvailableExternalStorage()V" target="Lcom/facebook/internal/Utility;-&gt;externalStorageExists()Z" id="7" />
+      <edge source="Lcom/facebook/internal/Utility;-&gt;refreshAvailableExternalStorage()V" target="Landroid/os/StatFs;-&gt;&lt;init&gt;(Ljava/lang/String;)V" id="8" />
+    </edges>
+  </graph>
+</gexf>

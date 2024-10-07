@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v7/widget/Toolbar;Landroid/support/v4/widget/DrawerLayout;Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;II)V" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v7/widget/Toolbar;Landroid/support/v4/widget/DrawerLayout;Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;II)V" />
+      <node id="Landroid/support/v7/widget/ToolbarWidgetWrapper;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;ZII)V" label="Landroid/support/v7/widget/ToolbarWidgetWrapper;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;ZII)V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle$ToolbarCompatDelegate;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" label="Landroid/support/v7/app/ActionBarDrawerToggle$ToolbarCompatDelegate;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" />
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V" />
+      <node id="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;getThemeUpIndicator()Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;getThemeUpIndicator()Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v7/widget/Toolbar;-&gt;getNavigationContentDescription()Ljava/lang/CharSequence;" label="Landroid/support/v7/widget/Toolbar;-&gt;getNavigationContentDescription()Ljava/lang/CharSequence;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v7/widget/Toolbar;Landroid/support/v4/widget/DrawerLayout;Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;II)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v7/widget/Toolbar;Landroid/support/v4/widget/DrawerLayout;Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;II)V" target="Landroid/support/v7/app/ActionBarDrawerToggle$ToolbarCompatDelegate;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" id="1" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;&lt;init&gt;(Landroid/app/Activity;Landroid/support/v7/widget/Toolbar;Landroid/support/v4/widget/DrawerLayout;Landroid/support/v7/graphics/drawable/DrawerArrowDrawable;II)V" target="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;getThemeUpIndicator()Landroid/graphics/drawable/Drawable;" id="2" />
+      <edge source="Landroid/support/v7/widget/ToolbarWidgetWrapper;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;ZII)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v7/widget/ToolbarWidgetWrapper;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;ZII)V" target="Landroid/support/v7/widget/Toolbar;-&gt;getNavigationContentDescription()Ljava/lang/CharSequence;" id="4" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle$ToolbarCompatDelegate;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle$ToolbarCompatDelegate;-&gt;&lt;init&gt;(Landroid/support/v7/widget/Toolbar;)V" target="Landroid/support/v7/widget/Toolbar;-&gt;getNavigationContentDescription()Ljava/lang/CharSequence;" id="6" />
+      <edge source="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V" target="Landroid/support/v7/app/ActionBarDrawerToggle;-&gt;getThemeUpIndicator()Landroid/graphics/drawable/Drawable;" id="7" />
+    </edges>
+  </graph>
+</gexf>

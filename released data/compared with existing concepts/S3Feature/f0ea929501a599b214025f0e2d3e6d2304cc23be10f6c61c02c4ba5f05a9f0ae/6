@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;-&gt;create()Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;" label="Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;-&gt;create()Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;" />
+      <node id="Lcom/bumptech/glide/ListPreloader;-&gt;onScroll(Landroid/widget/AbsListView;III)V" label="Lcom/bumptech/glide/ListPreloader;-&gt;onScroll(Landroid/widget/AbsListView;III)V" />
+      <node id="Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;-&gt;get()Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;" label="Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;-&gt;get()Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;" />
+      <node id="Lcom/bumptech/glide/ListPreloader;-&gt;cancelAll()V" label="Lcom/bumptech/glide/ListPreloader;-&gt;cancelAll()V" />
+      <node id="Lcom/bumptech/glide/ListPreloader;-&gt;preload(IZ)V" label="Lcom/bumptech/glide/ListPreloader;-&gt;preload(IZ)V" />
+      <node id="Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;-&gt;next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;" label="Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;-&gt;next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;" />
+      <node id="Ljava/util/Queue;-&gt;poll()Ljava/lang/Object;" label="Ljava/util/Queue;-&gt;poll()Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/ListPreloader;-&gt;onScroll(Landroid/widget/AbsListView;III)V" target="Lcom/bumptech/glide/ListPreloader;-&gt;preload(IZ)V" id="0" />
+      <edge source="Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;-&gt;get()Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;" target="Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;-&gt;create()Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;" id="1" />
+      <edge source="Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;-&gt;get()Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;" target="Ljava/util/Queue;-&gt;poll()Ljava/lang/Object;" id="2" />
+      <edge source="Lcom/bumptech/glide/ListPreloader;-&gt;cancelAll()V" target="Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;-&gt;next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;" id="3" />
+      <edge source="Lcom/bumptech/glide/ListPreloader;-&gt;preload(IZ)V" target="Lcom/bumptech/glide/ListPreloader;-&gt;cancelAll()V" id="4" />
+      <edge source="Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;-&gt;next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;" target="Ljava/util/Queue;-&gt;poll()Ljava/lang/Object;" id="5" />
+    </edges>
+  </graph>
+</gexf>

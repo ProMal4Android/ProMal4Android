@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/colorsms/style/helper/Style$Background;-&gt;getBackgroundChatPosition()I" label="Lcom/colorsms/style/helper/Style$Background;-&gt;getBackgroundChatPosition()I" />
+      <node id="Landroid/content/SharedPreferences;-&gt;getInt(Ljava/lang/String;I)I" label="Landroid/content/SharedPreferences;-&gt;getInt(Ljava/lang/String;I)I" />
+      <node id="Lcom/colorsms/style/App;-&gt;get()Lcom/colorsms/style/App;" label="Lcom/colorsms/style/App;-&gt;get()Lcom/colorsms/style/App;" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;getNextTimeMillis(Lcom/android/common/OperationScheduler$Options;)J" label="Lcom/android/common/OperationScheduler;-&gt;getNextTimeMillis(Lcom/android/common/OperationScheduler$Options;)J" />
+      <node id="Lcom/colorsms/style/helper/Style$Home;-&gt;getStyleColor()I" label="Lcom/colorsms/style/helper/Style$Home;-&gt;getStyleColor()I" />
+      <node id="Lcom/android/messaging/SplashActivity$1$1;-&gt;run()V" label="Lcom/android/messaging/SplashActivity$1$1;-&gt;run()V" />
+      <node id="Lcom/android/messaging/ui/conversation/ConversationActivity;-&gt;setStyleToolbar(Landroidx/appcompat/app/ActionBar;)V" label="Lcom/android/messaging/ui/conversation/ConversationActivity;-&gt;setStyleToolbar(Landroidx/appcompat/app/ActionBar;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/colorsms/style/helper/Style$Background;-&gt;getBackgroundChatPosition()I" target="Landroid/content/SharedPreferences;-&gt;getInt(Ljava/lang/String;I)I" id="0" />
+      <edge source="Lcom/colorsms/style/helper/Style$Background;-&gt;getBackgroundChatPosition()I" target="Lcom/colorsms/style/App;-&gt;get()Lcom/colorsms/style/App;" id="1" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;getNextTimeMillis(Lcom/android/common/OperationScheduler$Options;)J" target="Landroid/content/SharedPreferences;-&gt;getInt(Ljava/lang/String;I)I" id="2" />
+      <edge source="Lcom/colorsms/style/helper/Style$Home;-&gt;getStyleColor()I" target="Landroid/content/SharedPreferences;-&gt;getInt(Ljava/lang/String;I)I" id="3" />
+      <edge source="Lcom/colorsms/style/helper/Style$Home;-&gt;getStyleColor()I" target="Lcom/colorsms/style/App;-&gt;get()Lcom/colorsms/style/App;" id="4" />
+      <edge source="Lcom/android/messaging/SplashActivity$1$1;-&gt;run()V" target="Lcom/colorsms/style/App;-&gt;get()Lcom/colorsms/style/App;" id="5" />
+      <edge source="Lcom/android/messaging/ui/conversation/ConversationActivity;-&gt;setStyleToolbar(Landroidx/appcompat/app/ActionBar;)V" target="Lcom/colorsms/style/helper/Style$Background;-&gt;getBackgroundChatPosition()I" id="6" />
+      <edge source="Lcom/android/messaging/ui/conversation/ConversationActivity;-&gt;setStyleToolbar(Landroidx/appcompat/app/ActionBar;)V" target="Lcom/colorsms/style/helper/Style$Home;-&gt;getStyleColor()I" id="7" />
+    </edges>
+  </graph>
+</gexf>

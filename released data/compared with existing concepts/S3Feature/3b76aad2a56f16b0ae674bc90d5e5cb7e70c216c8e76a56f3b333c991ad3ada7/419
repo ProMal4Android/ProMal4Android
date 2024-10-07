@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" label="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" label="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" />
+      <node id="Landroid/content/res/Resources$Theme;-&gt;resolveAttribute(ILandroid/util/TypedValue;Z)Z" label="Landroid/content/res/Resources$Theme;-&gt;resolveAttribute(ILandroid/util/TypedValue;Z)Z" />
+      <node id="Landroid/support/v4/content/res/TypedArrayUtils;-&gt;getAttr(Landroid/content/Context;II)I" label="Landroid/support/v4/content/res/TypedArrayUtils;-&gt;getAttr(Landroid/content/Context;II)I" />
+      <node id="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" label="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" />
+      <node id="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" label="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/content/res/TypedArrayUtils;-&gt;getAttr(Landroid/content/Context;II)I" target="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v4/content/res/TypedArrayUtils;-&gt;getAttr(Landroid/content/Context;II)I" target="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" id="1" />
+      <edge source="Landroid/support/v4/content/res/TypedArrayUtils;-&gt;getAttr(Landroid/content/Context;II)I" target="Landroid/content/res/Resources$Theme;-&gt;resolveAttribute(ILandroid/util/TypedValue;Z)Z" id="2" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" target="Landroid/support/v4/content/res/ResourcesCompat;-&gt;getDrawable(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;" id="3" />
+      <edge source="Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;-&gt;create(Landroid/content/Context;I)Landroid/support/graphics/drawable/AnimatedVectorDrawableCompat;" target="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" id="4" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" target="Landroid/util/TypedValue;-&gt;&lt;init&gt;()V" id="5" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" target="Landroid/content/Context;-&gt;getTheme()Landroid/content/res/Resources$Theme;" id="6" />
+      <edge source="Landroid/support/v4/widget/NestedScrollView;-&gt;getVerticalScrollFactorCompat()F" target="Landroid/content/res/Resources$Theme;-&gt;resolveAttribute(ILandroid/util/TypedValue;Z)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

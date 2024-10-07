@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;ensureSubDecor()V" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;ensureSubDecor()V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;setContentView(I)V" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;setContentView(I)V" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyFixedSizeWindow()V" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyFixedSizeWindow()V" />
+      <node id="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;)Landroid/view/View;" label="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;)Landroid/view/View;" />
+      <node id="Landroid/content/Context;-&gt;obtainStyledAttributes([I)Landroid/content/res/TypedArray;" label="Landroid/content/Context;-&gt;obtainStyledAttributes([I)Landroid/content/res/TypedArray;" />
+      <node id="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;createSubDecor()Landroid/view/ViewGroup;" label="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;createSubDecor()Landroid/view/ViewGroup;" />
+      <node id="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;newView(Lcom/android/ex/chips/DropdownChipLayouter$AdapterType;)Landroid/view/View;" label="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;newView(Lcom/android/ex/chips/DropdownChipLayouter$AdapterType;)Landroid/view/View;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;ensureSubDecor()V" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyFixedSizeWindow()V" id="0" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;ensureSubDecor()V" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;createSubDecor()Landroid/view/ViewGroup;" id="1" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;setContentView(I)V" target="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;ensureSubDecor()V" id="2" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;setContentView(I)V" target="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;)Landroid/view/View;" id="3" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;applyFixedSizeWindow()V" target="Landroid/content/Context;-&gt;obtainStyledAttributes([I)Landroid/content/res/TypedArray;" id="4" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;createSubDecor()Landroid/view/ViewGroup;" target="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;)Landroid/view/View;" id="5" />
+      <edge source="Landroidx/appcompat/app/AppCompatDelegateImpl;-&gt;createSubDecor()Landroid/view/ViewGroup;" target="Landroid/content/Context;-&gt;obtainStyledAttributes([I)Landroid/content/res/TypedArray;" id="6" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;newView(Lcom/android/ex/chips/DropdownChipLayouter$AdapterType;)Landroid/view/View;" target="Landroid/view/LayoutInflater;-&gt;inflate(ILandroid/view/ViewGroup;)Landroid/view/View;" id="7" />
+    </edges>
+  </graph>
+</gexf>

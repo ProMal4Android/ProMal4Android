@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/DialogFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" label="Landroid/support/v4/app/DialogFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" />
+      <node id="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" label="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" />
+      <node id="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" label="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" />
+      <node id="Lcom/amazon/device/ads/AdController;-&gt;getViewParent()Landroid/view/ViewGroup;" label="Lcom/amazon/device/ads/AdController;-&gt;getViewParent()Landroid/view/ViewGroup;" />
+      <node id="Lcom/amazon/device/ads/AdController;-&gt;moveViewToViewGroup(Landroid/view/ViewGroup;Landroid/view/ViewGroup$LayoutParams;Z)V" label="Lcom/amazon/device/ads/AdController;-&gt;moveViewToViewGroup(Landroid/view/ViewGroup;Landroid/view/ViewGroup$LayoutParams;Z)V" />
+      <node id="Lcom/amazon/device/ads/AdController;-&gt;getViewParentIfExpanded()Landroid/view/ViewGroup;" label="Lcom/amazon/device/ads/AdController;-&gt;getViewParentIfExpanded()Landroid/view/ViewGroup;" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" label="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/DialogFragment;-&gt;onActivityCreated(Landroid/os/Bundle;)V" target="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" id="0" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;getViewParent()Landroid/view/ViewGroup;" target="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" id="1" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;moveViewToViewGroup(Landroid/view/ViewGroup;Landroid/view/ViewGroup$LayoutParams;Z)V" target="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" id="2" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;moveViewToViewGroup(Landroid/view/ViewGroup;Landroid/view/ViewGroup$LayoutParams;Z)V" target="Lcom/amazon/device/ads/AdController;-&gt;getViewParent()Landroid/view/ViewGroup;" id="3" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;getViewParentIfExpanded()Landroid/view/ViewGroup;" target="Landroid/view/View;-&gt;getParent()Landroid/view/ViewParent;" id="4" />
+      <edge source="Lcom/amazon/device/ads/AdController;-&gt;getViewParentIfExpanded()Landroid/view/ViewGroup;" target="Lcom/amazon/device/ads/AdController;-&gt;getViewParent()Landroid/view/ViewGroup;" id="5" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" target="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

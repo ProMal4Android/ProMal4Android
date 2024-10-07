@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;onStartLoading()V" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;onStartLoading()V" />
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;onReleaseResources(Landroid/graphics/Bitmap;)V" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;onReleaseResources(Landroid/graphics/Bitmap;)V" />
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" />
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;deliverResult(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;deliverResult(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" />
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Ljava/lang/Object;" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Ljava/lang/Object;" />
+      <node id="Landroid/graphics/Bitmap;-&gt;isRecycled()Z" label="Landroid/graphics/Bitmap;-&gt;isRecycled()Z" />
+      <node id="Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;-&gt;&lt;init&gt;()V" label="Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;-&gt;&lt;init&gt;()V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;onStartLoading()V" target="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;deliverResult(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" id="0" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;onStartLoading()V" target="Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;onReleaseResources(Landroid/graphics/Bitmap;)V" target="Landroid/graphics/Bitmap;-&gt;isRecycled()Z" id="2" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" target="Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;deliverResult(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;onReleaseResources(Landroid/graphics/Bitmap;)V" id="4" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;deliverResult(Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;)V" target="Landroid/graphics/Bitmap;-&gt;isRecycled()Z" id="5" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Ljava/lang/Object;" target="Lcom/android/ex/photo/loaders/PhotoBitmapLoader;-&gt;loadInBackground()Lcom/android/ex/photo/loaders/PhotoBitmapLoaderInterface$BitmapResult;" id="6" />
+    </edges>
+  </graph>
+</gexf>

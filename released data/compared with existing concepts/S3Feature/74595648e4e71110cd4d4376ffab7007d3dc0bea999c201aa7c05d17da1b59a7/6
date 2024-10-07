@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/graphics/Point;-&gt;&lt;init&gt;()V" label="Landroid/graphics/Point;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/view/View;-&gt;getPaddingRight()I" label="Landroid/view/View;-&gt;getPaddingRight()I" />
+      <node id="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;getPaddingEnd()I" label="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;getPaddingEnd()I" />
+      <node id="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;createPopup()Landroid/support/v7/view/menu/MenuPopup;" label="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;createPopup()Landroid/support/v7/view/menu/MenuPopup;" />
+      <node id="Lcom/startapp/android/publish/ads/banner/bannerstandard/BannerStandard;-&gt;getAvailableSize()Landroid/graphics/Point;" label="Lcom/startapp/android/publish/ads/banner/bannerstandard/BannerStandard;-&gt;getAvailableSize()Landroid/graphics/Point;" />
+      <node id="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" label="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingEnd(Landroid/view/View;)I" label="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingEnd(Landroid/view/View;)I" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/RecyclerView$LayoutManager;-&gt;getPaddingEnd()I" target="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingEnd(Landroid/view/View;)I" id="0" />
+      <edge source="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;createPopup()Landroid/support/v7/view/menu/MenuPopup;" target="Landroid/graphics/Point;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v7/view/menu/MenuPopupHelper;-&gt;createPopup()Landroid/support/v7/view/menu/MenuPopup;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="2" />
+      <edge source="Lcom/startapp/android/publish/ads/banner/bannerstandard/BannerStandard;-&gt;getAvailableSize()Landroid/graphics/Point;" target="Landroid/graphics/Point;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Lcom/startapp/android/publish/ads/banner/bannerstandard/BannerStandard;-&gt;getAvailableSize()Landroid/graphics/Point;" target="Landroid/view/View;-&gt;getPaddingRight()I" id="4" />
+      <edge source="Lcom/startapp/android/publish/ads/banner/bannerstandard/BannerStandard;-&gt;getAvailableSize()Landroid/graphics/Point;" target="Landroid/content/Context;-&gt;getSystemService(Ljava/lang/String;)Ljava/lang/Object;" id="5" />
+      <edge source="Landroid/support/v4/view/ViewCompat;-&gt;getPaddingEnd(Landroid/view/View;)I" target="Landroid/view/View;-&gt;getPaddingRight()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

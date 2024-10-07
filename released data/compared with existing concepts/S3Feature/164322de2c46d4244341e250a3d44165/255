@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/common/content/SQLiteContentProvider;-&gt;delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I" label="Lcom/android/common/content/SQLiteContentProvider;-&gt;delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I" />
+      <node id="Lcom/android/common/content/SQLiteContentProvider;-&gt;bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I" label="Lcom/android/common/content/SQLiteContentProvider;-&gt;bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I" />
+      <node id="Landroid/database/sqlite/SQLiteOpenHelper;-&gt;getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;" label="Landroid/database/sqlite/SQLiteOpenHelper;-&gt;getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;" />
+      <node id="Lcom/android/common/content/SQLiteContentProvider;-&gt;insertInTransaction(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" label="Lcom/android/common/content/SQLiteContentProvider;-&gt;insertInTransaction(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" />
+      <node id="Ljava/lang/ThreadLocal;-&gt;get()Ljava/lang/Object;" label="Ljava/lang/ThreadLocal;-&gt;get()Ljava/lang/Object;" />
+      <node id="Lcom/android/common/content/SQLiteContentProvider;-&gt;insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" label="Lcom/android/common/content/SQLiteContentProvider;-&gt;insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" />
+      <node id="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" label="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I" target="Landroid/database/sqlite/SQLiteOpenHelper;-&gt;getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;" id="0" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I" target="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" id="1" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I" target="Landroid/database/sqlite/SQLiteOpenHelper;-&gt;getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;" id="2" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I" target="Lcom/android/common/content/SQLiteContentProvider;-&gt;insertInTransaction(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" id="3" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" target="Landroid/database/sqlite/SQLiteOpenHelper;-&gt;getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;" id="4" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" target="Lcom/android/common/content/SQLiteContentProvider;-&gt;insertInTransaction(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" id="5" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;" target="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" id="6" />
+      <edge source="Lcom/android/common/content/SQLiteContentProvider;-&gt;applyingBatch()Z" target="Ljava/lang/ThreadLocal;-&gt;get()Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

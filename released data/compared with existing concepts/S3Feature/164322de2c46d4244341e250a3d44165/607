@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" label="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" />
+      <node id="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;isAllWhitespace(Ljava/lang/String;)Z" label="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;isAllWhitespace(Ljava/lang/String;)Z" />
+      <node id="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" label="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" />
+      <node id="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" label="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" />
+      <node id="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/CharSequence;" label="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/CharSequence;" />
+      <node id="Lcom/android/ex/chips/RecipientEntry;-&gt;getEntryType()I" label="Lcom/android/ex/chips/RecipientEntry;-&gt;getEntryType()I" />
+      <node id="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" label="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/chips/RecipientEditTextView;-&gt;onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getEntryType()I" id="0" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;isAllWhitespace(Ljava/lang/String;)Z" target="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" id="1" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" target="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/CharSequence;" id="2" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;[Ljava/lang/String;)[Ljava/lang/CharSequence;" target="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;isAllWhitespace(Ljava/lang/String;)Z" id="3" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" target="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;getStyledResults(Ljava/lang/String;Lcom/android/ex/chips/RecipientEntry;)[Ljava/lang/CharSequence;" id="4" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" target="Landroid/text/TextUtils;-&gt;isEmpty(Ljava/lang/CharSequence;)Z" id="5" />
+      <edge source="Lcom/android/ex/chips/DropdownChipLayouter;-&gt;bindView(Landroid/view/View;Landroid/view/ViewGroup;Lcom/android/ex/chips/RecipientEntry;ILcom/android/ex/chips/DropdownChipLayouter$AdapterType;Ljava/lang/String;Landroid/graphics/drawable/StateListDrawable;)Landroid/view/View;" target="Lcom/android/ex/chips/RecipientEntry;-&gt;getEntryType()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

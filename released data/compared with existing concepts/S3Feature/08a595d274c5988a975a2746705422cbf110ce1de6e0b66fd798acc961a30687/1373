@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;" label="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;" />
+      <node id="Landroid/view/View;-&gt;getTop()I" label="Landroid/view/View;-&gt;getTop()I" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;dispatchOnSlide(I)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;dispatchOnSlide(I)V" />
+      <node id="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;start()V" label="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;start()V" />
+      <node id="Landroid/support/design/internal/SnackbarContentLayout;-&gt;animateContentIn(II)V" label="Landroid/support/design/internal/SnackbarContentLayout;-&gt;animateContentIn(II)V" />
+      <node id="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" label="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" />
+      <node id="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" label="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="0" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;dispatchOnSlide(I)V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="1" />
+      <edge source="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;start()V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="2" />
+      <edge source="Landroid/support/design/internal/SnackbarContentLayout;-&gt;animateContentIn(II)V" target="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;" id="3" />
+      <edge source="Landroid/support/design/internal/SnackbarContentLayout;-&gt;animateContentIn(II)V" target="Landroid/support/v4/view/ViewPropertyAnimatorCompat;-&gt;start()V" id="4" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" target="Landroid/view/View;-&gt;getTop()I" id="5" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" target="Landroid/support/design/widget/BottomSheetBehavior;-&gt;dispatchOnSlide(I)V" id="6" />
+      <edge source="Landroid/support/design/widget/BottomSheetBehavior;-&gt;onNestedPreScroll(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;II[I)V" target="Ljava/lang/ref/WeakReference;-&gt;get()Ljava/lang/Object;" id="7" />
+    </edges>
+  </graph>
+</gexf>

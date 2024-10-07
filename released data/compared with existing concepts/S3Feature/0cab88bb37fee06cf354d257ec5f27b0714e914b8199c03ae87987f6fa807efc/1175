@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/watchdog/core/e;-&gt;a()V" label="Lcom/android/watchdog/core/e;-&gt;a()V" />
+      <node id="Ljava/lang/Thread;-&gt;sleep(J)V" label="Ljava/lang/Thread;-&gt;sleep(J)V" />
+      <node id="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" label="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" />
+      <node id="Lcom/android/watchdog/core/h;-&gt;o()V" label="Lcom/android/watchdog/core/h;-&gt;o()V" />
+      <node id="Lcom/android/watchdog/core/h;-&gt;a(Landroid/content/Context;)Lcom/android/watchdog/core/h;" label="Lcom/android/watchdog/core/h;-&gt;a(Landroid/content/Context;)Lcom/android/watchdog/core/h;" />
+      <node id="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;" label="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;" />
+      <node id="Lcom/android/watchdog/a/g;-&gt;a(I)V" label="Lcom/android/watchdog/a/g;-&gt;a(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/watchdog/core/e;-&gt;a()V" target="Lcom/android/watchdog/core/h;-&gt;a(Landroid/content/Context;)Lcom/android/watchdog/core/h;" id="0" />
+      <edge source="Lcom/android/watchdog/core/e;-&gt;a()V" target="Lcom/android/watchdog/a/g;-&gt;a(I)V" id="1" />
+      <edge source="Lcom/android/watchdog/core/h;-&gt;o()V" target="Ljava/lang/Thread;-&gt;sleep(J)V" id="2" />
+      <edge source="Lcom/android/watchdog/core/h;-&gt;o()V" target="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" id="3" />
+      <edge source="Lcom/android/watchdog/core/h;-&gt;o()V" target="Lcom/android/watchdog/a/g;-&gt;a(I)V" id="4" />
+      <edge source="Lcom/android/watchdog/core/h;-&gt;a(Landroid/content/Context;)Lcom/android/watchdog/core/h;" target="Lcom/android/watchdog/core/h;-&gt;o()V" id="5" />
+      <edge source="Landroid/support/v4/app/NavUtils;-&gt;getParentActivityIntent(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;" target="Landroid/content/ComponentName;-&gt;&lt;init&gt;(Landroid/content/Context;Ljava/lang/Class;)V" id="6" />
+      <edge source="Lcom/android/watchdog/a/g;-&gt;a(I)V" target="Ljava/lang/Thread;-&gt;sleep(J)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

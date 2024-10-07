@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" label="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" />
+      <node id="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;I)Landroid/content/Intent;" label="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;I)Landroid/content/Intent;" />
+      <node id="Landroid/content/ComponentName;-&gt;flattenToShortString()Ljava/lang/String;" label="Landroid/content/ComponentName;-&gt;flattenToShortString()Ljava/lang/String;" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" label="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" />
+      <node id="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDefaultIcon1(Landroid/database/Cursor;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDefaultIcon1(Landroid/database/Cursor;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getActivityIconWithCache(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;" label="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getActivityIconWithCache(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;" />
+      <node id="Landroid/app/SearchableInfo;-&gt;getSearchActivity()Landroid/content/ComponentName;" label="Landroid/app/SearchableInfo;-&gt;getSearchActivity()Landroid/content/ComponentName;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;I)Landroid/content/Intent;" id="0" />
+      <edge source="Landroid/support/v4/content/WakefulBroadcastReceiver;-&gt;startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;" target="Landroid/content/ComponentName;-&gt;flattenToShortString()Ljava/lang/String;" id="1" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;putExtra(Ljava/lang/String;I)Landroid/content/Intent;" id="2" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" target="Landroid/content/ComponentName;-&gt;flattenToShortString()Ljava/lang/String;" id="3" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;createVoiceAppSearchIntent(Landroid/content/Intent;Landroid/app/SearchableInfo;)Landroid/content/Intent;" target="Landroid/app/SearchableInfo;-&gt;getSearchActivity()Landroid/content/ComponentName;" id="4" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDefaultIcon1(Landroid/database/Cursor;)Landroid/graphics/drawable/Drawable;" target="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getActivityIconWithCache(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;" id="5" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getDefaultIcon1(Landroid/database/Cursor;)Landroid/graphics/drawable/Drawable;" target="Landroid/app/SearchableInfo;-&gt;getSearchActivity()Landroid/content/ComponentName;" id="6" />
+      <edge source="Landroid/support/v7/widget/SuggestionsAdapter;-&gt;getActivityIconWithCache(Landroid/content/ComponentName;)Landroid/graphics/drawable/Drawable;" target="Landroid/content/ComponentName;-&gt;flattenToShortString()Ljava/lang/String;" id="7" />
+    </edges>
+  </graph>
+</gexf>

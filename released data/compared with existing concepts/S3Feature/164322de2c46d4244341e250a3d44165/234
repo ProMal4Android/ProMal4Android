@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" label="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroidx/appcompat/app/TwilightManager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/location/LocationManager;)V" label="Landroidx/appcompat/app/TwilightManager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/location/LocationManager;)V" />
+      <node id="Landroidx/appcompat/app/TwilightManager$TwilightState;-&gt;&lt;init&gt;()V" label="Landroidx/appcompat/app/TwilightManager$TwilightState;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" label="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" />
+      <node id="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" label="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" />
+      <node id="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" label="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/Glide;-&gt;get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="0" />
+      <edge source="Landroidx/appcompat/app/TwilightManager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/location/LocationManager;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroidx/appcompat/app/TwilightManager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/location/LocationManager;)V" target="Landroidx/appcompat/app/TwilightManager$TwilightState;-&gt;&lt;init&gt;()V" id="2" />
+      <edge source="Landroidx/appcompat/app/TwilightManager$TwilightState;-&gt;&lt;init&gt;()V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" target="Landroidx/appcompat/app/TwilightManager;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/location/LocationManager;)V" id="4" />
+      <edge source="Landroidx/appcompat/app/TwilightManager;-&gt;getInstance(Landroid/content/Context;)Landroidx/appcompat/app/TwilightManager;" target="Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;" id="5" />
+      <edge source="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

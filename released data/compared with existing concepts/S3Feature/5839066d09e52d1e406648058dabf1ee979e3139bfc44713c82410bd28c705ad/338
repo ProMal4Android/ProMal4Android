@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" label="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;getActionView()Landroid/view/View;" label="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;getActionView()Landroid/view/View;" />
+      <node id="Landroid/support/v4/view/ActionProvider;-&gt;onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;" label="Landroid/support/v4/view/ActionProvider;-&gt;onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;expandActionView()Z" label="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;expandActionView()Z" />
+      <node id="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;-&gt;isEnabled()Z" label="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;-&gt;isEnabled()Z" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;performItemAction(Landroid/view/MenuItem;Landroid/support/v7/internal/view/menu/MenuPresenter;I)Z" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;performItemAction(Landroid/view/MenuItem;Landroid/support/v7/internal/view/menu/MenuPresenter;I)Z" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;isEnabled()Z" label="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;isEnabled()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" target="Landroid/support/v4/view/ActionProvider;-&gt;onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;" id="0" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;getActionView()Landroid/view/View;" target="Landroid/support/v4/view/ActionProvider;-&gt;onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;" id="1" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;expandActionView()Z" target="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" id="2" />
+      <edge source="Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;-&gt;isEnabled()Z" target="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;isEnabled()Z" id="3" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;performItemAction(Landroid/view/MenuItem;Landroid/support/v7/internal/view/menu/MenuPresenter;I)Z" target="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;hasCollapsibleActionView()Z" id="4" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;performItemAction(Landroid/view/MenuItem;Landroid/support/v7/internal/view/menu/MenuPresenter;I)Z" target="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;expandActionView()Z" id="5" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;performItemAction(Landroid/view/MenuItem;Landroid/support/v7/internal/view/menu/MenuPresenter;I)Z" target="Landroid/support/v7/internal/view/menu/MenuItemImpl;-&gt;isEnabled()Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

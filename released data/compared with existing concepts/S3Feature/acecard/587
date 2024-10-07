@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-18">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onResumeFragments()V" label="Landroid/support/v4/app/FragmentActivity;-&gt;onResumeFragments()V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onPostResume()V" label="Landroid/support/v4/app/FragmentActivity;-&gt;onPostResume()V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onPause()V" label="Landroid/support/v4/app/FragmentActivity;-&gt;onPause()V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;doReallyStop(Z)V" label="Landroid/support/v4/app/FragmentActivity;-&gt;doReallyStop(Z)V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onRetainNonConfigurationInstance()Ljava/lang/Object;" label="Landroid/support/v4/app/FragmentActivity;-&gt;onRetainNonConfigurationInstance()Ljava/lang/Object;" />
+      <node id="Landroid/support/v4/app/FragmentActivity$1;-&gt;handleMessage(Landroid/os/Message;)V" label="Landroid/support/v4/app/FragmentActivity$1;-&gt;handleMessage(Landroid/os/Message;)V" />
+      <node id="Landroid/os/Handler;-&gt;removeMessages(I)V" label="Landroid/os/Handler;-&gt;removeMessages(I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onPostResume()V" target="Landroid/support/v4/app/FragmentActivity;-&gt;onResumeFragments()V" id="0" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onPostResume()V" target="Landroid/os/Handler;-&gt;removeMessages(I)V" id="1" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onPause()V" target="Landroid/support/v4/app/FragmentActivity;-&gt;onResumeFragments()V" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onPause()V" target="Landroid/os/Handler;-&gt;removeMessages(I)V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;doReallyStop(Z)V" target="Landroid/os/Handler;-&gt;removeMessages(I)V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onRetainNonConfigurationInstance()Ljava/lang/Object;" target="Landroid/support/v4/app/FragmentActivity;-&gt;doReallyStop(Z)V" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentActivity$1;-&gt;handleMessage(Landroid/os/Message;)V" target="Landroid/support/v4/app/FragmentActivity;-&gt;onResumeFragments()V" id="6" />
+      <edge source="Landroid/support/v4/app/FragmentActivity$1;-&gt;handleMessage(Landroid/os/Message;)V" target="Landroid/support/v4/app/FragmentActivity;-&gt;doReallyStop(Z)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

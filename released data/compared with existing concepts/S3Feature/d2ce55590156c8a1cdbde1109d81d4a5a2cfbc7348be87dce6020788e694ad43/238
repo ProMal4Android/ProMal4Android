@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;onCloseClicked()V" label="Landroid/support/v7/widget/SearchView;-&gt;onCloseClicked()V" />
+      <node id="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;getText()Landroid/text/Editable;" label="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;getText()Landroid/text/Editable;" />
+      <node id="Landroid/text/TextUtils;-&gt;getTrimmedLength(Ljava/lang/CharSequence;)I" label="Landroid/text/TextUtils;-&gt;getTrimmedLength(Ljava/lang/CharSequence;)I" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;setQuery(Ljava/lang/CharSequence;Z)V" label="Landroid/support/v7/widget/SearchView;-&gt;setQuery(Ljava/lang/CharSequence;Z)V" />
+      <node id="Landroid/support/v7/widget/SearchView;-&gt;onSubmitQuery()V" label="Landroid/support/v7/widget/SearchView;-&gt;onSubmitQuery()V" />
+      <node id="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;isEmpty()Z" label="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;isEmpty()Z" />
+      <node id="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;setText(Ljava/lang/CharSequence;)V" label="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;setText(Ljava/lang/CharSequence;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;onCloseClicked()V" target="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;getText()Landroid/text/Editable;" id="0" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;onCloseClicked()V" target="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;setText(Ljava/lang/CharSequence;)V" id="1" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;setQuery(Ljava/lang/CharSequence;Z)V" target="Landroid/support/v7/widget/SearchView;-&gt;onSubmitQuery()V" id="2" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;setQuery(Ljava/lang/CharSequence;Z)V" target="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;setText(Ljava/lang/CharSequence;)V" id="3" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;onSubmitQuery()V" target="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;getText()Landroid/text/Editable;" id="4" />
+      <edge source="Landroid/support/v7/widget/SearchView;-&gt;onSubmitQuery()V" target="Landroid/text/TextUtils;-&gt;getTrimmedLength(Ljava/lang/CharSequence;)I" id="5" />
+      <edge source="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;isEmpty()Z" target="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;getText()Landroid/text/Editable;" id="6" />
+      <edge source="Landroid/support/v7/widget/SearchView$SearchAutoComplete;-&gt;isEmpty()Z" target="Landroid/text/TextUtils;-&gt;getTrimmedLength(Ljava/lang/CharSequence;)I" id="7" />
+    </edges>
+  </graph>
+</gexf>

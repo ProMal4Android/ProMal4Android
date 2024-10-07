@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/design/widget/CollapsingTextHelper;-&gt;setCollapsedTextAppearance(I)V" label="Landroid/support/design/widget/CollapsingTextHelper;-&gt;setCollapsedTextAppearance(I)V" />
+      <node id="Landroid/support/design/widget/CollapsingTextHelper;-&gt;readFontFamilyTypeface(I)Landroid/graphics/Typeface;" label="Landroid/support/design/widget/CollapsingTextHelper;-&gt;readFontFamilyTypeface(I)Landroid/graphics/Typeface;" />
+      <node id="Landroid/support/v7/widget/TintTypedArray;-&gt;hasValue(I)Z" label="Landroid/support/v7/widget/TintTypedArray;-&gt;hasValue(I)Z" />
+      <node id="Landroid/view/View;-&gt;getContext()Landroid/content/Context;" label="Landroid/view/View;-&gt;getContext()Landroid/content/Context;" />
+      <node id="Landroid/content/Context;-&gt;obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;" label="Landroid/content/Context;-&gt;obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;" />
+      <node id="Landroid/support/v7/widget/TintTypedArray;-&gt;obtainStyledAttributes(Landroid/content/Context;I[I)Landroid/support/v7/widget/TintTypedArray;" label="Landroid/support/v7/widget/TintTypedArray;-&gt;obtainStyledAttributes(Landroid/content/Context;I[I)Landroid/support/v7/widget/TintTypedArray;" />
+      <node id="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" label="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/design/widget/CollapsingTextHelper;-&gt;setCollapsedTextAppearance(I)V" target="Landroid/support/design/widget/CollapsingTextHelper;-&gt;readFontFamilyTypeface(I)Landroid/graphics/Typeface;" id="0" />
+      <edge source="Landroid/support/design/widget/CollapsingTextHelper;-&gt;setCollapsedTextAppearance(I)V" target="Landroid/support/v7/widget/TintTypedArray;-&gt;hasValue(I)Z" id="1" />
+      <edge source="Landroid/support/design/widget/CollapsingTextHelper;-&gt;setCollapsedTextAppearance(I)V" target="Landroid/view/View;-&gt;getContext()Landroid/content/Context;" id="2" />
+      <edge source="Landroid/support/design/widget/CollapsingTextHelper;-&gt;setCollapsedTextAppearance(I)V" target="Landroid/support/v7/widget/TintTypedArray;-&gt;obtainStyledAttributes(Landroid/content/Context;I[I)Landroid/support/v7/widget/TintTypedArray;" id="3" />
+      <edge source="Landroid/support/design/widget/CollapsingTextHelper;-&gt;readFontFamilyTypeface(I)Landroid/graphics/Typeface;" target="Landroid/view/View;-&gt;getContext()Landroid/content/Context;" id="4" />
+      <edge source="Landroid/support/design/widget/CollapsingTextHelper;-&gt;readFontFamilyTypeface(I)Landroid/graphics/Typeface;" target="Landroid/content/Context;-&gt;obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;" id="5" />
+      <edge source="Landroid/support/v7/widget/TintTypedArray;-&gt;obtainStyledAttributes(Landroid/content/Context;I[I)Landroid/support/v7/widget/TintTypedArray;" target="Landroid/content/Context;-&gt;obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;" id="6" />
+      <edge source="Landroid/support/v7/widget/SwitchCompat;-&gt;setSwitchTextAppearance(Landroid/content/Context;I)V" target="Landroid/support/v7/widget/TintTypedArray;-&gt;obtainStyledAttributes(Landroid/content/Context;I[I)Landroid/support/v7/widget/TintTypedArray;" id="7" />
+    </edges>
+  </graph>
+</gexf>

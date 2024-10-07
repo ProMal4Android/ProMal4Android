@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/arch/lifecycle/Lifecycling;-&gt;getCallback(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" label="Landroid/arch/lifecycle/Lifecycling;-&gt;getCallback(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" />
+      <node id="Landroid/arch/lifecycle/LifecycleRegistry$ObserverWithState;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/LifecycleObserver;Landroid/arch/lifecycle/Lifecycle$State;)V" label="Landroid/arch/lifecycle/LifecycleRegistry$ObserverWithState;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/LifecycleObserver;Landroid/arch/lifecycle/Lifecycle$State;)V" />
+      <node id="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;addObserver(Landroid/arch/lifecycle/LifecycleObserver;)V" label="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;addObserver(Landroid/arch/lifecycle/LifecycleObserver;)V" />
+      <node id="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" label="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" />
+      <node id="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;pushParentState(Landroid/arch/lifecycle/Lifecycle$State;)V" label="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;pushParentState(Landroid/arch/lifecycle/Lifecycle$State;)V" />
+      <node id="Landroid/arch/lifecycle/FullLifecycleObserverAdapter;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/FullLifecycleObserver;)V" label="Landroid/arch/lifecycle/FullLifecycleObserverAdapter;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/FullLifecycleObserver;)V" />
+      <node id="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" label="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/arch/lifecycle/Lifecycling;-&gt;getCallback(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" target="Landroid/arch/lifecycle/FullLifecycleObserverAdapter;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/FullLifecycleObserver;)V" id="0" />
+      <edge source="Landroid/arch/lifecycle/LifecycleRegistry$ObserverWithState;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/LifecycleObserver;Landroid/arch/lifecycle/Lifecycle$State;)V" target="Landroid/arch/lifecycle/Lifecycling;-&gt;getCallback(Ljava/lang/Object;)Landroid/arch/lifecycle/GenericLifecycleObserver;" id="1" />
+      <edge source="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;addObserver(Landroid/arch/lifecycle/LifecycleObserver;)V" target="Landroid/arch/lifecycle/LifecycleRegistry$ObserverWithState;-&gt;&lt;init&gt;(Landroid/arch/lifecycle/LifecycleObserver;Landroid/arch/lifecycle/Lifecycle$State;)V" id="2" />
+      <edge source="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;addObserver(Landroid/arch/lifecycle/LifecycleObserver;)V" target="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;pushParentState(Landroid/arch/lifecycle/Lifecycle$State;)V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentStatePagerAdapter;-&gt;destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V" target="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" id="4" />
+      <edge source="Landroid/arch/lifecycle/LifecycleRegistry;-&gt;pushParentState(Landroid/arch/lifecycle/Lifecycle$State;)V" target="Ljava/util/ArrayList;-&gt;add(Ljava/lang/Object;)Z" id="5" />
+    </edges>
+  </graph>
+</gexf>

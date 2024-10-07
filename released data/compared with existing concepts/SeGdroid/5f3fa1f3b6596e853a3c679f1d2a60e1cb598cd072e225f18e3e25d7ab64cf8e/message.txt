@@ -1,0 +1,6 @@
+apk_name:5f3fa1f3b6596e853a3c679f1d2a60e1cb598cd072e225f18e3e25d7ab64cf8e
+node_number:23592
+edge_number:46951
+fcg_graph_time:4.693299770355225
+SeGdroid: Sensitive FCG Nodes:5244
+SeGdroid: Sensitive FCG Edges:7570

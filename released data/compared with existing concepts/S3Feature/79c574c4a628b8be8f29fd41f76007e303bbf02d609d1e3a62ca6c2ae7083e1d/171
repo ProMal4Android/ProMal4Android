@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/NotificationCompatSideChannelService;-&gt;onBind(Landroid/content/Intent;)Landroid/os/IBinder;" label="Landroid/support/v4/app/NotificationCompatSideChannelService;-&gt;onBind(Landroid/content/Intent;)Landroid/os/IBinder;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;addStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;addStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" label="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" />
+      <node id="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" label="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" />
+      <node id="Landroid/content/Intent;-&gt;getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;" label="Landroid/content/Intent;-&gt;getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;" />
+      <node id="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" label="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Lf;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" label="Lf;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/NotificationCompatSideChannelService;-&gt;onBind(Landroid/content/Intent;)Landroid/os/IBinder;" target="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" id="0" />
+      <edge source="Landroid/support/v4/app/NotificationCompatSideChannelService;-&gt;onBind(Landroid/content/Intent;)Landroid/os/IBinder;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="1" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;addStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" id="2" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;addStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Landroid/content/Intent;-&gt;getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;" id="3" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" id="4" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentBuilder;-&gt;setStream(Landroid/net/Uri;)Landroid/support/v4/app/ShareCompat$IntentBuilder;" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="5" />
+      <edge source="Lf;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Intent;-&gt;getAction()Ljava/lang/String;" id="6" />
+      <edge source="Lf;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Landroid/content/Intent;-&gt;getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;" id="7" />
+      <edge source="Lf;-&gt;onReceive(Landroid/content/Context;Landroid/content/Intent;)V" target="Ljava/lang/String;-&gt;equals(Ljava/lang/Object;)Z" id="8" />
+    </edges>
+  </graph>
+</gexf>

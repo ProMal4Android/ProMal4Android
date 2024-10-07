@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/fragment/app/FragmentHostCallback;-&gt;getHandler()Landroid/os/Handler;" label="Landroidx/fragment/app/FragmentHostCallback;-&gt;getHandler()Landroid/os/Handler;" />
+      <node id="Landroidx/fragment/app/FragmentManagerImpl;-&gt;ensureExecReady(Z)V" label="Landroidx/fragment/app/FragmentManagerImpl;-&gt;ensureExecReady(Z)V" />
+      <node id="Landroidx/fragment/app/FragmentManagerImpl;-&gt;execPendingActions()Z" label="Landroidx/fragment/app/FragmentManagerImpl;-&gt;execPendingActions()Z" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;onStart()V" label="Landroidx/fragment/app/Fragment;-&gt;onStart()V" />
+      <node id="Landroidx/fragment/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" label="Landroidx/fragment/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" />
+      <node id="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onStart()V" label="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onStart()V" />
+      <node id="Landroidx/fragment/app/Fragment;-&gt;performStart()V" label="Landroidx/fragment/app/Fragment;-&gt;performStart()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/fragment/app/FragmentManagerImpl;-&gt;ensureExecReady(Z)V" target="Landroidx/fragment/app/FragmentHostCallback;-&gt;getHandler()Landroid/os/Handler;" id="0" />
+      <edge source="Landroidx/fragment/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Landroidx/fragment/app/FragmentManagerImpl;-&gt;ensureExecReady(Z)V" id="1" />
+      <edge source="Landroidx/fragment/app/FragmentManagerImpl;-&gt;execPendingActions()Z" target="Landroidx/fragment/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" id="2" />
+      <edge source="Landroidx/fragment/app/FragmentManagerImpl;-&gt;generateOpsForPendingActions(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z" target="Landroidx/fragment/app/FragmentHostCallback;-&gt;getHandler()Landroid/os/Handler;" id="3" />
+      <edge source="Lcom/bumptech/glide/manager/SupportRequestManagerFragment;-&gt;onStart()V" target="Landroidx/fragment/app/Fragment;-&gt;onStart()V" id="4" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;performStart()V" target="Landroidx/fragment/app/FragmentManagerImpl;-&gt;execPendingActions()Z" id="5" />
+      <edge source="Landroidx/fragment/app/Fragment;-&gt;performStart()V" target="Landroidx/fragment/app/Fragment;-&gt;onStart()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

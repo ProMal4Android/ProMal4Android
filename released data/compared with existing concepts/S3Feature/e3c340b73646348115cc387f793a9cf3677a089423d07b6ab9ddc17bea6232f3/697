@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" label="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" />
+      <node id="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/k/j;)Landroid/content/Intent;" label="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/k/j;)Landroid/content/Intent;" />
+      <node id="Lcom/facebook/ads/internal/k/g;-&gt;a(Landroid/content/Context;Lcom/facebook/ads/internal/k/g$a;)Z" label="Lcom/facebook/ads/internal/k/g;-&gt;a(Landroid/content/Context;Lcom/facebook/ads/internal/k/g$a;)Z" />
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" label="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" />
+      <node id="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" label="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" />
+      <node id="Lcom/facebook/ads/internal/k/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" label="Lcom/facebook/ads/internal/k/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="0" />
+      <edge source="Landroid/support/customtabs/CustomTabsClient;-&gt;getPackageName(Landroid/content/Context;Ljava/util/List;Z)Ljava/lang/String;" target="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" id="1" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/k/j;)Landroid/content/Intent;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="2" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/k/j;)Landroid/content/Intent;" target="Landroid/content/Intent;-&gt;&lt;init&gt;(Ljava/lang/String;Landroid/net/Uri;)V" id="3" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/k/j;)Landroid/content/Intent;" target="Lcom/facebook/ads/internal/k/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" id="4" />
+      <edge source="Lcom/facebook/ads/internal/k/g;-&gt;a(Landroid/content/Context;Lcom/facebook/ads/internal/k/g$a;)Z" target="Lcom/facebook/ads/internal/k/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" id="5" />
+      <edge source="Landroid/support/v4/app/TaskStackBuilder;-&gt;addNextIntentWithParentStack(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="6" />
+      <edge source="Lcom/facebook/ads/internal/k/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="7" />
+    </edges>
+  </graph>
+</gexf>

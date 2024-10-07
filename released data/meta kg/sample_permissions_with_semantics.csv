@@ -1,0 +1,76 @@
+id,perID,perName,semantic
+1,1,android.permission.READ_EXTERNAL_STORAGE,Allows an application to read from external storage.
+2,2,android.permission.READ_CONTACTS,Allows an application to read the user's contacts data.
+3,3,android.permission.WRITE_CONTACTS,Allows an application to write the user's contacts data.
+4,4,android.permission.INTERNET,Allows applications to open network sockets.
+5,5,android.permission.CLEAR_APP_CACHE,Allows an application to clear the caches of all installed applications on the device.
+6,6,android.permission.SYSTEM_ALERT_WINDOW,Allows an application to create windows shown on top of all other apps.
+7,7,android.permission.READ_PHONE_STATE,"Allows an application to access the phone's state, including the network, phone number, and in-call status."
+8,8,android.permission.READ_SMS,Allows an application to read SMS messages stored on the device.
+9,9,android.permission.READ_CALL_LOG,Allows an application to read the user's call log.
+10,10,android.permission.ACCESS_NETWORK_STATE,"Allows an application to view information about network connections, such as which networks are connected."
+11,11,android.permission.SEND_SMS,Allows an application to send SMS messages.
+12,12,com.android.launcher.permission.INSTALL_SHORTCUT,Allows an application to add shortcuts in the Launcher.
+13,13,android.permission.CHANGE_WIFI_STATE,Allows an application to change Wi-Fi connectivity state.
+14,14,android.permission.GET_TASKS,Allows an application to get information about the currently or recently running tasks.
+15,15,android.permission.ACCESS_WIFI_STATE,Allows applications to access information about Wi-Fi networks.
+16,16,android.permission.CALL_PHONE,Allows an application to initiate a phone call without going through the dialer interface.
+17,17,android.permission.WRITE_SMS,Allows an application to write SMS messages.
+18,18,android.permission.RECEIVE_SMS,"Allows an application to monitor incoming SMS messages, to record or perform processing based on them."
+19,19,android.permission.WAKE_LOCK,Allows using PowerManager WakeLocks to keep the processor from sleeping or the screen from dimming.
+20,20,android.permission.ACCESS_COARSE_LOCATION,Allows an application to access approximate location.
+21,21,android.permission.ACCESS_FINE_LOCATION,Allows an application to access precise location (using GPS or network location sources).
+22,22,android.permission.WRITE_EXTERNAL_STORAGE,Allows an application to write to external storage.
+23,23,android.permission.RECEIVE_BOOT_COMPLETED,Allows an application to receive the action when the system has finished booting.
+24,24,android.permission.ACCESS_BACKGROUND_LOCATION,Allows an application to access location in the background.
+25,25,android.permission.ANSWER_PHONE_CALLS,Allows an application to answer incoming phone calls.
+26,26,android.permission.BIND_DEVICE_ADMIN,Allows an application to manage the device's policies.
+27,27,android.permission.BIND_NOTIFICATION_LISTENER_SERVICE,"Allows an application to act as a notification listener, receiving updates on the notifications received on the device."
+28,28,android.permission.CALL_PRIVILEGED,Allows an application to place privileged phone calls without user intervention.
+29,29,android.permission.CHANGE_NETWORK_STATE,Allows an application to change the state of network connectivity.
+30,30,android.permission.CLEAR_APP_USER_DATA,Allows an application to clear user data for all apps on the device.
+31,31,android.permission.DELETE_CACHE_FILES,Allows an application to delete cache files.
+32,32,android.permission.DEVICE_POWER,Allows low-level access to power management.
+33,33,android.permission.FOREGROUND_SERVICE,Allows an app to start a foreground service.
+34,34,android.permission.INSTALL_PACKAGES,Allows an application to install packages.
+35,35,android.permission.MODIFY_PHONE_STATE,"Allows modification of the phone's state, such as turning on/off network services."
+36,36,android.permission.QUERY_ALL_PACKAGES,Allows querying any normal app installed on the device.
+37,37,android.permission.READ_LOGS,Allows an application to read the system's low-level log files.
+38,38,android.permission.READ_PHONE_NUMBERS,Allows an application to read the user's phone number and related data.
+39,39,android.permission.READ_PRIVILEGED_PHONE_STATE,"Allows privileged access to the phone's state, such as network information and ongoing call status."
+40,40,android.permission.REQUEST_DELETE_PACKAGES,Allows an application to request the deletion of installed packages.
+41,41,android.permission.REQUEST_INSTALL_PACKAGES,Allows an application to request installing packages.
+42,42,android.permission.SET_ALWAYS_FINISH,Allows an application to control whether activities are finished as soon as they go to the background.
+43,43,android.permission.START_VIEW_PERMISSION_USAGE,Allows an application to view permission usage statistics for other apps.
+44,44,android.permission.SUBSCRIBED_FEEDS_READ,Allows an application to access subscribed web feeds.
+45,45,android.permission.USE_ICC_AUTH_WITH_DEVICE_IDENTIFIER,Allows an application to use ICC (Integrated Circuit Card) authentication with a device identifier.
+46,46,android.permission.WRITE_SECURE_SETTINGS,Allows an application to read or write the system's secure settings.
+47,47,com.android.browser.permission.READ_HISTORY_BOOKMARKS,Allows an application to read the browser's history and bookmarks.
+48,48,android.permission.PROCESS_OUTGOING_CALLS,Allows an application to monitor and process outgoing calls.
+49,49,android.permission.CHANGE_WIFI_MULTICAST_STATE,Allows an application to enter multicast mode for Wi-Fi connections.
+50,50,android.permission.EXPAND_STATUS_BAR,Allows an application to expand or collapse the status bar.
+51,51,com.oppo.launcher.permission.WRITE_SETTINGS,Allows the Oppo launcher to write system settings.
+52,52,android.permission.PACKAGE_USAGE_STATS,Allows an application to collect component usage statistics.
+53,53,android.permission.READ_SETTINGS,Allows an application to read the system's settings.
+54,54,com.android.launcher.permission.WRITE_SETTINGS,Allows the Android launcher to write system settings.
+55,55,com.android.browser.permission.WRITE_HISTORY_BOOKMARKS,Allows an application to write the browser's history and bookmarks.
+56,56,android.permission.VIBRATE,Allows access to the device's vibrator.
+57,57,android.intent.action.BOOT_COMPLETED,Broadcasts when the system has finished booting.
+58,58,android.permission.DISABLE_KEYGUARD,Allows applications to disable the keyguard if it is not secure.
+59,59,android.permission.BLUETOOTH,Allows applications to connect to paired Bluetooth devices.
+60,60,android.permission.BATTERY_STATS,Allows an application to collect battery statistics.
+61,61,android.permission.GET_ACCOUNTS,Allows access to the list of accounts in the Accounts Service.
+62,62,android.permission.WRITE_SETTINGS,Allows an application to modify the system's settings data.
+63,63,android.permission.BLUETOOTH_ADMIN,Allows applications to discover and pair Bluetooth devices.
+64,64,android.permission.ACCESS_WAKE_LOCK,Allows an application to prevent the phone from going to sleep.
+65,65,android.permission.CAMERA,Allows an application to access the device's camera.
+66,66,android.permission.SYSTEM_OVERLAY_WINDOW,Allows an application to display system alert windows on top of other apps.
+67,67,android.permission.READ_SECURE_SETTINGS,Allows an application to read the system's secure settings.
+68,68,android.permission.WRITE_SYNC_SETTINGS,Allows applications to write the sync settings for all accounts.
+69,69,android.permission.RECEIVE_USER_PRESENT,Allows an application to receive a broadcast when the user is present after the screen is turned on.
+70,70,android.permission.AUTHENTICATE_ACCOUNTS,Allows an application to act as an AccountAuthenticator for the AccountManager.
+71,71,com.android.launcher.permission.UNINSTALL_SHORTCUT,Allows an application to uninstall shortcuts in the Launcher.
+72,72,android.permission.BROADCAST_PACKAGE_REMOVED,Allows an application to broadcast a notification that a package was removed.
+73,73,android.permission.RESTART_PACKAGES,Allows an application to restart other applications.
+74,74,android.permission.WRITE_APN_SETTINGS,Allows an application to write the settings for Access Point Names.
+75,75,android.permission.MOUNT_UNMOUNT_FILESYSTEMS,Allows an application to mount and unmount filesystems for removable storage.

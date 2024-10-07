@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/android/common/content/SyncStateContentProviderHelper;-&gt;createDatabase(Landroid/database/sqlite/SQLiteDatabase;)V" label="Lcom/android/common/content/SyncStateContentProviderHelper;-&gt;createDatabase(Landroid/database/sqlite/SQLiteDatabase;)V" />
+      <node id="Lcom/android/messaging/helper/Assert;-&gt;fail(Ljava/lang/String;Z)V" label="Lcom/android/messaging/helper/Assert;-&gt;fail(Ljava/lang/String;Z)V" />
+      <node id="Lcom/android/messaging/helper/Assert;-&gt;notNull(Ljava/lang/Object;)V" label="Lcom/android/messaging/helper/Assert;-&gt;notNull(Ljava/lang/Object;)V" />
+      <node id="Lcom/android/messaging/datamodel/BugleDatabaseOperations;-&gt;addParticipantToConversation(Lcom/android/messaging/datamodel/DatabaseWrapper;Lcom/android/messaging/datamodel/data/ParticipantData;Ljava/lang/String;)V" label="Lcom/android/messaging/datamodel/BugleDatabaseOperations;-&gt;addParticipantToConversation(Lcom/android/messaging/datamodel/DatabaseWrapper;Lcom/android/messaging/datamodel/data/ParticipantData;Ljava/lang/String;)V" />
+      <node id="Landroid/content/ContentValues;-&gt;&lt;init&gt;()V" label="Landroid/content/ContentValues;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/android/messaging/datamodel/BitmapPool;-&gt;decodeByteArray([BLandroid/graphics/BitmapFactory$Options;II)Landroid/graphics/Bitmap;" label="Lcom/android/messaging/datamodel/BitmapPool;-&gt;decodeByteArray([BLandroid/graphics/BitmapFactory$Options;II)Landroid/graphics/Bitmap;" />
+      <node id="Lcom/android/messaging/helper/Assert;-&gt;isTrue(Z)V" label="Lcom/android/messaging/helper/Assert;-&gt;isTrue(Z)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/common/content/SyncStateContentProviderHelper;-&gt;createDatabase(Landroid/database/sqlite/SQLiteDatabase;)V" target="Landroid/content/ContentValues;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Lcom/android/messaging/helper/Assert;-&gt;notNull(Ljava/lang/Object;)V" target="Lcom/android/messaging/helper/Assert;-&gt;fail(Ljava/lang/String;Z)V" id="1" />
+      <edge source="Lcom/android/messaging/datamodel/BugleDatabaseOperations;-&gt;addParticipantToConversation(Lcom/android/messaging/datamodel/DatabaseWrapper;Lcom/android/messaging/datamodel/data/ParticipantData;Ljava/lang/String;)V" target="Lcom/android/messaging/helper/Assert;-&gt;notNull(Ljava/lang/Object;)V" id="2" />
+      <edge source="Lcom/android/messaging/datamodel/BugleDatabaseOperations;-&gt;addParticipantToConversation(Lcom/android/messaging/datamodel/DatabaseWrapper;Lcom/android/messaging/datamodel/data/ParticipantData;Ljava/lang/String;)V" target="Landroid/content/ContentValues;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Lcom/android/messaging/datamodel/BitmapPool;-&gt;decodeByteArray([BLandroid/graphics/BitmapFactory$Options;II)Landroid/graphics/Bitmap;" target="Lcom/android/messaging/helper/Assert;-&gt;notNull(Ljava/lang/Object;)V" id="4" />
+      <edge source="Lcom/android/messaging/datamodel/BitmapPool;-&gt;decodeByteArray([BLandroid/graphics/BitmapFactory$Options;II)Landroid/graphics/Bitmap;" target="Lcom/android/messaging/helper/Assert;-&gt;isTrue(Z)V" id="5" />
+      <edge source="Lcom/android/messaging/helper/Assert;-&gt;isTrue(Z)V" target="Lcom/android/messaging/helper/Assert;-&gt;fail(Ljava/lang/String;Z)V" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;Landroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" label="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;Landroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" />
+      <node id="Landroid/support/v4/util/ArrayMap;-&gt;size()I" label="Landroid/support/v4/util/ArrayMap;-&gt;size()I" />
+      <node id="Landroid/support/transition/TransitionPort;-&gt;createAnimators(Landroid/view/ViewGroup;Landroid/support/transition/TransitionValuesMaps;Landroid/support/transition/TransitionValuesMaps;)V" label="Landroid/support/transition/TransitionPort;-&gt;createAnimators(Landroid/view/ViewGroup;Landroid/support/transition/TransitionValuesMaps;Landroid/support/transition/TransitionValuesMaps;)V" />
+      <node id="Landroid/support/transition/TransitionPort;-&gt;playTransition(Landroid/view/ViewGroup;)V" label="Landroid/support/transition/TransitionPort;-&gt;playTransition(Landroid/view/ViewGroup;)V" />
+      <node id="Landroid/view/ViewGroup;-&gt;getContext()Landroid/content/Context;" label="Landroid/view/ViewGroup;-&gt;getContext()Landroid/content/Context;" />
+      <node id="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" label="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" />
+      <node id="Landroid/support/v4/util/ArrayMap;-&gt;&lt;init&gt;(Landroid/support/v4/util/SimpleArrayMap;)V" label="Landroid/support/v4/util/ArrayMap;-&gt;&lt;init&gt;(Landroid/support/v4/util/SimpleArrayMap;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;Landroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" target="Landroid/view/ViewGroup;-&gt;getContext()Landroid/content/Context;" id="0" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;createAnimators(Landroid/view/ViewGroup;Landroid/support/transition/TransitionValuesMaps;Landroid/support/transition/TransitionValuesMaps;)V" target="Landroid/support/v4/util/ArrayMap;-&gt;size()I" id="1" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;createAnimators(Landroid/view/ViewGroup;Landroid/support/transition/TransitionValuesMaps;Landroid/support/transition/TransitionValuesMaps;)V" target="Landroid/support/v4/util/ArrayMap;-&gt;&lt;init&gt;(Landroid/support/v4/util/SimpleArrayMap;)V" id="2" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;playTransition(Landroid/view/ViewGroup;)V" target="Landroid/support/v4/util/ArrayMap;-&gt;size()I" id="3" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;playTransition(Landroid/view/ViewGroup;)V" target="Landroid/support/transition/TransitionPort;-&gt;createAnimators(Landroid/view/ViewGroup;Landroid/support/transition/TransitionValuesMaps;Landroid/support/transition/TransitionValuesMaps;)V" id="4" />
+      <edge source="Landroid/support/transition/TransitionPort;-&gt;playTransition(Landroid/view/ViewGroup;)V" target="Landroid/view/ViewGroup;-&gt;getContext()Landroid/content/Context;" id="5" />
+      <edge source="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" target="Landroid/support/v4/widget/ViewDragHelper;-&gt;create(Landroid/view/ViewGroup;Landroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;" id="6" />
+    </edges>
+  </graph>
+</gexf>

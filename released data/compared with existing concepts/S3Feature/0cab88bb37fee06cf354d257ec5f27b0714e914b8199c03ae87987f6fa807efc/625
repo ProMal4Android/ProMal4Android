@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" />
+      <node id="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;addItemView(Landroid/view/View;I)V" label="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;addItemView(Landroid/view/View;I)V" />
+      <node id="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" label="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" />
+      <node id="Ljava/util/ArrayList;-&gt;clear()V" label="Ljava/util/ArrayList;-&gt;clear()V" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;flagActionItems()V" label="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;flagActionItems()V" />
+      <node id="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" label="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" />
+      <node id="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" label="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" target="Ljava/util/ArrayList;-&gt;clear()V" id="0" />
+      <edge source="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;addItemView(Landroid/view/View;I)V" target="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" id="1" />
+      <edge source="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" id="2" />
+      <edge source="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;addItemView(Landroid/view/View;I)V" id="3" />
+      <edge source="Landroid/support/v7/internal/view/menu/BaseMenuPresenter;-&gt;updateMenuView(Z)V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;flagActionItems()V" id="4" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;flagActionItems()V" target="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;getVisibleItems()Ljava/util/ArrayList;" id="5" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuBuilder;-&gt;flagActionItems()V" target="Ljava/util/ArrayList;-&gt;clear()V" id="6" />
+      <edge source="Landroid/support/v4/view/ViewPager;-&gt;removeView(Landroid/view/View;)V" target="Landroid/view/ViewGroup;-&gt;removeView(Landroid/view/View;)V" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/amazon/device/ads/ThreadUtils$ThreadVerify;-&gt;isOnMainThread()Z" label="Lcom/amazon/device/ads/ThreadUtils$ThreadVerify;-&gt;isOnMainThread()Z" />
+      <node id="Landroid/support/v4/widget/EdgeEffectCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" label="Landroid/support/v4/widget/EdgeEffectCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" />
+      <node id="Landroid/support/v4/app/ActivityCompat;-&gt;requestPermissions(Landroid/app/Activity;[Ljava/lang/String;I)V" label="Landroid/support/v4/app/ActivityCompat;-&gt;requestPermissions(Landroid/app/Activity;[Ljava/lang/String;I)V" />
+      <node id="Lcom/amazon/device/ads/SISRegistration;-&gt;registerEvents()V" label="Lcom/amazon/device/ads/SISRegistration;-&gt;registerEvents()V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Landroid/support/v4/app/ActivityCompat$1;-&gt;&lt;init&gt;([Ljava/lang/String;Landroid/app/Activity;I)V" label="Landroid/support/v4/app/ActivityCompat$1;-&gt;&lt;init&gt;([Ljava/lang/String;Landroid/app/Activity;I)V" />
+      <node id="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" label="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/amazon/device/ads/ThreadUtils$ThreadVerify;-&gt;isOnMainThread()Z" target="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" id="0" />
+      <edge source="Landroid/support/v4/widget/EdgeEffectCompat;-&gt;&lt;init&gt;(Landroid/content/Context;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="1" />
+      <edge source="Landroid/support/v4/app/ActivityCompat;-&gt;requestPermissions(Landroid/app/Activity;[Ljava/lang/String;I)V" target="Landroid/support/v4/app/ActivityCompat$1;-&gt;&lt;init&gt;([Ljava/lang/String;Landroid/app/Activity;I)V" id="2" />
+      <edge source="Landroid/support/v4/app/ActivityCompat;-&gt;requestPermissions(Landroid/app/Activity;[Ljava/lang/String;I)V" target="Landroid/os/Looper;-&gt;getMainLooper()Landroid/os/Looper;" id="3" />
+      <edge source="Lcom/amazon/device/ads/SISRegistration;-&gt;registerEvents()V" target="Lcom/amazon/device/ads/ThreadUtils$ThreadVerify;-&gt;isOnMainThread()Z" id="4" />
+      <edge source="Landroid/support/v4/app/ActivityCompat$1;-&gt;&lt;init&gt;([Ljava/lang/String;Landroid/app/Activity;I)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="5" />
+    </edges>
+  </graph>
+</gexf>

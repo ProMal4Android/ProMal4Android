@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;addHisoricalRecord(Landroid/support/v7/internal/widget/ActivityChooserModel$HistoricalRecord;)Z" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;addHisoricalRecord(Landroid/support/v7/internal/widget/ActivityChooserModel$HistoricalRecord;)Z" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" />
+      <node id="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" label="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" />
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" />
+      <node id="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" label="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;addHisoricalRecord(Landroid/support/v7/internal/widget/ActivityChooserModel$HistoricalRecord;)Z" target="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" id="0" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;addHisoricalRecord(Landroid/support/v7/internal/widget/ActivityChooserModel$HistoricalRecord;)Z" target="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" id="1" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" target="Ljava/util/List;-&gt;size()I" id="2" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" target="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;pruneExcessiveHistoricalRecordsIfNeeded()V" id="3" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" target="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" target="Ljava/util/List;-&gt;add(Ljava/lang/Object;)Z" id="5" />
+      <edge source="Landroid/support/v4/app/FragmentTransitionCompat21;-&gt;bfsAddViewChildren(Ljava/util/List;Landroid/view/View;)V" target="Ljava/util/List;-&gt;size()I" id="6" />
+    </edges>
+  </graph>
+</gexf>

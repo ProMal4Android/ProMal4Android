@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getDescription()Landroid/support/v4/media/MediaDescriptionCompat;" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getDescription()Landroid/support/v4/media/MediaDescriptionCompat;" />
+      <node id="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" label="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getText(Ljava/lang/String;)Ljava/lang/CharSequence;" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getText(Ljava/lang/String;)Ljava/lang/CharSequence;" />
+      <node id="Ljava/lang/String;-&gt;toUpperCase(Ljava/util/Locale;)Ljava/lang/String;" label="Ljava/lang/String;-&gt;toUpperCase(Ljava/util/Locale;)Ljava/lang/String;" />
+      <node id="Landroid/os/Bundle;-&gt;getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;" label="Landroid/os/Bundle;-&gt;getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;" />
+      <node id="Landroidx/appcompat/c/a;-&gt;getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;" label="Landroidx/appcompat/c/a;-&gt;getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;" />
+      <node id="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" label="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getDescription()Landroid/support/v4/media/MediaDescriptionCompat;" target="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getText(Ljava/lang/String;)Ljava/lang/CharSequence;" id="0" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getDescription()Landroid/support/v4/media/MediaDescriptionCompat;" target="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" id="1" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getText(Ljava/lang/String;)Ljava/lang/CharSequence;" target="Landroid/os/Bundle;-&gt;getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;" id="2" />
+      <edge source="Landroidx/appcompat/c/a;-&gt;getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;" target="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" id="3" />
+      <edge source="Landroidx/appcompat/c/a;-&gt;getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;" target="Ljava/lang/String;-&gt;toUpperCase(Ljava/util/Locale;)Ljava/lang/String;" id="4" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" target="Ljava/lang/CharSequence;-&gt;toString()Ljava/lang/String;" id="5" />
+      <edge source="Landroid/support/v4/media/MediaMetadataCompat;-&gt;getString(Ljava/lang/String;)Ljava/lang/String;" target="Landroid/os/Bundle;-&gt;getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/loader/content/CursorLoader;-&gt;loadInBackground()Landroid/database/Cursor;" label="Landroidx/loader/content/CursorLoader;-&gt;loadInBackground()Landroid/database/Cursor;" />
+      <node id="Lcom/android/ex/photo/loaders/PhotoPagerLoader;-&gt;loadInBackground()Landroid/database/Cursor;" label="Lcom/android/ex/photo/loaders/PhotoPagerLoader;-&gt;loadInBackground()Landroid/database/Cursor;" />
+      <node id="Landroidx/core/os/OperationCanceledException;-&gt;&lt;init&gt;()V" label="Landroidx/core/os/OperationCanceledException;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/android/common/contacts/BaseEmailAddressAdapter$DefaultPartitionFilter;-&gt;performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;" label="Lcom/android/common/contacts/BaseEmailAddressAdapter$DefaultPartitionFilter;-&gt;performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;" />
+      <node id="Landroid/content/ContentResolver;-&gt;query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;" label="Landroid/content/ContentResolver;-&gt;query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;" />
+      <node id="Landroid/net/Uri;-&gt;buildUpon()Landroid/net/Uri$Builder;" label="Landroid/net/Uri;-&gt;buildUpon()Landroid/net/Uri$Builder;" />
+      <node id="Landroidx/core/content/ContentResolverCompat;-&gt;query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroidx/core/os/CancellationSignal;)Landroid/database/Cursor;" label="Landroidx/core/content/ContentResolverCompat;-&gt;query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroidx/core/os/CancellationSignal;)Landroid/database/Cursor;" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/loader/content/CursorLoader;-&gt;loadInBackground()Landroid/database/Cursor;" target="Landroidx/core/os/OperationCanceledException;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroidx/loader/content/CursorLoader;-&gt;loadInBackground()Landroid/database/Cursor;" target="Landroidx/core/content/ContentResolverCompat;-&gt;query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroidx/core/os/CancellationSignal;)Landroid/database/Cursor;" id="1" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoPagerLoader;-&gt;loadInBackground()Landroid/database/Cursor;" target="Landroidx/loader/content/CursorLoader;-&gt;loadInBackground()Landroid/database/Cursor;" id="2" />
+      <edge source="Lcom/android/ex/photo/loaders/PhotoPagerLoader;-&gt;loadInBackground()Landroid/database/Cursor;" target="Landroid/net/Uri;-&gt;buildUpon()Landroid/net/Uri$Builder;" id="3" />
+      <edge source="Lcom/android/common/contacts/BaseEmailAddressAdapter$DefaultPartitionFilter;-&gt;performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;" target="Landroid/content/ContentResolver;-&gt;query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;" id="4" />
+      <edge source="Lcom/android/common/contacts/BaseEmailAddressAdapter$DefaultPartitionFilter;-&gt;performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;" target="Landroid/net/Uri;-&gt;buildUpon()Landroid/net/Uri$Builder;" id="5" />
+      <edge source="Landroidx/core/content/ContentResolverCompat;-&gt;query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroidx/core/os/CancellationSignal;)Landroid/database/Cursor;" target="Landroidx/core/os/OperationCanceledException;-&gt;&lt;init&gt;()V" id="6" />
+      <edge source="Landroidx/core/content/ContentResolverCompat;-&gt;query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroidx/core/os/CancellationSignal;)Landroid/database/Cursor;" target="Landroid/content/ContentResolver;-&gt;query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;" id="7" />
+    </edges>
+  </graph>
+</gexf>

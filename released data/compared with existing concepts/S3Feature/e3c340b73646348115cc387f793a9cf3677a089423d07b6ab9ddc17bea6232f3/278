@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/os/Parcel;-&gt;writeString(Ljava/lang/String;)V" label="Landroid/os/Parcel;-&gt;writeString(Ljava/lang/String;)V" />
+      <node id="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;postMessage(Landroid/support/customtabs/ICustomTabsCallback;Ljava/lang/String;Landroid/os/Bundle;)I" label="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;postMessage(Landroid/support/customtabs/ICustomTabsCallback;Ljava/lang/String;Landroid/os/Bundle;)I" />
+      <node id="Landroid/support/v4/media/MediaDescriptionCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" label="Landroid/support/v4/media/MediaDescriptionCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" />
+      <node id="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;getCallbackBinder()Landroid/os/IBinder;" label="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;getCallbackBinder()Landroid/os/IBinder;" />
+      <node id="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;equals(Ljava/lang/Object;)Z" label="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;equals(Ljava/lang/Object;)Z" />
+      <node id="Landroid/support/customtabs/ICustomTabsCallback;-&gt;asBinder()Landroid/os/IBinder;" label="Landroid/support/customtabs/ICustomTabsCallback;-&gt;asBinder()Landroid/os/IBinder;" />
+      <node id="Landroid/support/customtabs/CustomTabsService;-&gt;cleanUpSession(Landroid/support/customtabs/CustomTabsSessionToken;)Z" label="Landroid/support/customtabs/CustomTabsService;-&gt;cleanUpSession(Landroid/support/customtabs/CustomTabsSessionToken;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;postMessage(Landroid/support/customtabs/ICustomTabsCallback;Ljava/lang/String;Landroid/os/Bundle;)I" target="Landroid/os/Parcel;-&gt;writeString(Ljava/lang/String;)V" id="0" />
+      <edge source="Landroid/support/customtabs/ICustomTabsService$Stub$Proxy;-&gt;postMessage(Landroid/support/customtabs/ICustomTabsCallback;Ljava/lang/String;Landroid/os/Bundle;)I" target="Landroid/support/customtabs/ICustomTabsCallback;-&gt;asBinder()Landroid/os/IBinder;" id="1" />
+      <edge source="Landroid/support/v4/media/MediaDescriptionCompat;-&gt;writeToParcel(Landroid/os/Parcel;I)V" target="Landroid/os/Parcel;-&gt;writeString(Ljava/lang/String;)V" id="2" />
+      <edge source="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;getCallbackBinder()Landroid/os/IBinder;" target="Landroid/support/customtabs/ICustomTabsCallback;-&gt;asBinder()Landroid/os/IBinder;" id="3" />
+      <edge source="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;equals(Ljava/lang/Object;)Z" target="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;getCallbackBinder()Landroid/os/IBinder;" id="4" />
+      <edge source="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;equals(Ljava/lang/Object;)Z" target="Landroid/support/customtabs/ICustomTabsCallback;-&gt;asBinder()Landroid/os/IBinder;" id="5" />
+      <edge source="Landroid/support/customtabs/CustomTabsService;-&gt;cleanUpSession(Landroid/support/customtabs/CustomTabsSessionToken;)Z" target="Landroid/support/customtabs/CustomTabsSessionToken;-&gt;getCallbackBinder()Landroid/os/IBinder;" id="6" />
+    </edges>
+  </graph>
+</gexf>

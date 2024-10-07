@@ -1,0 +1,5 @@
+apk_name:e577884ac4c679a8e79a04b5c795357971b971f6b5dc96ddaff6e52529a03572
+node_number:32263
+edge_number:71962
+fcg_graph_time:20.083646297454834
+pattern_find_time:3607.5474996566772

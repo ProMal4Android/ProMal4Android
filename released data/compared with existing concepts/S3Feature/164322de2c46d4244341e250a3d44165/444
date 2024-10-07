@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/widget/ProgressBar;-&gt;setVisibility(I)V" label="Landroid/widget/ProgressBar;-&gt;setVisibility(I)V" />
+      <node id="Ljava/lang/Object;-&gt;&lt;init&gt;()V" label="Ljava/lang/Object;-&gt;&lt;init&gt;()V" />
+      <node id="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;&lt;init&gt;(Landroid/widget/ProgressBar;Landroid/widget/ProgressBar;Z)V" label="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;&lt;init&gt;(Landroid/widget/ProgressBar;Landroid/widget/ProgressBar;Z)V" />
+      <node id="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setIndeterminate(Z)V" label="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setIndeterminate(Z)V" />
+      <node id="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" label="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" />
+      <node id="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" label="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" />
+      <node id="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" label="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;&lt;init&gt;(Landroid/widget/ProgressBar;Landroid/widget/ProgressBar;Z)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;&lt;init&gt;(Landroid/widget/ProgressBar;Landroid/widget/ProgressBar;Z)V" target="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setIndeterminate(Z)V" id="1" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setIndeterminate(Z)V" target="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" id="2" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" target="Landroid/widget/ProgressBar;-&gt;setVisibility(I)V" id="3" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(I)V" target="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" id="4" />
+      <edge source="Lcom/android/ex/photo/views/ProgressBarWrapper;-&gt;setVisibility(Z)V" target="Landroid/widget/ProgressBar;-&gt;setVisibility(I)V" id="5" />
+      <edge source="Landroid/support/customtabs/ICustomTabsCallback$Stub$Proxy;-&gt;&lt;init&gt;(Landroid/os/IBinder;)V" target="Ljava/lang/Object;-&gt;&lt;init&gt;()V" id="6" />
+    </edges>
+  </graph>
+</gexf>

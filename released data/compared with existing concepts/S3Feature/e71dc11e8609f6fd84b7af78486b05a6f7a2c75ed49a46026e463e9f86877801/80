@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" label="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" />
+      <node id="Lcom/facebook/ads/internal/util/s;-&gt;b(Ljava/lang/String;)Ljava/lang/String;" label="Lcom/facebook/ads/internal/util/s;-&gt;b(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" label="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" />
+      <node id="Ljava/security/MessageDigest;-&gt;getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;" label="Ljava/security/MessageDigest;-&gt;getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;" />
+      <node id="Lcom/facebook/ads/internal/util/s;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" label="Lcom/facebook/ads/internal/util/s;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Lcom/android/volley/InternalUtils;-&gt;sha1Hash(Ljava/lang/String;)Ljava/lang/String;" label="Lcom/android/volley/InternalUtils;-&gt;sha1Hash(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="Lcom/facebook/ads/internal/util/s;-&gt;a(Ljava/io/File;)Ljava/lang/String;" label="Lcom/facebook/ads/internal/util/s;-&gt;a(Ljava/io/File;)Ljava/lang/String;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/facebook/ads/internal/util/s;-&gt;b(Ljava/lang/String;)Ljava/lang/String;" target="Lcom/facebook/ads/internal/util/s;-&gt;a(Ljava/io/File;)Ljava/lang/String;" id="0" />
+      <edge source="Landroid/support/v4/app/ShareCompat$IntentReader;-&gt;getCallingApplicationLabel()Ljava/lang/CharSequence;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" id="1" />
+      <edge source="Lcom/facebook/ads/internal/util/s;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" target="Landroid/content/pm/PackageManager;-&gt;getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;" id="2" />
+      <edge source="Lcom/facebook/ads/internal/util/s;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;" target="Lcom/facebook/ads/internal/util/s;-&gt;b(Ljava/lang/String;)Ljava/lang/String;" id="3" />
+      <edge source="Lcom/android/volley/InternalUtils;-&gt;sha1Hash(Ljava/lang/String;)Ljava/lang/String;" target="Ljava/security/MessageDigest;-&gt;getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;" id="4" />
+      <edge source="Lcom/facebook/ads/internal/util/s;-&gt;a(Ljava/io/File;)Ljava/lang/String;" target="Ljava/security/MessageDigest;-&gt;getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;" id="5" />
+    </edges>
+  </graph>
+</gexf>

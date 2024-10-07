@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/widget/ListPopupWindow;-&gt;isShowing()Z" label="Landroid/support/v7/widget/ListPopupWindow;-&gt;isShowing()Z" />
+      <node id="Landroid/view/View;-&gt;isShown()Z" label="Landroid/view/View;-&gt;isShown()Z" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;isShowing()Z" label="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;isShowing()Z" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;onGlobalLayout()V" label="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;onGlobalLayout()V" />
+      <node id="Landroid/support/v7/widget/ListPopupWindow;-&gt;onKeyPreIme(ILandroid/view/KeyEvent;)Z" label="Landroid/support/v7/widget/ListPopupWindow;-&gt;onKeyPreIme(ILandroid/view/KeyEvent;)Z" />
+      <node id="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;dismiss()V" label="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;dismiss()V" />
+      <node id="Lcom/facebook/ads/internal/util/g;-&gt;b(Landroid/graphics/Rect;Landroid/view/View;)Z" label="Lcom/facebook/ads/internal/util/g;-&gt;b(Landroid/graphics/Rect;Landroid/view/View;)Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;isShowing()Z" target="Landroid/support/v7/widget/ListPopupWindow;-&gt;isShowing()Z" id="0" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;onGlobalLayout()V" target="Landroid/view/View;-&gt;isShown()Z" id="1" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;onGlobalLayout()V" target="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;isShowing()Z" id="2" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;onGlobalLayout()V" target="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;dismiss()V" id="3" />
+      <edge source="Landroid/support/v7/widget/ListPopupWindow;-&gt;onKeyPreIme(ILandroid/view/KeyEvent;)Z" target="Landroid/support/v7/widget/ListPopupWindow;-&gt;isShowing()Z" id="4" />
+      <edge source="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;dismiss()V" target="Landroid/support/v7/internal/view/menu/MenuPopupHelper;-&gt;isShowing()Z" id="5" />
+      <edge source="Lcom/facebook/ads/internal/util/g;-&gt;b(Landroid/graphics/Rect;Landroid/view/View;)Z" target="Landroid/view/View;-&gt;isShown()Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

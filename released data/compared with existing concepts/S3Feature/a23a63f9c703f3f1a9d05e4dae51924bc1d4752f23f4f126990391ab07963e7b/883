@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" label="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" />
+      <node id="Landroid/widget/ImageView;-&gt;getScaleType()Landroid/widget/ImageView$ScaleType;" label="Landroid/widget/ImageView;-&gt;getScaleType()Landroid/widget/ImageView$ScaleType;" />
+      <node id="Lcom/nostra13/universalimageloader/core/imageaware/ImageViewAware;-&gt;getScaleType()Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;" label="Lcom/nostra13/universalimageloader/core/imageaware/ImageViewAware;-&gt;getScaleType()Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;" />
+      <node id="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" label="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" />
+      <node id="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" label="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" />
+      <node id="Ljava/lang/ref/Reference;-&gt;get()Ljava/lang/Object;" label="Ljava/lang/ref/Reference;-&gt;get()Ljava/lang/Object;" />
+      <node id="Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;-&gt;fromImageView(Landroid/widget/ImageView;)Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;" label="Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;-&gt;fromImageView(Landroid/widget/ImageView;)Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;" />
+    </nodes>
+    <edges>
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" target="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" id="0" />
+      <edge source="Lcom/nostra13/universalimageloader/core/imageaware/ImageViewAware;-&gt;getScaleType()Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;" target="Ljava/lang/ref/Reference;-&gt;get()Ljava/lang/Object;" id="1" />
+      <edge source="Lcom/nostra13/universalimageloader/core/imageaware/ImageViewAware;-&gt;getScaleType()Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;" target="Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;-&gt;fromImageView(Landroid/widget/ImageView;)Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;" id="2" />
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" target="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Lcom/bumptech/glide/request/target/Target;)Lcom/bumptech/glide/request/target/Target;" id="3" />
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" target="Landroid/widget/ImageView;-&gt;getScaleType()Landroid/widget/ImageView$ScaleType;" id="4" />
+      <edge source="Lcom/bumptech/glide/GenericRequestBuilder;-&gt;into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/Target;" target="Lcom/bumptech/glide/util/Util;-&gt;assertMainThread()V" id="5" />
+      <edge source="Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;-&gt;fromImageView(Landroid/widget/ImageView;)Lcom/nostra13/universalimageloader/core/assist/ViewScaleType;" target="Landroid/widget/ImageView;-&gt;getScaleType()Landroid/widget/ImageView$ScaleType;" id="6" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" label="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" />
+      <node id="Lcom/anjlab/android/iab/v3/BillingBase;-&gt;saveBoolean(Ljava/lang/String;Ljava/lang/Boolean;)Z" label="Lcom/anjlab/android/iab/v3/BillingBase;-&gt;saveBoolean(Ljava/lang/String;Ljava/lang/Boolean;)Z" />
+      <node id="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" label="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" />
+      <node id="Lcom/android/common/OperationScheduler;-&gt;onPermanentError()V" label="Lcom/android/common/OperationScheduler;-&gt;onPermanentError()V" />
+      <node id="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" label="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" />
+      <node id="Landroid/content/SharedPreferences$Editor;-&gt;putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;" label="Landroid/content/SharedPreferences$Editor;-&gt;putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;" />
+      <node id="Landroid/content/SharedPreferences$Editor;-&gt;commit()Z" label="Landroid/content/SharedPreferences$Editor;-&gt;commit()Z" />
+    </nodes>
+    <edges>
+      <edge source="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="0" />
+      <edge source="Landroidx/core/app/AppLaunchChecker;-&gt;onActivityCreate(Landroid/app/Activity;)V" target="Landroid/content/SharedPreferences$Editor;-&gt;putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;" id="1" />
+      <edge source="Lcom/anjlab/android/iab/v3/BillingBase;-&gt;saveBoolean(Ljava/lang/String;Ljava/lang/Boolean;)Z" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="2" />
+      <edge source="Lcom/anjlab/android/iab/v3/BillingBase;-&gt;saveBoolean(Ljava/lang/String;Ljava/lang/Boolean;)Z" target="Landroid/content/SharedPreferences$Editor;-&gt;putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;" id="3" />
+      <edge source="Lcom/anjlab/android/iab/v3/BillingBase;-&gt;saveBoolean(Ljava/lang/String;Ljava/lang/Boolean;)Z" target="Landroid/content/SharedPreferences$Editor;-&gt;commit()Z" id="4" />
+      <edge source="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" target="Landroid/content/SharedPreferences$Editor;-&gt;commit()Z" id="5" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onPermanentError()V" target="Lcom/android/common/SharedPreferencesCompat;-&gt;apply(Landroid/content/SharedPreferences$Editor;)V" id="6" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onPermanentError()V" target="Landroid/content/SharedPreferences;-&gt;edit()Landroid/content/SharedPreferences$Editor;" id="7" />
+      <edge source="Lcom/android/common/OperationScheduler;-&gt;onPermanentError()V" target="Landroid/content/SharedPreferences$Editor;-&gt;putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;" id="8" />
+    </edges>
+  </graph>
+</gexf>

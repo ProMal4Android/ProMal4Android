@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/widget/BaseAdapter;-&gt;&lt;init&gt;()V" label="Landroid/widget/BaseAdapter;-&gt;&lt;init&gt;()V" />
+      <node id="Ljava/util/List;-&gt;size()I" label="Ljava/util/List;-&gt;size()I" />
+      <node id="Landroid/support/v7/view/menu/MenuAdapter;-&gt;&lt;init&gt;(Landroid/support/v7/view/menu/MenuBuilder;Landroid/view/LayoutInflater;ZI)V" label="Landroid/support/v7/view/menu/MenuAdapter;-&gt;&lt;init&gt;(Landroid/support/v7/view/menu/MenuBuilder;Landroid/view/LayoutInflater;ZI)V" />
+      <node id="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;isShowing()Z" label="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;isShowing()Z" />
+      <node id="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;)V" label="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;)V" />
+      <node id="Landroid/support/v4/widget/CursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/database/Cursor;)V" label="Landroid/support/v4/widget/CursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/database/Cursor;)V" />
+      <node id="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;showMenu(Landroid/support/v7/view/menu/MenuBuilder;)V" label="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;showMenu(Landroid/support/v7/view/menu/MenuBuilder;)V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/view/menu/MenuAdapter;-&gt;&lt;init&gt;(Landroid/support/v7/view/menu/MenuBuilder;Landroid/view/LayoutInflater;ZI)V" target="Landroid/widget/BaseAdapter;-&gt;&lt;init&gt;()V" id="0" />
+      <edge source="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;isShowing()Z" target="Ljava/util/List;-&gt;size()I" id="1" />
+      <edge source="Landroid/support/v4/widget/ResourceCursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;ILandroid/database/Cursor;)V" target="Landroid/support/v4/widget/CursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/database/Cursor;)V" id="2" />
+      <edge source="Landroid/support/v4/widget/CursorAdapter;-&gt;&lt;init&gt;(Landroid/content/Context;Landroid/database/Cursor;)V" target="Landroid/widget/BaseAdapter;-&gt;&lt;init&gt;()V" id="3" />
+      <edge source="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;showMenu(Landroid/support/v7/view/menu/MenuBuilder;)V" target="Ljava/util/List;-&gt;size()I" id="4" />
+      <edge source="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;showMenu(Landroid/support/v7/view/menu/MenuBuilder;)V" target="Landroid/support/v7/view/menu/MenuAdapter;-&gt;&lt;init&gt;(Landroid/support/v7/view/menu/MenuBuilder;Landroid/view/LayoutInflater;ZI)V" id="5" />
+      <edge source="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;showMenu(Landroid/support/v7/view/menu/MenuBuilder;)V" target="Landroid/support/v7/view/menu/CascadingMenuPopup;-&gt;isShowing()Z" id="6" />
+    </edges>
+  </graph>
+</gexf>

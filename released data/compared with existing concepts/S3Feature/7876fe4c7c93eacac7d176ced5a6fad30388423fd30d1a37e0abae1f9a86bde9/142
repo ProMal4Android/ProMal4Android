@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-20">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;loadActivitiesIfNeeded()Z" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;loadActivitiesIfNeeded()Z" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" />
+      <node id="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" label="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" />
+      <node id="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" label="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" />
+      <node id="Landroid/content/pm/PackageManager;-&gt;queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;" label="Landroid/content/pm/PackageManager;-&gt;queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;" />
+      <node id="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" label="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" />
+      <node id="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/j;)Landroid/content/Intent;" label="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/j;)Landroid/content/Intent;" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;loadActivitiesIfNeeded()Z" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="0" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;loadActivitiesIfNeeded()Z" target="Landroid/content/pm/PackageManager;-&gt;queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;" id="1" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" target="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;loadActivitiesIfNeeded()Z" id="2" />
+      <edge source="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;getActivity(I)Landroid/content/pm/ResolveInfo;" target="Landroid/support/v7/internal/widget/ActivityChooserModel;-&gt;ensureConsistentState()V" id="3" />
+      <edge source="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="4" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/j;)Landroid/content/Intent;" target="Landroid/content/Context;-&gt;getPackageManager()Landroid/content/pm/PackageManager;" id="5" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/j;)Landroid/content/Intent;" target="Landroid/content/pm/PackageManager;-&gt;queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;" id="6" />
+      <edge source="Lcom/facebook/ads/internal/a/c;-&gt;b(Lcom/facebook/ads/internal/util/j;)Landroid/content/Intent;" target="Lcom/facebook/ads/internal/util/g;-&gt;a(Landroid/content/Context;Ljava/lang/String;)Z" id="7" />
+    </edges>
+  </graph>
+</gexf>

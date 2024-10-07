@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-08-21">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="Landroid/support/v4/app/ActivityCompat;-&gt;finishAfterTransition(Landroid/app/Activity;)V" label="Landroid/support/v4/app/ActivityCompat;-&gt;finishAfterTransition(Landroid/app/Activity;)V" />
+      <node id="Landroid/app/Activity;-&gt;finish()V" label="Landroid/app/Activity;-&gt;finish()V" />
+      <node id="Lcom/amazon/device/ads/InAppBrowser$6;-&gt;onClick(Landroid/view/View;)V" label="Lcom/amazon/device/ads/InAppBrowser$6;-&gt;onClick(Landroid/view/View;)V" />
+      <node id="Lcom/amazon/device/ads/InAppBrowser;-&gt;access$300(Lcom/amazon/device/ads/InAppBrowser;)Landroid/app/Activity;" label="Lcom/amazon/device/ads/InAppBrowser;-&gt;access$300(Lcom/amazon/device/ads/InAppBrowser;)Landroid/app/Activity;" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onKeyDown(ILandroid/view/KeyEvent;)Z" label="Landroid/support/v4/app/FragmentActivity;-&gt;onKeyDown(ILandroid/view/KeyEvent;)Z" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;supportFinishAfterTransition()V" label="Landroid/support/v4/app/FragmentActivity;-&gt;supportFinishAfterTransition()V" />
+      <node id="Landroid/support/v4/app/FragmentActivity;-&gt;onBackPressed()V" label="Landroid/support/v4/app/FragmentActivity;-&gt;onBackPressed()V" />
+    </nodes>
+    <edges>
+      <edge source="Landroid/support/v4/app/ActivityCompat;-&gt;finishAfterTransition(Landroid/app/Activity;)V" target="Landroid/app/Activity;-&gt;finish()V" id="0" />
+      <edge source="Lcom/amazon/device/ads/InAppBrowser$6;-&gt;onClick(Landroid/view/View;)V" target="Landroid/app/Activity;-&gt;finish()V" id="1" />
+      <edge source="Lcom/amazon/device/ads/InAppBrowser$6;-&gt;onClick(Landroid/view/View;)V" target="Lcom/amazon/device/ads/InAppBrowser;-&gt;access$300(Lcom/amazon/device/ads/InAppBrowser;)Landroid/app/Activity;" id="2" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onKeyDown(ILandroid/view/KeyEvent;)Z" target="Landroid/support/v4/app/FragmentActivity;-&gt;onBackPressed()V" id="3" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;supportFinishAfterTransition()V" target="Landroid/support/v4/app/ActivityCompat;-&gt;finishAfterTransition(Landroid/app/Activity;)V" id="4" />
+      <edge source="Landroid/support/v4/app/FragmentActivity;-&gt;onBackPressed()V" target="Landroid/support/v4/app/FragmentActivity;-&gt;supportFinishAfterTransition()V" id="5" />
+    </edges>
+  </graph>
+</gexf>
